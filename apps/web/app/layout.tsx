@@ -15,6 +15,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <a href="/universes">Universes</a>
           <a href="/lineage">Lineage</a>
           <a href="/dictionary">Dictionary</a>
+          <a href="/lipi">Lipi</a>
           <a href="/ayodhya">Ayodhya AI</a>
           <a href="/hkd3d">HKD3D</a>
           <a href="/scopes">Scopes</a>

@@ -723,6 +723,126 @@ button {
   gap: 16px;
 }
 
+.lipi-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 360px);
+  gap: 24px;
+  align-items: end;
+  min-height: 440px;
+  padding: 48px 28px;
+  color: white;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    #182737;
+  background-size: 34px 34px;
+}
+
+.lipi-hero h1 {
+  max-width: 940px;
+  margin: 0;
+  font-size: clamp(42px, 7vw, 92px);
+  line-height: 0.98;
+  overflow-wrap: anywhere;
+}
+
+.lipi-hero p:not(.eyebrow) {
+  max-width: 820px;
+  margin: 16px 0 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.lipi-page {
+  display: grid;
+  gap: 16px;
+}
+
+.lipi-rule-grid,
+.lipi-explorer-grid,
+.lipi-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.lipi-card,
+.lipi-rule-grid article {
+  display: grid;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  background: #fbfcfa;
+  color: var(--ink);
+}
+
+.lipi-card span,
+.lipi-rule-grid span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 780;
+  text-transform: uppercase;
+}
+
+.lipi-card strong,
+.lipi-rule-grid strong {
+  color: var(--ink);
+  font-size: 21px;
+  line-height: 1.14;
+}
+
+.lipi-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.48;
+  overflow-wrap: anywhere;
+}
+
+.lipi-card dl {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.lipi-card dl div {
+  display: grid;
+  gap: 4px;
+  border-top: 1px solid var(--line);
+  padding-top: 8px;
+}
+
+.lipi-card dt {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 760;
+  text-transform: uppercase;
+}
+
+.lipi-card dd {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+.lipi-chain,
+.lipi-example {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lipi-chain span,
+.lipi-example span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 11px;
+  background: #fffdf8;
+  color: var(--accent);
+  font-weight: 780;
+}
+
 .project-intake-hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(220px, 360px);
