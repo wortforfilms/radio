@@ -1,4 +1,4 @@
-import { getHkd3dMetrics, hkd3dAppSurfaces, hkd3dCharacters, hkd3dStages } from "@shared/hkd3d";
+import { getHkd3dMetrics, hkd3dAppSurfaces, hkd3dCharacters, hkd3dStages, hkd3dWorkflows } from "@shared/hkd3d";
 import AyodhyaHeader from "../_components/AyodhyaHeader";
 import Hkd3dViewer from "./Hkd3dViewer";
 
@@ -62,6 +62,30 @@ export default function Hkd3dPage() {
                 <div><dt>Slots</dt><dd>{stage.slots.length}</dd></div>
                 <div><dt>Verified</dt><dd>{stage.slots.filter((slot) => slot.verificationState === "verified").length}</dd></div>
               </dl>
+              <a href={`/hkd3d/stages/${stage.key}`}>Open Scope</a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="page ayodhya-page">
+        <div className="reference-feed-head">
+          <div>
+            <p className="section-kicker">Workflows</p>
+            <h2>Evidence-Gated Operations</h2>
+          </div>
+          <span>{hkd3dWorkflows.length} workflows</span>
+        </div>
+        <div className="hkd3d-stage-grid">
+          {hkd3dWorkflows.map((workflow) => (
+            <article className="hkd3d-stage-card" key={workflow.key}>
+              <span>workflow</span>
+              <h3>{workflow.name}</h3>
+              <ol>
+                {workflow.steps.map((step) => (
+                  <li key={step}>{step}</li>
+                ))}
+              </ol>
             </article>
           ))}
         </div>
@@ -102,6 +126,7 @@ export default function Hkd3dPage() {
               <strong>{character.name}</strong>
               <p>{character.path}</p>
               <small>{character.requiredScopes.join(" / ")}</small>
+              <a href={`/hkd3d/characters/${character.key}`}>Open Character</a>
             </article>
           ))}
         </div>

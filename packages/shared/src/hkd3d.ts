@@ -278,6 +278,34 @@ export const hkd3dAppSurfaces = [
   }
 ];
 
+export const hkd3dWorkflows = [
+  {
+    key: "asset-intake",
+    name: "Asset Intake",
+    steps: ["register slot", "attach source", "attach creator", "attach evidence", "set verification state"]
+  },
+  {
+    key: "lookdev",
+    name: "Look Development",
+    steps: ["load diagnostic scene", "choose lighting mode", "compare material response", "record evidence", "keep unverified outputs blocked"]
+  },
+  {
+    key: "rig-readiness",
+    name: "Rig Readiness",
+    steps: ["map hierarchy", "verify bone count", "test deformation", "record retarget evidence", "fail closed without review"]
+  },
+  {
+    key: "character-assembly",
+    name: "Character Assembly",
+    steps: ["connect model", "connect textures", "connect rig", "connect animations", "write metadata manifest"]
+  },
+  {
+    key: "export-validation",
+    name: "Export Validation",
+    steps: ["choose format", "choose compression", "run round-trip check", "record validation evidence", "block unverifiable output"]
+  }
+];
+
 export function isHkd3dAssetProductionReady(asset: Hkd3dAssetSlot) {
   return Boolean(asset.assetPath && asset.evidence.length > 0 && asset.status === "verified" && asset.verificationState === "verified");
 }
@@ -299,4 +327,12 @@ export function getHkd3dMetrics() {
     blockedAssetCount: slots.filter((slotItem) => slotItem.status === "blocked").length,
     evidenceRecordCount: slots.reduce((sum, slotItem) => sum + slotItem.evidence.length, 0)
   };
+}
+
+export function getHkd3dStageByKey(key: string) {
+  return hkd3dStages.find((stage) => stage.key === key);
+}
+
+export function getHkd3dCharacterByKey(key: string) {
+  return hkd3dCharacters.find((character) => character.key === key);
 }
