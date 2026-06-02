@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="720" viewBox="0 0 1800 720" role="img" aria-labelledby="title desc">
+  <title id="title">Subject Universe hero banner</title>
+  <desc id="desc">Abstract knowledge field banner for the Vaishviq Subject Universe persistence scope.</desc>
+  <defs>
+    <linearGradient id="bg-subject-universe" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#165b48"/>
+      <stop offset="54%" stop-color="#101713"/>
+      <stop offset="100%" stop-color="#2b9178"/>
+    </linearGradient>
+    <pattern id="grid-subject-universe" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#d8efe5" stroke-width="1" opacity="0.11"/>
+    </pattern>
+    <filter id="soft-subject-universe" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1800" height="720" fill="url(#bg-subject-universe)"/>
+  <rect width="1800" height="720" fill="url(#grid-subject-universe)"/>
+  <circle cx="1450" cy="124" r="260" fill="#d8efe5" opacity="0.12" filter="url(#soft-subject-universe)"/>
+  <circle cx="1280" cy="606" r="320" fill="#2b9178" opacity="0.14" filter="url(#soft-subject-universe)"/>
+  <ellipse cx="1120" cy="360" rx="270" ry="110" fill="none" stroke="#2b9178" stroke-width="2" opacity="0.14" transform="rotate(-18 1120 360)"/>
+<ellipse cx="1168" cy="341" rx="250" ry="118" fill="none" stroke="#2b9178" stroke-width="3" opacity="0.17500000000000002" transform="rotate(-14 1168 341)"/>
+<ellipse cx="1216" cy="322" rx="230" ry="126" fill="none" stroke="#2b9178" stroke-width="4" opacity="0.21000000000000002" transform="rotate(-10 1216 322)"/>
+<ellipse cx="1264" cy="303" rx="210" ry="134" fill="none" stroke="#2b9178" stroke-width="2" opacity="0.24500000000000002" transform="rotate(-6 1264 303)"/>
+<ellipse cx="1312" cy="284" rx="190" ry="142" fill="none" stroke="#2b9178" stroke-width="3" opacity="0.28" transform="rotate(-2 1312 284)"/>
+<ellipse cx="1360" cy="265" rx="170" ry="150" fill="none" stroke="#2b9178" stroke-width="4" opacity="0.31500000000000006" transform="rotate(2 1360 265)"/>
+<ellipse cx="1408" cy="246" rx="150" ry="158" fill="none" stroke="#2b9178" stroke-width="2" opacity="0.35000000000000003" transform="rotate(6 1408 246)"/>
+<ellipse cx="1456" cy="227" rx="130" ry="166" fill="none" stroke="#2b9178" stroke-width="3" opacity="0.385" transform="rotate(10 1456 227)"/>
+  <line x1="456" y1="534" x2="629" y2="161" stroke="#d8efe5" stroke-width="1.2" opacity="0.18"/>
+<line x1="629" y1="161" x2="802" y2="258" stroke="#d8efe5" stroke-width="1.2" opacity="0.18"/>
+<line x1="802" y1="258" x2="975" y2="355" stroke="#d8efe5" stroke-width="1.2" opacity="0.18"/>
+<line x1="975" y1="355" x2="1148" y2="452" stroke="#d8efe5" stroke-width="1.2" opacity="0.18"/>
+<line x1="1148" y1="452" x2="1321" y2="549" stroke="#d8efe5" stroke-width="1.2" opacity="0.18"/>
+<line x1="1321" y1="549" x2="1494" y2="176" stroke="#d8efe5" stroke-width="1.2" opacity="0.18"/>
+<line x1="1494" y1="176" x2="247" y2="273" stroke="#d8efe5" stroke-width="1.2" opacity="0.18"/>
+<line x1="247" y1="273" x2="420" y2="370" stroke="#d8efe5" stroke-width="1.2" opacity="0.18"/>
+<line x1="420" y1="370" x2="593" y2="467" stroke="#d8efe5" stroke-width="1.2" opacity="0.18"/>
+<line x1="593" y1="467" x2="766" y2="564" stroke="#d8efe5" stroke-width="1.2" opacity="0.18"/>
+<line x1="766" y1="564" x2="939" y2="191" stroke="#d8efe5" stroke-width="1.2" opacity="0.18"/>
+<line x1="939" y1="191" x2="1112" y2="288" stroke="#d8efe5" stroke-width="1.2" opacity="0.18"/>
+<line x1="1112" y1="288" x2="1285" y2="385" stroke="#d8efe5" stroke-width="1.2" opacity="0.18"/>
+<line x1="1285" y1="385" x2="1458" y2="482" stroke="#d8efe5" stroke-width="1.2" opacity="0.18"/>
+<line x1="1458" y1="482" x2="211" y2="579" stroke="#d8efe5" stroke-width="1.2" opacity="0.18"/>
+<line x1="211" y1="579" x2="384" y2="206" stroke="#d8efe5" stroke-width="1.2" opacity="0.18"/>
+<line x1="384" y1="206" x2="557" y2="303" stroke="#d8efe5" stroke-width="1.2" opacity="0.18"/>
+  <circle cx="456" cy="534" r="5" fill="#d8efe5" opacity="0.24"/>
+<circle cx="629" cy="161" r="6" fill="#d8efe5" opacity="0.32"/>
+<circle cx="802" cy="258" r="7" fill="#d8efe5" opacity="0.4"/>
+<circle cx="975" cy="355" r="8" fill="#d8efe5" opacity="0.48"/>
+<circle cx="1148" cy="452" r="3" fill="#d8efe5" opacity="0.24"/>
+<circle cx="1321" cy="549" r="4" fill="#d8efe5" opacity="0.32"/>
+<circle cx="1494" cy="176" r="5" fill="#d8efe5" opacity="0.4"/>
+<circle cx="247" cy="273" r="6" fill="#d8efe5" opacity="0.48"/>
+<circle cx="420" cy="370" r="7" fill="#d8efe5" opacity="0.24"/>
+<circle cx="593" cy="467" r="8" fill="#d8efe5" opacity="0.32"/>
+<circle cx="766" cy="564" r="3" fill="#d8efe5" opacity="0.4"/>
+<circle cx="939" cy="191" r="4" fill="#d8efe5" opacity="0.48"/>
+<circle cx="1112" cy="288" r="5" fill="#d8efe5" opacity="0.24"/>
+<circle cx="1285" cy="385" r="6" fill="#d8efe5" opacity="0.32"/>
+<circle cx="1458" cy="482" r="7" fill="#d8efe5" opacity="0.4"/>
+<circle cx="211" cy="579" r="8" fill="#d8efe5" opacity="0.48"/>
+<circle cx="384" cy="206" r="3" fill="#d8efe5" opacity="0.24"/>
+<circle cx="557" cy="303" r="4" fill="#d8efe5" opacity="0.32"/>
+  <path d="M0 560C240 494 366 622 586 548C812 472 936 402 1168 466C1398 530 1562 464 1800 386V720H0Z" fill="#000000" opacity="0.18"/>
+  <path d="M102 610C294 510 454 564 612 462C806 336 990 330 1184 406C1394 488 1570 398 1708 310" fill="none" stroke="#d8efe5" stroke-width="3" opacity="0.34"/>
+  <text x="104" y="594" fill="#d8efe5" opacity="0.22" font-family="ui-sans-serif, system-ui" font-size="34" font-weight="700" letter-spacing="0">knowledge field</text>
+</svg>

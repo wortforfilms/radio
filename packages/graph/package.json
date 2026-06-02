@@ -1,0 +1,8 @@
+{
+  "name": "@graph",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./index": "./src/index.ts"
+  }
+}

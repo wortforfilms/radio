@@ -1,0 +1,478 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Pitra {
+  id                 String             @id @default(cuid())
+  nodeId             String?            @unique
+  name               String
+  alternateNames     String?
+  description        String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  node               KnowledgeNode?     @relation(fields: [nodeId], references: [id], onDelete: SetNull)
+
+  @@index([name])
+  @@index([verificationStatus])
+}
+
+model GuruMaataa {
+  id                 String             @id @default(cuid())
+  nodeId             String?            @unique
+  name               String
+  alternateNames     String?
+  description        String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  node               KnowledgeNode?     @relation(fields: [nodeId], references: [id], onDelete: SetNull)
+
+  @@index([name])
+  @@index([verificationStatus])
+}
+
+model Rishi {
+  id                 String             @id @default(cuid())
+  nodeId             String?            @unique
+  name               String
+  alternateNames     String?
+  gotra              String?
+  periodLabel        String?
+  description        String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  node               KnowledgeNode?     @relation(fields: [nodeId], references: [id], onDelete: SetNull)
+
+  @@index([name])
+  @@index([gotra])
+  @@index([verificationStatus])
+}
+
+model Rishika {
+  id                 String             @id @default(cuid())
+  nodeId             String?            @unique
+  name               String
+  alternateNames     String?
+  periodLabel        String?
+  description        String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  node               KnowledgeNode?     @relation(fields: [nodeId], references: [id], onDelete: SetNull)
+
+  @@index([name])
+  @@index([verificationStatus])
+}
+
+model Civilization {
+  id                 String             @id @default(cuid())
+  nodeId             String?            @unique
+  name               String             @unique
+  parentId           String?
+  description        String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  node               KnowledgeNode?     @relation(fields: [nodeId], references: [id], onDelete: SetNull)
+  parent             Civilization?      @relation("CivilizationHierarchy", fields: [parentId], references: [id])
+  children           Civilization[]     @relation("CivilizationHierarchy")
+  subjects           Subject[]
+  texts              Text[]
+
+  @@index([parentId])
+  @@index([verificationStatus])
+}
+
+model Subject {
+  id                 String             @id @default(cuid())
+  nodeId             String?            @unique
+  name               String             @unique
+  slug               String             @unique
+  parentId           String?
+  civilizationId     String?
+  description        String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  node               KnowledgeNode?     @relation(fields: [nodeId], references: [id], onDelete: SetNull)
+  parent             Subject?           @relation("SubjectHierarchy", fields: [parentId], references: [id])
+  children           Subject[]          @relation("SubjectHierarchy")
+  civilization       Civilization?      @relation(fields: [civilizationId], references: [id], onDelete: SetNull)
+  texts              Text[]
+  researchPapers     ResearchPaper[]
+  courses            Course[]
+
+  @@index([slug])
+  @@index([parentId])
+  @@index([civilizationId])
+}
+
+model Language {
+  id                 String             @id @default(cuid())
+  nodeId             String?            @unique
+  name               String             @unique
+  isoCode            String?            @unique
+  script             String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  node               KnowledgeNode?     @relation(fields: [nodeId], references: [id], onDelete: SetNull)
+  texts              Text[]
+  sanskritLexemes    SanskritLexeme[]
+
+  @@index([name])
+}
+
+model SanskritLexeme {
+  id                 String             @id @default(cuid())
+  nodeId             String?            @unique
+  headword           String
+  transliteration    String?
+  normalizedHeadword String
+  sourceDictionary   String
+  definition         String?
+  partOfSpeech       String?
+  languageId         String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  node               KnowledgeNode?     @relation(fields: [nodeId], references: [id], onDelete: SetNull)
+  language           Language?          @relation(fields: [languageId], references: [id], onDelete: SetNull)
+
+  @@unique([normalizedHeadword, sourceDictionary])
+  @@index([headword])
+  @@index([transliteration])
+  @@index([sourceDictionary])
+  @@index([languageId])
+  @@index([verificationStatus])
+}
+
+model Text {
+  id                 String             @id @default(cuid())
+  nodeId             String?            @unique
+  title              String
+  alternateTitles    String?
+  languageId         String?
+  subjectId          String?
+  civilizationId     String?
+  periodLabel        String?
+  summary            String?
+  contentMarkdown    String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  node               KnowledgeNode?     @relation(fields: [nodeId], references: [id], onDelete: SetNull)
+  language           Language?          @relation(fields: [languageId], references: [id], onDelete: SetNull)
+  subject            Subject?           @relation(fields: [subjectId], references: [id], onDelete: SetNull)
+  civilization       Civilization?      @relation(fields: [civilizationId], references: [id], onDelete: SetNull)
+
+  @@index([title])
+  @@index([languageId])
+  @@index([subjectId])
+  @@index([civilizationId])
+}
+
+model KnowledgeNode {
+  id                 String             @id @default(cuid())
+  type               String
+  label              String
+  summary            String?
+  payload            String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  outgoingEdges      KnowledgeEdge[]    @relation("EdgeFrom")
+  incomingEdges      KnowledgeEdge[]    @relation("EdgeTo")
+  pitra              Pitra?
+  guruMaataa         GuruMaataa?
+  rishi              Rishi?
+  rishika            Rishika?
+  civilization       Civilization?
+  subject            Subject?
+  language           Language?
+  sanskritLexeme     SanskritLexeme?
+  text               Text?
+  institution        Institution?
+  timelineEvent      TimelineEvent?
+  location           Location?
+  discovery          Discovery?
+  innovation         Innovation?
+  mediaAsset         MediaAsset?
+  researchPaper      ResearchPaper?
+  course             Course?
+  lineage            Lineage?
+
+  @@index([type])
+  @@index([label])
+  @@index([verificationStatus])
+}
+
+model KnowledgeEdge {
+  id                 String             @id @default(cuid())
+  type               String
+  fromNodeId         String
+  toNodeId           String
+  label              String?
+  confidence         Float?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdById        String?
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  fromNode           KnowledgeNode      @relation("EdgeFrom", fields: [fromNodeId], references: [id], onDelete: Cascade)
+  toNode             KnowledgeNode      @relation("EdgeTo", fields: [toNodeId], references: [id], onDelete: Cascade)
+  createdBy          User?              @relation(fields: [createdById], references: [id], onDelete: SetNull)
+
+  @@unique([type, fromNodeId, toNodeId])
+  @@index([type])
+  @@index([fromNodeId])
+  @@index([toNodeId])
+  @@index([verificationStatus])
+}
+
+model Institution {
+  id                 String             @id @default(cuid())
+  nodeId             String?            @unique
+  name               String
+  locationId         String?
+  description        String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  node               KnowledgeNode?     @relation(fields: [nodeId], references: [id], onDelete: SetNull)
+  location           Location?          @relation(fields: [locationId], references: [id], onDelete: SetNull)
+  researchPapers     ResearchPaper[]
+  courses            Course[]
+
+  @@index([name])
+  @@index([locationId])
+}
+
+model TimelineEvent {
+  id                 String             @id @default(cuid())
+  nodeId             String?            @unique
+  title              String
+  startDate          DateTime?
+  endDate            DateTime?
+  periodLabel        String?
+  locationId         String?
+  description        String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  node               KnowledgeNode?     @relation(fields: [nodeId], references: [id], onDelete: SetNull)
+  location           Location?          @relation(fields: [locationId], references: [id], onDelete: SetNull)
+
+  @@index([startDate])
+  @@index([periodLabel])
+  @@index([locationId])
+}
+
+model Location {
+  id                 String             @id @default(cuid())
+  nodeId             String?            @unique
+  name               String
+  latitude           Float?
+  longitude          Float?
+  parentId           String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  node               KnowledgeNode?     @relation(fields: [nodeId], references: [id], onDelete: SetNull)
+  parent             Location?          @relation("LocationHierarchy", fields: [parentId], references: [id])
+  children           Location[]         @relation("LocationHierarchy")
+  institutions       Institution[]
+  timelineEvents     TimelineEvent[]
+
+  @@index([name])
+  @@index([parentId])
+}
+
+model Discovery {
+  id                 String             @id @default(cuid())
+  nodeId             String?            @unique
+  name               String
+  subjectId          String?
+  description        String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  node               KnowledgeNode?     @relation(fields: [nodeId], references: [id], onDelete: SetNull)
+
+  @@index([name])
+  @@index([subjectId])
+}
+
+model Innovation {
+  id                 String             @id @default(cuid())
+  nodeId             String?            @unique
+  name               String
+  subjectId          String?
+  description        String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  node               KnowledgeNode?     @relation(fields: [nodeId], references: [id], onDelete: SetNull)
+
+  @@index([name])
+  @@index([subjectId])
+}
+
+model MediaAsset {
+  id                 String             @id @default(cuid())
+  nodeId             String?            @unique
+  title              String
+  uri                String?
+  mediaType          String?
+  checksum           String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  node               KnowledgeNode?     @relation(fields: [nodeId], references: [id], onDelete: SetNull)
+
+  @@index([title])
+  @@index([mediaType])
+  @@index([checksum])
+}
+
+model ResearchPaper {
+  id                 String             @id @default(cuid())
+  nodeId             String?            @unique
+  title              String
+  abstract           String?
+  doi                String?
+  url                String?
+  subjectId          String?
+  institutionId      String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  node               KnowledgeNode?     @relation(fields: [nodeId], references: [id], onDelete: SetNull)
+  subject            Subject?           @relation(fields: [subjectId], references: [id], onDelete: SetNull)
+  institution        Institution?       @relation(fields: [institutionId], references: [id], onDelete: SetNull)
+
+  @@index([title])
+  @@index([doi])
+  @@index([subjectId])
+}
+
+model Course {
+  id                 String             @id @default(cuid())
+  nodeId             String?            @unique
+  title              String
+  subjectId          String?
+  institutionId      String?
+  syllabusMarkdown   String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  node               KnowledgeNode?     @relation(fields: [nodeId], references: [id], onDelete: SetNull)
+  subject            Subject?           @relation(fields: [subjectId], references: [id], onDelete: SetNull)
+  institution        Institution?       @relation(fields: [institutionId], references: [id], onDelete: SetNull)
+
+  @@index([title])
+  @@index([subjectId])
+}
+
+model Lineage {
+  id                 String             @id @default(cuid())
+  nodeId             String?            @unique
+  name               String
+  rootNodeId         String?
+  description        String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String @default("UNVERIFIED")
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  node               KnowledgeNode?     @relation(fields: [nodeId], references: [id], onDelete: SetNull)
+
+  @@index([name])
+  @@index([rootNodeId])
+}
+
+model Relationship {
+  id                 String             @id @default(cuid())
+  key                String           @unique
+  label              String
+  inverseKey         String?
+  description        String?
+  requiresCitation   Boolean            @default(true)
+  failClosed         Boolean            @default(true)
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+}
+
+model User {
+  id          String          @id @default(cuid())
+  email       String?         @unique
+  name        String?
+  role        String          @default("curator")
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  edges       KnowledgeEdge[]
+  auditLogs   AuditLog[]
+}
+
+model AuditLog {
+  id          String      @id @default(cuid())
+  action      String
+  entityType  String
+  entityId    String
+  userId      String?
+  before      String?
+  after       String?
+  reason      String?
+  citation    String?
+  createdAt   DateTime    @default(now())
+  user        User?       @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([action])
+  @@index([entityType, entityId])
+  @@index([createdAt])
+  @@index([userId])
+}

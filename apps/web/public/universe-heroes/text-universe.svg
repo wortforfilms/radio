@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="720" viewBox="0 0 1800 720" role="img" aria-labelledby="title desc">
+  <title id="title">Text Universe hero banner</title>
+  <desc id="desc">Abstract knowledge field banner for the Vaishviq Text Universe persistence scope.</desc>
+  <defs>
+    <linearGradient id="bg-text-universe" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#84451f"/>
+      <stop offset="54%" stop-color="#101713"/>
+      <stop offset="100%" stop-color="#5a2717"/>
+    </linearGradient>
+    <pattern id="grid-text-universe" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#f0c082" stroke-width="1" opacity="0.11"/>
+    </pattern>
+    <filter id="soft-text-universe" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1800" height="720" fill="url(#bg-text-universe)"/>
+  <rect width="1800" height="720" fill="url(#grid-text-universe)"/>
+  <circle cx="1450" cy="124" r="260" fill="#f0c082" opacity="0.12" filter="url(#soft-text-universe)"/>
+  <circle cx="1280" cy="606" r="320" fill="#5a2717" opacity="0.14" filter="url(#soft-text-universe)"/>
+  <ellipse cx="1120" cy="360" rx="270" ry="110" fill="none" stroke="#5a2717" stroke-width="2" opacity="0.14" transform="rotate(-18 1120 360)"/>
+<ellipse cx="1168" cy="341" rx="250" ry="118" fill="none" stroke="#5a2717" stroke-width="3" opacity="0.17500000000000002" transform="rotate(-14 1168 341)"/>
+<ellipse cx="1216" cy="322" rx="230" ry="126" fill="none" stroke="#5a2717" stroke-width="4" opacity="0.21000000000000002" transform="rotate(-10 1216 322)"/>
+<ellipse cx="1264" cy="303" rx="210" ry="134" fill="none" stroke="#5a2717" stroke-width="2" opacity="0.24500000000000002" transform="rotate(-6 1264 303)"/>
+<ellipse cx="1312" cy="284" rx="190" ry="142" fill="none" stroke="#5a2717" stroke-width="3" opacity="0.28" transform="rotate(-2 1312 284)"/>
+<ellipse cx="1360" cy="265" rx="170" ry="150" fill="none" stroke="#5a2717" stroke-width="4" opacity="0.31500000000000006" transform="rotate(2 1360 265)"/>
+<ellipse cx="1408" cy="246" rx="150" ry="158" fill="none" stroke="#5a2717" stroke-width="2" opacity="0.35000000000000003" transform="rotate(6 1408 246)"/>
+<ellipse cx="1456" cy="227" rx="130" ry="166" fill="none" stroke="#5a2717" stroke-width="3" opacity="0.385" transform="rotate(10 1456 227)"/>
+  <line x1="493" y1="117" x2="666" y2="214" stroke="#f0c082" stroke-width="1.2" opacity="0.18"/>
+<line x1="666" y1="214" x2="839" y2="311" stroke="#f0c082" stroke-width="1.2" opacity="0.18"/>
+<line x1="839" y1="311" x2="1012" y2="408" stroke="#f0c082" stroke-width="1.2" opacity="0.18"/>
+<line x1="1012" y1="408" x2="1185" y2="505" stroke="#f0c082" stroke-width="1.2" opacity="0.18"/>
+<line x1="1185" y1="505" x2="1358" y2="132" stroke="#f0c082" stroke-width="1.2" opacity="0.18"/>
+<line x1="1358" y1="132" x2="1531" y2="229" stroke="#f0c082" stroke-width="1.2" opacity="0.18"/>
+<line x1="1531" y1="229" x2="284" y2="326" stroke="#f0c082" stroke-width="1.2" opacity="0.18"/>
+<line x1="284" y1="326" x2="457" y2="423" stroke="#f0c082" stroke-width="1.2" opacity="0.18"/>
+<line x1="457" y1="423" x2="630" y2="520" stroke="#f0c082" stroke-width="1.2" opacity="0.18"/>
+<line x1="630" y1="520" x2="803" y2="147" stroke="#f0c082" stroke-width="1.2" opacity="0.18"/>
+<line x1="803" y1="147" x2="976" y2="244" stroke="#f0c082" stroke-width="1.2" opacity="0.18"/>
+<line x1="976" y1="244" x2="1149" y2="341" stroke="#f0c082" stroke-width="1.2" opacity="0.18"/>
+<line x1="1149" y1="341" x2="1322" y2="438" stroke="#f0c082" stroke-width="1.2" opacity="0.18"/>
+<line x1="1322" y1="438" x2="1495" y2="535" stroke="#f0c082" stroke-width="1.2" opacity="0.18"/>
+<line x1="1495" y1="535" x2="248" y2="162" stroke="#f0c082" stroke-width="1.2" opacity="0.18"/>
+<line x1="248" y1="162" x2="421" y2="259" stroke="#f0c082" stroke-width="1.2" opacity="0.18"/>
+<line x1="421" y1="259" x2="594" y2="356" stroke="#f0c082" stroke-width="1.2" opacity="0.18"/>
+  <circle cx="493" cy="117" r="6" fill="#f0c082" opacity="0.24"/>
+<circle cx="666" cy="214" r="7" fill="#f0c082" opacity="0.32"/>
+<circle cx="839" cy="311" r="8" fill="#f0c082" opacity="0.4"/>
+<circle cx="1012" cy="408" r="3" fill="#f0c082" opacity="0.48"/>
+<circle cx="1185" cy="505" r="4" fill="#f0c082" opacity="0.24"/>
+<circle cx="1358" cy="132" r="5" fill="#f0c082" opacity="0.32"/>
+<circle cx="1531" cy="229" r="6" fill="#f0c082" opacity="0.4"/>
+<circle cx="284" cy="326" r="7" fill="#f0c082" opacity="0.48"/>
+<circle cx="457" cy="423" r="8" fill="#f0c082" opacity="0.24"/>
+<circle cx="630" cy="520" r="3" fill="#f0c082" opacity="0.32"/>
+<circle cx="803" cy="147" r="4" fill="#f0c082" opacity="0.4"/>
+<circle cx="976" cy="244" r="5" fill="#f0c082" opacity="0.48"/>
+<circle cx="1149" cy="341" r="6" fill="#f0c082" opacity="0.24"/>
+<circle cx="1322" cy="438" r="7" fill="#f0c082" opacity="0.32"/>
+<circle cx="1495" cy="535" r="8" fill="#f0c082" opacity="0.4"/>
+<circle cx="248" cy="162" r="3" fill="#f0c082" opacity="0.48"/>
+<circle cx="421" cy="259" r="4" fill="#f0c082" opacity="0.24"/>
+<circle cx="594" cy="356" r="5" fill="#f0c082" opacity="0.32"/>
+  <path d="M0 560C240 494 366 622 586 548C812 472 936 402 1168 466C1398 530 1562 464 1800 386V720H0Z" fill="#000000" opacity="0.18"/>
+  <path d="M102 610C294 510 454 564 612 462C806 336 990 330 1184 406C1394 488 1570 398 1708 310" fill="none" stroke="#f0c082" stroke-width="3" opacity="0.34"/>
+  <text x="104" y="594" fill="#f0c082" opacity="0.22" font-family="ui-sans-serif, system-ui" font-size="34" font-weight="700" letter-spacing="0">knowledge field</text>
+</svg>

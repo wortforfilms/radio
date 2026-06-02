@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="720" viewBox="0 0 1800 720" role="img" aria-labelledby="title desc">
+  <title id="title">Guru Maataa Universe hero banner</title>
+  <desc id="desc">Abstract teacher lamp banner for the Vaishviq Guru Maataa Universe persistence scope.</desc>
+  <defs>
+    <linearGradient id="bg-guru-maataa-universe" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#35456f"/>
+      <stop offset="54%" stop-color="#101713"/>
+      <stop offset="100%" stop-color="#6a79bc"/>
+    </linearGradient>
+    <pattern id="grid-guru-maataa-universe" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#d7ddff" stroke-width="1" opacity="0.11"/>
+    </pattern>
+    <filter id="soft-guru-maataa-universe" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1800" height="720" fill="url(#bg-guru-maataa-universe)"/>
+  <rect width="1800" height="720" fill="url(#grid-guru-maataa-universe)"/>
+  <circle cx="1450" cy="124" r="260" fill="#d7ddff" opacity="0.12" filter="url(#soft-guru-maataa-universe)"/>
+  <circle cx="1280" cy="606" r="320" fill="#6a79bc" opacity="0.14" filter="url(#soft-guru-maataa-universe)"/>
+  <ellipse cx="1120" cy="360" rx="270" ry="110" fill="none" stroke="#6a79bc" stroke-width="2" opacity="0.14" transform="rotate(-18 1120 360)"/>
+<ellipse cx="1168" cy="341" rx="250" ry="118" fill="none" stroke="#6a79bc" stroke-width="3" opacity="0.17500000000000002" transform="rotate(-14 1168 341)"/>
+<ellipse cx="1216" cy="322" rx="230" ry="126" fill="none" stroke="#6a79bc" stroke-width="4" opacity="0.21000000000000002" transform="rotate(-10 1216 322)"/>
+<ellipse cx="1264" cy="303" rx="210" ry="134" fill="none" stroke="#6a79bc" stroke-width="2" opacity="0.24500000000000002" transform="rotate(-6 1264 303)"/>
+<ellipse cx="1312" cy="284" rx="190" ry="142" fill="none" stroke="#6a79bc" stroke-width="3" opacity="0.28" transform="rotate(-2 1312 284)"/>
+<ellipse cx="1360" cy="265" rx="170" ry="150" fill="none" stroke="#6a79bc" stroke-width="4" opacity="0.31500000000000006" transform="rotate(2 1360 265)"/>
+<ellipse cx="1408" cy="246" rx="150" ry="158" fill="none" stroke="#6a79bc" stroke-width="2" opacity="0.35000000000000003" transform="rotate(6 1408 246)"/>
+<ellipse cx="1456" cy="227" rx="130" ry="166" fill="none" stroke="#6a79bc" stroke-width="3" opacity="0.385" transform="rotate(10 1456 227)"/>
+  <line x1="234" y1="216" x2="407" y2="313" stroke="#d7ddff" stroke-width="1.2" opacity="0.18"/>
+<line x1="407" y1="313" x2="580" y2="410" stroke="#d7ddff" stroke-width="1.2" opacity="0.18"/>
+<line x1="580" y1="410" x2="753" y2="507" stroke="#d7ddff" stroke-width="1.2" opacity="0.18"/>
+<line x1="753" y1="507" x2="926" y2="134" stroke="#d7ddff" stroke-width="1.2" opacity="0.18"/>
+<line x1="926" y1="134" x2="1099" y2="231" stroke="#d7ddff" stroke-width="1.2" opacity="0.18"/>
+<line x1="1099" y1="231" x2="1272" y2="328" stroke="#d7ddff" stroke-width="1.2" opacity="0.18"/>
+<line x1="1272" y1="328" x2="1445" y2="425" stroke="#d7ddff" stroke-width="1.2" opacity="0.18"/>
+<line x1="1445" y1="425" x2="198" y2="522" stroke="#d7ddff" stroke-width="1.2" opacity="0.18"/>
+<line x1="198" y1="522" x2="371" y2="149" stroke="#d7ddff" stroke-width="1.2" opacity="0.18"/>
+<line x1="371" y1="149" x2="544" y2="246" stroke="#d7ddff" stroke-width="1.2" opacity="0.18"/>
+<line x1="544" y1="246" x2="717" y2="343" stroke="#d7ddff" stroke-width="1.2" opacity="0.18"/>
+<line x1="717" y1="343" x2="890" y2="440" stroke="#d7ddff" stroke-width="1.2" opacity="0.18"/>
+<line x1="890" y1="440" x2="1063" y2="537" stroke="#d7ddff" stroke-width="1.2" opacity="0.18"/>
+<line x1="1063" y1="537" x2="1236" y2="164" stroke="#d7ddff" stroke-width="1.2" opacity="0.18"/>
+<line x1="1236" y1="164" x2="1409" y2="261" stroke="#d7ddff" stroke-width="1.2" opacity="0.18"/>
+<line x1="1409" y1="261" x2="162" y2="358" stroke="#d7ddff" stroke-width="1.2" opacity="0.18"/>
+<line x1="162" y1="358" x2="335" y2="455" stroke="#d7ddff" stroke-width="1.2" opacity="0.18"/>
+  <circle cx="234" cy="216" r="5" fill="#d7ddff" opacity="0.24"/>
+<circle cx="407" cy="313" r="6" fill="#d7ddff" opacity="0.32"/>
+<circle cx="580" cy="410" r="7" fill="#d7ddff" opacity="0.4"/>
+<circle cx="753" cy="507" r="8" fill="#d7ddff" opacity="0.48"/>
+<circle cx="926" cy="134" r="3" fill="#d7ddff" opacity="0.24"/>
+<circle cx="1099" cy="231" r="4" fill="#d7ddff" opacity="0.32"/>
+<circle cx="1272" cy="328" r="5" fill="#d7ddff" opacity="0.4"/>
+<circle cx="1445" cy="425" r="6" fill="#d7ddff" opacity="0.48"/>
+<circle cx="198" cy="522" r="7" fill="#d7ddff" opacity="0.24"/>
+<circle cx="371" cy="149" r="8" fill="#d7ddff" opacity="0.32"/>
+<circle cx="544" cy="246" r="3" fill="#d7ddff" opacity="0.4"/>
+<circle cx="717" cy="343" r="4" fill="#d7ddff" opacity="0.48"/>
+<circle cx="890" cy="440" r="5" fill="#d7ddff" opacity="0.24"/>
+<circle cx="1063" cy="537" r="6" fill="#d7ddff" opacity="0.32"/>
+<circle cx="1236" cy="164" r="7" fill="#d7ddff" opacity="0.4"/>
+<circle cx="1409" cy="261" r="8" fill="#d7ddff" opacity="0.48"/>
+<circle cx="162" cy="358" r="3" fill="#d7ddff" opacity="0.24"/>
+<circle cx="335" cy="455" r="4" fill="#d7ddff" opacity="0.32"/>
+  <path d="M0 560C240 494 366 622 586 548C812 472 936 402 1168 466C1398 530 1562 464 1800 386V720H0Z" fill="#000000" opacity="0.18"/>
+  <path d="M102 610C294 510 454 564 612 462C806 336 990 330 1184 406C1394 488 1570 398 1708 310" fill="none" stroke="#d7ddff" stroke-width="3" opacity="0.34"/>
+  <text x="104" y="594" fill="#d7ddff" opacity="0.22" font-family="ui-sans-serif, system-ui" font-size="34" font-weight="700" letter-spacing="0">teacher lamp</text>
+</svg>

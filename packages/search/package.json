@@ -1,0 +1,8 @@
+{
+  "name": "@search",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./index": "./src/index.ts"
+  }
+}

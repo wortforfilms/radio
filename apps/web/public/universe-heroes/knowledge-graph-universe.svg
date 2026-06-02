@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="720" viewBox="0 0 1800 720" role="img" aria-labelledby="title desc">
+  <title id="title">Knowledge Graph Universe hero banner</title>
+  <desc id="desc">Abstract node lattice banner for the Vaishviq Knowledge Graph Universe persistence scope.</desc>
+  <defs>
+    <linearGradient id="bg-knowledge-graph-universe" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#7a2e3a"/>
+      <stop offset="54%" stop-color="#101713"/>
+      <stop offset="100%" stop-color="#b84d62"/>
+    </linearGradient>
+    <pattern id="grid-knowledge-graph-universe" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#f2c4cd" stroke-width="1" opacity="0.11"/>
+    </pattern>
+    <filter id="soft-knowledge-graph-universe" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1800" height="720" fill="url(#bg-knowledge-graph-universe)"/>
+  <rect width="1800" height="720" fill="url(#grid-knowledge-graph-universe)"/>
+  <circle cx="1450" cy="124" r="260" fill="#f2c4cd" opacity="0.12" filter="url(#soft-knowledge-graph-universe)"/>
+  <circle cx="1280" cy="606" r="320" fill="#b84d62" opacity="0.14" filter="url(#soft-knowledge-graph-universe)"/>
+  <ellipse cx="1120" cy="360" rx="270" ry="110" fill="none" stroke="#b84d62" stroke-width="2" opacity="0.14" transform="rotate(-18 1120 360)"/>
+<ellipse cx="1168" cy="341" rx="250" ry="118" fill="none" stroke="#b84d62" stroke-width="3" opacity="0.17500000000000002" transform="rotate(-14 1168 341)"/>
+<ellipse cx="1216" cy="322" rx="230" ry="126" fill="none" stroke="#b84d62" stroke-width="4" opacity="0.21000000000000002" transform="rotate(-10 1216 322)"/>
+<ellipse cx="1264" cy="303" rx="210" ry="134" fill="none" stroke="#b84d62" stroke-width="2" opacity="0.24500000000000002" transform="rotate(-6 1264 303)"/>
+<ellipse cx="1312" cy="284" rx="190" ry="142" fill="none" stroke="#b84d62" stroke-width="3" opacity="0.28" transform="rotate(-2 1312 284)"/>
+<ellipse cx="1360" cy="265" rx="170" ry="150" fill="none" stroke="#b84d62" stroke-width="4" opacity="0.31500000000000006" transform="rotate(2 1360 265)"/>
+<ellipse cx="1408" cy="246" rx="150" ry="158" fill="none" stroke="#b84d62" stroke-width="2" opacity="0.35000000000000003" transform="rotate(6 1408 246)"/>
+<ellipse cx="1456" cy="227" rx="130" ry="166" fill="none" stroke="#b84d62" stroke-width="3" opacity="0.385" transform="rotate(10 1456 227)"/>
+  <line x1="604" y1="276" x2="777" y2="373" stroke="#f2c4cd" stroke-width="1.2" opacity="0.18"/>
+<line x1="777" y1="373" x2="950" y2="470" stroke="#f2c4cd" stroke-width="1.2" opacity="0.18"/>
+<line x1="950" y1="470" x2="1123" y2="567" stroke="#f2c4cd" stroke-width="1.2" opacity="0.18"/>
+<line x1="1123" y1="567" x2="1296" y2="194" stroke="#f2c4cd" stroke-width="1.2" opacity="0.18"/>
+<line x1="1296" y1="194" x2="1469" y2="291" stroke="#f2c4cd" stroke-width="1.2" opacity="0.18"/>
+<line x1="1469" y1="291" x2="222" y2="388" stroke="#f2c4cd" stroke-width="1.2" opacity="0.18"/>
+<line x1="222" y1="388" x2="395" y2="485" stroke="#f2c4cd" stroke-width="1.2" opacity="0.18"/>
+<line x1="395" y1="485" x2="568" y2="112" stroke="#f2c4cd" stroke-width="1.2" opacity="0.18"/>
+<line x1="568" y1="112" x2="741" y2="209" stroke="#f2c4cd" stroke-width="1.2" opacity="0.18"/>
+<line x1="741" y1="209" x2="914" y2="306" stroke="#f2c4cd" stroke-width="1.2" opacity="0.18"/>
+<line x1="914" y1="306" x2="1087" y2="403" stroke="#f2c4cd" stroke-width="1.2" opacity="0.18"/>
+<line x1="1087" y1="403" x2="1260" y2="500" stroke="#f2c4cd" stroke-width="1.2" opacity="0.18"/>
+<line x1="1260" y1="500" x2="1433" y2="127" stroke="#f2c4cd" stroke-width="1.2" opacity="0.18"/>
+<line x1="1433" y1="127" x2="186" y2="224" stroke="#f2c4cd" stroke-width="1.2" opacity="0.18"/>
+<line x1="186" y1="224" x2="359" y2="321" stroke="#f2c4cd" stroke-width="1.2" opacity="0.18"/>
+<line x1="359" y1="321" x2="532" y2="418" stroke="#f2c4cd" stroke-width="1.2" opacity="0.18"/>
+<line x1="532" y1="418" x2="705" y2="515" stroke="#f2c4cd" stroke-width="1.2" opacity="0.18"/>
+  <circle cx="604" cy="276" r="3" fill="#f2c4cd" opacity="0.24"/>
+<circle cx="777" cy="373" r="4" fill="#f2c4cd" opacity="0.32"/>
+<circle cx="950" cy="470" r="5" fill="#f2c4cd" opacity="0.4"/>
+<circle cx="1123" cy="567" r="6" fill="#f2c4cd" opacity="0.48"/>
+<circle cx="1296" cy="194" r="7" fill="#f2c4cd" opacity="0.24"/>
+<circle cx="1469" cy="291" r="8" fill="#f2c4cd" opacity="0.32"/>
+<circle cx="222" cy="388" r="3" fill="#f2c4cd" opacity="0.4"/>
+<circle cx="395" cy="485" r="4" fill="#f2c4cd" opacity="0.48"/>
+<circle cx="568" cy="112" r="5" fill="#f2c4cd" opacity="0.24"/>
+<circle cx="741" cy="209" r="6" fill="#f2c4cd" opacity="0.32"/>
+<circle cx="914" cy="306" r="7" fill="#f2c4cd" opacity="0.4"/>
+<circle cx="1087" cy="403" r="8" fill="#f2c4cd" opacity="0.48"/>
+<circle cx="1260" cy="500" r="3" fill="#f2c4cd" opacity="0.24"/>
+<circle cx="1433" cy="127" r="4" fill="#f2c4cd" opacity="0.32"/>
+<circle cx="186" cy="224" r="5" fill="#f2c4cd" opacity="0.4"/>
+<circle cx="359" cy="321" r="6" fill="#f2c4cd" opacity="0.48"/>
+<circle cx="532" cy="418" r="7" fill="#f2c4cd" opacity="0.24"/>
+<circle cx="705" cy="515" r="8" fill="#f2c4cd" opacity="0.32"/>
+  <path d="M0 560C240 494 366 622 586 548C812 472 936 402 1168 466C1398 530 1562 464 1800 386V720H0Z" fill="#000000" opacity="0.18"/>
+  <path d="M102 610C294 510 454 564 612 462C806 336 990 330 1184 406C1394 488 1570 398 1708 310" fill="none" stroke="#f2c4cd" stroke-width="3" opacity="0.34"/>
+  <text x="104" y="594" fill="#f2c4cd" opacity="0.22" font-family="ui-sans-serif, system-ui" font-size="34" font-weight="700" letter-spacing="0">node lattice</text>
+</svg>

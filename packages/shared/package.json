@@ -1,0 +1,15 @@
+{
+  "name": "@shared",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./persistence-scopes": "./src/persistence-scopes.ts",
+    "./phkd": "./src/phkd.ts",
+    "./reference-corpus": "./src/reference-corpus.ts",
+    "./sanskrit-dictionary": "./src/sanskrit-dictionary.ts",
+    "./taxonomy": "./src/taxonomy.ts",
+    "./universes": "./src/universes.ts",
+    "./world-religious-atlas": "./src/world-religious-atlas.ts",
+    ".": "./src/index.ts"
+  }
+}
