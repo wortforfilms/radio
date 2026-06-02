@@ -20,6 +20,7 @@ export default async function DashboardPage() {
   const quickActions = [
     ["Lineage Explorer", "/lineage"],
     ["Sanskrit Dictionary", "/dictionary"],
+    ["HKD Banners", "/hkd-banners"],
     ["Universes", "/universes"],
     ["Persistence Scopes", "/scopes"],
     ["Admin", "/admin"],
