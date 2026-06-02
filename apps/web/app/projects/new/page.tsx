@@ -1,3 +1,6 @@
+import { ayodhyaProjectStages, ayodhyaProjectTemplates } from "@shared/ayodhya-project-templates";
+import ProjectWizard from "./ProjectWizard";
+
 type ProjectSearchParams = {
   desc?: string;
   lang?: string;
@@ -75,6 +78,19 @@ export default async function NewProjectPage({
             <strong>{source}</strong>
           </article>
         </div>
+
+        <ProjectWizard
+          incoming={{
+            description,
+            language,
+            source,
+            title,
+            transliteration,
+            type: projectType
+          }}
+          stages={ayodhyaProjectStages}
+          templates={ayodhyaProjectTemplates}
+        />
 
         <section className="project-lyrics-panel">
           <div className="reference-feed-head">
