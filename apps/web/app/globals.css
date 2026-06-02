@@ -1879,6 +1879,197 @@ button {
   background: #936219;
 }
 
+.hkd3d-shell {
+  background: #071015;
+}
+
+.hkd3d-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 360px);
+  gap: 24px;
+  align-items: end;
+  min-height: 500px;
+  padding: 54px 28px;
+  color: white;
+  background:
+    linear-gradient(90deg, rgba(136, 209, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 225, 145, 0.06) 1px, transparent 1px),
+    radial-gradient(circle at 42% 22%, rgba(42, 144, 118, 0.28), transparent 34%),
+    #071015;
+  background-size: 38px 38px, 38px 38px, auto, auto;
+}
+
+.hkd3d-hero h1 {
+  max-width: 980px;
+  margin: 0;
+  color: #d9f4ff;
+  font-size: clamp(42px, 7vw, 92px);
+  line-height: 0.98;
+  overflow-wrap: anywhere;
+}
+
+.hkd3d-hero p:not(.eyebrow) {
+  max-width: 860px;
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 18px;
+  line-height: 1.58;
+}
+
+.hkd3d-runtime-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: 14px;
+}
+
+.hkd3d-canvas-panel {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  border: 1px solid rgba(161, 217, 224, 0.18);
+  border-radius: 8px;
+  background: #081018;
+}
+
+.hkd3d-canvas-panel canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+}
+
+.hkd3d-viewer-note {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  display: grid;
+  gap: 4px;
+  max-width: min(420px, calc(100% - 28px));
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  padding: 12px;
+  background: rgba(7, 16, 21, 0.82);
+  color: white;
+  backdrop-filter: blur(12px);
+}
+
+.hkd3d-viewer-note span,
+.hkd3d-control-panel label span,
+.hkd3d-selected-stage > span,
+.hkd3d-stage-card > span {
+  color: rgba(217, 244, 255, 0.72);
+  font-size: 11px;
+  font-weight: 780;
+  text-transform: uppercase;
+}
+
+.hkd3d-control-panel {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  border: 1px solid rgba(161, 217, 224, 0.18);
+  border-radius: 8px;
+  padding: 14px;
+  background: #102028;
+}
+
+.hkd3d-control-panel label {
+  display: grid;
+  gap: 6px;
+}
+
+.hkd3d-control-panel select {
+  width: 100%;
+  border: 1px solid rgba(161, 217, 224, 0.24);
+  border-radius: 8px;
+  padding: 10px 11px;
+  background: #071015;
+  color: #d9f4ff;
+  font: inherit;
+}
+
+.hkd3d-selected-stage {
+  display: grid;
+  gap: 10px;
+  border-top: 1px solid rgba(161, 217, 224, 0.18);
+  padding-top: 14px;
+}
+
+.hkd3d-selected-stage h3,
+.hkd3d-stage-card h3 {
+  margin: 0;
+  color: #d9f4ff;
+  font-size: 24px;
+  line-height: 1.14;
+}
+
+.hkd3d-selected-stage p,
+.hkd3d-stage-card p,
+.hkd3d-app-grid p,
+.hkd3d-character-grid p,
+.hkd3d-character-grid small {
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.5;
+}
+
+.hkd3d-selected-stage div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.hkd3d-selected-stage small {
+  border: 1px solid rgba(161, 217, 224, 0.18);
+  border-radius: 999px;
+  padding: 5px 8px;
+  color: rgba(217, 244, 255, 0.76);
+}
+
+.hkd3d-stage-grid,
+.hkd3d-app-grid,
+.hkd3d-character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.hkd3d-stage-card {
+  display: grid;
+  gap: 10px;
+  border: 1px solid rgba(161, 217, 224, 0.16);
+  border-radius: 8px;
+  padding: 14px;
+  background: #102028;
+}
+
+.hkd3d-stage-card dl {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+}
+
+.hkd3d-stage-card dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid rgba(161, 217, 224, 0.16);
+  padding-top: 7px;
+}
+
+.hkd3d-stage-card dt {
+  color: rgba(217, 244, 255, 0.66);
+  font-size: 11px;
+  font-weight: 760;
+  text-transform: uppercase;
+}
+
+.hkd3d-stage-card dd {
+  margin: 0;
+  color: white;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
 @media (max-width: 760px) {
   .topbar,
   .page,
@@ -1953,6 +2144,20 @@ button {
 
   .dictionary-banner {
     grid-template-columns: 1fr;
+  }
+
+  .hkd3d-hero,
+  .hkd3d-runtime-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hkd3d-hero {
+    min-height: 420px;
+    padding: 36px 16px;
+  }
+
+  .hkd3d-hero h1 {
+    font-size: 42px;
   }
 
   .project-wizard-controls,

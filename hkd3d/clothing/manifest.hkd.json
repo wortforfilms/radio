@@ -1,0 +1,13 @@
+{
+  "format": ".hkd",
+  "scope": "hkd3d.clothing",
+  "status": "blocked",
+  "verificationState": "blocked",
+  "phkd": "fail_closed",
+  "collections": ["Ancient", "Royal", "Warrior", "Rishi", "Temple"],
+  "ayodhyaCollection": ["Ram", "Sita", "Lakshman", "Hanuman", "Coronation", "Forest Exile"],
+  "support": ["cloth swapping", "materials", "layers"],
+  "source": null,
+  "creator": null,
+  "evidence": null
+}

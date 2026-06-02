@@ -1,0 +1,14 @@
+{
+  "format": ".hkd",
+  "scope": "hkd3d.lighting",
+  "status": "draft",
+  "verificationState": "unverified",
+  "phkd": "fail_closed",
+  "threejs": ["HDRI", "DirectionalLight", "SpotLight", "PointLight"],
+  "effects": ["Bloom", "SSAO", "SSR", "Volumetrics"],
+  "modes": ["Temple", "Day", "Night", "Sunset", "Firelight", "Moonlight"],
+  "reference": "Look development workflows emphasize HDRI, procedural texturing, and neutral lighting rigs for realistic asset evaluation.",
+  "source": null,
+  "creator": null,
+  "evidence": null
+}

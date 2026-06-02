@@ -1,0 +1,13 @@
+{
+  "format": ".hkd",
+  "scope": "hkd3d.animations",
+  "status": "blocked",
+  "verificationState": "blocked",
+  "phkd": "fail_closed",
+  "support": ["GLTF animation clips", "Mixamo retargeting"],
+  "core": ["idle", "walk", "run", "sit", "stand", "jump"],
+  "ayodhyaRuntime": ["namaste", "pranam", "meditation", "aarti", "blessing", "teaching", "archery", "sword"],
+  "source": null,
+  "creator": null,
+  "evidence": null
+}

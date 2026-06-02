@@ -1,0 +1,14 @@
+{
+  "format": ".hkd",
+  "scope": "hkd3d.models.base",
+  "status": "blocked",
+  "verificationState": "blocked",
+  "phkd": "fail_closed",
+  "note": "Asset slots are declared, but no GLB model files are present or claimed complete.",
+  "requirements": ["clean topology", "quad mesh", "animation friendly", "UV unwrapped", "GLB compatible", "20k-80k polygons"],
+  "assets": [
+    { "id": "hkd3d-base-male", "expectedPath": "/hkd3d/models/base/male.glb", "assetPath": null, "source": null, "creator": null, "evidence": null, "status": "blocked" },
+    { "id": "hkd3d-base-female", "expectedPath": "/hkd3d/models/base/female.glb", "assetPath": null, "source": null, "creator": null, "evidence": null, "status": "blocked" },
+    { "id": "hkd3d-base-androgynous", "expectedPath": "/hkd3d/models/base/androgynous.glb", "assetPath": null, "source": null, "creator": null, "evidence": null, "status": "blocked" }
+  ]
+}

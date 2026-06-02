@@ -1,0 +1,24 @@
+format: .hkd
+scope: apps.hkd3d-scene
+status: draft
+verification_state: unverified
+phkd: fail_closed
+
+scene_scopes:
+  - Human
+  - Environment
+  - Props
+  - Audio
+  - Camera
+  - Particles
+
+features:
+  - timeline
+  - keyframes
+  - camera paths
+  - export
+
+claims:
+  completed_scene_runtime: NULL
+  completed_export_runtime: NULL
+  production_ready: false

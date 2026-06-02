@@ -1,0 +1,26 @@
+format: .hkd
+scope: apps.hkd3d-designer
+status: draft
+verification_state: unverified
+phkd: fail_closed
+
+modules:
+  - Model Designer
+  - Texture Designer
+  - Rig Designer
+  - Animation Designer
+  - Lighting Designer
+  - Clothing Designer
+  - Hair Designer
+  - Scene Designer
+
+features:
+  - drag-drop
+  - timeline
+  - layers
+  - asset browser
+
+claims:
+  persisted_designer_project: NULL
+  completed_drag_drop_runtime: NULL
+  production_ready: false

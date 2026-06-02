@@ -1,0 +1,10 @@
+{
+  "format": ".hkd",
+  "scope": "hkd3d.evidence",
+  "status": "draft",
+  "verificationState": "unverified",
+  "phkd": "fail_closed",
+  "requiredFields": ["id", "source", "artist", "tool", "date", "status", "evidence", "verificationState"],
+  "statuses": ["verified", "experimental", "draft", "blocked"],
+  "promotionRule": "Production readiness requires a real asset path, source, creator, evidence, and verified status."
+}

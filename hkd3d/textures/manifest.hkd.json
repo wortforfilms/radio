@@ -1,0 +1,15 @@
+{
+  "format": ".hkd",
+  "scope": "hkd3d.textures",
+  "status": "blocked",
+  "verificationState": "blocked",
+  "phkd": "fail_closed",
+  "note": "PBR texture slots are declared. No albedo, normal, roughness, metallic, ao, or subsurface maps are claimed present.",
+  "supportedFormats": ["UDIM", "KTX2", "WEBP"],
+  "pbrMaps": ["albedo", "normal", "roughness", "metallic", "ao", "subsurface"],
+  "skinLayers": [
+    { "id": "young", "source": null, "creator": null, "evidence": null, "status": "blocked" },
+    { "id": "adult", "source": null, "creator": null, "evidence": null, "status": "blocked" },
+    { "id": "elder", "source": null, "creator": null, "evidence": null, "status": "blocked" }
+  ]
+}

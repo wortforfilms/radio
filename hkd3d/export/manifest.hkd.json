@@ -1,0 +1,12 @@
+{
+  "format": ".hkd",
+  "scope": "hkd3d.export",
+  "status": "draft",
+  "verificationState": "unverified",
+  "phkd": "fail_closed",
+  "formats": ["GLB", "FBX", "USD", "OBJ"],
+  "compression": ["Draco", "Meshopt", "KTX2"],
+  "source": null,
+  "creator": null,
+  "evidence": null
+}

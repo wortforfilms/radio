@@ -1,0 +1,13 @@
+{
+  "format": ".hkd",
+  "scope": "hkd3d.face-runtime",
+  "status": "draft",
+  "verificationState": "unverified",
+  "phkd": "fail_closed",
+  "features": ["eye tracking", "blink system", "viseme mapping", "emotion blending"],
+  "input": ["audio", "microphone", "text"],
+  "output": ["facial animation"],
+  "source": null,
+  "creator": null,
+  "evidence": null
+}

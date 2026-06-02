@@ -1,0 +1,12 @@
+{
+  "format": ".hkd",
+  "scope": "hkd3d.rig",
+  "status": "blocked",
+  "verificationState": "blocked",
+  "phkd": "fail_closed",
+  "targetBoneCount": "150-300",
+  "hierarchy": ["root", "pelvis", "spine", "chest", "neck", "head", "arms", "hands", "fingers", "legs", "feet", "toes", "eyes", "eyelids", "brows", "jaw", "lips", "tongue"],
+  "source": null,
+  "creator": null,
+  "evidence": null
+}

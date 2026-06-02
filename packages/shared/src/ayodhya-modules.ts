@@ -73,6 +73,14 @@ export const ayodhyaModules: AyodhyaModule[] = [
     actions: ["Design", "Variant", "Lineage"]
   },
   {
+    key: "hkd3d",
+    icon: "3D",
+    name: "HKD3D Human Runtime",
+    href: "/hkd3d",
+    description: "Evidence-gated human, avatar, character, rig, lighting, clothing, scene, and export runtime.",
+    actions: ["View", "Design", "Export"]
+  },
+  {
     key: "locations",
     icon: "PLACE",
     name: "Location Builder",

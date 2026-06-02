@@ -1,0 +1,12 @@
+{
+  "format": ".hkd",
+  "scope": "hkd3d.characters",
+  "status": "blocked",
+  "verificationState": "blocked",
+  "phkd": "fail_closed",
+  "characters": ["Ram", "Sita", "Lakshman", "Hanuman", "Bharat", "Shatrughna", "Valmiki", "Vishwamitra"],
+  "requiredForEach": ["model", "textures", "rig", "animations", "metadata"],
+  "source": null,
+  "creator": null,
+  "evidence": null
+}

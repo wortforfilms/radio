@@ -1,0 +1,12 @@
+{
+  "format": ".hkd",
+  "scope": "hkd3d.hair",
+  "status": "blocked",
+  "verificationState": "blocked",
+  "phkd": "fail_closed",
+  "styles": ["short", "long", "braided", "warrior", "rishi", "royal"],
+  "support": ["hair cards", "groom import", "GLTF export"],
+  "source": null,
+  "creator": null,
+  "evidence": null
+}

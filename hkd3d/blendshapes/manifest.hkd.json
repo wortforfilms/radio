@@ -1,0 +1,13 @@
+{
+  "format": ".hkd",
+  "scope": "hkd3d.blendshapes",
+  "status": "blocked",
+  "verificationState": "blocked",
+  "phkd": "fail_closed",
+  "targetMorphCount": "50-100",
+  "expressions": ["neutral", "smile", "laugh", "sad", "angry", "surprised"],
+  "visemes": ["A", "E", "I", "O", "U", "M", "F", "L"],
+  "source": null,
+  "creator": null,
+  "evidence": null
+}

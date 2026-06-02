@@ -1,0 +1,26 @@
+format: .hkd
+scope: apps.hkd3d-viewer
+status: draft
+verification_state: unverified
+phkd: fail_closed
+
+runtime:
+  stack: Next.js, TypeScript, Three.js
+  requested_stack: React Three Fiber
+  current_route: /hkd3d
+  note: React Three Fiber is not installed in this workspace, so the current verified implementation uses the existing Three.js dependency directly.
+
+panels:
+  - Model
+  - Textures
+  - Rig
+  - Animations
+  - Lighting
+  - Export
+
+claims:
+  completed_model: NULL
+  completed_texture_set: NULL
+  completed_rig: NULL
+  completed_animation_library: NULL
+  production_ready: false

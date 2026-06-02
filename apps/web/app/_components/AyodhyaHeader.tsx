@@ -11,6 +11,7 @@ export default function AyodhyaHeader() {
       <nav aria-label="Ayodhya AI navigation">
         <a href="/ayodhya">Home</a>
         <a href="/projects/new">New Project</a>
+        <a href="/hkd3d">HKD3D</a>
         <a href="/ayodhya/studio">Studio</a>
         <a href="/ayodhya/phkd">PHKD</a>
         <a href="/ayodhya/status">Status</a>
