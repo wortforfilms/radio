@@ -1,4 +1,9 @@
 import { prisma } from "@runtime/db";
+import {
+  filterUniversalDictionaryEntries,
+  getUniversalDictionaryStaticEntries,
+  universalDictionaryPhkdNote
+} from "@shared/universal-dictionary";
 import ScriptRegistryExplorer, { type ScriptRegistryRecord, type ScriptStyleRecord } from "../_components/ScriptRegistryExplorer";
 
 type ScriptStylePayload = {
@@ -36,6 +41,9 @@ export default async function DictionaryPage({
 }) {
   const params = await searchParams;
   const q = params?.q?.trim();
+  const staticDictionaryEntries = filterUniversalDictionaryEntries(getUniversalDictionaryStaticEntries(), q);
+  const worldTextCount = staticDictionaryEntries.filter((entry) => entry.category === "text").length;
+  const lipiCount = staticDictionaryEntries.filter((entry) => entry.category === "lipi").length;
   const entries = await prisma.sanskritLexeme.findMany({
     where: q
       ? {
@@ -116,35 +124,73 @@ export default async function DictionaryPage({
     <main>
       <section className="dictionary-hero">
         <div>
-          <p className="eyebrow">Sanskrit Dictionary</p>
-          <h1>Lexeme Archive</h1>
+          <p className="eyebrow">Universal Dictionary</p>
+          <h1>Lexeme, Script, Text, and Lipi Archive</h1>
           <p>
-            Search Sanskrit headwords, transliterations, concise dictionary glosses, and source provenance. Entries remain unverified until a curator reviews the cited dictionary record.
+            Search Sanskrit lexemes, world scripts, sacred text catalog records, Lipi civilization associations, samples, transliterations, and source provenance. Claims remain fail-closed until cited and verified.
           </p>
           <form action="/dictionary" className="dictionary-search">
-            <label htmlFor="dictionary-q">Search lexemes</label>
-            <input id="dictionary-q" name="q" placeholder="agni, guru, dharma, विद्या" defaultValue={q ?? ""} />
+            <label htmlFor="dictionary-q">Search universal dictionary</label>
+            <input id="dictionary-q" name="q" placeholder="agni, guru, Hebrew, Cuneiform, Tripitaka, Indus" defaultValue={q ?? ""} />
             <button type="submit">Search</button>
           </form>
         </div>
         <div className="dictionary-stats" aria-label="Dictionary metrics">
-          <span>Lexemes <b>{q ? `${entries.length}/${totalLexemeCount}` : totalLexemeCount}</b></span>
+          <span>Sanskrit <b>{q ? `${entries.length}/${totalLexemeCount}` : totalLexemeCount}</b></span>
           <span>Scripts <b>{scriptRegistryRecords.length}/{requestedScriptCapacity}</b></span>
-          <span>Mode <b>PHKD</b></span>
-          <span>Status <b>Mixed</b></span>
+          <span>Texts <b>{worldTextCount}</b></span>
+          <span>Lipi <b>{lipiCount}</b></span>
         </div>
       </section>
 
       <section className="page dictionary-page">
+        <section className="dictionary-banner">
+          <div>
+            <p className="section-kicker">Universal Dictionary</p>
+            <h2>PHKD Fail-Closed Lexical Hub</h2>
+            <p>{universalDictionaryPhkdNote}</p>
+          </div>
+          <a href="/api/universal-dictionary">Universal API</a>
+        </section>
+
+        <div className="reference-feed-head">
+          <div>
+            <p className="section-kicker">Universal Records</p>
+            <h2>{q ? `Universal results for ${q}` : "Texts, Scripts, and Lipi Associations"}</h2>
+          </div>
+          <span>{staticDictionaryEntries.length} records</span>
+        </div>
+        <div className="dictionary-grid">
+          {staticDictionaryEntries.map((entry) => (
+            <article className="dictionary-card" key={entry.id}>
+              <div>
+                <span>{entry.category} / {entry.verificationStatus}</span>
+                <h3>{entry.sample ?? entry.term}</h3>
+                <strong>{entry.term}</strong>
+              </div>
+              <p>{entry.definition}</p>
+              <dl>
+                <div><dt>Language</dt><dd>{entry.language ?? "NULL"}</dd></div>
+                <div><dt>Location</dt><dd>{entry.location ?? "NULL"}</dd></div>
+                <div><dt>Tradition</dt><dd>{entry.tradition ?? "NULL"}</dd></div>
+                <div><dt>PHKD</dt><dd>{entry.phkdNote}</dd></div>
+              </dl>
+              {entry.sourceCitation ? (
+                <a href={entry.sourceCitation} rel="noreferrer" target="_blank">Source</a>
+              ) : null}
+            </article>
+          ))}
+        </div>
+
         <div className="reference-feed-head">
           <div>
             <p className="section-kicker">Lexical Records</p>
-            <h2>{q ? `Results for ${q}` : "Starter Sanskrit Dictionary"}</h2>
+            <h2>{q ? `Sanskrit results for ${q}` : "Sanskrit Lexeme Archive"}</h2>
           </div>
           <a href="/api/sanskrit-dictionary">API</a>
         </div>
         <p className="reference-feed-note">
-          The dictionary stores concise glosses and dictionary-family provenance only. Grammatical detail, etymology, and textual usage should be imported from cited sources before promotion.
+          The Sanskrit dictionary stores concise glosses and dictionary-family provenance only. Grammatical detail, etymology, and textual usage should be imported from cited sources before promotion.
         </p>
         <div className="dictionary-grid">
           {entries.map((entry) => (
