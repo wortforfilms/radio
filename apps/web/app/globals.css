@@ -930,9 +930,9 @@ button {
   font-size: 11px;
 }
 
-.project-import-panel {
+.project-import-summary,
+.project-modal {
   display: grid;
-  grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1.25fr);
   gap: 14px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -940,25 +940,32 @@ button {
   background: #fbfcfa;
 }
 
-.project-import-panel h3 {
+.project-import-summary {
+  grid-template-columns: minmax(0, 1fr) minmax(160px, auto);
+  align-items: end;
+}
+
+.project-import-summary h3,
+.project-modal h3 {
   margin: 0;
   color: var(--ink);
   font-size: 24px;
   line-height: 1.12;
 }
 
-.project-import-panel p {
+.project-import-summary p,
+.project-modal p {
   color: var(--muted);
   line-height: 1.5;
 }
 
-.project-import-panel dl {
+.project-import-summary dl {
   display: grid;
   gap: 8px;
   margin: 14px 0 0;
 }
 
-.project-import-panel dl div {
+.project-import-summary dl div {
   display: flex;
   justify-content: space-between;
   gap: 12px;
@@ -966,17 +973,68 @@ button {
   padding-top: 8px;
 }
 
-.project-import-panel dt {
+.project-import-summary dt {
   color: var(--muted);
   font-size: 11px;
   font-weight: 760;
   text-transform: uppercase;
 }
 
-.project-import-panel dd {
+.project-import-summary dd {
   margin: 0;
   color: var(--ink);
   text-align: right;
+}
+
+.project-import-summary > button,
+.project-modal-head button {
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 11px 14px;
+  background: var(--accent);
+  color: white;
+  font: inherit;
+  font-weight: 780;
+  cursor: pointer;
+}
+
+.project-modal-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.project-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 20, 17, 0.68);
+  backdrop-filter: blur(6px);
+}
+
+.project-modal {
+  position: relative;
+  z-index: 1;
+  width: min(920px, 100%);
+  max-height: min(760px, calc(100vh - 40px));
+  overflow: auto;
+  box-shadow: 0 28px 80px rgba(14, 20, 17, 0.34);
+}
+
+.project-modal-head {
+  display: flex;
+  gap: 16px;
+  align-items: start;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+}
+
+.project-modal-head button {
+  background: #fffdf8;
+  color: var(--accent);
 }
 
 .project-import-form {
@@ -2161,9 +2219,22 @@ button {
   }
 
   .project-wizard-controls,
-  .project-import-panel,
+  .project-import-summary,
   .project-import-form {
     grid-template-columns: 1fr;
+  }
+
+  .project-modal-layer {
+    align-items: end;
+    padding: 12px;
+  }
+
+  .project-modal {
+    max-height: calc(100vh - 24px);
+  }
+
+  .project-modal-head {
+    display: grid;
   }
 
   .hkd-scope-banner {

@@ -25,6 +25,7 @@ export default function ProjectWizard({ incoming, stages, templates }: Props) {
   const [category, setCategory] = useState("All");
   const [query, setQuery] = useState("");
   const [sortMode, setSortMode] = useState("name");
+  const [isImportModalOpen, setIsImportModalOpen] = useState(false);
 
   const selectedTemplate = templates.find((template) => template.key === selectedTemplateKey) ?? templates[0];
   const categories = useMemo(() => ["All", ...Array.from(new Set(templates.map((template) => template.category))).sort()], [templates]);
@@ -131,7 +132,7 @@ export default function ProjectWizard({ incoming, stages, templates }: Props) {
         })}
       </div>
 
-      <div className="project-import-panel">
+      <div className="project-import-summary">
         <div>
           <p className="section-kicker">Selected Template</p>
           <h3>{selectedTemplate.name}</h3>
@@ -142,35 +143,58 @@ export default function ProjectWizard({ incoming, stages, templates }: Props) {
             <div><dt>Import stages</dt><dd>{importableStages.map((stage) => stage.label).join(", ")}</dd></div>
           </dl>
         </div>
-
-        <form className="project-import-form">
-          <label>
-            <span>Import target</span>
-            <select value={selectedStage} onChange={(event) => setSelectedStage(event.target.value as AyodhyaProjectStage)}>
-              {importableStages.map((stage) => (
-                <option key={stage.key} value={stage.key}>{stage.label}</option>
-              ))}
-            </select>
-          </label>
-          <label>
-            <span>Project title</span>
-            <input defaultValue={incoming.title === "NULL" ? "" : incoming.title} placeholder="Project title" />
-          </label>
-          <label>
-            <span>Source</span>
-            <input defaultValue={incoming.source === "NULL" ? "" : incoming.source} placeholder="Source or import origin" />
-          </label>
-          <label>
-            <span>Import file</span>
-            <input type="file" />
-          </label>
-          <label className="wide">
-            <span>Paste/import content</span>
-            <textarea defaultValue={incoming.description === "NULL" ? "" : incoming.description} placeholder="Paste lyrics, script, storyboard notes, asset manifest, PHKD evidence, or release notes..." />
-          </label>
-          <button type="button">Stage Import</button>
-        </form>
+        <button onClick={() => setIsImportModalOpen(true)} type="button">Open Import Modal</button>
       </div>
+
+      {isImportModalOpen ? (
+        <div className="project-modal-layer" role="presentation">
+          <div className="project-modal-backdrop" onClick={() => setIsImportModalOpen(false)} />
+          <section
+            aria-labelledby="project-import-modal-title"
+            aria-modal="true"
+            className="project-modal"
+            role="dialog"
+          >
+            <div className="project-modal-head">
+              <div>
+                <p className="section-kicker">Stage Import</p>
+                <h3 id="project-import-modal-title">{selectedTemplate.name}</h3>
+              </div>
+              <button aria-label="Close import modal" onClick={() => setIsImportModalOpen(false)} type="button">Close</button>
+            </div>
+            <p>
+              Import into <b>{stages.find((stage) => stage.key === selectedStage)?.label}</b>. This modal remains PHKD intake-only until verified project persistence is enabled.
+            </p>
+            <form className="project-import-form">
+              <label>
+                <span>Import target</span>
+                <select value={selectedStage} onChange={(event) => setSelectedStage(event.target.value as AyodhyaProjectStage)}>
+                  {importableStages.map((stage) => (
+                    <option key={stage.key} value={stage.key}>{stage.label}</option>
+                  ))}
+                </select>
+              </label>
+              <label>
+                <span>Project title</span>
+                <input defaultValue={incoming.title === "NULL" ? "" : incoming.title} placeholder="Project title" />
+              </label>
+              <label>
+                <span>Source</span>
+                <input defaultValue={incoming.source === "NULL" ? "" : incoming.source} placeholder="Source or import origin" />
+              </label>
+              <label>
+                <span>Import file</span>
+                <input type="file" />
+              </label>
+              <label className="wide">
+                <span>Paste/import content</span>
+                <textarea defaultValue={incoming.description === "NULL" ? "" : incoming.description} placeholder="Paste lyrics, script, storyboard notes, asset manifest, PHKD evidence, or release notes..." />
+              </label>
+              <button type="button">Stage Import</button>
+            </form>
+          </section>
+        </div>
+      ) : null}
     </section>
   );
 }
