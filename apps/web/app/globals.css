@@ -821,6 +821,132 @@ button {
   padding-top: 18px;
 }
 
+.project-space-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+  gap: 14px;
+  align-items: start;
+}
+
+.project-space-main {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+.project-space-hud {
+  position: sticky;
+  top: 72px;
+  display: grid;
+  gap: 12px;
+  border: 1px solid rgba(30, 107, 84, 0.22);
+  border-radius: 8px;
+  padding: 14px;
+  background:
+    linear-gradient(90deg, rgba(30, 107, 84, 0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(30, 107, 84, 0.07) 1px, transparent 1px),
+    #f7fbf6;
+  background-size: 22px 22px;
+}
+
+.project-space-hud-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.project-space-hud-head span,
+.project-space-hud-focus small,
+.project-space-hud dt {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 780;
+  text-transform: uppercase;
+}
+
+.project-space-hud-head b {
+  border: 1px solid rgba(30, 107, 84, 0.22);
+  border-radius: 999px;
+  padding: 5px 8px;
+  background: #fffdf8;
+  color: var(--accent);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.project-space-hud-focus {
+  display: grid;
+  gap: 6px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: rgba(255, 253, 248, 0.88);
+}
+
+.project-space-hud-focus strong {
+  color: var(--ink);
+  font-size: 22px;
+  line-height: 1.12;
+}
+
+.project-space-hud-focus p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.project-space-hud dl {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.project-space-hud dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 8px;
+}
+
+.project-space-hud dd {
+  max-width: 160px;
+  margin: 0;
+  color: var(--ink);
+  font-weight: 760;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.project-space-hud-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.project-space-hud-actions button,
+.project-space-hud-actions a {
+  display: grid;
+  min-height: 40px;
+  place-items: center;
+  border: 1px solid rgba(30, 107, 84, 0.24);
+  border-radius: 8px;
+  padding: 9px;
+  background: #fffdf8;
+  color: var(--accent);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 780;
+  text-align: center;
+  cursor: pointer;
+}
+
+.project-space-hud-actions button {
+  background: var(--accent);
+  color: white;
+}
+
 .project-wizard-controls {
   display: grid;
   grid-template-columns: minmax(220px, 1.4fr) repeat(3, minmax(150px, 0.8fr));
@@ -2219,9 +2345,14 @@ button {
   }
 
   .project-wizard-controls,
+  .project-space-layout,
   .project-import-summary,
   .project-import-form {
     grid-template-columns: 1fr;
+  }
+
+  .project-space-hud {
+    position: static;
   }
 
   .project-modal-layer {

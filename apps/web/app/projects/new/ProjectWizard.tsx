@@ -49,6 +49,7 @@ export default function ProjectWizard({ incoming, stages, templates }: Props) {
     });
   }, [category, query, sortMode, templates]);
   const importableStages = stages.filter((stage) => selectedTemplate.stages.includes(stage.key));
+  const selectedStageRecord = stages.find((stage) => stage.key === selectedStage) ?? stages[0];
 
   return (
     <section className="project-wizard" aria-label="Ayodhya AI project wizard">
@@ -63,87 +64,115 @@ export default function ProjectWizard({ incoming, stages, templates }: Props) {
         Choose a project template, then import text, files, assets, or PHKD evidence into any supported stage. This wizard is intake-only until project persistence is enabled.
       </p>
 
-      <div className="project-wizard-controls">
-        <label>
-          <span>Search templates</span>
-          <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="devotional, film, voice, archive..." />
-        </label>
-        <label>
-          <span>Category</span>
-          <select value={category} onChange={(event) => setCategory(event.target.value)}>
-            {categories.map((item) => (
-              <option key={item} value={item}>{item}</option>
+      <div className="project-space-layout">
+        <div className="project-space-main">
+          <div className="project-wizard-controls">
+            <label>
+              <span>Search templates</span>
+              <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="devotional, film, voice, archive..." />
+            </label>
+            <label>
+              <span>Category</span>
+              <select value={category} onChange={(event) => setCategory(event.target.value)}>
+                {categories.map((item) => (
+                  <option key={item} value={item}>{item}</option>
+                ))}
+              </select>
+            </label>
+            <label>
+              <span>Sort</span>
+              <select value={sortMode} onChange={(event) => setSortMode(event.target.value)}>
+                <option value="name">Name</option>
+                <option value="category">Category</option>
+                <option value="stage-count">Most stages</option>
+              </select>
+            </label>
+            <label>
+              <span>Stage</span>
+              <select value={selectedStage} onChange={(event) => setSelectedStage(event.target.value as AyodhyaProjectStage)}>
+                {stages.map((stage) => (
+                  <option key={stage.key} value={stage.key}>{stage.label}</option>
+                ))}
+              </select>
+            </label>
+          </div>
+
+          <div className="project-template-grid">
+            {filteredTemplates.map((template) => (
+              <button
+                className={template.key === selectedTemplate.key ? "is-active" : ""}
+                key={template.key}
+                onClick={() => {
+                  setSelectedTemplateKey(template.key);
+                  if (!template.stages.includes(selectedStage)) {
+                    setSelectedStage(template.stages[0]);
+                  }
+                }}
+                type="button"
+              >
+                <span>{template.category}</span>
+                <strong>{template.name}</strong>
+                <small>{template.defaultLanguage} / {template.stages.length} stages</small>
+              </button>
             ))}
-          </select>
-        </label>
-        <label>
-          <span>Sort</span>
-          <select value={sortMode} onChange={(event) => setSortMode(event.target.value)}>
-            <option value="name">Name</option>
-            <option value="category">Category</option>
-            <option value="stage-count">Most stages</option>
-          </select>
-        </label>
-        <label>
-          <span>Stage</span>
-          <select value={selectedStage} onChange={(event) => setSelectedStage(event.target.value as AyodhyaProjectStage)}>
-            {stages.map((stage) => (
-              <option key={stage.key} value={stage.key}>{stage.label}</option>
-            ))}
-          </select>
-        </label>
-      </div>
+          </div>
 
-      <div className="project-template-grid">
-        {filteredTemplates.map((template) => (
-          <button
-            className={template.key === selectedTemplate.key ? "is-active" : ""}
-            key={template.key}
-            onClick={() => {
-              setSelectedTemplateKey(template.key);
-              if (!template.stages.includes(selectedStage)) {
-                setSelectedStage(template.stages[0]);
-              }
-            }}
-            type="button"
-          >
-            <span>{template.category}</span>
-            <strong>{template.name}</strong>
-            <small>{template.defaultLanguage} / {template.stages.length} stages</small>
-          </button>
-        ))}
-      </div>
+          <div className="project-stage-grid">
+            {stages.map((stage) => {
+              const supported = selectedTemplate.stages.includes(stage.key);
+              return (
+                <button
+                  className={`${selectedStage === stage.key ? "is-active" : ""} ${supported ? "" : "is-disabled"}`}
+                  disabled={!supported}
+                  key={stage.key}
+                  onClick={() => setSelectedStage(stage.key)}
+                  type="button"
+                >
+                  <span>{stage.label}</span>
+                  <small>{supported ? "Import enabled" : "Not in template"}</small>
+                </button>
+              );
+            })}
+          </div>
 
-      <div className="project-stage-grid">
-        {stages.map((stage) => {
-          const supported = selectedTemplate.stages.includes(stage.key);
-          return (
-            <button
-              className={`${selectedStage === stage.key ? "is-active" : ""} ${supported ? "" : "is-disabled"}`}
-              disabled={!supported}
-              key={stage.key}
-              onClick={() => setSelectedStage(stage.key)}
-              type="button"
-            >
-              <span>{stage.label}</span>
-              <small>{supported ? "Import enabled" : "Not in template"}</small>
-            </button>
-          );
-        })}
-      </div>
-
-      <div className="project-import-summary">
-        <div>
-          <p className="section-kicker">Selected Template</p>
-          <h3>{selectedTemplate.name}</h3>
-          <p>{selectedTemplate.description}</p>
-          <dl>
-            <div><dt>Category</dt><dd>{selectedTemplate.category}</dd></div>
-            <div><dt>Default language</dt><dd>{selectedTemplate.defaultLanguage}</dd></div>
-            <div><dt>Import stages</dt><dd>{importableStages.map((stage) => stage.label).join(", ")}</dd></div>
-          </dl>
+          <div className="project-import-summary">
+            <div>
+              <p className="section-kicker">Selected Template</p>
+              <h3>{selectedTemplate.name}</h3>
+              <p>{selectedTemplate.description}</p>
+              <dl>
+                <div><dt>Category</dt><dd>{selectedTemplate.category}</dd></div>
+                <div><dt>Default language</dt><dd>{selectedTemplate.defaultLanguage}</dd></div>
+                <div><dt>Import stages</dt><dd>{importableStages.map((stage) => stage.label).join(", ")}</dd></div>
+              </dl>
+            </div>
+            <button onClick={() => setIsImportModalOpen(true)} type="button">Open Import Modal</button>
+          </div>
         </div>
-        <button onClick={() => setIsImportModalOpen(true)} type="button">Open Import Modal</button>
+
+        <aside className="project-space-hud" aria-label="Space HUD">
+          <div className="project-space-hud-head">
+            <span>Space HUD</span>
+            <b>{isImportModalOpen ? "Modal Open" : "Ready"}</b>
+          </div>
+          <div className="project-space-hud-focus">
+            <small>Active Template</small>
+            <strong>{selectedTemplate.name}</strong>
+            <p>{selectedStageRecord?.label ?? "Brief"} stage selected for PHKD-safe intake.</p>
+          </div>
+          <dl>
+            <div><dt>Template Pool</dt><dd>{filteredTemplates.length}/{templates.length}</dd></div>
+            <div><dt>Stage</dt><dd>{selectedStageRecord?.label ?? "Brief"}</dd></div>
+            <div><dt>Language</dt><dd>{incoming.language}</dd></div>
+            <div><dt>Source</dt><dd>{incoming.source}</dd></div>
+            <div><dt>PHKD</dt><dd>Fail Closed</dd></div>
+          </dl>
+          <div className="project-space-hud-actions">
+            <button onClick={() => setIsImportModalOpen(true)} type="button">Import</button>
+            <a href="/ayodhya">Ayodhya</a>
+            <a href="/hkd3d">HKD3D</a>
+          </div>
+        </aside>
       </div>
 
       {isImportModalOpen ? (
