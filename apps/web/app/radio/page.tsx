@@ -3,68 +3,130 @@ export const metadata = {
 };
 
 export default function RadioPage() {
-  const pillars = [
-    ["Live Runtime", "Launch the absorbed React dashboard with station switching, announcements, social actions, synchronized lyric scribing, and Three.js visualizers."],
-    ["Sovereign Audio", "Mic input, file playback, cinematic shader scenes, physics-inspired motion, shadows, lighting, and export-ready visual capture pathways."],
-    ["PHKD Guardrails", "Every claim, transcript, lyric cue, gift action, and generated artifact remains draft until provenance and verification evidence exist."],
-    ["Creative Pipeline", "Move from devotional concept to audio, synchronized lyrics, Ayodhya AI project intake, media evidence, and HKD export surfaces."]
+  const navItems = [
+    ["Live", "/radio/runtime"],
+    ["Frame", "/radio/frame"],
+    ["Prototype", "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html"],
+    ["Ayodhya", "/projects/new"],
+    ["Evidence", "/scopes/media-universe"]
+  ];
+
+  const modules = [
+    ["3D Visualizer", "Mic, files, cinematic shader scenes, lighting, shadows, particles, and WebM capture.", "/radio/runtime#radioVisualizer", "VIZ"],
+    ["Synced Lyrics", "Draft LRC timing, Hindi lines, transcript import, HKD lyric evidence export.", "/radio/runtime#radioLyricsScribe", "LRC"],
+    ["Persona TTS", "Maataa, Rishi, Samaya, and Vigyaaniq browser voices for announcements.", "/radio/runtime#radioSamaya", "TTS"],
+    ["Gift Loop", "Like, save, gift intent, and project creation remain local until evidence exists.", "/radio/runtime", "ACT"],
+    ["HKD Export", "Media universe exports preserve provenance and NULL unknowns.", "/api/export?format=hkd&scope=media-universe", "HKD"],
+    ["HTML Archive", "Original uploaded single-file dashboard remains inspectable.", "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html", "HTML"]
   ];
 
   const workflows = [
-    "Tune station",
-    "Speak announcement",
-    "Visualize audio",
-    "Scribe synced lyrics",
-    "Gift or save locally",
-    "Export HKD evidence"
+    ["01", "Tune", "Select station and track context"],
+    ["02", "Announce", "Speak local persona message"],
+    ["03", "Visualize", "Run Three.js audio scenes"],
+    ["04", "Scribe", "Capture draft lyric timing"],
+    ["05", "Package", "Create Ayodhya project intake"],
+    ["06", "Export", "Ship HKD evidence bundle"]
+  ];
+
+  const evidence = [
+    ["Audio source", "Draft until source and creator are verified"],
+    ["Gift action", "Intent only; checkout and receipt evidence NULL"],
+    ["Lyrics sync", "Local draft cues; not verified performance timing"],
+    ["Generated media", "Presentation does not imply production readiness"]
   ];
 
   return (
     <main className="radio-landing-shell">
-      <section className="radio-landing-hero">
-        <img src="/radio-html/assets/radio-vaigyaaniq-landing-hero.png" alt="" aria-hidden="true" />
-        <div>
-          <p className="eyebrow">Radio Vaigyaaniq</p>
-          <h1>Discover the Science, Tune into the Future.</h1>
-          <p>
-            A sacred-science radio surface for live listening, cinematic audio visualization,
-            persona announcements, synchronized lyric scribing, and provenance-first media workflows.
-          </p>
-          <div className="hero-actions">
-            <a href="/radio/runtime">Open Live Runtime</a>
-            <a href="/radio/frame">Absorbed Three Frame</a>
-            <a href="/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html">HTML Prototype</a>
-            <a href="/projects/new">Create Ayodhya Project</a>
-            <a href="/sprints">Sprint Matrix</a>
-          </div>
-        </div>
+      <section className="radio-app-frame">
+        <aside className="radio-app-rail" aria-label="Radio app navigation">
+          <div className="radio-app-mark">RV</div>
+          <nav>
+            {navItems.map(([label, href]) => (
+              <a href={href} key={label}>{label}</a>
+            ))}
+          </nav>
+          <span>PHKD</span>
+        </aside>
+
+        <section className="radio-app-stage">
+          <header className="radio-app-topbar">
+            <div>
+              <p className="eyebrow">Radio Vaigyaaniq</p>
+              <h1>Broadcast Command Surface</h1>
+            </div>
+            <div className="radio-app-status">
+              <span>LOCAL</span>
+              <b>DRAFT</b>
+              <small>verification state</small>
+            </div>
+          </header>
+
+          <section className="radio-app-hero">
+            <img src="/radio-html/assets/radio-vaigyaaniq-landing-hero.png" alt="" aria-hidden="true" />
+            <div className="radio-app-hero-copy">
+              <span>102.5 MHz</span>
+              <h2>Discover the Science, Tune into the Future.</h2>
+              <p>
+                Live listening, cinematic audio visualization, persona announcements, synchronized lyric scribing,
+                and provenance-first media workflows in one operator layout.
+              </p>
+              <div className="radio-app-actions">
+                <a href="/radio/runtime">Open Live Runtime</a>
+                <a href="/radio/frame">Three Frame</a>
+              </div>
+            </div>
+            <div className="radio-app-now">
+              <small>Now Routed</small>
+              <b>Radio Runtime</b>
+              <span>Visualizer · TTS · Lyrics · Gift intent</span>
+            </div>
+          </section>
+
+          <section className="radio-app-console">
+            <div className="radio-app-tuner">
+              <span>Quantum Resonance Tuner</span>
+              <b>LIVE DRAFT</b>
+              <div>
+                {Array.from({ length: 28 }, (_, index) => (
+                  <i style={{ height: 18 + Math.abs(Math.sin(index * 0.46)) * 72 }} key={index} />
+                ))}
+              </div>
+            </div>
+
+            <div className="radio-app-samaya">
+              <span>Hemant Samwat Samaya</span>
+              <h2>Muhurat · Utsav · Divas</h2>
+              <p>Announcement and vishaya vaachan are computed as local draft states until evidence is attached.</p>
+            </div>
+
+            <div className="radio-app-proof">
+              <span>Fail Closed</span>
+              <b>No fabricated audio, citations, checkout, or verification claims.</b>
+              <a href="/scopes/media-universe">Open Media Scope</a>
+            </div>
+          </section>
+        </section>
       </section>
 
-      <section className="radio-landing-band">
+      <section className="radio-landing-band radio-landing-band-redesigned">
         <div>
           <p className="section-kicker">Runtime Modules</p>
-          <h2>Built for broadcast, not brochure.</h2>
+          <h2>Modules arranged for repeated operation.</h2>
           <p>
-            The landing page introduces the system; the runtime handles the work.
-            No generated audio, payment, lyric sync, or production claim is marked verified without evidence.
+            The redesigned layout keeps the app's important surfaces one click away:
+            runtime, absorbed Three.js frame, original HTML, project intake, and HKD evidence export.
           </p>
         </div>
-        <div className="radio-landing-pillar-grid">
-          {pillars.map(([title, body]) => (
-            <article className="radio-landing-pillar" key={title}>
-              <span>{title}</span>
+        <div className="radio-landing-module-grid">
+          {modules.map(([title, body, href, code]) => (
+            <a className="radio-landing-module" href={href} key={title}>
+              <span>{code}</span>
+              <strong>{title}</strong>
               <p>{body}</p>
-            </article>
+            </a>
           ))}
         </div>
-      </section>
-
-      <section className="radio-landing-feature-nav" aria-label="Radio feature anchors">
-        <a href="/radio/runtime#radioVisualizer"><b>3D</b><span>Visualizer</span></a>
-        <a href="/radio/runtime#radioLyricsScribe"><b>LRC</b><span>Lyrics Scribe</span></a>
-        <a href="/radio/runtime#radioSamaya"><b>TTS</b><span>Persona announcements</span></a>
-        <a href="/projects/new"><b>AI</b><span>Ayodhya intake</span></a>
-        <a href="/api/export?format=hkd&scope=media-universe"><b>HKD</b><span>Media export</span></a>
       </section>
 
       <section className="radio-landing-workflow">
@@ -73,8 +135,12 @@ export default function RadioPage() {
           <h2>From signal to evidence.</h2>
         </div>
         <ol>
-          {workflows.map((workflow) => (
-            <li key={workflow}>{workflow}</li>
+          {workflows.map(([step, title, body]) => (
+            <li key={step}>
+              <span>{step}</span>
+              <b>{title}</b>
+              <small>{body}</small>
+            </li>
           ))}
         </ol>
       </section>
@@ -83,10 +149,14 @@ export default function RadioPage() {
         <div>
           <p className="section-kicker">Evidence State</p>
           <h2>PHKD fail-closed by design.</h2>
-          <p>
-            Local browser actions are useful drafts. Runtime exports preserve provenance,
-            unknowns remain NULL, and verification is never inferred from presentation quality.
-          </p>
+          <div className="radio-landing-evidence-grid">
+            {evidence.map(([title, body]) => (
+              <article key={title}>
+                <span>{title}</span>
+                <p>{body}</p>
+              </article>
+            ))}
+          </div>
         </div>
         <a href="/scopes/media-universe">Open Media Scope</a>
       </section>

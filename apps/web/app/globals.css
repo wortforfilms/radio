@@ -556,6 +556,284 @@
   color: #e2e8f0;
 }
 
+.radio-app-frame {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  min-height: calc(100vh - 54px);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    radial-gradient(circle at 70% 16%, rgba(0, 245, 212, 0.14), transparent 34%),
+    radial-gradient(circle at 28% 86%, rgba(255, 107, 53, 0.18), transparent 36%),
+    #080d12;
+  background-size: 48px 48px, 48px 48px, auto, auto, auto;
+}
+
+.radio-app-rail {
+  position: sticky;
+  top: 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 54px);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 18px 12px;
+  background: rgba(5, 10, 14, 0.86);
+  backdrop-filter: blur(18px);
+}
+
+.radio-app-mark {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border: 1px solid rgba(0, 245, 212, 0.38);
+  border-radius: 8px;
+  color: #00f5d4;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.radio-app-rail nav {
+  display: grid;
+  gap: 9px;
+}
+
+.radio-app-rail a,
+.radio-app-rail > span {
+  display: grid;
+  min-height: 42px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  color: rgba(226, 232, 240, 0.76);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.radio-app-rail a:hover {
+  border-color: rgba(255, 107, 53, 0.55);
+  color: #fff;
+  background: rgba(255, 107, 53, 0.1);
+}
+
+.radio-app-rail > span {
+  color: #ff6b35;
+}
+
+.radio-app-stage {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+}
+
+.radio-app-topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+}
+
+.radio-app-topbar h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(28px, 4vw, 56px);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.radio-app-status {
+  display: grid;
+  min-width: 190px;
+  gap: 3px;
+  border: 1px solid rgba(0, 245, 212, 0.24);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: right;
+  background: rgba(0, 245, 212, 0.055);
+}
+
+.radio-app-status span,
+.radio-app-hero-copy > span,
+.radio-app-now small,
+.radio-app-tuner > span,
+.radio-app-samaya > span,
+.radio-app-proof > span {
+  color: #00f5d4;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.radio-app-status b {
+  color: #ff6b35;
+}
+
+.radio-app-status small {
+  color: rgba(226, 232, 240, 0.58);
+  font-size: 11px;
+}
+
+.radio-app-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.38fr);
+  min-height: min(66vh, 680px);
+  overflow: hidden;
+  align-items: end;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: #050b10;
+}
+
+.radio-app-hero::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(5, 11, 16, 0.92), rgba(5, 11, 16, 0.56) 48%, rgba(5, 11, 16, 0.18)),
+    linear-gradient(0deg, rgba(5, 11, 16, 0.82), rgba(5, 11, 16, 0.04) 54%);
+}
+
+.radio-app-hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.radio-app-hero-copy,
+.radio-app-now {
+  position: relative;
+  z-index: 1;
+}
+
+.radio-app-hero-copy {
+  max-width: 820px;
+  padding: 32px;
+}
+
+.radio-app-hero-copy h2 {
+  margin: 10px 0 0;
+  color: #fff;
+  font-size: clamp(46px, 7vw, 96px);
+  line-height: 0.92;
+  letter-spacing: 0;
+}
+
+.radio-app-hero-copy p {
+  max-width: 680px;
+  margin: 18px 0 0;
+  color: rgba(226, 232, 240, 0.82);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.radio-app-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.radio-app-actions a,
+.radio-app-proof a,
+.radio-landing-proof > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  border: 1px solid rgba(0, 245, 212, 0.42);
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: #00f5d4;
+  font-weight: 850;
+}
+
+.radio-app-actions a:first-child {
+  border-color: rgba(255, 107, 53, 0.65);
+  color: #fff;
+  background: rgba(255, 107, 53, 0.18);
+}
+
+.radio-app-now {
+  align-self: end;
+  margin: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 8px;
+  padding: 16px;
+  background: rgba(5, 11, 16, 0.76);
+  backdrop-filter: blur(18px);
+}
+
+.radio-app-now b {
+  display: block;
+  margin: 8px 0 4px;
+  color: #fff;
+  font-size: 24px;
+}
+
+.radio-app-now span {
+  color: rgba(226, 232, 240, 0.68);
+}
+
+.radio-app-console {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr 0.8fr;
+  gap: 14px;
+}
+
+.radio-app-tuner,
+.radio-app-samaya,
+.radio-app-proof {
+  min-height: 180px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 16px;
+  background: rgba(14, 22, 29, 0.74);
+}
+
+.radio-app-tuner b,
+.radio-app-proof b {
+  display: block;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 22px;
+}
+
+.radio-app-tuner div {
+  display: flex;
+  align-items: end;
+  gap: 4px;
+  height: 86px;
+  margin-top: 20px;
+}
+
+.radio-app-tuner i {
+  width: 100%;
+  border-radius: 999px 999px 0 0;
+  background: linear-gradient(180deg, #00f5d4, #ff6b35);
+}
+
+.radio-app-samaya h2 {
+  margin: 10px 0;
+  color: #fff;
+}
+
+.radio-app-samaya p,
+.radio-app-proof p {
+  color: rgba(226, 232, 240, 0.7);
+  line-height: 1.55;
+}
+
+.radio-app-proof {
+  display: grid;
+  align-content: space-between;
+}
+
 .radio-landing-hero {
   position: relative;
   display: grid;
@@ -620,6 +898,10 @@
   background: #0c141b;
 }
 
+.radio-landing-band-redesigned {
+  border-top: 0;
+}
+
 .radio-landing-band h2,
 .radio-landing-workflow h2,
 .radio-landing-proof h2 {
@@ -656,6 +938,51 @@
   font-weight: 860;
   letter-spacing: 0.8px;
   text-transform: uppercase;
+}
+
+.radio-landing-module-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.radio-landing-module {
+  display: grid;
+  min-height: 176px;
+  align-content: start;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 16px;
+  color: #e2e8f0;
+  background:
+    linear-gradient(135deg, rgba(0, 245, 212, 0.08), rgba(255, 107, 53, 0.07)),
+    rgba(11, 18, 24, 0.86);
+}
+
+.radio-landing-module:hover {
+  border-color: rgba(0, 245, 212, 0.42);
+}
+
+.radio-landing-module span {
+  width: max-content;
+  border: 1px solid rgba(255, 107, 53, 0.35);
+  border-radius: 999px;
+  padding: 5px 8px;
+  color: #ff6b35;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.radio-landing-module strong {
+  color: #fff;
+  font-size: 21px;
+}
+
+.radio-landing-module p {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.7);
+  line-height: 1.5;
 }
 
 .radio-landing-workflow {
@@ -703,6 +1030,9 @@
 
 .radio-landing-workflow li {
   counter-increment: radio-flow;
+  display: grid;
+  min-height: 128px;
+  gap: 8px;
   border-top: 1px solid rgba(255, 107, 53, 0.34);
   padding: 14px 0 0;
   color: #fff;
@@ -710,10 +1040,24 @@
 }
 
 .radio-landing-workflow li::before {
+  display: none;
+}
+
+.radio-landing-workflow li > span {
   display: block;
-  margin-bottom: 8px;
   color: #ff6b35;
-  content: "0" counter(radio-flow);
+  font-weight: 900;
+}
+
+.radio-landing-workflow li b {
+  font-size: 22px;
+}
+
+.radio-landing-workflow li small {
+  color: rgba(226, 232, 240, 0.66);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
 }
 
 .radio-landing-proof {
@@ -723,15 +1067,29 @@
   background: radial-gradient(circle at 20% 20%, rgba(255, 107, 53, 0.16), transparent 30%), #0c141b;
 }
 
-.radio-landing-proof a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  border: 1px solid rgba(0, 245, 212, 0.45);
-  border-radius: 6px;
-  padding: 10px 14px;
+.radio-landing-evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.radio-landing-evidence-grid article {
+  border-left: 1px solid rgba(0, 245, 212, 0.34);
+  padding-left: 12px;
+}
+
+.radio-landing-evidence-grid span {
   color: #00f5d4;
-  font-weight: 820;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.radio-landing-evidence-grid p {
+  margin: 8px 0 0;
+  color: rgba(226, 232, 240, 0.68);
+  line-height: 1.45;
 }
 
 .sprint-hero::after {
@@ -1361,6 +1719,61 @@
 }
 
 @media (max-width: 980px) {
+  .radio-app-frame {
+    grid-template-columns: 1fr;
+  }
+
+  .radio-app-rail {
+    position: static;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    height: auto;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .radio-app-rail nav {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .radio-app-rail a {
+    min-width: 92px;
+  }
+
+  .radio-app-stage {
+    padding: 16px;
+  }
+
+  .radio-app-topbar,
+  .radio-app-hero,
+  .radio-app-console,
+  .radio-landing-band,
+  .radio-landing-proof {
+    grid-template-columns: 1fr;
+  }
+
+  .radio-app-topbar {
+    display: grid;
+  }
+
+  .radio-app-status {
+    text-align: left;
+  }
+
+  .radio-app-hero {
+    min-height: 620px;
+  }
+
+  .radio-app-hero-copy {
+    padding: 24px;
+  }
+
+  .radio-landing-module-grid,
+  .radio-landing-evidence-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .radio-react-shell {
     display: block;
   }
@@ -1417,10 +1830,6 @@
     width: max-content;
   }
 
-  .radio-landing-band,
-  .radio-landing-proof {
-    grid-template-columns: 1fr;
-  }
 }
 
 * {
@@ -2048,6 +2457,39 @@ button {
 
 @media (max-width: 620px) {
   .script-registry-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .radio-app-rail {
+    grid-template-columns: 1fr;
+  }
+
+  .radio-app-mark {
+    width: 100%;
+  }
+
+  .radio-app-hero {
+    min-height: 680px;
+  }
+
+  .radio-app-hero-copy h2 {
+    font-size: 44px;
+  }
+
+  .radio-app-hero-copy p {
+    font-size: 16px;
+  }
+
+  .radio-app-actions {
+    display: grid;
+  }
+
+  .radio-app-now {
+    margin: 16px;
+  }
+
+  .radio-landing-module-grid,
+  .radio-landing-evidence-grid {
     grid-template-columns: 1fr;
   }
 }
