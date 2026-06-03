@@ -9,7 +9,17 @@ declare global {
   }
 }
 
-type SceneName = "sphere" | "bars" | "particles";
+type SceneName = "sphere" | "bars" | "particles" | "waveform" | "terrain" | "rings" | "mandala";
+
+const sceneLabels: Record<SceneName, string> = {
+  sphere: "Sphere",
+  bars: "32 Bars",
+  particles: "500 Particles",
+  waveform: "Wave Tunnel",
+  terrain: "Terrain Grid",
+  rings: "Nebula Rings",
+  mandala: "Mandala Field"
+};
 
 function loadThreeGlobal(): Promise<any> {
   if (window.THREE) return Promise.resolve(window.THREE);
@@ -137,6 +147,77 @@ export function AudioVisualizerPro() {
       }));
       scene.add(particles);
 
+      const waveformGroup = new THREE.Group();
+      const waveformLines: any[] = [];
+      for (let layer = 0; layer < 18; layer += 1) {
+        const points = [];
+        for (let i = 0; i < 128; i += 1) {
+          points.push(new THREE.Vector3(-9 + i * 18 / 127, 0, -layer * 0.85));
+        }
+        const geometry = new THREE.BufferGeometry().setFromPoints(points);
+        const material = new THREE.LineBasicMaterial({
+          color: new THREE.Color().setHSL(0.48 + layer * 0.018, 0.95, 0.58),
+          transparent: true,
+          opacity: 0.72
+        });
+        const line = new THREE.Line(geometry, material);
+        waveformGroup.add(line);
+        waveformLines.push(line);
+      }
+      waveformGroup.position.z = 5;
+      scene.add(waveformGroup);
+
+      const terrainSize = 34;
+      const terrainGeometry = new THREE.PlaneGeometry(15, 15, terrainSize - 1, terrainSize - 1);
+      const terrainBase = Float32Array.from(terrainGeometry.attributes.position.array);
+      const terrain = new THREE.Mesh(terrainGeometry, new THREE.MeshStandardMaterial({
+        color: 0x10202b,
+        emissive: 0x06262f,
+        metalness: 0.18,
+        roughness: 0.22,
+        wireframe: true
+      }));
+      terrain.rotation.x = -Math.PI / 2.6;
+      terrain.position.y = -3.7;
+      terrain.position.z = -1.5;
+      scene.add(terrain);
+
+      const ringsGroup = new THREE.Group();
+      const rings: any[] = [];
+      for (let i = 0; i < 48; i += 1) {
+        const radius = 1.1 + i * 0.16;
+        const curve = new THREE.EllipseCurve(0, 0, radius, radius, 0, Math.PI * 2);
+        const geometry = new THREE.BufferGeometry().setFromPoints(curve.getPoints(160).map((point: { x: number; y: number }) => new THREE.Vector3(point.x, point.y, Math.sin(i) * 0.08)));
+        const material = new THREE.LineBasicMaterial({
+          color: new THREE.Color().setHSL((i / 48 + 0.06) % 1, 0.95, 0.58),
+          transparent: true,
+          opacity: 0.12 + i / 130
+        });
+        const ring = new THREE.LineLoop(geometry, material);
+        ring.rotation.x = Math.PI / 2.8 + i * 0.011;
+        ringsGroup.add(ring);
+        rings.push(ring);
+      }
+      scene.add(ringsGroup);
+
+      const mandalaGroup = new THREE.Group();
+      const mandalaRays: any[] = [];
+      for (let i = 0; i < 96; i += 1) {
+        const angle = i * Math.PI * 2 / 96;
+        const inner = new THREE.Vector3(Math.cos(angle) * 1.2, Math.sin(angle) * 1.2, 0);
+        const outer = new THREE.Vector3(Math.cos(angle) * 6.8, Math.sin(angle) * 6.8, 0);
+        const geometry = new THREE.BufferGeometry().setFromPoints([inner, outer]);
+        const material = new THREE.LineBasicMaterial({
+          color: new THREE.Color().setHSL((i / 96 + 0.78) % 1, 0.92, 0.62),
+          transparent: true,
+          opacity: 0.5
+        });
+        const ray = new THREE.Line(geometry, material);
+        mandalaGroup.add(ray);
+        mandalaRays.push(ray);
+      }
+      scene.add(mandalaGroup);
+
       const resize = () => {
         const rect = canvas.getBoundingClientRect();
         renderer.setSize(rect.width, rect.height, false);
@@ -158,6 +239,10 @@ export function AudioVisualizerPro() {
         sphere.visible = sceneNameRef.current === "sphere";
         barsGroup.visible = sceneNameRef.current === "bars";
         particles.visible = sceneNameRef.current === "particles";
+        waveformGroup.visible = sceneNameRef.current === "waveform";
+        terrain.visible = sceneNameRef.current === "terrain";
+        ringsGroup.visible = sceneNameRef.current === "rings";
+        mandalaGroup.visible = sceneNameRef.current === "mandala";
         const position = sphereGeometry.attributes.position;
         for (let i = 0; i < position.count; i += 1) {
           const band = data[i % data.length] / 255;
@@ -185,6 +270,39 @@ export function AudioVisualizerPro() {
         particleGeometry.attributes.position.needsUpdate = true;
         particles.rotation.y = time * 0.09;
         particles.rotation.x = Math.sin(time * 0.18) * 0.2;
+        waveformLines.forEach((line, layer) => {
+          const attr = line.geometry.attributes.position;
+          for (let i = 0; i < attr.count; i += 1) {
+            const band = data[(i * 4 + layer * 13) % data.length] / 255;
+            attr.setY(i, Math.sin(i * 0.22 + time * 3 + layer * 0.42) * (0.18 + band * 1.5));
+          }
+          attr.needsUpdate = true;
+          line.position.z = 4 - ((layer * 0.85 + time * 2.2) % 15);
+        });
+        const terrainPosition = terrainGeometry.attributes.position;
+        for (let i = 0; i < terrainPosition.count; i += 1) {
+          const x = terrainBase[i * 3];
+          const y = terrainBase[i * 3 + 1];
+          const z = terrainBase[i * 3 + 2];
+          const band = data[(i * 7) % data.length] / 255;
+          terrainPosition.setXYZ(i, x, y, z + Math.sin(time * 1.4 + x * 0.8 + y * 0.55) * 0.45 + band * 2.4);
+        }
+        terrainPosition.needsUpdate = true;
+        terrain.rotation.z = Math.sin(time * 0.1) * 0.08;
+        rings.forEach((ring, index) => {
+          const band = data[(index * 11) % data.length] / 255;
+          const scale = 1 + band * 0.34 + volume * 0.22;
+          ring.scale.setScalar(scale);
+          ring.rotation.z = time * (0.04 + index * 0.0009);
+        });
+        ringsGroup.rotation.y = Math.sin(time * 0.24) * 0.42;
+        mandalaRays.forEach((ray, index) => {
+          const band = data[(index * 5) % data.length] / 255;
+          ray.scale.y = 0.7 + band * 1.35 + volume * 0.8;
+          ray.rotation.z = Math.sin(time * 1.2 + index * 0.05) * 0.035;
+        });
+        mandalaGroup.rotation.z = time * 0.12;
+        mandalaGroup.rotation.x = Math.sin(time * 0.35) * 0.18;
         renderer.render(scene, camera);
         requestAnimationFrame(animate);
       };
@@ -292,9 +410,9 @@ export function AudioVisualizerPro() {
       </div>
       <canvas ref={canvasRef} aria-label="Three.js audio visualizer canvas" />
       <div className="radio-viz-controls" aria-label="3D audio visualizer controls">
-        {(["sphere", "bars", "particles"] as SceneName[]).map((name) => (
+        {(["sphere", "bars", "particles", "waveform", "terrain", "rings", "mandala"] as SceneName[]).map((name) => (
           <button className={sceneName === name ? "active" : ""} data-viz-scene={name} key={name} onClick={() => setSceneName(name)}>
-            {name === "sphere" ? "Sphere" : name === "bars" ? "32 Bars" : "500 Particles"}
+            {sceneLabels[name]}
           </button>
         ))}
         <button onClick={useMicInput}>Mic Input</button>
