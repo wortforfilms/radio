@@ -93,7 +93,24 @@
       justify-content: space-between;
       align-items: center;
       gap: 20px;
+      min-height: 290px;
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      padding: 28px;
+      overflow: hidden;
+      position: relative;
+      background:
+        linear-gradient(90deg, rgba(18,22,26,.86), rgba(18,22,26,.48) 45%, rgba(18,22,26,.78)),
+        url("./assets/radio-vaigyaaniq-divine-hero.png") center / cover no-repeat;
     }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 52% 42%, rgba(0,245,212,.18), transparent 36%);
+      pointer-events: none;
+    }
+    header > * { position: relative; z-index: 1; }
     .logo-container { text-align: center; margin: 0 auto; }
     .logo {
       font-family: Orbitron, monospace;
