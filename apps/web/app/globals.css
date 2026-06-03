@@ -549,6 +549,160 @@
   color: white;
 }
 
+.radio-landing-shell {
+  min-height: calc(100vh - 54px);
+  background: #080d12;
+  color: #e2e8f0;
+}
+
+.radio-landing-hero {
+  position: relative;
+  display: grid;
+  min-height: min(78vh, 760px);
+  align-items: end;
+  overflow: hidden;
+  padding: 70px 28px 48px;
+}
+
+.radio-landing-hero::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(8, 13, 18, 0.94) 0%, rgba(8, 13, 18, 0.68) 42%, rgba(8, 13, 18, 0.16) 100%),
+    linear-gradient(0deg, rgba(8, 13, 18, 0.82) 0%, rgba(8, 13, 18, 0.08) 54%);
+}
+
+.radio-landing-hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.radio-landing-hero > div {
+  position: relative;
+  z-index: 1;
+}
+
+.radio-landing-hero h1 {
+  max-width: 900px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(48px, 8vw, 104px);
+  line-height: 0.94;
+  letter-spacing: 0;
+}
+
+.radio-landing-hero p:not(.eyebrow) {
+  max-width: 720px;
+  margin: 20px 0 0;
+  color: rgba(226, 232, 240, 0.84);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.radio-landing-band,
+.radio-landing-workflow,
+.radio-landing-proof {
+  display: grid;
+  gap: 24px;
+  padding: 42px 28px;
+}
+
+.radio-landing-band {
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1fr);
+  align-items: start;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0c141b;
+}
+
+.radio-landing-band h2,
+.radio-landing-workflow h2,
+.radio-landing-proof h2 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: clamp(30px, 4vw, 54px);
+  line-height: 1.02;
+}
+
+.radio-landing-band p,
+.radio-landing-proof p {
+  max-width: 720px;
+  color: rgba(226, 232, 240, 0.72);
+  line-height: 1.6;
+}
+
+.radio-landing-pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+}
+
+.radio-landing-pillar {
+  min-height: 190px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 16px;
+  background: linear-gradient(135deg, rgba(0, 245, 212, 0.08), rgba(255, 107, 53, 0.08));
+}
+
+.radio-landing-pillar span {
+  color: #00f5d4;
+  font-size: 12px;
+  font-weight: 860;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.radio-landing-workflow {
+  background: #080d12;
+}
+
+.radio-landing-workflow ol {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: radio-flow;
+}
+
+.radio-landing-workflow li {
+  counter-increment: radio-flow;
+  border-top: 1px solid rgba(255, 107, 53, 0.34);
+  padding: 14px 0 0;
+  color: #fff;
+  font-weight: 820;
+}
+
+.radio-landing-workflow li::before {
+  display: block;
+  margin-bottom: 8px;
+  color: #ff6b35;
+  content: "0" counter(radio-flow);
+}
+
+.radio-landing-proof {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: radial-gradient(circle at 20% 20%, rgba(255, 107, 53, 0.16), transparent 30%), #0c141b;
+}
+
+.radio-landing-proof a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  border: 1px solid rgba(0, 245, 212, 0.45);
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: #00f5d4;
+  font-weight: 820;
+}
+
 @media (max-width: 980px) {
   .radio-react-shell {
     display: block;
@@ -604,6 +758,11 @@
 
   .radio-lyrics-list button {
     width: max-content;
+  }
+
+  .radio-landing-band,
+  .radio-landing-proof {
+    grid-template-columns: 1fr;
   }
 }
 

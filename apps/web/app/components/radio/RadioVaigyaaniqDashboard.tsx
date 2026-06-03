@@ -111,6 +111,7 @@ export function RadioVaigyaaniqDashboard() {
             <button onClick={() => document.getElementById("radioSamaya")?.scrollIntoView({ behavior: "smooth" })}>Muhurta</button>
             <button onClick={() => document.getElementById("radioVisualizer")?.scrollIntoView({ behavior: "smooth" })}>3D Visualizer</button>
             <button onClick={() => document.getElementById("radioLyricsScribe")?.scrollIntoView({ behavior: "smooth" })}>Lyrics Scribe</button>
+            <a href="/radio">Landing Page</a>
             <a href="/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html">HTML Prototype</a>
           </nav>
         </div>
