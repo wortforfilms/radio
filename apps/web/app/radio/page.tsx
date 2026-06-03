@@ -18,6 +18,7 @@ export default function RadioPage() {
     ["Persona TTS", "Maataa, Rishi, Samaya, and Vigyaaniq browser voices for announcements.", "/radio/runtime#radioSamaya", "TTS"],
     ["Gift Loop", "Like, save, gift intent, and project creation remain local until evidence exists.", "/radio/runtime", "ACT"],
     ["Storyboard", "Full shot plan for landing, runtime, visualizer, lyrics, TTS, gift, project, archive, and export.", "/radio/storyboard", "SB"],
+    ["Full App HTML", "Standalone browser HTML with landing, runtime mock, visualizer, lyrics, storyboard, and PHKD states.", "/radio-html/Radio_Vaigyaaniq_Full_App.html", "APP"],
     ["HKD Export", "Media universe exports preserve provenance and NULL unknowns.", "/api/export?format=hkd&scope=media-universe", "HKD"],
     ["HTML Archive", "Original uploaded single-file dashboard remains inspectable.", "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html", "HTML"]
   ];
