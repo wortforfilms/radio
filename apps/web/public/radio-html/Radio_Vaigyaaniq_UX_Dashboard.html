@@ -119,6 +119,86 @@
       opacity: .82;
       mix-blend-mode: screen;
     }
+    .hero-hud {
+      position: absolute;
+      inset: 14px;
+      z-index: 2;
+      pointer-events: none;
+      display: grid;
+      grid-template-columns: 220px 1fr 220px;
+      grid-template-rows: auto 1fr auto;
+      gap: 12px;
+    }
+    .hud-panel {
+      border: 1px solid rgba(0,245,212,.28);
+      background: rgba(10,14,18,.5);
+      backdrop-filter: blur(8px);
+      border-radius: 12px;
+      padding: 10px 12px;
+      box-shadow: inset 0 0 18px rgba(0,245,212,.04);
+    }
+    .hud-panel.right { grid-column: 3; }
+    .hud-panel.bottom {
+      grid-column: 1 / 4;
+      grid-row: 3;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+      align-items: center;
+    }
+    .hud-kicker {
+      color: var(--accent-cyan);
+      font: 700 10px Orbitron, monospace;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .hud-value {
+      color: #fff;
+      font: 700 13px Orbitron, monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .hud-small {
+      color: var(--text-muted);
+      font-size: 11px;
+      margin-top: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .hud-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .hud-chip {
+      border: 1px solid rgba(255,107,53,.36);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(255,107,53,.09);
+      padding: 4px 8px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .hud-chip.cyan {
+      border-color: rgba(0,245,212,.36);
+      background: rgba(0,245,212,.08);
+      color: var(--accent-cyan);
+    }
+    .hud-action {
+      pointer-events: auto;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.045);
+      color: #fff;
+      border-radius: 8px;
+      padding: 6px 8px;
+      font: 700 11px Rajdhani, sans-serif;
+      cursor: pointer;
+    }
+    .hud-action:hover { border-color: var(--accent-orange); }
     header > * { position: relative; z-index: 1; }
     .logo-container { text-align: center; margin: 0 auto; }
     .logo {
@@ -471,6 +551,9 @@
       .viz-grid { grid-template-columns: 1fr; }
       .samaya-grid { grid-template-columns: 1fr; }
       .samaya-card.wide { grid-row: auto; }
+      .hero-hud { position: relative; inset: auto; grid-template-columns: 1fr; grid-template-rows: auto; margin-top: 16px; }
+      .hud-panel.right, .hud-panel.bottom { grid-column: auto; grid-row: auto; }
+      .hud-panel.bottom { grid-template-columns: 1fr; }
       .player-bar { border-radius: 22px; align-items: flex-start; flex-direction: column; }
       .track-info h4 { max-width: 80vw; }
       .spectrum-strip { width: 100%; flex-basis: 54px; }
@@ -501,6 +584,32 @@
   <main>
     <header>
       <canvas class="hero-three" id="heroThree" aria-hidden="true"></canvas>
+      <div class="hero-hud" aria-label="Radio Vaigyaaniq HUD">
+        <div class="hud-panel">
+          <div class="hud-kicker">Runtime Stack</div>
+          <div class="hud-value" id="hudStation">Station sync</div>
+          <div class="hud-small" id="hudTrack">Track pending</div>
+          <div class="hud-chip-row">
+            <span class="hud-chip cyan" id="hudMode">LIVE</span>
+            <span class="hud-chip" id="hudHeroMode">HERO INIT</span>
+          </div>
+        </div>
+        <div class="hud-panel right">
+          <div class="hud-kicker">Governance</div>
+          <div class="hud-value" id="hudEvidence">PHKD SAFE</div>
+          <div class="hud-small" id="hudSamaya">Samaya pending</div>
+          <div class="hud-chip-row">
+            <span class="hud-chip cyan">LOCAL</span>
+            <span class="hud-chip">DRAFT</span>
+          </div>
+        </div>
+        <div class="hud-panel bottom">
+          <button class="hud-action" onclick="document.getElementById('samayaLayer').scrollIntoView({behavior:'smooth'})">Samaya</button>
+          <button class="hud-action" onclick="document.getElementById('stations').scrollIntoView({behavior:'smooth'})">Stations</button>
+          <button class="hud-action" onclick="openComments()">Comment</button>
+          <button class="hud-action" onclick="shareTrack()">Share</button>
+        </div>
+      </div>
       <div style="width:100px"></div>
       <div class="logo-container">
         <div class="logo">RADIO <span>VAIGYAANIQ</span> 🔬</div>
@@ -837,6 +946,7 @@
       $("#nowTitle").textContent = track.t || "Untitled";
       $("#nowMeta").textContent = `${track.r || state.data.artist} · ${currentStation().name}`;
       renderSocial();
+      renderHud();
       drawAllVisualizations();
       if (autoplay && track.a) audio.play().catch(() => {});
     }
@@ -860,6 +970,7 @@
       updateTuner();
       renderMetrics();
       renderSamayaLayer();
+      renderHud();
       drawAllVisualizations();
       loadTrack(false);
     }
@@ -927,6 +1038,23 @@
       $("#ytmText").textContent = `Yantra maps the ${station.count}-track station pattern. Tantra is the listening workflow. Mantra is the selected sound prompt.`;
       $("#utsavTitle").textContent = utsav;
       $("#utsavText").textContent = `${day} observance for ${subject}: announcement, vishaya vaachan, and social notes remain draft until reviewed.`;
+      renderHud({ muhurt, day, samwatDay, utsav });
+    }
+
+    function renderHud(extra = {}) {
+      if (!state.data) return;
+      const station = currentStation();
+      const track = currentTrack();
+      const audio = $("#audio");
+      const heroMode = $("#heroThree")?.dataset.heroThree || "bitmap";
+      $("#hudStation").textContent = station.name;
+      $("#hudTrack").textContent = track.t || "Untitled";
+      $("#hudMode").textContent = audio && !audio.paused && audio.currentTime > 0 ? "ON AIR" : "READY";
+      $("#hudHeroMode").textContent = heroMode.toUpperCase();
+      $("#hudEvidence").textContent = "PHKD FAIL-CLOSED";
+      $("#hudSamaya").textContent = extra.muhurt
+        ? `${extra.day} D${extra.samwatDay} · ${extra.muhurt} · ${extra.utsav}`
+        : $("#samayaSubtitle")?.textContent || "Local runtime guidance";
     }
 
     function renderMetrics() {
@@ -1188,14 +1316,17 @@
     $("#saveBtn").addEventListener("click", toggleSave);
     $("#commentBtn").addEventListener("click", openComments);
     $("#shareBtn").addEventListener("click", shareTrack);
-    $("#audio").addEventListener("play", () => $("#playBtn").textContent = "❚❚");
-    $("#audio").addEventListener("pause", () => $("#playBtn").textContent = "▶");
+    $("#audio").addEventListener("play", () => { $("#playBtn").textContent = "❚❚"; renderHud(); });
+    $("#audio").addEventListener("pause", () => { $("#playBtn").textContent = "▶"; renderHud(); });
     $("#audio").addEventListener("ended", nextTrack);
     $("#audio").addEventListener("timeupdate", () => drawMiniSpectrum());
     window.addEventListener("resize", () => drawAllVisualizations());
     requestAnimationFrame(animateVisualizations);
 
-    loadCatalog().catch((error) => {
+    loadCatalog().then(() => {
+      setTimeout(renderHud, 900);
+      setTimeout(renderHud, 1800);
+    }).catch((error) => {
       $("#nowTitle").textContent = "CATALOG LOAD FAILED";
       $("#nowMeta").textContent = error.message;
     });
