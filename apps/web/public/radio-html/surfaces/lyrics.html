@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - Lyrics</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail"><div class="surface-mark">RV</div><nav><a href="./index.html">Index</a><a href="./runtime.html">Runtime</a><a href="./tts.html">TTS</a><a href="./evidence-export.html">Export</a></nav><span>PHKD</span></aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div><p class="eyebrow">Synced Lyrics Scribe</p><h1>Draft Cue Surface</h1><p>Line marking, cue review, and LRC/HKD export posture for current track lyrics.</p></div>
+        <div class="status-chip"><span>Status</span><b>DRAFT</b><small>verified timing NULL</small></div>
+      </section>
+      <audio controls preload="metadata"></audio>
+      <div class="progress"><i></i></div>
+      <textarea id="lyricDraft">कोई बताओ इन रेखाओं को</textarea>
+      <div class="surface-controls"><button class="primary" id="markLine">Mark Line @ Playhead</button><a class="download" download="radio-draft.lrc" href="#">Export LRC</a><a class="download" download="radio-draft.hkd.json" href="#">Export HKD</a></div>
+      <article class="surface-card" id="lyricList"><span class="surface-label">Cue List</span><p>No verified cues yet. Draft line ready.</p></article>
+    </section>
+  </main>
+  <script src="./surface-kit.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - TTS</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail"><div class="surface-mark">RV</div><nav><a href="./index.html">Index</a><a href="./runtime.html">Runtime</a><a href="./lyrics.html">Lyrics</a><a href="./scaffold.html">Scaffold</a></nav><span>PHKD</span></aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div><p class="eyebrow">Samaya Announcement TTS</p><h1>Persona Voice Surface</h1><p>Local browser speech synthesis for Maataa, Rishi, Samaya, and Vigyaaniq announcements.</p></div>
+        <div class="status-chip"><span>Clock</span><b id="surfaceClock">00:00:00 DRAFT</b><small>local browser time</small></div>
+      </section>
+      <section class="surface-grid three">
+        <article class="surface-card"><span class="surface-label">Announcement</span><b>Vishaya Vaachan</b><p>Mantra prompt and muhurat text are local draft guidance.</p></article>
+        <article class="surface-card"><span class="surface-label">Persona</span><b>Maataa · Rishi · Samaya · Vigyaaniq</b><select><option>Maataa</option><option>Rishi</option><option>Samaya</option><option>Vigyaaniq</option></select></article>
+        <article class="surface-card"><span class="surface-label">Guardrail</span><b>Server audio evidence NULL</b><p>Browser voice availability is device dependent.</p></article>
+      </section>
+      <div class="surface-controls"><button class="primary" id="speakBtn">Speak</button><button id="stopBtn">Stop</button></div>
+      <article class="surface-card"><span class="surface-label">TTS Status</span><p id="ttsStatus">LOCAL BROWSER TTS · VOICE EVIDENCE NULL UNTIL DEVICE VOICE EXISTS</p></article>
+    </section>
+  </main>
+  <script src="./surface-kit.js"></script>
+</body>
+</html>
