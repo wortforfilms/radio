@@ -180,6 +180,86 @@
       margin-bottom: 2px;
     }
     .metric small { color: var(--text-muted); }
+    .samaya-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .9fr .9fr;
+      gap: 16px;
+    }
+    .samaya-card {
+      background: linear-gradient(135deg, rgba(255,107,53,.08), rgba(0,245,212,.04) 48%, rgba(255,255,255,.02));
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px;
+      min-height: 168px;
+    }
+    .samaya-card.wide { grid-row: span 2; }
+    .samaya-kicker {
+      color: var(--accent-cyan);
+      font: 700 11px Orbitron, monospace;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .samaya-card h3 {
+      color: #fff;
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+    .samaya-card p {
+      color: #94a3b8;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .samaya-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .samaya-row {
+      display: grid;
+      grid-template-columns: 82px 1fr;
+      gap: 10px;
+      align-items: start;
+      border-top: 1px solid var(--border-color);
+      padding-top: 8px;
+    }
+    .samaya-row:first-child { border-top: 0; padding-top: 0; }
+    .samaya-row b {
+      color: var(--accent-orange);
+      font-family: Orbitron, monospace;
+      font-size: 11px;
+    }
+    .announcement {
+      border: 1px solid rgba(255,107,53,.42);
+      background: rgba(255,107,53,.1);
+      border-radius: 10px;
+      padding: 12px;
+      margin-top: 10px;
+      color: #fff;
+      font-size: 14px;
+    }
+    .mantra-line {
+      color: #fff;
+      font-size: 18px;
+      line-height: 1.55;
+      margin-top: 10px;
+    }
+    .yantra-map {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      margin-top: 12px;
+    }
+    .yantra-map span {
+      display: grid;
+      place-items: center;
+      min-height: 42px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      color: var(--accent-cyan);
+      font-family: Orbitron, monospace;
+      background: rgba(0,0,0,.12);
+    }
     .spectrum-strip {
       height: 44px;
       flex: 0 0 180px;
@@ -363,6 +443,8 @@
       aside { width: 100%; min-height: auto; }
       .grid-container { grid-template-columns: 1fr; }
       .viz-grid { grid-template-columns: 1fr; }
+      .samaya-grid { grid-template-columns: 1fr; }
+      .samaya-card.wide { grid-row: auto; }
       .player-bar { border-radius: 22px; align-items: flex-start; flex-direction: column; }
       .track-info h4 { max-width: 80vw; }
       .spectrum-strip { width: 100%; flex-basis: 54px; }
@@ -426,6 +508,41 @@
           <div class="metric"><b id="metricClips">--</b><small>clips</small></div>
           <div class="metric"><b id="metricCurrent">--</b><small>current station</small></div>
         </div>
+      </div>
+    </section>
+
+    <section class="samaya-grid" id="samayaLayer">
+      <div class="samaya-card wide">
+        <div class="samaya-kicker">Hemant Samwat Samaya</div>
+        <h3 id="samayaTitle">Samaya Runtime</h3>
+        <p id="samayaSubtitle">Muhurta, utsav, divas, vishaya vaachan, and mantra prompts are computed as local dashboard guidance.</p>
+        <div class="announcement" id="announcement">Announcement queue initializing.</div>
+        <div class="samaya-list" id="samayaList"></div>
+      </div>
+      <div class="samaya-card">
+        <div class="samaya-kicker">Vishaya Vaachan</div>
+        <h3 id="vishayaTitle">Subject reading</h3>
+        <p id="vishayaText">Catalog-linked topic will appear after station sync.</p>
+      </div>
+      <div class="samaya-card">
+        <div class="samaya-kicker">Bhavishyawadita Mantra</div>
+        <p class="mantra-line" id="mantraLine">ॐ ज्ञानं ज्योतिः प्रवर्तते</p>
+        <p id="mantraNote">Draft mantra prompt. Verification state: local runtime only.</p>
+      </div>
+      <div class="samaya-card">
+        <div class="samaya-kicker">Yantra Tantra Mantra</div>
+        <h3 id="ytmTitle">Resonance map</h3>
+        <p id="ytmText">Yantra: pattern, Tantra: method, Mantra: sound.</p>
+        <div class="yantra-map" id="yantraMap">
+          <span>ॐ</span><span>ह्रीं</span><span>श्रीं</span>
+          <span>यं</span><span>रं</span><span>लं</span>
+          <span>विज्ञान</span><span>नाद</span><span>ज्ञान</span>
+        </div>
+      </div>
+      <div class="samaya-card">
+        <div class="samaya-kicker">Utsav / Divas</div>
+        <h3 id="utsavTitle">Knowledge observance</h3>
+        <p id="utsavText">Daily station-linked observance will appear here.</p>
       </div>
     </section>
 
@@ -549,6 +666,7 @@
       renderTracks();
       updateTuner();
       renderMetrics();
+      renderSamayaLayer();
       drawAllVisualizations();
       loadTrack(false);
     }
@@ -568,6 +686,54 @@
       $("#freq").textContent = freq;
       $("#stationLabel").textContent = currentStation().name;
       $("#tunerMarker").style.setProperty("--marker-left", `${18 + state.stationIndex * 8}%`);
+    }
+
+    function renderSamayaLayer() {
+      const station = currentStation();
+      const track = currentTrack();
+      const now = new Date();
+      const dayNames = ["Ravi", "Soma", "Mangal", "Budh", "Guru", "Shukra", "Shani"];
+      const day = dayNames[now.getDay()];
+      const hour = now.getHours();
+      const muhurt =
+        hour < 4 ? "Nisha dhyana" :
+        hour < 6 ? "Brahma muhurta" :
+        hour < 12 ? "Pratah vaachan" :
+        hour < 16 ? "Madhyahna sadhana" :
+        hour < 19 ? "Sandhya samaya" :
+        "Ratri manan";
+      const samwatDay = Math.floor((now - new Date(now.getFullYear(), 0, 1)) / 86400000) + 1;
+      const stationTopic = station.name;
+      const subject = (track.theme || station.name || "Knowledge").replace("Other / Misc", "Lok Gyaan");
+      const utsavCycle = ["Gyaan Divas", "Shravan Utsav", "Naad Sadhana", "Vigyan Sabha", "Guru Smaran", "Lipi Vaachan", "Pitra Kritagyata"];
+      const utsav = utsavCycle[(samwatDay + state.stationIndex) % utsavCycle.length];
+      const mantraBank = [
+        "ॐ ज्ञानं ज्योतिः प्रवर्तते",
+        "ॐ नादाय विज्ञानाय नमः",
+        "ॐ ह्रीं मेधा दीप्यते",
+        "ॐ सत्यं श्रुतं चिन्त्यते",
+        "ॐ गुरवे ज्ञानप्रकाशाय नमः"
+      ];
+      const mantra = mantraBank[(state.stationIndex + state.trackIndex + now.getDay()) % mantraBank.length];
+
+      $("#samayaTitle").textContent = `${day} · Hemant Samwat Day ${samwatDay}`;
+      $("#samayaSubtitle").textContent = `${muhurt} for ${stationTopic}. Local time: ${now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}`;
+      $("#announcement").textContent = `Announcement: ${stationTopic} stream is aligned for ${muhurt}. Evidence state: local dashboard guidance, not verified panchang.`;
+      $("#samayaList").innerHTML = [
+        ["Muhurta", muhurt],
+        ["Utsav", utsav],
+        ["Divas", `${day} vaachan divas`],
+        ["Vishaya", subject],
+        ["Track", track.t || "Untitled"]
+      ].map(([key, value]) => `<div class="samaya-row"><b>${esc(key)}</b><p>${esc(value)}</p></div>`).join("");
+      $("#vishayaTitle").textContent = subject;
+      $("#vishayaText").textContent = `Vaachan focus: ${track.t || stationTopic}. Listen, extract keywords, then cite source evidence before promotion.`;
+      $("#mantraLine").textContent = mantra;
+      $("#mantraNote").textContent = `Bhavishyawadita prompt for ${muhurt}: forecast themes only after verified trend evidence.`;
+      $("#ytmTitle").textContent = `${stationTopic} resonance`;
+      $("#ytmText").textContent = `Yantra maps the ${station.count}-track station pattern. Tantra is the listening workflow. Mantra is the selected sound prompt.`;
+      $("#utsavTitle").textContent = utsav;
+      $("#utsavText").textContent = `${day} observance for ${subject}: announcement, vishaya vaachan, and social notes remain draft until reviewed.`;
     }
 
     function renderMetrics() {
