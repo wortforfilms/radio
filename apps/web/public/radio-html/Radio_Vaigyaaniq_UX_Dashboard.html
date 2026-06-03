@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radio Vaigyaaniq - UX Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #12161a;
+      --bg-card: #1b2126;
+      --bg-sidebar: #171d22;
+      --text-main: #e2e8f0;
+      --text-muted: #64748b;
+      --accent-orange: #ff6b35;
+      --accent-cyan: #00f5d4;
+      --border-color: #242c34;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-dark);
+      color: var(--text-main);
+      font-family: Rajdhani, Inter, system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      overflow: hidden;
+    }
+    aside {
+      width: 260px;
+      background: var(--bg-sidebar);
+      border-right: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px;
+      flex: 0 0 auto;
+    }
+    .network-stats {
+      font-family: Orbitron, monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+    .network-stats span { color: var(--accent-cyan); }
+    .nav-group { display: flex; flex-direction: column; gap: 8px; }
+    .nav-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--text-muted);
+      margin: 15px 0 5px;
+    }
+    .nav-item {
+      padding: 12px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text-main);
+      text-decoration: none;
+      border: 0;
+      background: transparent;
+      font: inherit;
+      text-align: left;
+    }
+    .nav-item.active {
+      background: linear-gradient(90deg, rgba(255,107,53,.15), rgba(0,0,0,0));
+      border-left: 3px solid var(--accent-orange);
+      color: #fff;
+    }
+    .nav-item:hover:not(.active) { background: rgba(255,255,255,.04); }
+    .discovery-lab {
+      background: linear-gradient(135deg, #1e262c, #151a1e);
+      border: 1px solid var(--accent-orange);
+      padding: 16px;
+      border-radius: 12px;
+    }
+    .discovery-lab h4 { color: var(--accent-orange); font-size: 14px; margin-bottom: 6px; letter-spacing: 1px; }
+    .discovery-lab p { font-size: 12px; color: var(--text-muted); line-height: 1.35; }
+    main {
+      flex: 1;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      overflow: auto;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .logo-container { text-align: center; margin: 0 auto; }
+    .logo {
+      font-family: Orbitron, monospace;
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .logo span { color: var(--accent-orange); }
+    .tagline { font-size: 12px; color: var(--text-muted); letter-spacing: 1px; margin-top: 2px; }
+    .global-network { font-size: 12px; color: var(--accent-orange); font-weight: 700; letter-spacing: 1px; white-space: nowrap; }
+    .tuner-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+    .tuner-scale {
+      height: 40px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.06), transparent);
+      border-bottom: 2px solid rgba(255,255,255,.1);
+      position: relative;
+      margin-bottom: 15px;
+    }
+    .tuner-marker {
+      position: absolute;
+      bottom: -2px;
+      left: var(--marker-left, 58%);
+      width: 3px;
+      height: 25px;
+      background: var(--accent-cyan);
+      box-shadow: 0 0 10px var(--accent-cyan);
+      transition: left .25s ease;
+    }
+    .frequency-display {
+      font-family: Orbitron, monospace;
+      font-size: 24px;
+      color: #fff;
+      font-weight: 700;
+    }
+    .frequency-display span { color: var(--accent-cyan); }
+    .section-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-main);
+      margin-bottom: 15px;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .station-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px;
+      min-height: 188px;
+      position: relative;
+      cursor: pointer;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .station-card:hover, .station-card.active { transform: translateY(-2px); border-color: var(--accent-orange); }
+    .station-cover {
+      width: 54px;
+      height: 54px;
+      border-radius: 10px;
+      object-fit: cover;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.06);
+      margin-bottom: 14px;
+    }
+    .station-card h3 { font-size: 18px; margin-bottom: 4px; color: #fff; }
+    .station-card h5 { font-size: 12px; color: var(--text-muted); margin-bottom: 10px; font-weight: 600; }
+    .station-card p { font-size: 13px; color: #94a3b8; line-height: 1.45; }
+    .play-btn-mini { position: absolute; top: 20px; right: 20px; color: var(--accent-orange); }
+    .tracks-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .track-row {
+      display: grid;
+      grid-template-columns: 44px 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 10px 0;
+      border-top: 1px solid var(--border-color);
+      cursor: pointer;
+    }
+    .track-row:first-of-type { border-top: 0; }
+    .track-row img { width: 44px; height: 44px; object-fit: cover; border-radius: 8px; }
+    .track-row b { display: block; font-size: 14px; color: #fff; }
+    .track-row small { color: var(--text-muted); }
+    .track-row .dur { color: var(--accent-cyan); font-family: Orbitron, monospace; font-size: 11px; }
+    .player-bar {
+      background: linear-gradient(180deg, #1b2126, #14191d);
+      border: 1px solid var(--border-color);
+      border-radius: 50px;
+      padding: 15px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .player-left { display: flex; align-items: center; gap: 15px; min-width: 0; }
+    .live-tag {
+      background: rgba(255,107,53,.1);
+      border: 1px solid var(--accent-orange);
+      color: var(--accent-orange);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-family: Orbitron, monospace;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .track-info { min-width: 0; }
+    .track-info h4 { font-size: 16px; color: #fff; letter-spacing: .5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 42vw; }
+    .track-info p { font-size: 12px; color: var(--text-muted); }
+    .wave-animation { display: flex; align-items: center; gap: 3px; height: 20px; margin-left: 10px; }
+    .wave-bar { width: 3px; height: 100%; background: var(--accent-cyan); border-radius: 2px; animation: bounce .8s ease-in-out infinite alternate; }
+    .wave-bar:nth-child(2) { animation-delay: .2s; height: 60%; }
+    .wave-bar:nth-child(3) { animation-delay: .4s; height: 30%; }
+    .wave-bar:nth-child(4) { animation-delay: .1s; height: 80%; }
+    @keyframes bounce { 0% { transform: scaleY(.3); } 100% { transform: scaleY(1.1); } }
+    .player-controls { display: flex; align-items: center; gap: 14px; }
+    .control-btn {
+      background: transparent;
+      border: 0;
+      color: var(--text-main);
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .control-btn:hover { color: #fff; }
+    .play-main-btn {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: transparent;
+      border: 2px solid var(--accent-orange);
+      color: var(--accent-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .play-main-btn:hover { background: var(--accent-orange); color: #12161a; box-shadow: 0 0 15px rgba(255,107,53,.4); }
+    .social-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .social-actions button {
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border-color);
+      border-radius: 999px;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 7px 10px;
+      font: 700 12px Rajdhani, sans-serif;
+    }
+    .social-actions button.active { color: #fff; border-color: var(--accent-orange); }
+    .footer-credit {
+      text-align: center;
+      font-size: 10px;
+      font-family: Orbitron, monospace;
+      color: var(--text-muted);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.55);
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 20px;
+      z-index: 5;
+    }
+    .modal.show { display: flex; }
+    .sheet {
+      width: min(560px, 100%);
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 24px 80px rgba(0,0,0,.45);
+    }
+    textarea {
+      width: 100%;
+      min-height: 90px;
+      background: #10151a;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      color: #fff;
+      padding: 10px;
+      margin-top: 12px;
+      font: 500 14px Rajdhani, sans-serif;
+    }
+    .primary {
+      border: 0;
+      background: linear-gradient(90deg, var(--accent-orange), var(--accent-cyan));
+      color: #111;
+      border-radius: 10px;
+      padding: 11px 14px;
+      font-weight: 800;
+      margin-top: 12px;
+      cursor: pointer;
+    }
+    @media (max-width: 980px) {
+      body { display: block; overflow: auto; }
+      aside { width: 100%; min-height: auto; }
+      .grid-container { grid-template-columns: 1fr; }
+      .player-bar { border-radius: 22px; align-items: flex-start; flex-direction: column; }
+      .track-info h4 { max-width: 80vw; }
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <div>
+      <div class="network-stats" id="networkStats">
+        RSSI: <span>catalog sync</span><br>
+        DATA RATE: <span>pending</span>
+      </div>
+      <nav class="nav-group">
+        <button class="nav-item active" data-section="home">🏠 HOME</button>
+        <button class="nav-item" data-section="explore">🧭 EXPLORE</button>
+        <div class="nav-label">Libraries</div>
+        <a href="./Radio_Vaigyaaniq_App_Prototype.html" class="nav-item">🎙️ Prototype</a>
+        <a href="./Radio_Vaigyaaniq_Maataa.html" class="nav-item">🪷 Maataa</a>
+      </nav>
+    </div>
+    <div class="discovery-lab">
+      <h4>DISCOVERY LAB</h4>
+      <p>Live catalog dashboard with local-only social actions and evidence-safe media playback.</p>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <div style="width:100px"></div>
+      <div class="logo-container">
+        <div class="logo">RADIO <span>VAIGYAANIQ</span> 🔬</div>
+        <div class="tagline">Discover the Science, Tune into the Future.</div>
+      </div>
+      <div class="global-network">🌐 GLOBAL NETWORK</div>
+    </header>
+
+    <section class="tuner-container">
+      <div class="tuner-scale">
+        <div class="tuner-marker" id="tunerMarker"></div>
+      </div>
+      <div class="frequency-display"><span id="freq">102.5</span> <span>MHz</span></div>
+      <div style="font-size:12px;color:var(--text-muted);margin-top:5px" id="stationLabel">Quantum Resonance Tuner</div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Featured Stations & Live Streaming</h2>
+      <div class="grid-container" id="stations"></div>
+    </section>
+
+    <section class="tracks-panel">
+      <h2 class="section-title" id="trackTitle">Station Tracks</h2>
+      <div id="tracks"></div>
+    </section>
+
+    <section>
+      <div class="player-bar">
+        <div class="player-left">
+          <div class="live-tag">LIVE</div>
+          <div class="track-info">
+            <h4 id="nowTitle">LOADING CATALOG</h4>
+            <p id="nowMeta">Radio Vaigyaaniq</p>
+          </div>
+          <div class="wave-animation">
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+          </div>
+        </div>
+        <div class="social-actions">
+          <button id="likeBtn">♡ Like</button>
+          <button id="commentBtn">💬 Comment</button>
+          <button id="shareBtn">↗ Share</button>
+          <button id="saveBtn">▤ Save</button>
+        </div>
+        <div class="player-controls">
+          <button class="control-btn" id="prevBtn">⏮</button>
+          <button class="play-main-btn" id="playBtn">▶</button>
+          <button class="control-btn" id="nextBtn">⏭</button>
+        </div>
+      </div>
+      <div class="footer-credit">EMPOWERING MINDS THROUGH SCIENTIFIC BROADCASTING</div>
+    </section>
+  </main>
+
+  <audio id="audio" preload="metadata"></audio>
+  <div class="modal" id="modal" onclick="closeModal()">
+    <div class="sheet" id="sheet" onclick="event.stopPropagation()"></div>
+  </div>
+
+  <script>
+    const state = { data: null, stationIndex: 0, trackIndex: 0, social: {} };
+    const $ = (selector) => document.querySelector(selector);
+    const esc = (value) => String(value || "").replace(/[&<>"]/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[char]));
+    const token = (value) => encodeURIComponent(value || "unknown");
+
+    try {
+      state.social = JSON.parse(localStorage.getItem("radioVaigyaaniq.dashboard.social.v1") || "{}");
+    } catch {
+      state.social = {};
+    }
+
+    function saveSocial() {
+      localStorage.setItem("radioVaigyaaniq.dashboard.social.v1", JSON.stringify(state.social));
+    }
+
+    function socialFor(track) {
+      const key = token(track.t);
+      if (!state.social[key]) state.social[key] = { liked: false, saved: false, comments: [] };
+      return state.social[key];
+    }
+
+    async function loadCatalog() {
+      const html = await fetch("./Radio_Vaigyaaniq_App_Prototype.html").then((response) => response.text());
+      const match = html.match(/const DATA=(\{[\s\S]*?\});\nconst AYO=/);
+      if (!match) throw new Error("Catalog DATA block not found");
+      state.data = JSON.parse(match[1]);
+      render();
+    }
+
+    function currentStation() {
+      return state.data.shows[state.stationIndex];
+    }
+
+    function currentTrack() {
+      return currentStation().songs[state.trackIndex];
+    }
+
+    function tune(index) {
+      state.stationIndex = index;
+      state.trackIndex = 0;
+      render();
+      loadTrack(false);
+    }
+
+    function loadTrack(autoplay) {
+      const track = currentTrack();
+      const audio = $("#audio");
+      audio.src = track.a || "";
+      $("#nowTitle").textContent = track.t || "Untitled";
+      $("#nowMeta").textContent = `${track.r || state.data.artist} · ${currentStation().name}`;
+      renderSocial();
+      if (autoplay && track.a) audio.play().catch(() => {});
+    }
+
+    function render() {
+      if (!state.data) return;
+      $("#networkStats").innerHTML = `RSSI: <span>${state.data.total_songs} songs</span><br>DATA RATE: <span>${state.data.total_clips} clips</span>`;
+      const stations = state.data.shows.slice(0, 9);
+      $("#stations").innerHTML = stations.map((station, index) => {
+        const first = station.songs[0] || {};
+        const cardClass = index % 2 ? "card-orange" : "card-cyan";
+        return `<article class="station-card ${cardClass} ${index === state.stationIndex ? "active" : ""}" onclick="tune(${index})">
+          <span class="play-btn-mini">▶</span>
+          <img class="station-cover" src="${esc(station.hero || first.c || "")}" alt="">
+          <h3>${esc(station.name)}</h3>
+          <h5>${station.count} tracks · ${esc(state.data.artist)}</h5>
+          <p>${esc(first.t || "Live knowledge stream")}</p>
+        </article>`;
+      }).join("");
+      renderTracks();
+      updateTuner();
+      loadTrack(false);
+    }
+
+    function renderTracks() {
+      const station = currentStation();
+      $("#trackTitle").textContent = `${station.name} Tracks`;
+      $("#tracks").innerHTML = station.songs.slice(0, 12).map((track, index) => `<div class="track-row" onclick="state.trackIndex=${index};loadTrack(true)">
+        <img src="${esc(track.c || station.hero || "")}" alt="">
+        <div><b>${esc(track.t)}</b><small>${esc(track.r || state.data.artist)}</small></div>
+        <span class="dur">${esc(track.d || "--")}</span>
+      </div>`).join("");
+    }
+
+    function updateTuner() {
+      const freq = (98.1 + state.stationIndex * 1.7).toFixed(1);
+      $("#freq").textContent = freq;
+      $("#stationLabel").textContent = currentStation().name;
+      $("#tunerMarker").style.setProperty("--marker-left", `${18 + state.stationIndex * 8}%`);
+    }
+
+    function renderSocial() {
+      const social = socialFor(currentTrack());
+      $("#likeBtn").textContent = `${social.liked ? "♥ Liked" : "♡ Like"}`;
+      $("#likeBtn").classList.toggle("active", social.liked);
+      $("#saveBtn").textContent = `${social.saved ? "✓ Saved" : "▤ Save"}`;
+      $("#saveBtn").classList.toggle("active", social.saved);
+      $("#commentBtn").textContent = `💬 Comment ${social.comments.length}`;
+    }
+
+    function togglePlay() {
+      const audio = $("#audio");
+      if (!audio.src) loadTrack(false);
+      if (audio.paused) audio.play().catch(() => {});
+      else audio.pause();
+    }
+
+    function nextTrack() {
+      state.trackIndex = (state.trackIndex + 1) % currentStation().songs.length;
+      renderTracks();
+      loadTrack(true);
+    }
+
+    function prevTrack() {
+      state.trackIndex = (state.trackIndex - 1 + currentStation().songs.length) % currentStation().songs.length;
+      renderTracks();
+      loadTrack(true);
+    }
+
+    function toggleLike() {
+      const social = socialFor(currentTrack());
+      social.liked = !social.liked;
+      saveSocial();
+      renderSocial();
+    }
+
+    function toggleSave() {
+      const social = socialFor(currentTrack());
+      social.saved = !social.saved;
+      saveSocial();
+      renderSocial();
+    }
+
+    function openComments() {
+      const track = currentTrack();
+      const social = socialFor(track);
+      $("#sheet").innerHTML = `<h3>Comments</h3>
+        <p style="color:var(--text-muted);margin-top:4px">${esc(track.t)}</p>
+        <p style="color:var(--accent-cyan);font-size:12px;margin-top:8px">PHKD local draft comments · moderation evidence pending</p>
+        <textarea id="commentText" placeholder="Add a respectful listener note..."></textarea>
+        <button class="primary" onclick="addComment()">Post local draft</button>
+        <div style="margin-top:14px">${social.comments.length ? social.comments.slice().reverse().map((comment) => `<p style="border-top:1px solid var(--border-color);padding:10px 0">${esc(comment)}</p>`).join("") : "<p style='color:var(--text-muted);margin-top:12px'>No comments yet.</p>"}</div>`;
+      $("#modal").classList.add("show");
+    }
+
+    function addComment() {
+      const value = ($("#commentText").value || "").trim();
+      if (!value) return;
+      socialFor(currentTrack()).comments.push(value);
+      saveSocial();
+      renderSocial();
+      openComments();
+    }
+
+    function shareTrack() {
+      const link = `${location.href.split("#")[0]}#track=${token(currentTrack().t)}`;
+      navigator.clipboard?.writeText(link).catch(() => {});
+      $("#sheet").innerHTML = `<h3>Share track</h3>
+        <p style="color:var(--text-muted);margin-top:4px">${esc(currentTrack().t)}</p>
+        <p style="color:var(--accent-cyan);font-size:12px;margin-top:8px">Share intent staged · analytics NULL until backend evidence exists</p>
+        <p style="word-break:break-all;border:1px solid var(--border-color);border-radius:10px;padding:10px;margin-top:12px">${esc(link)}</p>
+        <button class="primary" onclick="closeModal()">Done</button>`;
+      $("#modal").classList.add("show");
+    }
+
+    function closeModal() {
+      $("#modal").classList.remove("show");
+    }
+
+    $("#playBtn").addEventListener("click", togglePlay);
+    $("#nextBtn").addEventListener("click", nextTrack);
+    $("#prevBtn").addEventListener("click", prevTrack);
+    $("#likeBtn").addEventListener("click", toggleLike);
+    $("#saveBtn").addEventListener("click", toggleSave);
+    $("#commentBtn").addEventListener("click", openComments);
+    $("#shareBtn").addEventListener("click", shareTrack);
+    $("#audio").addEventListener("play", () => $("#playBtn").textContent = "❚❚");
+    $("#audio").addEventListener("pause", () => $("#playBtn").textContent = "▶");
+    $("#audio").addEventListener("ended", nextTrack);
+
+    loadCatalog().catch((error) => {
+      $("#nowTitle").textContent = "CATALOG LOAD FAILED";
+      $("#nowMeta").textContent = error.message;
+    });
+  </script>
+</body>
+</html>
