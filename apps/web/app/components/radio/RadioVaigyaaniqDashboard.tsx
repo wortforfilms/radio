@@ -127,7 +127,7 @@ export function RadioVaigyaaniqDashboard() {
         </header>
 
         <section className="radio-react-hero">
-          <img src="/radio-html/assets/radio-vaigyaaniq-divine-hero.png" alt="" />
+          <img src="/radio-html/assets/radio-vaigyaaniq-landing-hero.png" alt="" />
           <div>
             <p>Quantum Resonance Tuner</p>
             <h2>{currentFrequency(stationIndex)} <span>MHz</span></h2>
