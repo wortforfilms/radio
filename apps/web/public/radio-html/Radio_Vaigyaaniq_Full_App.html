@@ -254,6 +254,8 @@
     .module-grid,
     .workflow-grid,
     .evidence-grid,
+    .scaffold-grid,
+    .state-grid,
     .story-map,
     .shot-grid {
       display: grid;
@@ -265,6 +267,8 @@
     .module-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     .workflow-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
     .evidence-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .scaffold-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .state-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     .story-map { grid-template-columns: repeat(7, minmax(0, 1fr)); }
     .shot-grid { grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); }
 
@@ -272,6 +276,8 @@
     .module,
     .workflow,
     .evidence,
+    .scaffold-card,
+    .state-card,
     .story-map a,
     .shot,
     .visualizer,
@@ -338,6 +344,8 @@
 
     .module strong,
     .workflow b,
+    .scaffold-card b,
+    .state-card b,
     .shot h3 {
       color: var(--white);
       font-size: 21px;
@@ -432,6 +440,43 @@
       gap: 24px;
       border-top: 1px solid var(--line);
       padding-top: 42px;
+    }
+
+    .scaffold {
+      display: grid;
+      gap: 24px;
+      border-top: 1px solid var(--line);
+      padding-top: 42px;
+    }
+
+    .scaffold-card,
+    .state-card {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+
+    .scaffold-card ul,
+    .state-card ul {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .scaffold-card li,
+    .state-card li {
+      border-top: 1px solid rgba(255,255,255,.07);
+      padding-top: 8px;
+      color: rgba(226,232,240,.72);
+      line-height: 1.4;
+    }
+
+    .scaffold-card li::before,
+    .state-card li::before {
+      color: var(--orange);
+      content: "• ";
     }
 
     .sequence {
@@ -549,6 +594,8 @@
       .rail a { min-width: 96px; }
       .module-grid,
       .evidence-grid,
+      .scaffold-grid,
+      .state-grid,
       .story-map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .workflow-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
@@ -577,6 +624,8 @@
       .module-grid,
       .workflow-grid,
       .evidence-grid,
+      .scaffold-grid,
+      .state-grid,
       .story-map,
       .shot-grid {
         grid-template-columns: 1fr;
@@ -593,6 +642,7 @@
         <a href="#runtime">Runtime</a>
         <a href="#visualizer">Visual</a>
         <a href="#lyrics">Lyrics</a>
+        <a href="#scaffold">Scaffold</a>
         <a href="#storyboard">Storyboard</a>
         <a href="/radio">React</a>
       </nav>
@@ -741,6 +791,20 @@
         <div class="evidence-grid" id="evidenceGrid"></div>
       </section>
 
+      <section class="scaffold" id="scaffold">
+        <div>
+          <p class="kicker">Full Scaffold</p>
+          <h2>Routes, components, states, events, storage, exports, and QA gates.</h2>
+          <p>Scaffold entries describe implementation surfaces only. They do not create verification, payment, audio-quality, or production-readiness claims.</p>
+          <div class="actions">
+            <a href="./Radio_Vaigyaaniq_Full_App_Scaffold.json">Open Scaffold JSON</a>
+            <a href="/radio/storyboard">Open React Storyboard</a>
+          </div>
+        </div>
+        <div class="scaffold-grid" id="scaffoldGrid"></div>
+        <div class="state-grid" id="stateGrid"></div>
+      </section>
+
       <section class="storyboard" id="storyboard">
         <div>
           <p class="kicker">Storyboard Coverage</p>
@@ -802,6 +866,68 @@
       ["Generated media", "Presentation does not imply production readiness"]
     ];
 
+    const scaffold = [
+      ["Routes", [
+        "/radio landing command surface",
+        "/radio/runtime React runtime",
+        "/radio/frame absorbed Three.js frame",
+        "/radio/storyboard full storyboard",
+        "/radio-html/Radio_Vaigyaaniq_Full_App.html standalone HTML",
+        "/api/export?format=hkd&scope=media-universe HKD export"
+      ]],
+      ["Core Components", [
+        "App rail and command topbar",
+        "Hero banner and now-routed card",
+        "Quantum tuner and spectrum bars",
+        "Station grid and track list",
+        "Samaya/TTS controls",
+        "Canvas visualizer",
+        "Lyrics scribe",
+        "Gift modal",
+        "Storyboard and scaffold panels"
+      ]],
+      ["Data Contracts", [
+        "Station: id, name, count, hero, songs[]",
+        "Track: title, transliteration, duration, audio, cover, transcript",
+        "Lyric cue: time, text, source, verification",
+        "Storyboard shot: route, ui, motion, data, PHKD, next action",
+        "Export: hkdType, verification, provenance, unknowns as NULL"
+      ]],
+      ["Events", [
+        "station:selected",
+        "track:selected",
+        "tts:speak",
+        "tts:stop",
+        "visualizer:sceneChanged",
+        "lyrics:markLine",
+        "social:liked",
+        "social:saved",
+        "gift:intentOpened",
+        "export:hkdDraft"
+      ]],
+      ["Storage", [
+        "localStorage for like/save state",
+        "localStorage-ready lyric cue keys",
+        "Blob URLs for draft LRC/HKD exports",
+        "No wallet, checkout, receipt, or server payment storage in this scaffold"
+      ]],
+      ["PHKD Gates", [
+        "No fabricated citations",
+        "No production-ready audio claim",
+        "No verified lyric timing without evidence",
+        "No payment success without receipt evidence",
+        "No telemetry claim from decorative frequency UI",
+        "Unknown values remain NULL"
+      ]]
+    ];
+
+    const stateMatrix = [
+      ["Draft", ["Default state for visual, lyric, TTS, gift, and export artifacts"]],
+      ["Local", ["Browser-only actions: TTS, canvas, social toggles, lyric cue drafts"]],
+      ["Evidence Pending", ["Requires source, creator, artifact, date, and verification chain"]],
+      ["Verified", ["Reserved for future evidence-backed assets only; not asserted here"]]
+    ];
+
     const stations = [
       ["Mahamatya", "12 tracks"],
       ["Gokul", "8 tracks"],
@@ -844,6 +970,14 @@
 
       byId("evidenceGrid").innerHTML = evidence.map(([title, body]) => `
         <article class="evidence"><span class="card-label">${title}</span><p>${body}</p></article>
+      `).join("");
+
+      byId("scaffoldGrid").innerHTML = scaffold.map(([title, items]) => `
+        <article class="scaffold-card"><span class="card-label">${title}</span><b>${items.length} entries</b><ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul></article>
+      `).join("");
+
+      byId("stateGrid").innerHTML = stateMatrix.map(([title, items]) => `
+        <article class="state-card"><span class="card-label">${title}</span><b>${title}</b><ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul></article>
       `).join("");
 
       byId("stationList").innerHTML = stations.map(([name, count], index) => `

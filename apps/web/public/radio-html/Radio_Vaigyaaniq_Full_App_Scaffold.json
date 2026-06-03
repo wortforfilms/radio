@@ -1,0 +1,73 @@
+{
+  "id": "radio-vaigyaaniq-full-app-scaffold",
+  "title": "Radio Vaigyaaniq Full App Scaffold",
+  "verificationState": "draft",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "noFabricatedCitations": true,
+    "noProductionReadyClaim": true,
+    "notes": [
+      "This scaffold describes implementation surfaces only.",
+      "It does not verify audio, payment, lyric timing, telemetry, or production readiness.",
+      "Gift actions are local intent until checkout, payment, wallet, receipt, and delivery evidence exist."
+    ]
+  },
+  "routes": [
+    { "path": "/radio", "surface": "React landing command surface", "status": "implemented" },
+    { "path": "/radio/runtime", "surface": "React runtime", "status": "implemented" },
+    { "path": "/radio/frame", "surface": "Absorbed React Three.js frame", "status": "implemented" },
+    { "path": "/radio/storyboard", "surface": "Full storyboard route", "status": "implemented" },
+    { "path": "/radio-html/Radio_Vaigyaaniq_Full_App.html", "surface": "Standalone full app HTML", "status": "implemented" },
+    { "path": "/radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json", "surface": "Machine-readable scaffold manifest", "status": "implemented" },
+    { "path": "/api/export?format=hkd&scope=media-universe", "surface": "Media HKD export", "status": "implemented" }
+  ],
+  "components": [
+    { "key": "app-rail", "name": "App Rail", "elements": ["RV mark", "Home", "Runtime", "Visual", "Lyrics", "Scaffold", "Storyboard", "React", "PHKD badge"] },
+    { "key": "hero", "name": "Hero Banner", "elements": ["Hero image", "Frequency label", "Headline", "Runtime links", "Now routed card"] },
+    { "key": "console", "name": "Console", "elements": ["Quantum tuner", "Spectrum bars", "Samaya card", "Fail closed card"] },
+    { "key": "runtime", "name": "Runtime Mock", "elements": ["Stations", "Tracks", "Current track", "TTS controls", "Clock", "Status"] },
+    { "key": "visualizer", "name": "Canvas Visualizer", "elements": ["Canvas", "Scene buttons", "Audio player", "Status"] },
+    { "key": "lyrics", "name": "Lyrics Scribe", "elements": ["Audio player", "Progress", "Textarea", "Mark line", "Export LRC", "Export HKD", "Cue list"] },
+    { "key": "social", "name": "Social And Gift", "elements": ["Create Project", "Like", "Save", "Gift", "Gift modal"] },
+    { "key": "storyboard", "name": "Storyboard", "elements": ["Sequence map", "Shot cards", "PHKD notes", "Route links"] }
+  ],
+  "dataContracts": {
+    "station": ["id", "name", "count", "hero", "songs"],
+    "track": ["title", "transliteration", "duration", "audio", "cover", "transcript"],
+    "lyricCue": ["time", "text", "source", "verification"],
+    "storyboardShot": ["route", "primaryUi", "motion", "dataState", "phkdGuardrail", "nextAction"],
+    "hkdExport": ["hkdType", "verification", "provenance", "unknowns"]
+  },
+  "events": [
+    "station:selected",
+    "track:selected",
+    "tts:speak",
+    "tts:stop",
+    "visualizer:sceneChanged",
+    "lyrics:markLine",
+    "social:liked",
+    "social:saved",
+    "gift:intentOpened",
+    "export:hkdDraft"
+  ],
+  "storage": [
+    { "key": "radioVaigyaaniq.react.social.v1", "type": "localStorage", "status": "implemented in React runtime" },
+    { "key": "radioVaigyaaniq.react.lyrics.v1.*", "type": "localStorage-ready", "status": "implemented in React lyrics scribe" },
+    { "key": "draft-lrc-blob-url", "type": "Blob URL", "status": "implemented in standalone HTML" },
+    { "key": "draft-hkd-blob-url", "type": "Blob URL", "status": "implemented in standalone HTML" }
+  ],
+  "exports": [
+    { "format": "LRC", "verificationState": "draft" },
+    { "format": "HKD JSON", "verificationState": "draft" },
+    { "format": "WebM", "verificationState": "draft in React visualizer" },
+    { "format": "Media Universe HKD", "verificationState": "scope export preserves provenance" }
+  ],
+  "qaGates": [
+    "npm test",
+    "npm run build",
+    "route table includes /radio, /radio/runtime, /radio/frame, /radio/storyboard",
+    "standalone HTML opens from /radio-html/Radio_Vaigyaaniq_Full_App.html",
+    "scaffold manifest opens from /radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json"
+  ]
+}
