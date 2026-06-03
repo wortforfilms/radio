@@ -140,6 +140,55 @@
       font-weight: 700;
     }
     .frequency-display span { color: var(--accent-cyan); }
+    .viz-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .9fr .85fr;
+      gap: 16px;
+    }
+    .viz-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px;
+      min-height: 180px;
+      overflow: hidden;
+    }
+    .viz-card canvas {
+      display: block;
+      width: 100%;
+      height: 136px;
+      border-radius: 8px;
+      background: radial-gradient(circle at 50% 50%, rgba(0,245,212,.08), rgba(255,107,53,.04) 44%, rgba(0,0,0,.08));
+    }
+    .viz-card .metric-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .metric {
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 10px;
+      background: rgba(255,255,255,.025);
+    }
+    .metric b {
+      display: block;
+      color: #fff;
+      font-family: Orbitron, monospace;
+      font-size: 16px;
+      margin-bottom: 2px;
+    }
+    .metric small { color: var(--text-muted); }
+    .spectrum-strip {
+      height: 44px;
+      flex: 0 0 180px;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      background: rgba(0,0,0,.16);
+      overflow: hidden;
+    }
+    .spectrum-strip canvas { width: 100%; height: 100%; display: block; }
     .section-title {
       font-size: 14px;
       text-transform: uppercase;
@@ -313,8 +362,10 @@
       body { display: block; overflow: auto; }
       aside { width: 100%; min-height: auto; }
       .grid-container { grid-template-columns: 1fr; }
+      .viz-grid { grid-template-columns: 1fr; }
       .player-bar { border-radius: 22px; align-items: flex-start; flex-direction: column; }
       .track-info h4 { max-width: 80vw; }
+      .spectrum-strip { width: 100%; flex-basis: 54px; }
     }
   </style>
 </head>
@@ -357,6 +408,27 @@
       <div style="font-size:12px;color:var(--text-muted);margin-top:5px" id="stationLabel">Quantum Resonance Tuner</div>
     </section>
 
+    <section class="viz-grid">
+      <div class="viz-card">
+        <h2 class="section-title">Live Spectrum</h2>
+        <canvas id="spectrumCanvas" width="640" height="180"></canvas>
+      </div>
+      <div class="viz-card">
+        <h2 class="section-title">Station Distribution</h2>
+        <canvas id="distributionCanvas" width="460" height="180"></canvas>
+      </div>
+      <div class="viz-card">
+        <h2 class="section-title">Catalog Telemetry</h2>
+        <canvas id="radarCanvas" width="420" height="180"></canvas>
+        <div class="metric-row">
+          <div class="metric"><b id="metricSongs">--</b><small>songs</small></div>
+          <div class="metric"><b id="metricStations">--</b><small>stations</small></div>
+          <div class="metric"><b id="metricClips">--</b><small>clips</small></div>
+          <div class="metric"><b id="metricCurrent">--</b><small>current station</small></div>
+        </div>
+      </div>
+    </section>
+
     <section>
       <h2 class="section-title">Featured Stations & Live Streaming</h2>
       <div class="grid-container" id="stations"></div>
@@ -382,6 +454,7 @@
             <div class="wave-bar"></div>
           </div>
         </div>
+        <div class="spectrum-strip"><canvas id="miniSpectrumCanvas" width="260" height="60"></canvas></div>
         <div class="social-actions">
           <button id="likeBtn">♡ Like</button>
           <button id="commentBtn">💬 Comment</button>
@@ -445,7 +518,6 @@
       state.stationIndex = index;
       state.trackIndex = 0;
       render();
-      loadTrack(false);
     }
 
     function loadTrack(autoplay) {
@@ -455,6 +527,7 @@
       $("#nowTitle").textContent = track.t || "Untitled";
       $("#nowMeta").textContent = `${track.r || state.data.artist} · ${currentStation().name}`;
       renderSocial();
+      drawAllVisualizations();
       if (autoplay && track.a) audio.play().catch(() => {});
     }
 
@@ -475,6 +548,8 @@
       }).join("");
       renderTracks();
       updateTuner();
+      renderMetrics();
+      drawAllVisualizations();
       loadTrack(false);
     }
 
@@ -493,6 +568,180 @@
       $("#freq").textContent = freq;
       $("#stationLabel").textContent = currentStation().name;
       $("#tunerMarker").style.setProperty("--marker-left", `${18 + state.stationIndex * 8}%`);
+    }
+
+    function renderMetrics() {
+      $("#metricSongs").textContent = state.data.total_songs;
+      $("#metricStations").textContent = state.data.shows.length;
+      $("#metricClips").textContent = state.data.total_clips;
+      $("#metricCurrent").textContent = currentStation().count;
+    }
+
+    function fitCanvas(canvas) {
+      const rect = canvas.getBoundingClientRect();
+      const ratio = window.devicePixelRatio || 1;
+      const width = Math.max(1, Math.floor(rect.width * ratio));
+      const height = Math.max(1, Math.floor(rect.height * ratio));
+      if (canvas.width !== width || canvas.height !== height) {
+        canvas.width = width;
+        canvas.height = height;
+      }
+      const ctx = canvas.getContext("2d");
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+      return { ctx, width: rect.width, height: rect.height };
+    }
+
+    function drawGrid(ctx, width, height) {
+      ctx.strokeStyle = "rgba(255,255,255,.07)";
+      ctx.lineWidth = 1;
+      for (let x = 0; x <= width; x += width / 8) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, height);
+        ctx.stroke();
+      }
+      for (let y = 0; y <= height; y += height / 4) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(width, y);
+        ctx.stroke();
+      }
+    }
+
+    function drawSpectrum(time = performance.now()) {
+      const canvas = $("#spectrumCanvas");
+      if (!canvas || !state.data) return;
+      const { ctx, width, height } = fitCanvas(canvas);
+      ctx.clearRect(0, 0, width, height);
+      drawGrid(ctx, width, height);
+      const track = currentTrack();
+      const seed = (track.t || "").split("").reduce((sum, char) => sum + char.charCodeAt(0), 0);
+      const bars = 42;
+      const gap = 3;
+      const barWidth = (width - gap * (bars - 1)) / bars;
+      for (let i = 0; i < bars; i++) {
+        const pulse = Math.sin(time / 260 + i * .74 + seed * .013);
+        const harmonic = Math.cos(time / 430 + i * .31 + state.stationIndex);
+        const normalized = .18 + Math.abs(pulse * .55 + harmonic * .25);
+        const barHeight = Math.min(height - 18, normalized * (height - 12));
+        const x = i * (barWidth + gap);
+        const y = height - barHeight;
+        const grd = ctx.createLinearGradient(0, y, 0, height);
+        grd.addColorStop(0, "rgba(0,245,212,.95)");
+        grd.addColorStop(1, "rgba(255,107,53,.55)");
+        ctx.fillStyle = grd;
+        ctx.fillRect(x, y, barWidth, barHeight);
+      }
+      ctx.fillStyle = "rgba(255,255,255,.78)";
+      ctx.font = "12px Orbitron, monospace";
+      ctx.fillText(`${currentStation().name} / ${track.d || "--"}`, 10, 18);
+    }
+
+    function drawMiniSpectrum(time = performance.now()) {
+      const canvas = $("#miniSpectrumCanvas");
+      if (!canvas || !state.data) return;
+      const { ctx, width, height } = fitCanvas(canvas);
+      const audio = $("#audio");
+      const progress = audio.duration ? audio.currentTime / audio.duration : 0;
+      ctx.clearRect(0, 0, width, height);
+      const bars = 28;
+      const gap = 2;
+      const barWidth = (width - gap * (bars - 1)) / bars;
+      for (let i = 0; i < bars; i++) {
+        const heightScale = .25 + Math.abs(Math.sin(time / 180 + i * .55 + state.trackIndex)) * .72;
+        const barHeight = heightScale * (height - 10);
+        ctx.fillStyle = i / bars <= progress ? "rgba(255,107,53,.95)" : "rgba(0,245,212,.75)";
+        ctx.fillRect(i * (barWidth + gap), height - barHeight, barWidth, barHeight);
+      }
+    }
+
+    function drawDistribution() {
+      const canvas = $("#distributionCanvas");
+      if (!canvas || !state.data) return;
+      const { ctx, width, height } = fitCanvas(canvas);
+      const shows = state.data.shows.slice(0, 9);
+      const max = Math.max(...shows.map((show) => show.count));
+      ctx.clearRect(0, 0, width, height);
+      drawGrid(ctx, width, height);
+      const gap = 8;
+      const barWidth = (width - gap * (shows.length - 1) - 20) / shows.length;
+      shows.forEach((show, index) => {
+        const barHeight = Math.max(8, (show.count / max) * (height - 42));
+        const x = 10 + index * (barWidth + gap);
+        const y = height - barHeight - 20;
+        ctx.fillStyle = index === state.stationIndex ? "rgba(255,107,53,.95)" : "rgba(0,245,212,.65)";
+        ctx.fillRect(x, y, barWidth, barHeight);
+        ctx.fillStyle = "rgba(255,255,255,.72)";
+        ctx.font = "10px Rajdhani, sans-serif";
+        ctx.save();
+        ctx.translate(x + barWidth / 2, height - 6);
+        ctx.rotate(-Math.PI / 5);
+        ctx.fillText(show.name.slice(0, 9), 0, 0);
+        ctx.restore();
+      });
+    }
+
+    function drawRadar() {
+      const canvas = $("#radarCanvas");
+      if (!canvas || !state.data) return;
+      const { ctx, width, height } = fitCanvas(canvas);
+      ctx.clearRect(0, 0, width, height);
+      const cx = width / 2;
+      const cy = height / 2;
+      const radius = Math.min(width, height) * .34;
+      const values = [
+        currentStation().count / Math.max(...state.data.shows.map((show) => show.count)),
+        state.data.total_clips / Math.max(1, state.data.total_songs * 3),
+        currentStation().songs.slice(0, 12).filter((track) => track.a).length / 12,
+        currentStation().songs.slice(0, 12).filter((track) => track.c).length / 12,
+        (state.trackIndex + 1) / Math.max(1, currentStation().songs.length)
+      ];
+      const labels = ["station", "clips", "audio", "covers", "position"];
+      for (let ring = 1; ring <= 4; ring++) {
+        ctx.beginPath();
+        values.forEach((_, index) => {
+          const angle = -Math.PI / 2 + index * Math.PI * 2 / values.length;
+          const x = cx + Math.cos(angle) * radius * ring / 4;
+          const y = cy + Math.sin(angle) * radius * ring / 4;
+          index ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+        });
+        ctx.closePath();
+        ctx.strokeStyle = "rgba(255,255,255,.08)";
+        ctx.stroke();
+      }
+      ctx.beginPath();
+      values.forEach((value, index) => {
+        const angle = -Math.PI / 2 + index * Math.PI * 2 / values.length;
+        const x = cx + Math.cos(angle) * radius * value;
+        const y = cy + Math.sin(angle) * radius * value;
+        index ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+      });
+      ctx.closePath();
+      ctx.fillStyle = "rgba(0,245,212,.18)";
+      ctx.fill();
+      ctx.strokeStyle = "rgba(255,107,53,.95)";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      ctx.fillStyle = "rgba(226,232,240,.8)";
+      ctx.font = "11px Rajdhani, sans-serif";
+      labels.forEach((label, index) => {
+        const angle = -Math.PI / 2 + index * Math.PI * 2 / labels.length;
+        ctx.fillText(label, cx + Math.cos(angle) * (radius + 12) - 14, cy + Math.sin(angle) * (radius + 12));
+      });
+    }
+
+    function drawAllVisualizations(time) {
+      if (!state.data) return;
+      drawSpectrum(time);
+      drawMiniSpectrum(time);
+      drawDistribution();
+      drawRadar();
+    }
+
+    function animateVisualizations(time) {
+      drawSpectrum(time);
+      drawMiniSpectrum(time);
+      requestAnimationFrame(animateVisualizations);
     }
 
     function renderSocial() {
@@ -583,6 +832,9 @@
     $("#audio").addEventListener("play", () => $("#playBtn").textContent = "❚❚");
     $("#audio").addEventListener("pause", () => $("#playBtn").textContent = "▶");
     $("#audio").addEventListener("ended", nextTrack);
+    $("#audio").addEventListener("timeupdate", () => drawMiniSpectrum());
+    window.addEventListener("resize", () => drawAllVisualizations());
+    requestAnimationFrame(animateVisualizations);
 
     loadCatalog().catch((error) => {
       $("#nowTitle").textContent = "CATALOG LOAD FAILED";
