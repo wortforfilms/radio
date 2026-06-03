@@ -437,6 +437,44 @@
       color: #fff;
       font-size: 14px;
     }
+    .tts-console {
+      margin-top: 14px;
+      border: 1px solid rgba(0,245,212,.18);
+      background: rgba(0,245,212,.045);
+      border-radius: 12px;
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+    }
+    .tts-row {
+      display: grid;
+      grid-template-columns: minmax(140px, 1fr) minmax(140px, 1fr) auto auto;
+      gap: 8px;
+      align-items: center;
+    }
+    .tts-row select,
+    .tts-row button {
+      min-height: 34px;
+      border-radius: 9px;
+      border: 1px solid var(--border-color);
+      background: rgba(255,255,255,.035);
+      color: var(--text-main);
+      padding: 7px 9px;
+      font: 700 12px Rajdhani, sans-serif;
+    }
+    .tts-row button {
+      cursor: pointer;
+      color: var(--accent-cyan);
+      text-transform: uppercase;
+      letter-spacing: .8px;
+    }
+    .tts-row button.stop { color: var(--accent-orange); }
+    .tts-status {
+      color: var(--text-muted);
+      font: 700 10px Orbitron, monospace;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
     .mantra-line {
       color: #fff;
       font-size: 18px;
@@ -722,6 +760,7 @@
       .viz-grid { grid-template-columns: 1fr; }
       .samaya-grid { grid-template-columns: 1fr; }
       .samaya-card.wide { grid-row: auto; }
+      .tts-row { grid-template-columns: 1fr 1fr; }
       .hero-hud { position: relative; inset: auto; grid-template-columns: 1fr; grid-template-rows: auto; margin-top: 16px; }
       .hud-panel.right, .hud-panel.bottom { grid-column: auto; grid-row: auto; }
       .hud-panel.bottom { grid-template-columns: 1fr; }
@@ -854,6 +893,23 @@
         <h3 id="samayaTitle">Samaya Runtime</h3>
         <p id="samayaSubtitle">Muhurta, utsav, divas, vishaya vaachan, and mantra prompts are computed as local dashboard guidance.</p>
         <div class="announcement" id="announcement">Announcement queue initializing.</div>
+        <div class="tts-console" aria-label="Announcement text to speech">
+          <div class="samaya-kicker">TTS Announcer Persona</div>
+          <div class="tts-row">
+            <select id="ttsPersona" aria-label="TTS persona">
+              <option value="maataa">Maataa calm guide</option>
+              <option value="rishi">Rishi knowledge reader</option>
+              <option value="samaya">Samaya ceremonial announcer</option>
+              <option value="vigyaaniq">Vaigyaaniq science anchor</option>
+            </select>
+            <select id="ttsVoice" aria-label="Browser voice">
+              <option value="">Browser default voice</option>
+            </select>
+            <button id="speakAnnouncementBtn">Speak</button>
+            <button class="stop" id="stopAnnouncementBtn">Stop</button>
+          </div>
+          <div class="tts-status" id="ttsStatus">LOCAL BROWSER TTS · VOICE EVIDENCE NULL UNTIL DEVICE VOICE EXISTS</div>
+        </div>
         <div class="samaya-list" id="samayaList"></div>
       </div>
       <div class="samaya-card">
@@ -914,6 +970,7 @@
           <button id="commentBtn">💬 Comment</button>
           <button id="shareBtn">↗ Share</button>
           <button id="saveBtn">▤ Save</button>
+          <button id="speakBtn">🔊 Speak</button>
         </div>
         <div class="player-controls">
           <button class="control-btn" id="prevBtn">⏮</button>
@@ -935,6 +992,7 @@
       <div class="footer-actions">
         <button class="footer-action" id="footerLikeBtn"><span>♡</span>LIKE</button>
         <button class="footer-action" id="footerSaveBtn"><span>▤</span>SAVE</button>
+        <button class="footer-action" id="footerSpeakBtn"><span>🔊</span>SPEAK</button>
         <button class="footer-action" id="footerGiftBtn"><span>🎁</span>GIFT</button>
         <div class="footer-player-controls">
           <button class="control-btn" id="footerPrevBtn">⏮</button>
@@ -1119,6 +1177,37 @@
 
   <script>
     const state = { data: null, stationIndex: 0, trackIndex: 0, social: {} };
+    const ttsPersonas = {
+      maataa: {
+        label: "Maataa calm guide",
+        prefix: "Maataa announcement.",
+        rate: .86,
+        pitch: 1.08,
+        langHints: ["hi-IN", "en-IN", "en-US"]
+      },
+      rishi: {
+        label: "Rishi knowledge reader",
+        prefix: "Rishi vaachan.",
+        rate: .78,
+        pitch: .88,
+        langHints: ["hi-IN", "sa-IN", "en-IN", "en-US"]
+      },
+      samaya: {
+        label: "Samaya ceremonial announcer",
+        prefix: "Samaya sanket.",
+        rate: .82,
+        pitch: .96,
+        langHints: ["hi-IN", "en-IN", "en-US"]
+      },
+      vigyaaniq: {
+        label: "Vaigyaaniq science anchor",
+        prefix: "Radio Vaigyaaniq update.",
+        rate: .98,
+        pitch: 1.02,
+        langHints: ["en-IN", "hi-IN", "en-US"]
+      }
+    };
+    let ttsVoices = [];
     const $ = (selector) => document.querySelector(selector);
     const esc = (value) => String(value || "").replace(/[&<>"]/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[char]));
     const token = (value) => encodeURIComponent(value || "unknown");
@@ -1541,6 +1630,78 @@
       $("#modal").classList.add("show");
     }
 
+    function supportsTts() {
+      return "speechSynthesis" in window && "SpeechSynthesisUtterance" in window;
+    }
+
+    function setTtsStatus(message) {
+      $("#ttsStatus").textContent = message;
+    }
+
+    function populateTtsVoices() {
+      if (!supportsTts()) {
+        setTtsStatus("TTS BLOCKED · BROWSER SPEECHSYNTHESIS UNAVAILABLE");
+        return;
+      }
+      ttsVoices = speechSynthesis.getVoices();
+      const voiceSelect = $("#ttsVoice");
+      const selected = voiceSelect.value;
+      voiceSelect.innerHTML = `<option value="">Browser default voice</option>${ttsVoices.map((voice, index) => {
+        const local = voice.localService ? "local" : "remote";
+        return `<option value="${index}">${esc(voice.name)} · ${esc(voice.lang)} · ${local}</option>`;
+      }).join("")}`;
+      voiceSelect.value = selected && ttsVoices[Number(selected)] ? selected : "";
+      setTtsStatus(ttsVoices.length
+        ? `LOCAL BROWSER TTS · ${ttsVoices.length} DEVICE VOICES DISCOVERED · SERVER AUDIO EVIDENCE NULL`
+        : "TTS READY · NO DEVICE VOICES REPORTED YET");
+    }
+
+    function selectedTtsVoice(persona) {
+      const selected = $("#ttsVoice").value;
+      if (selected && ttsVoices[Number(selected)]) return ttsVoices[Number(selected)];
+      return ttsVoices.find((voice) => persona.langHints.includes(voice.lang))
+        || ttsVoices.find((voice) => persona.langHints.some((hint) => voice.lang.toLowerCase().startsWith(hint.slice(0, 2).toLowerCase())))
+        || null;
+    }
+
+    function currentAnnouncementText() {
+      const station = currentStation();
+      const track = currentTrack();
+      return [
+        $("#announcement").textContent,
+        `Current station: ${station.name}.`,
+        `Now playing: ${track.t || "Untitled"}.`,
+        $("#vishayaTitle").textContent ? `Vishaya vaachan: ${$("#vishayaTitle").textContent}.` : "",
+        $("#mantraLine").textContent ? `Mantra prompt: ${$("#mantraLine").textContent}.` : "",
+        "PHKD note: local browser text to speech only. No verified generated audio asset."
+      ].filter(Boolean).join(" ");
+    }
+
+    function speakAnnouncement() {
+      if (!state.data) return;
+      if (!supportsTts()) {
+        setTtsStatus("TTS BLOCKED · BROWSER SPEECHSYNTHESIS UNAVAILABLE");
+        return;
+      }
+      const persona = ttsPersonas[$("#ttsPersona").value] || ttsPersonas.maataa;
+      const utterance = new SpeechSynthesisUtterance(`${persona.prefix} ${currentAnnouncementText()}`);
+      const voice = selectedTtsVoice(persona);
+      if (voice) utterance.voice = voice;
+      utterance.rate = persona.rate;
+      utterance.pitch = persona.pitch;
+      utterance.lang = voice?.lang || persona.langHints[0] || "hi-IN";
+      utterance.onstart = () => setTtsStatus(`SPEAKING · ${persona.label.toUpperCase()} · ${utterance.lang} · LOCAL BROWSER TTS`);
+      utterance.onend = () => setTtsStatus(`READY · ${persona.label.toUpperCase()} · SERVER AUDIO EVIDENCE NULL`);
+      utterance.onerror = () => setTtsStatus("TTS ERROR · DEVICE VOICE FAILED CLOSED");
+      speechSynthesis.cancel();
+      speechSynthesis.speak(utterance);
+    }
+
+    function stopAnnouncement() {
+      if (supportsTts()) speechSynthesis.cancel();
+      setTtsStatus("STOPPED · LOCAL BROWSER TTS");
+    }
+
     function updateLiveClock() {
       const now = new Date();
       $("#liveClock").textContent = `${now.toTimeString().split(" ")[0]} DRAFT`;
@@ -1557,10 +1718,16 @@
     $("#saveBtn").addEventListener("click", toggleSave);
     $("#commentBtn").addEventListener("click", openComments);
     $("#shareBtn").addEventListener("click", shareTrack);
+    $("#speakBtn").addEventListener("click", speakAnnouncement);
+    $("#speakAnnouncementBtn").addEventListener("click", speakAnnouncement);
+    $("#stopAnnouncementBtn").addEventListener("click", stopAnnouncement);
+    $("#ttsPersona").addEventListener("change", () => setTtsStatus(`READY · ${ttsPersonas[$("#ttsPersona").value].label.toUpperCase()} · LOCAL BROWSER TTS`));
+    $("#ttsVoice").addEventListener("change", () => setTtsStatus("READY · SELECTED DEVICE VOICE · SERVER AUDIO EVIDENCE NULL"));
     $("#hudCommentBtn").addEventListener("click", openComments);
     $("#hudShareBtn").addEventListener("click", shareTrack);
     $("#footerLikeBtn").addEventListener("click", toggleLike);
     $("#footerSaveBtn").addEventListener("click", toggleSave);
+    $("#footerSpeakBtn").addEventListener("click", speakAnnouncement);
     $("#footerGiftBtn").addEventListener("click", triggerGift);
     $("#footerPrevBtn").addEventListener("click", prevTrack);
     $("#footerNextBtn").addEventListener("click", nextTrack);
@@ -1588,6 +1755,8 @@
     $("#audio").addEventListener("timeupdate", () => drawMiniSpectrum());
     window.addEventListener("resize", () => drawAllVisualizations());
     requestAnimationFrame(animateVisualizations);
+    populateTtsVoices();
+    if (supportsTts()) speechSynthesis.onvoiceschanged = populateTtsVoices;
     updateLiveClock();
     setInterval(updateLiveClock, 1000);
 
