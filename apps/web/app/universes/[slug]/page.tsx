@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { getUniverseBySlug, universeRegistry } from "@shared/universes";
+import { getUniverseSkeleton } from "@shared/universe-skeletons";
 import { getPersistenceScope, getPersistenceScopeLanding } from "@shared/persistence-scopes";
 
 type PageProps = {
@@ -24,6 +25,7 @@ export default async function UniverseLandingPage({ params }: PageProps) {
   if (!universe) notFound();
   const persistenceScope = getPersistenceScope(universe.slug) ?? getPersistenceScope("all");
   const landing = persistenceScope ? getPersistenceScopeLanding(persistenceScope) : null;
+  const skeleton = getUniverseSkeleton(universe.slug);
 
   return (
     <>
@@ -68,6 +70,61 @@ export default async function UniverseLandingPage({ params }: PageProps) {
             </div>
           </div>
         </section>
+        {skeleton ? (
+          <section className="landing-section universe-skeleton-detail">
+            <div className="reference-feed-head">
+              <div>
+                <p className="section-kicker">Unique Skeleton</p>
+                <h2>{skeleton.title}</h2>
+                <p>{skeleton.archetype}</p>
+              </div>
+            </div>
+            <div className="skeleton-blueprint">
+              <article>
+                <span>Node Types</span>
+                <ul>
+                  {skeleton.nodeTypes.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </article>
+              <article>
+                <span>Edge Types</span>
+                <ul>
+                  {skeleton.edgeTypes.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </article>
+              <article>
+                <span>Explorer Views</span>
+                <ul>
+                  {skeleton.views.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </article>
+              <article>
+                <span>Evidence Gates</span>
+                <ul>
+                  {skeleton.evidenceGates.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </article>
+              <article>
+                <span>Importers</span>
+                <ul>
+                  {skeleton.importers.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </article>
+              <article>
+                <span>Exporters</span>
+                <ul>
+                  {skeleton.exporters.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </article>
+              <article>
+                <span>.hkd Sections</span>
+                <ul>
+                  {skeleton.hkdSections.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </article>
+            </div>
+          </section>
+        ) : null}
         {landing ? (
           <>
             <section className="landing-section">

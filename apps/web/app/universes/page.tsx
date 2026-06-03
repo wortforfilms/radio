@@ -1,4 +1,5 @@
 import { universeRegistry } from "@shared/universes";
+import { universeSkeletons } from "@shared/universe-skeletons";
 
 export default function UniversesPage() {
   return (
@@ -21,6 +22,24 @@ export default function UniversesPage() {
             </a>
           ))}
         </div>
+        <section className="landing-section universe-skeleton-index">
+          <div className="reference-feed-head">
+            <div>
+              <p className="section-kicker">Unique Skeletons</p>
+              <h2>All Universe Blueprints</h2>
+            </div>
+          </div>
+          <div className="skeleton-grid">
+            {universeSkeletons.map((skeleton) => (
+              <a className="skeleton-card" href={`/universes/${skeleton.slug}`} key={skeleton.slug}>
+                <span>{skeleton.nodeTypes.length} node types · {skeleton.edgeTypes.length} edge types</span>
+                <strong>{skeleton.title}</strong>
+                <p>{skeleton.archetype}</p>
+                <small>{skeleton.views.slice(0, 3).join(" · ")}</small>
+              </a>
+            ))}
+          </div>
+        </section>
       </main>
     </>
   );

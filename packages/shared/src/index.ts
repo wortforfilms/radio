@@ -10,4 +10,5 @@ export * from "./sanskrit-dictionary";
 export * from "./taxonomy";
 export * from "./universal-dictionary";
 export * from "./universes";
+export * from "./universe-skeletons";
 export * from "./world-religious-atlas";
