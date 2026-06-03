@@ -22,6 +22,7 @@ export default async function DashboardPage() {
     ["Sanskrit Dictionary", "/dictionary"],
     ["HKD Banners", "/hkd-banners"],
     ["Sprint Matrix", "/sprints"],
+    ["Wireframes", "/wireframes"],
     ["Universes", "/universes"],
     ["Persistence Scopes", "/scopes"],
     ["Admin", "/admin"],

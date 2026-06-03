@@ -834,6 +834,131 @@
   margin: 0;
 }
 
+.wireframe-hero::after {
+  background:
+    linear-gradient(90deg, rgba(8, 13, 18, 0.92) 0%, rgba(8, 13, 18, 0.68) 48%, rgba(8, 13, 18, 0.28) 100%),
+    linear-gradient(0deg, rgba(8, 13, 18, 0.9) 0%, rgba(8, 13, 18, 0.14) 62%);
+}
+
+.wireframe-page {
+  display: grid;
+  gap: 24px;
+}
+
+.wireframe-summary-grid,
+.wireframe-grid,
+.wireframe-mini-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.wireframe-summary-grid {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.wireframe-summary-grid article,
+.wireframe-card,
+.wireframe-group,
+.wireframe-mini-grid article {
+  border: 1px solid rgba(31, 37, 33, 0.14);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(31, 37, 33, 0.07);
+}
+
+.wireframe-summary-grid article {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+}
+
+.wireframe-summary-grid span,
+.wireframe-card span,
+.wireframe-card small,
+.wireframe-group > div > span,
+.wireframe-mini-grid b {
+  color: #68716a;
+  font-size: 12px;
+  font-weight: 840;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.wireframe-summary-grid b {
+  color: #1f2521;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.wireframe-chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.wireframe-chip-grid span {
+  border-radius: 999px;
+  background: #f4f7f2;
+  color: #1e6b54;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 820;
+}
+
+.wireframe-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.wireframe-card {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  padding: 16px;
+}
+
+.wireframe-card h3,
+.wireframe-group h3 {
+  margin: 0;
+  color: #1f2521;
+  font-size: 22px;
+  line-height: 1.12;
+}
+
+.wireframe-card p,
+.wireframe-group p {
+  margin: 0;
+  color: #5f6963;
+  line-height: 1.5;
+}
+
+.wireframe-board {
+  display: grid;
+  gap: 14px;
+}
+
+.wireframe-group {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+  gap: 14px;
+  padding: 16px;
+}
+
+.wireframe-mini-grid {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.wireframe-mini-grid article {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+}
+
+.wireframe-mini-grid span {
+  color: #1f2521;
+  font-weight: 760;
+}
+
 @media (max-width: 980px) {
   .radio-react-shell {
     display: block;

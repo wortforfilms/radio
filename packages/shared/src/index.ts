@@ -3,6 +3,7 @@ export * from "./ayodhya-modules";
 export * from "./ayodhya-project-templates";
 export * from "./hkd3d";
 export * from "./hkd-hero-banners";
+export * from "./extracted-wireframes";
 export * from "./lipi-civilization-matrix";
 export * from "./persistence-scopes";
 export * from "./reference-corpus";
