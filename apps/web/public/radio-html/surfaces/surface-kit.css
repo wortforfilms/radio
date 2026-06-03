@@ -233,6 +233,72 @@ select,
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.runtime-workflow-board {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+  gap: 14px;
+}
+
+.runtime-lane,
+.workflow-lane {
+  display: grid;
+  gap: 12px;
+}
+
+.runtime-row,
+.workflow-row {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) minmax(160px, .42fr);
+  gap: 12px;
+  align-items: start;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  background: var(--panel);
+}
+
+.workflow-row {
+  grid-template-columns: 58px minmax(0, 1fr) minmax(160px, .38fr);
+}
+
+.runtime-row > span,
+.workflow-row > span {
+  display: grid;
+  min-height: 42px;
+  place-items: center;
+  border: 1px solid rgba(255,107,53,.34);
+  border-radius: 999px;
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 950;
+}
+
+.runtime-row b,
+.workflow-row b {
+  display: block;
+  color: var(--white);
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+.runtime-row p,
+.workflow-row p {
+  margin: 8px 0 0;
+}
+
+.surface-state-pill {
+  display: inline-flex;
+  width: max-content;
+  max-width: 100%;
+  border: 1px solid rgba(0,245,212,.28);
+  border-radius: 999px;
+  padding: 6px 9px;
+  color: var(--cyan);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .surface-card {
   display: grid;
   gap: 10px;
@@ -350,6 +416,9 @@ audio {
 @media (max-width: 1000px) {
   .surface-shell,
   .surface-hero,
+  .runtime-workflow-board,
+  .runtime-row,
+  .workflow-row,
   .surface-grid.four,
   .surface-grid.three {
     grid-template-columns: 1fr;

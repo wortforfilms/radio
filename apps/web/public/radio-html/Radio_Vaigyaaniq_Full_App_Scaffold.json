@@ -22,6 +22,7 @@
     { "path": "/radio-html/surfaces/index.html", "surface": "All standalone HTML surfaces index", "status": "implemented" },
     { "path": "/radio-html/surfaces/landing.html", "surface": "Landing command HTML surface", "status": "implemented" },
     { "path": "/radio-html/surfaces/runtime.html", "surface": "Runtime HTML surface", "status": "implemented" },
+    { "path": "/radio-html/surfaces/runtimes-workflows.html", "surface": "Runtimes and workflows HTML surface", "status": "implemented" },
     { "path": "/radio-html/surfaces/visualizer.html", "surface": "Visualizer HTML surface", "status": "implemented" },
     { "path": "/radio-html/surfaces/lyrics.html", "surface": "Lyrics scribe HTML surface", "status": "implemented" },
     { "path": "/radio-html/surfaces/tts.html", "surface": "TTS Samaya HTML surface", "status": "implemented" },

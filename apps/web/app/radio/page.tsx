@@ -20,6 +20,7 @@ export default function RadioPage() {
     ["Storyboard", "Full shot plan for landing, runtime, visualizer, lyrics, TTS, gift, project, archive, and export.", "/radio/storyboard", "SB"],
     ["Full App HTML", "Standalone browser HTML with landing, runtime mock, visualizer, lyrics, storyboard, and PHKD states.", "/radio-html/Radio_Vaigyaaniq_Full_App.html", "APP"],
     ["All HTML Surfaces", "Dedicated browser pages for landing, runtime, visualizer, lyrics, TTS, social/gift, storyboard, evidence, and scaffold.", "/radio-html/surfaces/index.html", "SURF"],
+    ["Runtimes + Workflows", "Runtime lane, workflow lane, event triggers, states, storage posture, and PHKD gates.", "/radio-html/surfaces/runtimes-workflows.html", "FLOW"],
     ["Scaffold JSON", "Machine-readable routes, components, data contracts, events, storage, exports, QA gates, and PHKD boundaries.", "/radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json", "JSON"],
     ["HKD Export", "Media universe exports preserve provenance and NULL unknowns.", "/api/export?format=hkd&scope=media-universe", "HKD"],
     ["HTML Archive", "Original uploaded single-file dashboard remains inspectable.", "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html", "HTML"]

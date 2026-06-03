@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - Runtimes And Workflows</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav>
+        <a href="./index.html">Index</a>
+        <a href="./runtime.html">Runtime</a>
+        <a href="./visualizer.html">Visual</a>
+        <a href="./lyrics.html">Lyrics</a>
+        <a href="./scaffold.html">Scaffold</a>
+      </nav>
+      <span>PHKD</span>
+    </aside>
+
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">Runtimes And Workflows</p>
+          <h1>Runtime Board</h1>
+          <p>One surface that maps every Radio runtime to its operational workflow, state, event triggers, and PHKD boundary. This is a scaffold surface, not a production-readiness claim.</p>
+          <div class="surface-actions">
+            <a href="../Radio_Vaigyaaniq_Full_App.html#runtime">Full Runtime</a>
+            <a href="../Radio_Vaigyaaniq_Full_App.html#scaffold">Full Scaffold</a>
+            <a href="../Radio_Vaigyaaniq_Full_App_Scaffold.json">Scaffold JSON</a>
+          </div>
+        </div>
+        <div class="status-chip">
+          <span>Coverage</span>
+          <b>8</b>
+          <small>runtimes mapped</small>
+        </div>
+      </section>
+
+      <section class="runtime-workflow-board">
+        <div class="runtime-lane">
+          <div>
+            <p class="kicker">Runtime Lane</p>
+            <h2>Execution surfaces</h2>
+          </div>
+          <article class="runtime-row"><span>RT-01</span><div><b>Landing Command Runtime</b><p>Routes users into live runtime, frame, prototype, storyboard, scaffold, project intake, and media evidence.</p></div><small class="surface-state-pill">implemented</small></article>
+          <article class="runtime-row"><span>RT-02</span><div><b>Live Broadcast Runtime</b><p>Station/track switching, footer player, social state, gift intent, and project creation context.</p></div><small class="surface-state-pill">implemented</small></article>
+          <article class="runtime-row"><span>RT-03</span><div><b>Samaya TTS Runtime</b><p>Persona announcement workflow using browser speech synthesis only.</p></div><small class="surface-state-pill">local draft</small></article>
+          <article class="runtime-row"><span>RT-04</span><div><b>Visualizer Runtime</b><p>Canvas/Three-inspired scenes, mic/upload/record controls, and WebM draft export posture.</p></div><small class="surface-state-pill">visual draft</small></article>
+          <article class="runtime-row"><span>RT-05</span><div><b>Lyrics Scribe Runtime</b><p>Draft cues, LRC import/export, HKD JSON lyric export, and local cue state.</p></div><small class="surface-state-pill">draft cues</small></article>
+          <article class="runtime-row"><span>RT-06</span><div><b>Social Gift Runtime</b><p>Like/save local toggles, gift modal, and project intake links.</p></div><small class="surface-state-pill">intent only</small></article>
+          <article class="runtime-row"><span>RT-07</span><div><b>Storyboard Runtime</b><p>7 sequences and 20 shots for current surface behavior and handoff.</p></div><small class="surface-state-pill">implemented</small></article>
+          <article class="runtime-row"><span>RT-08</span><div><b>Evidence Export Runtime</b><p>Media HKD, lyric HKD, LRC, WebM, and scaffold manifest routes.</p></div><small class="surface-state-pill">preserves state</small></article>
+        </div>
+
+        <div class="workflow-lane">
+          <div>
+            <p class="kicker">Workflow Lane</p>
+            <h2>Operator flows</h2>
+          </div>
+          <article class="workflow-row"><span>01</span><div><b>Enter</b><p>Open Radio or surface kit and choose target runtime.</p></div><small>event: route:selected</small></article>
+          <article class="workflow-row"><span>02</span><div><b>Tune</b><p>Select station and track context for downstream actions.</p></div><small>event: station:selected</small></article>
+          <article class="workflow-row"><span>03</span><div><b>Announce</b><p>Choose persona, speak local browser announcement, stop when needed.</p></div><small>event: tts:speak</small></article>
+          <article class="workflow-row"><span>04</span><div><b>Visualize</b><p>Select scene, attach local input, record draft visual output.</p></div><small>event: visualizer:sceneChanged</small></article>
+          <article class="workflow-row"><span>05</span><div><b>Scribe</b><p>Mark lyric line, review cue list, export LRC/HKD draft.</p></div><small>event: lyrics:markLine</small></article>
+          <article class="workflow-row"><span>06</span><div><b>Act</b><p>Like, save, open gift intent, or create project draft.</p></div><small>event: gift:intentOpened</small></article>
+          <article class="workflow-row"><span>07</span><div><b>Package</b><p>Move exported draft artifacts into Ayodhya/project evidence flow.</p></div><small>event: project:intake</small></article>
+          <article class="workflow-row"><span>08</span><div><b>Verify</b><p>Attach source, creator, artifact, date, and verification evidence before upgrading status.</p></div><small>event: evidence:verified</small></article>
+        </div>
+      </section>
+
+      <section class="surface-grid four">
+        <article class="surface-card"><span class="surface-label">State</span><b>DRAFT</b><p>Default for local UI, TTS, visualizer, lyric, and gift surfaces.</p></article>
+        <article class="surface-card"><span class="surface-label">Unknowns</span><b>NULL</b><p>Missing source, creator, receipt, citation, audio, and verification evidence remain NULL.</p></article>
+        <article class="surface-card"><span class="surface-label">Storage</span><b>Local / Blob</b><p>LocalStorage and Blob URLs are draft artifact mechanisms only.</p></article>
+        <article class="surface-card"><span class="surface-label">PHKD</span><b>Fail Closed</b><p>No fabricated citation, payment, production, telemetry, or audio-quality claim.</p></article>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
