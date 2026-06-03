@@ -9,7 +9,7 @@ declare global {
   }
 }
 
-type SceneName = "sphere" | "bars" | "particles" | "waveform" | "terrain" | "rings" | "mandala";
+type SceneName = "sphere" | "bars" | "particles" | "waveform" | "terrain" | "rings" | "mandala" | "gravity" | "cloth" | "vortex" | "shockwave";
 
 const sceneLabels: Record<SceneName, string> = {
   sphere: "Sphere",
@@ -18,7 +18,11 @@ const sceneLabels: Record<SceneName, string> = {
   waveform: "Wave Tunnel",
   terrain: "Terrain Grid",
   rings: "Nebula Rings",
-  mandala: "Mandala Field"
+  mandala: "Mandala Field",
+  gravity: "Gravity Physics",
+  cloth: "Spring Cloth",
+  vortex: "Vortex Flow",
+  shockwave: "Shockwave Cinema"
 };
 
 function loadThreeGlobal(): Promise<any> {
@@ -218,6 +222,90 @@ export function AudioVisualizerPro() {
       }
       scene.add(mandalaGroup);
 
+      const gravityCount = 84;
+      const gravityGroup = new THREE.Group();
+      const gravityMesh = new THREE.InstancedMesh(
+        new THREE.SphereGeometry(0.12, 12, 12),
+        new THREE.MeshStandardMaterial({ color: 0xffcf70, emissive: 0x2a1600, metalness: 0.2, roughness: 0.36 }),
+        gravityCount
+      );
+      const gravityPositions = new Float32Array(gravityCount * 3);
+      const gravityVelocities = new Float32Array(gravityCount * 3);
+      const gravityDummy = new THREE.Object3D();
+      for (let i = 0; i < gravityCount; i += 1) {
+        const radius = 1.5 + Math.random() * 7.5;
+        const angle = Math.random() * Math.PI * 2;
+        gravityPositions.set([Math.cos(angle) * radius, (Math.random() - 0.5) * 5, Math.sin(angle) * radius], i * 3);
+        gravityVelocities.set([-Math.sin(angle) * 0.018, (Math.random() - 0.5) * 0.012, Math.cos(angle) * 0.018], i * 3);
+      }
+      gravityGroup.add(gravityMesh);
+      const gravityCore = new THREE.Mesh(
+        new THREE.SphereGeometry(0.46, 32, 16),
+        new THREE.MeshStandardMaterial({ color: 0xff6b35, emissive: 0x4a1204, metalness: 0.35, roughness: 0.24 })
+      );
+      gravityGroup.add(gravityCore);
+      scene.add(gravityGroup);
+
+      const clothSegmentsX = 28;
+      const clothSegmentsY = 16;
+      const clothGeometry = new THREE.PlaneGeometry(16, 9, clothSegmentsX - 1, clothSegmentsY - 1);
+      const clothBase = Float32Array.from(clothGeometry.attributes.position.array);
+      const clothVelocity = new Float32Array(clothGeometry.attributes.position.count * 3);
+      const cloth = new THREE.Mesh(clothGeometry, new THREE.MeshStandardMaterial({
+        color: 0x00f5d4,
+        emissive: 0x05252a,
+        roughness: 0.22,
+        metalness: 0.1,
+        wireframe: true
+      }));
+      cloth.position.y = -0.8;
+      cloth.rotation.x = -0.68;
+      scene.add(cloth);
+
+      const vortexCount = 720;
+      const vortexGeometry = new THREE.BufferGeometry();
+      const vortexPositions = new Float32Array(vortexCount * 3);
+      const vortexVelocities = new Float32Array(vortexCount * 3);
+      const vortexColors = new Float32Array(vortexCount * 3);
+      for (let i = 0; i < vortexCount; i += 1) {
+        const radius = 0.6 + Math.random() * 8.5;
+        const angle = Math.random() * Math.PI * 2;
+        const y = (Math.random() - 0.5) * 8;
+        vortexPositions.set([Math.cos(angle) * radius, y, Math.sin(angle) * radius], i * 3);
+        vortexVelocities.set([-Math.sin(angle) * 0.015, 0.015 + Math.random() * 0.025, Math.cos(angle) * 0.015], i * 3);
+        const color = new THREE.Color().setHSL((i / vortexCount + 0.44) % 1, 0.96, 0.6);
+        vortexColors.set([color.r, color.g, color.b], i * 3);
+      }
+      vortexGeometry.setAttribute("position", new THREE.BufferAttribute(vortexPositions, 3));
+      vortexGeometry.setAttribute("color", new THREE.BufferAttribute(vortexColors, 3));
+      const vortex = new THREE.Points(vortexGeometry, new THREE.PointsMaterial({
+        size: 0.1,
+        vertexColors: true,
+        transparent: true,
+        opacity: 0.86,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false
+      }));
+      scene.add(vortex);
+
+      const shockwaveGroup = new THREE.Group();
+      const shockwaves: any[] = [];
+      for (let i = 0; i < 18; i += 1) {
+        const curve = new THREE.EllipseCurve(0, 0, 0.8 + i * 0.5, 0.8 + i * 0.5, 0, Math.PI * 2);
+        const geometry = new THREE.BufferGeometry().setFromPoints(curve.getPoints(180).map((point: { x: number; y: number }) => new THREE.Vector3(point.x, point.y, 0)));
+        const material = new THREE.LineBasicMaterial({
+          color: new THREE.Color().setHSL((i / 18 + 0.04) % 1, 0.95, 0.58),
+          transparent: true,
+          opacity: 0.68
+        });
+        const wave = new THREE.LineLoop(geometry, material);
+        wave.rotation.x = Math.PI / 2.8;
+        wave.userData.phase = i / 18;
+        shockwaveGroup.add(wave);
+        shockwaves.push(wave);
+      }
+      scene.add(shockwaveGroup);
+
       const resize = () => {
         const rect = canvas.getBoundingClientRect();
         renderer.setSize(rect.width, rect.height, false);
@@ -243,6 +331,10 @@ export function AudioVisualizerPro() {
         terrain.visible = sceneNameRef.current === "terrain";
         ringsGroup.visible = sceneNameRef.current === "rings";
         mandalaGroup.visible = sceneNameRef.current === "mandala";
+        gravityGroup.visible = sceneNameRef.current === "gravity";
+        cloth.visible = sceneNameRef.current === "cloth";
+        vortex.visible = sceneNameRef.current === "vortex";
+        shockwaveGroup.visible = sceneNameRef.current === "shockwave";
         const position = sphereGeometry.attributes.position;
         for (let i = 0; i < position.count; i += 1) {
           const band = data[i % data.length] / 255;
@@ -303,6 +395,88 @@ export function AudioVisualizerPro() {
         });
         mandalaGroup.rotation.z = time * 0.12;
         mandalaGroup.rotation.x = Math.sin(time * 0.35) * 0.18;
+        for (let i = 0; i < gravityCount; i += 1) {
+          const offset = i * 3;
+          const x = gravityPositions[offset];
+          const y = gravityPositions[offset + 1];
+          const z = gravityPositions[offset + 2];
+          const distSq = Math.max(0.35, x * x + y * y + z * z);
+          const force = (0.012 + volume * 0.06 + (data[(i * 9) % data.length] / 255) * 0.018) / distSq;
+          gravityVelocities[offset] += -x * force;
+          gravityVelocities[offset + 1] += -y * force * 0.42 + Math.sin(time + i) * 0.0008;
+          gravityVelocities[offset + 2] += -z * force;
+          gravityVelocities[offset] += -z * 0.0009;
+          gravityVelocities[offset + 2] += x * 0.0009;
+          gravityVelocities[offset] *= 0.996;
+          gravityVelocities[offset + 1] *= 0.994;
+          gravityVelocities[offset + 2] *= 0.996;
+          gravityPositions[offset] += gravityVelocities[offset];
+          gravityPositions[offset + 1] += gravityVelocities[offset + 1];
+          gravityPositions[offset + 2] += gravityVelocities[offset + 2];
+          gravityDummy.position.set(gravityPositions[offset], gravityPositions[offset + 1], gravityPositions[offset + 2]);
+          gravityDummy.scale.setScalar(0.65 + (data[(i * 5) % data.length] / 255) * 1.8);
+          gravityDummy.updateMatrix();
+          gravityMesh.setMatrixAt(i, gravityDummy.matrix);
+        }
+        gravityMesh.instanceMatrix.needsUpdate = true;
+        gravityCore.scale.setScalar(1 + volume * 1.3);
+        gravityGroup.rotation.y = time * 0.12;
+        const clothPosition = clothGeometry.attributes.position;
+        for (let i = 0; i < clothPosition.count; i += 1) {
+          const offset = i * 3;
+          const baseX = clothBase[offset];
+          const baseY = clothBase[offset + 1];
+          const baseZ = clothBase[offset + 2];
+          const col = i % clothSegmentsX;
+          const row = Math.floor(i / clothSegmentsX);
+          const pinned = row === clothSegmentsY - 1 && (col % 4 === 0 || col === clothSegmentsX - 1);
+          const band = data[(col * 17 + row * 29) % data.length] / 255;
+          const targetZ = baseZ + Math.sin(time * 1.8 + col * 0.36 + row * 0.2) * 0.35 + band * 1.9 + volume * 0.7;
+          const currentZ = clothPosition.getZ(i);
+          clothVelocity[offset + 2] += (targetZ - currentZ) * (pinned ? 0.18 : 0.045);
+          clothVelocity[offset + 2] *= pinned ? 0.68 : 0.9;
+          clothPosition.setXYZ(i, baseX, baseY + Math.sin(time + col * 0.2) * 0.04, currentZ + clothVelocity[offset + 2]);
+        }
+        clothPosition.needsUpdate = true;
+        cloth.rotation.z = Math.sin(time * 0.18) * 0.12;
+        const vortexAttr = vortexGeometry.attributes.position;
+        for (let i = 0; i < vortexCount; i += 1) {
+          const offset = i * 3;
+          let x = vortexPositions[offset];
+          let y = vortexPositions[offset + 1];
+          let z = vortexPositions[offset + 2];
+          const radius = Math.max(0.4, Math.sqrt(x * x + z * z));
+          const band = data[(i * 3) % data.length] / 255;
+          const swirl = 0.024 + band * 0.07 + volume * 0.05;
+          vortexVelocities[offset] += (-z / radius) * swirl - x * 0.0014;
+          vortexVelocities[offset + 1] += 0.002 + band * 0.004;
+          vortexVelocities[offset + 2] += (x / radius) * swirl - z * 0.0014;
+          vortexVelocities[offset] *= 0.84;
+          vortexVelocities[offset + 1] *= 0.88;
+          vortexVelocities[offset + 2] *= 0.84;
+          x += vortexVelocities[offset];
+          y += vortexVelocities[offset + 1];
+          z += vortexVelocities[offset + 2];
+          if (y > 7 || radius > 11) {
+            const angle = Math.random() * Math.PI * 2;
+            const resetRadius = 0.8 + Math.random() * 2.8;
+            x = Math.cos(angle) * resetRadius;
+            y = -6;
+            z = Math.sin(angle) * resetRadius;
+          }
+          vortexPositions.set([x, y, z], offset);
+          vortexAttr.setXYZ(i, x, y, z);
+        }
+        vortexAttr.needsUpdate = true;
+        vortex.rotation.y = time * 0.08;
+        shockwaves.forEach((wave) => {
+          const phase = (wave.userData.phase + time * (0.1 + volume * 0.35)) % 1;
+          const scale = 0.4 + phase * (7 + volume * 5);
+          wave.scale.setScalar(scale);
+          wave.material.opacity = Math.max(0, 0.75 - phase * 0.75);
+          wave.rotation.z = time * 0.08 + phase * Math.PI;
+        });
+        shockwaveGroup.rotation.y = Math.sin(time * 0.18) * 0.35;
         renderer.render(scene, camera);
         requestAnimationFrame(animate);
       };
@@ -410,7 +584,7 @@ export function AudioVisualizerPro() {
       </div>
       <canvas ref={canvasRef} aria-label="Three.js audio visualizer canvas" />
       <div className="radio-viz-controls" aria-label="3D audio visualizer controls">
-        {(["sphere", "bars", "particles", "waveform", "terrain", "rings", "mandala"] as SceneName[]).map((name) => (
+        {(["sphere", "bars", "particles", "waveform", "terrain", "rings", "mandala", "gravity", "cloth", "vortex", "shockwave"] as SceneName[]).map((name) => (
           <button className={sceneName === name ? "active" : ""} data-viz-scene={name} key={name} onClick={() => setSceneName(name)}>
             {sceneLabels[name]}
           </button>
