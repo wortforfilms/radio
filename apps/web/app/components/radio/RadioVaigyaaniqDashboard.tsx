@@ -60,6 +60,25 @@ export function RadioVaigyaaniqDashboard() {
   const lyricsKey = encodeURIComponent(`${station?.name || "station"}::${trackIndex}::${track?.t || "unknown"}`);
   const socialState = social[socialKey] || { liked: false, saved: false };
 
+  const projectHref = useMemo(() => {
+    if (!track) return "/projects/new";
+    const params = new URLSearchParams({
+      title: track.t || "Untitled Radio Track",
+      translit: track.r || "",
+      type: track.theme || "Devotional",
+      lang: /[\u0900-\u097f]/.test(`${track.t} ${track.ly || ""}`) ? "Hindi" : "Unknown",
+      src: track.a ? `Radio Vaigyaaniq · ${track.a}` : `Radio Vaigyaaniq · ${station?.name || "Unknown Station"}`,
+      desc: [
+        `Station: ${station?.name || "Unknown"}`,
+        `Track: ${track.t || "Untitled"}`,
+        track.r ? `Transliteration: ${track.r}` : "Transliteration: NULL",
+        track.d ? `Duration: ${track.d}` : "Duration: NULL",
+        track.ly ? `\n${track.ly}` : "\nTranscript: NULL"
+      ].join("\n")
+    });
+    return `/projects/new?${params.toString()}`;
+  }, [station?.name, track]);
+
   const updateSocial = (patch: Partial<{ liked: boolean; saved: boolean }>) => {
     const next = { ...social, [socialKey]: { ...socialState, ...patch } };
     setSocial(next);
@@ -203,6 +222,7 @@ export function RadioVaigyaaniqDashboard() {
         <span>LIVE</span>
         <b>{track.t}</b>
         <small>{track.r || catalog.artist} · {station.name}</small>
+        <a href={projectHref}>Create Project</a>
         <button onClick={() => updateSocial({ liked: !socialState.liked })}>{socialState.liked ? "Liked" : "Like"}</button>
         <button onClick={() => updateSocial({ saved: !socialState.saved })}>{socialState.saved ? "Saved" : "Save"}</button>
         <button onClick={speakAnnouncement}>Speak</button>

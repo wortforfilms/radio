@@ -22,6 +22,8 @@ export default function AyodhyaPage() {
           </p>
           <div className="ayodhya-actions">
             <a href="/projects/new">Start Project</a>
+            <a href="/radio/runtime">Radio Runtime</a>
+            <a href="/sprints">Sprint Matrix</a>
             <a href="/ayodhya/studio">Open Studio</a>
             <a href="/ayodhya/scripts">Script Engine</a>
           </div>

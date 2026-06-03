@@ -34,6 +34,7 @@ export default function RadioPage() {
             <a href="/radio/runtime">Open Live Runtime</a>
             <a href="/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html">HTML Prototype</a>
             <a href="/projects/new">Create Ayodhya Project</a>
+            <a href="/sprints">Sprint Matrix</a>
           </div>
         </div>
       </section>
@@ -55,6 +56,14 @@ export default function RadioPage() {
             </article>
           ))}
         </div>
+      </section>
+
+      <section className="radio-landing-feature-nav" aria-label="Radio feature anchors">
+        <a href="/radio/runtime#radioVisualizer"><b>3D</b><span>Visualizer</span></a>
+        <a href="/radio/runtime#radioLyricsScribe"><b>LRC</b><span>Lyrics Scribe</span></a>
+        <a href="/radio/runtime#radioSamaya"><b>TTS</b><span>Persona announcements</span></a>
+        <a href="/projects/new"><b>AI</b><span>Ayodhya intake</span></a>
+        <a href="/api/export?format=hkd&scope=media-universe"><b>HKD</b><span>Media export</span></a>
       </section>
 
       <section className="radio-landing-workflow">

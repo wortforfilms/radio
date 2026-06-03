@@ -7,6 +7,7 @@ export * from "./lipi-civilization-matrix";
 export * from "./persistence-scopes";
 export * from "./reference-corpus";
 export * from "./sanskrit-dictionary";
+export * from "./sprint-completion";
 export * from "./taxonomy";
 export * from "./universal-dictionary";
 export * from "./universes";

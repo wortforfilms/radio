@@ -21,6 +21,7 @@ export default async function DashboardPage() {
     ["Lineage Explorer", "/lineage"],
     ["Sanskrit Dictionary", "/dictionary"],
     ["HKD Banners", "/hkd-banners"],
+    ["Sprint Matrix", "/sprints"],
     ["Universes", "/universes"],
     ["Persistence Scopes", "/scopes"],
     ["Admin", "/admin"],
