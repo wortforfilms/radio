@@ -6,6 +6,7 @@ export default function RadioPage() {
   const navItems = [
     ["Live", "/radio/runtime"],
     ["Frame", "/radio/frame"],
+    ["Storyboard", "/radio/storyboard"],
     ["Prototype", "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html"],
     ["Ayodhya", "/projects/new"],
     ["Evidence", "/scopes/media-universe"]
@@ -16,6 +17,7 @@ export default function RadioPage() {
     ["Synced Lyrics", "Draft LRC timing, Hindi lines, transcript import, HKD lyric evidence export.", "/radio/runtime#radioLyricsScribe", "LRC"],
     ["Persona TTS", "Maataa, Rishi, Samaya, and Vigyaaniq browser voices for announcements.", "/radio/runtime#radioSamaya", "TTS"],
     ["Gift Loop", "Like, save, gift intent, and project creation remain local until evidence exists.", "/radio/runtime", "ACT"],
+    ["Storyboard", "Full shot plan for landing, runtime, visualizer, lyrics, TTS, gift, project, archive, and export.", "/radio/storyboard", "SB"],
     ["HKD Export", "Media universe exports preserve provenance and NULL unknowns.", "/api/export?format=hkd&scope=media-universe", "HKD"],
     ["HTML Archive", "Original uploaded single-file dashboard remains inspectable.", "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html", "HTML"]
   ];
