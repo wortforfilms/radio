@@ -65,6 +65,13 @@ h1{font:600 22px Inter}.serif{font-family:Georgia,serif}
 .gift-choice:hover{border-color:var(--gold);background:rgba(255,183,3,.09)}
 .gift-choice strong{display:block;font-size:13px}.gift-choice small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
 .gift-price{margin-left:auto;color:var(--gold);font-weight:700;font-size:13px}
+.social-row{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.social-btn{background:#15172d;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:11px;padding:6px 9px;cursor:pointer}
+.social-btn.on{color:#fff;border-color:var(--coral);background:rgba(255,77,109,.14)}
+.social-btn.gold{color:var(--gold)}
+.comment-box{width:100%;min-height:84px;resize:vertical;background:#0d0f20;border:1px solid var(--line);border-radius:12px;color:#fff;padding:10px;font:13px Inter,ui-sans-serif,system-ui;outline:none}
+.comment-item{border:1px solid var(--line);border-radius:12px;padding:9px 10px;margin-top:8px;background:#15172d}
+.comment-item small{display:block;color:var(--muted);font-size:10px;margin-top:4px}
 </style></head><body>
 <div class="wrap">
 <h1>Radio Vaigyaaniq <span class="sub">— interactive prototype, wired to your real catalog</span></h1>
@@ -97,6 +104,55 @@ function createVideoBy(slug,i){const s=DATA.shows.find(x=>x.slug===slug);if(s&&s
 const esc=s=>(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function art(c){return c?`<img class="art" src="${esc(c)}" loading="lazy" onerror="this.style.visibility='hidden'">`:`<div class="art"></div>`}
 let TAB='home', SHOW=null;
+let SOCIAL={};
+try{SOCIAL=JSON.parse(localStorage.getItem('radioVaigyaaniq.social.v1')||'{}')}catch(e){SOCIAL={}}
+function socialToken(name){return encodeURIComponent(name||'Unknown track')}
+function socialName(token){try{return decodeURIComponent(token)}catch(e){return token||'Unknown track'}}
+function socialFor(name){const k=socialToken(name); if(!SOCIAL[k])SOCIAL[k]={liked:false,saved:false,reposted:false,likes:0,reposts:0,comments:[]}; return SOCIAL[k]}
+function saveSocial(){localStorage.setItem('radioVaigyaaniq.social.v1',JSON.stringify(SOCIAL))}
+function socialMini(g){
+  const token=socialToken(g.t), st=socialFor(g.t);
+  return `<button class="vbtn" title="Like" onclick='event.stopPropagation();toggleLike("${token}")'>${st.liked?'♥':'♡'} ${st.likes}</button><button class="vbtn" title="Comment" onclick='event.stopPropagation();openComments("${token}")'>💬 ${st.comments.length}</button><button class="vbtn" title="Share" onclick='event.stopPropagation();shareTrack("${token}")'>↗</button>`;
+}
+function socialPanel(g){
+  const token=socialToken(g.t), st=socialFor(g.t);
+  return `<div class="social-row"><button class="social-btn ${st.liked?'on':''}" onclick='event.stopPropagation();toggleLike("${token}")'>${st.liked?'♥ Liked':'♡ Like'} · ${st.likes}</button><button class="social-btn" onclick='event.stopPropagation();openComments("${token}")'>💬 Comments · ${st.comments.length}</button><button class="social-btn" onclick='event.stopPropagation();shareTrack("${token}")'>↗ Share</button><button class="social-btn ${st.saved?'gold':''}" onclick='event.stopPropagation();toggleSave("${token}")'>${st.saved?'✓ Saved':'▤ Save'}</button><button class="social-btn ${st.reposted?'gold':''}" onclick='event.stopPropagation();toggleRepost("${token}")'>${st.reposted?'↻ Reposted':'↻ Repost'} · ${st.reposts}</button></div>`;
+}
+function rerenderSocial(){if(TAB==='detail'&&SHOW)render(); if(window._np)renderPlayer()}
+function toggleLike(token){const st=socialFor(socialName(token)); st.liked=!st.liked; st.likes=Math.max(0,(st.likes||0)+(st.liked?1:-1)); saveSocial(); rerenderSocial()}
+function toggleSave(token){const st=socialFor(socialName(token)); st.saved=!st.saved; saveSocial(); rerenderSocial()}
+function toggleRepost(token){const st=socialFor(socialName(token)); st.reposted=!st.reposted; st.reposts=Math.max(0,(st.reposts||0)+(st.reposted?1:-1)); saveSocial(); rerenderSocial()}
+function openComments(token){
+  const name=socialName(token), st=socialFor(name), s=$('#sheet');
+  s.innerHTML=`<div style="width:40px;height:4px;background:var(--line);border-radius:9px;margin:0 auto 14px"></div>
+  <h3>Comments</h3><div class="sub">${esc(name)}</div>
+  <div class="ev">◆ Local draft comments · moderation evidence pending</div>
+  <textarea id="commentText" class="comment-box" placeholder="Add a respectful listener note..."></textarea>
+  <button class="btn" onclick='addComment("${token}")'>Post local draft</button>
+  <button class="btn ghost" onclick="closeModal()">Close</button>
+  <div class="note">No public comment is published until identity, moderation, and audit evidence exist.</div>
+  <div>${st.comments.length?st.comments.slice().reverse().map(c=>`<div class="comment-item">${esc(c.text)}<small>${esc(c.at)} · local draft</small></div>`).join(''):'<div class="comment-item">No comments yet.<small>Start the local thread.</small></div>'}</div>`;
+  $('#modal').classList.add('show');
+}
+function addComment(token){
+  const text=($('#commentText').value||'').trim();
+  if(!text)return;
+  const st=socialFor(socialName(token));
+  st.comments.push({text,at:new Date().toLocaleString()});
+  saveSocial(); openComments(token); rerenderSocial();
+}
+function shareTrack(token){
+  const name=socialName(token), url=location.href.split('#')[0]+`#track=${token}`, s=$('#sheet');
+  navigator.clipboard?.writeText(url).catch(()=>{});
+  s.innerHTML=`<div style="width:40px;height:4px;background:var(--line);border-radius:9px;margin:0 auto 14px"></div>
+  <h3>Share track</h3><div class="sub">${esc(name)}</div>
+  <div class="ev">◆ Share intent staged · clipboard attempted</div>
+  <div class="comment-item">${esc(url)}<small>Local share link</small></div>
+  <button class="btn" onclick="closeModal()">Done</button>
+  <button class="btn ghost" onclick='openComments("${token}")'>Add comment before sharing</button>
+  <div class="note">Share analytics remain NULL until a verified backend records delivery evidence.</div>`;
+  $('#modal').classList.add('show');
+}
 function showByName(n){return DATA.shows.find(s=>s.name===n)}
 // home
 function home(){
@@ -141,7 +197,7 @@ function showDetail(slug){
   <span class="pill">Show / Album</span>
   <div style="display:flex;gap:8px;margin-top:10px"><button class="play" style="width:auto;border-radius:10px;padding:8px 18px" onclick='playSong(0,"${slug}")'>▶ Play</button><button class="btn ghost" style="width:auto;margin:0;padding:8px 16px" onclick="unlock('album','${esc(s.name)}')">Unlock album</button><button class="btn ghost" style="width:auto;margin:0;padding:8px 16px;color:var(--gold)" onclick="gift('album','${esc(s.name)}')">🎁 Gift</button></div>
   <div class="tracks">`;
-  s.songs.forEach((g,i)=>{const locked=i%7===5;h+=`<div class="tr" onclick='${locked?`unlock("song","${esc(g.t)}")`:`playSong(${i},"${slug}")`}'>${art(g.c)}<div class="t">${esc(g.t)}<small>${esc(g.r||'')}</small></div><button class="vbtn" title="Gift this track" onclick='event.stopPropagation();gift("song","${esc(g.t)}")'>🎁</button><button class="vbtn" title="Create video in Ayodhya AI" onclick='event.stopPropagation();createVideoBy("${slug}",${i})'>🎬</button>${locked?'<div class="lock">🔒</div>':`<div class="d">${esc(g.d)}</div>`}</div>`});
+  s.songs.forEach((g,i)=>{const locked=i%7===5;h+=`<div class="tr" onclick='${locked?`unlock("song","${esc(g.t)}")`:`playSong(${i},"${slug}")`}'>${art(g.c)}<div class="t">${esc(g.t)}<small>${esc(g.r||'')}</small>${socialPanel(g)}</div>${socialMini(g)}<button class="vbtn" title="Gift this track" onclick='event.stopPropagation();gift("song","${esc(g.t)}")'>🎁</button><button class="vbtn" title="Create video in Ayodhya AI" onclick='event.stopPropagation();createVideoBy("${slug}",${i})'>🎬</button>${locked?'<div class="lock">🔒</div>':`<div class="d">${esc(g.d)}</div>`}</div>`});
   return h+`</div>`;
 }
 function searchView(){
@@ -194,6 +250,9 @@ function renderPlayer(){
   const playing=!aud.paused && !aud.ended && aud.currentTime>0;
   $('#player').innerHTML=`
    <div class="prow">${art(g.c)}<div class="t">${esc(g.t)}<small>${esc(g.r||DATA.artist)}</small></div>
+     <button class="pbtn" title="Like track" style="color:${socialFor(g.t).liked?'var(--coral)':'var(--muted)'}" onclick="event.stopPropagation();toggleLike(socialToken(window._np.t))">${socialFor(g.t).liked?'♥':'♡'}</button>
+     <button class="pbtn" title="Comment" onclick="event.stopPropagation();openComments(socialToken(window._np.t))">💬</button>
+     <button class="pbtn" title="Share" onclick="event.stopPropagation();shareTrack(socialToken(window._np.t))">↗</button>
      <button class="pbtn" title="Gift track" style="color:var(--gold)" onclick="event.stopPropagation();gift('song',window._np.t)">🎁</button>
      <button class="pbtn" title="Create video" style="color:var(--gold)" onclick="event.stopPropagation();createVideo(window._np)">🎬</button>
      <button class="pbtn" onclick="event.stopPropagation();prevTrack()">⏮</button>
@@ -202,6 +261,7 @@ function renderPlayer(){
    <div class="srow"><span id="ct">${fmt(aud.currentTime)}</span>
      <input id="seek" type="range" min="0" max="1000" value="${aud.duration?(aud.currentTime/aud.duration*1000):0}" oninput="seekTo(this.value)" onclick="event.stopPropagation()">
      <span id="tt">${aud.duration?fmt(aud.duration):(g.a?g.d||'':'—')}</span></div>
+   ${socialPanel(g)}
    ${g.a?'':'<div class="warn">audio file not found — open this page from inside _radio_index/</div>'}`;
 }
 function togglePlay(){const a=$('#aud'); if(!a.src)return; a.paused?a.play():a.pause();}
