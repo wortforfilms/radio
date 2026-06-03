@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Radio Vaigyaaniq - UX Dashboard</title>
+  <title>Radio Vaigyaaniq - Sovereign Dashboard</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -18,12 +18,25 @@
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      background: var(--bg-dark);
+      background:
+        radial-gradient(circle at 50% 50%, #111722 0%, #06090d 100%),
+        var(--bg-dark);
       color: var(--text-main);
       font-family: Rajdhani, Inter, system-ui, sans-serif;
       min-height: 100vh;
       display: flex;
       overflow: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,107,53,.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,107,53,.018) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: -1;
     }
     aside {
       width: 260px;
@@ -72,6 +85,25 @@
       color: #fff;
     }
     .nav-item:hover:not(.active) { background: rgba(255,255,255,.04); }
+    .pcu-grid {
+      border: 1px solid var(--border-color);
+      background: rgba(9,13,18,.5);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      margin-top: 14px;
+      overflow: hidden;
+    }
+    .pcu-orbit {
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(223,177,91,.2);
+      border-top-color: #dfb15b;
+      border-radius: 50%;
+      margin: 0 auto 8px;
+      animation: spin 15s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
     .discovery-lab {
       background: linear-gradient(135deg, #1e262c, #151a1e);
       border: 1px solid var(--accent-orange);
@@ -82,11 +114,72 @@
     .discovery-lab p { font-size: 12px; color: var(--text-muted); line-height: 1.35; }
     main {
       flex: 1;
-      padding: 30px;
+      padding: 0 30px 30px;
       display: flex;
       flex-direction: column;
       gap: 22px;
       overflow: auto;
+    }
+    .sovereign-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 4;
+      margin: 0 -30px;
+      padding: 14px 30px;
+      border-bottom: 1px solid var(--border-color);
+      background: rgba(9,13,18,.82);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .sovereign-title {
+      font-family: Orbitron, monospace;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+    .sovereign-title span { color: var(--accent-orange); }
+    .sovereign-subtitle { color: var(--text-muted); font-size: 12px; letter-spacing: 1px; }
+    .topbar-right { display: flex; align-items: center; gap: 18px; }
+    .network-pill {
+      border: 1px solid rgba(0,245,212,.32);
+      color: var(--accent-cyan);
+      background: rgba(0,245,212,.05);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font: 700 11px Orbitron, monospace;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+    .network-pill::before {
+      content: "";
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent-cyan);
+      margin-right: 7px;
+      box-shadow: 0 0 10px var(--accent-cyan);
+      animation: pulseDot 1.2s ease-in-out infinite alternate;
+    }
+    @keyframes pulseDot { from { opacity: .45; } to { opacity: 1; } }
+    .clock-panel {
+      border-left: 1px solid var(--border-color);
+      padding-left: 18px;
+      text-align: right;
+    }
+    .clock-panel small {
+      display: block;
+      color: var(--text-muted);
+      font: 700 10px Orbitron, monospace;
+      letter-spacing: 1.3px;
+    }
+    .clock-panel b {
+      color: #dfb15b;
+      font: 700 14px Orbitron, monospace;
     }
     header {
       display: flex;
@@ -496,6 +589,80 @@
       font: 700 12px Rajdhani, sans-serif;
     }
     .social-actions button.active { color: #fff; border-color: var(--accent-orange); }
+    .sovereign-footer {
+      position: sticky;
+      bottom: 0;
+      z-index: 4;
+      margin: 0 -30px -30px;
+      padding: 14px 30px;
+      border-top: 1px solid var(--border-color);
+      background: rgba(9,13,18,.92);
+      backdrop-filter: blur(14px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+    .sovereign-live {
+      border: 1px solid var(--accent-orange);
+      background: rgba(255,107,53,.16);
+      color: var(--accent-orange);
+      border-radius: 999px;
+      padding: 3px 9px;
+      font: 700 10px Orbitron, monospace;
+      letter-spacing: 1px;
+      animation: pulseDot 1.2s ease-in-out infinite alternate;
+    }
+    .footer-track { min-width: 0; }
+    .footer-track b {
+      display: block;
+      color: #fff;
+      font-size: 14px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 32vw;
+    }
+    .footer-track small { color: var(--text-muted); }
+    .footer-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .footer-action {
+      border: 0;
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: grid;
+      justify-items: center;
+      gap: 2px;
+      font: 700 9px Orbitron, monospace;
+      letter-spacing: .3px;
+    }
+    .footer-action span { font: 16px system-ui; }
+    .footer-action:hover { color: var(--accent-cyan); }
+    .footer-player-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-left: 1px solid var(--border-color);
+      border-right: 1px solid var(--border-color);
+      padding: 0 20px;
+    }
+    .sovereign-credit {
+      color: var(--text-muted);
+      font: 700 10px Orbitron, monospace;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+      text-align: right;
+    }
     .footer-credit {
       text-align: center;
       font-size: 10px;
@@ -547,6 +714,10 @@
     @media (max-width: 980px) {
       body { display: block; overflow: auto; }
       aside { width: 100%; min-height: auto; }
+      main { padding: 0 16px 16px; }
+      .sovereign-topbar, .sovereign-footer { margin-left: -16px; margin-right: -16px; padding-left: 16px; padding-right: 16px; }
+      .sovereign-topbar, .sovereign-footer, .topbar-right { flex-direction: column; align-items: stretch; }
+      .clock-panel { border-left: 0; padding-left: 0; text-align: left; }
       .grid-container { grid-template-columns: 1fr; }
       .viz-grid { grid-template-columns: 1fr; }
       .samaya-grid { grid-template-columns: 1fr; }
@@ -557,6 +728,8 @@
       .player-bar { border-radius: 22px; align-items: flex-start; flex-direction: column; }
       .track-info h4 { max-width: 80vw; }
       .spectrum-strip { width: 100%; flex-basis: 54px; }
+      .footer-track b { max-width: 80vw; }
+      .footer-actions { flex-wrap: wrap; }
     }
   </style>
 </head>
@@ -568,20 +741,48 @@
         DATA RATE: <span>pending</span>
       </div>
       <nav class="nav-group">
-        <button class="nav-item active" data-section="home">🏠 HOME</button>
+        <button class="nav-item" data-section="home">🏠 HOME</button>
         <button class="nav-item" data-section="explore">🧭 EXPLORE</button>
-        <div class="nav-label">Libraries</div>
-        <a href="./Radio_Vaigyaaniq_App_Prototype.html" class="nav-item">🎙️ Prototype</a>
-        <a href="./Radio_Vaigyaaniq_Maataa.html" class="nav-item">🪷 Maataa</a>
+        <button class="nav-item active" data-section="radio">📻 RADIO</button>
+        <div class="nav-label">// काल गणना</div>
+        <button class="nav-item" onclick="document.getElementById('samayaLayer').scrollIntoView({behavior:'smooth'})">⏳ Hemant Samwat</button>
+        <button class="nav-item" onclick="document.getElementById('samayaLayer').scrollIntoView({behavior:'smooth'})">🎯 Muhurat</button>
+        <button class="nav-item" onclick="document.getElementById('samayaLayer').scrollIntoView({behavior:'smooth'})">🎉 Utsav</button>
+        <button class="nav-item" onclick="document.getElementById('samayaLayer').scrollIntoView({behavior:'smooth'})">📅 Divas</button>
+        <div class="nav-label">// तंत्र-ध्वनि</div>
+        <button class="nav-item" onclick="document.getElementById('mantraLine').scrollIntoView({behavior:'smooth',block:'center'})">🔱 Mantra</button>
+        <button class="nav-item" onclick="document.getElementById('ytmTitle').scrollIntoView({behavior:'smooth',block:'center'})">🌀 Yantra/Tantra</button>
+        <a href="./Radio_Vaigyaaniq_App_Prototype.html" class="nav-item">🧪 Prototype</a>
+        <a href="./Radio_Vaigyaaniq_Maataa.html" class="nav-item">👁️ Maataa</a>
       </nav>
     </div>
-    <div class="discovery-lab">
-      <h4>DISCOVERY LAB</h4>
-      <p>Live catalog dashboard with local-only social actions and evidence-safe media playback.</p>
+    <div>
+      <div class="pcu-grid">
+        <div class="pcu-orbit"></div>
+        <div style="font:700 9px Orbitron,monospace;letter-spacing:1.6px;color:#dfb15b;text-transform:uppercase">PCU Grid System</div>
+      </div>
+      <div class="discovery-lab">
+        <h4>DISCOVERY LAB</h4>
+        <p>Live catalog dashboard with local-only social actions and evidence-safe media playback.</p>
+      </div>
     </div>
   </aside>
 
   <main>
+    <section class="sovereign-topbar" aria-label="Sovereign radio command bar">
+      <div>
+        <div class="sovereign-title">RADIO <span>VAIGYAANIQ</span></div>
+        <div class="sovereign-subtitle">Discover the Science, Tune into the Future</div>
+      </div>
+      <div class="topbar-right">
+        <div class="network-pill">GLOBAL NETWORK</div>
+        <div class="clock-panel">
+          <small>CURRENT SAMAYA STATE</small>
+          <b id="liveClock">00:00:00 DRAFT</b>
+        </div>
+      </div>
+    </section>
+
     <header>
       <canvas class="hero-three" id="heroThree" aria-hidden="true"></canvas>
       <div class="hero-hud" aria-label="Radio Vaigyaaniq HUD">
@@ -606,8 +807,8 @@
         <div class="hud-panel bottom">
           <button class="hud-action" onclick="document.getElementById('samayaLayer').scrollIntoView({behavior:'smooth'})">Samaya</button>
           <button class="hud-action" onclick="document.getElementById('stations').scrollIntoView({behavior:'smooth'})">Stations</button>
-          <button class="hud-action" onclick="openComments()">Comment</button>
-          <button class="hud-action" onclick="shareTrack()">Share</button>
+          <button class="hud-action" id="hudCommentBtn">Comment</button>
+          <button class="hud-action" id="hudShareBtn">Share</button>
         </div>
       </div>
       <div style="width:100px"></div>
@@ -722,11 +923,32 @@
       </div>
       <div class="footer-credit">EMPOWERING MINDS THROUGH SCIENTIFIC BROADCASTING</div>
     </section>
+
+    <footer class="sovereign-footer" aria-label="Sovereign player HUD">
+      <div class="footer-left">
+        <span class="sovereign-live">LIVE</span>
+        <div class="footer-track">
+          <b id="footerTrackTitle">LOADING CATALOG</b>
+          <small id="footerStationSub">Radio Vaigyaaniq</small>
+        </div>
+      </div>
+      <div class="footer-actions">
+        <button class="footer-action" id="footerLikeBtn"><span>♡</span>LIKE</button>
+        <button class="footer-action" id="footerSaveBtn"><span>▤</span>SAVE</button>
+        <button class="footer-action" id="footerGiftBtn"><span>🎁</span>GIFT</button>
+        <div class="footer-player-controls">
+          <button class="control-btn" id="footerPrevBtn">⏮</button>
+          <button class="play-main-btn" id="footerPlayBtn">▶</button>
+          <button class="control-btn" id="footerNextBtn">⏭</button>
+        </div>
+      </div>
+      <div class="sovereign-credit">Pure . Honest . Kabir . Driven // MSAR Layer</div>
+    </footer>
   </main>
 
   <audio id="audio" preload="metadata"></audio>
-  <div class="modal" id="modal" onclick="closeModal()">
-    <div class="sheet" id="sheet" onclick="event.stopPropagation()"></div>
+  <div class="modal" id="modal">
+    <div class="sheet" id="sheet"></div>
   </div>
 
   <script>
@@ -945,6 +1167,8 @@
       audio.src = track.a || "";
       $("#nowTitle").textContent = track.t || "Untitled";
       $("#nowMeta").textContent = `${track.r || state.data.artist} · ${currentStation().name}`;
+      $("#footerTrackTitle").textContent = track.t || "Untitled";
+      $("#footerStationSub").textContent = `${track.r || state.data.artist} · ${currentStation().name}`;
       renderSocial();
       renderHud();
       drawAllVisualizations();
@@ -958,7 +1182,7 @@
       $("#stations").innerHTML = stations.map((station, index) => {
         const first = station.songs[0] || {};
         const cardClass = index % 2 ? "card-orange" : "card-cyan";
-        return `<article class="station-card ${cardClass} ${index === state.stationIndex ? "active" : ""}" onclick="tune(${index})">
+        return `<article class="station-card ${cardClass} ${index === state.stationIndex ? "active" : ""}" data-station-index="${index}">
           <span class="play-btn-mini">▶</span>
           <img class="station-cover" src="${esc(station.hero || first.c || "")}" alt="">
           <h3>${esc(station.name)}</h3>
@@ -978,7 +1202,7 @@
     function renderTracks() {
       const station = currentStation();
       $("#trackTitle").textContent = `${station.name} Tracks`;
-      $("#tracks").innerHTML = station.songs.slice(0, 12).map((track, index) => `<div class="track-row" onclick="state.trackIndex=${index};loadTrack(true)">
+      $("#tracks").innerHTML = station.songs.slice(0, 12).map((track, index) => `<div class="track-row" data-track-index="${index}">
         <img src="${esc(track.c || station.hero || "")}" alt="">
         <div><b>${esc(track.t)}</b><small>${esc(track.r || state.data.artist)}</small></div>
         <span class="dur">${esc(track.d || "--")}</span>
@@ -1238,6 +1462,10 @@
       $("#saveBtn").textContent = `${social.saved ? "✓ Saved" : "▤ Save"}`;
       $("#saveBtn").classList.toggle("active", social.saved);
       $("#commentBtn").textContent = `💬 Comment ${social.comments.length}`;
+      $("#footerLikeBtn").innerHTML = `<span>${social.liked ? "♥" : "♡"}</span>${social.liked ? "LIKED" : "LIKE"}`;
+      $("#footerLikeBtn").classList.toggle("active", social.liked);
+      $("#footerSaveBtn").innerHTML = `<span>${social.saved ? "✓" : "▤"}</span>${social.saved ? "SAVED" : "SAVE"}`;
+      $("#footerSaveBtn").classList.toggle("active", social.saved);
     }
 
     function togglePlay() {
@@ -1280,7 +1508,7 @@
         <p style="color:var(--text-muted);margin-top:4px">${esc(track.t)}</p>
         <p style="color:var(--accent-cyan);font-size:12px;margin-top:8px">PHKD local draft comments · moderation evidence pending</p>
         <textarea id="commentText" placeholder="Add a respectful listener note..."></textarea>
-        <button class="primary" onclick="addComment()">Post local draft</button>
+        <button class="primary" id="postCommentBtn">Post local draft</button>
         <div style="margin-top:14px">${social.comments.length ? social.comments.slice().reverse().map((comment) => `<p style="border-top:1px solid var(--border-color);padding:10px 0">${esc(comment)}</p>`).join("") : "<p style='color:var(--text-muted);margin-top:12px'>No comments yet.</p>"}</div>`;
       $("#modal").classList.add("show");
     }
@@ -1301,8 +1529,21 @@
         <p style="color:var(--text-muted);margin-top:4px">${esc(currentTrack().t)}</p>
         <p style="color:var(--accent-cyan);font-size:12px;margin-top:8px">Share intent staged · analytics NULL until backend evidence exists</p>
         <p style="word-break:break-all;border:1px solid var(--border-color);border-radius:10px;padding:10px;margin-top:12px">${esc(link)}</p>
-        <button class="primary" onclick="closeModal()">Done</button>`;
+        <button class="primary" id="shareDoneBtn">Done</button>`;
       $("#modal").classList.add("show");
+    }
+
+    function triggerGift() {
+      $("#sheet").innerHTML = `<h3>Gift mechanism</h3>
+        <p style="color:var(--text-muted);margin-top:4px">${esc(currentTrack().t)}</p>
+        <p style="color:var(--accent-cyan);font-size:12px;margin-top:8px">Gift action initiated locally. Checkout, payment, wallet, receipt, and delivery evidence are NULL until explicitly verified.</p>
+        <button class="primary" id="giftCloseBtn">Close PHKD draft</button>`;
+      $("#modal").classList.add("show");
+    }
+
+    function updateLiveClock() {
+      const now = new Date();
+      $("#liveClock").textContent = `${now.toTimeString().split(" ")[0]} DRAFT`;
     }
 
     function closeModal() {
@@ -1316,12 +1557,39 @@
     $("#saveBtn").addEventListener("click", toggleSave);
     $("#commentBtn").addEventListener("click", openComments);
     $("#shareBtn").addEventListener("click", shareTrack);
-    $("#audio").addEventListener("play", () => { $("#playBtn").textContent = "❚❚"; renderHud(); });
-    $("#audio").addEventListener("pause", () => { $("#playBtn").textContent = "▶"; renderHud(); });
+    $("#hudCommentBtn").addEventListener("click", openComments);
+    $("#hudShareBtn").addEventListener("click", shareTrack);
+    $("#footerLikeBtn").addEventListener("click", toggleLike);
+    $("#footerSaveBtn").addEventListener("click", toggleSave);
+    $("#footerGiftBtn").addEventListener("click", triggerGift);
+    $("#footerPrevBtn").addEventListener("click", prevTrack);
+    $("#footerNextBtn").addEventListener("click", nextTrack);
+    $("#footerPlayBtn").addEventListener("click", togglePlay);
+    $("#stations").addEventListener("click", (event) => {
+      const card = event.target.closest("[data-station-index]");
+      if (!card) return;
+      tune(Number(card.dataset.stationIndex));
+    });
+    $("#tracks").addEventListener("click", (event) => {
+      const row = event.target.closest("[data-track-index]");
+      if (!row) return;
+      state.trackIndex = Number(row.dataset.trackIndex);
+      loadTrack(true);
+    });
+    $("#modal").addEventListener("click", closeModal);
+    $("#sheet").addEventListener("click", (event) => {
+      event.stopPropagation();
+      if (event.target.id === "postCommentBtn") addComment();
+      if (event.target.id === "shareDoneBtn" || event.target.id === "giftCloseBtn") closeModal();
+    });
+    $("#audio").addEventListener("play", () => { $("#playBtn").textContent = "❚❚"; $("#footerPlayBtn").textContent = "❚❚"; renderHud(); });
+    $("#audio").addEventListener("pause", () => { $("#playBtn").textContent = "▶"; $("#footerPlayBtn").textContent = "▶"; renderHud(); });
     $("#audio").addEventListener("ended", nextTrack);
     $("#audio").addEventListener("timeupdate", () => drawMiniSpectrum());
     window.addEventListener("resize", () => drawAllVisualizations());
     requestAnimationFrame(animateVisualizations);
+    updateLiveClock();
+    setInterval(updateLiveClock, 1000);
 
     loadCatalog().then(() => {
       setTimeout(renderHud, 900);
