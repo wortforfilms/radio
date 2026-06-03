@@ -9,7 +9,7 @@ declare global {
   }
 }
 
-type SceneName = "sphere" | "bars" | "particles" | "waveform" | "terrain" | "rings" | "mandala" | "gravity" | "cloth" | "vortex" | "shockwave";
+type SceneName = "sphere" | "bars" | "particles" | "waveform" | "terrain" | "rings" | "mandala" | "gravity" | "cloth" | "vortex" | "shockwave" | "shader" | "shadow" | "liquid";
 
 const sceneLabels: Record<SceneName, string> = {
   sphere: "Sphere",
@@ -22,7 +22,10 @@ const sceneLabels: Record<SceneName, string> = {
   gravity: "Gravity Physics",
   cloth: "Spring Cloth",
   vortex: "Vortex Flow",
-  shockwave: "Shockwave Cinema"
+  shockwave: "Shockwave Cinema",
+  shader: "Shader Orb",
+  shadow: "Shadow Stage",
+  liquid: "Liquid Shader"
 };
 
 function loadThreeGlobal(): Promise<any> {
@@ -84,6 +87,8 @@ export function AudioVisualizerPro() {
       }
       renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
       renderer.setClearColor(0x05080c, 1);
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
       scene.add(new THREE.AmbientLight(0xffffff, 0.72));
       const key = new THREE.PointLight(0x00f5d4, 1.4, 80);
       key.position.set(8, 10, 10);
@@ -91,6 +96,26 @@ export function AudioVisualizerPro() {
       const rim = new THREE.PointLight(0xff6b35, 1.1, 80);
       rim.position.set(-10, -4, 12);
       scene.add(rim);
+      const shadowKey = new THREE.DirectionalLight(0xffcf70, 1.8);
+      shadowKey.position.set(-8, 12, 9);
+      shadowKey.castShadow = true;
+      shadowKey.shadow.mapSize.width = 2048;
+      shadowKey.shadow.mapSize.height = 2048;
+      shadowKey.shadow.camera.left = -14;
+      shadowKey.shadow.camera.right = 14;
+      shadowKey.shadow.camera.top = 14;
+      shadowKey.shadow.camera.bottom = -14;
+      shadowKey.shadow.camera.near = 1;
+      shadowKey.shadow.camera.far = 42;
+      scene.add(shadowKey);
+      const shadowFloor = new THREE.Mesh(
+        new THREE.PlaneGeometry(26, 18),
+        new THREE.ShadowMaterial({ color: 0x000000, opacity: 0.42 })
+      );
+      shadowFloor.rotation.x = -Math.PI / 2;
+      shadowFloor.position.y = -5.2;
+      shadowFloor.receiveShadow = true;
+      scene.add(shadowFloor);
 
       const sphereGeometry = new THREE.SphereGeometry(4.2, 64, 32);
       const sphereBase = Float32Array.from(sphereGeometry.attributes.position.array);
@@ -101,6 +126,7 @@ export function AudioVisualizerPro() {
         roughness: 0.28,
         wireframe: true
       }));
+      sphere.castShadow = true;
       scene.add(sphere);
 
       const barsGroup = new THREE.Group();
@@ -114,6 +140,8 @@ export function AudioVisualizerPro() {
           metalness: 0.08
         });
         const bar = new THREE.Mesh(new THREE.BoxGeometry(0.34, 1, 0.34), material);
+        bar.castShadow = true;
+        bar.receiveShadow = true;
         const angle = i * Math.PI * 2 / 32;
         bar.position.set(Math.cos(angle) * 6.2, 0, Math.sin(angle) * 6.2);
         bar.rotation.y = -angle;
@@ -181,6 +209,7 @@ export function AudioVisualizerPro() {
         roughness: 0.22,
         wireframe: true
       }));
+      terrain.receiveShadow = true;
       terrain.rotation.x = -Math.PI / 2.6;
       terrain.position.y = -3.7;
       terrain.position.z = -1.5;
@@ -229,6 +258,7 @@ export function AudioVisualizerPro() {
         new THREE.MeshStandardMaterial({ color: 0xffcf70, emissive: 0x2a1600, metalness: 0.2, roughness: 0.36 }),
         gravityCount
       );
+      gravityMesh.castShadow = true;
       const gravityPositions = new Float32Array(gravityCount * 3);
       const gravityVelocities = new Float32Array(gravityCount * 3);
       const gravityDummy = new THREE.Object3D();
@@ -243,6 +273,7 @@ export function AudioVisualizerPro() {
         new THREE.SphereGeometry(0.46, 32, 16),
         new THREE.MeshStandardMaterial({ color: 0xff6b35, emissive: 0x4a1204, metalness: 0.35, roughness: 0.24 })
       );
+      gravityCore.castShadow = true;
       gravityGroup.add(gravityCore);
       scene.add(gravityGroup);
 
@@ -258,6 +289,8 @@ export function AudioVisualizerPro() {
         metalness: 0.1,
         wireframe: true
       }));
+      cloth.castShadow = true;
+      cloth.receiveShadow = true;
       cloth.position.y = -0.8;
       cloth.rotation.x = -0.68;
       scene.add(cloth);
@@ -306,6 +339,118 @@ export function AudioVisualizerPro() {
       }
       scene.add(shockwaveGroup);
 
+      const shaderUniforms = {
+        uTime: { value: 0 },
+        uVolume: { value: 0 },
+        uBass: { value: 0 },
+        uTreble: { value: 0 }
+      };
+      const shaderMaterial = new THREE.ShaderMaterial({
+        uniforms: shaderUniforms,
+        transparent: true,
+        vertexShader: `
+          uniform float uTime;
+          uniform float uVolume;
+          varying vec3 vNormal;
+          varying vec3 vPosition;
+          void main() {
+            vNormal = normalize(normalMatrix * normal);
+            vPosition = position;
+            float ripple = sin(position.y * 4.0 + uTime * 2.2) * 0.16;
+            vec3 displaced = position + normal * (ripple + uVolume * 0.95);
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(displaced, 1.0);
+          }
+        `,
+        fragmentShader: `
+          uniform float uTime;
+          uniform float uVolume;
+          uniform float uBass;
+          uniform float uTreble;
+          varying vec3 vNormal;
+          varying vec3 vPosition;
+          void main() {
+            float fresnel = pow(1.0 - abs(dot(normalize(vNormal), vec3(0.0, 0.0, 1.0))), 2.2);
+            vec3 cyan = vec3(0.0, 0.96, 0.83);
+            vec3 saffron = vec3(1.0, 0.42, 0.20);
+            vec3 violet = vec3(0.48, 0.24, 1.0);
+            float bands = sin(vPosition.y * 8.0 + uTime * 3.0 + uBass * 5.0) * 0.5 + 0.5;
+            vec3 color = mix(cyan, saffron, bands);
+            color = mix(color, violet, uTreble * 0.65);
+            color += fresnel * (0.45 + uVolume);
+            gl_FragColor = vec4(color, 0.42 + fresnel * 0.45);
+          }
+        `
+      });
+      const shaderOrb = new THREE.Mesh(new THREE.IcosahedronGeometry(4.5, 5), shaderMaterial);
+      shaderOrb.castShadow = true;
+      scene.add(shaderOrb);
+
+      const shadowStageGroup = new THREE.Group();
+      const shadowBlocks: any[] = [];
+      const shadowBlockMaterial = new THREE.MeshStandardMaterial({ color: 0x111827, emissive: 0x081016, metalness: 0.42, roughness: 0.2 });
+      for (let i = 0; i < 18; i += 1) {
+        const block = new THREE.Mesh(new THREE.BoxGeometry(0.72, 1.4 + (i % 5) * 0.42, 0.72), shadowBlockMaterial.clone());
+        const angle = i * Math.PI * 2 / 18;
+        block.position.set(Math.cos(angle) * 5.2, -4.3, Math.sin(angle) * 5.2);
+        block.castShadow = true;
+        block.receiveShadow = true;
+        shadowStageGroup.add(block);
+        shadowBlocks.push(block);
+      }
+      const shadowPlate = new THREE.Mesh(
+        new THREE.CylinderGeometry(7.2, 7.2, 0.22, 96),
+        new THREE.MeshStandardMaterial({ color: 0x0b1118, roughness: 0.18, metalness: 0.34 })
+      );
+      shadowPlate.position.y = -5;
+      shadowPlate.receiveShadow = true;
+      shadowStageGroup.add(shadowPlate);
+      scene.add(shadowStageGroup);
+
+      const liquidUniforms = {
+        uTime: { value: 0 },
+        uVolume: { value: 0 },
+        uBass: { value: 0 }
+      };
+      const liquidMaterial = new THREE.ShaderMaterial({
+        uniforms: liquidUniforms,
+        side: THREE.DoubleSide,
+        transparent: true,
+        vertexShader: `
+          uniform float uTime;
+          uniform float uVolume;
+          varying vec2 vUv;
+          varying float vWave;
+          void main() {
+            vUv = uv;
+            vec3 p = position;
+            float wave = sin(p.x * 1.7 + uTime * 1.8) + cos(p.y * 2.1 - uTime * 1.35);
+            p.z += wave * (0.28 + uVolume * 1.6);
+            vWave = wave;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0);
+          }
+        `,
+        fragmentShader: `
+          uniform float uTime;
+          uniform float uBass;
+          varying vec2 vUv;
+          varying float vWave;
+          void main() {
+            vec3 deep = vec3(0.02, 0.04, 0.08);
+            vec3 cyan = vec3(0.0, 0.96, 0.83);
+            vec3 gold = vec3(1.0, 0.76, 0.25);
+            float caustic = sin((vUv.x + vUv.y) * 24.0 + uTime * 4.0 + vWave * 2.0) * 0.5 + 0.5;
+            vec3 color = mix(deep, cyan, caustic * 0.72);
+            color = mix(color, gold, uBass * 0.45);
+            gl_FragColor = vec4(color, 0.78);
+          }
+        `
+      });
+      const liquidPlane = new THREE.Mesh(new THREE.PlaneGeometry(16, 10, 90, 56), liquidMaterial);
+      liquidPlane.rotation.x = -Math.PI / 2.4;
+      liquidPlane.position.y = -3.2;
+      liquidPlane.receiveShadow = true;
+      scene.add(liquidPlane);
+
       const resize = () => {
         const rect = canvas.getBoundingClientRect();
         renderer.setSize(rect.width, rect.height, false);
@@ -335,6 +480,12 @@ export function AudioVisualizerPro() {
         cloth.visible = sceneNameRef.current === "cloth";
         vortex.visible = sceneNameRef.current === "vortex";
         shockwaveGroup.visible = sceneNameRef.current === "shockwave";
+        shaderOrb.visible = sceneNameRef.current === "shader";
+        shadowStageGroup.visible = sceneNameRef.current === "shadow";
+        liquidPlane.visible = sceneNameRef.current === "liquid";
+        shadowFloor.visible = sceneNameRef.current === "shadow" || sceneNameRef.current === "shader" || sceneNameRef.current === "liquid";
+        const bass = data.slice(0, 18).reduce((sum, value) => sum + value, 0) / (18 * 255);
+        const treble = data.slice(Math.floor(data.length * 0.68)).reduce((sum, value) => sum + value, 0) / (Math.max(1, data.length - Math.floor(data.length * 0.68)) * 255);
         const position = sphereGeometry.attributes.position;
         for (let i = 0; i < position.count; i += 1) {
           const band = data[i % data.length] / 255;
@@ -477,6 +628,27 @@ export function AudioVisualizerPro() {
           wave.rotation.z = time * 0.08 + phase * Math.PI;
         });
         shockwaveGroup.rotation.y = Math.sin(time * 0.18) * 0.35;
+        shaderUniforms.uTime.value = time;
+        shaderUniforms.uVolume.value = volume;
+        shaderUniforms.uBass.value = bass;
+        shaderUniforms.uTreble.value = treble;
+        shaderOrb.rotation.y = time * (0.16 + bass * 0.2);
+        shaderOrb.rotation.x = Math.sin(time * 0.4) * 0.35;
+        shadowBlocks.forEach((block, index) => {
+          const band = data[(index * 23) % data.length] / 255;
+          block.scale.y = 0.7 + band * 3.2 + volume * 1.5;
+          block.position.y = -4.9 + block.scale.y * 0.6;
+          block.rotation.x = Math.sin(time * 0.8 + index) * 0.18;
+          block.rotation.z = Math.cos(time * 0.7 + index * 0.5) * 0.12;
+        });
+        shadowStageGroup.rotation.y = time * 0.12;
+        shadowKey.position.x = Math.sin(time * 0.6) * 9;
+        shadowKey.position.z = Math.cos(time * 0.45) * 9;
+        shadowKey.intensity = 1.2 + bass * 2.4;
+        liquidUniforms.uTime.value = time;
+        liquidUniforms.uVolume.value = volume;
+        liquidUniforms.uBass.value = bass;
+        liquidPlane.rotation.z = Math.sin(time * 0.12) * 0.08;
         renderer.render(scene, camera);
         requestAnimationFrame(animate);
       };
@@ -584,7 +756,7 @@ export function AudioVisualizerPro() {
       </div>
       <canvas ref={canvasRef} aria-label="Three.js audio visualizer canvas" />
       <div className="radio-viz-controls" aria-label="3D audio visualizer controls">
-        {(["sphere", "bars", "particles", "waveform", "terrain", "rings", "mandala", "gravity", "cloth", "vortex", "shockwave"] as SceneName[]).map((name) => (
+        {(["sphere", "bars", "particles", "waveform", "terrain", "rings", "mandala", "gravity", "cloth", "vortex", "shockwave", "shader", "shadow", "liquid"] as SceneName[]).map((name) => (
           <button className={sceneName === name ? "active" : ""} data-viz-scene={name} key={name} onClick={() => setSceneName(name)}>
             {sceneLabels[name]}
           </button>
