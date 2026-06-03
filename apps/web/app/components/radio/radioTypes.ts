@@ -4,6 +4,7 @@ export type RadioTrack = {
   a?: string;
   c?: string;
   d?: string;
+  ly?: string;
   theme?: string;
 };
 

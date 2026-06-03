@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { AudioVisualizerPro } from "./AudioVisualizerPro";
+import { SyncedLyricsScribe } from "./SyncedLyricsScribe";
 import type { RadioCatalog, RadioTrack, TtsPersonaKey } from "./radioTypes";
 import { buildAnnouncementText, buildSamayaState, currentFrequency, loadRadioCatalog, ttsPersonas } from "./radioRuntime";
 
@@ -56,6 +57,7 @@ export function RadioVaigyaaniqDashboard() {
     return buildSamayaState(station, track, stationIndex, trackIndex);
   }, [station, stationIndex, track, trackIndex]);
   const socialKey = encodeURIComponent(track?.t || "unknown");
+  const lyricsKey = encodeURIComponent(`${station?.name || "station"}::${trackIndex}::${track?.t || "unknown"}`);
   const socialState = social[socialKey] || { liked: false, saved: false };
 
   const updateSocial = (patch: Partial<{ liked: boolean; saved: boolean }>) => {
@@ -108,6 +110,7 @@ export function RadioVaigyaaniqDashboard() {
             <button onClick={() => document.getElementById("radioSamaya")?.scrollIntoView({ behavior: "smooth" })}>Hemant Samwat</button>
             <button onClick={() => document.getElementById("radioSamaya")?.scrollIntoView({ behavior: "smooth" })}>Muhurta</button>
             <button onClick={() => document.getElementById("radioVisualizer")?.scrollIntoView({ behavior: "smooth" })}>3D Visualizer</button>
+            <button onClick={() => document.getElementById("radioLyricsScribe")?.scrollIntoView({ behavior: "smooth" })}>Lyrics Scribe</button>
             <a href="/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html">HTML Prototype</a>
           </nav>
         </div>
@@ -175,6 +178,8 @@ export function RadioVaigyaaniqDashboard() {
         <section id="radioVisualizer">
           <AudioVisualizerPro />
         </section>
+
+        <SyncedLyricsScribe audioSrc={track.a} trackKey={lyricsKey} trackTitle={track.t} transcript={track.ly} />
 
         <section className="radio-react-panel">
           <div>
