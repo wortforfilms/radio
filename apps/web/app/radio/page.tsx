@@ -32,6 +32,7 @@ export default function RadioPage() {
           </p>
           <div className="hero-actions">
             <a href="/radio/runtime">Open Live Runtime</a>
+            <a href="/radio/frame">Absorbed Three Frame</a>
             <a href="/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html">HTML Prototype</a>
             <a href="/projects/new">Create Ayodhya Project</a>
             <a href="/sprints">Sprint Matrix</a>

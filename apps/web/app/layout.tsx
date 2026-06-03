@@ -18,6 +18,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <a href="/lipi">Lipi</a>
           <a href="/radio">Radio</a>
           <a href="/radio/runtime">Radio Runtime</a>
+          <a href="/radio/frame">Radio Frame</a>
           <a href="/ayodhya">Ayodhya AI</a>
           <a href="/hkd3d">HKD3D</a>
           <a href="/sprints">Sprints</a>

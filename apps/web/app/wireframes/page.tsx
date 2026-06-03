@@ -1,4 +1,5 @@
 import { ayodhyaWireframeBoardExtraction, extractedWireframeTotals, radioImageHtmlExtraction } from "@shared/extracted-wireframes";
+import { WireframeThreeConstellation } from "../components/wireframes/WireframeThreeConstellation";
 
 export const metadata = {
   title: "Extracted Wireframes"
@@ -17,6 +18,7 @@ export default function WireframesPage() {
             and Ayodhya AI unique wireframe board. These are design-system scaffolds, not production evidence claims.
           </p>
           <div className="hero-actions">
+            <a href="/radio/frame">Radio Three Frame</a>
             <a href="/radio/runtime">Radio Runtime</a>
             <a href="/ayodhya">Ayodhya AI</a>
             <a href="/sprints">Sprint Matrix</a>
@@ -25,6 +27,8 @@ export default function WireframesPage() {
       </section>
 
       <section className="page wireframe-page">
+        <WireframeThreeConstellation />
+
         <div className="wireframe-summary-grid">
           <article><span>Radio Frames</span><b>{extractedWireframeTotals.radioFrames}</b></article>
           <article><span>Data Frames</span><b>{extractedWireframeTotals.radioDataFrames}</b></article>

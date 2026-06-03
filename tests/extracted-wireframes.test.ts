@@ -20,4 +20,9 @@ describe("extracted wireframe registry", () => {
     expect(radioImageHtmlExtraction.provenance).toContain("supplied by user");
     expect(ayodhyaWireframeBoardExtraction.verificationStatus).toBe("draft_extracted");
   });
+
+  it("backs React Three.js absorption routes", () => {
+    expect(radioImageHtmlExtraction.frames.map((frame) => frame.key)).toContain("brand-tuner");
+    expect(ayodhyaWireframeBoardExtraction.groups.flatMap((group) => group.items).map((item) => item.code)).toContain("UW-034");
+  });
 });
