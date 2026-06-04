@@ -31,6 +31,8 @@
     { "path": "/radio-html/surfaces/storyboard.html", "surface": "Storyboard HTML surface", "status": "implemented" },
     { "path": "/radio-html/surfaces/evidence-export.html", "surface": "Evidence and export HTML surface", "status": "implemented" },
     { "path": "/radio-html/surfaces/scaffold.html", "surface": "Scaffold HTML surface", "status": "implemented" },
+    { "path": "/radio-html/structure/index.html", "surface": "Future file structure HTML surface", "status": "implemented" },
+    { "path": "/radio-html/Radio_Vaigyaaniq_Future_Structure.json", "surface": "Machine-readable future structure manifest", "status": "implemented" },
     { "path": "/radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json", "surface": "Machine-readable scaffold manifest", "status": "implemented" },
     { "path": "/api/export?format=hkd&scope=media-universe", "surface": "Media HKD export", "status": "implemented" }
   ],
@@ -69,6 +71,31 @@
     { "key": "draft-lrc-blob-url", "type": "Blob URL", "status": "implemented in standalone HTML" },
     { "key": "draft-hkd-blob-url", "type": "Blob URL", "status": "implemented in standalone HTML" }
   ],
+  "fileArchitecture": {
+    "currentRoots": [
+      "/radio-html",
+      "/radio-html/assets",
+      "/radio-html/assets/vendor",
+      "/radio-html/surfaces",
+      "/radio-html/structure"
+    ],
+    "futureRoots": [
+      "/radio-html/app",
+      "/radio-html/surfaces/*",
+      "/radio-html/runtimes",
+      "/radio-html/workflows",
+      "/radio-html/data",
+      "/radio-html/assets/images",
+      "/radio-html/assets/covers",
+      "/radio-html/assets/audio",
+      "/radio-html/assets/shaders",
+      "/radio-html/imports",
+      "/radio-html/exports",
+      "/radio-html/docs",
+      "/radio-html/structure"
+    ],
+    "compatibilityRule": "Do not move current public HTML entrypoints until shim pages preserve existing file URLs."
+  },
   "exports": [
     { "format": "LRC", "verificationState": "draft" },
     { "format": "HKD JSON", "verificationState": "draft" },

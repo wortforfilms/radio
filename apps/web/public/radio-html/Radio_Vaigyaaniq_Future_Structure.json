@@ -1,0 +1,71 @@
+{
+  "id": "radio-vaigyaaniq-future-file-structure",
+  "title": "Radio Vaigyaaniq Future File Structure",
+  "verificationState": "draft",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "noRouteMoveWithoutShim": true,
+    "noProductionReadyClaim": true,
+    "notes": [
+      "This manifest is a future organization plan.",
+      "It does not move current public HTML files.",
+      "Existing browser-openable URLs remain the compatibility source until shims are implemented."
+    ]
+  },
+  "currentRoots": [
+    {
+      "path": "/radio-html",
+      "purpose": "Static browser archive and entry index",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/assets",
+      "purpose": "Current images and vendor libraries",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces",
+      "purpose": "Standalone HTML surfaces",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/structure",
+      "purpose": "Future folder architecture map",
+      "status": "implemented"
+    }
+  ],
+  "futureRoots": [
+    { "path": "/radio-html/app", "purpose": "Complete app shells and standalone frames", "migration": "future" },
+    { "path": "/radio-html/surfaces", "purpose": "Individual user-facing pages grouped by runtime area", "migration": "existing root, future subfolders" },
+    { "path": "/radio-html/runtimes", "purpose": "Reusable audio, TTS, Three.js, lyrics, social, and intake engines", "migration": "future" },
+    { "path": "/radio-html/workflows", "purpose": "Operator task flows and event sequences", "migration": "future" },
+    { "path": "/radio-html/data", "purpose": "Normalized station, track, lyric, storyboard, evidence, and schema data", "migration": "future" },
+    { "path": "/radio-html/assets/images", "purpose": "Generated and curated image assets", "migration": "future split" },
+    { "path": "/radio-html/assets/covers", "purpose": "Track and station covers", "migration": "future" },
+    { "path": "/radio-html/assets/audio", "purpose": "Audio references with provenance", "migration": "future" },
+    { "path": "/radio-html/assets/shaders", "purpose": "Three.js shader sources", "migration": "future" },
+    { "path": "/radio-html/assets/vendor", "purpose": "Pinned browser vendor libraries", "migration": "existing" },
+    { "path": "/radio-html/imports", "purpose": "Raw incoming HTML, JSON, CSV, Markdown, and HKD documents", "migration": "future" },
+    { "path": "/radio-html/exports", "purpose": "Generated HKD, LRC, JSON, and WebM draft artifacts", "migration": "future" },
+    { "path": "/radio-html/docs", "purpose": "Wireframes, storyboards, QA, release, and evidence notes", "migration": "future" },
+    { "path": "/radio-html/structure", "purpose": "Architecture maps and manifests", "migration": "existing root" }
+  ],
+  "migrationPhases": [
+    "Keep current files and add structure manifest.",
+    "Extract shared data into data/*.json.",
+    "Split repeated UI into surface modules.",
+    "Move Three.js runtime assets into runtimes/threejs.",
+    "Add import/export lanes and schema validation.",
+    "Create compatibility shims for moved public HTML files.",
+    "Add browser QA snapshots and evidence reports.",
+    "Promote only verified surfaces and keep draft surfaces labeled."
+  ],
+  "compatibilityRules": [
+    "Preserve /radio-html/index.html.",
+    "Preserve /radio-html/Radio_Vaigyaaniq_Full_App.html until /radio-html/app/full-app.html has a shim.",
+    "Preserve /radio-html/surfaces/index.html.",
+    "Preserve every existing /radio-html/surfaces/*.html path until a shim is committed.",
+    "Do not mark payment, audio, telemetry, or lyric timing as verified without evidence."
+  ]
+}

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Vaigyaaniq - Future File Structure</title>
+  <link rel="stylesheet" href="../surfaces/surface-kit.css">
+  <style>
+    .tree-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 14px;
+    }
+
+    .tree-panel {
+      display: grid;
+      gap: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: var(--panel);
+    }
+
+    .tree-panel pre {
+      overflow-x: auto;
+      margin: 0;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 8px;
+      padding: 14px;
+      color: #d7fff8;
+      background: rgba(5, 11, 16, .82);
+      font: 12px/1.42 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      white-space: pre;
+    }
+
+    .structure-lane {
+      display: grid;
+      gap: 8px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255,255,255,.035);
+    }
+
+    .structure-lane b {
+      color: var(--ink);
+    }
+  </style>
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav>
+        <a href="../index.html">HTML</a>
+        <a href="../surfaces/index.html">Surfaces</a>
+        <a href="../surfaces/scaffold.html">Scaffold</a>
+        <a href="../Radio_Vaigyaaniq_Full_App.html">Full</a>
+      </nav>
+      <span>PHKD</span>
+    </aside>
+
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">Future Structure</p>
+          <h1>Radio File Architecture Map</h1>
+          <p>A forward-compatible folder plan for growing Radio Vaigyaaniq without breaking the current browser-openable HTML archive. Current files stay in place; future modules move into typed lanes with redirect or shim pages when required.</p>
+          <div class="surface-actions">
+            <a href="../Radio_Vaigyaaniq_Future_Structure.json">Structure JSON</a>
+            <a href="../Radio_Vaigyaaniq_Full_App_Scaffold.json">Current Scaffold</a>
+            <a href="../surfaces/ascii-wireframes.html">ASCII Wireframes</a>
+          </div>
+        </div>
+        <div class="status-chip">
+          <span>Mode</span>
+          <b>Plan</b>
+          <small>no route moves yet</small>
+        </div>
+      </section>
+
+      <section class="tree-grid">
+        <article class="tree-panel">
+          <span class="surface-label">Current</span>
+          <h2>Preserved Browser Archive</h2>
+<pre>radio-html/
+  index.html
+  Radio_Vaigyaaniq_Full_App.html
+  Radio_Vaigyaaniq_Full_App_Scaffold.json
+  Radio_Vaigyaaniq_UX_Dashboard.html
+  Radio_Vaigyaaniq_App_Prototype.html
+  Radio_Vaigyaaniq_Maataa.html
+  assets/
+    radio-vaigyaaniq-landing-hero.png
+    radio-vaigyaaniq-divine-hero.png
+    vendor/
+      three.min.js
+      three.module.min.js
+  surfaces/
+    index.html
+    landing.html
+    runtime.html
+    runtimes-workflows.html
+    ascii-wireframes.html
+    visualizer.html
+    lyrics.html
+    tts.html
+    social-gift.html
+    storyboard.html
+    evidence-export.html
+    scaffold.html
+  structure/
+    index.html</pre>
+        </article>
+
+        <article class="tree-panel">
+          <span class="surface-label">Future</span>
+          <h2>Target Growth Structure</h2>
+<pre>radio-html/
+  app/
+    full-app.html
+    shell.html
+    frame.html
+  surfaces/
+    landing/
+    runtime/
+    visualizer/
+    lyrics/
+    tts/
+    social/
+    storyboard/
+    evidence/
+    scaffold/
+  runtimes/
+    audio/
+    tts/
+    threejs/
+    lyrics/
+    social/
+    project-intake/
+  workflows/
+    station-selection/
+    announcement/
+    visualization/
+    lyric-sync/
+    gifting/
+    export/
+  data/
+    stations/
+    tracks/
+    lyrics/
+    storyboards/
+    evidence/
+    schemas/
+  assets/
+    images/
+    covers/
+    audio/
+    shaders/
+    vendor/
+  imports/
+    html/
+    json/
+    csv/
+    markdown/
+    hkd/
+  exports/
+    hkd/
+    lrc/
+    json/
+    webm/
+  docs/
+    wireframes/
+    storyboards/
+    qa/
+    release/
+  structure/
+    index.html
+    manifest.json</pre>
+        </article>
+      </section>
+
+      <section class="surface-grid three">
+        <article class="surface-card">
+          <span class="surface-label">Rule</span>
+          <b>Keep Compatibility</b>
+          <p>Do not move existing public HTML files until a shim or redirect preserves the current file URL.</p>
+        </article>
+        <article class="surface-card">
+          <span class="surface-label">Rule</span>
+          <b>Separate Data From Views</b>
+          <p>Future station, track, lyric, storyboard, and evidence records should live in `data/` before UI pages consume them.</p>
+        </article>
+        <article class="surface-card">
+          <span class="surface-label">Rule</span>
+          <b>Fail Closed</b>
+          <p>Missing source, creator, receipt, citation, timing, or verification remains NULL in every lane.</p>
+        </article>
+      </section>
+
+      <section class="tree-grid">
+        <article class="tree-panel">
+          <span class="surface-label">Migration</span>
+          <h2>Phased Move Plan</h2>
+<pre>Phase 01: keep current files, add structure manifest
+Phase 02: extract shared data into data/*.json
+Phase 03: split repeated UI into surface modules
+Phase 04: move Three.js runtime assets into runtimes/threejs
+Phase 05: add import/export lanes and schema validation
+Phase 06: create compatibility shims for any moved public HTML
+Phase 07: add browser QA snapshots and evidence reports
+Phase 08: promote only verified surfaces, keep draft surfaces labeled</pre>
+        </article>
+
+        <article class="tree-panel">
+          <span class="surface-label">Ownership</span>
+          <h2>Folder Responsibility</h2>
+<pre>app/         complete browser app shells
+surfaces/    individual user-facing pages
+runtimes/    reusable engines and browser APIs
+workflows/   task flows and operator sequences
+data/        normalized content and schemas
+assets/      images, covers, audio, shaders, vendor libraries
+imports/     raw incoming user/source files
+exports/     generated draft artifacts
+docs/        design, QA, release, and evidence notes
+structure/   future architecture maps and manifests</pre>
+        </article>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
