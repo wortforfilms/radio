@@ -5,6 +5,64 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Radio Surface - Scaffold</title>
   <link rel="stylesheet" href="./surface-kit.css">
+  <style>
+    .data-frame-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .data-frame-table th,
+    .data-frame-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      text-align: left;
+      vertical-align: top;
+      font-size: 13px;
+    }
+
+    .data-frame-table th {
+      color: var(--muted);
+      font: 11px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .data-frame-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .data-frame-code {
+      color: #d7fff8;
+      font: 12px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    }
+
+    @media (max-width: 820px) {
+      .data-frame-table,
+      .data-frame-table tbody,
+      .data-frame-table tr,
+      .data-frame-table td {
+        display: block;
+      }
+
+      .data-frame-table thead {
+        display: none;
+      }
+
+      .data-frame-table td::before {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--muted);
+        font: 10px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        content: attr(data-label);
+      }
+    }
+  </style>
 </head>
 <body>
   <main class="surface-shell">
@@ -16,8 +74,37 @@
       </section>
       <section class="surface-grid three">
         <article class="surface-card"><span class="surface-label">Routes</span><b>7+</b><ul><li>/radio</li><li>/radio/runtime</li><li>/radio/frame</li><li>/radio/storyboard</li><li>/radio-html/surfaces</li></ul></article>
-        <article class="surface-card"><span class="surface-label">Contracts</span><b>5</b><ul><li>Station</li><li>Track</li><li>Lyric cue</li><li>Storyboard shot</li><li>HKD export</li></ul></article>
+        <article class="surface-card"><span class="surface-label">Contracts</span><b>20</b><ul><li>Station / Track</li><li>Audio / Cover</li><li>Lyrics / Storyboard</li><li>Route / HTML matrix</li><li>Evidence / HKD export</li></ul></article>
         <article class="surface-card"><span class="surface-label">QA</span><b>Fail Closed</b><ul><li>npm test</li><li>npm run build</li><li>JSON parse</li><li>PHKD boundaries</li></ul></article>
+      </section>
+      <section class="surface-card">
+        <span class="surface-label">Data Frames</span>
+        <h2>All Draft Data Frames</h2>
+        <table class="data-frame-table">
+          <thead><tr><th>Frame</th><th>Fields</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Frame"><b>Station Frame</b></td><td data-label="Fields"><span class="data-frame-code">id, name, count, hero, songs</span></td><td data-label="Status">draft-contract</td></tr>
+            <tr><td data-label="Frame"><b>Track Frame</b></td><td data-label="Fields"><span class="data-frame-code">title, transliteration, duration, audio, cover, transcript</span></td><td data-label="Status">draft-contract</td></tr>
+            <tr><td data-label="Frame"><b>Audio Source Frame</b></td><td data-label="Fields"><span class="data-frame-code">url, type, duration, source, verification</span></td><td data-label="Status">draft-contract</td></tr>
+            <tr><td data-label="Frame"><b>Cover Asset Frame</b></td><td data-label="Fields"><span class="data-frame-code">url, alt, source, creator, verification</span></td><td data-label="Status">draft-contract</td></tr>
+            <tr><td data-label="Frame"><b>Lyric Cue Frame</b></td><td data-label="Fields"><span class="data-frame-code">time, text, source, verification</span></td><td data-label="Status">draft-contract</td></tr>
+            <tr><td data-label="Frame"><b>Lyrics Export Frame</b></td><td data-label="Fields"><span class="data-frame-code">format, cues, source, verification, unknowns</span></td><td data-label="Status">draft-contract</td></tr>
+            <tr><td data-label="Frame"><b>Storyboard Shot Frame</b></td><td data-label="Fields"><span class="data-frame-code">route, primaryUi, motion, dataState, phkdGuardrail, nextAction</span></td><td data-label="Status">draft-contract</td></tr>
+            <tr><td data-label="Frame"><b>Runtime State Frame</b></td><td data-label="Fields"><span class="data-frame-code">stationIndex, trackIndex, playing, volume, mode</span></td><td data-label="Status">draft-contract</td></tr>
+            <tr><td data-label="Frame"><b>Visualizer Scene Frame</b></td><td data-label="Fields"><span class="data-frame-code">scene, input, bars, particles, recordingState</span></td><td data-label="Status">draft-contract</td></tr>
+            <tr><td data-label="Frame"><b>TTS Persona Frame</b></td><td data-label="Fields"><span class="data-frame-code">persona, language, announcement, voiceState, verification</span></td><td data-label="Status">draft-contract</td></tr>
+            <tr><td data-label="Frame"><b>Samaya Announcement Frame</b></td><td data-label="Fields"><span class="data-frame-code">muhurat, utsav, divas, vishaya, verification</span></td><td data-label="Status">draft-contract</td></tr>
+            <tr><td data-label="Frame"><b>Social State Frame</b></td><td data-label="Fields"><span class="data-frame-code">likes, saves, comments, shares, localOnly</span></td><td data-label="Status">draft-contract</td></tr>
+            <tr><td data-label="Frame"><b>Gift Intent Frame</b></td><td data-label="Fields"><span class="data-frame-code">track, amount, message, checkoutEvidence, deliveryEvidence</span></td><td data-label="Status">draft-contract</td></tr>
+            <tr><td data-label="Frame"><b>Project Intake Frame</b></td><td data-label="Fields"><span class="data-frame-code">title, translit, type, lang, src, desc</span></td><td data-label="Status">draft-contract</td></tr>
+            <tr><td data-label="Frame"><b>Route Record Frame</b></td><td data-label="Fields"><span class="data-frame-code">path, surface, status, source, verification</span></td><td data-label="Status">draft-contract</td></tr>
+            <tr><td data-label="Frame"><b>HTML Link Frame</b></td><td data-label="Fields"><span class="data-frame-code">title, path, desktopPath, verification</span></td><td data-label="Status">draft-contract</td></tr>
+            <tr><td data-label="Frame"><b>HTML Route Matrix Frame</b></td><td data-label="Fields"><span class="data-frame-code">surface, staticHtml, realRoute, desktopCopy, source, state</span></td><td data-label="Status">draft-contract</td></tr>
+            <tr><td data-label="Frame"><b>Evidence Record Frame</b></td><td data-label="Fields"><span class="data-frame-code">id, source, creator, date, status, verification</span></td><td data-label="Status">draft-contract</td></tr>
+            <tr><td data-label="Frame"><b>Export Artifact Frame</b></td><td data-label="Fields"><span class="data-frame-code">format, payload, provenance, unknowns, verification</span></td><td data-label="Status">draft-contract</td></tr>
+            <tr><td data-label="Frame"><b>HKD Export Frame</b></td><td data-label="Fields"><span class="data-frame-code">hkdType, verification, provenance, unknowns</span></td><td data-label="Status">draft-contract</td></tr>
+          </tbody>
+        </table>
       </section>
       <div class="surface-actions"><a href="../Radio_Vaigyaaniq_Full_App_Scaffold.json">Open Scaffold JSON</a><a href="../Radio_Vaigyaaniq_Future_Structure.json">Structure JSON</a><a href="../structure/index.html">Future Structure</a><a href="../Radio_Vaigyaaniq_Full_App.html#scaffold">Full App Scaffold</a></div>
     </section>

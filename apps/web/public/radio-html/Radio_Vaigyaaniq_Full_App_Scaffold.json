@@ -59,6 +59,28 @@
     "storyboardShot": ["route", "primaryUi", "motion", "dataState", "phkdGuardrail", "nextAction"],
     "hkdExport": ["hkdType", "verification", "provenance", "unknowns"]
   },
+  "dataFrames": [
+    { "key": "station-frame", "name": "Station Frame", "fields": ["id", "name", "count", "hero", "songs"], "status": "draft-contract" },
+    { "key": "track-frame", "name": "Track Frame", "fields": ["title", "transliteration", "duration", "audio", "cover", "transcript"], "status": "draft-contract" },
+    { "key": "audio-source-frame", "name": "Audio Source Frame", "fields": ["url", "type", "duration", "source", "verification"], "status": "draft-contract" },
+    { "key": "cover-asset-frame", "name": "Cover Asset Frame", "fields": ["url", "alt", "source", "creator", "verification"], "status": "draft-contract" },
+    { "key": "lyric-cue-frame", "name": "Lyric Cue Frame", "fields": ["time", "text", "source", "verification"], "status": "draft-contract" },
+    { "key": "lyrics-export-frame", "name": "Lyrics Export Frame", "fields": ["format", "cues", "source", "verification", "unknowns"], "status": "draft-contract" },
+    { "key": "storyboard-shot-frame", "name": "Storyboard Shot Frame", "fields": ["route", "primaryUi", "motion", "dataState", "phkdGuardrail", "nextAction"], "status": "draft-contract" },
+    { "key": "runtime-state-frame", "name": "Runtime State Frame", "fields": ["stationIndex", "trackIndex", "playing", "volume", "mode"], "status": "draft-contract" },
+    { "key": "visualizer-scene-frame", "name": "Visualizer Scene Frame", "fields": ["scene", "input", "bars", "particles", "recordingState"], "status": "draft-contract" },
+    { "key": "tts-persona-frame", "name": "TTS Persona Frame", "fields": ["persona", "language", "announcement", "voiceState", "verification"], "status": "draft-contract" },
+    { "key": "samaya-announcement-frame", "name": "Samaya Announcement Frame", "fields": ["muhurat", "utsav", "divas", "vishaya", "verification"], "status": "draft-contract" },
+    { "key": "social-state-frame", "name": "Social State Frame", "fields": ["likes", "saves", "comments", "shares", "localOnly"], "status": "draft-contract" },
+    { "key": "gift-intent-frame", "name": "Gift Intent Frame", "fields": ["track", "amount", "message", "checkoutEvidence", "deliveryEvidence"], "status": "draft-contract" },
+    { "key": "project-intake-frame", "name": "Project Intake Frame", "fields": ["title", "translit", "type", "lang", "src", "desc"], "status": "draft-contract" },
+    { "key": "route-record-frame", "name": "Route Record Frame", "fields": ["path", "surface", "status", "source", "verification"], "status": "draft-contract" },
+    { "key": "html-link-frame", "name": "HTML Link Frame", "fields": ["title", "path", "desktopPath", "verification"], "status": "draft-contract" },
+    { "key": "html-route-matrix-frame", "name": "HTML Route Matrix Frame", "fields": ["surface", "staticHtml", "realRoute", "desktopCopy", "source", "state"], "status": "draft-contract" },
+    { "key": "evidence-record-frame", "name": "Evidence Record Frame", "fields": ["id", "source", "creator", "date", "status", "verification"], "status": "draft-contract" },
+    { "key": "export-artifact-frame", "name": "Export Artifact Frame", "fields": ["format", "payload", "provenance", "unknowns", "verification"], "status": "draft-contract" },
+    { "key": "hkd-export-frame", "name": "HKD Export Frame", "fields": ["hkdType", "verification", "provenance", "unknowns"], "status": "draft-contract" }
+  ],
   "events": [
     "station:selected",
     "track:selected",
