@@ -15,6 +15,41 @@
       background: var(--panel);
     }
 
+    .schema-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+    }
+
+    .schema-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: rgba(255,255,255,.035);
+    }
+
+    .schema-card b {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .schema-card small {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font: 10px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .schema-card code {
+      display: block;
+      color: #d7fff8;
+      font: 11px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      white-space: normal;
+    }
+
     .type-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -151,6 +186,30 @@
           <article><b>Visualizer Scene Types</b><span>sphere</span><span>bars</span><span>particles</span><span>waveform</span><span>terrain</span><span>rings</span><span>mandala</span><span>gravity</span><span>cloth</span><span>vortex</span><span>shockwave</span><span>shader</span><span>shadow</span><span>liquid</span></article>
           <article><b>Persistence Format Types</b><span>json</span><span>csv</span><span>graphml</span><span>markdown</span><span>hkd</span></article>
           <article><b>PHKD Boundary Types</b><span>fail_closed</span><span>unknownValues:NULL</span><span>noFabricatedCitations</span><span>noProductionReadyClaim</span></article>
+        </div>
+      </section>
+      <section class="surface-card">
+        <span class="surface-label">Full Schema</span>
+        <h2>Schema Registry</h2>
+        <div class="schema-grid">
+          <article class="schema-card"><b>RadioTrack</b><small>Required: t</small><code>t:string; r?:string|NULL; a?:string|NULL; c?:string|NULL; d?:string|NULL; ly?:string|NULL; theme?:string|NULL</code></article>
+          <article class="schema-card"><b>RadioStation</b><small>Required: name, count, songs</small><code>name:string; count:number; hero?:string|NULL; songs:RadioTrack[]</code></article>
+          <article class="schema-card"><b>RadioCatalog</b><small>Required: total_songs, total_clips, shows</small><code>artist?:string|NULL; total_songs:number; total_clips:number; shows:RadioStation[]</code></article>
+          <article class="schema-card"><b>SamayaState</b><small>Required: all fields</small><code>day:string; samwatDay:number; muhurt:string; utsav:string; subject:string; mantra:string; announcement:string</code></article>
+          <article class="schema-card"><b>TtsPersona</b><small>Required: label, prefix, rate, pitch, langHints</small><code>label:string; prefix:string; rate:number; pitch:number; langHints:string[]</code></article>
+          <article class="schema-card"><b>LyricCue</b><small>Required: time, text, source, verification</small><code>time:number|NULL; text:string; source:string|NULL; verification:VerificationState</code></article>
+          <article class="schema-card"><b>StoryboardShot</b><small>Required: all fields</small><code>route:string; primaryUi:string[]; motion:string; dataState:string; phkdGuardrail:string; nextAction:string</code></article>
+          <article class="schema-card"><b>RuntimeState</b><small>Required: all fields</small><code>stationIndex:number; trackIndex:number; playing:boolean; volume:number; mode:string</code></article>
+          <article class="schema-card"><b>VisualizerScene</b><small>Required: scene, input, recordingState</small><code>scene:VisualizerSceneType; input:microphone|file|NULL; bars?:number|NULL; particles?:number|NULL; recordingState:idle|recording|exported|blocked</code></article>
+          <article class="schema-card"><b>SocialState</b><small>Required: all fields</small><code>likes:number; saves:number; comments:number; shares:number; localOnly:boolean</code></article>
+          <article class="schema-card"><b>GiftIntent</b><small>Required: all evidence fields</small><code>track:string|NULL; amount:number|NULL; message:string|NULL; checkoutEvidence:string|NULL; deliveryEvidence:string|NULL</code></article>
+          <article class="schema-card"><b>ProjectIntake</b><small>Required: title, translit, type, lang, src, desc</small><code>title:string; translit:string|NULL; type:string; lang:string; src:string|NULL; desc:string|NULL</code></article>
+          <article class="schema-card"><b>RouteRecord</b><small>Required: path, surface, status</small><code>path:string; surface:string; status:ScaffoldStatus; source?:string|NULL; verification?:VerificationState|NULL</code></article>
+          <article class="schema-card"><b>HtmlLink</b><small>Required: title, path, desktopPath</small><code>title:string; path:string; desktopPath:string; verification?:VerificationState|NULL</code></article>
+          <article class="schema-card"><b>HtmlRouteMatrix</b><small>Required: all fields</small><code>surface:string; staticHtml:string|NULL; realRoute:string|NULL; desktopCopy:string|NULL; source:string|NULL; state:ScaffoldStatus</code></article>
+          <article class="schema-card"><b>EvidenceRecord</b><small>Required: all fields</small><code>id:string; source:string|NULL; creator:string|NULL; date:string|NULL; status:ScaffoldStatus; verification:VerificationState</code></article>
+          <article class="schema-card"><b>ExportArtifact</b><small>Required: all fields</small><code>format:ExportFormat|PersistenceFormat; payload:object|string|NULL; provenance:string|NULL; unknowns:string[]; verification:VerificationState</code></article>
+          <article class="schema-card"><b>HkdExport</b><small>Required: hkdType, verification, provenance, unknowns</small><code>hkdType:string; verification:VerificationState; provenance:string|NULL; unknowns:string[]</code></article>
         </div>
       </section>
       <div class="surface-actions"><a href="../Radio_Vaigyaaniq_Full_App_Scaffold.json">Open Scaffold JSON</a><a href="../Radio_Vaigyaaniq_Future_Structure.json">Structure JSON</a><a href="../structure/index.html">Future Structure</a><a href="../Radio_Vaigyaaniq_Full_App.html#scaffold">Full App Scaffold</a></div>

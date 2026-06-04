@@ -95,6 +95,45 @@
     { "group": "persistence-format-types", "types": ["json", "csv", "graphml", "markdown", "hkd"] },
     { "group": "phkd-boundary-types", "types": ["fail_closed", "unknownValues:NULL", "noFabricatedCitations", "noProductionReadyClaim"] }
   ],
+  "schemaRegistry": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Radio Vaigyaaniq Scaffold Schema Registry",
+    "verificationState": "draft",
+    "phkd": {
+      "unknownValues": "NULL",
+      "failClosed": true,
+      "note": "Schema presence does not verify runtime data. Source, provenance, and verification fields must remain NULL until evidence exists."
+    },
+    "enums": {
+      "VerificationState": ["draft", "verified", "unverified", "blocked", "NULL"],
+      "ScaffoldStatus": ["implemented", "draft", "draft-contract", "blocked", "NULL"],
+      "PersonaKey": ["maataa", "rishi", "samaya", "vigyaaniq"],
+      "VisualizerSceneType": ["sphere", "bars", "particles", "waveform", "terrain", "rings", "mandala", "gravity", "cloth", "vortex", "shockwave", "shader", "shadow", "liquid"],
+      "PersistenceFormat": ["json", "csv", "graphml", "markdown", "hkd"],
+      "StorageType": ["localStorage", "localStorage-ready", "Blob URL"],
+      "ExportFormat": ["LRC", "HKD JSON", "WebM", "Media Universe HKD"]
+    },
+    "definitions": {
+      "RadioTrack": { "required": ["t"], "properties": { "t": "string", "r": "string|NULL", "a": "string|NULL", "c": "string|NULL", "d": "string|NULL", "ly": "string|NULL", "theme": "string|NULL" } },
+      "RadioStation": { "required": ["name", "count", "songs"], "properties": { "name": "string", "count": "number", "hero": "string|NULL", "songs": "RadioTrack[]" } },
+      "RadioCatalog": { "required": ["total_songs", "total_clips", "shows"], "properties": { "artist": "string|NULL", "total_songs": "number", "total_clips": "number", "shows": "RadioStation[]" } },
+      "SamayaState": { "required": ["day", "samwatDay", "muhurt", "utsav", "subject", "mantra", "announcement"], "properties": { "day": "string", "samwatDay": "number", "muhurt": "string", "utsav": "string", "subject": "string", "mantra": "string", "announcement": "string" } },
+      "TtsPersona": { "required": ["label", "prefix", "rate", "pitch", "langHints"], "properties": { "label": "string", "prefix": "string", "rate": "number", "pitch": "number", "langHints": "string[]" } },
+      "LyricCue": { "required": ["time", "text", "source", "verification"], "properties": { "time": "number|NULL", "text": "string", "source": "string|NULL", "verification": "VerificationState" } },
+      "StoryboardShot": { "required": ["route", "primaryUi", "motion", "dataState", "phkdGuardrail", "nextAction"], "properties": { "route": "string", "primaryUi": "string[]", "motion": "string", "dataState": "string", "phkdGuardrail": "string", "nextAction": "string" } },
+      "RuntimeState": { "required": ["stationIndex", "trackIndex", "playing", "volume", "mode"], "properties": { "stationIndex": "number", "trackIndex": "number", "playing": "boolean", "volume": "number", "mode": "string" } },
+      "VisualizerScene": { "required": ["scene", "input", "recordingState"], "properties": { "scene": "VisualizerSceneType", "input": "microphone|file|NULL", "bars": "number|NULL", "particles": "number|NULL", "recordingState": "idle|recording|exported|blocked" } },
+      "SocialState": { "required": ["likes", "saves", "comments", "shares", "localOnly"], "properties": { "likes": "number", "saves": "number", "comments": "number", "shares": "number", "localOnly": "boolean" } },
+      "GiftIntent": { "required": ["track", "amount", "message", "checkoutEvidence", "deliveryEvidence"], "properties": { "track": "string|NULL", "amount": "number|NULL", "message": "string|NULL", "checkoutEvidence": "string|NULL", "deliveryEvidence": "string|NULL" } },
+      "ProjectIntake": { "required": ["title", "translit", "type", "lang", "src", "desc"], "properties": { "title": "string", "translit": "string|NULL", "type": "string", "lang": "string", "src": "string|NULL", "desc": "string|NULL" } },
+      "RouteRecord": { "required": ["path", "surface", "status"], "properties": { "path": "string", "surface": "string", "status": "ScaffoldStatus", "source": "string|NULL", "verification": "VerificationState|NULL" } },
+      "HtmlLink": { "required": ["title", "path", "desktopPath"], "properties": { "title": "string", "path": "string", "desktopPath": "string", "verification": "VerificationState|NULL" } },
+      "HtmlRouteMatrix": { "required": ["surface", "staticHtml", "realRoute", "desktopCopy", "source", "state"], "properties": { "surface": "string", "staticHtml": "string|NULL", "realRoute": "string|NULL", "desktopCopy": "string|NULL", "source": "string|NULL", "state": "ScaffoldStatus" } },
+      "EvidenceRecord": { "required": ["id", "source", "creator", "date", "status", "verification"], "properties": { "id": "string", "source": "string|NULL", "creator": "string|NULL", "date": "string|NULL", "status": "ScaffoldStatus", "verification": "VerificationState" } },
+      "ExportArtifact": { "required": ["format", "payload", "provenance", "unknowns", "verification"], "properties": { "format": "ExportFormat|PersistenceFormat", "payload": "object|string|NULL", "provenance": "string|NULL", "unknowns": "string[]", "verification": "VerificationState" } },
+      "HkdExport": { "required": ["hkdType", "verification", "provenance", "unknowns"], "properties": { "hkdType": "string", "verification": "VerificationState", "provenance": "string|NULL", "unknowns": "string[]" } }
+    }
+  },
   "events": [
     "station:selected",
     "track:selected",
