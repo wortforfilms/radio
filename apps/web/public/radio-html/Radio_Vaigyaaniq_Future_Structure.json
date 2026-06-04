@@ -81,6 +81,50 @@
     "Add browser QA snapshots and evidence reports.",
     "Promote only verified surfaces and keep draft surfaces labeled."
   ],
+  "tauriShipPath": {
+    "verificationState": "draft",
+    "currentEvidence": [
+      { "path": "/apps/web", "status": "active Next.js app" },
+      { "path": "/apps/web/public/radio-html", "status": "browser-openable Radio archive" },
+      { "path": "/_radio_index/tauri_app/src-tauri", "status": "legacy/reference Tauri scaffold" },
+      { "path": "/apps/desktop", "status": "NULL / not implemented" }
+    ],
+    "targetRoots": [
+      "/apps/desktop/package.json",
+      "/apps/desktop/index.html",
+      "/apps/desktop/src/main.tsx",
+      "/apps/desktop/src/app-shell.tsx",
+      "/apps/desktop/src/radio-bridge.ts",
+      "/apps/desktop/src-tauri/Cargo.toml",
+      "/apps/desktop/src-tauri/build.rs",
+      "/apps/desktop/src-tauri/tauri.conf.json",
+      "/apps/desktop/src-tauri/capabilities",
+      "/apps/desktop/src-tauri/icons",
+      "/apps/desktop/src-tauri/src/main.rs",
+      "/apps/desktop/src-tauri/src/commands.rs",
+      "/apps/desktop/src-tauri/src/evidence.rs",
+      "/apps/desktop/src-tauri/src/storage.rs",
+      "/apps/desktop/public/radio-html",
+      "/apps/desktop/evidence/tauri-build-report.json",
+      "/apps/desktop/evidence/bundle-report.json",
+      "/apps/desktop/evidence/qa-report.json"
+    ],
+    "shippingGates": [
+      "Scaffold apps/desktop from verified current web assets.",
+      "Pin Tauri version and Rust toolchain.",
+      "Define capabilities with least privilege.",
+      "Copy Radio HTML archive into desktop public bundle.",
+      "Wire app shell to /radio and /radio-html entrypoints.",
+      "Add desktop-safe storage and evidence commands.",
+      "Run npm test.",
+      "Run npm run build.",
+      "Run cargo check inside apps/desktop/src-tauri.",
+      "Run tauri dev smoke test.",
+      "Run tauri build bundle.",
+      "Record bundle hash, platform, date, source commit.",
+      "Keep release blocked unless installer opens and evidence exists."
+    ]
+  },
   "compatibilityRules": [
     "Preserve /radio-html/index.html.",
     "Preserve /radio-html/Radio_Vaigyaaniq_Full_App.html until /radio-html/app/full-app.html has a shim.",

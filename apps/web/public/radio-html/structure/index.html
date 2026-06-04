@@ -304,6 +304,62 @@ docs/        design, QA, release, and evidence notes
 structure/   future architecture maps and manifests</pre>
         </article>
       </section>
+
+      <section class="tree-grid">
+        <article class="tree-panel">
+          <span class="surface-label">Tauri</span>
+          <h2>Path To Ship Full Tauri</h2>
+<pre>Current evidence:
+  apps/web/                         active Next.js app
+  apps/web/public/radio-html/       browser-openable Radio archive
+  _radio_index/tauri_app/src-tauri/ legacy/reference Tauri scaffold
+  apps/desktop/                     NULL / not implemented
+
+Target ship path:
+  apps/desktop/
+    package.json
+    index.html
+    src/
+      main.tsx
+      app-shell.tsx
+      radio-bridge.ts
+    src-tauri/
+      Cargo.toml
+      build.rs
+      tauri.conf.json
+      capabilities/
+      icons/
+      src/
+        main.rs
+        commands.rs
+        evidence.rs
+        storage.rs
+    public/
+      radio-html/                   copied or bundled from apps/web/public
+    evidence/
+      tauri-build-report.json
+      bundle-report.json
+      qa-report.json</pre>
+        </article>
+
+        <article class="tree-panel">
+          <span class="surface-label">Gates</span>
+          <h2>Tauri Shipping Gates</h2>
+<pre>01 scaffold apps/desktop from verified current web assets
+02 pin Tauri version and Rust toolchain
+03 define capabilities with least privilege
+04 copy Radio HTML archive into desktop public bundle
+05 wire app shell to /radio and /radio-html entrypoints
+06 add desktop-safe storage and evidence commands
+07 run npm test
+08 run npm run build
+09 run cargo check inside apps/desktop/src-tauri
+10 run tauri dev smoke test
+11 run tauri build bundle
+12 record bundle hash, platform, date, source commit
+13 mark blocked unless installer opens and evidence exists</pre>
+        </article>
+      </section>
     </section>
   </main>
 </body>
