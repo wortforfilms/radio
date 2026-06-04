@@ -81,6 +81,20 @@
     { "key": "export-artifact-frame", "name": "Export Artifact Frame", "fields": ["format", "payload", "provenance", "unknowns", "verification"], "status": "draft-contract" },
     { "key": "hkd-export-frame", "name": "HKD Export Frame", "fields": ["hkdType", "verification", "provenance", "unknowns"], "status": "draft-contract" }
   ],
+  "typeCatalog": [
+    { "group": "runtime-types", "types": ["RadioTrack", "RadioStation", "RadioCatalog", "SamayaState", "TtsPersonaKey", "TtsPersona"] },
+    { "group": "surface-types", "types": ["React route", "Static HTML surface", "HTML artifact", "API route", "Desktop bundle copy", "Machine manifest"] },
+    { "group": "frame-types", "types": ["Station Frame", "Track Frame", "Audio Source Frame", "Cover Asset Frame", "Lyric Cue Frame", "Lyrics Export Frame", "Storyboard Shot Frame", "Runtime State Frame", "Visualizer Scene Frame", "TTS Persona Frame", "Samaya Announcement Frame", "Social State Frame", "Gift Intent Frame", "Project Intake Frame", "Route Record Frame", "HTML Link Frame", "HTML Route Matrix Frame", "Evidence Record Frame", "Export Artifact Frame", "HKD Export Frame"] },
+    { "group": "event-types", "types": ["station:selected", "track:selected", "tts:speak", "tts:stop", "visualizer:sceneChanged", "lyrics:markLine", "social:liked", "social:saved", "gift:intentOpened", "export:hkdDraft"] },
+    { "group": "storage-types", "types": ["localStorage", "localStorage-ready", "Blob URL"] },
+    { "group": "export-types", "types": ["LRC", "HKD JSON", "WebM", "Media Universe HKD"] },
+    { "group": "status-types", "types": ["implemented", "draft", "draft-contract", "blocked", "NULL"] },
+    { "group": "verification-types", "types": ["draft", "verified", "unverified", "blocked", "NULL"] },
+    { "group": "persona-types", "types": ["maataa", "rishi", "samaya", "vigyaaniq"] },
+    { "group": "visualizer-scene-types", "types": ["sphere", "bars", "particles", "waveform", "terrain", "rings", "mandala", "gravity", "cloth", "vortex", "shockwave", "shader", "shadow", "liquid"] },
+    { "group": "persistence-format-types", "types": ["json", "csv", "graphml", "markdown", "hkd"] },
+    { "group": "phkd-boundary-types", "types": ["fail_closed", "unknownValues:NULL", "noFabricatedCitations", "noProductionReadyClaim"] }
+  ],
   "events": [
     "station:selected",
     "track:selected",

@@ -15,6 +15,35 @@
       background: var(--panel);
     }
 
+    .type-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .type-list article {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: rgba(255,255,255,.035);
+    }
+
+    .type-list b {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .type-list span {
+      display: inline-block;
+      margin: 3px 4px 3px 0;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+      padding: 4px 8px;
+      color: #d7fff8;
+      font: 11px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    }
+
     .data-frame-table th,
     .data-frame-table td {
       padding: 10px 12px;
@@ -105,6 +134,24 @@
             <tr><td data-label="Frame"><b>HKD Export Frame</b></td><td data-label="Fields"><span class="data-frame-code">hkdType, verification, provenance, unknowns</span></td><td data-label="Status">draft-contract</td></tr>
           </tbody>
         </table>
+      </section>
+      <section class="surface-card">
+        <span class="surface-label">Types</span>
+        <h2>All Scaffold Types</h2>
+        <div class="type-list">
+          <article><b>Runtime Types</b><span>RadioTrack</span><span>RadioStation</span><span>RadioCatalog</span><span>SamayaState</span><span>TtsPersonaKey</span><span>TtsPersona</span></article>
+          <article><b>Surface Types</b><span>React route</span><span>Static HTML surface</span><span>HTML artifact</span><span>API route</span><span>Desktop bundle copy</span><span>Machine manifest</span></article>
+          <article><b>Frame Types</b><span>Station Frame</span><span>Track Frame</span><span>Audio Source Frame</span><span>Cover Asset Frame</span><span>Lyric Cue Frame</span><span>Lyrics Export Frame</span><span>Storyboard Shot Frame</span><span>Runtime State Frame</span><span>Visualizer Scene Frame</span><span>TTS Persona Frame</span><span>Samaya Announcement Frame</span><span>Social State Frame</span><span>Gift Intent Frame</span><span>Project Intake Frame</span><span>Route Record Frame</span><span>HTML Link Frame</span><span>HTML Route Matrix Frame</span><span>Evidence Record Frame</span><span>Export Artifact Frame</span><span>HKD Export Frame</span></article>
+          <article><b>Event Types</b><span>station:selected</span><span>track:selected</span><span>tts:speak</span><span>tts:stop</span><span>visualizer:sceneChanged</span><span>lyrics:markLine</span><span>social:liked</span><span>social:saved</span><span>gift:intentOpened</span><span>export:hkdDraft</span></article>
+          <article><b>Storage Types</b><span>localStorage</span><span>localStorage-ready</span><span>Blob URL</span></article>
+          <article><b>Export Types</b><span>LRC</span><span>HKD JSON</span><span>WebM</span><span>Media Universe HKD</span></article>
+          <article><b>Status Types</b><span>implemented</span><span>draft</span><span>draft-contract</span><span>blocked</span><span>NULL</span></article>
+          <article><b>Verification Types</b><span>draft</span><span>verified</span><span>unverified</span><span>blocked</span><span>NULL</span></article>
+          <article><b>Persona Types</b><span>maataa</span><span>rishi</span><span>samaya</span><span>vigyaaniq</span></article>
+          <article><b>Visualizer Scene Types</b><span>sphere</span><span>bars</span><span>particles</span><span>waveform</span><span>terrain</span><span>rings</span><span>mandala</span><span>gravity</span><span>cloth</span><span>vortex</span><span>shockwave</span><span>shader</span><span>shadow</span><span>liquid</span></article>
+          <article><b>Persistence Format Types</b><span>json</span><span>csv</span><span>graphml</span><span>markdown</span><span>hkd</span></article>
+          <article><b>PHKD Boundary Types</b><span>fail_closed</span><span>unknownValues:NULL</span><span>noFabricatedCitations</span><span>noProductionReadyClaim</span></article>
+        </div>
       </section>
       <div class="surface-actions"><a href="../Radio_Vaigyaaniq_Full_App_Scaffold.json">Open Scaffold JSON</a><a href="../Radio_Vaigyaaniq_Future_Structure.json">Structure JSON</a><a href="../structure/index.html">Future Structure</a><a href="../Radio_Vaigyaaniq_Full_App.html#scaffold">Full App Scaffold</a></div>
     </section>
