@@ -1,0 +1,599 @@
+{
+  "id": "radio-vaigyaaniq-asset-evidence",
+  "title": "Radio Vaigyaaniq Asset Evidence",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "notes": [
+      "Checksums prove local file identity only; they do not prove production readiness, rights, external source, or playable audio availability.",
+      "Unknown source and creator values are stored as NULL.",
+      "No fabricated citations or media claims are introduced."
+    ]
+  },
+  "counts": {
+    "records": 19,
+    "productionReady": 0,
+    "nullAudioAssets": 0,
+    "nullEvidencePlaceholders": 1
+  },
+  "records": [
+    {
+      "id": "radio-vaigyaaniq-landing-hero-png",
+      "group": "images",
+      "path": "/radio-html/assets/radio-vaigyaaniq-landing-hero.png",
+      "type": "image/png",
+      "status": "existing-local",
+      "verification": "draft",
+      "source": {
+        "kind": "existing-local-file",
+        "path": "/radio-html/assets/radio-vaigyaaniq-landing-hero.png",
+        "externalReference": null
+      },
+      "creator": null,
+      "evidence": {
+        "checksumAlgorithm": "sha256",
+        "sha256": "672266dd33b9b5d9c57c5f5e5f4a375bd162dc056a3b4d36f4ce783e0e012d69",
+        "byteSize": 2065752,
+        "generatedAt": "2026-06-05",
+        "provenanceState": "draft-local-evidence"
+      },
+      "phkd": {
+        "productionReady": false,
+        "claims": [
+          "Local file exists at the recorded path."
+        ],
+        "unknownValues": [
+          "creator",
+          "externalSource"
+        ]
+      }
+    },
+    {
+      "id": "radio-vaigyaaniq-divine-hero-png",
+      "group": "images",
+      "path": "/radio-html/assets/radio-vaigyaaniq-divine-hero.png",
+      "type": "image/png",
+      "status": "existing-local",
+      "verification": "draft",
+      "source": {
+        "kind": "existing-local-file",
+        "path": "/radio-html/assets/radio-vaigyaaniq-divine-hero.png",
+        "externalReference": null
+      },
+      "creator": null,
+      "evidence": {
+        "checksumAlgorithm": "sha256",
+        "sha256": "c1d8967df4a3a314a273d510c3c13e7c00c19386c0147e93ed7238a959d008e6",
+        "byteSize": 2686542,
+        "generatedAt": "2026-06-05",
+        "provenanceState": "draft-local-evidence"
+      },
+      "phkd": {
+        "productionReady": false,
+        "claims": [
+          "Local file exists at the recorded path."
+        ],
+        "unknownValues": [
+          "creator",
+          "externalSource"
+        ]
+      }
+    },
+    {
+      "id": "images-radio-vaigyaaniq-runtime-hero-svg",
+      "group": "images",
+      "path": "/radio-html/assets/images/radio-vaigyaaniq-runtime-hero.svg",
+      "type": "image/svg+xml",
+      "status": "generated-draft",
+      "verification": "draft",
+      "source": {
+        "kind": "generated-local-draft",
+        "path": "/radio-html/assets/images/radio-vaigyaaniq-runtime-hero.svg",
+        "externalReference": null
+      },
+      "creator": "Codex local draft generator",
+      "evidence": {
+        "checksumAlgorithm": "sha256",
+        "sha256": "6264c9011abd5eb8860e63f56ca473675fd29134f3b94dec1dc7838bd17ae38a",
+        "byteSize": 1982,
+        "generatedAt": "2026-06-05",
+        "provenanceState": "draft-local-evidence"
+      },
+      "phkd": {
+        "productionReady": false,
+        "claims": [
+          "Local file exists at the recorded path."
+        ],
+        "unknownValues": [
+          "externalSource"
+        ]
+      }
+    },
+    {
+      "id": "images-radio-vaigyaaniq-samaya-panel-svg",
+      "group": "images",
+      "path": "/radio-html/assets/images/radio-vaigyaaniq-samaya-panel.svg",
+      "type": "image/svg+xml",
+      "status": "generated-draft",
+      "verification": "draft",
+      "source": {
+        "kind": "generated-local-draft",
+        "path": "/radio-html/assets/images/radio-vaigyaaniq-samaya-panel.svg",
+        "externalReference": null
+      },
+      "creator": "Codex local draft generator",
+      "evidence": {
+        "checksumAlgorithm": "sha256",
+        "sha256": "cb117925d2260d5a607621275e93aae05e0c39c70901e647503cf14be30c1f1b",
+        "byteSize": 1146,
+        "generatedAt": "2026-06-05",
+        "provenanceState": "draft-local-evidence"
+      },
+      "phkd": {
+        "productionReady": false,
+        "claims": [
+          "Local file exists at the recorded path."
+        ],
+        "unknownValues": [
+          "externalSource"
+        ]
+      }
+    },
+    {
+      "id": "covers-mahamatya-svg",
+      "group": "covers",
+      "path": "/radio-html/assets/covers/mahamatya.svg",
+      "type": "image/svg+xml",
+      "status": "generated-draft",
+      "verification": "draft",
+      "source": {
+        "kind": "generated-local-draft",
+        "path": "/radio-html/assets/covers/mahamatya.svg",
+        "externalReference": null
+      },
+      "creator": "Codex local draft generator",
+      "evidence": {
+        "checksumAlgorithm": "sha256",
+        "sha256": "0f57b5f1b3ec614e86bb8fd827435e37ee058d94b16659007af78bc5dab58e01",
+        "byteSize": 583,
+        "generatedAt": "2026-06-05",
+        "provenanceState": "draft-local-evidence"
+      },
+      "phkd": {
+        "productionReady": false,
+        "claims": [
+          "Local file exists at the recorded path."
+        ],
+        "unknownValues": [
+          "externalSource"
+        ]
+      }
+    },
+    {
+      "id": "covers-gokul-svg",
+      "group": "covers",
+      "path": "/radio-html/assets/covers/gokul.svg",
+      "type": "image/svg+xml",
+      "status": "generated-draft",
+      "verification": "draft",
+      "source": {
+        "kind": "generated-local-draft",
+        "path": "/radio-html/assets/covers/gokul.svg",
+        "externalReference": null
+      },
+      "creator": "Codex local draft generator",
+      "evidence": {
+        "checksumAlgorithm": "sha256",
+        "sha256": "736819e1fd88477ed533a7638ee08c474104cb421ebab29ff602b4351e6d4a41",
+        "byteSize": 592,
+        "generatedAt": "2026-06-05",
+        "provenanceState": "draft-local-evidence"
+      },
+      "phkd": {
+        "productionReady": false,
+        "claims": [
+          "Local file exists at the recorded path."
+        ],
+        "unknownValues": [
+          "externalSource"
+        ]
+      }
+    },
+    {
+      "id": "covers-kaal-chakra-svg",
+      "group": "covers",
+      "path": "/radio-html/assets/covers/kaal-chakra.svg",
+      "type": "image/svg+xml",
+      "status": "generated-draft",
+      "verification": "draft",
+      "source": {
+        "kind": "generated-local-draft",
+        "path": "/radio-html/assets/covers/kaal-chakra.svg",
+        "externalReference": null
+      },
+      "creator": "Codex local draft generator",
+      "evidence": {
+        "checksumAlgorithm": "sha256",
+        "sha256": "842077b4b2b9ed5157c2f131391bf200e02d181705e13f5a76ccfa8cd4c78e21",
+        "byteSize": 601,
+        "generatedAt": "2026-06-05",
+        "provenanceState": "draft-local-evidence"
+      },
+      "phkd": {
+        "productionReady": false,
+        "claims": [
+          "Local file exists at the recorded path."
+        ],
+        "unknownValues": [
+          "externalSource"
+        ]
+      }
+    },
+    {
+      "id": "covers-swarnim-sale-svg",
+      "group": "covers",
+      "path": "/radio-html/assets/covers/swarnim-sale.svg",
+      "type": "image/svg+xml",
+      "status": "generated-draft",
+      "verification": "draft",
+      "source": {
+        "kind": "generated-local-draft",
+        "path": "/radio-html/assets/covers/swarnim-sale.svg",
+        "externalReference": null
+      },
+      "creator": "Codex local draft generator",
+      "evidence": {
+        "checksumAlgorithm": "sha256",
+        "sha256": "7c5ec0fe02363c884de46e08c85244300d2098b0b62a5a804256da119d55bec8",
+        "byteSize": 579,
+        "generatedAt": "2026-06-05",
+        "provenanceState": "draft-local-evidence"
+      },
+      "phkd": {
+        "productionReady": false,
+        "claims": [
+          "Local file exists at the recorded path."
+        ],
+        "unknownValues": [
+          "externalSource"
+        ]
+      }
+    },
+    {
+      "id": "icons-like-svg",
+      "group": "icons",
+      "path": "/radio-html/assets/icons/like.svg",
+      "type": "image/svg+xml",
+      "status": "generated-draft",
+      "verification": "draft",
+      "source": {
+        "kind": "generated-local-draft",
+        "path": "/radio-html/assets/icons/like.svg",
+        "externalReference": null
+      },
+      "creator": "Codex local draft generator",
+      "evidence": {
+        "checksumAlgorithm": "sha256",
+        "sha256": "511b5792d02e1088d44f243b1896c4a39179a97f466b6c5d059505901cc260a7",
+        "byteSize": 215,
+        "generatedAt": "2026-06-05",
+        "provenanceState": "draft-local-evidence"
+      },
+      "phkd": {
+        "productionReady": false,
+        "claims": [
+          "Local file exists at the recorded path."
+        ],
+        "unknownValues": [
+          "externalSource"
+        ]
+      }
+    },
+    {
+      "id": "icons-save-svg",
+      "group": "icons",
+      "path": "/radio-html/assets/icons/save.svg",
+      "type": "image/svg+xml",
+      "status": "generated-draft",
+      "verification": "draft",
+      "source": {
+        "kind": "generated-local-draft",
+        "path": "/radio-html/assets/icons/save.svg",
+        "externalReference": null
+      },
+      "creator": "Codex local draft generator",
+      "evidence": {
+        "checksumAlgorithm": "sha256",
+        "sha256": "ace9452bdfe260673d75f67e4895c8c26de8c4dbd848d831831b5fb2034bd9ab",
+        "byteSize": 150,
+        "generatedAt": "2026-06-05",
+        "provenanceState": "draft-local-evidence"
+      },
+      "phkd": {
+        "productionReady": false,
+        "claims": [
+          "Local file exists at the recorded path."
+        ],
+        "unknownValues": [
+          "externalSource"
+        ]
+      }
+    },
+    {
+      "id": "icons-gift-svg",
+      "group": "icons",
+      "path": "/radio-html/assets/icons/gift.svg",
+      "type": "image/svg+xml",
+      "status": "generated-draft",
+      "verification": "draft",
+      "source": {
+        "kind": "generated-local-draft",
+        "path": "/radio-html/assets/icons/gift.svg",
+        "externalReference": null
+      },
+      "creator": "Codex local draft generator",
+      "evidence": {
+        "checksumAlgorithm": "sha256",
+        "sha256": "fcb19152e1fe8540a79a42efc46f0dfce45bea82f88049445c360c52236ff80a",
+        "byteSize": 250,
+        "generatedAt": "2026-06-05",
+        "provenanceState": "draft-local-evidence"
+      },
+      "phkd": {
+        "productionReady": false,
+        "claims": [
+          "Local file exists at the recorded path."
+        ],
+        "unknownValues": [
+          "externalSource"
+        ]
+      }
+    },
+    {
+      "id": "icons-share-svg",
+      "group": "icons",
+      "path": "/radio-html/assets/icons/share.svg",
+      "type": "image/svg+xml",
+      "status": "generated-draft",
+      "verification": "draft",
+      "source": {
+        "kind": "generated-local-draft",
+        "path": "/radio-html/assets/icons/share.svg",
+        "externalReference": null
+      },
+      "creator": "Codex local draft generator",
+      "evidence": {
+        "checksumAlgorithm": "sha256",
+        "sha256": "15d20f99bc8b00f343560b33beeae2eecdeef2ec5d5e7d4b855cc14c7ca10d4b",
+        "byteSize": 403,
+        "generatedAt": "2026-06-05",
+        "provenanceState": "draft-local-evidence"
+      },
+      "phkd": {
+        "productionReady": false,
+        "claims": [
+          "Local file exists at the recorded path."
+        ],
+        "unknownValues": [
+          "externalSource"
+        ]
+      }
+    },
+    {
+      "id": "icons-tts-svg",
+      "group": "icons",
+      "path": "/radio-html/assets/icons/tts.svg",
+      "type": "image/svg+xml",
+      "status": "generated-draft",
+      "verification": "draft",
+      "source": {
+        "kind": "generated-local-draft",
+        "path": "/radio-html/assets/icons/tts.svg",
+        "externalReference": null
+      },
+      "creator": "Codex local draft generator",
+      "evidence": {
+        "checksumAlgorithm": "sha256",
+        "sha256": "5b9648590dad896ae63af55051bdf1829ceb0468fd35f7b1ddbaeee5d2349d3d",
+        "byteSize": 218,
+        "generatedAt": "2026-06-05",
+        "provenanceState": "draft-local-evidence"
+      },
+      "phkd": {
+        "productionReady": false,
+        "claims": [
+          "Local file exists at the recorded path."
+        ],
+        "unknownValues": [
+          "externalSource"
+        ]
+      }
+    },
+    {
+      "id": "icons-mic-svg",
+      "group": "icons",
+      "path": "/radio-html/assets/icons/mic.svg",
+      "type": "image/svg+xml",
+      "status": "generated-draft",
+      "verification": "draft",
+      "source": {
+        "kind": "generated-local-draft",
+        "path": "/radio-html/assets/icons/mic.svg",
+        "externalReference": null
+      },
+      "creator": "Codex local draft generator",
+      "evidence": {
+        "checksumAlgorithm": "sha256",
+        "sha256": "8ce10da9cbb8039ca912e862d31c7a7fb1bab667ddce165c945044ac53253bfc",
+        "byteSize": 294,
+        "generatedAt": "2026-06-05",
+        "provenanceState": "draft-local-evidence"
+      },
+      "phkd": {
+        "productionReady": false,
+        "claims": [
+          "Local file exists at the recorded path."
+        ],
+        "unknownValues": [
+          "externalSource"
+        ]
+      }
+    },
+    {
+      "id": "shaders-radio-spectrum-frag",
+      "group": "shaders",
+      "path": "/radio-html/assets/shaders/radio-spectrum.frag",
+      "type": "text/plain",
+      "status": "generated-draft",
+      "verification": "draft",
+      "source": {
+        "kind": "generated-local-draft",
+        "path": "/radio-html/assets/shaders/radio-spectrum.frag",
+        "externalReference": null
+      },
+      "creator": "Codex local draft generator",
+      "evidence": {
+        "checksumAlgorithm": "sha256",
+        "sha256": "c12c21d44d7d820daf7a77d510d37e1c972be76a94abba0d756a3e3d3ebb28ec",
+        "byteSize": 359,
+        "generatedAt": "2026-06-05",
+        "provenanceState": "draft-local-evidence"
+      },
+      "phkd": {
+        "productionReady": false,
+        "claims": [
+          "Local file exists at the recorded path."
+        ],
+        "unknownValues": [
+          "externalSource"
+        ]
+      }
+    },
+    {
+      "id": "shaders-radio-yantra-vert",
+      "group": "shaders",
+      "path": "/radio-html/assets/shaders/radio-yantra.vert",
+      "type": "text/plain",
+      "status": "generated-draft",
+      "verification": "draft",
+      "source": {
+        "kind": "generated-local-draft",
+        "path": "/radio-html/assets/shaders/radio-yantra.vert",
+        "externalReference": null
+      },
+      "creator": "Codex local draft generator",
+      "evidence": {
+        "checksumAlgorithm": "sha256",
+        "sha256": "a3af18c131c3b49da7822b9ef791164cd8a422c7d9b6ba76089aa693f94d3eb8",
+        "byteSize": 307,
+        "generatedAt": "2026-06-05",
+        "provenanceState": "draft-local-evidence"
+      },
+      "phkd": {
+        "productionReady": false,
+        "claims": [
+          "Local file exists at the recorded path."
+        ],
+        "unknownValues": [
+          "externalSource"
+        ]
+      }
+    },
+    {
+      "id": "audio-phkd-audio-placeholder-json",
+      "group": "audio",
+      "path": "/radio-html/assets/audio/PHKD_AUDIO_PLACEHOLDER.json",
+      "type": "application/json",
+      "status": "NULL",
+      "verification": "NULL",
+      "source": {
+        "kind": "null-placeholder",
+        "path": "/radio-html/assets/audio/PHKD_AUDIO_PLACEHOLDER.json",
+        "externalReference": null
+      },
+      "creator": null,
+      "evidence": {
+        "checksumAlgorithm": "sha256",
+        "sha256": "7654f1f0909d18c4ea870b464c7d43b838030df9e454dc34c6709ca159dfa978",
+        "byteSize": 319,
+        "generatedAt": "2026-06-05",
+        "provenanceState": "NULL"
+      },
+      "phkd": {
+        "productionReady": false,
+        "claims": [
+          "No playable audio asset is claimed."
+        ],
+        "unknownValues": [
+          "playableAudio",
+          "creator",
+          "externalSource"
+        ]
+      }
+    },
+    {
+      "id": "vendor-three-min-js",
+      "group": "vendor",
+      "path": "/radio-html/assets/vendor/three.min.js",
+      "type": "application/javascript",
+      "status": "existing-local",
+      "verification": "draft",
+      "source": {
+        "kind": "existing-local-file",
+        "path": "/radio-html/assets/vendor/three.min.js",
+        "externalReference": null
+      },
+      "creator": null,
+      "evidence": {
+        "checksumAlgorithm": "sha256",
+        "sha256": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2",
+        "byteSize": 603445,
+        "generatedAt": "2026-06-05",
+        "provenanceState": "draft-local-evidence"
+      },
+      "phkd": {
+        "productionReady": false,
+        "claims": [
+          "Local file exists at the recorded path."
+        ],
+        "unknownValues": [
+          "creator",
+          "externalSource"
+        ]
+      }
+    },
+    {
+      "id": "vendor-three-module-min-js",
+      "group": "vendor",
+      "path": "/radio-html/assets/vendor/three.module.min.js",
+      "type": "application/javascript",
+      "status": "existing-local",
+      "verification": "draft",
+      "source": {
+        "kind": "existing-local-file",
+        "path": "/radio-html/assets/vendor/three.module.min.js",
+        "externalReference": null
+      },
+      "creator": null,
+      "evidence": {
+        "checksumAlgorithm": "sha256",
+        "sha256": "36a60b0120335f89a80a0dab70292292b0ec414b3d05e83cd09a3ea428c6712a",
+        "byteSize": 364998,
+        "generatedAt": "2026-06-05",
+        "provenanceState": "draft-local-evidence"
+      },
+      "phkd": {
+        "productionReady": false,
+        "claims": [
+          "Local file exists at the recorded path."
+        ],
+        "unknownValues": [
+          "creator",
+          "externalSource"
+        ]
+      }
+    }
+  ]
+}

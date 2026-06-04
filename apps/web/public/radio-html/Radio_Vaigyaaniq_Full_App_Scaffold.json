@@ -21,6 +21,8 @@
     { "path": "/radio-html/Radio_Vaigyaaniq_Full_App.html", "surface": "Standalone full app HTML", "status": "implemented" },
     { "path": "/radio-html/all-html.html", "surface": "All HTML links directory", "status": "implemented" },
     { "path": "/radio-html/assets/index.html", "surface": "Asset catalog HTML surface", "status": "implemented" },
+    { "path": "/radio-html/assets/evidence.html", "surface": "Asset evidence HTML surface", "status": "implemented" },
+    { "path": "/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json", "surface": "Machine-readable asset evidence manifest", "status": "implemented" },
     { "path": "/radio-html/surfaces/index.html", "surface": "All standalone HTML surfaces index", "status": "implemented" },
     { "path": "/radio-html/surfaces/landing.html", "surface": "Landing command HTML surface", "status": "implemented" },
     { "path": "/radio-html/surfaces/image-landing.html", "surface": "Image-led landing HTML surface", "status": "implemented" },

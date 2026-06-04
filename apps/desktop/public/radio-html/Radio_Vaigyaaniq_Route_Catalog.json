@@ -31,8 +31,8 @@
     "hkd3dGenerated": 18,
     "persistenceScopesGenerated": 42,
     "universesGenerated": 22,
-    "radioStaticArtifacts": 30,
-    "totalRecords": 175
+    "radioStaticArtifacts": 32,
+    "totalRecords": 177
   },
   "catalogHtml": "/radio-html/routes/index.html",
   "matrixHtml": "/radio-html/routes/html-vs-real-route-matrix.html",
@@ -68,7 +68,7 @@
     },
     {
       "key": "radio-static-artifacts",
-      "routes": ["/radio-html/index.html", "/radio-html/all-html.html", "/radio-html/Radio_Vaigyaaniq_Full_App.html", "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html", "/radio-html/Radio_Vaigyaaniq_App_Prototype.html", "/radio-html/Radio_Vaigyaaniq_Maataa.html", "/radio-html/structure/index.html", "/radio-html/routes/index.html", "/radio-html/routes/html-vs-real-route-matrix.html", "/radio-html/assets/index.html", "/radio-html/surfaces/index.html", "/radio-html/surfaces/landing.html", "/radio-html/surfaces/image-landing.html", "/radio-html/surfaces/runtime.html", "/radio-html/surfaces/runtimes-workflows.html", "/radio-html/surfaces/ascii-wireframes.html", "/radio-html/surfaces/visualizer.html", "/radio-html/surfaces/lyrics.html", "/radio-html/surfaces/tts.html", "/radio-html/surfaces/social-gift.html", "/radio-html/surfaces/storyboard.html", "/radio-html/surfaces/evidence-export.html", "/radio-html/surfaces/scaffold.html", "/radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json", "/radio-html/Radio_Vaigyaaniq_All_Html_Links.json", "/radio-html/Radio_Vaigyaaniq_Asset_Manifest.json", "/radio-html/Radio_Vaigyaaniq_Future_Structure.json", "/radio-html/Radio_Vaigyaaniq_Route_Catalog.json", "/radio-html/Radio_Vaigyaaniq_Html_Route_Matrix.json", "/radio-html/Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md"]
+      "routes": ["/radio-html/index.html", "/radio-html/all-html.html", "/radio-html/Radio_Vaigyaaniq_Full_App.html", "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html", "/radio-html/Radio_Vaigyaaniq_App_Prototype.html", "/radio-html/Radio_Vaigyaaniq_Maataa.html", "/radio-html/structure/index.html", "/radio-html/routes/index.html", "/radio-html/routes/html-vs-real-route-matrix.html", "/radio-html/assets/index.html", "/radio-html/assets/evidence.html", "/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json", "/radio-html/surfaces/index.html", "/radio-html/surfaces/landing.html", "/radio-html/surfaces/image-landing.html", "/radio-html/surfaces/runtime.html", "/radio-html/surfaces/runtimes-workflows.html", "/radio-html/surfaces/ascii-wireframes.html", "/radio-html/surfaces/visualizer.html", "/radio-html/surfaces/lyrics.html", "/radio-html/surfaces/tts.html", "/radio-html/surfaces/social-gift.html", "/radio-html/surfaces/storyboard.html", "/radio-html/surfaces/evidence-export.html", "/radio-html/surfaces/scaffold.html", "/radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json", "/radio-html/Radio_Vaigyaaniq_All_Html_Links.json", "/radio-html/Radio_Vaigyaaniq_Asset_Manifest.json", "/radio-html/Radio_Vaigyaaniq_Future_Structure.json", "/radio-html/Radio_Vaigyaaniq_Route_Catalog.json", "/radio-html/Radio_Vaigyaaniq_Html_Route_Matrix.json", "/radio-html/Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md"]
     }
   ]
 }

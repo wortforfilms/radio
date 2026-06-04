@@ -13,8 +13,8 @@
     ]
   },
   "counts": {
-    "webHtml": 23,
-    "desktopHtml": 23
+    "webHtml": 24,
+    "desktopHtml": 24
   },
   "servedIndex": "/radio-html/all-html.html",
   "groups": [
@@ -37,7 +37,8 @@
         { "title": "All Routes", "path": "/radio-html/routes/index.html", "desktopPath": "/apps/desktop/public/radio-html/routes/index.html" },
         { "title": "HTML vs Real Route Matrix", "path": "/radio-html/routes/html-vs-real-route-matrix.html", "desktopPath": "/apps/desktop/public/radio-html/routes/html-vs-real-route-matrix.html" },
         { "title": "Future Structure", "path": "/radio-html/structure/index.html", "desktopPath": "/apps/desktop/public/radio-html/structure/index.html" },
-        { "title": "Asset Catalog", "path": "/radio-html/assets/index.html", "desktopPath": "/apps/desktop/public/radio-html/assets/index.html" }
+        { "title": "Asset Catalog", "path": "/radio-html/assets/index.html", "desktopPath": "/apps/desktop/public/radio-html/assets/index.html" },
+        { "title": "Asset Evidence", "path": "/radio-html/assets/evidence.html", "desktopPath": "/apps/desktop/public/radio-html/assets/evidence.html" }
       ]
     },
     {

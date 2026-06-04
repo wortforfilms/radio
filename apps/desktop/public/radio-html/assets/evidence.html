@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Vaigyaaniq - Asset Evidence</title>
+  <link rel="stylesheet" href="../surfaces/surface-kit.css">
+  <style>
+    .evidence-board {
+      display: grid;
+      gap: 14px;
+    }
+
+    .evidence-row {
+      display: grid;
+      grid-template-columns: minmax(160px, .75fr) minmax(0, 1.5fr) minmax(170px, .6fr);
+      gap: 12px;
+      align-items: start;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: var(--panel);
+    }
+
+    .evidence-row code {
+      color: #d7fff8;
+      overflow-wrap: anywhere;
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    .evidence-row b {
+      display: block;
+      color: var(--white);
+      margin-bottom: 5px;
+    }
+
+    .evidence-row small {
+      display: block;
+    }
+
+    .checksum {
+      display: grid;
+      gap: 6px;
+    }
+
+    .asset-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      align-items: center;
+    }
+
+    .asset-filters input {
+      min-height: 42px;
+      min-width: min(360px, 100%);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 9px 13px;
+      color: var(--text);
+      background: rgba(5,11,16,.72);
+    }
+
+    @media (max-width: 900px) {
+      .evidence-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav>
+        <a href="../index.html">HTML</a>
+        <a href="./index.html">Assets</a>
+        <a href="../surfaces/image-landing.html">Images</a>
+        <a href="../structure/index.html">Structure</a>
+      </nav>
+      <span>PHKD</span>
+    </aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">Asset Evidence Layer</p>
+          <h1>Checksums, Provenance, Guardrails</h1>
+          <p>Every local Radio asset now has a draft evidence record with source, creator, status, verification state, byte size, and SHA-256. JSON unknowns are stored as <code>null</code>, rendered here as NULL.</p>
+          <div class="surface-actions">
+            <a href="./Radio_Vaigyaaniq_Asset_Evidence.json">Evidence JSON</a>
+            <a href="../Radio_Vaigyaaniq_Asset_Manifest.json">Asset Manifest</a>
+            <a href="./index.html">Asset Catalog</a>
+          </div>
+        </div>
+        <div class="status-chip"><span>Evidence Records</span><b id="recordCount">19</b><small>draft local file identities</small></div>
+      </section>
+
+      <section class="surface-grid three">
+        <article class="surface-card"><span class="surface-label">Production Ready</span><b>0</b><p>Checksums identify local files only. They do not prove rights, quality, source authority, or release readiness.</p></article>
+        <article class="surface-card"><span class="surface-label">Audio</span><b>NULL</b><p>No playable audio asset is claimed. The audio placeholder is evidence metadata only.</p></article>
+        <article class="surface-card"><span class="surface-label">Fail Closed</span><b>Active</b><p>Unknown creator and external source values remain NULL until independently supplied and verified.</p></article>
+      </section>
+
+      <section class="surface-card">
+        <div class="asset-filters">
+          <input id="assetSearch" type="search" placeholder="Filter evidence by path, group, status, checksum">
+          <span class="surface-label" id="filterState">All records</span>
+        </div>
+      </section>
+
+      <section class="evidence-board" id="evidenceBoard" aria-label="Asset evidence records"></section>
+    </section>
+  </main>
+
+  <script>
+    const evidenceUrl = "./Radio_Vaigyaaniq_Asset_Evidence.json";
+    const board = document.getElementById("evidenceBoard");
+    const search = document.getElementById("assetSearch");
+    const filterState = document.getElementById("filterState");
+    const recordCount = document.getElementById("recordCount");
+    let records = [];
+
+    function render(value) {
+      return value === null || value === undefined || value === "" ? "NULL" : String(value);
+    }
+
+    function row(record) {
+      const source = record.source || {};
+      const evidence = record.evidence || {};
+      const unknowns = (record.phkd?.unknownValues || []).join(", ") || "NULL";
+      return `
+        <article class="evidence-row">
+          <div>
+            <span class="surface-label">${record.group}</span>
+            <b>${record.id}</b>
+            <small>${record.status} · ${record.verification}</small>
+          </div>
+          <div>
+            <code>${record.path}</code>
+            <p>Source: ${render(source.kind)} · Creator: ${render(record.creator)} · External reference: ${render(source.externalReference)}</p>
+            <small>PHKD unknowns: ${unknowns}</small>
+          </div>
+          <div class="checksum">
+            <small>${render(evidence.byteSize)} bytes</small>
+            <code>${render(evidence.sha256)}</code>
+          </div>
+        </article>
+      `;
+    }
+
+    function draw() {
+      const query = search.value.trim().toLowerCase();
+      const filtered = records.filter((record) => JSON.stringify(record).toLowerCase().includes(query));
+      board.innerHTML = filtered.map(row).join("");
+      filterState.textContent = query ? `${filtered.length} matching records` : "All records";
+    }
+
+    fetch(evidenceUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        records = data.records || [];
+        recordCount.textContent = String(records.length);
+        draw();
+      })
+      .catch(() => {
+        board.innerHTML = '<article class="surface-card"><b>Evidence load failed</b><p>Evidence JSON could not be loaded. Verification state remains NULL.</p></article>';
+      });
+
+    search.addEventListener("input", draw);
+  </script>
+</body>
+</html>

@@ -14,7 +14,7 @@
     ]
   },
   "counts": {
-    "matrixRows": 32,
+    "matrixRows": 34,
     "groups": 6
   },
   "matrixHtml": "/radio-html/routes/html-vs-real-route-matrix.html",
@@ -232,6 +232,22 @@
           "realRoute": "served-static",
           "desktopCopy": "/apps/desktop/public/radio-html/assets/index.html",
           "source": "apps/web/public/radio-html/Radio_Vaigyaaniq_Asset_Manifest.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Asset Evidence",
+          "staticHtml": "/radio-html/assets/evidence.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/assets/evidence.html",
+          "source": "apps/web/public/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Asset Evidence JSON",
+          "staticHtml": "/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json",
+          "realRoute": "served-static-json",
+          "desktopCopy": "/apps/desktop/public/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json",
+          "source": "apps/web/public/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json",
           "state": "implemented-draft"
         },
         {
