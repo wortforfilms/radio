@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - ASCII Wireframes</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+  <style>
+    .ascii-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 14px;
+    }
+
+    .ascii-card {
+      display: grid;
+      gap: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: var(--panel);
+    }
+
+    .ascii-card pre {
+      overflow-x: auto;
+      margin: 0;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 8px;
+      padding: 14px;
+      color: #d7fff8;
+      background: rgba(5, 11, 16, .82);
+      font: 12px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      white-space: pre;
+    }
+
+    .ascii-card h2 {
+      margin-bottom: 0;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav>
+        <a href="./index.html">Index</a>
+        <a href="./runtimes-workflows.html">Flows</a>
+        <a href="./scaffold.html">Scaffold</a>
+        <a href="../Radio_Vaigyaaniq_Full_App.html">Full</a>
+      </nav>
+      <span>PHKD</span>
+    </aside>
+
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">ASCII Wireframes</p>
+          <h1>All Unique Surface Skeletons</h1>
+          <p>Terminal-style wireframes for every standalone Radio surface. These are layout skeletons only; they do not verify content, audio, payment, telemetry, or production readiness.</p>
+          <div class="surface-actions">
+            <a href="./index.html">Surface Index</a>
+            <a href="./runtimes-workflows.html">Runtimes + Workflows</a>
+            <a href="../Radio_Vaigyaaniq_Full_App_Scaffold.json">Scaffold JSON</a>
+          </div>
+        </div>
+        <div class="status-chip">
+          <span>Wireframes</span>
+          <b>11</b>
+          <small>unique surfaces</small>
+        </div>
+      </section>
+
+      <section class="ascii-grid">
+        <article class="ascii-card">
+          <span class="surface-label">WF-01</span>
+          <h2>All Surfaces Index</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | ALL SURFACES                                        | COVERAGE 11        |
+|----+------------------------------------------------------+--------------------|
+|NAV | Landing Runtime Flows Visual Lyrics Story Full       | PHKD FAIL CLOSED   |
+|----+------------------------------------------------------+--------------------|
+| HERO: Radio Vaigyaaniq / All Surfaces                                         |
+| [Full App] [Scaffold JSON]                                                    |
+|--------------------------------------------------------------------------------|
+| [Landing] [Runtime] [Runtimes+Workflows] [Visualizer] [Lyrics]                |
+| [TTS]     [Social+Gift] [Storyboard]         [Evidence] [Scaffold] [ASCII]    |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-02</span>
+          <h2>Landing Command</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | LANDING COMMAND                                      | STATE DRAFT       |
+|----+------------------------------------------------------+--------------------|
+| HERO IMAGE / 102.5 MHz / Discover the Science                                  |
+| [Open Runtime] [Storyboard] [Scaffold]                                         |
+|--------------------------------------------------------------------------------|
+| +----------------------+ +----------------------+ +-------------------------+ |
+| | Quantum Tuner        | | Samaya               | | PHKD Fail Closed        | |
+| | ||||||||||||||       | | Muhurat/Utsav/Divas  | | Unknowns = NULL         | |
+| +----------------------+ +----------------------+ +-------------------------+ |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-03</span>
+          <h2>Live Runtime</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | LIVE RUNTIME                                       | CLOCK 00:00 DRAFT   |
+|----+----------------------------------------------------+----------------------|
+| [Stations]                         | [Current Track]                         |
+| - Mahamatya                        | THE SWARNIM SALE                         |
+| - Gokul                            | metadata: LOCAL DRAFT                    |
+| - Kaal Chakra                      | [Track 1] [Track 2] [Track 3]            |
+|--------------------------------------------------------------------------------|
+| PLAYER: LIVE / Track Title / [Create Project] [Like] [Save] [Speak] [Gift]     |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-04</span>
+          <h2>Runtimes + Workflows</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | RUNTIME BOARD                                      | COVERAGE 8          |
+|----+------------------------------+-----------------------------------------|
+| RUNTIME LANE                  | WORKFLOW LANE                              |
+| RT-01 Landing Command         | 01 Enter      event: route:selected        |
+| RT-02 Live Broadcast          | 02 Tune       event: station:selected      |
+| RT-03 Samaya TTS              | 03 Announce   event: tts:speak             |
+| RT-04 Visualizer              | 04 Visualize  event: visualizer:scene      |
+| RT-05 Lyrics Scribe           | 05 Scribe     event: lyrics:markLine       |
+| RT-06 Social Gift             | 06 Act        event: gift:intentOpened     |
+| RT-07 Storyboard              | 07 Package    event: project:intake        |
+| RT-08 Evidence Export         | 08 Verify     event: evidence:verified     |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-05</span>
+          <h2>Visualizer</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | 3D AUDIO VISUALIZER PRO                            | SCENES 14           |
+|----+----------------------------------------------------+----------------------|
+| STATUS: Scene Sphere / Input NULL / Verification draft                         |
+|--------------------------------------------------------------------------------|
+| CANVAS                                                                         |
+| ~~~~~ waveform / bars / particles / shader / shadow / liquid ~~~~~             |
+|--------------------------------------------------------------------------------|
+| [Sphere][Bars][Particles][Waveform][Terrain][Rings][Mandala][Gravity]          |
+| [Cloth][Vortex][Shockwave][Shader][Shadow][Liquid]                             |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-06</span>
+          <h2>Lyrics Scribe</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | SYNCED LYRICS SCRIBE                                | STATUS DRAFT       |
+|----+------------------------------------------------------+--------------------|
+| AUDIO PLAYER                                                                    |
+| [=====================>---------------------------]                             |
+| TEXTAREA: कोई बताओ इन रेखाओं को                                                |
+| [Mark Line @ Playhead] [Export LRC] [Export HKD]                                |
+|--------------------------------------------------------------------------------|
+| Cue List: [00:00.00] draft line / VERIFIED NULL                                 |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-07</span>
+          <h2>TTS Samaya</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | SAMAYA ANNOUNCEMENT TTS                             | LOCAL BROWSER      |
+|----+------------------------------------------------------+--------------------|
+| CLOCK: 00:00:00 DRAFT                                                          |
+| Announcement: Vishaya Vaachan / Mantra / Muhurat                               |
+|--------------------------------------------------------------------------------|
+| Persona: [Maataa v]  Voice: [Browser default v]                                |
+| [Speak] [Stop]                                                                 |
+| Status: SERVER AUDIO EVIDENCE NULL                                             |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-08</span>
+          <h2>Social + Gift</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | SOCIAL + GIFT INTENT                              | PAYMENT NULL        |
+|----+---------------------------------------------------+---------------------|
+| [Like] local toggle                                                          |
+| [Save] local storage                                                         |
+| [Gift] opens intent modal                                                    |
+| [Create Project] Ayodhya intake                                              |
+|--------------------------------------------------------------------------------|
+| MODAL: Gift Intent / checkout wallet receipt delivery evidence = NULL          |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-09</span>
+          <h2>Storyboard</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | FULL STORYBOARD                                    | 7 SEQ / 20 SHOTS    |
+|----+----------------------------------------------------+----------------------|
+| 01 Landing Command      [3 shots]                                             |
+| 02 Live Runtime         [3 shots]                                             |
+| 03 Samaya TTS           [2 shots]                                             |
+| 04 Visualizer           [3 shots]                                             |
+| 05 Lyrics               [3 shots]                                             |
+| 06 Social/Gift/Project  [3 shots]                                             |
+| 07 Archive/Frame/Export [3 shots]                                             |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-10</span>
+          <h2>Evidence + Export</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | EVIDENCE EXPORT                                      | UNKNOWNS NULL      |
+|----+------------------------------------------------------+--------------------|
+| [LRC] lyric timing draft                                                        |
+| [HKD JSON] lyric artifact draft                                                 |
+| [WebM] visualizer capture draft                                                 |
+| [Media HKD] scope export preserves provenance                                   |
+|--------------------------------------------------------------------------------|
+| PHKD: export does not upgrade verification state                                |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-11</span>
+          <h2>Scaffold</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | IMPLEMENTATION BLUEPRINT                            | MANIFEST JSON       |
+|----+------------------------------------------------------+--------------------|
+| Routes: /radio /runtime /frame /storyboard /radio-html/surfaces                |
+| Components: rail hero console station track tts visualizer lyrics gift story   |
+| Contracts: station track lyricCue storyboardShot hkdExport                     |
+| Events: route station track tts visualizer lyrics gift export                  |
+| QA: npm test / npm run build / JSON parse / PHKD boundaries                    |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
