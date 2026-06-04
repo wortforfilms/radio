@@ -1,17 +1,17 @@
 {
   "report": "tauri-build-report",
-  "generated_at": "2026-06-04T12:15:42.641Z",
-  "source_commit": "272f61108c7f3ef8ef99c67489f6895c7ee753eb",
-  "source_commit_short": "272f611",
+  "generated_at": "2026-06-04T13:13:32.411Z",
+  "source_commit": "c0912cc163dd3c9d2cfd297bab9a2e864a351820",
+  "source_commit_short": "c0912cc",
   "branch": "master",
   "evidence_host": {
-    "os": "linux",
+    "os": "darwin",
     "arch": "arm64",
-    "node": "v22.22.0",
-    "npm": "10.9.4",
-    "cargo": null,
-    "rustc": null,
-    "tauri_cli": null,
+    "node": "v22.22.3",
+    "npm": "10.9.8",
+    "cargo": "cargo 1.91.0 (ea2d97820 2025-10-10)",
+    "rustc": "rustc 1.91.0 (f8297e351 2025-10-28)",
+    "tauri_cli": "tauri-cli 2.11.2",
     "note": "evidence-generation host; NOT a verified macOS/Windows build host"
   },
   "gates": {
@@ -20,18 +20,18 @@
       "detail": "Deferred: heavy Next build. Run `npm run build` at repo root on a dev machine and re-run evidence."
     },
     "cargo_check": {
-      "status": "blocked",
-      "detail": "cargo/rustc not installed in this environment"
+      "status": "pass",
+      "detail": ""
     },
     "tauri_dev_smoke": {
       "status": "blocked",
-      "detail": "tauri CLI not installed"
+      "detail": "no display in this environment for a dev smoke test"
     },
     "tauri_bundle": {
       "status": "blocked",
-      "detail": "tauri CLI not installed"
+      "detail": "bundle build not executed in this environment"
     }
   },
-  "status": "blocked",
+  "status": "partial",
   "notes": "Rust/Tauri gates require cargo + tauri CLI + a display + a built bundle. Run on the target macOS/Windows host."
 }

@@ -1,23 +1,23 @@
 {
   "report": "qa-report",
-  "generated_at": "2026-06-04T12:15:42.641Z",
-  "source_commit": "272f61108c7f3ef8ef99c67489f6895c7ee753eb",
+  "generated_at": "2026-06-04T13:13:32.411Z",
+  "source_commit": "c0912cc163dd3c9d2cfd297bab9a2e864a351820",
   "branch": "master",
   "evidence_host": {
-    "os": "linux",
+    "os": "darwin",
     "arch": "arm64",
-    "node": "v22.22.0",
-    "npm": "10.9.4",
-    "cargo": null,
-    "rustc": null,
-    "tauri_cli": null,
+    "node": "v22.22.3",
+    "npm": "10.9.8",
+    "cargo": "cargo 1.91.0 (ea2d97820 2025-10-10)",
+    "rustc": "rustc 1.91.0 (f8297e351 2025-10-28)",
+    "tauri_cli": "tauri-cli 2.11.2",
     "note": "evidence-generation host; NOT a verified macOS/Windows build host"
   },
   "gates": [
     {
       "gate": "npm test",
-      "status": "blocked",
-      "detail": "environment: Error: Cannot find native binding. npm has a bug related to optional dependencies (https://github.com/npm/cli/issues/4828). Please try `npm i` again after removing both package-lock.json and node_modules directory."
+      "status": "pass",
+      "detail": "      Tests  27 passed (27) |    Start at  18:43:38 |    Duration  561ms (transform 588ms, setup 0ms, import 852ms, tests 31ms, environment 1ms)"
     },
     {
       "gate": "npm run build",
@@ -26,18 +26,18 @@
     },
     {
       "gate": "cargo check (apps/desktop/src-tauri)",
-      "status": "blocked",
-      "detail": "cargo/rustc not installed in this environment"
+      "status": "pass",
+      "detail": ""
     },
     {
       "gate": "tauri dev smoke test",
       "status": "blocked",
-      "detail": "tauri CLI not installed"
+      "detail": "no display in this environment for a dev smoke test"
     },
     {
       "gate": "tauri bundle build",
       "status": "blocked",
-      "detail": "tauri CLI not installed"
+      "detail": "bundle build not executed in this environment"
     },
     {
       "gate": "bundle hash recorded",
@@ -47,12 +47,12 @@
     {
       "gate": "platform metadata recorded",
       "status": "pass",
-      "detail": "linux-arm64 (evidence host; target build host = NULL)"
+      "detail": "darwin-arm64 (evidence host; target build host = NULL)"
     },
     {
       "gate": "source commit recorded",
       "status": "pass",
-      "detail": "272f611"
+      "detail": "c0912cc"
     },
     {
       "gate": "installer opens successfully",
@@ -66,9 +66,9 @@
     }
   ],
   "summary": {
-    "pass": 3,
+    "pass": 5,
     "fail": 0,
-    "blocked": 6,
+    "blocked": 4,
     "not-run": 1,
     "total": 10
   },

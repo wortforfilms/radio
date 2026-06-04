@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Vaigyaaniq - All Routes</title>
+  <link rel="stylesheet" href="../surfaces/surface-kit.css">
+  <style>
+    .route-summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+    }
+
+    .route-summary article {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: var(--panel);
+    }
+
+    .route-summary span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .route-summary b {
+      display: block;
+      margin-top: 6px;
+      color: var(--ink);
+      font-size: 28px;
+    }
+
+    .route-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .route-table th,
+    .route-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      text-align: left;
+      vertical-align: top;
+      font-size: 13px;
+    }
+
+    .route-table th {
+      color: var(--muted);
+      font: 11px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .route-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .route-table a {
+      color: #d7fff8;
+      text-decoration: none;
+    }
+
+    .route-table a:hover {
+      color: var(--accent);
+    }
+
+    .route-code {
+      font: 12px/1.25 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      color: #d7fff8;
+    }
+
+    .route-groups {
+      display: grid;
+      gap: 18px;
+    }
+  </style>
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav>
+        <a href="../index.html">HTML</a>
+        <a href="../structure/index.html">Structure</a>
+        <a href="../surfaces/index.html">Surfaces</a>
+        <a href="../Radio_Vaigyaaniq_Full_App.html">Full</a>
+      </nav>
+      <span>PHKD</span>
+    </aside>
+
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">Route Catalog</p>
+          <h1>All Routes And Static Artifacts</h1>
+          <p>Current browser route inventory for the Next.js app, generated static paths, API routes, and Radio HTML artifacts. This is a routing map only; it does not claim each route is production ready.</p>
+          <div class="surface-actions">
+            <a href="../Radio_Vaigyaaniq_Route_Catalog.json">Route JSON</a>
+            <a href="../structure/index.html">Structure Map</a>
+            <a href="../Radio_Vaigyaaniq_Future_Structure.json">Future Structure JSON</a>
+          </div>
+        </div>
+        <div class="status-chip">
+          <span>Total</span>
+          <b id="routeTotal">0</b>
+          <small>route records</small>
+        </div>
+      </section>
+
+      <section class="route-summary" id="routeSummary"></section>
+      <section class="route-groups" id="routeGroups"></section>
+    </section>
+  </main>
+
+  <script>
+    const appBase = "http://127.0.0.1:3000";
+    const routeCatalog = {
+      generatedAt: "2026-06-04",
+      verificationState: "draft",
+      phkd: "Route inventory only. Unknown runtime state remains NULL. Production readiness is not claimed.",
+      groups: [
+        {
+          key: "app-pages",
+          title: "Next App Pages",
+          kind: "page",
+          routes: [
+            ["/", "Root landing", "static"],
+            ["/admin", "Admin panel", "static"],
+            ["/ayodhya", "Ayodhya AI home", "static"],
+            ["/dashboard", "Runtime dashboard", "static"],
+            ["/dictionary", "Universal dictionary", "dynamic"],
+            ["/hkd-banners", "HKD banner gallery", "static"],
+            ["/hkd3d", "HKD3D dashboard", "static"],
+            ["/lineage", "Universal lineage explorer", "static"],
+            ["/lipi", "Lipi matrix", "static"],
+            ["/projects/new", "Project intake wizard", "dynamic"],
+            ["/radio", "Radio Vaigyaaniq landing", "static"],
+            ["/radio/frame", "Radio absorbed frame", "static"],
+            ["/radio/runtime", "Radio live runtime", "static"],
+            ["/radio/storyboard", "Radio storyboard", "static"],
+            ["/scopes", "Persistence scopes", "static"],
+            ["/sprints", "Sprint board", "static"],
+            ["/universes", "Universe index", "static"],
+            ["/wireframes", "Wireframe extraction board", "static"]
+          ]
+        },
+        {
+          key: "api-routes",
+          title: "API Routes",
+          kind: "api",
+          routes: [
+            ["/api/analytics", "Analytics metrics", "dynamic"],
+            ["/api/assistant", "AI assistant", "dynamic"],
+            ["/api/civilizations", "Civilization records", "dynamic"],
+            ["/api/export", "Export endpoint", "dynamic"],
+            ["/api/guru-maataa", "Guru Maataa records", "dynamic"],
+            ["/api/hkd3d", "HKD3D manifest", "dynamic"],
+            ["/api/import", "Import endpoint", "dynamic"],
+            ["/api/knowledge-graph", "Knowledge graph", "dynamic"],
+            ["/api/lipi", "Lipi matrix", "dynamic"],
+            ["/api/pitra", "Pitra records", "dynamic"],
+            ["/api/rishi", "Rishi records", "dynamic"],
+            ["/api/rishika", "Rishika records", "dynamic"],
+            ["/api/sanskrit-dictionary", "Sanskrit dictionary", "dynamic"],
+            ["/api/search", "Search endpoint", "dynamic"],
+            ["/api/subjects", "Subject taxonomy", "dynamic"],
+            ["/api/texts", "Text records", "dynamic"],
+            ["/api/timeline", "Timeline records", "dynamic"],
+            ["/api/universal-dictionary", "Universal dictionary", "dynamic"],
+            ["/radio-html/suno_backup/[...assetPath]", "Suno backup asset proxy", "dynamic catch-all"]
+          ]
+        },
+        {
+          key: "ayodhya-generated",
+          title: "Ayodhya Generated Pages",
+          kind: "generated",
+          routes: [
+            ["/ayodhya/scripts", "Script Engine", "SSG"],
+            ["/ayodhya/storyboards", "Storyboard Engine", "SSG"],
+            ["/ayodhya/images", "Image Engine", "SSG"],
+            ["/ayodhya/videos", "Video Engine", "SSG"],
+            ["/ayodhya/voice", "Voice Engine", "SSG"],
+            ["/ayodhya/lipsync", "Lip Sync Engine", "SSG"],
+            ["/ayodhya/assets", "Asset Runtime", "SSG"],
+            ["/ayodhya/characters", "Character Builder", "SSG"],
+            ["/ayodhya/hkd3d", "HKD3D module wrapper", "SSG"],
+            ["/ayodhya/locations", "Location Builder", "SSG"],
+            ["/ayodhya/bhakti", "Bhakti Runtime", "SSG"],
+            ["/ayodhya/ramayana", "Ramayana Runtime", "SSG"],
+            ["/ayodhya/phkd", "PHKD Runtime", "SSG"],
+            ["/ayodhya/studio", "Ayodhya Studio", "SSG"],
+            ["/ayodhya/status", "Runtime Status", "SSG"]
+          ]
+        },
+        {
+          key: "lipi-generated",
+          title: "Lipi Generated Pages",
+          kind: "generated",
+          routes: [
+            ["/lipi/civilization", "Civilization Explorer", "SSG"],
+            ["/lipi/religion", "Religion Explorer", "SSG"],
+            ["/lipi/language", "Language Explorer", "SSG"],
+            ["/lipi/script", "Script Explorer", "SSG"],
+            ["/lipi/glyph-atlas", "Glyph Atlas", "SSG"],
+            ["/lipi/ipa", "IPA Explorer", "SSG"],
+            ["/lipi/timeline", "Timeline Explorer", "SSG"],
+            ["/lipi/manuscript", "Manuscript Explorer", "SSG"],
+            ["/lipi/inscription", "Inscription Explorer", "SSG"],
+            ["/lipi/evidence", "Evidence Center", "SSG"],
+            ["/lipi/knowledge-graph", "Knowledge Graph", "SSG"]
+          ]
+        },
+        {
+          key: "hkd3d-generated",
+          title: "HKD3D Generated Pages",
+          kind: "generated",
+          routes: [
+            ["/hkd3d/stages/base-human-model", "Base Human Model", "SSG"],
+            ["/hkd3d/stages/texture-system", "Texture System", "SSG"],
+            ["/hkd3d/stages/rig-system", "Rig System", "SSG"],
+            ["/hkd3d/stages/blendshapes", "Blendshapes", "SSG"],
+            ["/hkd3d/stages/animation-library", "Animation Library", "SSG"],
+            ["/hkd3d/stages/facial-runtime", "Facial Runtime", "SSG"],
+            ["/hkd3d/stages/lighting-runtime", "Lighting Runtime", "SSG"],
+            ["/hkd3d/stages/clothing-system", "Clothing System", "SSG"],
+            ["/hkd3d/stages/hair-system", "Hair System", "SSG"],
+            ["/hkd3d/stages/export-runtime", "Export Runtime", "SSG"],
+            ["/hkd3d/characters/ram", "Ram character slot", "SSG"],
+            ["/hkd3d/characters/sita", "Sita character slot", "SSG"],
+            ["/hkd3d/characters/lakshman", "Lakshman character slot", "SSG"],
+            ["/hkd3d/characters/hanuman", "Hanuman character slot", "SSG"],
+            ["/hkd3d/characters/bharat", "Bharat character slot", "SSG"],
+            ["/hkd3d/characters/shatrughna", "Shatrughna character slot", "SSG"],
+            ["/hkd3d/characters/valmiki", "Valmiki character slot", "SSG"],
+            ["/hkd3d/characters/vishwamitra", "Vishwamitra character slot", "SSG"]
+          ]
+        },
+        {
+          key: "scopes-generated",
+          title: "Persistence Scope Pages",
+          kind: "generated",
+          routes: [
+            ["/scopes/all", "Complete Runtime", "SSG"],
+            ["/scopes/pitra", "Pitra", "SSG"],
+            ["/scopes/guru-maataa", "Guru Maataa", "SSG"],
+            ["/scopes/rishi", "Rishi", "SSG"],
+            ["/scopes/rishika", "Rishika", "SSG"],
+            ["/scopes/civilizations", "Civilizations", "SSG"],
+            ["/scopes/subjects", "Subjects", "SSG"],
+            ["/scopes/texts", "Texts", "SSG"],
+            ["/scopes/timeline", "Timeline", "SSG"],
+            ["/scopes/locations", "Geography", "SSG"],
+            ["/scopes/institutions", "Institutions", "SSG"],
+            ["/scopes/discoveries", "Discoveries", "SSG"],
+            ["/scopes/innovations", "Innovations", "SSG"],
+            ["/scopes/media", "Media", "SSG"],
+            ["/scopes/research", "Research", "SSG"],
+            ["/scopes/courses", "Courses", "SSG"],
+            ["/scopes/lineages", "Lineages", "SSG"],
+            ["/scopes/relationships", "Relationships", "SSG"],
+            ["/scopes/audit", "Audit Logs", "SSG"],
+            ["/scopes/sanskrit-dictionary", "Sanskrit Dictionary", "SSG"],
+            ["/scopes/universal-knowledge-lineage-explorer", "Universal Knowledge Lineage Explorer", "SSG"],
+            ["/scopes/pitra-universe", "Pitra Universe", "SSG"],
+            ["/scopes/guru-maataa-universe", "Guru Maataa Universe", "SSG"],
+            ["/scopes/rishi-universe", "Rishi Universe", "SSG"],
+            ["/scopes/rishika-universe", "Rishika Universe", "SSG"],
+            ["/scopes/parampara-universe", "Parampara Universe", "SSG"],
+            ["/scopes/civilization-universe", "Civilization Universe", "SSG"],
+            ["/scopes/knowledge-universe", "Knowledge Universe", "SSG"],
+            ["/scopes/subject-universe", "Subject Universe", "SSG"],
+            ["/scopes/text-universe", "Text Universe", "SSG"],
+            ["/scopes/timeline-universe", "Timeline Universe", "SSG"],
+            ["/scopes/geography-universe", "Geography Universe", "SSG"],
+            ["/scopes/knowledge-graph-universe", "Knowledge Graph Universe", "SSG"],
+            ["/scopes/education-universe", "Education Universe", "SSG"],
+            ["/scopes/research-universe", "Research Universe", "SSG"],
+            ["/scopes/community-universe", "Community Universe", "SSG"],
+            ["/scopes/media-universe", "Media Universe", "SSG"],
+            ["/scopes/ai-universe", "AI Universe", "SSG"],
+            ["/scopes/observatory-universe", "Observatory Universe", "SSG"],
+            ["/scopes/future-knowledge-universe", "Future Knowledge Universe", "SSG"],
+            ["/scopes/governance-universe", "Governance Universe", "SSG"],
+            ["/scopes/universal-command-center", "Universal Command Center", "SSG"]
+          ]
+        },
+        {
+          key: "universes-generated",
+          title: "Universe Pages",
+          kind: "generated",
+          routes: [
+            ["/universes/universal-knowledge-lineage-explorer", "Universal Knowledge Lineage Explorer", "SSG"],
+            ["/universes/pitra-universe", "Pitra Universe", "SSG"],
+            ["/universes/guru-maataa-universe", "Guru Maataa Universe", "SSG"],
+            ["/universes/rishi-universe", "Rishi Universe", "SSG"],
+            ["/universes/rishika-universe", "Rishika Universe", "SSG"],
+            ["/universes/parampara-universe", "Parampara Universe", "SSG"],
+            ["/universes/civilization-universe", "Civilization Universe", "SSG"],
+            ["/universes/knowledge-universe", "Knowledge Universe", "SSG"],
+            ["/universes/subject-universe", "Subject Universe", "SSG"],
+            ["/universes/text-universe", "Text Universe", "SSG"],
+            ["/universes/timeline-universe", "Timeline Universe", "SSG"],
+            ["/universes/geography-universe", "Geography Universe", "SSG"],
+            ["/universes/knowledge-graph-universe", "Knowledge Graph Universe", "SSG"],
+            ["/universes/education-universe", "Education Universe", "SSG"],
+            ["/universes/research-universe", "Research Universe", "SSG"],
+            ["/universes/community-universe", "Community Universe", "SSG"],
+            ["/universes/media-universe", "Media Universe", "SSG"],
+            ["/universes/ai-universe", "AI Universe", "SSG"],
+            ["/universes/observatory-universe", "Observatory Universe", "SSG"],
+            ["/universes/future-knowledge-universe", "Future Knowledge Universe", "SSG"],
+            ["/universes/governance-universe", "Governance Universe", "SSG"],
+            ["/universes/universal-command-center", "Universal Command Center", "SSG"]
+          ]
+        },
+        {
+          key: "radio-html-artifacts",
+          title: "Radio Static HTML And Artifacts",
+          kind: "static artifact",
+          base: "file-relative",
+          routes: [
+            ["../index.html", "radio-html/index.html", "HTML"],
+            ["../Radio_Vaigyaaniq_Full_App.html", "Radio_Vaigyaaniq_Full_App.html", "HTML"],
+            ["../Radio_Vaigyaaniq_UX_Dashboard.html", "Radio_Vaigyaaniq_UX_Dashboard.html", "HTML"],
+            ["../Radio_Vaigyaaniq_App_Prototype.html", "Radio_Vaigyaaniq_App_Prototype.html", "HTML"],
+            ["../Radio_Vaigyaaniq_Maataa.html", "Radio_Vaigyaaniq_Maataa.html", "HTML"],
+            ["../structure/index.html", "structure/index.html", "HTML"],
+            ["../routes/index.html", "routes/index.html", "HTML"],
+            ["../surfaces/index.html", "surfaces/index.html", "HTML"],
+            ["../surfaces/landing.html", "surfaces/landing.html", "HTML"],
+            ["../surfaces/runtime.html", "surfaces/runtime.html", "HTML"],
+            ["../surfaces/runtimes-workflows.html", "surfaces/runtimes-workflows.html", "HTML"],
+            ["../surfaces/ascii-wireframes.html", "surfaces/ascii-wireframes.html", "HTML"],
+            ["../surfaces/visualizer.html", "surfaces/visualizer.html", "HTML"],
+            ["../surfaces/lyrics.html", "surfaces/lyrics.html", "HTML"],
+            ["../surfaces/tts.html", "surfaces/tts.html", "HTML"],
+            ["../surfaces/social-gift.html", "surfaces/social-gift.html", "HTML"],
+            ["../surfaces/storyboard.html", "surfaces/storyboard.html", "HTML"],
+            ["../surfaces/evidence-export.html", "surfaces/evidence-export.html", "HTML"],
+            ["../surfaces/scaffold.html", "surfaces/scaffold.html", "HTML"],
+            ["../Radio_Vaigyaaniq_Full_App_Scaffold.json", "Radio_Vaigyaaniq_Full_App_Scaffold.json", "JSON"],
+            ["../Radio_Vaigyaaniq_Future_Structure.json", "Radio_Vaigyaaniq_Future_Structure.json", "JSON"],
+            ["../Radio_Vaigyaaniq_Route_Catalog.json", "Radio_Vaigyaaniq_Route_Catalog.json", "JSON"],
+            ["../Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md", "Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md", "Markdown"]
+          ]
+        }
+      ]
+    };
+
+    function hrefFor(group, route) {
+      if (group.base === "file-relative") return route[0];
+      return appBase + route[0];
+    }
+
+    function labelFor(group, route) {
+      if (group.base === "file-relative") return route[1];
+      return route[0];
+    }
+
+    const total = routeCatalog.groups.reduce((sum, group) => sum + group.routes.length, 0);
+    document.getElementById("routeTotal").textContent = total;
+
+    const summary = document.getElementById("routeSummary");
+    routeCatalog.groups.forEach((group) => {
+      const card = document.createElement("article");
+      card.innerHTML = `<span>${group.title}</span><b>${group.routes.length}</b>`;
+      summary.appendChild(card);
+    });
+
+    const groups = document.getElementById("routeGroups");
+    routeCatalog.groups.forEach((group) => {
+      const section = document.createElement("section");
+      section.className = "tree-panel";
+      const rows = group.routes.map((route) => {
+        const href = hrefFor(group, route);
+        const label = labelFor(group, route);
+        const role = group.base === "file-relative" ? route[2] : route[1];
+        const status = group.base === "file-relative" ? "static" : route[2];
+        return `<tr><td><a class="route-code" href="${href}">${label}</a></td><td>${role}</td><td>${status}</td></tr>`;
+      }).join("");
+      section.innerHTML = `
+        <span class="surface-label">${group.kind}</span>
+        <h2>${group.title}</h2>
+        <table class="route-table">
+          <thead><tr><th>Route</th><th>Role</th><th>Status</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      `;
+      groups.appendChild(section);
+    });
+  </script>
+</body>
+</html>

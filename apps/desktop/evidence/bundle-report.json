@@ -1,7 +1,7 @@
 {
   "report": "bundle-report",
-  "generated_at": "2026-06-04T12:15:42.641Z",
-  "source_commit": "272f61108c7f3ef8ef99c67489f6895c7ee753eb",
+  "generated_at": "2026-06-04T13:13:32.411Z",
+  "source_commit": "c0912cc163dd3c9d2cfd297bab9a2e864a351820",
   "bundle": null,
   "installer": null,
   "bundle_hash": null,
@@ -26,18 +26,23 @@
     },
     {
       "file": "radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json",
-      "sha256": "8d3d68fbe2c0e6e0e1faace5eb5848d995b147f86b77bea188559efbde2f05e1",
-      "bytes": 6704
+      "sha256": "83bb4b607104468a11998c4b3148ecc45f37d243c6194527cf2ff5ca530447d1",
+      "bytes": 6953
     },
     {
       "file": "radio-html/Radio_Vaigyaaniq_Future_Structure.json",
-      "sha256": "3e7570920a53ec7f87a528b3d7a60edb9d6126cb60a6e460f4eca323aa11dd88",
-      "bytes": 8075
+      "sha256": "0e7c9e7f58c35632da9202e735906053a77157a694e912096747ac2cb13590d9",
+      "bytes": 8515
     },
     {
       "file": "radio-html/Radio_Vaigyaaniq_Maataa.html",
       "sha256": "ab5186f6ecf24c1a7ac909fec3e11a327e1e95bd3e04ff72410ef7857ab837d9",
       "bytes": 112538
+    },
+    {
+      "file": "radio-html/Radio_Vaigyaaniq_Route_Catalog.json",
+      "sha256": "fd548cb3244fee3e6e80020ee94175af52ec8ed662ff1edfae949b85d5603bd0",
+      "bytes": 6206
     },
     {
       "file": "radio-html/Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md",
@@ -51,8 +56,8 @@
     },
     {
       "file": "radio-html/index.html",
-      "sha256": "abd56ce6b02a97c8a7338894b22b09813fd32f705c05608720a39678f1424ea2",
-      "bytes": 2432
+      "sha256": "b5ea55519bde3c96df157ca249be36dd2946f54e3f84ff56ec3c874e950ab484",
+      "bytes": 2584
     }
   ]
 }

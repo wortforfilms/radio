@@ -1,0 +1,72 @@
+{
+  "id": "radio-vaigyaaniq-route-catalog",
+  "title": "Radio Vaigyaaniq Route Catalog",
+  "generatedAt": "2026-06-04",
+  "verificationState": "draft",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "notes": [
+      "This is a route inventory only.",
+      "Route presence does not imply production readiness.",
+      "Dynamic runtime behavior, server health, and external integrations remain NULL unless separately verified."
+    ]
+  },
+  "sourceFiles": {
+    "appRouteScan": "apps/web/app/**/*/page.tsx and route.ts",
+    "staticArtifactScan": "apps/web/public/radio-html",
+    "generatedRouteRegistries": [
+      "packages/shared/src/ayodhya-modules.ts",
+      "packages/shared/src/lipi-civilization-matrix.ts",
+      "packages/shared/src/hkd3d.ts",
+      "packages/shared/src/persistence-scopes.ts",
+      "packages/shared/src/universes.ts"
+    ]
+  },
+  "counts": {
+    "nextAppPages": 18,
+    "apiRoutes": 19,
+    "ayodhyaGenerated": 15,
+    "lipiGenerated": 11,
+    "hkd3dGenerated": 18,
+    "persistenceScopesGenerated": 42,
+    "universesGenerated": 22,
+    "radioStaticArtifacts": 23,
+    "totalRecords": 168
+  },
+  "catalogHtml": "/radio-html/routes/index.html",
+  "groups": [
+    {
+      "key": "next-app-pages",
+      "routes": ["/", "/admin", "/ayodhya", "/dashboard", "/dictionary", "/hkd-banners", "/hkd3d", "/lineage", "/lipi", "/projects/new", "/radio", "/radio/frame", "/radio/runtime", "/radio/storyboard", "/scopes", "/sprints", "/universes", "/wireframes"]
+    },
+    {
+      "key": "api-routes",
+      "routes": ["/api/analytics", "/api/assistant", "/api/civilizations", "/api/export", "/api/guru-maataa", "/api/hkd3d", "/api/import", "/api/knowledge-graph", "/api/lipi", "/api/pitra", "/api/rishi", "/api/rishika", "/api/sanskrit-dictionary", "/api/search", "/api/subjects", "/api/texts", "/api/timeline", "/api/universal-dictionary", "/radio-html/suno_backup/[...assetPath]"]
+    },
+    {
+      "key": "ayodhya-generated",
+      "routes": ["/ayodhya/scripts", "/ayodhya/storyboards", "/ayodhya/images", "/ayodhya/videos", "/ayodhya/voice", "/ayodhya/lipsync", "/ayodhya/assets", "/ayodhya/characters", "/ayodhya/hkd3d", "/ayodhya/locations", "/ayodhya/bhakti", "/ayodhya/ramayana", "/ayodhya/phkd", "/ayodhya/studio", "/ayodhya/status"]
+    },
+    {
+      "key": "lipi-generated",
+      "routes": ["/lipi/civilization", "/lipi/religion", "/lipi/language", "/lipi/script", "/lipi/glyph-atlas", "/lipi/ipa", "/lipi/timeline", "/lipi/manuscript", "/lipi/inscription", "/lipi/evidence", "/lipi/knowledge-graph"]
+    },
+    {
+      "key": "hkd3d-generated",
+      "routes": ["/hkd3d/stages/base-human-model", "/hkd3d/stages/texture-system", "/hkd3d/stages/rig-system", "/hkd3d/stages/blendshapes", "/hkd3d/stages/animation-library", "/hkd3d/stages/facial-runtime", "/hkd3d/stages/lighting-runtime", "/hkd3d/stages/clothing-system", "/hkd3d/stages/hair-system", "/hkd3d/stages/export-runtime", "/hkd3d/characters/ram", "/hkd3d/characters/sita", "/hkd3d/characters/lakshman", "/hkd3d/characters/hanuman", "/hkd3d/characters/bharat", "/hkd3d/characters/shatrughna", "/hkd3d/characters/valmiki", "/hkd3d/characters/vishwamitra"]
+    },
+    {
+      "key": "persistence-scopes-generated",
+      "routes": ["/scopes/all", "/scopes/pitra", "/scopes/guru-maataa", "/scopes/rishi", "/scopes/rishika", "/scopes/civilizations", "/scopes/subjects", "/scopes/texts", "/scopes/timeline", "/scopes/locations", "/scopes/institutions", "/scopes/discoveries", "/scopes/innovations", "/scopes/media", "/scopes/research", "/scopes/courses", "/scopes/lineages", "/scopes/relationships", "/scopes/audit", "/scopes/sanskrit-dictionary", "/scopes/universal-knowledge-lineage-explorer", "/scopes/pitra-universe", "/scopes/guru-maataa-universe", "/scopes/rishi-universe", "/scopes/rishika-universe", "/scopes/parampara-universe", "/scopes/civilization-universe", "/scopes/knowledge-universe", "/scopes/subject-universe", "/scopes/text-universe", "/scopes/timeline-universe", "/scopes/geography-universe", "/scopes/knowledge-graph-universe", "/scopes/education-universe", "/scopes/research-universe", "/scopes/community-universe", "/scopes/media-universe", "/scopes/ai-universe", "/scopes/observatory-universe", "/scopes/future-knowledge-universe", "/scopes/governance-universe", "/scopes/universal-command-center"]
+    },
+    {
+      "key": "universes-generated",
+      "routes": ["/universes/universal-knowledge-lineage-explorer", "/universes/pitra-universe", "/universes/guru-maataa-universe", "/universes/rishi-universe", "/universes/rishika-universe", "/universes/parampara-universe", "/universes/civilization-universe", "/universes/knowledge-universe", "/universes/subject-universe", "/universes/text-universe", "/universes/timeline-universe", "/universes/geography-universe", "/universes/knowledge-graph-universe", "/universes/education-universe", "/universes/research-universe", "/universes/community-universe", "/universes/media-universe", "/universes/ai-universe", "/universes/observatory-universe", "/universes/future-knowledge-universe", "/universes/governance-universe", "/universes/universal-command-center"]
+    },
+    {
+      "key": "radio-static-artifacts",
+      "routes": ["/radio-html/index.html", "/radio-html/Radio_Vaigyaaniq_Full_App.html", "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html", "/radio-html/Radio_Vaigyaaniq_App_Prototype.html", "/radio-html/Radio_Vaigyaaniq_Maataa.html", "/radio-html/structure/index.html", "/radio-html/routes/index.html", "/radio-html/surfaces/index.html", "/radio-html/surfaces/landing.html", "/radio-html/surfaces/runtime.html", "/radio-html/surfaces/runtimes-workflows.html", "/radio-html/surfaces/ascii-wireframes.html", "/radio-html/surfaces/visualizer.html", "/radio-html/surfaces/lyrics.html", "/radio-html/surfaces/tts.html", "/radio-html/surfaces/social-gift.html", "/radio-html/surfaces/storyboard.html", "/radio-html/surfaces/evidence-export.html", "/radio-html/surfaces/scaffold.html", "/radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json", "/radio-html/Radio_Vaigyaaniq_Future_Structure.json", "/radio-html/Radio_Vaigyaaniq_Route_Catalog.json", "/radio-html/Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md"]
+    }
+  ]
+}

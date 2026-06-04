@@ -33,6 +33,11 @@
       "path": "/radio-html/structure",
       "purpose": "Future folder architecture map",
       "status": "implemented"
+    },
+    {
+      "path": "/radio-html/routes",
+      "purpose": "All app, API, generated, and static route catalog",
+      "status": "implemented"
     }
   ],
   "htmlInventory": [
@@ -42,6 +47,7 @@
     { "path": "/radio-html/Radio_Vaigyaaniq_App_Prototype.html", "role": "Original mobile/app prototype", "futureLane": "imports/html-archive" },
     { "path": "/radio-html/Radio_Vaigyaaniq_Maataa.html", "role": "Maataa radio prototype surface", "futureLane": "imports/html-archive" },
     { "path": "/radio-html/structure/index.html", "role": "Future structure map", "futureLane": "structure" },
+    { "path": "/radio-html/routes/index.html", "role": "Route catalog for app, API, generated, and static routes", "futureLane": "docs/route-map" },
     { "path": "/radio-html/surfaces/index.html", "role": "Standalone surface index", "futureLane": "surfaces/index" },
     { "path": "/radio-html/surfaces/landing.html", "role": "Landing command surface", "futureLane": "surfaces/landing" },
     { "path": "/radio-html/surfaces/runtime.html", "role": "Live runtime surface", "futureLane": "surfaces/runtime" },
@@ -69,6 +75,7 @@
     { "path": "/radio-html/imports", "purpose": "Raw incoming HTML, JSON, CSV, Markdown, and HKD documents", "migration": "future" },
     { "path": "/radio-html/exports", "purpose": "Generated HKD, LRC, JSON, and WebM draft artifacts", "migration": "future" },
     { "path": "/radio-html/docs", "purpose": "Wireframes, storyboards, QA, release, and evidence notes", "migration": "future" },
+    { "path": "/radio-html/routes", "purpose": "Browser-openable route inventory and route catalog manifest", "migration": "existing root" },
     { "path": "/radio-html/structure", "purpose": "Architecture maps and manifests", "migration": "existing root" }
   ],
   "migrationPhases": [
