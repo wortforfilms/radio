@@ -56,8 +56,8 @@
       <section class="surface-hero">
         <div>
           <p class="eyebrow">ASCII Wireframes</p>
-          <h1>All Unique Surface Skeletons</h1>
-          <p>Terminal-style wireframes for every standalone Radio surface. These are layout skeletons only; they do not verify content, audio, payment, telemetry, or production readiness.</p>
+          <h1>Full Application ASCII Wireframes</h1>
+          <p>Terminal-style wireframes for every standalone Radio surface plus the application route map, data flow, navigation, runtime state, persistence, QA, and operator journey. These are layout skeletons only; they do not verify content, audio, payment, telemetry, or production readiness.</p>
           <div class="surface-actions">
             <a href="./index.html">Surface Index</a>
             <a href="./runtimes-workflows.html">Runtimes + Workflows</a>
@@ -66,8 +66,8 @@
         </div>
         <div class="status-chip">
           <span>Wireframes</span>
-          <b>11</b>
-          <small>unique surfaces</small>
+          <b>21</b>
+          <small>application frames</small>
         </div>
       </section>
 
@@ -240,6 +240,196 @@
 | Contracts: station track lyricCue storyboardShot hkdExport                     |
 | Events: route station track tts visualizer lyrics gift export                  |
 | QA: npm test / npm run build / JSON parse / PHKD boundaries                    |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-12</span>
+          <h2>Full Application Route Map</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | FULL APP ROUTE MAP                                  | ENTRYPOINTS 12      |
+|----+-----------------------------------------------------+---------------------|
+| /radio                         -> React runtime shell                         |
+| /radio/runtime                 -> live runtime route                          |
+| /radio/frame                   -> focused frame route                         |
+| /radio/storyboard              -> storyboard route                            |
+| /radio-html/index.html         -> static catalog                              |
+| /radio-html/Radio_Vaigyaaniq_Full_App.html -> standalone full app             |
+| /radio-html/surfaces/index.html             -> surface kit index              |
+| /radio-html/surfaces/*.html                 -> dedicated runtime surfaces     |
+|--------------------------------------------------------------------------------|
+| PHKD: file route availability does not equal production approval               |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-13</span>
+          <h2>Full App Data Flow</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | FULL APP DATA FLOW                                  | PROVENANCE FIRST    |
+|----+----------------------+----------------------+---------------------------|
+| SOURCE INPUTS             | NORMALIZED MODELS    | RENDERED SURFACES         |
+| - URL params              | station              | landing                   |
+| - uploaded HTML           | track                | runtime                   |
+| - lyric text              | lyricCue             | lyrics scribe             |
+| - audio file/mic          | visualizerScene      | visualizer                |
+| - local action intent     | giftIntent           | social/gift               |
+| - scaffold JSON           | hkdExport            | evidence/export           |
+|--------------------------------------------------------------------------------|
+| GUARD: unknown source, creator, citation, receipt, or timing => NULL           |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-14</span>
+          <h2>Navigation Information Architecture</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | NAV IA                                               | GLOBAL RAIL        |
+|----+------------------------------------------------------+--------------------|
+| LEFT RAIL                                                                     |
+| Home -> Landing                                                               |
+| Radio -> Runtime                                                              |
+| Visual -> 3D visualizer                                                       |
+| Lyrics -> synced scribe                                                       |
+| Samaya -> announcement TTS                                                    |
+| Story -> storyboard                                                           |
+| Evidence -> export center                                                     |
+| Scaffold -> implementation map                                                |
+|--------------------------------------------------------------------------------|
+| SECONDARY: surface index / full app / scaffold JSON / PHKD notes              |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-15</span>
+          <h2>Runtime Event Bus</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | RUNTIME EVENT BUS                                    | FAIL CLOSED        |
+|----+------------------------------------------------------+--------------------|
+| route:selected       -> load surface frame                                     |
+| station:selected     -> update station + tuner                                |
+| track:selected       -> update title + source metadata                        |
+| player:toggle        -> local playback intent                                 |
+| tts:speak            -> browser speech synthesis                              |
+| visualizer:scene     -> switch Three.js scene                                 |
+| lyrics:markLine      -> draft cue at playhead                                 |
+| gift:intentOpened    -> modal only, receipt NULL                              |
+| export:requested     -> write local draft artifact                             |
+|--------------------------------------------------------------------------------|
+| No event can promote verification state without evidence                       |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-16</span>
+          <h2>Import Export Evidence Flow</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | IMPORT / EXPORT EVIDENCE FLOW                       | DRAFT ARTIFACTS    |
+|----+----------------------------+-------------------------+--------------------|
+| IMPORT                         | VALIDATE                | EXPORT             |
+| JSON                           | parse schema            | JSON               |
+| CSV                            | normalize columns       | CSV                |
+| Markdown                       | preserve body/source    | Markdown           |
+| HKD                            | keep provenance         | HKD                |
+| HTML                           | extract surfaces        | standalone HTML    |
+| Audio                          | browser-only evidence   | WebM draft         |
+|--------------------------------------------------------------------------------|
+| Evidence card stores source, creator, status, date, verification_state         |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-17</span>
+          <h2>Responsive Layout States</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | RESPONSIVE STATES                                    | MOBILE FIRST       |
+|----+------------------------------------------------------+--------------------|
+| DESKTOP >= 1024                                                                |
+| [rail 72] [main grid: hero + panels + player footer]                           |
+|--------------------------------------------------------------------------------|
+| TABLET 768-1023                                                                |
+| [top rail wraps] [two-column cards] [sticky player]                            |
+|--------------------------------------------------------------------------------|
+| MOBILE < 768                                                                   |
+| [compact header] [single column] [actions wrap] [player stack]                 |
+|--------------------------------------------------------------------------------|
+| Rule: text wraps inside controls; no overlay claims without visual QA          |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-18</span>
+          <h2>Modal Error Empty States</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | MODAL / ERROR / EMPTY STATE MATRIX                    | SAFE UX           |
+|----+-------------------------------------------------------+-------------------|
+| MODALS: Gift Intent / Project Intake / Export / Persona / Upload              |
+| EMPTY: no audio loaded / no lyric cues / no station selected / no evidence    |
+| ERROR: mic denied / file parse failed / export failed / unsupported browser    |
+| LOADING: importing / rendering visualizer / building export / scanning HTML    |
+|--------------------------------------------------------------------------------|
+| All blocked flows show reason + next local action, never hidden success        |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-19</span>
+          <h2>Storage Persistence Boundary</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | STORAGE BOUNDARY                                     | LOCAL DRAFT        |
+|----+------------------------------------------------------+--------------------|
+| Browser State                                                                  |
+| - selected station                                                             |
+| - current visualizer scene                                                     |
+| - lyric cue draft                                                              |
+| - local likes/saves                                                            |
+|--------------------------------------------------------------------------------|
+| File Artifacts                                                                 |
+| - scaffold JSON                                                                |
+| - HKD export                                                                   |
+| - LRC export                                                                   |
+| - WebM export                                                                  |
+|--------------------------------------------------------------------------------|
+| Server persistence is NULL unless connected route/API evidence exists          |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-20</span>
+          <h2>QA Release Gate Board</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | QA RELEASE GATES                                      | NO AUTO APPROVAL   |
+|----+------------------------------------------------------+--------------------|
+| CODE: npm test                                      [required]                 |
+| BUILD: npm run build                                [required]                 |
+| STATIC: HTML opens + links resolve                   [manual/browser needed]   |
+| THREE: canvas nonblank + resize + scene switch       [manual/browser needed]   |
+| AUDIO: mic/file permission + visual response         [manual/browser needed]   |
+| EXPORT: JSON/LRC/WebM saves                          [manual/browser needed]   |
+| PHKD: unknown values remain NULL                     [required]                 |
+|--------------------------------------------------------------------------------|
+| Gate result can be pass, fail, blocked, or not-run only                        |
++--------------------------------------------------------------------------------+</pre>
+        </article>
+
+        <article class="ascii-card">
+          <span class="surface-label">WF-21</span>
+          <h2>End-to-End Operator Journey</h2>
+<pre>+--------------------------------------------------------------------------------+
+| RV | END-TO-END OPERATOR JOURNEY                         | RADIO OPS          |
+|----+-----------------------------------------------------+---------------------|
+| 01 Open /radio or standalone full app                                        |
+| 02 Pick station from runtime grid                                             |
+| 03 Review Samaya card: muhurat, utsav, divas, vishaya                         |
+| 04 Speak announcement with selected persona                                   |
+| 05 Load audio or mic into 3D visualizer                                       |
+| 06 Select cinematic visualization scene                                      |
+| 07 Scribe lyrics and mark cue timings                                        |
+| 08 Like, save, share, or open gift intent modal                              |
+| 09 Create Ayodhya project from current track context                          |
+| 10 Export HKD/LRC/JSON/WebM draft with provenance                             |
+|--------------------------------------------------------------------------------|
+| Final screen: evidence summary + NULLs still visible                          |
 +--------------------------------------------------------------------------------+</pre>
         </article>
       </section>
