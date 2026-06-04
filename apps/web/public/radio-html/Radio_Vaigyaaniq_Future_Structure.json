@@ -35,6 +35,26 @@
       "status": "implemented"
     }
   ],
+  "htmlInventory": [
+    { "path": "/radio-html/index.html", "role": "Static HTML archive index", "futureLane": "app/catalog" },
+    { "path": "/radio-html/Radio_Vaigyaaniq_Full_App.html", "role": "Standalone full app shell", "futureLane": "app/full-app" },
+    { "path": "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html", "role": "Absorbed UX dashboard prototype", "futureLane": "imports/html-archive" },
+    { "path": "/radio-html/Radio_Vaigyaaniq_App_Prototype.html", "role": "Original mobile/app prototype", "futureLane": "imports/html-archive" },
+    { "path": "/radio-html/Radio_Vaigyaaniq_Maataa.html", "role": "Maataa radio prototype surface", "futureLane": "imports/html-archive" },
+    { "path": "/radio-html/structure/index.html", "role": "Future structure map", "futureLane": "structure" },
+    { "path": "/radio-html/surfaces/index.html", "role": "Standalone surface index", "futureLane": "surfaces/index" },
+    { "path": "/radio-html/surfaces/landing.html", "role": "Landing command surface", "futureLane": "surfaces/landing" },
+    { "path": "/radio-html/surfaces/runtime.html", "role": "Live runtime surface", "futureLane": "surfaces/runtime" },
+    { "path": "/radio-html/surfaces/runtimes-workflows.html", "role": "Runtime and workflow board", "futureLane": "workflows/overview" },
+    { "path": "/radio-html/surfaces/ascii-wireframes.html", "role": "Full application ASCII wireframes", "futureLane": "docs/wireframes" },
+    { "path": "/radio-html/surfaces/visualizer.html", "role": "3D visualizer surface", "futureLane": "surfaces/visualizer" },
+    { "path": "/radio-html/surfaces/lyrics.html", "role": "Synced lyrics scribe surface", "futureLane": "surfaces/lyrics" },
+    { "path": "/radio-html/surfaces/tts.html", "role": "Persona TTS Samaya surface", "futureLane": "surfaces/tts" },
+    { "path": "/radio-html/surfaces/social-gift.html", "role": "Social actions and gift intent surface", "futureLane": "surfaces/social" },
+    { "path": "/radio-html/surfaces/storyboard.html", "role": "Storyboard coverage surface", "futureLane": "docs/storyboards" },
+    { "path": "/radio-html/surfaces/evidence-export.html", "role": "Evidence and export boundary surface", "futureLane": "surfaces/evidence" },
+    { "path": "/radio-html/surfaces/scaffold.html", "role": "Implementation scaffold surface", "futureLane": "docs/release" }
+  ],
   "futureRoots": [
     { "path": "/radio-html/app", "purpose": "Complete app shells and standalone frames", "migration": "future" },
     { "path": "/radio-html/surfaces", "purpose": "Individual user-facing pages grouped by runtime area", "migration": "existing root, future subfolders" },
