@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Vaigyaaniq - Image Landing</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+  <style>
+    .image-hero {
+      min-height: min(76vh, 760px);
+      align-items: end;
+    }
+
+    .image-hero::after {
+      background:
+        linear-gradient(90deg, rgba(5,11,16,.96), rgba(5,11,16,.62) 46%, rgba(5,11,16,.18)),
+        linear-gradient(0deg, rgba(5,11,16,.92), rgba(5,11,16,.12) 66%);
+    }
+
+    .image-strip {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr .8fr;
+      gap: 14px;
+    }
+
+    .image-frame {
+      position: relative;
+      min-height: 280px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #050b10;
+    }
+
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      min-height: inherit;
+      object-fit: cover;
+      display: block;
+    }
+
+    .image-frame figcaption {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 8px;
+      padding: 12px;
+      background: rgba(5,11,16,.78);
+      backdrop-filter: blur(14px);
+      color: var(--white);
+      font-weight: 850;
+    }
+
+    .cover-wall {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .cover-wall a {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .cover-wall img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cover-wall span {
+      display: block;
+      padding: 12px;
+      color: var(--white);
+      font-weight: 850;
+    }
+
+    .evidence-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .evidence-table th,
+    .evidence-table td {
+      padding: 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      color: var(--muted);
+      vertical-align: top;
+    }
+
+    .evidence-table th {
+      color: var(--orange);
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .evidence-table tr:last-child td { border-bottom: 0; }
+    .evidence-table code { color: #d7fff8; overflow-wrap: anywhere; }
+
+    @media (max-width: 900px) {
+      .image-strip,
+      .cover-wall {
+        grid-template-columns: 1fr;
+      }
+
+      .image-frame {
+        min-height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav>
+        <a href="./index.html">Index</a>
+        <a href="./landing.html">Landing</a>
+        <a href="./runtime.html">Runtime</a>
+        <a href="../assets/index.html">Assets</a>
+      </nav>
+      <span>PHKD</span>
+    </aside>
+
+    <section class="surface-main">
+      <section class="surface-hero with-image image-hero">
+        <img src="../assets/radio-vaigyaaniq-divine-hero.png" alt="" aria-hidden="true">
+        <div>
+          <p class="eyebrow">Image Landing</p>
+          <h1>Radio Vaigyaaniq Visual System</h1>
+          <p>A visual-first landing surface for the Radio Vaigyaaniq archive. It promotes only local draft image assets, preserves source paths, and leaves audio, payments, and production claims as NULL.</p>
+          <div class="surface-actions">
+            <a href="../assets/index.html">Open Asset Catalog</a>
+            <a href="./runtime.html">Runtime Surface</a>
+            <a href="../Radio_Vaigyaaniq_Asset_Manifest.json">Manifest JSON</a>
+          </div>
+        </div>
+        <div class="status-chip">
+          <span>Visual Assets</span>
+          <b>12</b>
+          <small>images + covers + icons shown</small>
+        </div>
+      </section>
+
+      <section class="image-strip" aria-label="Hero image set">
+        <figure class="image-frame">
+          <img src="../assets/radio-vaigyaaniq-landing-hero.png" alt="Radio Vaigyaaniq landing hero asset">
+          <figcaption><span>Landing Hero</span><small>existing-local draft</small></figcaption>
+        </figure>
+        <figure class="image-frame">
+          <img src="../assets/images/radio-vaigyaaniq-runtime-hero.svg" alt="Runtime hero SVG asset">
+          <figcaption><span>Runtime Hero</span><small>generated-draft</small></figcaption>
+        </figure>
+        <figure class="image-frame">
+          <img src="../assets/images/radio-vaigyaaniq-samaya-panel.svg" alt="Samaya panel SVG asset">
+          <figcaption><span>Samaya Panel</span><small>generated-draft</small></figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <p class="eyebrow">Station Covers</p>
+        <div class="cover-wall">
+          <a href="../assets/covers/mahamatya.svg"><img src="../assets/covers/mahamatya.svg" alt="Mahamatya station cover"><span>Mahamatya</span></a>
+          <a href="../assets/covers/gokul.svg"><img src="../assets/covers/gokul.svg" alt="Gokul station cover"><span>Gokul</span></a>
+          <a href="../assets/covers/kaal-chakra.svg"><img src="../assets/covers/kaal-chakra.svg" alt="Kaal Chakra station cover"><span>Kaal Chakra</span></a>
+          <a href="../assets/covers/swarnim-sale.svg"><img src="../assets/covers/swarnim-sale.svg" alt="Swarnim Sale station cover"><span>Swarnim Sale</span></a>
+        </div>
+      </section>
+
+      <section class="surface-grid three">
+        <article class="surface-card"><span class="surface-label">Purpose</span><b>Image-led entry</b><p>Use this page when the app needs a visual landing before runtime, catalog, or storyboard navigation.</p></article>
+        <article class="surface-card"><span class="surface-label">Guardrail</span><b>Fail closed</b><p>No generated audio, payment, stream, scan, or production readiness claim is made from this surface.</p></article>
+        <article class="surface-card"><span class="surface-label">Next Link</span><b>Runtime</b><p>Move from this visual entry into tuner, station, Samaya, social, and evidence surfaces.</p></article>
+      </section>
+
+      <section>
+        <p class="eyebrow">Evidence Boundaries</p>
+        <table class="evidence-table">
+          <thead>
+            <tr><th>Scope</th><th>Status</th><th>Evidence Path</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Hero bitmap assets</td><td>existing-local draft</td><td><code>/radio-html/assets/radio-vaigyaaniq-landing-hero.png</code><br><code>/radio-html/assets/radio-vaigyaaniq-divine-hero.png</code></td></tr>
+            <tr><td>Generated SVG assets</td><td>generated-draft</td><td><code>/radio-html/assets/images</code><br><code>/radio-html/assets/covers</code><br><code>/radio-html/assets/icons</code></td></tr>
+            <tr><td>Audio assets</td><td>NULL</td><td><code>/radio-html/assets/audio/PHKD_AUDIO_PLACEHOLDER.json</code></td></tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

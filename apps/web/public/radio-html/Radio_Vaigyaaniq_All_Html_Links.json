@@ -13,8 +13,8 @@
     ]
   },
   "counts": {
-    "webHtml": 22,
-    "desktopHtml": 22
+    "webHtml": 23,
+    "desktopHtml": 23
   },
   "servedIndex": "/radio-html/all-html.html",
   "groups": [
@@ -46,6 +46,7 @@
       "links": [
         { "title": "All Surfaces", "path": "/radio-html/surfaces/index.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/index.html" },
         { "title": "Landing", "path": "/radio-html/surfaces/landing.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/landing.html" },
+        { "title": "Image Landing", "path": "/radio-html/surfaces/image-landing.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/image-landing.html" },
         { "title": "Runtime", "path": "/radio-html/surfaces/runtime.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/runtime.html" },
         { "title": "Runtimes And Workflows", "path": "/radio-html/surfaces/runtimes-workflows.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/runtimes-workflows.html" },
         { "title": "ASCII Wireframes", "path": "/radio-html/surfaces/ascii-wireframes.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/ascii-wireframes.html" },

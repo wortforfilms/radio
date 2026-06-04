@@ -14,7 +14,7 @@
     ]
   },
   "counts": {
-    "matrixRows": 31,
+    "matrixRows": 32,
     "groups": 6
   },
   "matrixHtml": "/radio-html/routes/html-vs-real-route-matrix.html",
@@ -122,6 +122,14 @@
           "realRoute": "served-static",
           "desktopCopy": "/apps/desktop/public/radio-html/surfaces/index.html",
           "source": "apps/web/public/radio-html/surfaces/index.html",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Image Landing",
+          "staticHtml": "/radio-html/surfaces/image-landing.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/image-landing.html",
+          "source": "apps/web/public/radio-html/surfaces/image-landing.html",
           "state": "implemented-draft"
         },
         {

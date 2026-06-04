@@ -53,6 +53,7 @@
     { "path": "/radio-html/routes/html-vs-real-route-matrix.html", "role": "HTML artifact vs real route matrix", "futureLane": "docs/route-map" },
     { "path": "/radio-html/surfaces/index.html", "role": "Standalone surface index", "futureLane": "surfaces/index" },
     { "path": "/radio-html/surfaces/landing.html", "role": "Landing command surface", "futureLane": "surfaces/landing" },
+    { "path": "/radio-html/surfaces/image-landing.html", "role": "Image-led landing surface", "futureLane": "surfaces/landing" },
     { "path": "/radio-html/surfaces/runtime.html", "role": "Live runtime surface", "futureLane": "surfaces/runtime" },
     { "path": "/radio-html/surfaces/runtimes-workflows.html", "role": "Runtime and workflow board", "futureLane": "workflows/overview" },
     { "path": "/radio-html/surfaces/ascii-wireframes.html", "role": "Full application ASCII wireframes", "futureLane": "docs/wireframes" },
