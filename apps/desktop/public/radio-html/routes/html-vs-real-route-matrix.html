@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Vaigyaaniq - HTML vs Real Route Matrix</title>
+  <link rel="stylesheet" href="../surfaces/surface-kit.css">
+  <style>
+    .matrix-summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .matrix-summary article,
+    .matrix-note,
+    .matrix-group {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .matrix-summary article {
+      padding: 14px;
+    }
+
+    .matrix-summary span,
+    .matrix-table th {
+      color: var(--muted);
+      font: 11px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .matrix-summary b {
+      display: block;
+      margin-top: 6px;
+      color: var(--ink);
+      font-size: 26px;
+    }
+
+    .matrix-note {
+      padding: 16px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .matrix-note strong {
+      color: var(--ink);
+    }
+
+    .matrix-groups {
+      display: grid;
+      gap: 18px;
+    }
+
+    .matrix-group {
+      overflow: hidden;
+    }
+
+    .matrix-heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+
+    .matrix-heading h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 18px;
+    }
+
+    .matrix-heading small {
+      color: var(--muted);
+      font: 11px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .matrix-table th,
+    .matrix-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      text-align: left;
+      vertical-align: top;
+      font-size: 13px;
+    }
+
+    .matrix-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .matrix-table a {
+      color: #d7fff8;
+      text-decoration: none;
+    }
+
+    .matrix-table a:hover {
+      color: var(--accent);
+    }
+
+    .matrix-code {
+      font: 12px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      color: #d7fff8;
+      overflow-wrap: anywhere;
+    }
+
+    .matrix-null {
+      color: #ffb7a0;
+    }
+
+    .matrix-chip {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 999px;
+      padding: 3px 8px;
+      color: var(--muted);
+      font: 10px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .matrix-chip.implemented-draft {
+      border-color: rgba(0,245,212,.35);
+      color: #d7fff8;
+    }
+
+    .matrix-chip.route-only,
+    .matrix-chip.api-route {
+      border-color: rgba(255,107,53,.45);
+      color: #ffb7a0;
+    }
+
+    @media (max-width: 900px) {
+      .matrix-table,
+      .matrix-table tbody,
+      .matrix-table tr,
+      .matrix-table td {
+        display: block;
+      }
+
+      .matrix-table thead {
+        display: none;
+      }
+
+      .matrix-table td::before {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--muted);
+        font: 10px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        content: attr(data-label);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav>
+        <a href="../index.html">HTML</a>
+        <a href="./index.html">Routes</a>
+        <a href="../structure/index.html">Structure</a>
+        <a href="../surfaces/index.html">Surfaces</a>
+      </nav>
+      <span>PHKD</span>
+    </aside>
+
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">Route Evidence Matrix</p>
+          <h1>HTML Artifact vs Real Route</h1>
+          <p>Side-by-side routing evidence for Radio Vaigyaaniq: static archive files, served public URLs, real Next.js pages or APIs, and desktop-bundled copies. Unknowns are kept as NULL.</p>
+          <div class="surface-actions">
+            <a href="../Radio_Vaigyaaniq_Html_Route_Matrix.json">Matrix JSON</a>
+            <a href="./index.html">All Routes</a>
+            <a href="../Radio_Vaigyaaniq_Route_Catalog.json">Route Catalog JSON</a>
+            <a href="../structure/index.html">Structure Map</a>
+          </div>
+        </div>
+        <div class="status-chip">
+          <span>Mode</span>
+          <b id="matrixRows">0</b>
+          <small>matrix rows</small>
+        </div>
+      </section>
+
+      <section class="matrix-summary" id="matrixSummary"></section>
+
+      <section class="matrix-note">
+        <strong>PHKD boundary:</strong> A browser-openable HTML file, a real Next.js route, and a desktop/Tauri copy are separate evidence claims. This matrix maps availability only; it does not verify audio streams, payment, production release, external telemetry, or runtime health.
+      </section>
+
+      <section class="matrix-groups" id="matrixGroups"></section>
+    </section>
+  </main>
+
+  <script>
+    const appBase = "http://127.0.0.1:3000";
+    const desktopBase = "apps/desktop/public/radio-html";
+    const matrix = {
+      generatedAt: "2026-06-04",
+      verificationState: "draft",
+      groups: [
+        {
+          key: "core-radio-surfaces",
+          title: "Core Radio Surfaces",
+          rows: [
+            ["Radio React Landing", "/radio-html/surfaces/landing.html", "/radio", "/apps/desktop/public/radio-html/surfaces/landing.html", "apps/web/app/radio/page.tsx", "implemented-draft"],
+            ["Radio Runtime", "/radio-html/surfaces/runtime.html", "/radio/runtime", "/apps/desktop/public/radio-html/surfaces/runtime.html", "apps/web/app/radio/runtime/page.tsx", "implemented-draft"],
+            ["Absorbed Three.js Frame", "NULL", "/radio/frame", "NULL", "apps/web/app/radio/frame/page.tsx", "route-only"],
+            ["Radio Storyboard", "/radio-html/surfaces/storyboard.html", "/radio/storyboard", "/apps/desktop/public/radio-html/surfaces/storyboard.html", "apps/web/app/radio/storyboard/page.tsx", "implemented-draft"]
+          ]
+        },
+        {
+          key: "standalone-html-archive",
+          title: "Standalone HTML Archive",
+          rows: [
+            ["Radio HTML Index", "/radio-html/index.html", "served-static", "/apps/desktop/public/radio-html/index.html", "apps/web/public/radio-html/index.html", "implemented-draft"],
+            ["Full App HTML", "/radio-html/Radio_Vaigyaaniq_Full_App.html", "served-static", "/apps/desktop/public/radio-html/Radio_Vaigyaaniq_Full_App.html", "apps/web/public/radio-html/Radio_Vaigyaaniq_Full_App.html", "implemented-draft"],
+            ["UX Dashboard Prototype", "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html", "served-static", "/apps/desktop/public/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html", "apps/web/public/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html", "implemented-draft"],
+            ["Mobile App Prototype", "/radio-html/Radio_Vaigyaaniq_App_Prototype.html", "served-static", "/apps/desktop/public/radio-html/Radio_Vaigyaaniq_App_Prototype.html", "apps/web/public/radio-html/Radio_Vaigyaaniq_App_Prototype.html", "implemented-draft"],
+            ["Maataa Prototype", "/radio-html/Radio_Vaigyaaniq_Maataa.html", "served-static", "/apps/desktop/public/radio-html/Radio_Vaigyaaniq_Maataa.html", "apps/web/public/radio-html/Radio_Vaigyaaniq_Maataa.html", "implemented-draft"]
+          ]
+        },
+        {
+          key: "html-surface-modules",
+          title: "HTML Surface Modules",
+          rows: [
+            ["All Surfaces Index", "/radio-html/surfaces/index.html", "served-static", "/apps/desktop/public/radio-html/surfaces/index.html", "apps/web/public/radio-html/surfaces/index.html", "implemented-draft"],
+            ["Runtime And Workflows", "/radio-html/surfaces/runtimes-workflows.html", "served-static", "/apps/desktop/public/radio-html/surfaces/runtimes-workflows.html", "apps/web/public/radio-html/surfaces/runtimes-workflows.html", "implemented-draft"],
+            ["ASCII Wireframes", "/radio-html/surfaces/ascii-wireframes.html", "served-static", "/apps/desktop/public/radio-html/surfaces/ascii-wireframes.html", "apps/web/public/radio-html/surfaces/ascii-wireframes.html", "implemented-draft"],
+            ["3D Visualizer", "/radio-html/surfaces/visualizer.html", "served-static", "/apps/desktop/public/radio-html/surfaces/visualizer.html", "apps/web/public/radio-html/surfaces/visualizer.html", "implemented-draft"],
+            ["Synced Lyrics", "/radio-html/surfaces/lyrics.html", "served-static", "/apps/desktop/public/radio-html/surfaces/lyrics.html", "apps/web/public/radio-html/surfaces/lyrics.html", "implemented-draft"],
+            ["Persona TTS", "/radio-html/surfaces/tts.html", "served-static", "/apps/desktop/public/radio-html/surfaces/tts.html", "apps/web/public/radio-html/surfaces/tts.html", "implemented-draft"],
+            ["Social And Gift", "/radio-html/surfaces/social-gift.html", "served-static", "/apps/desktop/public/radio-html/surfaces/social-gift.html", "apps/web/public/radio-html/surfaces/social-gift.html", "implemented-draft"],
+            ["Evidence And Export", "/radio-html/surfaces/evidence-export.html", "served-static", "/apps/desktop/public/radio-html/surfaces/evidence-export.html", "apps/web/public/radio-html/surfaces/evidence-export.html", "implemented-draft"],
+            ["Scaffold", "/radio-html/surfaces/scaffold.html", "served-static", "/apps/desktop/public/radio-html/surfaces/scaffold.html", "apps/web/public/radio-html/surfaces/scaffold.html", "implemented-draft"]
+          ]
+        },
+        {
+          key: "catalog-and-structure",
+          title: "Catalog And Structure",
+          rows: [
+            ["All Routes Catalog", "/radio-html/routes/index.html", "served-static", "/apps/desktop/public/radio-html/routes/index.html", "apps/web/public/radio-html/Radio_Vaigyaaniq_Route_Catalog.json", "implemented-draft"],
+            ["HTML vs Real Route Matrix", "/radio-html/routes/html-vs-real-route-matrix.html", "served-static", "/apps/desktop/public/radio-html/routes/html-vs-real-route-matrix.html", "apps/web/public/radio-html/Radio_Vaigyaaniq_Html_Route_Matrix.json", "implemented-draft"],
+            ["Future Structure", "/radio-html/structure/index.html", "served-static", "/apps/desktop/public/radio-html/structure/index.html", "apps/web/public/radio-html/Radio_Vaigyaaniq_Future_Structure.json", "implemented-draft"],
+            ["Full App Scaffold Manifest", "/radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json", "served-static-json", "/apps/desktop/public/radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json", "apps/web/public/radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json", "implemented-draft"],
+            ["Tauri Shipping Prompt", "/radio-html/Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md", "served-static-md", "/apps/desktop/public/radio-html/Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md", "apps/web/public/radio-html/Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md", "implemented-draft"]
+          ]
+        },
+        {
+          key: "real-next-and-api-routes",
+          title: "Real Next And API Routes",
+          rows: [
+            ["HKD Banners", "NULL", "/hkd-banners", "NULL", "apps/web/app/hkd-banners/page.tsx", "route-only"],
+            ["Ayodhya AI", "NULL", "/ayodhya", "NULL", "apps/web/app/ayodhya/page.tsx", "route-only"],
+            ["Lipi Explorer", "NULL", "/lipi", "NULL", "apps/web/app/lipi/page.tsx", "route-only"],
+            ["Universal Dictionary", "NULL", "/dictionary", "NULL", "apps/web/app/dictionary/page.tsx", "route-only"],
+            ["Radio Export API", "NULL", "/api/export", "NULL", "apps/web/app/api/export/route.ts", "api-route"]
+          ]
+        },
+        {
+          key: "desktop-tauri",
+          title: "Desktop Tauri Bundle",
+          rows: [
+            ["Desktop Shell", "NULL", "NULL", "/apps/desktop", "apps/desktop/src-tauri/tauri.conf.json", "draft-scaffold"]
+          ]
+        }
+      ]
+    };
+
+    const htmlLink = (value) => {
+      if (value === "NULL") return '<span class="matrix-code matrix-null">NULL</span>';
+      if (value.startsWith("/radio-html/")) return `<a class="matrix-code" href="${appBase}${value}">${value}</a>`;
+      if (value.startsWith("/api/") || value.startsWith("/")) return `<a class="matrix-code" href="${appBase}${value}">${value}</a>`;
+      return `<span class="matrix-code">${value}</span>`;
+    };
+
+    const rows = matrix.groups.flatMap((group) => group.rows);
+    const implemented = rows.filter((row) => row[5] === "implemented-draft").length;
+    const routeOnly = rows.filter((row) => row[5] === "route-only" || row[5] === "api-route").length;
+    const nullCells = rows.flat().filter((value) => value === "NULL").length;
+
+    document.getElementById("matrixRows").textContent = rows.length;
+    document.getElementById("matrixSummary").innerHTML = [
+      ["Rows", rows.length],
+      ["Groups", matrix.groups.length],
+      ["Implemented Draft", implemented],
+      ["Route/API Only", routeOnly],
+      ["NULL Cells", nullCells],
+      ["State", matrix.verificationState]
+    ].map(([label, value]) => `<article><span>${label}</span><b>${value}</b></article>`).join("");
+
+    document.getElementById("matrixGroups").innerHTML = matrix.groups.map((group) => `
+      <article class="matrix-group">
+        <div class="matrix-heading">
+          <h2>${group.title}</h2>
+          <small>${group.rows.length} rows</small>
+        </div>
+        <table class="matrix-table">
+          <thead>
+            <tr>
+              <th>Surface</th>
+              <th>Static HTML</th>
+              <th>Real Route</th>
+              <th>Desktop Copy</th>
+              <th>Source / Evidence</th>
+              <th>State</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${group.rows.map((row) => `
+              <tr>
+                <td data-label="Surface"><strong>${row[0]}</strong></td>
+                <td data-label="Static HTML">${htmlLink(row[1])}</td>
+                <td data-label="Real Route">${htmlLink(row[2])}</td>
+                <td data-label="Desktop Copy"><span class="matrix-code ${row[3] === "NULL" ? "matrix-null" : ""}">${row[3]}</span></td>
+                <td data-label="Source / Evidence"><span class="matrix-code">${row[4]}</span></td>
+                <td data-label="State"><span class="matrix-chip ${row[5]}">${row[5]}</span></td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+      </article>
+    `).join("");
+  </script>
+</body>
+</html>

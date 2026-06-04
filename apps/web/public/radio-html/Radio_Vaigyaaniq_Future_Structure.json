@@ -36,7 +36,7 @@
     },
     {
       "path": "/radio-html/routes",
-      "purpose": "All app, API, generated, and static route catalog",
+      "purpose": "All app, API, generated, static route catalog, and HTML vs real route matrix",
       "status": "implemented"
     }
   ],
@@ -48,6 +48,7 @@
     { "path": "/radio-html/Radio_Vaigyaaniq_Maataa.html", "role": "Maataa radio prototype surface", "futureLane": "imports/html-archive" },
     { "path": "/radio-html/structure/index.html", "role": "Future structure map", "futureLane": "structure" },
     { "path": "/radio-html/routes/index.html", "role": "Route catalog for app, API, generated, and static routes", "futureLane": "docs/route-map" },
+    { "path": "/radio-html/routes/html-vs-real-route-matrix.html", "role": "HTML artifact vs real route matrix", "futureLane": "docs/route-map" },
     { "path": "/radio-html/surfaces/index.html", "role": "Standalone surface index", "futureLane": "surfaces/index" },
     { "path": "/radio-html/surfaces/landing.html", "role": "Landing command surface", "futureLane": "surfaces/landing" },
     { "path": "/radio-html/surfaces/runtime.html", "role": "Live runtime surface", "futureLane": "surfaces/runtime" },

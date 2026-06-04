@@ -1,0 +1,292 @@
+{
+  "id": "radio-vaigyaaniq-html-vs-real-route-matrix",
+  "title": "Radio Vaigyaaniq HTML vs Real Route Matrix",
+  "generatedAt": "2026-06-04",
+  "verificationState": "draft",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "notes": [
+      "Static HTML artifact presence does not imply a real Next.js route exists.",
+      "Real route presence does not imply a browser-openable file:// HTML artifact exists.",
+      "Desktop bundle copy is a synced draft surface and does not imply shipped installer evidence.",
+      "Production readiness, audio availability, payment state, external telemetry, and runtime health remain NULL unless separately verified."
+    ]
+  },
+  "counts": {
+    "matrixRows": 29,
+    "groups": 6
+  },
+  "matrixHtml": "/radio-html/routes/html-vs-real-route-matrix.html",
+  "sourceCatalog": "/radio-html/Radio_Vaigyaaniq_Route_Catalog.json",
+  "groups": [
+    {
+      "key": "core-radio-surfaces",
+      "title": "Core Radio Surfaces",
+      "rows": [
+        {
+          "surface": "Radio React Landing",
+          "staticHtml": "/radio-html/surfaces/landing.html",
+          "realRoute": "/radio",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/landing.html",
+          "source": "apps/web/app/radio/page.tsx",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Radio Runtime",
+          "staticHtml": "/radio-html/surfaces/runtime.html",
+          "realRoute": "/radio/runtime",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/runtime.html",
+          "source": "apps/web/app/radio/runtime/page.tsx",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Absorbed Three.js Frame",
+          "staticHtml": "NULL",
+          "realRoute": "/radio/frame",
+          "desktopCopy": "NULL",
+          "source": "apps/web/app/radio/frame/page.tsx",
+          "state": "route-only"
+        },
+        {
+          "surface": "Radio Storyboard",
+          "staticHtml": "/radio-html/surfaces/storyboard.html",
+          "realRoute": "/radio/storyboard",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/storyboard.html",
+          "source": "apps/web/app/radio/storyboard/page.tsx",
+          "state": "implemented-draft"
+        }
+      ]
+    },
+    {
+      "key": "standalone-html-archive",
+      "title": "Standalone HTML Archive",
+      "rows": [
+        {
+          "surface": "Radio HTML Index",
+          "staticHtml": "/radio-html/index.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/index.html",
+          "source": "apps/web/public/radio-html/index.html",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Full App HTML",
+          "staticHtml": "/radio-html/Radio_Vaigyaaniq_Full_App.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/Radio_Vaigyaaniq_Full_App.html",
+          "source": "apps/web/public/radio-html/Radio_Vaigyaaniq_Full_App.html",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "UX Dashboard Prototype",
+          "staticHtml": "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html",
+          "source": "apps/web/public/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Mobile App Prototype",
+          "staticHtml": "/radio-html/Radio_Vaigyaaniq_App_Prototype.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/Radio_Vaigyaaniq_App_Prototype.html",
+          "source": "apps/web/public/radio-html/Radio_Vaigyaaniq_App_Prototype.html",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Maataa Prototype",
+          "staticHtml": "/radio-html/Radio_Vaigyaaniq_Maataa.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/Radio_Vaigyaaniq_Maataa.html",
+          "source": "apps/web/public/radio-html/Radio_Vaigyaaniq_Maataa.html",
+          "state": "implemented-draft"
+        }
+      ]
+    },
+    {
+      "key": "html-surface-modules",
+      "title": "HTML Surface Modules",
+      "rows": [
+        {
+          "surface": "All Surfaces Index",
+          "staticHtml": "/radio-html/surfaces/index.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/index.html",
+          "source": "apps/web/public/radio-html/surfaces/index.html",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Runtime And Workflows",
+          "staticHtml": "/radio-html/surfaces/runtimes-workflows.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/runtimes-workflows.html",
+          "source": "apps/web/public/radio-html/surfaces/runtimes-workflows.html",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "ASCII Wireframes",
+          "staticHtml": "/radio-html/surfaces/ascii-wireframes.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/ascii-wireframes.html",
+          "source": "apps/web/public/radio-html/surfaces/ascii-wireframes.html",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "3D Visualizer",
+          "staticHtml": "/radio-html/surfaces/visualizer.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/visualizer.html",
+          "source": "apps/web/public/radio-html/surfaces/visualizer.html",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Synced Lyrics",
+          "staticHtml": "/radio-html/surfaces/lyrics.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/lyrics.html",
+          "source": "apps/web/public/radio-html/surfaces/lyrics.html",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Persona TTS",
+          "staticHtml": "/radio-html/surfaces/tts.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/tts.html",
+          "source": "apps/web/public/radio-html/surfaces/tts.html",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Social And Gift",
+          "staticHtml": "/radio-html/surfaces/social-gift.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/social-gift.html",
+          "source": "apps/web/public/radio-html/surfaces/social-gift.html",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Evidence And Export",
+          "staticHtml": "/radio-html/surfaces/evidence-export.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/evidence-export.html",
+          "source": "apps/web/public/radio-html/surfaces/evidence-export.html",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Scaffold",
+          "staticHtml": "/radio-html/surfaces/scaffold.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/scaffold.html",
+          "source": "apps/web/public/radio-html/surfaces/scaffold.html",
+          "state": "implemented-draft"
+        }
+      ]
+    },
+    {
+      "key": "catalog-and-structure",
+      "title": "Catalog And Structure",
+      "rows": [
+        {
+          "surface": "All Routes Catalog",
+          "staticHtml": "/radio-html/routes/index.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/routes/index.html",
+          "source": "apps/web/public/radio-html/Radio_Vaigyaaniq_Route_Catalog.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "HTML vs Real Route Matrix",
+          "staticHtml": "/radio-html/routes/html-vs-real-route-matrix.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/routes/html-vs-real-route-matrix.html",
+          "source": "apps/web/public/radio-html/Radio_Vaigyaaniq_Html_Route_Matrix.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Future Structure",
+          "staticHtml": "/radio-html/structure/index.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/structure/index.html",
+          "source": "apps/web/public/radio-html/Radio_Vaigyaaniq_Future_Structure.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Full App Scaffold Manifest",
+          "staticHtml": "/radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json",
+          "realRoute": "served-static-json",
+          "desktopCopy": "/apps/desktop/public/radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json",
+          "source": "apps/web/public/radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Tauri Shipping Prompt",
+          "staticHtml": "/radio-html/Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md",
+          "realRoute": "served-static-md",
+          "desktopCopy": "/apps/desktop/public/radio-html/Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md",
+          "source": "apps/web/public/radio-html/Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md",
+          "state": "implemented-draft"
+        }
+      ]
+    },
+    {
+      "key": "real-next-and-api-routes",
+      "title": "Real Next And API Routes",
+      "rows": [
+        {
+          "surface": "HKD Banners",
+          "staticHtml": "NULL",
+          "realRoute": "/hkd-banners",
+          "desktopCopy": "NULL",
+          "source": "apps/web/app/hkd-banners/page.tsx",
+          "state": "route-only"
+        },
+        {
+          "surface": "Ayodhya AI",
+          "staticHtml": "NULL",
+          "realRoute": "/ayodhya",
+          "desktopCopy": "NULL",
+          "source": "apps/web/app/ayodhya/page.tsx",
+          "state": "route-only"
+        },
+        {
+          "surface": "Lipi Explorer",
+          "staticHtml": "NULL",
+          "realRoute": "/lipi",
+          "desktopCopy": "NULL",
+          "source": "apps/web/app/lipi/page.tsx",
+          "state": "route-only"
+        },
+        {
+          "surface": "Universal Dictionary",
+          "staticHtml": "NULL",
+          "realRoute": "/dictionary",
+          "desktopCopy": "NULL",
+          "source": "apps/web/app/dictionary/page.tsx",
+          "state": "route-only"
+        },
+        {
+          "surface": "Radio Export API",
+          "staticHtml": "NULL",
+          "realRoute": "/api/export",
+          "desktopCopy": "NULL",
+          "source": "apps/web/app/api/export/route.ts",
+          "state": "api-route"
+        }
+      ]
+    },
+    {
+      "key": "desktop-tauri",
+      "title": "Desktop Tauri Bundle",
+      "rows": [
+        {
+          "surface": "Desktop Shell",
+          "staticHtml": "NULL",
+          "realRoute": "NULL",
+          "desktopCopy": "/apps/desktop",
+          "source": "apps/desktop/src-tauri/tauri.conf.json",
+          "state": "draft-scaffold"
+        }
+      ]
+    }
+  ]
+}
