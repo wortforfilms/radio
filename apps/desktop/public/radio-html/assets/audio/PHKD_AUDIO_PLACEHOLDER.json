@@ -1,0 +1,9 @@
+{
+  "id": "radio-vaigyaaniq-audio-placeholder",
+  "verificationState": "NULL",
+  "phkd": {
+    "rule": "fail_closed",
+    "note": "No generated audio is included. Audio paths must be supplied with source, creator, checksum, and verification evidence before being treated as playable assets."
+  },
+  "audioAssets": []
+}

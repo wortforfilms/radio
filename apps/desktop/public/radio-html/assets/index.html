@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Vaigyaaniq - Asset Catalog</title>
+  <link rel="stylesheet" href="../surfaces/surface-kit.css">
+  <style>
+    .asset-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+    }
+    .asset-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: var(--panel);
+    }
+    .asset-card img {
+      width: 100%;
+      aspect-ratio: 1.45;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: #050b10;
+    }
+    .asset-card b {
+      display: block;
+      margin: 10px 0 4px;
+      color: var(--ink);
+    }
+    .asset-card code {
+      display: block;
+      color: #d7fff8;
+      font: 11px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      overflow-wrap: anywhere;
+    }
+  </style>
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav>
+        <a href="../index.html">HTML</a>
+        <a href="../surfaces/runtime.html">Runtime</a>
+        <a href="../surfaces/visualizer.html">Visual</a>
+        <a href="../structure/index.html">Structure</a>
+      </nav>
+      <span>PHKD</span>
+    </aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">Asset Catalog</p>
+          <h1>Radio Visual Assets</h1>
+          <p>Draft local images, covers, icons, shader snippets, and audio placeholder evidence. No audio stream or production-ready media claim is made.</p>
+          <div class="surface-actions">
+            <a href="../Radio_Vaigyaaniq_Asset_Manifest.json">Asset Manifest JSON</a>
+            <a href="./audio/PHKD_AUDIO_PLACEHOLDER.json">Audio Placeholder</a>
+            <a href="../surfaces/runtime.html">Runtime Surface</a>
+          </div>
+        </div>
+        <div class="status-chip"><span>Total</span><b>18</b><small>draft assets</small></div>
+      </section>
+      <section class="asset-grid">
+        <article class="asset-card"><img src="./radio-vaigyaaniq-landing-hero.png" alt=""><b>Landing Hero</b><code>/radio-html/assets/radio-vaigyaaniq-landing-hero.png</code></article>
+        <article class="asset-card"><img src="./radio-vaigyaaniq-divine-hero.png" alt=""><b>Divine Hero</b><code>/radio-html/assets/radio-vaigyaaniq-divine-hero.png</code></article>
+        <article class="asset-card"><img src="./images/radio-vaigyaaniq-runtime-hero.svg" alt=""><b>Runtime Hero</b><code>/radio-html/assets/images/radio-vaigyaaniq-runtime-hero.svg</code></article>
+        <article class="asset-card"><img src="./images/radio-vaigyaaniq-samaya-panel.svg" alt=""><b>Samaya Panel</b><code>/radio-html/assets/images/radio-vaigyaaniq-samaya-panel.svg</code></article>
+        <article class="asset-card"><img src="./covers/mahamatya.svg" alt=""><b>Mahamatya Cover</b><code>/radio-html/assets/covers/mahamatya.svg</code></article>
+        <article class="asset-card"><img src="./covers/gokul.svg" alt=""><b>Gokul Cover</b><code>/radio-html/assets/covers/gokul.svg</code></article>
+        <article class="asset-card"><img src="./covers/kaal-chakra.svg" alt=""><b>Kaal Chakra Cover</b><code>/radio-html/assets/covers/kaal-chakra.svg</code></article>
+        <article class="asset-card"><img src="./covers/swarnim-sale.svg" alt=""><b>Swarnim Sale Cover</b><code>/radio-html/assets/covers/swarnim-sale.svg</code></article>
+        <article class="asset-card"><img src="./icons/like.svg" alt=""><b>Like Icon</b><code>/radio-html/assets/icons/like.svg</code></article>
+        <article class="asset-card"><img src="./icons/save.svg" alt=""><b>Save Icon</b><code>/radio-html/assets/icons/save.svg</code></article>
+        <article class="asset-card"><img src="./icons/gift.svg" alt=""><b>Gift Icon</b><code>/radio-html/assets/icons/gift.svg</code></article>
+        <article class="asset-card"><img src="./icons/share.svg" alt=""><b>Share Icon</b><code>/radio-html/assets/icons/share.svg</code></article>
+        <article class="asset-card"><img src="./icons/tts.svg" alt=""><b>TTS Icon</b><code>/radio-html/assets/icons/tts.svg</code></article>
+        <article class="asset-card"><img src="./icons/mic.svg" alt=""><b>Mic Icon</b><code>/radio-html/assets/icons/mic.svg</code></article>
+      </section>
+      <section class="surface-grid three">
+        <article class="surface-card"><span class="surface-label">Shaders</span><b>2</b><ul><li>radio-spectrum.frag</li><li>radio-yantra.vert</li></ul></article>
+        <article class="surface-card"><span class="surface-label">Audio</span><b>NULL</b><p>No generated audio. Placeholder manifest only.</p></article>
+        <article class="surface-card"><span class="surface-label">Vendor</span><b>Three.js</b><p>Existing local vendor scripts preserved.</p></article>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

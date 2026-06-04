@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+  <title id="title">Gokul station cover</title>
+  <desc id="desc">Draft station cover for Gokul.</desc>
+  <rect width="800" height="800" fill="#081418"/>
+  <path d="M120 520c120-160 220-160 340 0s220 160 320 0" fill="none" stroke="#00f5d4" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="400" cy="330" r="150" fill="none" stroke="#dfb15b" stroke-width="18"/>
+  <text x="110" y="700" fill="#fff" font-family="Arial, sans-serif" font-size="72" font-weight="700">GOKUL</text>
+</svg>

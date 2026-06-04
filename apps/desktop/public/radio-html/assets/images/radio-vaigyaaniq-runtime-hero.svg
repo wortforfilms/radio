@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Radio Vaigyaaniq runtime hero</title>
+  <desc id="desc">Draft cosmic radio runtime hero with waveform rings and station nodes.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="70%">
+      <stop offset="0" stop-color="#183046"/>
+      <stop offset=".48" stop-color="#09111d"/>
+      <stop offset="1" stop-color="#04070d"/>
+    </radialGradient>
+    <linearGradient id="wave" x1="0" x2="1">
+      <stop offset="0" stop-color="#00f5d4"/>
+      <stop offset=".52" stop-color="#ff6b35"/>
+      <stop offset="1" stop-color="#dfb15b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g opacity=".26" stroke="#7eece5" stroke-width="1">
+    <path d="M0 140H1600M0 280H1600M0 420H1600M0 560H1600M0 700H1600M0 840H1600"/>
+    <path d="M160 0V900M320 0V900M480 0V900M640 0V900M800 0V900M960 0V900M1120 0V900M1280 0V900M1440 0V900"/>
+  </g>
+  <g transform="translate(800 450)" fill="none">
+    <circle r="86" stroke="#ff6b35" stroke-width="4"/>
+    <circle r="168" stroke="#00f5d4" stroke-width="2" opacity=".75"/>
+    <circle r="270" stroke="#dfb15b" stroke-width="2" opacity=".48"/>
+    <circle r="378" stroke="#ffffff" stroke-width="1" opacity=".18"/>
+    <path d="M-560 0c78-120 132 120 210 0s132 120 210 0 132 120 210 0 132 120 210 0 132 120 210 0 132-120 210 0" stroke="url(#wave)" stroke-width="14" stroke-linecap="round"/>
+    <g fill="#00f5d4">
+      <circle cx="-470" cy="-180" r="10"/>
+      <circle cx="-220" cy="230" r="8"/>
+      <circle cx="310" cy="-250" r="11"/>
+      <circle cx="520" cy="170" r="9"/>
+    </g>
+  </g>
+  <text x="72" y="104" fill="#ffffff" font-family="Arial, sans-serif" font-size="54" font-weight="700">RADIO VAIGYAANIQ</text>
+  <text x="76" y="154" fill="#9db4c8" font-family="Arial, sans-serif" font-size="24">Runtime asset - draft visual, not production evidence</text>
+</svg>

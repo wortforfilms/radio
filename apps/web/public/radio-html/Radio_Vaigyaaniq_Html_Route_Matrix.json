@@ -14,7 +14,7 @@
     ]
   },
   "counts": {
-    "matrixRows": 30,
+    "matrixRows": 31,
     "groups": 6
   },
   "matrixHtml": "/radio-html/routes/html-vs-real-route-matrix.html",
@@ -216,6 +216,14 @@
           "realRoute": "served-static",
           "desktopCopy": "/apps/desktop/public/radio-html/structure/index.html",
           "source": "apps/web/public/radio-html/Radio_Vaigyaaniq_Future_Structure.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Asset Catalog",
+          "staticHtml": "/radio-html/assets/index.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/assets/index.html",
+          "source": "apps/web/public/radio-html/Radio_Vaigyaaniq_Asset_Manifest.json",
           "state": "implemented-draft"
         },
         {

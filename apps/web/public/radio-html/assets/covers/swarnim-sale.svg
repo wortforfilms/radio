@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+  <title id="title">Swarnim Sale station cover</title>
+  <desc id="desc">Draft station cover for The Swarnim Sale.</desc>
+  <rect width="800" height="800" fill="#111014"/>
+  <path d="M160 560 400 120l240 440Z" fill="none" stroke="#ff6b35" stroke-width="24" stroke-linejoin="round"/>
+  <circle cx="400" cy="420" r="96" fill="#dfb15b" opacity=".88"/>
+  <text x="70" y="700" fill="#fff" font-family="Arial, sans-serif" font-size="58" font-weight="700">SWARNIM SALE</text>
+</svg>

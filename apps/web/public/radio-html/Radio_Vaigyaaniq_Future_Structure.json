@@ -43,6 +43,7 @@
   "htmlInventory": [
     { "path": "/radio-html/index.html", "role": "Static HTML archive index", "futureLane": "app/catalog" },
     { "path": "/radio-html/all-html.html", "role": "All browser HTML links directory", "futureLane": "docs/route-map" },
+    { "path": "/radio-html/assets/index.html", "role": "Asset catalog for generated and existing Radio assets", "futureLane": "assets/index" },
     { "path": "/radio-html/Radio_Vaigyaaniq_Full_App.html", "role": "Standalone full app shell", "futureLane": "app/full-app" },
     { "path": "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html", "role": "Absorbed UX dashboard prototype", "futureLane": "imports/html-archive" },
     { "path": "/radio-html/Radio_Vaigyaaniq_App_Prototype.html", "role": "Original mobile/app prototype", "futureLane": "imports/html-archive" },

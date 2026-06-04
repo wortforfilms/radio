@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+  <title id="title">Kaal Chakra station cover</title>
+  <desc id="desc">Draft station cover for Kaal Chakra.</desc>
+  <rect width="800" height="800" fill="#0b0d18"/>
+  <g transform="translate(400 370)" fill="none" stroke="#dfb15b" stroke-width="14">
+    <circle r="230"/>
+    <circle r="150"/>
+    <path d="M0-260V260M-260 0H260M-184-184 184 184M184-184-184 184"/>
+  </g>
+  <text x="75" y="710" fill="#fff" font-family="Arial, sans-serif" font-size="64" font-weight="700">KAAL CHAKRA</text>
+</svg>
