@@ -1,0 +1,61 @@
+{
+  "id": "radio-vaigyaaniq-all-html-links",
+  "title": "Radio Vaigyaaniq All HTML Links",
+  "generatedAt": "2026-06-04",
+  "verificationState": "draft",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "notes": [
+      "This is a static HTML link inventory only.",
+      "A listed HTML file does not imply production readiness.",
+      "Runtime behavior, audio availability, payment state, and desktop installer evidence remain NULL unless separately verified."
+    ]
+  },
+  "counts": {
+    "webHtml": 21,
+    "desktopHtml": 21
+  },
+  "servedIndex": "/radio-html/all-html.html",
+  "groups": [
+    {
+      "key": "primary-archive",
+      "title": "Primary Archive",
+      "links": [
+        { "title": "Radio HTML Index", "path": "/radio-html/index.html", "desktopPath": "/apps/desktop/public/radio-html/index.html" },
+        { "title": "All HTML Links", "path": "/radio-html/all-html.html", "desktopPath": "/apps/desktop/public/radio-html/all-html.html" },
+        { "title": "Full App HTML", "path": "/radio-html/Radio_Vaigyaaniq_Full_App.html", "desktopPath": "/apps/desktop/public/radio-html/Radio_Vaigyaaniq_Full_App.html" },
+        { "title": "UX Dashboard", "path": "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html", "desktopPath": "/apps/desktop/public/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html" },
+        { "title": "App Prototype", "path": "/radio-html/Radio_Vaigyaaniq_App_Prototype.html", "desktopPath": "/apps/desktop/public/radio-html/Radio_Vaigyaaniq_App_Prototype.html" },
+        { "title": "Maataa Prototype", "path": "/radio-html/Radio_Vaigyaaniq_Maataa.html", "desktopPath": "/apps/desktop/public/radio-html/Radio_Vaigyaaniq_Maataa.html" }
+      ]
+    },
+    {
+      "key": "catalogs",
+      "title": "Catalogs And Structure",
+      "links": [
+        { "title": "All Routes", "path": "/radio-html/routes/index.html", "desktopPath": "/apps/desktop/public/radio-html/routes/index.html" },
+        { "title": "HTML vs Real Route Matrix", "path": "/radio-html/routes/html-vs-real-route-matrix.html", "desktopPath": "/apps/desktop/public/radio-html/routes/html-vs-real-route-matrix.html" },
+        { "title": "Future Structure", "path": "/radio-html/structure/index.html", "desktopPath": "/apps/desktop/public/radio-html/structure/index.html" }
+      ]
+    },
+    {
+      "key": "surfaces",
+      "title": "Standalone Surfaces",
+      "links": [
+        { "title": "All Surfaces", "path": "/radio-html/surfaces/index.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/index.html" },
+        { "title": "Landing", "path": "/radio-html/surfaces/landing.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/landing.html" },
+        { "title": "Runtime", "path": "/radio-html/surfaces/runtime.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/runtime.html" },
+        { "title": "Runtimes And Workflows", "path": "/radio-html/surfaces/runtimes-workflows.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/runtimes-workflows.html" },
+        { "title": "ASCII Wireframes", "path": "/radio-html/surfaces/ascii-wireframes.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/ascii-wireframes.html" },
+        { "title": "Visualizer", "path": "/radio-html/surfaces/visualizer.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/visualizer.html" },
+        { "title": "Lyrics", "path": "/radio-html/surfaces/lyrics.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/lyrics.html" },
+        { "title": "TTS", "path": "/radio-html/surfaces/tts.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/tts.html" },
+        { "title": "Social Gift", "path": "/radio-html/surfaces/social-gift.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/social-gift.html" },
+        { "title": "Storyboard", "path": "/radio-html/surfaces/storyboard.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/storyboard.html" },
+        { "title": "Evidence Export", "path": "/radio-html/surfaces/evidence-export.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/evidence-export.html" },
+        { "title": "Scaffold", "path": "/radio-html/surfaces/scaffold.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/scaffold.html" }
+      ]
+    }
+  ]
+}
