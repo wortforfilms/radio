@@ -11,7 +11,9 @@
       "No generated audio is claimed.",
       "Existing bitmap hero assets are preserved as existing local files.",
       "Covers are visual placeholders until linked to verified station or track evidence.",
-      "Asset evidence records include SHA-256 checksums, byte sizes, source fields, creator fields, and PHKD unknown values."
+      "Asset evidence records include SHA-256 checksums, byte sizes, source fields, creator fields, and PHKD unknown values.",
+      "Asset evidence P2 adds rights, license, source confidence, reviewer, reviewedAt, and review state fields.",
+      "All releaseAllowed values remain false until external rights and review evidence exist."
     ]
   },
   "counts": {
@@ -44,7 +46,20 @@
             "value": "672266dd33b9b5d9c57c5f5e5f4a375bd162dc056a3b4d36f4ce783e0e012d69"
           },
           "byteSize": 2065752,
-          "evidenceId": "radio-vaigyaaniq-landing-hero-png"
+          "evidenceId": "radio-vaigyaaniq-landing-hero-png",
+          "rights": {
+            "license": null,
+            "rightsStatus": "NULL",
+            "usage": "draft-interface-reference",
+            "releaseAllowed": false
+          },
+          "review": {
+            "sourceConfidence": "local-file-checksum-only",
+            "reviewer": null,
+            "reviewedAt": null,
+            "reviewState": "unreviewed"
+          },
+          "evidenceStatus": "draft"
         },
         {
           "path": "/radio-html/assets/radio-vaigyaaniq-divine-hero.png",
@@ -62,7 +77,20 @@
             "value": "c1d8967df4a3a314a273d510c3c13e7c00c19386c0147e93ed7238a959d008e6"
           },
           "byteSize": 2686542,
-          "evidenceId": "radio-vaigyaaniq-divine-hero-png"
+          "evidenceId": "radio-vaigyaaniq-divine-hero-png",
+          "rights": {
+            "license": null,
+            "rightsStatus": "NULL",
+            "usage": "draft-interface-reference",
+            "releaseAllowed": false
+          },
+          "review": {
+            "sourceConfidence": "local-file-checksum-only",
+            "reviewer": null,
+            "reviewedAt": null,
+            "reviewState": "unreviewed"
+          },
+          "evidenceStatus": "draft"
         },
         {
           "path": "/radio-html/assets/images/radio-vaigyaaniq-runtime-hero.svg",
@@ -80,7 +108,20 @@
             "value": "6264c9011abd5eb8860e63f56ca473675fd29134f3b94dec1dc7838bd17ae38a"
           },
           "byteSize": 1982,
-          "evidenceId": "images-radio-vaigyaaniq-runtime-hero-svg"
+          "evidenceId": "images-radio-vaigyaaniq-runtime-hero-svg",
+          "rights": {
+            "license": null,
+            "rightsStatus": "local-draft-no-release-claim",
+            "usage": "draft-interface-reference",
+            "releaseAllowed": false
+          },
+          "review": {
+            "sourceConfidence": "local-file-checksum-only",
+            "reviewer": null,
+            "reviewedAt": null,
+            "reviewState": "unreviewed"
+          },
+          "evidenceStatus": "draft"
         },
         {
           "path": "/radio-html/assets/images/radio-vaigyaaniq-samaya-panel.svg",
@@ -98,7 +139,20 @@
             "value": "cb117925d2260d5a607621275e93aae05e0c39c70901e647503cf14be30c1f1b"
           },
           "byteSize": 1146,
-          "evidenceId": "images-radio-vaigyaaniq-samaya-panel-svg"
+          "evidenceId": "images-radio-vaigyaaniq-samaya-panel-svg",
+          "rights": {
+            "license": null,
+            "rightsStatus": "local-draft-no-release-claim",
+            "usage": "draft-interface-reference",
+            "releaseAllowed": false
+          },
+          "review": {
+            "sourceConfidence": "local-file-checksum-only",
+            "reviewer": null,
+            "reviewedAt": null,
+            "reviewState": "unreviewed"
+          },
+          "evidenceStatus": "draft"
         }
       ]
     },
@@ -121,7 +175,20 @@
             "value": "0f57b5f1b3ec614e86bb8fd827435e37ee058d94b16659007af78bc5dab58e01"
           },
           "byteSize": 583,
-          "evidenceId": "covers-mahamatya-svg"
+          "evidenceId": "covers-mahamatya-svg",
+          "rights": {
+            "license": null,
+            "rightsStatus": "local-draft-no-release-claim",
+            "usage": "draft-interface-reference",
+            "releaseAllowed": false
+          },
+          "review": {
+            "sourceConfidence": "local-file-checksum-only",
+            "reviewer": null,
+            "reviewedAt": null,
+            "reviewState": "unreviewed"
+          },
+          "evidenceStatus": "draft"
         },
         {
           "path": "/radio-html/assets/covers/gokul.svg",
@@ -139,7 +206,20 @@
             "value": "736819e1fd88477ed533a7638ee08c474104cb421ebab29ff602b4351e6d4a41"
           },
           "byteSize": 592,
-          "evidenceId": "covers-gokul-svg"
+          "evidenceId": "covers-gokul-svg",
+          "rights": {
+            "license": null,
+            "rightsStatus": "local-draft-no-release-claim",
+            "usage": "draft-interface-reference",
+            "releaseAllowed": false
+          },
+          "review": {
+            "sourceConfidence": "local-file-checksum-only",
+            "reviewer": null,
+            "reviewedAt": null,
+            "reviewState": "unreviewed"
+          },
+          "evidenceStatus": "draft"
         },
         {
           "path": "/radio-html/assets/covers/kaal-chakra.svg",
@@ -157,7 +237,20 @@
             "value": "842077b4b2b9ed5157c2f131391bf200e02d181705e13f5a76ccfa8cd4c78e21"
           },
           "byteSize": 601,
-          "evidenceId": "covers-kaal-chakra-svg"
+          "evidenceId": "covers-kaal-chakra-svg",
+          "rights": {
+            "license": null,
+            "rightsStatus": "local-draft-no-release-claim",
+            "usage": "draft-interface-reference",
+            "releaseAllowed": false
+          },
+          "review": {
+            "sourceConfidence": "local-file-checksum-only",
+            "reviewer": null,
+            "reviewedAt": null,
+            "reviewState": "unreviewed"
+          },
+          "evidenceStatus": "draft"
         },
         {
           "path": "/radio-html/assets/covers/swarnim-sale.svg",
@@ -175,7 +268,20 @@
             "value": "7c5ec0fe02363c884de46e08c85244300d2098b0b62a5a804256da119d55bec8"
           },
           "byteSize": 579,
-          "evidenceId": "covers-swarnim-sale-svg"
+          "evidenceId": "covers-swarnim-sale-svg",
+          "rights": {
+            "license": null,
+            "rightsStatus": "local-draft-no-release-claim",
+            "usage": "draft-interface-reference",
+            "releaseAllowed": false
+          },
+          "review": {
+            "sourceConfidence": "local-file-checksum-only",
+            "reviewer": null,
+            "reviewedAt": null,
+            "reviewState": "unreviewed"
+          },
+          "evidenceStatus": "draft"
         }
       ]
     },
@@ -198,7 +304,20 @@
             "value": "511b5792d02e1088d44f243b1896c4a39179a97f466b6c5d059505901cc260a7"
           },
           "byteSize": 215,
-          "evidenceId": "icons-like-svg"
+          "evidenceId": "icons-like-svg",
+          "rights": {
+            "license": null,
+            "rightsStatus": "local-draft-no-release-claim",
+            "usage": "draft-interface-reference",
+            "releaseAllowed": false
+          },
+          "review": {
+            "sourceConfidence": "local-file-checksum-only",
+            "reviewer": null,
+            "reviewedAt": null,
+            "reviewState": "unreviewed"
+          },
+          "evidenceStatus": "draft"
         },
         {
           "path": "/radio-html/assets/icons/save.svg",
@@ -216,7 +335,20 @@
             "value": "ace9452bdfe260673d75f67e4895c8c26de8c4dbd848d831831b5fb2034bd9ab"
           },
           "byteSize": 150,
-          "evidenceId": "icons-save-svg"
+          "evidenceId": "icons-save-svg",
+          "rights": {
+            "license": null,
+            "rightsStatus": "local-draft-no-release-claim",
+            "usage": "draft-interface-reference",
+            "releaseAllowed": false
+          },
+          "review": {
+            "sourceConfidence": "local-file-checksum-only",
+            "reviewer": null,
+            "reviewedAt": null,
+            "reviewState": "unreviewed"
+          },
+          "evidenceStatus": "draft"
         },
         {
           "path": "/radio-html/assets/icons/gift.svg",
@@ -234,7 +366,20 @@
             "value": "fcb19152e1fe8540a79a42efc46f0dfce45bea82f88049445c360c52236ff80a"
           },
           "byteSize": 250,
-          "evidenceId": "icons-gift-svg"
+          "evidenceId": "icons-gift-svg",
+          "rights": {
+            "license": null,
+            "rightsStatus": "local-draft-no-release-claim",
+            "usage": "draft-interface-reference",
+            "releaseAllowed": false
+          },
+          "review": {
+            "sourceConfidence": "local-file-checksum-only",
+            "reviewer": null,
+            "reviewedAt": null,
+            "reviewState": "unreviewed"
+          },
+          "evidenceStatus": "draft"
         },
         {
           "path": "/radio-html/assets/icons/share.svg",
@@ -252,7 +397,20 @@
             "value": "15d20f99bc8b00f343560b33beeae2eecdeef2ec5d5e7d4b855cc14c7ca10d4b"
           },
           "byteSize": 403,
-          "evidenceId": "icons-share-svg"
+          "evidenceId": "icons-share-svg",
+          "rights": {
+            "license": null,
+            "rightsStatus": "local-draft-no-release-claim",
+            "usage": "draft-interface-reference",
+            "releaseAllowed": false
+          },
+          "review": {
+            "sourceConfidence": "local-file-checksum-only",
+            "reviewer": null,
+            "reviewedAt": null,
+            "reviewState": "unreviewed"
+          },
+          "evidenceStatus": "draft"
         },
         {
           "path": "/radio-html/assets/icons/tts.svg",
@@ -270,7 +428,20 @@
             "value": "5b9648590dad896ae63af55051bdf1829ceb0468fd35f7b1ddbaeee5d2349d3d"
           },
           "byteSize": 218,
-          "evidenceId": "icons-tts-svg"
+          "evidenceId": "icons-tts-svg",
+          "rights": {
+            "license": null,
+            "rightsStatus": "local-draft-no-release-claim",
+            "usage": "draft-interface-reference",
+            "releaseAllowed": false
+          },
+          "review": {
+            "sourceConfidence": "local-file-checksum-only",
+            "reviewer": null,
+            "reviewedAt": null,
+            "reviewState": "unreviewed"
+          },
+          "evidenceStatus": "draft"
         },
         {
           "path": "/radio-html/assets/icons/mic.svg",
@@ -288,7 +459,20 @@
             "value": "8ce10da9cbb8039ca912e862d31c7a7fb1bab667ddce165c945044ac53253bfc"
           },
           "byteSize": 294,
-          "evidenceId": "icons-mic-svg"
+          "evidenceId": "icons-mic-svg",
+          "rights": {
+            "license": null,
+            "rightsStatus": "local-draft-no-release-claim",
+            "usage": "draft-interface-reference",
+            "releaseAllowed": false
+          },
+          "review": {
+            "sourceConfidence": "local-file-checksum-only",
+            "reviewer": null,
+            "reviewedAt": null,
+            "reviewState": "unreviewed"
+          },
+          "evidenceStatus": "draft"
         }
       ]
     },
@@ -311,7 +495,20 @@
             "value": "c12c21d44d7d820daf7a77d510d37e1c972be76a94abba0d756a3e3d3ebb28ec"
           },
           "byteSize": 359,
-          "evidenceId": "shaders-radio-spectrum-frag"
+          "evidenceId": "shaders-radio-spectrum-frag",
+          "rights": {
+            "license": null,
+            "rightsStatus": "local-draft-no-release-claim",
+            "usage": "draft-interface-reference",
+            "releaseAllowed": false
+          },
+          "review": {
+            "sourceConfidence": "local-file-checksum-only",
+            "reviewer": null,
+            "reviewedAt": null,
+            "reviewState": "unreviewed"
+          },
+          "evidenceStatus": "draft"
         },
         {
           "path": "/radio-html/assets/shaders/radio-yantra.vert",
@@ -329,7 +526,20 @@
             "value": "a3af18c131c3b49da7822b9ef791164cd8a422c7d9b6ba76089aa693f94d3eb8"
           },
           "byteSize": 307,
-          "evidenceId": "shaders-radio-yantra-vert"
+          "evidenceId": "shaders-radio-yantra-vert",
+          "rights": {
+            "license": null,
+            "rightsStatus": "local-draft-no-release-claim",
+            "usage": "draft-interface-reference",
+            "releaseAllowed": false
+          },
+          "review": {
+            "sourceConfidence": "local-file-checksum-only",
+            "reviewer": null,
+            "reviewedAt": null,
+            "reviewState": "unreviewed"
+          },
+          "evidenceStatus": "draft"
         }
       ]
     },
@@ -352,7 +562,20 @@
             "value": "7654f1f0909d18c4ea870b464c7d43b838030df9e454dc34c6709ca159dfa978"
           },
           "byteSize": 319,
-          "evidenceId": "audio-phkd-audio-placeholder-json"
+          "evidenceId": "audio-phkd-audio-placeholder-json",
+          "rights": {
+            "license": null,
+            "rightsStatus": "NULL",
+            "usage": "draft-interface-reference",
+            "releaseAllowed": false
+          },
+          "review": {
+            "sourceConfidence": "local-file-checksum-only",
+            "reviewer": null,
+            "reviewedAt": null,
+            "reviewState": "unreviewed"
+          },
+          "evidenceStatus": "NULL"
         }
       ]
     },
@@ -375,7 +598,20 @@
             "value": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2"
           },
           "byteSize": 603445,
-          "evidenceId": "vendor-three-min-js"
+          "evidenceId": "vendor-three-min-js",
+          "rights": {
+            "license": null,
+            "rightsStatus": "NULL",
+            "usage": "draft-interface-reference",
+            "releaseAllowed": false
+          },
+          "review": {
+            "sourceConfidence": "local-file-checksum-only",
+            "reviewer": null,
+            "reviewedAt": null,
+            "reviewState": "unreviewed"
+          },
+          "evidenceStatus": "draft"
         },
         {
           "path": "/radio-html/assets/vendor/three.module.min.js",
@@ -393,7 +629,20 @@
             "value": "36a60b0120335f89a80a0dab70292292b0ec414b3d05e83cd09a3ea428c6712a"
           },
           "byteSize": 364998,
-          "evidenceId": "vendor-three-module-min-js"
+          "evidenceId": "vendor-three-module-min-js",
+          "rights": {
+            "license": null,
+            "rightsStatus": "NULL",
+            "usage": "draft-interface-reference",
+            "releaseAllowed": false
+          },
+          "review": {
+            "sourceConfidence": "local-file-checksum-only",
+            "reviewer": null,
+            "reviewedAt": null,
+            "reviewState": "unreviewed"
+          },
+          "evidenceStatus": "draft"
         }
       ]
     }

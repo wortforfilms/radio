@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Radio Surface - Tauri Readiness</title><link rel="stylesheet" href="./surface-kit.css"></head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail"><div class="surface-mark">RV</div><nav><a href="./index.html">Index</a><a href="../structure/index.html">Structure</a><a href="./visual-qa.html">QA</a><a href="./production-freeze.html">Freeze</a></nav><span>PHKD</span></aside>
+    <section class="surface-main">
+      <section class="surface-hero"><div><p class="eyebrow">Tauri Readiness</p><h1>Ship Path, No-Ship Decision</h1><p>Desktop mirror and asset evidence can be draft-ready while installer, signing, audio rights, payment, and release review remain blocked.</p><div class="surface-actions"><a href="../data/tauri-readiness.json">Readiness JSON</a><a href="../Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md">Shipping Prompt</a></div></div><div class="status-chip"><span>Decision</span><b id="shipDecision">NO_SHIP</b><small>fail-closed</small></div></section>
+      <section class="surface-grid three" id="tauriMetrics"></section>
+      <section class="runtime-lane" id="tauriChecklist"></section>
+    </section>
+  </main>
+  <script>
+    fetch("../data/tauri-readiness.json").then((response) => response.json()).then((data) => {
+      document.getElementById("shipDecision").textContent = data.shipDecision;
+      document.getElementById("tauriMetrics").innerHTML = [
+        ["Draft Ready", data.counts.draftReady],
+        ["Blocked", data.counts.blocked],
+        ["Reason", data.reason]
+      ].map(([label, value]) => `<article class="surface-card"><span class="surface-label">${label}</span><b>${value}</b></article>`).join("");
+      document.getElementById("tauriChecklist").innerHTML = data.checklist.map((item) => `
+        <article class="runtime-row"><span>${item.key}</span><div><b>${item.label}</b><p>Evidence: ${item.evidence || "NULL"}</p></div><small class="surface-state-pill">${item.status}</small></article>
+      `).join("");
+    });
+  </script>
+</body>
+</html>

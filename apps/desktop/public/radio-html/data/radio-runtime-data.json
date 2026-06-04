@@ -1,0 +1,1008 @@
+{
+  "id": "radio-vaigyaaniq-runtime-data",
+  "title": "Radio Vaigyaaniq Runtime Data Layer",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "notes": [
+      "Data frames describe local runtime behavior only.",
+      "No audio, rights, payment, production readiness, or external telemetry claim is introduced.",
+      "Evidence upgrades require source, creator, artifact checksum, rights, reviewer, and reviewedAt."
+    ]
+  },
+  "frames": [
+    {
+      "key": "media",
+      "path": "/radio-html/data/radio-media.json",
+      "status": "implemented-draft"
+    },
+    {
+      "key": "audio-import",
+      "path": "/radio-html/data/audio-import-manifest.json",
+      "status": "implemented-draft"
+    },
+    {
+      "key": "asset-evidence",
+      "path": "/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json",
+      "status": "implemented-draft"
+    },
+    {
+      "key": "visual-qa",
+      "path": "/radio-html/data/visual-qa.json",
+      "status": "implemented-draft"
+    },
+    {
+      "key": "tauri-readiness",
+      "path": "/radio-html/data/tauri-readiness.json",
+      "status": "implemented-draft"
+    },
+    {
+      "key": "production-freeze",
+      "path": "/radio-html/data/production-freeze.json",
+      "status": "implemented-draft"
+    }
+  ],
+  "events": [
+    "station:selected",
+    "cover:fallbackApplied",
+    "evidence:opened",
+    "audio:importRequested",
+    "qa:screenshotCaptured",
+    "tauri:readinessChecked",
+    "freeze:statusReviewed"
+  ],
+  "storage": [
+    {
+      "key": "social",
+      "mechanism": "localStorage",
+      "status": "draft"
+    },
+    {
+      "key": "lyrics",
+      "mechanism": "localStorage",
+      "status": "draft"
+    },
+    {
+      "key": "visualizer-recording",
+      "mechanism": "Blob URL",
+      "status": "draft"
+    },
+    {
+      "key": "audio-import",
+      "mechanism": "manifest-only",
+      "status": "NULL until imported"
+    }
+  ],
+  "media": [
+    {
+      "key": "mahamatya",
+      "label": "Mahamatya",
+      "cover": "/radio-html/assets/covers/mahamatya.svg",
+      "evidencePath": "/radio-html/assets/evidence.html",
+      "evidenceId": "covers-mahamatya-svg",
+      "palette": {
+        "primary": "#ff6b35",
+        "secondary": "#dfb15b",
+        "accent": "#00f5d4"
+      },
+      "shader": "/radio-html/assets/shaders/radio-spectrum.frag",
+      "fallback": false,
+      "status": "draft",
+      "verification": "draft"
+    },
+    {
+      "key": "gokul",
+      "label": "Gokul",
+      "cover": "/radio-html/assets/covers/gokul.svg",
+      "evidencePath": "/radio-html/assets/evidence.html",
+      "evidenceId": "covers-gokul-svg",
+      "palette": {
+        "primary": "#00f5d4",
+        "secondary": "#ff6b35",
+        "accent": "#e2e8f0"
+      },
+      "shader": "/radio-html/assets/shaders/radio-yantra.vert",
+      "fallback": false,
+      "status": "draft",
+      "verification": "draft"
+    },
+    {
+      "key": "kaal-chakra",
+      "label": "Kaal Chakra",
+      "cover": "/radio-html/assets/covers/kaal-chakra.svg",
+      "evidencePath": "/radio-html/assets/evidence.html",
+      "evidenceId": "covers-kaal-chakra-svg",
+      "palette": {
+        "primary": "#dfb15b",
+        "secondary": "#00f5d4",
+        "accent": "#ff6b35"
+      },
+      "shader": "/radio-html/assets/shaders/radio-spectrum.frag",
+      "fallback": false,
+      "status": "draft",
+      "verification": "draft"
+    },
+    {
+      "key": "swarnim-sale",
+      "label": "The Swarnim Sale",
+      "cover": "/radio-html/assets/covers/swarnim-sale.svg",
+      "evidencePath": "/radio-html/assets/evidence.html",
+      "evidenceId": "covers-swarnim-sale-svg",
+      "palette": {
+        "primary": "#e2e8f0",
+        "secondary": "#dfb15b",
+        "accent": "#00f5d4"
+      },
+      "shader": "/radio-html/assets/shaders/radio-yantra.vert",
+      "fallback": false,
+      "status": "draft",
+      "verification": "draft"
+    }
+  ],
+  "catalog": {
+    "artist": "P.H.K.D.",
+    "total_songs": 482,
+    "total_clips": 1186,
+    "source": "/radio-html/Radio_Vaigyaaniq_App_Prototype.html",
+    "sourceStatus": "extracted-draft",
+    "shows": [
+      {
+        "name": "Sanatan & Vedic",
+        "count": 207,
+        "hero": "/radio-html/suno_backup/covers/30e92ffe-423f-48cf-9e93-5fd9bb7113c1.jpg",
+        "songs": [
+          {
+            "t": "विज़ुअल: अंतरिक्ष में तैरते हुए ३३-डिजिट संख्या ",
+            "r": "Vijuala: Antariksha Men Tairate Hue ३३-dijita Sankhyaa",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_30e92ffe_%E0%A4%9B%E0%A4%A4-%E0%A4%9B%E0%A4%9F%20%E0%A4%A4%E0%A4%BE%E0%A4%B2.mp3",
+            "c": "/radio-html/suno_backup/covers/30e92ffe-423f-48cf-9e93-5fd9bb7113c1.jpg",
+            "d": "4:24",
+            "ly": "[00:00 - 01:00 | दृश्य १: ३३-डिजिट मैट्रिक्स और ज्यामितीय शंखनाद - Intro Drop]\n- विज़ुअल: अंतरिक्ष में तैरते हुए ३३-डिजिट संख्या मैट्रिक्स के बीच एक विशाल डिजिटल स्क्रीन उभरती है, जहाँ वर्गाकार, आयताकार और त्रिभुजाकार आकृतियाँ नियॉन लाइटों की तरह चमक रही हैं। दो काल्पनिक ६-वर्षीय स्वदेशी बच्चे (शून्य सेलिब्रिटी प्रभाव) होलोग्राफिक आरेख को देख रहे हैं।\n- सोनिक: प्रचंड शंखनाद की ध्वनि... उसके तुरंत बाद $115\\text{ BPM}$ पर एक अत्यंत क्रिस्प और रॉ 'छत=छट' सिन्कोपेटेड ताली का लूप बेसलाइन को अपने नियंत्रण में ले लेता है।\n- वोकल्स (तेज, क्रिस्प और Staccato): \n  \"ट्रैक सत्ताइस! मेधा जागृति एक्सप्रेस का पहला कदम,\n  आकृतियों के गुप्त डिज़ाइन्स को, आज डिकोड करेंगे हम! Chhat!\"\n\n[01:00 - 02:30 | दृश्य २:",
+            "theme": "Sanatan & Vedic"
+          },
+          {
+            "t": "विज़ुअल: अंतरिक्ष में घूमते सूर्य और ग्रहों के ब",
+            "r": "Vijuala: Antariksha Men Ghoomate Soorya Aura Grahon Ke Ba",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_1bb556f0_%E0%A4%B9%E0%A4%A8%E0%A5%81%E0%A4%AE%E0%A4%BE%E0%A4%A8-%E0%A4%85%E0%A4%A8%E0%A5%81%E0%A4%AE%E0%A4%BE%E0%A4%A8%20%E0%A4%9B%E0%A4%9F.mp3",
+            "c": "/radio-html/suno_backup/covers/1bb556f0-a4fb-4994-9096-3ab4f66de0b8.jpg",
+            "d": "4:04",
+            "ly": "[00:00 - 01:00 | दृश्य १: ध्वन्यात्मक हुक और हनुमान चालीसा का खगोलीय अनुमान]\n- विज़ुअल: अंतरिक्ष में घूमते सूर्य और ग्रहों के बीच बाल हनुमान की एक काल्पनिक, एनिमेटेड ३डी आकृति (Zero Celebrity Likeness) प्रकट होती है। स्क्रीन पर दूरी और खगोलीय गणनाओं के समीकरण नियॉन लाइनों में चमकते हैं।\n- सोनिक: प्रचंड शंखनाद के साथ 'छत=छट' सिन्कोपेटेड ताली का आक्रामक लूप शुरू होता है।\n- वोकल्स (Staccato Warmup): \n  \"हा... हू... हौ... हन्... हनु... मान्! ह्-हनु... ह्-अनुमान!\"\n  \"युग सहस्र जोजन पर भानू, लील्यो ताहि मधुर फल जानू!\n  बिना यंत्र के दूरी मापी, मन में था वो दिव्य अनुमान,\n  धार्मिक निष्ठा और विज्ञान का, ऐसा था वो आदि संधान!\"\n- अनुवाद गाइड: \"अनुमान मतलब Estimation! ... रणनीतिक मतलब Strategic! Chhat!\"",
+            "theme": "Sanatan & Vedic"
+          },
+          {
+            "t": "हा... हू... हौ... हन्... हनु... हनु... हनु... मा",
+            "r": "Haa... Hoo... Hau... Han... Hanu... Hanu... Hanu... Maa",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_ada89c81_%E0%A5%A9%E0%A5%A9-%E0%A4%A1%E0%A4%BF%E0%A4%9C%E0%A4%BF%E0%A4%9F%20%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A5%89%E0%A4%A8.mp3",
+            "c": "/radio-html/suno_backup/covers/ada89c81-d8fa-4ec0-9938-d9435397b7cd.jpg",
+            "d": "3:17",
+            "ly": "[00:00 - 00:45 | द फोनेटिक ब्रेकडाउन - Intro Drop & Shankhnaad]\n(प्रचंड शंखनाद की ध्वनि... स्क्रीन पर ३३-डिजिट का नियॉन संख्या मैट्रिक्स घूमता है)\n(Fast, raw, crisp 'Chhat-Chhat' syncopated handclaps taking absolute control of the baseline)\n\nVocals (Hyper-speed staccato warmup - No background music):\n\"हा... हू... हौ... हन्... हनु... हनु... हनु... मान्! \nह्-हनु... ह्-हनु... ह्-हनु... ह्-अनुमान!\"\n\n(Massive sub-bass explosion drops directly into an intense dholak battle loop)\n\n[00:45 - 01:45 | प्रथम चरण: हनुमान चालीसा और अनुमान का कोर लॉजिक]\n(Traditional Chalisa rhythmic structure locking with modern trap stabs)\n\n\"बाल हनुमान की गूँजी मेधा, जाम्बवंत का जागा संप्रभु ज्ञान,\nअनुमान (Estimation) के ",
+            "theme": "Sanatan & Vedic"
+          },
+          {
+            "t": "Vocals : \"हा... हू... हौ... हन्... हनु... हनु...",
+            "r": "Vocals : \"haa... Hoo... Hau... Han... Hanu... Hanu...",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_bcb08d50_%E0%A4%B9%E0%A4%A8%E0%A5%81-%E0%A4%AE%E0%A4%BE%E0%A4%A8%E0%A5%8D%20%E0%A4%B9%E0%A4%A8%E0%A5%81.mp3",
+            "c": "/radio-html/suno_backup/covers/bcb08d50-076e-4408-ae04-389701191ee3.jpg",
+            "d": "7:59",
+            "ly": "[00-08s: The Phonetic Breakdown - Intro Hook]\n(Fast crisp 'Chhat-Chhat' syncopated claps locking with an aggressive sub-bass pulse)\nVocals (Rapid-fire staccato): \"हा... हू... हौ... हन्... हनु... हनु... हनु... मान्! ह्-हनु... ह्-हनु... ह्-हनु... ह्-अनुमान!\"\n\n[08-22s: The Logic Strike]\n(The beat drops violently into a dynamic folk-hop loop)\n\"बाल हनुमान की गूँजी मेधा, जाम्बवंत का जागा संप्रभु ज्ञान,\nअनुमान (Estimation) के कोडिंग नियमों से, हल होता हर एक लेसन महान!\"\n\n[22-30s: Parallel Translation Guide]\n(Beat stops completely - strictly percussive syncopated 'Chhat' strikes)\n\"अनुमान मतलब Estimation! ... रणनीतिक मतलब Strategic! Chhat!\"[STAGE 1: PRIMARY EXPRESS (Classes 1 to 5) | 105 - 120 BPM]\n- ",
+            "theme": "Sanatan & Vedic"
+          },
+          {
+            "t": "जुग सहस्र जोजन पर भानू",
+            "r": "Juga Sahasra Jojana Para Bhaanoo",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_31cd60d6_%E0%A4%9A%E0%A4%95%E0%A5%8D%E0%A4%B0-%E0%A4%87%E0%A4%82%E0%A4%9C%E0%A4%A8%20%E0%A4%B6%E0%A4%82%E0%A4%96%E0%A4%A8%E0%A4%BE%E0%A4%A6.mp3",
+            "c": "/radio-html/suno_backup/covers/31cd60d6-6b7d-4e15-9847-9c3866d60440.jpg",
+            "d": "3:36",
+            "ly": "[00:00 - 00:30 | शंखनाद एवं सोनिक हुक - Intro Drop]\n(प्रचंड शंखनाद की ध्वनि... बैकग्राउंड में ३ डी होलोग्राफिक पंचांग चक्र घूमता है)\n(Fast, raw, crisp 'Chhat-Chhat' syncopated handclaps taking over the baseline)\n(Chitti's voice-over: \"Digital Gurukul Core Engine: Class 3 Estimation Logic, Activated!\")\n\n[00:30 - 01:15 | प्रथम चरण: चौपाई लय और अनुमान का सिद्धांत]\n(Heavy sub-bass stabs lock with a fast-paced traditional dholak groove)\n(Vocal Cadence: Raw, high-impact, rhythmic)\n\n\"जुग सहस्र जोजन पर भानू, लील्यो ताहि मधुर फल जानू!\nदूरी का यह महा-समीकरण, ऋषियों ने पल में पहचाना,\nबिना मापे जो सटीक बता दे, वही है 'अनुमान' का पैमाना!\"\n\n(Chorus Drop - Sharp 'Chhat!' strike):\n\"संख्या के पास की संख्या प",
+            "theme": "Sanatan & Vedic"
+          },
+          {
+            "t": "Hyper-dynamic Indian electronic folk-pop",
+            "r": "Hyper-dynamic Indian electronic folk-pop",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_1fe3b620_Chhat-Chhat%20Sanaatana.mp3",
+            "c": "/radio-html/suno_backup/covers/1fe3b620-3a18-4632-b128-12c1b2245f47.jpg",
+            "d": "2:14",
+            "ly": "[Style of Music: Master Command]\nHyper-dynamic Indian electronic folk-pop, calibrated tempos 105 to 120 BPM, raw and crisp \"Chhat-Chhat\" syncopated rhythm strike, punchy handclaps, traditional dholki loops blended with sharp modern techno synths, hyper-articulated vocals, parallel bilingual translation engine, absolute zero celebrity likeness.\n\n[Structure: K-5 Multi-Track Album Loop]\n\n[TRACK 01-13: CLASS 1 - THE SANAATANA EXPRESS]\n- Focus: Sets, Numbers 1-9 (Pingala binary), Shapes (Vishwakarma rules), Sarangi-Mridang bridge, The Heart Hero (P.H.K.D. Values).\n- Lyrics: \"पिंगल का छंद जागा, शून्य से नौ तक का चक्र चलाया! माता-पिता मतलब Parents, पूर्वज मतलब Ancestors! Chhat!\"\n\n[TRACK 14-26: CLAS",
+            "theme": "Sanatan & Vedic"
+          },
+          {
+            "t": "```text",
+            "r": "```text",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_9b8b2f04_%E0%A4%A6%20%E0%A4%B8%E0%A4%A8%E0%A4%BE%E0%A4%A4%E0%A4%A8%20%E0%A4%8F%E0%A4%95%E0%A5%8D%E0%A4%B8%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%B8.mp3",
+            "c": "/radio-html/suno_backup/covers/9b8b2f04-0e8b-4270-af63-84bd21bb7574.jpg",
+            "d": "3:29",
+            "ly": "कक्षा 1: द सनातन एक्सप्रेस जर्नी (Class 1 Suno AI Prompts)सोनिक कैलिब्रेशन: Playful Indian Folk-Pop, $105\\text{ BPM}$ट्रैक १: My Family (मेरा परिवार)Style of Music Prompt:Warm acoustic Indian folk-pop, 105 BPM, gentle acoustic guitar strumming, playful bamboo flute, crisp syncopated handclaps, emotional roots rhythm, raw vocals.Lyrics Box (30-Sec Snippet):Plaintext[00-08s: Intro Hook]\n(Fast crisp 'Chhat-Chhat' handclaps with a bright bamboo flute riff)\n[08-22s: Core Logic Strike]\n\"दादा-दादी, माता-पिता, पूजनीय पितृगण का साया, \nमेरा परिवार मेरी माटी, जीवन का पहला पाठ सिखाया!\"\n[22-30s: Parallel Translation Guide]\n\"माता-पिता मतलब Parents! ... पूर्वज मतलब Ancestors! Chhat!\"\n\n### ट्रैक २: Shapes (",
+            "theme": "Sanatan & Vedic"
+          },
+          {
+            "t": "ताल: आदि तीव्र",
+            "r": "Taala: Aadi Teevra",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_832210ad_%E0%A4%95%E0%A4%BE%E0%A4%B2%E0%A5%80-%E0%A4%95%E0%A4%B2%E0%A4%AE-%E0%A4%95%E0%A4%BE.mp3",
+            "c": "/radio-html/suno_backup/covers/832210ad-c382-4ee4-8099-264df30ef06c.jpg",
+            "d": "5:58",
+            "ly": "[Overture]\nरुबाब: एक तार झोला\nमृदंगम: तोम\nसारंगी: मींड – का\n\n🎵 क.. क... का... का... क्या...\n🎵 क.. का...\n🎵 फिर कहे को कहे को कहे कौ\n🎵 फिर काला कागद काली कलम\n🎵 फिर काल लिखे काल मिटावे\n🎵 फिर का का अर्थ न जाने कोई\n\n🎤 कः इति ब्रह्म। प्रश्नः एव सृष्टिः।\nमृदंगम: थोम\n\n[Verse 1]\nताल: आदि (8 मात्रा)\nमृदंगम: तक धिन ता धि\n\n🎵 का... का...\n🎵 फिर काहे काहे काहे रे का\n🎵 फिर क ख ग घ – सब तेरा खेल\n🎵 फिर खाली कागर काहे बुलावे\n🎵 फिर काम क्रोध का मारे मेल\n🎵 क्या...\n\n🎤 नादात्मकं जगत्सर्वं नाद एव परं पदम्\nरुबाब: सा – खुला तार\n\n[Verse 2]\nताल: झंपा (10 मात्रा)\nमृदंगम: तक धिन ता तक – धिन ता तक धिन ता\n\n🎵 क कौ के – तीनो तार\n🎵 केन कभ्याम् – दोहरा द्वार\n🎵 कै कहे कै बार\n🎵 कविम् कवीम् कवयः\n🎵 फिर कवि भी क्या जाने का का अर्थ\n",
+            "theme": "Sanatan & Vedic"
+          },
+          {
+            "t": "🎵 क का रहस्य निराला",
+            "r": "🎵 Ka Kaa Rahasya Niraalaa",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_d85bffd9_%E0%A4%95%E0%A4%BE%E0%A4%B2%E0%A5%80%20%E0%A4%95%E0%A4%B2%E0%A4%AE.mp3",
+            "c": "/radio-html/suno_backup/covers/d85bffd9-6420-4844-bef4-34a1ed0cfffd.jpg",
+            "d": "5:58",
+            "ly": "[Overture – Solo, fading in]\n🎵 क.. क... का... का... क्या...\n\n🎵 क.. का...\n\n🎵 फिर कहे को कहे को कहे कौ\n\n🎵 फिर काला कागद काली कलम\n\n🎵 फिर काल लिखे काल मिटावे\n\n🎵 फिर का का अर्थ न जाने कोई\n\n🎤 कः इति ब्रह्म। प्रश्नः एव सृष्टिः।\n\n[Verse 1 – The Play of Letters]\n🎵 का... का...\n\n🎵 फिर काहे काहे काहे रे का\n\n🎵 फिर क ख ग घ – सब तेरा खेल\n\n🎵 फिर खाली कागर काहे बुलावे\n\n🎵 फिर काम क्रोध का मारे मेल\n\n🎵 क्या...\n\n🎤 नादात्मकं जगत्सर्वं नाद एव परं पदम्\n\n[Verse 2 – Grammar as Three Worlds]\n🎵 क कौ के – तीनो तार\n\n🎵 केन कभ्याम् – दोहरा द्वार\n\n🎵 कै कहे कै बार\n\n🎵 कविम् कवीम् कवयः\n\n🎵 फिर कवि भी क्या जाने का का अर्थ\n\n🎵 फिर कवि भी फिरे काल के हर्थ\n\n🎤 कः – कौ – के | केन – काभ्याम् – कैः | कस्मै – काभ्याम् – केभ्यः | कस्मात् ",
+            "theme": "Sanatan & Vedic"
+          },
+          {
+            "t": "🎵 ka kaa rahasya niraalaa",
+            "r": "🎵 ka kaa rahasya niraalaa",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_58a470f5_%E0%A4%95%E0%A4%BE%E0%A4%97%E0%A4%A6%20%E0%A4%95%E0%A4%BE%E0%A4%B2%E0%A5%80%20%E0%A4%95%E0%A4%B2%E0%A4%AE.mp3",
+            "c": "/radio-html/suno_backup/covers/58a470f5-a299-4fb9-b539-f879df9db3c0.jpg",
+            "d": "5:58",
+            "ly": "🎵 KA KAA RAHASYA\n(The Secret of 'Ka')\nNarrator-Style Mystical Ballad\n\n[Overture]\n🎵 k.. ka... kaa... kaaa... kyaa...\n🎵 k.. ka...\n🎵 Fir kahe ko kahe ko kahe kau\n🎵 Fir kaalaa kaagad kaalee kalam\n🎵 Fir kaal likhe kaal mitaave\n🎵 Fir kaa kaa arth na jaane koi\n\n🎤 कः इति ब्रह्म। प्रश्नः एव सृष्टिः। (Yāska)\n\n[Verse 1]\n🎵 kaa... kaaa...\n🎵 Fir kaahe kaahe kaahe re kaa\n🎵 Fir ka kha ga gha – sab teraa khel\n🎵 Fir khaali kaagar kaahe bulaave\n🎵 Fir kaam krodh kaa maare mel\n🎵 kyaa...\n\n🎤 नादात्मकं जगत्सर्वं नाद एव परं पदम् (Gorakhnath)\n\n[Verse 2]\n🎵 ka kau ke – Fir ka se kau – teeno taar\n🎵 ken kabhyaam – dohraa dvaar\n🎵 kai kahe kai baar – kaa ke beech mein kaun karaar\n🎵 kavim kaviim kavayah – Fir kavi bhi kya j",
+            "theme": "Sanatan & Vedic"
+          },
+          {
+            "t": "ekla chalo re... nahi",
+            "r": "ekla chalo re... nahi",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_c086c759_Ka%20Kau%20Question.mp3",
+            "c": "/radio-html/suno_backup/covers/c086c759-c522-42a2-9718-bf85eb3d3dc7.jpg",
+            "d": "5:46",
+            "ly": "[Overture – Spoken/Whispered]\nekla chalo re... nahi...\nk.. ka... kaa... kaaa... kyaa...\nka kau ke... ken kabhyaam kai...\n\n[Verse 1 – Grammar as Creation]\n🎤 Narrator (Sanskrit / Nirukta 1.1):\nयास्कः कथयति –\n\"कः इति ब्रह्म। प्रश्नः एव सृष्टिः।\"\n(Yāska says – 'Ka' is Brahman. Questioning itself is creation.)\n\n🎵 Poet responds:\nkavim kaviim kavayah\nkahaam katham kathaam\nkasmin kyo keshu\n\npoet, to the poet, of poets\nwhere, how, what story\nin which? why? in the hairs…\n\n[Verse 2 – Guru Nanak’s Primal Sound]\n🎤 Narrator (Gurmukhi – Japji Sahib, Pauri 1):\nੴ ਸਤਿ ਨਾਮੁ ਕਰਤਾ ਪੁਰਖੁ ਨਿਰਭਉ ਨਿਰਵੈਰੁ\nEk aonkar sati namu karata purakhu nirabha-u niravairu\n(One Universal Creator, Truth is Name, Fearless, Without E",
+            "theme": "Sanatan & Vedic"
+          },
+          {
+            "t": "ka kau ke",
+            "r": "ka kau ke",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_f090d601_Kaa%20Rahasya.mp3",
+            "c": "/radio-html/suno_backup/covers/f090d601-40e5-4874-b303-4bc84220564c.jpg",
+            "d": "2:54",
+            "ly": "[Original (your lines)]\nk..\nka...\nkaa...\nkaaa...\nkyaa...\n\nka kau ke\nken kabhyaam kai\nkavim kaviim kavayah\nkahaam katham kathaam\nkasmin kyo keshu\n\nka kaa rahasya niraalaa\nkya kaun kab kaise kahan\nnai brahmaand racha daalaa\n\ne mera naanak we matwaalaa\nkaa de chakkar k nu dala\nkada kachcha karpaan kanghi kesh\nsakkhe purus nu ditte bhesh\nchanddalaa de dna nai\nonnu wi dohkaa de daalaa\n\n[➤ Extension (your voice continued)]\nka... kaa... kya... kyo...\nkahan kab tak kisko kyon\nkhalq khuda kufr karam\nkhoon kaleje kaa, kaghaz kalam\n\nkhaali karo kya kahe kabeer\nkankar kaahe karein taqeer\nkuttaa kaalaa kya jaane\nkaaba kaun, kaun but-khaana\n\nkaafir kahe kaaba chale\nqazi kahe qabar chale\nkaa de chakkar mei",
+            "theme": "Sanatan & Vedic"
+          }
+        ]
+      },
+      {
+        "name": "Bhakti & Katha",
+        "count": 92,
+        "hero": "/radio-html/suno_backup/covers/75291d2d-784d-46f7-8c5a-774e99eb3e3e.jpg",
+        "songs": [
+          {
+            "t": "सिंहिका पथ दियाये केतु भागे भटका भटक",
+            "r": "Sinhikaa Patha Diyaaye Ketu Bhaage Bhatakaa Bhataka",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_75291d2d_%E0%A4%B9%E0%A4%A8%E0%A5%81%20%E0%A4%AE%E0%A5%82%E0%A4%A1%20%E0%A4%96%E0%A4%BE%E0%A4%A8%E0%A5%87.mp3",
+            "c": "/radio-html/suno_backup/covers/75291d2d-784d-46f7-8c5a-774e99eb3e3e.jpg",
+            "d": "3:00",
+            "ly": "[Genre: Indian folk rock, devotional chanting, fast tempo, dholak and tabla rhythm, energetic male vocal]\n\n[Verse 1 - Rap style, rhythmic]\nहट हट हट होनी तू हट\nआई छट छट छट\nछट का दिन हनु लगाई हट\nखाऊँगा ये फल वरना दूंगा\nपटक पटक पटक\n\n[Chorus - Melodic, rising energy]\nसिंहिका पथ दियाये केतु भागे भटका भटक\nपड़ी पिटाई पटक पटक पटक\n\nछाया का रस ऐसा भाया\nहनु भानु लीलने धाया\n\nहट हट हट होनी तू हट\nआया हनु का मूड खाने का\nदिन हनु लगाई हट\n\n[Verse 2 - Medium tempo, mysterious]\nखरोष्ठी दे रही सिखाए\nस्वर से स्वरभानु व्यंजन बनाए\nमात पिता की ब्राह्मी हनु याद आए\nदोनों एक ही ध्वनि पर चिन्ह अलग\nहनु भरमाए भूक भटकाये\nब्राह्मी किए इस्तेमाल खरोष्ठी हनु को स्वयं आये\n\n[Bridge - Slow, building tension]\nसिंहिका जाने चाँदनी ऊ",
+            "theme": "Bhakti & Katha"
+          },
+          {
+            "t": "हट हट हट होनी तू हट",
+            "r": "Hata Hata Hata Honee Too Hata",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_974ae0bf_%E0%A4%B9%E0%A4%A8%E0%A5%81%20%E0%A4%95%E0%A5%80%20%E0%A4%AA%E0%A4%9F%E0%A4%95.mp3",
+            "c": "/radio-html/suno_backup/covers/974ae0bf-c90c-47bb-803a-18160360bc54.jpg",
+            "d": "2:34",
+            "ly": "[स्थायी / Staya (Refrain)]\nहट हट हट होनी तू हट\nआई छट छट छट\nछट का दिन हनु लगाई हट\nखाऊँगा ये फल वरना दूंगा\nपटक पटक पटक\n\n[अन्तरा 1 / Antara 1]\nसिंहिका पथ दियाये केतु भागे भटका भटक\nपड़ी पिटाई पटक पटक पटक\n\nछाया का रस ऐसा भाया\nहनु भानु लीलने धाया\n\nहट हट हट होनी तू हट\nआया हनु का मूड खाने का\nदिन हनु लगाई हट\n\n[अन्तरा 2 / Antara 2]\n\nखरोष्ठी दे रही सिखाए\nस्वर से स्वरभानु व्यंजन बनाए\nमात/पिता की ब्राह्मी हनु याद आए\nदोनों एक ही ध्वनि पर चिन्ह अलग\nहनु भरमाए भूक भटकाये \nब्राह्मी किए इस्तेमाल खरोष्ठी हनु को स्वयं आये \n\nअन्तरा 3 / Antara 3\nसिंहिका जाने चाँदनी ऊर्जा\nब्राह्मी बनाये इसका पुर्जा पुर्जा \n\nखरोष्ठी के हर अक्षर संग\nहनु रह गया दंग \nहनु को आते योजन सहस्र\nसूरज फल वाले प्रकरण के रंग\n\n[अन्तरा 4 / Antara ",
+            "theme": "Bhakti & Katha"
+          },
+          {
+            "t": "हट हट हट होनी तू हट",
+            "r": "Hata Hata Hata Honee Too Hata",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_86fe2a68_%E0%A4%9B%E0%A4%9F%20%E0%A4%95%E0%A4%BE%20%E0%A4%A6%E0%A4%BF%E0%A4%A8.mp3",
+            "c": "/radio-html/suno_backup/covers/86fe2a68-593c-4b20-a76a-d0f504f89943.jpg",
+            "d": "2:31",
+            "ly": "स्थायी / Staya (Refrain)\nहट हट हट होनी तू हट\nआई छट छट छट\nछट का दिन हनु लगाई हट\nखाऊँगा ये फल वरना दूंगा\n\nअन्तरा 1 / Antara 1\nपटाका पटाका पटाका\nसिंहिका पथ दियाये भटका भटका\nछाया का रस ऐसा भाया\nहनु भानु लीलने धाया\n\nहट हट हट होनी तू हट\nआया हनु का मूड खाने का\nदिन हनु लगाई हट\n\nअन्तरा 2 / Antara 2\nखरोष्ठी दे रही सिखाए\nस्वर से स्वरभानु व्यंजन बनाए\nमात/पिता की ब्राह्मी हनु याद आए\nदोनों एक ही ध्वनि पर चिन्ह अलग\nहनु भरमाए\n\nअन्तरा 3 / Antara 3\nसिंहिका जाने चाँदनी ऊर्जा\nखरोष्ठी के हर अक्षर संग\nहनु को आते योजन सहस्र\nसूरज फल वाले प्रकरण के रंग\n\nअन्तरा 4 / Antara 4\nएक से तेरह घात तक\nसब मौजूद — शत, सहस्र, अयुत\nप्राकृत में, गांधारी में\nतेरह किमी का योजन सुत\n\nअन्तरा 5 / Antara 5\nतब सिंहिका माँ बनी, गुरु बनी\nस्व",
+            "theme": "Bhakti & Katha"
+          },
+          {
+            "t": "हट हट हट होनी तू हट",
+            "r": "Hata Hata Hata Honee Too Hata",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_4ddbdc9c_%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%B0%E0%A4%AD%E0%A4%BE%E0%A4%A8%E0%A5%81%20%E0%A4%AE%E0%A4%BE%E0%A4%81%20%E0%A4%B8%E0%A4%BF%E0%A4%96%E0%A4%BE%E0%A4%8F.mp3",
+            "c": "/radio-html/suno_backup/covers/4ddbdc9c-240c-4e5d-8b50-ee61576d136e.jpg",
+            "d": "3:04",
+            "ly": "[गाना / Song\nधुन / Tune: अपनी (your own) — but read with rhythm, like a folk chant or a kaavad ballad.]\n\n[स्थायी / Staya (Refrain)]\nहट हट हट होनी तू हट\nस्वरभानु की माँ सिखाए स्वर का ज्ञान\nखरोष्ठी दे रही सिखाए, स्वर से व्यंजन बनाए\nहनु लगाए दिन हट का, ऊपर जाए, आदर लाए\nहट हट हट — अब तू हट\n\n[अन्तरा 1 / Antara 1 (Sinhika and the Moon)]\nसिंहिका जाने चाँदनी ऊर्जा\nखरोष्ठी के हर अक्षर में\nयोजन सहस्र हनु को आते\nसूरज फल वाले प्रकरण में\n\nछाया का रस ऐसा भाया\nहनु भानु लीलने धाया\nपटाका पटाका वह पग धरे\nस्वरभानु राहु बन जाया\n\n[अन्तरा 2 / Antara 2 (Two Scripts, One Sound)]\nब्राह्मी याद आए मात-पिता की\nखरोष्ठी सिखाए विधि दूसरी\nएक ही ध्वनि पर चिन्ह अलग\nहनु भरमाए — कैसे समझे ये सब?\n\nदस का दस, सौ का सौ\nलक्ख, कोड़ी",
+            "theme": "Bhakti & Katha"
+          },
+          {
+            "t": "Vocals : \"हा... हू... हौ... हन्... हनु... हनु...",
+            "r": "Vocals : \"haa... Hoo... Hau... Han... Hanu... Hanu...",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_a24721b3_%E0%A4%B9%E0%A5%8D-%E0%A4%B9%E0%A4%A8%E0%A5%81%20%E0%A4%85%E0%A4%A8%E0%A5%81%E0%A4%AE%E0%A4%BE%E0%A4%A8.mp3",
+            "c": "/radio-html/suno_backup/covers/a24721b3-51c9-48b8-997b-0aab5ae3f158.jpg",
+            "d": "0:32",
+            "ly": "[00-08s: The Phonetic Breakdown - Intro Hook]\n(Fast crisp 'Chhat-Chhat' syncopated claps locking with an aggressive sub-bass pulse)\nVocals (Rapid-fire staccato): \"हा... हू... हौ... हन्... हनु... हनु... हनु... मान्! ह्-हनु... ह्-हनु... ह्-हनु... ह्-अनुमान!\"\n\n[08-22s: The Logic Strike]\n(The beat drops violently into a dynamic folk-hop loop)\n\"बाल हनुमान की गूँजी मेधा, जाम्बवंत का जागा संप्रभु ज्ञान,\nअनुमान (Estimation) के कोडिंग नियमों से, हल होता हर एक लेसन महान!\"\n\n[22-30s: Parallel Translation Guide]\n(Beat stops completely - strictly percussive syncopated 'Chhat' strikes)\n\"अनुमान मतलब Estimation! ... रणनीतिक मतलब Strategic! Chhat!\"",
+            "theme": "Bhakti & Katha"
+          },
+          {
+            "t": "काश वो बचपन फिर से लौट आए",
+            "r": "Kaasha Vo Bachapana Phira Se Lauta Aae",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_ce81e083_Kash%20Bachpan%20Phir.mp3",
+            "c": "/radio-html/suno_backup/covers/ce81e083-36e5-4e52-9024-06159cb42409.jpg",
+            "d": "3:26",
+            "ly": "[Style: Braj Folk + Funky Pop + Electro Bhangra + Bollywood Dance]\n[Tempo: Fast, 115 BPM, Groovy, Head-nodding beat]\n[Voice: Male, Energetic, Playful, Slightly Autotuned, Braj accent with Swag]\n[Mood: Nostalgic but Fun, Dancing on childhood memories, Party on terrace, Thumak Thumak vibe]\n\n[Intro - Funky bass slap + EDM flute + Dholak beat drop]\n\n[Verse 1 - Groovy]\nब्रज की गली में बचपन मेरा डांस करे (आह!)\nभाई-बहन का झगड़ा भी ट्रेंडिंग पर चढ़े (चढ़े!)\nमम्मी सुबह-सुबह रोटी बनाए साउथ इंडियन स्टाइल\nऔर हम स्कूल जाएँ बस्ता लाद के चाइल्ड डिश्याइल!\n\n[Chorus - Catchy & Hook]\nकाश वो बचपन फिर से लौट आए (लौट आए!)\nबास गर्मियों की छुट्टी फिर से फोन लगाए\nनानी के घर जाना है फुल ऑन ट्रिप\nपापा का भागवत अब यूट्",
+            "theme": "Bhakti & Katha"
+          },
+          {
+            "t": "काश वो बचपन फिर से लौट आए",
+            "r": "Kaasha Vo Bachapana Phira Se Lauta Aae",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_6d0a9964_%E0%A4%9B%E0%A4%A4%20%E0%A4%95%E0%A5%80%20%E0%A4%9A%E0%A4%BE%E0%A4%A6%E0%A4%B0.mp3",
+            "c": "/radio-html/suno_backup/covers/6d0a9964-c0d3-45cf-925a-c9fa28f97ba3.jpg",
+            "d": "3:38",
+            "ly": "\n[Intro - Tabla and Harmonium - Soft]\n\n[Verse 1 - Raga Bhairav feel]\nबहन भाइयों, मेरा वो बचपन कहाँ गया \nलड़ना झगड़ना रूठना मनाना कहाँ गया\nमम्मी का सुबह-सुबह खाना बनाना\n कहाँ गए वो दिन और हमें स्कूल जाना\n\n[Chorus - Raga Yaman feel]\nकाश वो बचपन फिर से लौट आए\nछत पर सोना तारे तोले जाएँ\nमम्मी का अलाराम पेपर वाली रातें\nये सब यादें हैं सोने की बातें\n\n[Verse 2 - Raga Hindol feel]\nगर्मियों की छुट्टियाँ नानी के यहाँ जाना\nपापा का भागवत सुनना भजन-कीर्तन गाना\nजुलाई में स्कूल खुलने का दर्द अलग था\nफिर से स्कूल जाने का अपना ही मजा था\n\n[Bridge - Spoken word with soft Harmonium]\nमम्मी अलार्म लगा देना... सुबह जगा देना...\nपेपर है आज और कुछ याद नहीं आता...\nअब वो मम्मी नहीं जगाती... अब मैं हूँ. खुद जग जाता ..\n\n[C",
+            "theme": "Bhakti & Katha"
+          },
+          {
+            "t": "काश वो बचपन फिर से लौट आए",
+            "r": "Kaasha Vo Bachapana Phira Se Lauta Aae",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_b1bd425e_%E0%A4%9B%E0%A4%A4%20%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A4%BE%20%E0%A4%B8%E0%A4%BF%E0%A4%A4%E0%A4%BE%E0%A4%B0%E0%A5%8B%E0%A4%82.mp3",
+            "c": "/radio-html/suno_backup/covers/b1bd425e-a117-432d-81ca-2acb4c87fa00.jpg",
+            "d": "3:52",
+            "ly": "\n[Intro - Tabla and Harmonium - Soft]\n\n[Verse 1 - Raga Bhairav feel]\nमेरा वो बचपन कहाँ गया बहन भाइयों का\nलड़ना झगड़ना रूठना मनाना कहाँ गया\nमम्मी का सुबह-सुबह खाना बनाना\nऔर हमें स्कूल जाना कहाँ गए वो दिन\n\n[Chorus - Raga Yaman feel]\nकाश वो बचपन फिर से लौट आए\nछत पर सोना तारे तोले जाएँ\nमम्मी का अलाराम पेपर वाली रातें\nये सब यादें हैं सोने की बातें\n\n[Verse 2 - Raga Hindol feel]\nगर्मियों की छुट्टियाँ नानी के यहाँ जाना\nपापा का भागवत सुनना भजन-कीर्तन गाना\nजुलाई में स्कूल खुलने का दर्द अलग था\nफिर से स्कूल जाने का अपना ही मजा था\n\n[Bridge - Spoken word with soft Harmonium]\nमम्मी अलार्म लगा देना... सुबह जगा देना...\nपेपर है आज और कुछ याद नहीं आता...\nअब वो मम्मी नहीं जगाती... अब मैं खुद जग जाता हूँ...\n\n[Ch",
+            "theme": "Bhakti & Katha"
+          },
+          {
+            "t": "मूल्यों के प्रति ये निष्ठा अपनी",
+            "r": "Moolyon Ke Prati Ye Nishthaa Apanee",
+            "a": "/radio-html/suno_backup/audio/2026-05-23_77a40556_%E0%A4%95%E0%A4%AC%E0%A5%80%E0%A4%B0%20%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%97%E0%A5%81%E0%A4%A3.mp3",
+            "c": "/radio-html/suno_backup/covers/77a40556-adc6-4bd2-bf2d-3bfac249ad2a.jpg",
+            "d": "4:00",
+            "ly": "(Intro)\n(Deep, mystical acoustic sitar notes blending with atmospheric neural synth pads)\n(Sound of a deep breath, instantly shattered by heavy hard-hitting crisp handclaps)\n(Sudden sharp, deep 808 sub-bass drop changing into an aggressive yet soulful rhythm)\n\n(Chorus)\nमूल्यों के प्रति ये निष्ठा अपनी, झुकती नहीं है अब ये गर्दन!\nकबीर का निर्गुण मार्ग चुना है, शुद्ध और सच्चा अपना ये मन!\nअथक रचनात्मकता की हद को पार करेंगे हम वादा,\nईमानदारी के इस पथ पर, चलेंगे हम अब हद से ज़्यादा!\nछट-छट चलती अपनी साँसें, सत्य की गूँज हवा में नाचे!\n\n(Verse 1 - The Pure & Honest Kabir Foundation)\nबाज़ार की इस अंधी दौड़ में, हमने अपना होश न खोया,\nसत्य और ईमानदारी का बीज, इस अंतर्मन में है बोया!\nनहीं चाहिए कोई बाहरी",
+            "theme": "Bhakti & Katha"
+          },
+          {
+            "t": "नाम तेरे रखे अनेक",
+            "r": "Naama Tere Rakhe Aneka",
+            "a": "/radio-html/suno_backup/audio/2026-05-13_a37f2f45_%E0%A4%B8%E0%A4%BF%E0%A4%B2%E0%A5%87%E0%A4%82%E0%A4%B8%20%E0%A4%95%E0%A5%87%20%E0%A4%AA%E0%A4%BE%E0%A4%B0.mp3",
+            "c": "/radio-html/suno_backup/covers/a37f2f45-fd0e-4254-a6cc-1dd4376ceaa2.jpg",
+            "d": "3:58",
+            "ly": "\n\n[Intro: Distant nagada hit — 3 times. Then a male voice shouts: \"अरे हो… सुनो सुनो आज नौटंकी है, स्वाँग है, क़व्वाली है… और बीच में है सपना!\" Dholak fast for 2 seconds — stops.]\n\n[Chorus — harmonium, slow dholak, soft claps]\nनाम तेरे रखे अनेक, छुपा बैठा तू है एक।।\nतेरे आगे जाने किस वश, बड़े-बड़े देते घुटने टेक।।\n\n[Raskhan enters — same vocalist, voice changes to playful, nasal, fast. Chorus laughs after each couplet — \"हे हे हे… अरे ये तो ठगा गया!\" Dholak \"lapak\" hit.]\nकहाँ छुपि बैठो साँवरिये बाँके?\nचाहूँ तो न देखूँ, देखूँ तो न भाए।\n\nहम तुमतै कहा दएँ? हम तो ठगे गए।\nनाम तुम्हारो लेतै ही, साधु सब कहाए।\n\n[Meera enters — same vocalist, voice changes to higher, cracked, yearning. Chorus whisper",
+            "theme": "Bhakti & Katha"
+          },
+          {
+            "t": "नाम तेरे रखे अनेक",
+            "r": "Naama Tere Rakhe Aneka",
+            "a": "/radio-html/suno_backup/audio/2026-05-13_f0e7033c_%E0%A4%98%E0%A5%81%E0%A4%9F%E0%A4%A8%E0%A5%87-%E0%A4%9B%E0%A5%81%E0%A4%AA%E0%A4%BE%20%E0%A4%8F%E0%A4%95.mp3",
+            "c": "/radio-html/suno_backup/covers/f0e7033c-a246-4902-a230-945e9796c695.jpg",
+            "d": "4:47",
+            "ly": "\n[Intro: Harmonium in Bhairavi, slow. Chorus hums \"Aa... Aa...\" softly. Tabla enters in slow ektal.]\n\n---\n\n## Mukhda (Chorus — in Hindi/Urdu, repeated after every few lines)\n\nChorus (full, slow):\nनाम तेरे रखे अनेक, छुपा बैठा तू है एक।।\nतेरे आगे जाने किस वश, बड़े-बड़े देते घुटने टेक।।\n\n---\n\n## Round 1 — शुरू रसखान (प्रश्न करता है)\n\nRaskhan (Braj, playful, pulling, hands maybe moving):\nकहाँ छुपि बैठो तुम, साँवरिये बाँके?\nचाहूँ तो न देखूँ, देखूँ तो न भाए।।\n\nChorus (echoing softly):\n... न भाए... साँवरिये...\n\nRaskhan (louder, almost laughing):\nहम तुमतै कहा दएँ? हम तो ठगे गए।\nनाम तुम्हारो लेतै ही, साधु सब कहाए।।\n\nChorus (with a light clap on \"कहाए\"):\nकहाए... सब कहाए...\n\n---\n\n## मीरा का स्वर (उत्तर",
+            "theme": "Bhakti & Katha"
+          },
+          {
+            "t": "तोरै ही भरोसो",
+            "r": "Torai Hee Bharoso",
+            "a": "/radio-html/suno_backup/audio/2026-05-13_e553b9c9_%E0%A4%A8%E0%A4%BE%E0%A4%AE%20%E0%A4%85%E0%A4%A8%E0%A5%87%E0%A4%95%20%E0%A4%8F%E0%A4%95.mp3",
+            "c": "/radio-html/suno_backup/covers/e553b9c9-27cd-43b9-a4e0-f97ca910e45d.jpg",
+            "d": "7:59",
+            "ly": "\n\n[Intro: Harmonium slow melody in Bhairavi, tabla enters ektal, chorus hums on \"हो... हो...\"]\n\n[Lead solo — in a deep, broken voice, pulling each word from the chest]\n\nतोरै ही भरोसो... (chorus: \"भरोसो...\")\nतोरै ही यकीन... (\"यकीन...\")\nतू ही एक दाता, बाकी सब दीन-हीन... (\"दीन-हीन...\")\n\n[Tabla pace slightly rises]\n\nतेरे नाम अनेक, छुपि बैठो एक... (\"अनेक... एक...\")\nतोरे आगे केरौ बस, बड़े-बड़े धरैं टेक... (\"धरैं टेक... टेक...\")\n\n[Harmonium interlude — 4 seconds — chorus soft]\n\nLead (softer, as if speaking to Kanha inside the heart):\n\nतेरे ना रहने ते, तेरे रहने को पहचान...\nChorus (far echo): पहचान...\nLead: टूटे दिल में बसत तू...\nChorus (closer): बसत तू...\nLead: हर साँवरिये की जान...\nChorus (firm, w",
+            "theme": "Bhakti & Katha"
+          }
+        ]
+      },
+      {
+        "name": "Haryanvi Folk",
+        "count": 74,
+        "hero": "/radio-html/suno_backup/covers/fc641c78-b723-4744-a9f0-93ca40542e4f.jpg",
+        "songs": [
+          {
+            "t": "समाज की खोज का सुनो इतिहास",
+            "r": "Samaaja Kee Khoja Kaa Suno Itihaasa",
+            "a": "/radio-html/suno_backup/audio/2026-05-23_fc641c78_%E0%A4%9A%E0%A4%A3%E0%A4%95%E0%A5%8D%E0%A4%AF%20%E0%A4%9A%E0%A4%BE%E0%A4%82%E0%A4%A6%E0%A5%80.mp3",
+            "c": "/radio-html/suno_backup/covers/fc641c78-b723-4744-a9f0-93ca40542e4f.jpg",
+            "d": "3:45",
+            "ly": "(Intro)\n(Sound of ancient market hustle, wind blowing across rivers, and coins cascading)\n(Powerful, high-pitched Qawwali-style vocal alaap in background)\n(Conch shell sound - Shankhnaad)\n(Explosive industrial drum roll and sudden heavy drill beat drop with crisp claps)\n\n(Chorus)\nसमाज की खोज का सुनो इतिहास, भारत की मिट्टी में ज्ञान का विकास!\nछट-छट चलती बुद्धि की गाड़ी, हर एक नियम पे पकड़ है भारी!\nवस्तु विनिमय से सिक्कों का सफर, चाणक्य की नीति का हर जगह असर!\nबाज़ारों के लॉजिक को मिलकर बढ़ाओ, डिजिटल गुरुकुल के सुर में गाओ!\n\n(Verse 1 - Chapter 1, 2 & 3: Geography & Monsoon Rules)\nअध्याय एक से तीन में देखो भूगोल का ताना-बाना,\nभारत की भौगोलिक विविधता और अपनी मिट्टी को जाना!\nनदियों का ज्यामितीय प्",
+            "theme": "Haryanvi Folk"
+          },
+          {
+            "t": "समाज की खोज का सुनो इतिहास",
+            "r": "Samaaja Kee Khoja Kaa Suno Itihaasa",
+            "a": "/radio-html/suno_backup/audio/2026-05-23_4573b54b_%E0%A4%9A%E0%A4%BE%E0%A4%A3%E0%A4%95%E0%A5%8D%E0%A4%AF%20%E0%A4%B8%E0%A4%BF%E0%A4%95%E0%A5%8D%E0%A4%95%E0%A4%BE.mp3",
+            "c": "/radio-html/suno_backup/covers/4573b54b-63f0-4dac-9e7a-4ba9ddf8acbc.jpg",
+            "d": "1:55",
+            "ly": "(Intro)\n(Sound of ancient market hustle and coins cascading)\n(Explosive industrial drum roll and sudden heavy drill beat drop)\n\n(Chorus)\nसमाज की खोज का सुनो इतिहास, भारत की मिट्टी में ज्ञान का विकास!\nवस्तु विनिमय से सिक्कों का सफर, चाणक्य की नीति का हर जगह असर!\nबाज़ारों के लॉजिक को मिलकर बढ़ाओ, डिजिटल गुरुकुल के सुर में गाओ!\n\n(Verse 1 - Chapter 4 & 7: Empires & Creativity)\nसाम्राज्यों का उदय और शहरों का विकास,\nगुप्त काल की कला का अथक इतिहास!\nराजा भोज ने अपनी धारानगरी को सजाया,\nयांत्रिक इंजीनियरिंग का रोबोटिक्स सिखाया!\nबिचौलियों के भ्रम को जड़ से मिटाना,\nअपनी ही मिट्टी का राजकोष बढ़ाना!\n\n(Verse 2 - Chapter 12 & 13: Markets & Currency)\nअध्याय बारह में विनिमय का विधान,\nवस्तु को छोड़ जब सिक्का ब",
+            "theme": "Haryanvi Folk"
+          },
+          {
+            "t": "चाणक्य की नीति गाओ",
+            "r": "Chaanakya Kee Neeti Gaao",
+            "a": "/radio-html/suno_backup/audio/2026-05-23_961c3ee7_%E0%A4%9A%E0%A4%BE%E0%A4%82%E0%A4%A6%E0%A5%80%20%E0%A4%95%E0%A4%BE%20%E0%A4%B8%E0%A4%BF%E0%A4%95%E0%A5%8D%E0%A4%95%E0%A4%BE.mp3",
+            "c": "/radio-html/suno_backup/covers/961c3ee7-95d5-4fc3-86be-9fc9344cb1b1.jpg",
+            "d": "3:39",
+            "ly": "(Intro)\n(Sound of ancient silver coins clinking and cascading)\n(Powerful, high-pitched Qawwali-style vocal alaap in background)\n(Explosive industrial drum roll and sudden heavy drill beat drop)\n\n(Chorus)\nचाणक्य की नीति गाओ, शुक्र के नियमों को लाओ,\nभारत के बाज़ारों को संप्रभु रूप सजाओ!\nवस्तु विनिमय से सिक्कों तक, अर्थ का सूत्र महान है,\nऋषियों की इस सूची से, बढ़ता भारत का सम्मान है!\n\n(Verse 1 - Kautilya's Core Economics)\nछट-छट चलती बाज़ार की गाड़ी, माँग और पूर्ति की जंग है भारी!\nकौटिल्य का अर्थशास्त्र जब पन्नों पे आता, राजा और प्रजा का संतुलन समझाता!\nटैक्स लगाने का 'मधुमक्खी सिद्धांत' बताया, फूल को बिना दुखाए रस लेना सिखाया!\nराजकीय मुहरयुक्त संप्रभु 'पण' को चलाया, जाली मुद्राओं का भ्रम पल में ",
+            "theme": "Haryanvi Folk"
+          },
+          {
+            "t": "तेरे बिना मैंने परदेसां में",
+            "r": "Tere Binaa Mainne Paradesaan Men",
+            "a": "/radio-html/suno_backup/audio/2026-05-19_a3348700_%E0%A4%B8%E0%A4%BE%E0%A4%A4%E0%A5%80%20%E0%A4%AE%E0%A4%BE%E0%A4%9F%E0%A5%80-%E0%A4%9A%E0%A5%8B%E0%A4%B2%E0%A4%BE.mp3",
+            "c": "/radio-html/suno_backup/covers/a3348700-9ecb-4d78-8344-aaf875575f8f.jpg",
+            "d": "5:34",
+            "ly": "[Genre: Indian Classical Fusion, Raga Bhairavi base, Sufi Rock, Acoustic Ballad, Male Vocals, 70 BPM, Minor Scale]\n\n[Intro - Raga Bhairavi alap on Sarangi, tanpura drone, soft rain sounds]\n\n[Verse 1 - Raga Bhairavi, slow aching, acoustic guitar + sarangi]\nतेरे बिना मैंने परदेसां में, \nमुश्किल हुई र जीने में।\nओ my darling, o my darling, \nरही धड़क ना सीने में।\n\n[Verse 2 - Raga Bhairavi, harmonium enters softly]\nमाया का अभिमान गया, चोला रह गया साची माटी का, \nरोज रोज बस याद तेरी, के करूं मैं इस उचाटी का, \nAudi त इब जी नहीं लगता, \nके रखया है इस धीने में।\n\n[Chorus - Shift to Raga Yaman, clean electric guitar, soft dholak]\nतेरे बिना मैंने परदेसां में, \nमुश्किल हुई र जीने में।\nओ my darling, o my dar",
+            "theme": "Haryanvi Folk"
+          },
+          {
+            "t": "साहब",
+            "r": "Saahaba",
+            "a": "/radio-html/suno_backup/audio/2026-05-15_6773c614_%E0%A4%96%E0%A4%BC%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%AC-%E0%A4%A7%E0%A4%BE%E0%A4%97%E0%A4%BE%20%E0%A4%86%E0%A4%A7%E0%A4%BE.mp3",
+            "c": "/radio-html/suno_backup/covers/6773c614-261b-461b-9eab-54efb5810575.jpg",
+            "d": "4:57",
+            "ly": "[Intro]\n[Atmospheric Neural Hum]\n[Solo Reverb-Drenched Harmonium]\n[Spoken Word - Gritty and Direct]\nसाहब, ये जंग नहीं, तेरी ही तलाश है मुझको...\n\n[Verse 1 - The Bandhan - Slow Sufi Tempo]\nमेरी मंज़िल ने मुझे इस क़दर बाँधा है,\nलाख कोशिश पे भी आँखों में नींद का नहीं, इक धागा है।\nसिर्फ़ मेरी ही ज़िम्मेदारी क्यों साबित करने की?\nमेरे होने में तू भी है शामिल, तेरा भी हिस्सा आधा है।\n\n[Verse 2 - Building Intensity]\nतेरे रोके से रुके हैं मैराज़ कई,\nमेरे लिए क्या तेरा कोई नेक इरादा है?\nखुली आँखों का ख़्वाब दे, कहाँ छुपा है तू,\nजल्द आ सामने वरना जलील करना मुझे भी आता है।\n\n[Chorus - THE DROP - High-Impact Drill]\n[Heavy Sliding 808s] [Crisp Snares]\nतू जो रूठा तो ज़माना रूठ जाता है क़यामत तक,\nतेरे आगे ये ब",
+            "theme": "Haryanvi Folk"
+          },
+          {
+            "t": "साहब",
+            "r": "Saahaba",
+            "a": "/radio-html/suno_backup/audio/2026-05-15_62780b6c_%E0%A4%B8%E0%A4%BE%E0%A4%B9%E0%A4%AC%20%E0%A4%96%E0%A5%8B%E0%A4%9C%20%E0%A4%9C%E0%A4%82%E0%A4%97.mp3",
+            "c": "/radio-html/suno_backup/covers/62780b6c-9eb0-43e2-91f7-38e05b1458db.jpg",
+            "d": "3:13",
+            "ly": "[Intro]\n[Atmospheric Neural Hum]\n[Solo Harmonium - Reverb Drenched]\n[Spoken Word - Gritty and Deep]\nसाहब, ये जंग नहीं, तेरी ही तलाश है मुझको...\n\n[Verse 1 - Sufi Soul - Slow and Meditative]\nमेरी मंज़िल ने मुझे इस क़दर बाँधा है,\nलाख कोशिश पे भी आँखों में नींद का नहीं, इक धागा है।\nसिर्फ़ मेरी ही ज़िम्मेदारी क्यों साबित करने की?\nमेरे होने में तू भी है शामिल, तेरा भी हिस्सा आधा है।\n\n[Pre-Chorus - Rising Tension]\n[Fast Tabla Rolls] [Sub-Bass begins to swell]\nतेरे रोके से रुके हैं मैराज़ कई,\nमेरे लिए क्या तेरा कोई नेक इरादा है?\n\n[Chorus - THE DROP - High-Impact Drill]\n[Heavy Sliding 808 Bass] [Crisp Percussive Strikes]\nखुली आँखों का ख़्वाब दे कहाँ छुपा है तू,\nजल्द आ सामने वरना जलील करना मुझे भी आता",
+            "theme": "Haryanvi Folk"
+          },
+          {
+            "t": "जिंदगी... तू जमा उघाड़ी है",
+            "r": "Jindagee... Too Jamaa Ughaadee Hai",
+            "a": "/radio-html/suno_backup/audio/2026-05-15_9a501fdc_%E0%A4%9C%E0%A4%AE%E0%A4%BE%20%E0%A4%89%E0%A4%98%E0%A4%BE%E0%A4%A1%E0%A5%80%E0%A4%BC.mp3",
+            "c": "/radio-html/suno_backup/covers/9a501fdc-42a2-43b9-b72f-4acea519537c.jpg",
+            "d": "6:29",
+            "ly": "\n[Lyrics in Devanagari]:\n\n**जिंदगी... तू जमा उघाड़ी है,**\n**जिंदगी... तने पाँख पाड़ी है,**\nदूर दूर करदी मौज\nतू... दुखां की लाड़ी है...\n**जिंदगी... तू जमा उघाड़ी है,**\n\nउड़ते पंछी, बहंदा पानी,\nमै था राजा, तू महारानी\nकुछ का लाभ, कुछ की हानी\nखत्म वो गाम, लुट गी ढाणी\n\nसांस ही बन गी दुश्मन,\nदबा दबा इब रहव मन,\nजेठ की लांबी दुपहरी,\nरूह भटके, खो गया सामण,\n\nजिंदगी... इतनी ना बढ़ा मुश्किल\nन्यू तो रुक जानी नाड़ी है...\nजिंदगी... तू जमा उघाड़ी है,\nजिंदगी... तने पाँख पाड़ी है,\nदूर दूर करदी मौज\nतू... दुखां की लाड़ी है...\nजिंदगी... तू जमा उघाड़ी है....\nMusic 🎶 🎶\n\nपल पल जीवन पूरा,\nदेख साथी करना नहीं खराब,\nपानीया के पार जाके,\nआने नहीं खुशबू के ख्वाब,\nकोई ओर खेल रचावे,\nहम तो बस झेलां दाब,\n\nजिंदगी... भीतर है का",
+            "theme": "Haryanvi Folk"
+          },
+          {
+            "t": "जिंदगी... तू जमा उघाड़ी है",
+            "r": "Jindagee... Too Jamaa Ughaadee Hai",
+            "a": "/radio-html/suno_backup/audio/2026-05-15_eeadca81_%E0%A4%86%E0%A4%81%E0%A4%96%E0%A5%87%E0%A4%82%20%E0%A4%B0%E0%A4%BE%E0%A4%A4%E0%A4%AD%E0%A4%B0.mp3",
+            "c": "/radio-html/suno_backup/covers/eeadca81-afe0-426b-aec0-9bb8e7226283.jpg",
+            "d": "3:13",
+            "ly": "\n[Lyrics in Devanagari]:\n\nजिंदगी... तू जमा उघाड़ी है,\nरो रो के भी... रूह न हल्की...\nतन्हाई सारी... उजाड़ी है...\n\nसाँस रोज... मिट्टी पावे...\nपर दर्द की... नींद न आवे...\nआँख रात भर... जगावे...\nअब तो आदत ही... विस्तारी है...\n\nकोई बाहर... न झाँकू...\nकोई भीतर... न बोले...\nजेठ की दुपहरी... सूनी...\nदेह बुझी... मन तरसि जाय...\n\nफूल भीतर... काँटा बो दे...\nआदमी ही... दुश्मन होय...\nदिल हंसदा... जिस्म रोवे...\nए जिंदगी... बीमारी है...\n\nदुखां की तू... लाड़ी है...\nसंग-संग... चाले तू...\nराजा बनावे... रात को...\nरोवे सुबह की... बात...\n\nहर कोई... ज़हर हँसी में बो दे...\nजिंदगी... अब तो तू ही... एक बेड़ा पारी है...\n\nअमीर मेरा... धीर मेरा...\nखुद ही दर्द... सम्हालूं...\nतू तो रूले... अंधियारी में...\nमैं दीया... जलाए",
+            "theme": "Haryanvi Folk"
+          },
+          {
+            "t": "जाट जाट जाट जाट खिले हुए rose हैं",
+            "r": "Jaata Jaata Jaata Jaata Khile Hue rose Hain",
+            "a": "/radio-html/suno_backup/audio/2026-05-15_79c1b363_%E0%A4%B8%E0%A4%B5%E0%A4%BE%20%E0%A4%B2%E0%A4%BE%E0%A4%96%20%E0%A4%9C%E0%A4%BE%E0%A4%9F.mp3",
+            "c": "/radio-html/suno_backup/covers/79c1b363-10f4-4f23-a2d0-846a1ff744ec.jpg",
+            "d": "3:50",
+            "ly": "\n\n[Intro: rubab melody glitched + dambura loop + 808 bass drop - 4 bars]\n\n[Verse 1 - hyperrap, fast delivery, double-time]\nगंगोज पुरोज हैं, योज प्रोज हैं,\nएक जाट जाट हैं, दो जाट मौज हैं,\nतीन जाट कंपनी, चार जाट फौज हैं,\nगिनती करे जाट, हर एक सवा लाख हैं,\n\n[Chorus - melodic, autotune warble, dhol + 808]\nजाट जाट जाट जाट खिले हुए rose हैं,\nजाट जाट जाट जाट मस्ती की dose हैं,\nजाट जाट जाट जाट संस्कारी grows हैं,\nजाट जाट जाट जाट सबके ये bro's हैं,\nजाट हर जगह, जाट हर सवाल हैं,\nजाट ही काफी, बाकी सब बेहाल हैं,\n\n[Bridge 1 - melodic, slowed]\nगात मह है सनसनी, शाकाहारी भोज है,\nजाट के सामने हर बंदा बस रोज है,\n\n[Verse 2 - hyperrap, rapid fire, rubab plucks as hi-hats]\nभोले की जटाओं से बना होया जाट,\nधर्म का रक",
+            "theme": "Haryanvi Folk"
+          },
+          {
+            "t": "जाट जाट जाट जाट खिले हुए rose हैं",
+            "r": "Jaata Jaata Jaata Jaata Khile Hue rose Hain",
+            "a": "/radio-html/suno_backup/audio/2026-05-15_42bde3ea_%E0%A4%9C%E0%A4%9F%E0%A4%BE%E0%A4%93%E0%A4%82%20%E0%A4%95%E0%A5%80%20%E0%A4%97%E0%A4%A1%E0%A4%BC%E0%A4%97%E0%A4%A1%E0%A4%BE%E0%A4%BC%E0%A4%B9%E0%A4%9F.mp3",
+            "c": "/radio-html/suno_backup/covers/42bde3ea-cba3-4e45-acdb-d8b8a10379ca.jpg",
+            "d": "4:11",
+            "ly": "\n[Intro: dambura solo, dohol rumble, rubab melody - 8 bars]\n\n[Verse 1 - bakhshi sung-spoken style]\nगंगोज पुरोज हैं, योज प्रोज हैं,\nएक जाट - जाट हैं, दो जाट - मौज हैं,\nतीन जाट कंपनी, चार जाट फौज हैं,\n\n[Chorus - call and response, male chorus, dhol beats]\nजाट जाट जाट जाट खिले हुए rose हैं,\nजाट जाट जाट जाट मस्ती की dose हैं,\nजाट जाट जाट जाट संस्कारी grows हैं,\nजाट जाट जाट जाट सबके ये bro's हैं,\n\n[Bridge 1]\nगात मह है सनसनी, शाकाहारी भोज है,\n\n[Verse 2 - tanbur drone, rubab plucking]\nभोले की जटाओं से बना होया जाट,\nधर्म का रक्षक तना होया जाट,\nदेशभक्ति से सना होया जाट,\nसरस्वती से यू जना होया जाट,\n\n[Verse 3]\nचैतन्य का दर्शन, यू भैरो का रूप है,\nहिंगलाज की छाया, दारे सी धूप है,\nपरसा से लेके राखीगढ़ी तक",
+            "theme": "Haryanvi Folk"
+          },
+          {
+            "t": "जिसकी लांबी लांबी चोटी",
+            "r": "Jisakee Laanbee Laanbee Chotee",
+            "a": "/radio-html/suno_backup/audio/2026-05-12_f5ca7479_%E0%A4%87%E0%A4%B8%E0%A5%80%20%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%80%20%E0%A4%AC%E0%A5%8B%E0%A4%9F%E0%A5%80.mp3",
+            "c": "/radio-html/suno_backup/covers/f5ca7479-1bc5-4df4-a86e-e410e27b36cb.jpg",
+            "d": "4:21",
+            "ly": "इसी इसी भगवान मैने तू दिलवा दे न बोटी, \nजिसकी लांबी लांबी चोटी, \nजिसकी Height छोटी छोटी, \nजिसकी thigh मोटी मोटी......\n\nदिन रात, अरदास तेरे त,\nरुदन तेरे त, हास तेरे त,\nजन्म तेरे त, नास तेरे त,\nलहू तेरे त, मास तेरे त, \n\nनहीं चाहिए भगवन मेरे, मैने कोई बंगला कोठी,\nपर.....\nइसी इसी भगवान मैने तू दिलवा दे न बोटी, \nजिसकी लांबी लांबी चोटी, \nजिसकी Height छोटी छोटी, \nजिसकी thigh मोटी मोटी.....\n(Music 🎵 small section)\nफुर्र फुर्र फुर्र उड़ जाऊं, फुर्र फुर्र फुर्र, फुर्र फुर्र फुर्र,\nफुर्र फुर्र फुर्र झुमु गाउं, फुर्र फुर्र फुर्र, फुर्र फुर्र फुर्र,\n\nफुर्र..फुर्र..फुर्र फुर्र फुर्र फुर्र...फुर्र फुर्र फुर्र\nMusic 🎶 🎶 🎶 \n\nरंग देख सारे मेरे प्यारे,\nWhite, latin, black,\nप्यार प्यूर तो खूब करूंगा,\nना होने दु",
+            "theme": "Haryanvi Folk"
+          },
+          {
+            "t": "तेरी चप्पल",
+            "r": "Teree Chappala",
+            "a": "/radio-html/suno_backup/audio/2026-05-10_2dbdbe4b_%E0%A4%9A%E0%A4%AA%E0%A5%8D%E0%A4%AA%E0%A4%B2-%E0%A4%9D%E0%A4%BF%E0%A4%A1%E0%A4%BC%E0%A4%95%E0%A4%BF%E0%A4%AF%E0%A4%BE%E0%A4%81.mp3",
+            "c": "/radio-html/suno_backup/covers/2dbdbe4b-7abb-4214-b3ea-768e09a3cce1.jpg",
+            "d": "3:52",
+            "ly": "\n\n### [Intro – Slow Qawwali, Harmonium, Claps, Echo effect]\n\n(सब बच्चों की आवाज़ में, धीरे)\n\nतेरी चप्पल, तेरा बेलन, तेरी वो झिड़कियाँ...  \n(हो माँ... हो माँ...)  \nमाँ मेरी, तेरी मार-पिटाई खोले दिमाग़ की खिड़कियाँ...  \n(खोले... खोले...)\n\n---\n\n### [Verse 1 – Beat switches to Hip-Hop, 808 bass, Trap snare, Aggressive yet playful]\n\nसुबह उठा नहीं तो पानी के बर्फ़ के झपेटे  \nतेरे हाथों के झटके ने निकाले जैसे ढेटे  \nमैं बोलूँ \"बस माँ बस\" – तू बोले \"चुप रह और पढ़\"  \nटीवी देखू ज़्यादा तो रिमोट घुमा के मारे जैसे चक्र फेंके कोई  देता जाये रगड़ \n\"पढ़ ले बेटा, वरना बेलन से पड़ें खारे\"  \nतेरी डाँट का तीर कभी निशाने पे न था हारे  \nतेरी फटकार से बंद दिमाग़ झटपट ऐसा हिलता \nजैसे सूखा खेत बारिश में अचानक से  फ",
+            "theme": "Haryanvi Folk"
+          }
+        ]
+      },
+      {
+        "name": "Desh / Patriotic",
+        "count": 29,
+        "hero": "/radio-html/suno_backup/covers/5791e93b-a997-4765-b8d1-c0fcbb88c384.jpg",
+        "songs": [
+          {
+            "t": "धारानगरी का वो राजा",
+            "r": "Dhaaraanagaree Kaa Vo Raajaa",
+            "a": "/radio-html/suno_backup/audio/2026-05-23_5791e93b_%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AD%E0%A5%81%E0%A4%A4%E0%A4%BE%20%E0%A4%95%E0%A4%BE%20%E0%A4%A1%E0%A4%82%E0%A4%95%E0%A4%BE.mp3",
+            "c": "/radio-html/suno_backup/covers/5791e93b-a997-4765-b8d1-c0fcbb88c384.jpg",
+            "d": "4:18",
+            "ly": "(Intro)\n(Sound of grand, heavy palace gates opening with mechanical iron chain grinding)\n(Deep cinematic brass horn blast and slow, thumping ancient war drums)\n(Conch shell sound - Grand Shankhnaad)\n(Sudden explosive Phonk cowbell and heavy 808 drill beat drop with crisp claps)\n\n(Chorus)\nधारानगरी का वो राजा, संप्रभुता का बजा डंका!\nयांत्रिक योद्धा खड़े द्वार पर, थर-थर काँपे हर लंका!\nभोजराज का नियम अटूट है, समरांगण का सूत्र महान,\nमिट्टी की रक्षा के खातिर, दांव पे लगा देंगे हम जान!\nछट-छट चलती न्याय की लाठी, झुकती नहीं स्वदेशी माटी!\n\n(Verse 1 - The Mechanical Robotics & Engineering Genius)\nग्यारहवीं सदी का वो काल था, धारानगरी का वैभव विशाल था!\nसमरांगणसूत्रधार ग्रंथ रचा, यंत्रों का ऐसा जाल बिछा!\n",
+            "theme": "Desh / Patriotic"
+          },
+          {
+            "t": "जिंदगी... तू जमा उघाड़ी है",
+            "r": "Jindagee... Too Jamaa Ughaadee Hai",
+            "a": "/radio-html/suno_backup/audio/2026-05-15_b39097fb_%E0%A4%9C%E0%A5%88%E0%A4%A0%20%E0%A4%95%E0%A5%80%20%E0%A4%A6%E0%A5%81%E0%A4%AA%E0%A4%B9%E0%A4%B0%E0%A5%80.mp3",
+            "c": "/radio-html/suno_backup/covers/b39097fb-81be-40f8-bc18-46c757b2ce0c.jpg",
+            "d": "4:13",
+            "ly": "\n[Lyrics in Devanagari]:\n\nजिंदगी... तू जमा उघाड़ी है,\nरो रो के भी जो रूह न हल्की, तन्हाई सारी उजाड़ी है\n\nसाँस रोज मिट्टी पावे, पर दर्द की नींद न आवे,\nआँख रात भर जगावे, अब तो आदत ही विस्तारी है\n\nकोई बाहर न झाँकू, कोई भीतर न बोले,\nजेठ की दुपहरी सूनी, देह बुझी, मन तरसि जाय,\nरूह कूँ लगी लगन सी, पर लाखन ते प्यारी है\n\nपल-पल को पीर समझले, पानी पर ख्वाब सजा ले,\nफूल भीतर काँटा बो दे, आदमी ही दुश्मन होय,\nदिल हंसदा, जिस्म रोवे, ए जिंदगी... बीमारी है\n\nदुखां की तू लाड़ी है, संग-संग चाले तू,\nराजा बनावे रात को, रोवे सुबह की बात,\nतेरा खेल ही ऐसो है – सब मिलावट सारी भारी है\n\nलिखा होया रेख है, मेख न कोई और,\nजल पीछे छाया, सब जमाना बेखुदी,\nहर कोई ज़हर हँसी में बो दे,\nजिंदगी, अब तो तू ही एक बेड़ा पारी है\n\nअमीर म",
+            "theme": "Desh / Patriotic"
+          },
+          {
+            "t": "Giddhon ke sheher mein",
+            "r": "Giddhon ke sheher mein",
+            "a": "/radio-html/suno_backup/audio/2026-04-30_4df6f608_WhatsApp%20Image%202025-06-17%20at%2020.41.57%20%28Remastered%29.mp3",
+            "c": "/radio-html/suno_backup/covers/4df6f608-207a-494e-91e5-296847785ef2.jpg",
+            "d": "2:54",
+            "ly": "[Verse 1]\nGiddhon ke sheher mein\nLeke chala hoon\nMaanson ke lothade\nYahan chehron ke peeche\nChehre chupe hain\nNa jaane kaun kaun hai khade\nIntezaar karein bas\nMaut ka meri\nPar nakhre hain inke bade\nPehle nochein aankhein\nNochein khasote\nYeh bhooke hain bhooke bade\n\n[Chorus]\nGiddhon ke sheher mein\nLeke chala hoon\nMaanson ke lothade\n\n[Bridge]\n(Aah-aah-aah-aah)\n(Aah-aah-aah-aah)\n\n[Verse 2]\nChahe maut meri\nPar inki majboori\nJhund hai bana ke khade\nBachao bachao\nKi awaaz dete\nBechargi ko odh ke khade\n\n[Chorus]\nGiddhon ke sheher mein\nLeke chala hoon\nMaanson ke lothade",
+            "theme": "Desh / Patriotic"
+          },
+          {
+            "t": "लाश हटाता",
+            "r": "Laasha Hataataa",
+            "a": "/radio-html/suno_backup/audio/2026-04-21_d6049185__%E0%A4%A7%E0%A5%82%E0%A4%A8%20%E0%A4%B0%E0%A5%87-%E0%A4%B8%E0%A4%BE%E0%A4%A7%E0%A5%8B_.mp3",
+            "c": "/radio-html/suno_backup/covers/d6049185-a418-4c6a-a1d9-fcc801c751b9.jpg",
+            "d": "4:43",
+            "ly": "\nLyrics:\n\n[Intro - spoken/sung breath]\nचलते पर्वत, वक्त जगाए\nसाँस खिंचती है — धीमे\nरुकी नदी जो गाद जमाए\nहाँ रे... हाँ रे...\nसूखे दरखत जो इतराए\nजिंदा जो श्मशान जगाए\nओहो... ओह...\nयही बजे बखत की धून रे साधो...\nधून रे... धून रे... साधो साधो\n\n[Chorus - build energy]\nलाश हटाता, हटाता हटाता\nजीभ जलाता, जलाता... आह्ह\nमैं धरती का नून, रे साधो\nमैं धरती का नून\n\n[Antara 1 - filter opening]\nसूखे सागर, रेत जमाए\nरंग सफेद, तारे चमकाए\nहाँ... चमकाए हाँ\nरंग रूप, सब ढह जाए\nढह जाए... ढह...\nदेख तलहटी, सब शर्माए\nक्यों मिली मानस की जून, रे साधो?\nजून रे... जून... साधो साधो साधो\n\n[Chorus 2 - more aggressive]\nहाड़ गलाता, गलाता गलाता — ओह्ह\nरूप चढ़ाता, चढ़ाता... चढ़ाता...\nमैं धरती का नून, रे साधो\nमैं धरती का नून\n\n[Antar",
+            "theme": "Desh / Patriotic"
+          },
+          {
+            "t": "चार सौ बीस",
+            "r": "Chaara Sau Beesa",
+            "a": "/radio-html/suno_backup/audio/2026-04-19_d16e0a51_%E0%A4%97%E0%A4%A7%E0%A4%BE%20%E0%A4%AA%E0%A4%B9%E0%A4%B2%E0%A4%B5%E0%A4%BE%E0%A4%A8.mp3",
+            "c": "/radio-html/suno_backup/covers/d16e0a51-7641-4ea2-9b3d-6c5316629611.jpg",
+            "d": "2:01",
+            "ly": "\n\n[INTRO - 0:00-0:08 - No time wasted, straight hook]\n(Slap bass + cowbell + crowd)\nगधा भी पहलवान! (echo: पहलवान!)\nगधा भी पहलवान! (echo: पहलवान!)\nजब किस्मत मेहरबान — गधा भी पहलवान!\n\n[HOOK - 0:08-0:20 - The money shot, loopable, danceable]\nचार सौ बीस! (clap clap)\nचार सौ बीस! (clap clap)\nनेता एकम — डेटा ही सब कुछ\nनेता दूनी — दगा दे बहुत\nचार सौ बीस! (clap clap)\nगधा भी पहलवान! (clap clap)\n\n[VERSE 1 - 0:20-0:45 - Fast, quotable, shareable clips]\nएक — नेता एकम सबसे बड़ा (clip this!)\nदूनी — दगा दे वोट का घड़ा (share this!)\nतियाँ — तिकड़मबाज़ नटखट (meme this!)\nचौके — चार सौ बीस पक्का (420 trending!)\n\nपंजे — पाँचों झूठे इन्द्रियाँ (fake!)\nछक्के — छल छाए रोटी सूटी (snake!)\nसत्ते — सातों जनम सत्यानाशी ",
+            "theme": "Desh / Patriotic"
+          },
+          {
+            "t": "नेता एकम नेता",
+            "r": "Netaa Ekama Netaa",
+            "a": "/radio-html/suno_backup/audio/2026-04-19_6f0d30c8_%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A4%BE%20%E0%A4%8F%E0%A4%95%E0%A4%AE%20%E0%A4%A1%E0%A5%87%E0%A4%9F%E0%A4%BE.mp3",
+            "c": "/radio-html/suno_backup/covers/6f0d30c8-5d5b-48d1-afb1-e5c08aefc694.jpg",
+            "d": "2:34",
+            "ly": "\n\n[Intro - distorted synth, neon hum, glitch stutter]\nसाहेबान क्रिप्टो-कदरदान, जब किस्मत मेहरबान\nतो गधा भी साइबर पहलवान\n\n[Verse 1 - slow aggressive rap with industrial beat]\nलागी सिस्टम की साइबर किताब हाथ\nनिकले उसमें सातों हैक्ड बात\nपहला पहाड़ा नेता AI का\nदुनिया को ठगने वाले एल्गोरिदम अभिनेता का\nएक - नेता एकम, सबका डेटा चुराता\nदूनी - दगा दे वोट हैक कराके, खुद गाता\n\n[Chorus - shouted, heavy reverb, bass drop]\nनेता एकम नेता - डेटा ही सब कुछ!\nनेता दूनी दगाबाज़ - हैकर बनके झूठा बहुत!\nचार सौ बीस बिटकॉइन!\nचार सौ बीस एन्क्रिप्टेड कॉइन!\n\n[Verse 2 - faster rap, glitching vocals]\nतियाँ तिकड़मबाज़ स्मार्ट कॉन्ट्रैक्ट\nचौके चार सौ बीस ब्लॉकचेन में पैक\nपंजे पाँचों सेंसर झूठे, इनपुट फेक\nछक्के छल छाए न्यूरल",
+            "theme": "Desh / Patriotic"
+          },
+          {
+            "t": "गुमान था कि तन्हाई में सुकूँ मिलेगा मुझे",
+            "r": "Gumaana Thaa Ki Tanhaaee Men Sukoon Milegaa Mujhe",
+            "a": "/radio-html/suno_backup/audio/2026-04-16_9e091800_%E0%A4%B2%E0%A4%AE%E0%A5%8D%E0%A4%B8-%E0%A4%8F-%E0%A4%B9%E0%A4%B5%E0%A4%BE%20%E0%A4%B0%E0%A5%8B%E0%A4%AF%E0%A4%BE.mp3",
+            "c": "/radio-html/suno_backup/covers/9e091800-f3fb-4c79-8a1e-09783a3f3392.jpg",
+            "d": "7:59",
+            "ly": "[Intro: cold wind, distant echoes, spoken, reverb]\nजो अभी इक लम्स-ए-हवा बन कर गुज़रा,\nतूने महसूस किया, या महसूस ही न किया—\nमगर उस सर्द झोंके के भीतर,\nतेरा ही वजूद मेरा बन के रोया था।\n\n[Drop: heavy 808 bass, drill percussion][Intro: cold wind, distant echoes, spoken, reverb]\nजो अभी इक लम्स-ए-हवा बन कर गुज़रा,\nतूने महसूस किया, या महसूस ही न किया—\nमगर उस सर्द झोंके के भीतर,\nतेरा ही वजूद मेरा बन के रोया था।\n\n[Drop: heavy 808 bass, drill percussion]\n[Instrumental: 8 bars]\n\n[Verse 1: relaxed flow, 75 BPM]\nतेरे मुंतज़िर तो यहाँ बे-शुमार थे,\nतूने परखा, या न परखा—\nमगर उन मुसाफ़िरों की लंबी कतारों में,\nएक साया तेरा, मेरा बन के खड़ा था।\n\nसोचा था कि शिकवा करूँ बहुत तुझसे,\nमगर लफ़्ज़ों के दरमियाँ, दीवारे",
+            "theme": "Desh / Patriotic"
+          },
+          {
+            "t": "गुमान था कि तन्हाई में सुकूँ मिलेगा मुझे",
+            "r": "Gumaana Thaa Ki Tanhaaee Men Sukoon Milegaa Mujhe",
+            "a": "/radio-html/suno_backup/audio/2026-04-16_5c1e1843_%E0%A4%B2%E0%A4%AE%E0%A5%8D%E0%A4%B8-%E0%A4%8F-%E0%A4%B9%E0%A4%B5%E0%A4%BE%20%E0%A4%B8%E0%A4%B0%E0%A5%8D%E0%A4%A6.mp3",
+            "c": "/radio-html/suno_backup/covers/5c1e1843-62f8-4103-9861-23f07e11ce12.jpg",
+            "d": "4:37",
+            "ly": "[Intro: cold wind, distant echoes, spoken, reverb]\nजो अभी इक लम्स-ए-हवा बन कर गुज़रा,\nतूने महसूस किया, या महसूस ही न किया—\nमगर उस सर्द झोंके के भीतर,\nतेरा ही वजूद मेरा बन के रोया था।\n\n[Drop: heavy 808 bass, drill percussion]\n[Instrumental: 8 bars]\n\n[Verse 1: relaxed flow, 75 BPM]\nतेरे मुंतज़िर तो यहाँ बे-शुमार थे,\nतूने परखा, या न परखा—\nमगर उन मुसाफ़िरों की लंबी कतारों में,\nएक साया तेरा, मेरा बन के खड़ा था।\n\nसोचा था कि शिकवा करूँ बहुत तुझसे,\nमगर लफ़्ज़ों के दरमियाँ, दीवारें ऐसी खड़ी थीं—\nराज़ तो खुलता, मगर तू वहाँ नहीं था।\n\n[Hook: melodic, slower, 60 BPM, emotional]\nगुमान था कि तन्हाई में सुकूँ मिलेगा मुझे,\nपर तेरे हिज्र के बिना, अब जिया नहीं जाता।\n\nपागल हमको कहने वालों की भीड़ में,\nकुछ वो भी",
+            "theme": "Desh / Patriotic"
+          },
+          {
+            "t": "नाम बस एक रह गया साँस की गुंजाइश में",
+            "r": "Naama Basa Eka Raha Gayaa Saansa Kee Gunjaaisha Men",
+            "a": "/radio-html/suno_backup/audio/2026-04-15_bce359ca_%E0%A4%B8%E0%A4%BE%E0%A4%82%E0%A4%B8-%E0%A4%97%E0%A5%81%E0%A4%82%E0%A4%9C%E0%A4%BE%E0%A4%87%E0%A4%B6.mp3",
+            "c": "/radio-html/suno_backup/covers/bce359ca-a7fd-4325-9cda-b272232acfea.jpg",
+            "d": "4:08",
+            "ly": "[Style: slow, melancholic, Sufi, Indian classical, minimal, ambient, no percussion, only tanpura and sitar, male soulful voice, deep and calm, like Jagjit Singh meets Papon, in Urdu/Hindi]\n\n[Verse 1]\nहर तरफ़ उज़्र है, हर सू इल्तिजा की भीड़ है,\nज़िंदगी गुज़र रही सबकी जोर-आज़माइश में।\nतेरी सूरत नहीं देखी होती अच्छा होता,\nअब नहीं नींद तेरी अच्छी नीयत की ख़्वाहिश में।\n\n[Chorus]\nनाम बस एक रह गया साँस की गुंजाइश में,\nज़िंदगी गुज़र रही सबकी जोर-आज़माइश में।\nकुछ ख़ामोशी थी पहले रूह के सुकून में,\nअब लगी रहती है जाने किस पैमाइश में।\n\n[Verse 2]\nनिकल बहे जब कागज़ पर दिल के कुछ रिसते घाव,\nतो लगा मोहब्बत एक जुआ है, रूह लगी है दाँव में।\nतेरे मिल के बिछड़ने के बाद, एक बस आरज़ू है सुकून की,\nबात मोहब्बत तक ठी",
+            "theme": "Desh / Patriotic"
+          },
+          {
+            "t": "क्या सच है क्या झूठ है",
+            "r": "Kyaa Sacha Hai Kyaa Jhootha Hai",
+            "a": "/radio-html/suno_backup/audio/2026-04-15_0c6cc8cd_Money-Drags%20Us.mp3",
+            "c": "/radio-html/suno_backup/covers/0c6cc8cd-b3b2-43db-92df-b3cad31e1866.jpg",
+            "d": "3:01",
+            "ly": "[Intro – piano only]\n\n[Verse 1 – Male Hindi, speak-sing]\nहर बार की कहानी में..\nक्या नया है जो सुनाए..\n\nप्यार बहुत होता है..\n[2 sec silence]\nजब तक पैसा बीच ना आए..\n\n[Verse 2 – Female English, breathy]\nSame story every time..\nWhat's new left to say?\n\nLove is easy, love is full..\n[2 sec silence]\nTill money finds its way.\n\n[Pre-Chorus – Male Hindi]\nना मैं सही ना तू गलत..\nसबको सिर्फ समय चलाए..\n\n[Pre-Chorus – Female English]\nI'm not right, you're not wrong..\nTime just drags us all along.\n\n[Chorus – Both unison]\nक्या सच है क्या झूठ है..\nWhat is truth? What is a lie?\nEveryone decides what keeps them alive.\n\n[Repeat chorus – harmonies enter]\n\n[Bridge – Male Hindi with sub-bass]\nजाने टूटे दिलों के टुक",
+            "theme": "Desh / Patriotic"
+          },
+          {
+            "t": "क्या सच है क्या झूठ है",
+            "r": "Kyaa Sacha Hai Kyaa Jhootha Hai",
+            "a": "/radio-html/suno_backup/audio/2026-04-15_4648abb5_%E0%A4%B9%E0%A4%B0%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%20%E0%A4%95%E0%A5%80%20%E0%A4%95%E0%A4%B9%E0%A4%BE%E0%A4%A8%E0%A5%80.mp3",
+            "c": "/radio-html/suno_backup/covers/4648abb5-f970-4287-9894-5ef12762ff04.jpg",
+            "d": "7:59",
+            "ly": "[Intro] – 4 bars\nPiano E2 – rest – B2 – rest. Repeat. Silence 2 seconds. Tanpura enters.\n\n[Verse 1 – Male voice, Hindi. Close mic. Speak-sing.]\n\nहर बार की कहानी में..\nक्या नया है जो सुनाए..\n\nप्यार बहुत होता है..\n[2 seconds silence – no music, tanpura only]\nजब तक पैसा बीच ना आए..\n\n[Verse 2 – Female voice, English. Warm. Breathy.]\n\nSame story every time..\nWhat's new left to say?\n\nLove is easy, love is full..\n[2 seconds silence – tanpura only]\nTill money finds its way.\n\n[Pre-Chorus – Male voice, Hindi. No vibrato.]\n\nना मैं सही ना तू गलत..\nसबको सिर्फ समय चलाए..\n\n[Pre-Chorus – Female voice, English. Gentle mirror.]\n\nI'm not right, you're not wrong..\nTime just drags us all along.\n\n[Chorus – Both v",
+            "theme": "Desh / Patriotic"
+          },
+          {
+            "t": "क्या सच है क्या झूठ है.. What is truth? What is ",
+            "r": "Kyaa Sacha Hai Kyaa Jhootha Hai.. What is truth? What is",
+            "a": "/radio-html/suno_backup/audio/2026-04-15_9682f67f_%E0%A4%B8%E0%A5%88%E0%A4%B2%E0%A4%BE%E0%A4%AC%20%E0%A4%B9%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A5%8B%E0%A4%A8%E0%A5%8D%E0%A4%B8.mp3",
+            "c": "/radio-html/suno_backup/covers/9682f67f-4799-479e-a59e-b827566b078e.jpg",
+            "d": "2:42",
+            "ly": "\n\nMale Hindi (close-mic, chest voice):\nहर बार की कहानी में.. क्या नया है जो सुनाए.. प्यार बहुत होता है.. [2 sec silence] जब तक पैसा बीच ना आए.. ना मैं सही ना तू गलत.. सबको सिर्फ समय चलाए.. जाने टूटे दिलों के टुकड़े.. किसी और के आने से फिर जुड़ जाए.. फिर धड़के दिल के तार.. मत हो उदास ए दिल.. ये खास नहीं है बात.. आएगा फिर सैलाब हार्मोन्स का.. तू रख पिया मिलन की आस.. आएगा..\n\nFemale English (warm, breathy):\nSame story every time.. What's new left to say? Love is easy, love is full.. [2 sec silence] Till money finds its way. I'm not right, you're not wrong.. Time just drags us all along. Broken hearts don't stay that way.. Someone new walks in one day. The strings inside just start to play.. Don'",
+            "theme": "Desh / Patriotic"
+          }
+        ]
+      },
+      {
+        "name": "Rap & Fusion",
+        "count": 41,
+        "hero": "/radio-html/suno_backup/covers/2b968ed3-b8ee-44e4-ad96-e3da7d583ae0.jpg",
+        "songs": [
+          {
+            "t": "कौतूहल की दुनिया में लॉजिक अपार है",
+            "r": "Kautoohala Kee Duniyaa Men Lojika Apaara Hai",
+            "a": "/radio-html/suno_backup/audio/2026-05-23_2b968ed3_%E0%A4%A1%E0%A4%BF%E0%A4%9C%E0%A4%BF%E0%A4%9F%E0%A4%B2%20%E0%A4%97%E0%A5%81%E0%A4%B0%E0%A5%81%E0%A4%95%E0%A5%81%E0%A4%B2.mp3",
+            "c": "/radio-html/suno_backup/covers/2b968ed3-b8ee-44e4-ad96-e3da7d583ae0.jpg",
+            "d": "3:52",
+            "ly": "(Intro)\n(Deep, vibrating electronic sub-drone)\n(Sound of electrical sparks and laboratory test tubes clinking)\n(Conch shell sound - Shankhnaad)\n(Sudden explosive Phonk cowbell and heavy 808 drill beat drop with crisp claps)\n\n(Chorus)\nकौतूहल की दुनिया में लॉजिक अपार है,\nविज्ञान का ये नया चक्र, सोच का आधार है!\nछट-छट चलती बुद्धि की गाड़ी, हर एक नियम पे पकड़ है भारी!\nऋषियों के सूत्रों को कोडिंग में लाओ, डिजिटल गुरुकुल का परचम लहराओ!\n\n(Verse 1 - Chapter 1, 2 & 3: Science, Substances & Circuits)\nअध्याय एक में विज्ञान की ये बदलती दुनिया जानी,\nजिज्ञासा से सत्य की खोज, अपनी यही पुरानी कहानी!\nअध्याय दो में पदार्थों की खोज का कोष्ठक खुलता,\nअम्ल, क्षार और लवण का लिटमस पे संतुलन मिलता!\nनागार्जुन की रसविद",
+            "theme": "Rap & Fusion"
+          },
+          {
+            "t": "कौतूहल की दुनिया में लॉजिक अपार है",
+            "r": "Kautoohala Kee Duniyaa Men Lojika Apaara Hai",
+            "a": "/radio-html/suno_backup/audio/2026-05-23_f31751f4_%E0%A4%B2%E0%A4%BF%E0%A4%9F%E0%A4%AE%E0%A4%B8%20%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%A5.mp3",
+            "c": "/radio-html/suno_backup/covers/f31751f4-ec55-4c42-a423-07f42895a464.jpg",
+            "d": "2:05",
+            "ly": "(Intro)\n(Sound of electrical sparks and lab test tubes clinking)\n(Sudden explosive Phonk cowbell and heavy 808 bass drop)\n\n(Chorus)\nकौतूहल की दुनिया में लॉजिक अपार है,\nविज्ञान का ये नया चक्र, सोच का आधार है!\nऋषियों के सूत्रों को कोडिंग में लाओ,\nडिजिटल गुरुकुल का परचम लहराओ!\n\n(Verse 1 - Chapter 2 & 3: Substances & Circuits)\nपदार्थों की खोज का अध्याय दो है भाई,\nअम्ल, क्षार और लवण की केमिस्ट्री आई!\nनागार्जुन की रसविद्या ने रस को उछाला,\nलिटमस पेपर से संतुलन को ढाला!\nअध्याय तीन में विद्युत का परिपथ दौड़े,\nअगस्त्य के नियमों ने सब रिकॉर्ड तोड़े!\n\n(Verse 2 - Chapter 5 & 8: Changes & Motion)\nहमारे आस-पास के बदलते परिवर्तन,\nकणाद के परमाणु का वैचारिक आंदोलन!\nअध्याय आठ में समय और गति का मापन,\nपृथ्वी की ",
+            "theme": "Rap & Fusion"
+          },
+          {
+            "t": "O meri bhaarat maataa",
+            "r": "O meri bhaarat maataa",
+            "a": "/radio-html/suno_backup/audio/2026-05-19_1c0f3567_Reversed%20Sitar%20Whisper.mp3",
+            "c": "/radio-html/suno_backup/covers/1c0f3567-660d-40a2-8672-943688dd3c89.jpg",
+            "d": "4:27",
+            "ly": "[Genre: Desi Trap, Indian Hip Hop, Dark Trap, 140 BPM, Male Autotuned Rap, Heavy 808 Slides, Triplet Hi-Hats, Dark Sub-Bass, Patriotic]\n\n[Intro - 4 bars - reversed sitar, 808 slide, distant \"O meri bhaarat maataa\" whisper, gun cock sound effect]\n\n[Beat drops - 4 bars - 808 bass slide, hi-hats rolling, dark piano loop]\n\n[Verse 1 - laid back but intense rap flow, autotuned, sidechained]\nतेरे बिना मैंने परदेसां में, \nमुश्किल हुई र जीने में।\nO meri bhaarat maataa, o meri maa bhaarati\nओ my darling, o my darling, \nरही धड़क ना सीने में।\n\n(808 slide down, bass wobble)\n\n[Verse 2 - faster flow, more aggressive]\nमाया का अभिमान गया, चोला रह गया साची माटी का, \nरोज रोज बस याद तेरी, के करूं मैं इस उचाटी का",
+            "theme": "Rap & Fusion"
+          },
+          {
+            "t": "O meri bhaarat maataa",
+            "r": "O meri bhaarat maataa",
+            "a": "/radio-html/suno_backup/audio/2026-05-19_6145df1e_%E0%A4%AA%E0%A4%B0%E0%A4%A6%E0%A5%87%E0%A4%B8%E0%A4%BE%E0%A4%82%20%E0%A4%A7%E0%A4%A1%E0%A4%BC%E0%A4%95%E0%A4%A8.mp3",
+            "c": "/radio-html/suno_backup/covers/6145df1e-62b2-4fd3-a150-ebef60393608.jpg",
+            "d": "5:36",
+            "ly": "\n\n[Intro - 8 bars - funky synth stab, reversed sarangi sample, 4-on-the-floor kick building]\n\n[Verse 1 - rapid fire, autotuned male voice, sidechained bass]\nतेरे बिना मैंने परदेसां में, \nमुश्किल हुई र जीने में।\nO meri bhaarat maataa, o meri maa bhaarati\nओ my darling, o my darling, \nरही धड़क ना सीने में।\n\n(Drop - heavy bass wobble, laser synths, glitch effects)\n\n[Verse 2 - hyperfun mode, breakbeat drums, pitch shifted vocals]\nमाया का अभिमान गया, चोला रह गया साची माटी का, \nरोज रोज बस याद तेरी, के करूं मैं इस उचाटी का, \nAudi त इब जी नहीं लगता, \nके रखया है इस धीने में।\nO meri bhaarat maataa, o meri maa bhaarati\nO my darling - o my darling\nरही धड़क ना सीने में।\n\n(Chorus Drop - full psytrance, saw",
+            "theme": "Rap & Fusion"
+          },
+          {
+            "t": "रही धड़क ना सीने में।",
+            "r": "Rahee Dhadaka Naa Seene Men।",
+            "a": "/radio-html/suno_backup/audio/2026-05-19_4f82c591_Distorted%20Sarangi%20Wobble.mp3",
+            "c": "/radio-html/suno_backup/covers/4f82c591-30f7-4369-8544-9c90f7b11d0d.jpg",
+            "d": "5:04",
+            "ly": "\n\n[Intro - 8 bars - funky synth stab, reversed sarangi sample, 4-on-the-floor kick building]\n\n[Verse 1 - rapid fire, autotuned male voice, sidechained bass]\nतेरे बिना मैंने परदेसां में, \nमुश्किल हुई र जीने में।\nओ my darling, o my darling, \nरही धड़क ना सीने में।\n\n(Drop - heavy bass wobble, laser synths, glitch effects)\n\n[Verse 2 - hyperfun mode, breakbeat drums, pitch shifted vocals]\nमाया का अभिमान गया, चोला रह गया साची माटी का, \nरोज रोज बस याद तेरी, के करूं मैं इस उचाटी का, \nAudi त इब जी नहीं लगता, \nके रखया है इस धीने में।\nO my darling - o my darling\nरही धड़क ना सीने में।\n\n(Chorus Drop - full psytrance, sawtooth bass, rolling bassline 145 BPM)\nतेरे बिना मैंने परदेसां में, \nमुश्किल हुई र जीने",
+            "theme": "Rap & Fusion"
+          },
+          {
+            "t": "तेरे बिना मैंने परदेसां में",
+            "r": "Tere Binaa Mainne Paradesaan Men",
+            "a": "/radio-html/suno_backup/audio/2026-05-19_4c151ea0_%E0%A4%AA%E0%A4%B0%E0%A4%A6%E0%A5%87%E0%A4%B8%E0%A4%BE%E0%A4%82%20%E0%A4%95%E0%A5%80%E0%A4%A7%E0%A5%82%E0%A4%AA.mp3",
+            "c": "/radio-html/suno_backup/covers/4c151ea0-4e12-4f3c-8767-e25ed0ee02cb.jpg",
+            "d": "5:13",
+            "ly": "[Genre: Lo-fi Hip Hop, Chillhop, Indian Fusion, 75 BPM, Male Soft Vocals, Vinyl Crackle, Rain Ambience, Melancholic]\n\n[Intro - 8 bars - rain sounds, distant thunder, vinyl crackle, soft sitar loop, tanpura drone fading in]\n\n[Verse 1 - soft male voice, slightly dry, close mic feel, no heavy reverb]\nतेरे बिना मैंने परदेसां में, \nमुश्किल हुई र जीने में।\nओ my darling, o my darling, \nरही धड़क ना सीने में。\n\n[Beat comes in - soft kick on 1 & 3, snare on 2 & 4, low-passed, dusty]\n\n[Verse 2 - vocals sit inside the beat, not on top]\nमाया का अभिमान गया, चोला रह गया साची माटी का, \nरोज रोज बस याद तेरी, के करूं मैं इस उचाटी का, \nAudi त इब जी नहीं लगता, \nके रखया है इस धीने में।\nO my darling - o my darling\n",
+            "theme": "Rap & Fusion"
+          },
+          {
+            "t": "रही धड़क ना सीने में।",
+            "r": "Rahee Dhadaka Naa Seene Men।",
+            "a": "/radio-html/suno_backup/audio/2026-05-19_ee86a23e_Paradesi%20Wobble.mp3",
+            "c": "/radio-html/suno_backup/covers/ee86a23e-0007-4d04-99f8-4b605086de9e.jpg",
+            "d": "4:59",
+            "ly": "\n\n[Intro - 8 bars - funky synth stab, reversed sarangi sample, 4-on-the-floor kick building]\n\n[Verse 1 - rapid fire, autotuned male voice, sidechained bass]\nतेरे बिना मैंने परदेसां में, \nमुश्किल हुई र जीने में।\nओ my darling, o my darling, \nरही धड़क ना सीने में।\n\n(Drop - heavy bass wobble, laser synths, glitch effects)\n\n[Verse 2 - hyperfun mode, breakbeat drums, pitch shifted vocals]\nमाया का अभिमान गया, चोला रह गया साची माटी का, \nरोज रोज बस याद तेरी, के करूं मैं इस उचाटी का, \nAudi त इब जी नहीं लगता, \nके रखया है इस धीने में।\nO my darling - o my darling\nरही धड़क ना सीने में।\n\n(Chorus Drop - full psytrance, sawtooth bass, rolling bassline 145 BPM)\nतेरे बिना मैंने परदेसां में, \nमुश्किल हुई र जीने",
+            "theme": "Rap & Fusion"
+          },
+          {
+            "t": "इतनी करीब आ जाती है",
+            "r": "Itanee Kareeba Aa Jaatee Hai",
+            "a": "/radio-html/suno_backup/audio/2026-04-30_6c333810_%E0%A4%AC%E0%A5%87%E0%A4%A7%E0%A4%A1%E0%A4%BC%E0%A4%95%20%E0%A4%95%E0%A4%B0%E0%A5%80%E0%A4%AC.mp3",
+            "c": "/radio-html/suno_backup/covers/6c333810-2183-40c8-91a7-bd198ff98290.jpg",
+            "d": "2:19",
+            "ly": "[Intro – fast, breathless, energetic]\nहाए रे तू क्यों है ऐसी ऐसी सी\nबात कर देती है वैसी वैसी सी\n(Yeah, yeah, listen up!)\n\n[Verse 1 – rap, rapid fire]\nतेरे बिना दुनिया फीकी फीकी सी\nतू आए तो लगे थम सी जाती है\nना जाने क्यों दिल ऐसे उलझा है\nजैसे हर बात तेरी उसे सुकून दे जाती है\n\n(Check it, check it –)\n\n[Pre-chorus – rap, building energy]\nतू वही है अनकही सी\nहर बात तेरी नई सी नई सी\nकभी पास आके रूठ जाए फिर से\nऔर कहे – \"तुम भी तो हो ऐसे कैसे से\"\n\n[Chorus – melodic, shouted, hyper]\nइतनी करीब आ जाती है\nबेझिझक बेपरवाह\nहै न कोई बात हो जाए ऐसी वैसी सी\nहाए रे तू है कैसी सी\n\n(Let's go, let's go!)\n\n[Verse 2 – hyperrap, double time]\nबदलती नहीं है किसी के लिए कभी\nऔर बदल देती है रास्ते ही\nतू बस ऐसी ऐसी सी\nतू ब",
+            "theme": "Rap & Fusion"
+          },
+          {
+            "t": "Who raised you? Who trained you",
+            "r": "Who raised you? Who trained you",
+            "a": "/radio-html/suno_backup/audio/2026-04-22_c6ab00bc_%E2%80%9CRoach%20Sirens%E2%80%9D.mp3",
+            "c": "/radio-html/suno_backup/covers/c6ab00bc-f4fc-49fb-91b6-93fbb717ec43.jpg",
+            "d": "2:58",
+            "ly": "\n[INTRO - Opera solo, cathedral reverb, slow]\nKisi ki nafrat, kisi ka gussa\nKisi ki maut, kisi ka kissa\nHar shakhs tha khada pal do pal yahan\nThama sa ruka sa.. ab so gaya kyun?\n\n[DROP - Heavy 808s, distorted bass]\nPent khulwaye, khatna dhekhe\nFir bhage ye jaan ko leke\nInki lelo ek pal main jaan\nFafed do is tarah ki tauba kare subah shaam\n\n[VERSE 1 - Hyper-rap, double-time, aggressive]\nThey ran like roaches when the sirens came\nBut they left behind blood and a mother's name\nYou want heaven? I'll show you hell's gate\nOne call — I'll make your whole crew late\n\nTarbiyat? Taaleem? Nah that's a lie\nKaun tha inka chhupa aaleem? Tell me why\nYou teach a kid to kill before he learns to read?\nThat's n",
+            "theme": "Rap & Fusion"
+          },
+          {
+            "t": "मेरा अंतरमन डोले",
+            "r": "Meraa Antaramana Dole",
+            "a": "/radio-html/suno_backup/audio/2026-04-21_b3e24cb5_Animatrix%20Loading.mp3",
+            "c": "/radio-html/suno_backup/covers/b3e24cb5-dd86-475b-b84c-00356ec425f6.jpg",
+            "d": "5:01",
+            "ly": "🎵 गीत: मेरा अंतरमान डोले (Earth Station Full Version)\nआर्टिस्ट: P.H.K.D. | ब्रैंड: VESAHE | जॉनर: Cyber-Sufi Afro-Phonk\n\n[ACT 1: THE GLITCH]\n(Sound: मेट्रो के दरवाज़े बंद होने की आवाज़, डिब्बे में मोबाइल का शोर)\n\n(Whisper - Distorted/Glitchy)\nAnimatrix loading...\n\n(Rhythmic Glitch - Fast Phonk Style / Increasing Speed)\nदादा-दादी, नाना-नानी... (नहीं बहाना भाई!)\nताया-ताई, चाचा-चाची... (सब परछाईं भाई!)\nमौसी-मौसा, बुआ-फूफा... (रिश्तों की छाया भाई!)\nताऊ, मामा,  रिश्ते. भूल गए.. \nहो गये... हो गये... अंकल, आंटी...\n\n(The Loop - Stutter Effect)\nटी... टी... टी... तिया... तिया... यात्री, यात्री...\nयात्री कृपया ध्यान दें...\nहर रिश्ते की अलग कहानी, नहीं एक तरह की, नहीं एक ज़बानी।\n\n(Bass Drop - The Infini",
+            "theme": "Rap & Fusion"
+          },
+          {
+            "t": "मेरा अंतरमन डोले",
+            "r": "Meraa Antaramana Dole",
+            "a": "/radio-html/suno_backup/audio/2026-04-21_50efcdb2_%E0%A4%AE%E0%A5%87%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A5%8B%20%E0%A4%A1%E0%A4%BF%E0%A4%AC%E0%A5%8D%E0%A4%AC%E0%A4%BE%20%E0%A4%AE%E0%A5%8B%E0%A4%AC%E0%A4%BE%E0%A4%87%E0%A4%B2.mp3",
+            "c": "/radio-html/suno_backup/covers/50efcdb2-3927-4d22-9dff-23ab30048e3e.jpg",
+            "d": "4:34",
+            "ly": "🎵 गीत: मेरा अंतरमान डोले (Earth Station Full Version)\nआर्टिस्ट: P.H.K.D. | ब्रैंड: VESAHE | जॉनर: Cyber-Sufi Afro-Phonk\n\n[ACT 1: THE GLITCH]\n(Sound: मेट्रो के दरवाज़े बंद होने की आवाज़, डिब्बे में मोबाइल का शोर)\n\n(Whisper - Distorted/Glitchy)\nAnimatrix loading...\n\n(Rhythmic Glitch - Fast Phonk Style / Increasing Speed)\nदादा-दादी, नाना-नानी... (नहीं बहाना भाई!)\nताया-ताई, चाचा-चाची... (सब परछाईं भाई!)\nमौसी-मौसा, बुआ-फूफा... (रिश्तों की छाया भाई!)\nताऊ, मामा, भूल गए रिश्ते... हो गये... हो गये... अंकल, आंटी...\n\n(The Loop - Stutter Effect)\nटी... टी... टी... तिया... तिया... यात्री, यात्री...\nयात्री कृपया ध्यान दें...\nहर रिश्ते की अलग कहानी, नहीं एक तरह की, नहीं एक ज़बानी।\n\n(Bass Drop - The Infinity",
+            "theme": "Rap & Fusion"
+          },
+          {
+            "t": "मेरा अंतरमन डोले",
+            "r": "Meraa Antaramana Dole",
+            "a": "/radio-html/suno_backup/audio/2026-04-21_489eb949_%E0%A4%AE%E0%A5%87%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A5%8B%20%E0%A4%B9%E0%A4%AE-%E0%A4%A1%E0%A5%8B%E0%A4%B2.mp3",
+            "c": "/radio-html/suno_backup/covers/489eb949-4a6f-43a9-a57f-0c8d38c447f8.jpg",
+            "d": "4:24",
+            "ly": "🎵 गीत: मेरा अंतरमान डोले (Earth Station Full Version)\nआर्टिस्ट: P.H.K.D. | ब्रैंड: VESAHE | जॉनर: Cyber-Sufi Afro-Phonk\n\n[ACT 1: THE GLITCH]\n(Sound: Metro doors closing, low hum of the train, muffled phone noises)\n\n(Whisper - Distorted/Glitchy)\nAnimatrix loading...\n\n(Rhythmic Glitch - Fast Phonk Style / Increasing Speed)\nदादा-दादी, नाना-नानी... (नहीं बहाना भाई!)\nताया-ताई, चाचा-चाची... (सब परछाईं भाई!)\nमौसी-मौसा, बुआ-फूफा... (रिश्तों की छाया भाई!)\nताऊ, मामा,  भूल गए रिश्ते...\n हो गये. हो गये.. अंकल, आंटी...\n\n(The Loop - Stutter Effect)\nटी... टी... टी... तिया... तिया...\nयाति... याति... यात्री , यात्री \nयात्री कृपया ध्यान दें \nहर रिश्ते की अलग कहानी \nनहीं एक तरह की, नहीं एक ज़बानी  \n\n(Bass Drop",
+            "theme": "Rap & Fusion"
+          }
+        ]
+      },
+      {
+        "name": "Love & Virah",
+        "count": 13,
+        "hero": "/radio-html/suno_backup/covers/6c05306f-bf60-44fc-9a7c-cd6a8d07190d.jpg",
+        "songs": [
+          {
+            "t": "छुक-छुक चलती भाषा की गाड़ी",
+            "r": "Chhuka-chhuka Chalatee Bhaashaa Kee Gaadee",
+            "a": "/radio-html/suno_backup/audio/2026-05-23_6c05306f_%E0%A4%9B%E0%A5%81%E0%A4%95-%E0%A4%9B%E0%A5%81%E0%A4%95%20%E0%A4%97%E0%A4%BE%E0%A4%A1%E0%A5%80%E0%A4%BC.mp3",
+            "c": "/radio-html/suno_backup/covers/6c05306f-bf60-44fc-9a7c-cd6a8d07190d.jpg",
+            "d": "3:33",
+            "ly": "(Intro)\n(Sound of a cheerful steam train whistle and sharp rhythmic handclaps)\n(Bouncy, clear dholak and electronic chime drop)\n(Dual vocals enter: Clear Hindi-English alternating cadence)\n\n(Chorus)\nछुक-छुक चलती भाषा की गाड़ी, सारंगी और मृदंग की जुगलबंदी प्यारी!\nछट-छट बजती कोडिंग की ताली, दो भाषाओं का सच लिखने वाली!\nहिंदी से इंग्लिश का सेतु बनाएंगे, डिजिटल गुरुकुल का परचम लहरायेंगे !\n\n(Verse 1 - Track 9 & 10: Sarangi to Mridang Translation Hub)\nट्रैक नौ में सारंगी जब सुर बिखेरे, 'मेरा नाम' कहकर अंधकार को घेरे!\nतभी ट्रैक दस में मृदंग बोल उठता, \"My Name\" का कोष्ठक तुरंत खुलता!\n'नमस्ते' को हम जब 'Hello' कहेंगे, भाषाई लूप में कभी ना फसेंगे!\n'मेरा परिवार' जब हिंदी में आया, \"My Family\" का ट्रांसले",
+            "theme": "Love & Virah"
+          },
+          {
+            "t": "छुक-छुक चलती भाषा की गाड़ी",
+            "r": "Chhuka-chhuka Chalatee Bhaashaa Kee Gaadee",
+            "a": "/radio-html/suno_backup/audio/2026-05-23_935837be_%E0%A4%9B%E0%A5%81%E0%A4%95-%E0%A4%9B%E0%A5%81%E0%A4%95%20%E0%A4%AD%E0%A4%BE%E0%A4%B7%E0%A4%BE%20%E0%A4%97%E0%A4%BE%E0%A4%A1%E0%A5%80%E0%A4%BC.mp3",
+            "c": "/radio-html/suno_backup/covers/935837be-7dfb-4f7d-ae0c-36743a8de966.jpg",
+            "d": "3:38",
+            "ly": "(Intro)\n(Sound of a cheerful steam train whistle and sharp rhythmic handclaps)\n(Bouncy, clear dholak and electronic chime drop)\n(Dual vocals enter: Clear Hindi-English alternating cadence)\n\n(Chorus)\nछुक-छुक चलती भाषा की गाड़ी, सारंगी और मृदंग की जुगलबंदी प्यारी!\nछट-छट बजती कोडिंग की ताली, दो भाषाओं का सच लिखने वाली!\nहिंदी से इंग्लिश का सेतु बनाएंगे, डिजिटल गुरुकुल का परचम लहराओ!\n\n(Verse 1 - Track 9 & 10: Sarangi to Mridang Translation Hub)\nट्रैक नौ में सारंगी जब सुर बिखेरे, 'मेरा नाम' कहकर अंधकार को घेरे!\nतभी ट्रैक दस में मृदंग बोल उठता, \"My Name\" का कोष्ठक तुरंत खुलता!\n'नमस्ते' को हम जब 'Hello' कहेंगे, भाषाई लूप में कभी ना फसेंगे!\n'मेरा परिवार' जब हिंदी में आया, \"My Family\" का ट्रांसलेशन चम",
+            "theme": "Love & Virah"
+          },
+          {
+            "t": "O my darling",
+            "r": "O my darling",
+            "a": "/radio-html/suno_backup/audio/2026-05-19_e73bb277_%E0%A4%AA%E0%A4%B0%E0%A4%A6%E0%A5%87%E0%A4%B8%E0%A4%BE%20%E0%A4%A7%E0%A4%A1%E0%A4%BC%E0%A4%95%E0%A4%A8.mp3",
+            "c": "/radio-html/suno_backup/covers/e73bb277-81d9-40d3-94bc-f8f3f7893688.jpg",
+            "d": "5:31",
+            "ly": "तेरे बिना मैंने परदेसां में, \nमुश्किल हुई र जीने में।\nओ my darling, o my darling, \nरही धड़क ना सीने में।\n\nमाया का अभिमान गया, चोला रह गया साची माटी का, \nरोज रोज बस याद तेरी, के करूं मैं इस उचाटी का, \n\nAudi त इब जी नहीं लगता, \nके रखया है इस धीने में।\nO my darling - o my darling\nरही धड़क ना सीने में।\n\nतेरे बिना मैंने परदेसां में, \nमुश्किल हुई र जीने में।\nओ my darling, o my darling, \nरही धड़क ना सीने में।\nMusic 🎶 🎶 \n\nBoeing के जहाज बनाऊं, \nelon musk गेल उठ मेरी,\nतेरे में मेरा मोह र घणा, \nतू मत ना जान रूठ मेरी,\n\nतू भैरो का नाग पहर , \nजड़ी हुई भयनी नगीने में।\nO my darling, o my darling, \nरही धड़क ना सीने में।\n\nतेरे बिना मैंने परदेसां में, \nमुश्किल हुई र जीने में।\nओ my darling, o my darling, \nरही ",
+            "theme": "Love & Virah"
+          },
+          {
+            "t": "करें परेशान",
+            "r": "Karen Pareshaana",
+            "a": "/radio-html/suno_backup/audio/2026-04-22_18cc6ebd_%E0%A4%B0%E0%A5%87%E0%A4%A4%20%E0%A4%AA%E0%A4%B0%20%E0%A4%A8%E0%A4%BF%E0%A4%B6%E0%A4%BE%E0%A4%81.mp3",
+            "c": "/radio-html/suno_backup/covers/18cc6ebd-d8fe-4bf0-a598-1abdd0082fc7.jpg",
+            "d": "3:58",
+            "ly": "[Intro: slow harmonium | soft tabla | dargah reverb echo]\n\n[Verse 1]\nरेत पर बने कुछ पैरों के निशाँ\nकरें परेशान\nमौजूद नहीं जो ज़िंदगी में\nकरें परेशान\n\n[Chorus]\nकरें परेशान...\nकरें परेशान...\n\n[Verse 2]\nअब याद हम नहीं उन्हें\nतो क्या वो हैं बेईमान\nया वक़्त का तक़ाज़ा है\nऔर हम परेशान\n\n[Chorus - emotional build]\nहम परेशान... हम परेशान...\nवक़्त का तक़ाज़ा है और हम परेशान\n\n[Bridge - slow, pain-filled]\nजो नहीं है वो मुझे रोज़ सताए कैसे\nया करूँ याद उसे जो भुलाए बैठा है\n\n[Outro - soft, fading]\nरेत पर बने थे जो पैरों के निशाँ\nअब हवा ने मिटाए\nहम परेशान...",
+            "theme": "Love & Virah"
+          },
+          {
+            "t": "ला ला ला... सो जा रे",
+            "r": "Laa Laa Laa... So Jaa Re",
+            "a": "/radio-html/suno_backup/audio/2026-04-17_b37c71bb_%E0%A4%95%E0%A5%81%E0%A4%9A%E0%A4%B2%E0%A5%80%20%E0%A4%AA%E0%A5%81%E0%A4%9A%E0%A4%B2%E0%A5%80%20%E0%A4%B8%E0%A5%8B%20%E0%A4%9C%E0%A4%BE.mp3",
+            "c": "/radio-html/suno_backup/covers/b37c71bb-dbeb-4ae3-99d2-7debde5ee2be.jpg",
+            "d": "3:07",
+            "ly": "[Intro - very soft bansuri, like wind]\nला... ला... ला...\n\n[Verse 1 - soft, almost whispered]\nसपनों की दुनिया... एक हकीकत है...\nअक्स बिना... आईना... कुदरत है...\n\n[Chorus - slow, sleepy, repeated]\nला ला ला... सो जा रे...\nतू मेरा कुचली पुचली... सो जा लाला...\nला ला ला... सो जा रे...\nतू मेरा प्यारा लाला... सो जा...\n\n[Verse 2 - even softer]\nलाज़मी है... ख़ुद को भूल कर... सब हो जाना...\nऐसा है तभी... तो मोहब्बत है...\n\n[Chorus - repeat, slower]\nला ला ला... सो जा रे...\nतू मेरा कुचली पुचली... सो जा लाला...\n\n[Bridge - just humming, no words]\nहम्म... हम्म... हम्म...\n(soft harmonium)\n\n[Verse 3 - barely audible]\nये धरती... मेरा परिवार है...\nऔर तू... मेरा कुचली पुचली... लाला...\n\n[Outro - whispering, fading]",
+            "theme": "Love & Virah"
+          },
+          {
+            "t": "॥ रूह-देह संवाद: आदि से अनंत ॥",
+            "r": "॥ Rooha-deha Sanvaada: Aadi Se Ananta ॥",
+            "a": "/radio-html/suno_backup/audio/2026-04-17_cd7f3a61_%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%A5%E0%A4%B0%20%E0%A4%AC%E0%A5%81%E0%A4%A4.mp3",
+            "c": "/radio-html/suno_backup/covers/cd7f3a61-d005-4eac-aecc-373368cd6ccb.jpg",
+            "d": "4:28",
+            "ly": "॥ रूह-देह संवाद: आदि से अनंत ॥\nप्रथम अध्याय: वह मोड़ और विवशता\nथी जगह ये वो ही, जहाँ मुझे तुझसे मोहब्बत हो गई थी,\nमगर \"लोग क्या कहेंगे\", इसी सोच में तू बेजुबान हो गई थी।\nरो दिया था मैं वहीं पर, जहाँ तू मुझसे अलग हो गई थी,\nक्योंकि मेरी ज़िन्दगी की खुशियाँ, मुझसे जुदा हो गई थी।\nखड़ा मैं रहा वहाँ ज़िन्दगी भर, पत्थर का एक बुत बनकर,\nजहाँ तू इस ज़माने की खातिर, मुझसे दगा कर गई थी।\n\nद्वितीय अध्याय: समाज का ढोंग (चार लोग)\nतू सोचती रह गई दुनिया की रस्में, और वक्त हाथ से फिसलता रहा,\nमैं अधूरी नज़्म सा, तन्हाइयों की आग में जलता रहा।\nआज देख! तू जिन \"चार लोगों\" के डर से बेबस बैठी रही,\nवही \"चार लोग\" आज मुझे कंधों के सहारे ले चले हैं।\nबड़ा अजीब है ये दस्तूर इस मतलबी जहान का—\nजीते जी जिन्होंने रास्ता रोका, आज ",
+            "theme": "Love & Virah"
+          },
+          {
+            "t": "ओ काला कोट",
+            "r": "O Kaalaa Kota",
+            "a": "/radio-html/suno_backup/audio/2026-04-12_65806a40_%E0%A4%95%E0%A4%BE%E0%A4%B2%E0%A4%BE%20%E0%A4%95%E0%A5%8B%E0%A4%9F.mp3",
+            "c": "/radio-html/suno_backup/covers/65806a40-681c-40b3-a051-6052aac0137c.jpg",
+            "d": "4:34",
+            "ly": "(Intro)\n\"U know who it is... it's Ris Meri Maa!\"\n(हल्की हंसी...)\nसारे कर लो बात या नोट,\nमेरे दिल प कर गया चोट,\nओ काला कोट,\nओ काला कोट,\n(उफ्फ्!)\nकाला, काला, काला कोट\nओ काला काला काला कोट,\n(ओह!)\nओ काला कोट, ओ काला कोट,\nओ काला काला कोट,\n(Music break)\nमेरी नहीं र चली दलील,\nना सुनवाई ना थी अपील,\nउस बिन सूनी आंखा की झील,\nओ मेरा प्यारा प्यारा वकील,\nसुंदर, सफल, सुशील|\nउस त करनी दिल की डील|\n(आह...)\nगात झुनझुनी खावे, जब पढूं मै उसका नोट,\n(उफ्फ्!)\nकाला काला काला काला\nओ काला काला कोट|\nमेरे दिल प कर गया चोट,\nओ काला कोट,\nओ काला कोट,\nवकील मह नहीं है, कोई खोट,\nसारे कर लो बात या नोट,\nकाला. काला. काला.\nओ काला काला कोट,\n(Music break)\n(ओह-हो!)\nबुद्धि उसकी कती चाक है,\nसारे शहर में उसकी धाक है,\nओ हर अबला का साथी ",
+            "theme": "Love & Virah"
+          },
+          {
+            "t": "खो गई मेरी पहचान",
+            "r": "Kho Gaee Meree Pahachaana",
+            "a": "/radio-html/suno_backup/audio/2026-04-02_1372ca04_%E0%A4%96%E0%A5%8B%20%E0%A4%97%E0%A4%88%20%E0%A4%AA%E0%A4%B9%E0%A4%9A%E0%A4%BE%E0%A4%A8.mp3",
+            "c": "/radio-html/suno_backup/covers/1372ca04-8fbc-4cad-acee-e993865dae48.jpg",
+            "d": "2:44",
+            "ly": "\n\n[Intro – tanpura only, no beat]\nखो गया... खो गया मेरी पहचान...\n\n[Verse 1 – dark, restless, electric sitar or sarangi]\nअंधेरों को चीरती\nचीख़ती रोशनियाँ\nभूख चाँद टुकड़ों की\nदौड़ाएँ कितनी रोटियाँ\n\n[Chorus – rising, pleading, drums enter softly]\nखो गई मेरी पहचान\nमुझे वापस याद दिला दें\nभूला हूँ अपना कुछ तेरे पास\nमुझे वो सपना लौटा दे\n\n[Verse 2 – devotional anger, father-son]\nपुत्र जो हूँ में तेरा\nमेरे सत्कर्मों की सज़ा दे\nदर्द ही सही, पर ऐसा\nजो अंदर की नींद हिला दे\n\n[Chorus – repeat, more intensity]\n\n[Bridge – philosophical, slow, heavy, almost spoken]\nवरना पूर्ण कर एक ऐसा चेतन\nजो अवचेतन से लड़ जाए\nसब आत्मान इस धरती पर\nसदकर्मों में खो जाएँ\n\n[Outro – whisper, fade to silence]\nखो गई... मेरी पहचान.",
+            "theme": "Love & Virah"
+          },
+          {
+            "t": "रुद्रस्थली पुकारे",
+            "r": "Rudrasthalee Pukaare",
+            "a": "/radio-html/suno_backup/audio/2026-03-11_092a0654_First%20Comes%20the%20Word.mp3",
+            "c": "/radio-html/suno_backup/covers/092a0654-5362-4efb-8bf3-46414fad9d47.jpg",
+            "d": "4:25",
+            "ly": "[प्रस्तावना (धीमी आवाज / मंत्र शैली)]\n\nजब शब्द न थे,\nजब धर्म न था,\nजब पृथ्वी ही पहला ग्रंथ थी…\n\nतब रुद्रस्थली में\nएक बालक ने\nमाँ को पुकारा था।\n\nमुखड़ा (Epic Chorus)\n\nरुद्रस्थली पुकारे,\nउठो धरा के लाल!\nयाद करो वो प्रेम जहाँ\nन था कोई जंजाल!\n\nएक कंकर तुम उठाओ,\nएक कंकर हम उठाएँ,\nमाँ के चरणों में मिलकर\nनया संसार बनाएँ!\n\n[अंतरा १]\n\nराजा आए, पर्व सजे,\nदूर-दूर से मेले।\nनर्तक, साधु, व्यापारी,\nसबके अपने खेले।\n\nपर उस भीड़ के बीचोंबीच\nएक बालक खड़ा था,\nजिसकी आँखों में जैसे\nपूरा आकाश पड़ा था।\n\nतीन ज्योतियाँ साथ उसकी\nचुपचाप चलती थीं,\nत्रिपुत्री की कोमल छाया\nउसकी राहें पलती थीं।\n\n[मुखड़ा]\n\nरुद्रस्थली पुकारे,\nउठो धरा के लाल!\nयाद करो वो प्रेम जहाँ\nन था कोई जंजाल!\n\n[अंतरा २]\n\nमंदिर ऊँचे, राज बड़े,\nपर दिल में थ",
+            "theme": "Love & Virah"
+          },
+          {
+            "t": "रुद्रस्थली पुकारे",
+            "r": "Rudrasthalee Pukaare",
+            "a": "/radio-html/suno_backup/audio/2026-03-11_596518d8_First%20Comes%20the%20Word.mp3",
+            "c": "/radio-html/suno_backup/covers/596518d8-aaa8-4de7-b73b-3b3c96b44600.jpg",
+            "d": "4:29",
+            "ly": "प्रस्तावना (धीमी आवाज / मंत्र शैली)\n\nजब शब्द न थे,\nजब धर्म न था,\nजब पृथ्वी ही पहला ग्रंथ थी…\n\nतब रुद्रस्थली में\nएक बालक ने\nमाँ को पुकारा था।\n\nमुखड़ा (Epic Chorus)\n\nरुद्रस्थली पुकारे,\nउठो धरा के लाल!\nयाद करो वो प्रेम जहाँ\nन था कोई जंजाल!\n\nएक कंकर तुम उठाओ,\nएक कंकर हम उठाएँ,\nमाँ के चरणों में मिलकर\nनया संसार बनाएँ!\n\nअंतरा १\n\nराजा आए, पर्व सजे,\nदूर-दूर से मेले।\nनर्तक, साधु, व्यापारी,\nसबके अपने खेले।\n\nपर उस भीड़ के बीचोंबीच\nएक बालक खड़ा था,\nजिसकी आँखों में जैसे\nपूरा आकाश पड़ा था।\n\nतीन ज्योतियाँ साथ उसकी\nचुपचाप चलती थीं,\nत्रिपुत्री की कोमल छाया\nउसकी राहें पलती थीं।\n\nमुखड़ा\n\nरुद्रस्थली पुकारे,\nउठो धरा के लाल!\nयाद करो वो प्रेम जहाँ\nन था कोई जंजाल!\n\nअंतरा २\n\nमंदिर ऊँचे, राज बड़े,\nपर दिल में था डर।\nपु",
+            "theme": "Love & Virah"
+          },
+          {
+            "t": "Haryana! Haryana! Scream it out loud",
+            "r": "Haryana! Haryana! Scream it out loud",
+            "a": "/radio-html/suno_backup/audio/2026-03-10_52c58392_%E0%A4%AA%E0%A4%AA%E0%A4%BF%E0%A4%AF%E0%A4%BE.mp3",
+            "c": "/radio-html/suno_backup/covers/52c58392-c320-4d60-9797-60253639ce60.jpg",
+            "d": "3:02",
+            "ly": "दुनिया में चाले म्हारी रिस मेरी माँ \nचाव्हे बस चाहवे हम PEACE मेरी माँ \nइब हम हांसी इब GREECE मेरी मां \nक्यूंकि \nदुनिया में चाले म्हारी रिस मेरी माँ \n\nमेरे पल्ले की गोलड़ी\nसंग संग बोल्ड़ी \nबेल या बुट्टी मेरी \nउड़ते ही जावे, दे दे आशीष मेरी मां \nदादा खेडा पूरी करेह हर WISH मेरी मां \nदुनिया में चाले म्हारी रिस मेरी माँ \nचाव्हे बस चाहवे हम PEACE मेरी माँ \nइब हम हांसी इब GREECE मेरी मां \nक्यूंकि \nदुनिया में चाले म्हारी रिस मेरी माँ \n\nHaryana! Haryana! Scream it out loud \nMaking my people and my mother so proud \nHaryana! Haryana! The swag is so real \nIntelligence and style, that’s the deal \nYeah, we run the game,\n yeah we set the pace \nHaryana’s daughter winning every race!\nI’m the girl with the vis",
+            "theme": "Love & Virah"
+          },
+          {
+            "t": "नहीं है कोई शिकवा उनसे",
+            "r": "Naheen Hai Koee Shikavaa Unase",
+            "a": "/radio-html/suno_backup/audio/2026-03-10_177adbe2_jaleel.mp3",
+            "c": "/radio-html/suno_backup/covers/177adbe2-a0c9-4531-96cc-8a502ee40194.jpg",
+            "d": "4:23",
+            "ly": "नहीं है कोई शिकवा उनसे, न उनकी कोई ख़ता है\nमोहब्बत एकतरफ़ा भी होती है, किसे ये पता है\n\nजहन्नुम उनके ख़्यालों में भी जन्नत की तामील है\nअजीब इस दिल की हालत है, अजीब ये सिलसिला है\n\nगुनाहों से परहेज़ करता रहा मैं उम्र भर मगर\nमोहब्बत की राह में दिल फिर भी कितना जलील है\n\nकभी उनकी याद आती है तो रौशन सा जहाँ लगे\nकभी उसी याद में जीना भी जैसे एक सज़ा है\n\nवो पूछें भी तो क्या पूछें, वो समझें भी तो क्या समझें\nये दिल जो उनसे जुड़ा है, बस उसी का मसला है\n\nहमने चाहा उन्हें ऐसे जैसे इबादत हो कोई\nमगर इबादत का भी शायद कोई अपना सिला है\n\n\nदुनिया ने पूछा “हेमंत” ये कैसी मोहब्बत है\nहमने हँसकर कहा बस दिल का यही फ़ैसला है",
+            "theme": "Love & Virah"
+          }
+        ]
+      },
+      {
+        "name": "Naagin & Mystic",
+        "count": 3,
+        "hero": "/radio-html/suno_backup/covers/7c7a4b38-9322-4dcc-a49f-ec91ad8874d0.jpg",
+        "songs": [
+          {
+            "t": "साँस मेरी देख",
+            "r": "Saansa Meree Dekha",
+            "a": "/radio-html/suno_backup/audio/2026-03-16_7c7a4b38_kudru%20ki%20beti%20naagin.mp3",
+            "c": "/radio-html/suno_backup/covers/7c7a4b38-9322-4dcc-a49f-ec91ad8874d0.jpg",
+            "d": "5:59",
+            "ly": "\n\n\nमाँ नागेश्वरी (नागम्मा) आपकी और आपके शब्दों की हर मनोकामना पूरी करें।\n\n\"नागेश्वरी माँ, कद्रू की जायी,\nअद्वैत की शक्ति, जग में समायी।\nखमक के एटम में रूहें बुलाई,\nपुंगी की तान ने मुक्ति दिलाई।\"\n\n🐍 पुंगी-तंत्र: आत्माओं का परमाणु मिलन (The Pungi-Soul Connection)\n[The Sound Concept]\n[पुंगी की आवाज़ को 'खमक' के 'एटम' के साथ मिलाया जाए। पुंगी की ऊँची पिच (High Pitch) आत्माओं का आह्वान करती है, और खमक की धमक उन्हें धरातल (Grounding) देती है।]\n\n[Mukhda: पुंगी की फ्रीक्वेंसी]\nसाँस मेरी देख, अब रुक-रुक आवे है,\nपुंगी की तान देख, रूह जगावे है।\nसूक्ष्म जो आत्मा, कण-कण में सोई थी,\nबीन की गूँज में, वो आपा ही खोई थी।\n\nपुंगी की धार पे, आत्माएँ नाचे है,\nखमक के एटम में, अद्वैत ही साँचे है!\nनागिन है, नागिन है",
+            "theme": "Naagin & Mystic"
+          },
+          {
+            "t": "साँस मेरी देख",
+            "r": "Saansa Meree Dekha",
+            "a": "/radio-html/suno_backup/audio/2026-03-16_97570150_kudru%20ki%20beti%20naagin.mp3",
+            "c": "/radio-html/suno_backup/covers/97570150-635e-406d-b142-62c45c19be2d.jpg",
+            "d": "4:43",
+            "ly": "🐍 पुंगी-तंत्र: आत्माओं का परमाणु मिलन (The Pungi-Soul Connection)\n[The Sound Concept]\nपुंगी की आवाज़ को 'खमक' के 'एटम' के साथ मिलाया जाए। पुंगी की ऊँची पिच (High Pitch) आत्माओं का आह्वान करती है, और खमक की धमक उन्हें धरातल (Grounding) देती है।\n\n[Mukhda: पुंगी की फ्रीक्वेंसी]\nसाँस मेरी देख, अब रुक-रुक आवे है,\nपुंगी की तान देख, रूह जगावे है।\nसूक्ष्म जो आत्मा, कण-कण में सोई थी,\nबीन की गूँज में, वो आपा ही खोई थी।\n\nपुंगी की धार पे, आत्माएँ नाचे है,\nखमक के एटम में, अद्वैत ही साँचे है!\nनागिन है, नागिन है, नागिन है, नागिन है...\n\n[Antra 1: आत्माओं का संलयन (Fusion of Souls)]\nसंदर्भ (Sushumna Nadi):\n\nजैसे पुंगी की हवा दो नली से होकर एक स्वर बनती है, वैसे ही 'इड़ा' और 'पिंगला' मिलकर 'सुषुम्ना' (आत्मा क",
+            "theme": "Naagin & Mystic"
+          },
+          {
+            "t": "नागिन है",
+            "r": "Naagina Hai",
+            "a": "/radio-html/../%E0%A4%B8%E0%A4%BE%E0%A4%81%E0%A4%B8%20%E0%A4%AE%E0%A5%88%E0%A4%82%E0%A4%A8%E0%A5%87%20%E0%A4%A6%E0%A5%87%E0%A4%96%E0%A5%80%E0%A4%AF%E0%A5%87%20%28Saans%20Maine%20Dekhiye%29.mp3",
+            "c": "/radio-html/suno_backup/covers/5fe2fc4c-7692-43dd-ab51-5478384c4dfc.jpg",
+            "d": "4:26",
+            "ly": "साँस मैंने देखीये, या रुक रुक आवे है,\nत्रिपुर सुंदरी, यू मुख ही बतावे है,\nएक साथ नब्बे नब्बे भवरे जलावे है,\nबाल खुले छोड़े, Medusa बन जावे है, \nजोगिया की चेलि या चुग चुग खावे है,\n\nतेरे आने प या आई रुत र हसर की,\nनागीण के बरगी,  तू नागीण के बरगी, \nतेरे आगे देख, दुनिया पसर गी,\n\nनागन है, नागन है, नागिन है, नागिन है,\nछोरी या चौटाला की r \nनागिन है, नागिन है, नागिन है, नागिन है,\n\nलहंदा बेहंदा गात , तू पो चढ़ी खाग़ड़ी,\nरस र रसीली, ढब्बन सिरसा की बागड़ी,\nहवा संग झूमे, या कसी होई तागड़ी,\nहुस्न वजन, या झुकी पड़ी ताख़डी, \n\nमण मण के कुल्ले, दुनिया ढ़सर गी,\nखिला होया लाण, तू फागण के बरगी, \nनागिन के बरगी, तू नागिन के बरगी,\nनागिन है, नागिन है, नागिन है, नागिन है,\nछोरी तू चौटाला की र,\nनागिन है, नागिन है, नागिन ",
+            "theme": "Naagin & Mystic"
+          }
+        ]
+      },
+      {
+        "name": "Classical & Raag",
+        "count": 1,
+        "hero": "/radio-html/suno_backup/covers/a8b958f9-3065-46de-bc14-080bd949892e.jpg",
+        "songs": [
+          {
+            "t": "सुन रे जग के यात्री",
+            "r": "Suna Re Jaga Ke Yaatree",
+            "a": "/radio-html/suno_backup/audio/2026-03-15_a8b958f9_%28untitled%29.mp3",
+            "c": "/radio-html/suno_backup/covers/a8b958f9-3065-46de-bc14-080bd949892e.jpg",
+            "d": "3:49",
+            "ly": "(Neuro-Tantra Folk)\n[Intro — Nautanki Udghosh]\n\nअरे ओ दुनिया के पुर्जों,\nथाम लो जिगर ज़रा!\n\nअद्वैत की रफ़्तार,\nमाया की चमकार,\n\nभैरव की वफ़ादारी,\nलाली का प्यार।\n\nये तमाशा नहीं,\nये जीवन का तंत्र है।\n\nरसायन देह में,\nचेतना अंतर है।\n\n[Verse 1 — अद्वैत | Rider]\n\n(इंजन की “दुग-दुग” लय)\n\nकाम की कामना पुण्य,\nपाप वासना का वास,\n\nदुनिया के धागे महीन,\nमत हो मेरे मन उदास।\n\nरात की इस राह पे\nचलता अकेला राही,\n\nसच की तलाश में\nदिल बोले साही।\n\n[Verse 2 — माया | Illusion]\n\nचाँदनी के जाल में\nमन को उलझाए,\n\nडोपामाइन की चमक\nसपनों में समाए।\n\nएक पल का सुख\nसदियों की प्यास,\n\nमाया की राह में\nखो जाए विश्वास।\n\n[Chorus — Scientific Folk Hook]\n\nसुन रे जग के यात्री\nये जीवन का मंत्र,\n\nदेह बने मशीन\nमन बने तंत्र।\n\nरसायन की धारा\n",
+            "theme": "Classical & Raag"
+          }
+        ]
+      },
+      {
+        "name": "Other / Misc",
+        "count": 22,
+        "hero": "/radio-html/suno_backup/covers/da4174c6-2d45-4d98-8050-72dcb85f6fb9.jpg",
+        "songs": [
+          {
+            "t": "ka kau ke",
+            "r": "ka kau ke",
+            "a": "/radio-html/suno_backup/audio/2026-05-24_da4174c6_Kaal%20Likhe%20Kaal.mp3",
+            "c": "/radio-html/suno_backup/covers/da4174c6-2d45-4d98-8050-72dcb85f6fb9.jpg",
+            "d": "5:06",
+            "ly": "[Original (your lines)]\nk..\nka...\nkaa...\nkaaa...\nkyaa...\n\nk..\nka...\n➤ kahe ko kahe ko kahe kau\n➤ kaalaa kaagad kaalee kalam\n➤ kaal likhe kaal mitaave\n➤ kaa kaa arth na jaane koi\n\nkaa...\nkaaa...\n➤ kaahe kaahe kaahe re kaa\n➤ ka kha ga gha – sab teraa khel\n➤ khaali kaagar kaahe bulaave\n➤ kaam krodh kaa maare mel\n\nkyaa...\n\nka kau ke\n➤ ka se kau – teeno taar\n➤ ken kabhyaam – dohraa dvaar\n➤ kai kahe kai baar\n➤ kaa ke beech mein kaun karaar\n\nken kabhyaam kai\nkavim kaviim kavayah\n➤ kavi bhi kya jaane kaa kaa arth\n➤ kavi bhi phire kaal ke harth\n\nkahaam katham kathaam\n➤ kahaam gayaa kaun kaho\n➤ katham kathaam kahe kaho\n➤ kathaam ki kathaa kya kya\n➤ kaal ke kaan mein kaun kaa kya\n\nkasmin kyo keshu\n➤ ka",
+            "theme": "Other / Misc"
+          },
+          {
+            "t": "तुझ पर ही भरोसा",
+            "r": "Tujha Para Hee Bharosaa",
+            "a": "/radio-html/suno_backup/audio/2026-05-13_cb2c77c5_%E0%A4%A8%E0%A4%BE%E0%A4%AE-%E0%A4%9B%E0%A5%81%E0%A4%AA%E0%A4%BE%20%E0%A4%A6%E0%A4%BE%E0%A4%A4%E0%A4%BE.mp3",
+            "c": "/radio-html/suno_backup/covers/cb2c77c5-2aab-4459-9d5f-84c4024be973.jpg",
+            "d": "7:59",
+            "ly": "\n\n[Opening — Solo Nazm. No instruments. Only breath and silence.]\n\n(Spoken, almost whispered, with long pauses)\n\nतुझ पर ही भरोसा... (pause)\nतुझ पर है यक़ीन...\n(breath)\nतू ही एक दाता देने वाला...\nबाक़ी सब तो... दीन हीन...\n\n(Pause 4 seconds. Silence.)\n\n[Transition — Harmonium enters softly, alone. No tabla yet. A single note held.]\n\n(Same voice, slightly louder now — still solo, but with harmonium beneath)\n\nनाम तेरे रखे अनेक...\nछुपा बैठा तू है एक...\nतेरे आगे जाने किस वश...\nबड़े-बड़े देते घुटने टेक...\n\n[Tabla enters now — very slow ektal. Chorus enters as a distant echo, not yet full. This is the first hybrid section.]\n\nLead (still alone in front, but chorus behind like a shadow):\n\nतेरे ना होने",
+            "theme": "Other / Misc"
+          },
+          {
+            "t": "तुझ पर ही भरोसा",
+            "r": "Tujha Para Hee Bharosaa",
+            "a": "/radio-html/suno_backup/audio/2026-05-13_2aa5f8f0_%E0%A4%B5%E0%A5%8B%20%E0%A4%B9%E0%A5%88-%E0%A4%87%E0%A4%B8%E0%A4%B2%E0%A4%BF%E0%A4%8F%20%E0%A4%AE%E0%A5%88%E0%A4%82.mp3",
+            "c": "/radio-html/suno_backup/covers/2aa5f8f0-1fd1-4473-9dd2-a3db61cfd0dc.jpg",
+            "d": "2:02",
+            "ly": "\n[Intro: 4 seconds of silence with faint tanpura]\n\n[Verse 1 - slow, heavy, broken]\nतुझ पर ही भरोसा, तुझ पर है यक़ीन।\nतू ही एक दाता देने वाला, बाक़ी सब तो दीन हीन।\n\n[Verse 2 - with pause after every line]\nनाम तेरे रखे अनेक, छुपा बैठा तू है एक।\nतेरे आगे जाने किस वश, बड़े-बड़े देते घुटने टेक।\n\n[Verse 3 - softer, almost whisper]\nतेरे ना होने से जो तेरे होने का एहसास है।\nटूटे दिल में बसता तू, हर आशिक़ की आस है।\n\n[Verse 4 - paradoxical, intense, slower, each word separated by breath]\nवो है, इसलिए मैं टूटा हूँ।\nऔर मैं टूटा हूँ, इसलिए वो है।\nतू ही है तभी सब है।\nपर मेरा यक़ीन ही तेरे होने का सबब है।\n\n[Verse 5 - climax, question, voice cracks slightly]\nतू समझ मेरे इम्तहानों की इंतिहा,\nजो मैं नहीं तो त",
+            "theme": "Other / Misc"
+          },
+          {
+            "t": "इस रंज-ओ-ग़म की दुनिया में मुझको यक़ीन न था",
+            "r": "Isa Ranja-o-gama Kee Duniyaa Men Mujhako Yakeena Na Thaa",
+            "a": "/radio-html/suno_backup/audio/2026-05-06_3dfe2673_%E0%A4%B8%E0%A4%BE%E0%A4%81%E0%A4%B8%20%E0%A4%95%E0%A4%BE%20%E0%A4%AA%E0%A4%B9%E0%A4%B0%E0%A4%BE.mp3",
+            "c": "/radio-html/suno_backup/covers/3dfe2673-db12-496e-a169-ea75a891fef2.jpg",
+            "d": "4:33",
+            "ly": "[Intro: Haunting Cello and Ambient Drone]\n\n[Verse 1: Matla]\nयक़ीन इस रंज-ओ-ग़म की अंजुमन पर ही नहीं था,\nमेरा अपना भी साया मेरा अपना तो नहीं था।\n\n[Chorus: Refrain]\nइस रंज-ओ-ग़म की दुनिया में मुझको यक़ीन न था,\nग़म के सिवा कोई भी यहाँ हम-नशीन न था।\n\n[Verse 2]\nसब छोड़ गए मुझको मगर ये ग़म रहा साथ,\nइस जैसा वफ़ादार कोई और हसीन न था।\nन जीने की तमन्ना थी न मरने का इरादा,\nमगर ये साँस का पहरा कभी ढीला नहीं था।\n\n[Bridge: Solo Sarangi and Deep Percussion]\n\n[Verse 3]\nवो अपने ही थे जो अपनों की सूरत में डसे थे,\nज़हरीला कोई और इस ज़माने में नहीं था।\nख़ुद अपने हाथों अपनी ही तबाही लिख दी मैंने,\nवो मेरा घर तो था पर रहने के क़ाबिल नहीं था।\n\n[Outro: Maqta]\n'हेमंत' हर तरफ़ बस ग़म के ही मन्ज़र रहे हैं,\nसुकूँ का रंग",
+            "theme": "Other / Misc"
+          },
+          {
+            "t": "हर ट्रैक एक दृश्य और भाव के साथ।",
+            "r": "Hara Traika Eka Drishya Aura Bhaava Ke Saatha।",
+            "a": "/radio-html/suno_backup/audio/2026-04-24_226a516c_%E0%A4%97%E0%A5%82%E0%A4%82%E0%A4%97%E0%A5%8B%E0%A4%82%20%E0%A4%95%E0%A4%BE%20%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%87%E0%A4%B6%E0%A4%A8.mp3",
+            "c": "/radio-html/suno_backup/covers/226a516c-1c24-4e20-b60b-33c5d07903e0.jpg",
+            "d": "4:57",
+            "ly": "हर ट्रैक एक दृश्य और भाव के साथ।\nहर ट्रैक पिछले से जुड़ा, अगले की ओर बढ़ता।\n\nट्रैक 1 – गूंगों की फौज\nदृश्य: एक भीड़ भरे रेलवे स्टेशन की रात। सबके चेहरे हैं, लेकिन कोई बोलता नहीं। सिर्फ पैरों की आहट, सूटकेस, घड़ी की टिक-टिक।\n\nजाने क्या है जो मुझे परेशान करे\nसब हैं गूंगे, सन्नाटों में कोई न इसकी बात करे\nअधूरे से पूरे मन को यह अज़ब गज़ब हैरान करे\nखुश है पैसा कमाके आदम — चाहे कितने ही जाना मरे\n\nआखिरी पंक्ति (फुसफुसाहट में):\n\nक्या इस काबिल है भी ये सभी देवों के प्राण डरे\n\nसंगीत: एक लो-फाई बीट, ऊपर से फीडबैक वाली गिटार की सिसकी।\n\nट्रैक 2 – तहखाना\nदृश्य: ऊपर मेला, रोशनी, नाच, फूल। नीचे सीढ़ियाँ उतरती हैं — अंधेरा, नमी, दीवारों पर टूटे अक्षर।\n\nलगा गले से उन जन्नत के दरवाजों को\nचीखी सन्नाटा — जैसे घो",
+            "theme": "Other / Misc"
+          },
+          {
+            "t": "आ भी जा",
+            "r": "Aa Bhee Jaa",
+            "a": "/radio-html/suno_backup/audio/2026-04-21_a4a5bc5a_Duduk%20Cello%20Oath.mp3",
+            "c": "/radio-html/suno_backup/covers/a4a5bc5a-d81d-4f39-9713-104d788188ad.jpg",
+            "d": "4:31",
+            "ly": "[Intro - 40s: Atmospheric wind, Distant reversed vocal whispers, Mournful solo Duduk & Cello]\n(Slow, breathy Alaap: \"Aa... jaa...\")\n\n[Verse 1 - Intimate, Low-volume vocals, Solo Cello base]\nआजा कि तेरे लिये हाल बुरा है,\nआ भी जा तेरे बिना जीना मुहाल हुआ है।\nतेरे ग़म में तेरे दीवाने, मरते हैं जीने को,\nआ भी जा अब कि बुला रहे हैं तुझे फिर से जीने को।\n(Oud starts plucking a mystical, rhythmic pattern)\n\n[Chorus - Rhythmic Pulse begins, Heavy Cello hits on every beat]\nआ भी जा, आ भी जा, आ भी जा!\nअब के बुला रहे हैं तुझे फिर से जीने को...\nआ भी जा!\n\n[Verse 2 - Tempo increases, Tabla & Djembe polyrhythms, Hazy atmosphere]\nआ भी जा अब कि मयख़ाना ख़त्म हुआ जाता है,\nपी हमने कि हर जाम में तेरा चेहरा नज़र आता",
+            "theme": "Other / Misc"
+          },
+          {
+            "t": "आग बराबर दोनों की पर एक बहुत शरमाए",
+            "r": "Aaga Baraabara Donon Kee Para Eka Bahuta Sharamaae",
+            "a": "/radio-html/suno_backup/audio/2026-04-15_5156c5cc_%E0%A4%AE%E0%A5%81%E0%A4%82%E0%A4%B9-%E0%A4%96%E0%A5%82%E0%A4%A8%20%E0%A4%96%E0%A4%BE%E0%A4%82%E0%A4%9A%E0%A4%BE.mp3",
+            "c": "/radio-html/suno_backup/covers/5156c5cc-0a46-4b76-bdcd-a344c362d213.jpg",
+            "d": "2:45",
+            "ly": "[INTRO — बीटबॉक्स अकेला, 4 बार]\nb t K b t K | b t K b t K | b t K b t K | b t K b t K\n(मुहँ से खून थूकने जैसा)\n\n[VERSE 1 — हाइपर, थूकता हुआ]\n(बीटबॉक्स के ऊपर — जैसे कोई तहखाने में चिल्ला रहा हो)\n\nघचा घच घचा घच\nसबके अपने अपने झूँटे सच\n\nसबके अपने आसमान सबके अपने सच\nकोई फुसला के लेगा कोई सीधी घचा घच घचा घच\n\nनंगे पैदा होने वाले हो हो हो हो चिल्लाएँ\nबत्ती बंद होते कैसे शैतान ये बन जाएँ\n\n(बीटबॉक्स डबल टाइम — भाप निकल रही है)\n\n[CHORUS — सबसे तेज़, लगभग टूटता हुआ]\nआग बराबर दोनों की पर एक बहुत शरमाए\nलेन देन की इस बाज़ार में अपने भाव बढ़ाए\n\nतुम कहो इसे प्यार, मैं कहूँ इसे भूख\nदोनों सही दोनों गलत — दोनों के अंदर वही आग, वही रूख\n\n(साँस — एक बीट — फिर धमाका)\n\n[VERSE 2 — और ज़्यादा गंदा, ज़्यादा तेज़]\nनीं",
+            "theme": "Other / Misc"
+          },
+          {
+            "t": "Baabaa bole – mat ro re deewaane",
+            "r": "Baabaa bole – mat ro re deewaane",
+            "a": "/radio-html/suno_backup/audio/2026-04-11_1d7debbc_Toota%20Ghada.mp3",
+            "c": "/radio-html/suno_backup/covers/1d7debbc-1158-44de-a83a-eb493f33f9e5.jpg",
+            "d": "3:12",
+            "ly": "[Intro – spoken softly]\nEk chilam, ek baabaa, do ghade ka khel...\n\n[Verse 1 – melancholic female]\nAaj maine ajab tamaashaa dekha\nEk baabaa aur do ghade sang khel\nToota ghada roya, aansu bahaaya\nHaye re mere baabaa, teri mehnat bekaar jaaye\n\n[Chorus – warm male]\nBaabaa bole – mat ro re deewaane\nJo raste pe phool khile hain\nWo teri boondon ke hai bahaane\nKuch bhi vyarth nahi jaaye\n\n[Bridge]\nMain andha tha, ab aankhe khuli\nMera chhed hi mera geet ban gaya\n\n[Final Chorus – full]\nToota ghada gaaye, baabaa muskaaye\nKuch bhi vyarth nahi jaaye\nAaj nahi to kal wapas\n\n[Outro – fading]\nNahi akaarth koi karm...\nKal wapas...",
+            "theme": "Other / Misc"
+          },
+          {
+            "t": "शक्ति जाग री",
+            "r": "Shakti Jaaga Ree",
+            "a": "/radio-html/suno_backup/audio/2026-04-08_827207b7_%E0%A4%97%E0%A5%81%E0%A4%AB%E0%A4%BE-%E0%A4%A2%E0%A5%8B%E0%A4%B2%20%E0%A4%A7%E0%A4%A1%E0%A4%BC%E0%A4%95%E0%A4%A8.mp3",
+            "c": null,
+            "d": "3:32",
+            "ly": "[मुखड़ा - धीमा आलाप, 60 बीपीएम]\n[तानपुरा ड्रोन - गहरा, सा-पा-सा-पा]\n[दूर से ढोल की धीमी थाप - जैसे धरती का दिल धड़क रहा हो]\n[स्त्री स्वर - दूर से, गुफा से आती हुई]\n\nशक्ति जाग री... शक्ति जाग री...\n\n[पुरुष स्वर - पास से, टूटा हुआ पर उठता हुआ]\nअंतर ज्योति प्रज्वलित हो री...\n\n[दोनों स्वर मिलते हैं - एक साथ]\nशक्ति जाग री...\n\n[एक अकेला ढोल थप - देर तक गूंजता है]\n[सन्नाटा - 2 सेकंड]\n\n[अंतरा १ - प्राकृत: तमस से रजस की ओर] [85 बीपीएम, अराजक]\n[तबला झपताल - अनियमित, जैसे कोई भूल रहा हो ताल]\n[स्वर - कच्चा, माइक्रोटोनल मोड़ के साथ, 22 श्रुतियों में भटकता हुआ]\n\nमन सोया, तन खोया, श्वासों में उलझा जग सारा\n\n[बीच में - दादा की आवाज़ दूर से]\n[बूढ़ा स्वर, फटा हुआ: \"बेटा, हम भी दौड़े थे कभी...\"]\n[स्वर थोड़ा तेज़",
+            "theme": "Other / Misc"
+          },
+          {
+            "t": "main daudta raha",
+            "r": "main daudta raha",
+            "a": "/radio-html/suno_backup/audio/2026-04-08_515aac2c_Dada%20Tak.mp3",
+            "c": null,
+            "d": "2:41",
+            "ly": "// ye ishh...tory se mere dada ke dada \n// ke dada ke dada ke dada tak jaati hai..\n\n// arrre itne dada.. bhai utne tak main to pata nahi humare ek he nikal aaye.. \n\n// baar door jyada nahi 100 saal pahle tak jaati hai..\n\n// ek samaya tha jab meri kahi baton pe aksar kone men haste they log\n// main daud raha tha ya samaya mere charon aur kuch thamaa sa bhaagataa hai \n// log haste they aur kehte they \"dekho ye kya kar raha hai, kahan jaa raha hai\"\n// main daudta raha, thoda tez, thoda dheere, par rukta nahi tha\n\n// mere aage gayi shakhsiyat mai mujhse kahaa \n// \"kyu daud raha hai, ruk jaa, thoda aaram kar le\"\n// mere bhoota ke pitra cheekhe\n// \"roko ise roko iska swarbhanu jaagaa hai\" \n// \"may",
+            "theme": "Other / Misc"
+          },
+          {
+            "t": "🎤 “वक़्त के घोड़े” — जागरण काव्य",
+            "r": "🎤 “vakta Ke Ghode” — Jaagarana Kaavya",
+            "a": "/radio-html/suno_backup/audio/2026-03-22_9b85885b_%28untitled%29.mp3",
+            "c": "/radio-html/suno_backup/covers/9b85885b-774d-4b2d-babf-e39fea6294e0.jpg",
+            "d": "3:38",
+            "ly": "🎤 “वक़्त के घोड़े” — जागरण काव्य\n\n[मूल भाव विस्तार]\n\nवक़्त के घोड़ों को कभी न मिलेगी फुर्सत जनाब,\nतू ठहर, साँस ले, खुद से भी कभी तो मुलाक़ात कर।\n\nबन गधे तुम देख आसमां, कभी तो तसल्ली लो,\nधरती पे भागते-भागते, ऊपर का भी हिसाब कर।\n\nआज-कल की इस दौड़ में, बीती अब तक गज़ब जनाब,\nजो पल हाथ से फिसले, उनका भी कोई जवाब कर।\n\nजिनके संग बीती अजब, उन्हें आवाज़ देकर रोक लो,\nकुछ रिश्ते अभी जिंदा हैं—उन्हें फिर से बेहिसाब कर।\n\n[अंतर 1 – पिंजरा और पंछी]\n\nबंद बिना तालों में वो पंछी,\nजिनका डर था हर पिंजरे को,\nआज वही खामोश बैठे हैं,\nखुद के ही बनाए घेरे को।\n\nउड़ना जिनका धर्म था,\nअब बैठ गए हैं ठहर-ठहर,\nखोल के पंखों को पूछ जरा—\nक्या भूल गए अपना ही सफ़र?\n\n[अंतर 2 – जागरण]\n\nबुलंद कर आवाज़ इन सन्नाटों को,\nअब उन्हें झिंझ",
+            "theme": "Other / Misc"
+          },
+          {
+            "t": "ल्या.. दे",
+            "r": "Lyaa.. De",
+            "a": "/radio-html/../%E0%A4%97%E0%A5%8C%E0%A4%B8%E0%A5%87%20%E0%A4%B2%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%A6%E0%A5%87%20%28Gause%20Lya%20De%29.mp3",
+            "c": "/radio-html/suno_backup/covers/83d40aab-8c12-48c7-8a5f-316e377ae254.jpg",
+            "d": "4:44",
+            "ly": "U....... र......\nU... र..\nUuuurrrrrrrrrrrr \n\nगौसे ल्या दे, गौसे ल्या दे,\nभरना है होक्का, गौसे ल्या दे, ,\nगौसे ल्या दे, गौसे ल्या दे,\nआ रहया मौका, गौसे ल्या दे,\n\n[Rap] \nलया दे र गौसे, \nछरहरी के मोसे,\nमहामात्य रंगरेज है,\nदूर मात्र 8 कोसे,\n\n[chorus]\nल्या.. दे, ल्या.. दे, ल्या.. दे, ल्या दे, ल्या दे, ल्या दे, र गौसे,\n\nगौसे ल्या दे..गौसे ल्या दे.\nभरना है होक्का.. ल्या दे तू गौसे\n\nगौसे ल्या दे, गौसे ल्या दे,\nआ रहया मौका, बाजेगा होक्का,\n\nक्यूकर ल्या दूँ.. क्यूकर ल्या दूँ.. \nगाम में पहरा, सज रहया गहरा,\n\nकिसके ल्या दूँ.. किसके ल्या दूँ..\nबंदूक की गोली, कर देवे बहरा..\n\nक्यूकर ल्यादूँ, क्यूकर ल्यादूँ, क्यूकर ल्यादूँ,\n\nक्यूकर ल्यादूँ, क्यूकर ल्यादूँ, क्यूकर ल्यादूँ, क्यूकर ल्यादूँ गौसे..\n\n[Rap ]\nर भाई, ",
+            "theme": "Other / Misc"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -209,6 +209,75 @@
   font-weight: 800;
 }
 
+.radio-react-hud a {
+  width: fit-content;
+  border: 1px solid rgba(0, 245, 212, 0.28);
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: var(--radio-cyan);
+  font-size: 11px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.radio-react-media-panel {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr) minmax(260px, .65fr);
+  gap: 16px;
+  align-items: stretch;
+  border: 1px solid var(--radio-line);
+  border-radius: 12px;
+  background: var(--radio-card);
+  padding: 16px;
+}
+
+.radio-react-media-panel > img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1px solid var(--radio-line);
+  border-radius: 10px;
+  background: #05080c;
+}
+
+.radio-react-media-panel h2 {
+  margin: 0 0 8px;
+  color: #fff;
+}
+
+.radio-react-media-panel p {
+  margin: 0 0 10px;
+  color: var(--radio-muted);
+}
+
+.radio-react-media-panel b,
+.radio-react-media-panel a {
+  display: block;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.radio-react-media-panel a {
+  width: fit-content;
+  border: 1px solid rgba(0, 245, 212, 0.28);
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: var(--radio-cyan);
+  text-decoration: none;
+}
+
+.radio-react-palette {
+  display: flex;
+  gap: 8px;
+}
+
+.radio-react-palette i {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+}
+
 .radio-react-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -521,6 +590,14 @@
   color: #fff;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.radio-react-footer img {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--radio-line);
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .radio-react-modal {
@@ -2012,6 +2089,14 @@
 
   .radio-react-panel {
     grid-template-columns: 1fr;
+  }
+
+  .radio-react-media-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .radio-react-media-panel > img {
+    max-width: 220px;
   }
 
   .radio-react-footer {

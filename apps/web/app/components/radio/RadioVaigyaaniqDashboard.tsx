@@ -3,11 +3,22 @@
 import { useEffect, useMemo, useState } from "react";
 import { AudioVisualizerPro } from "./AudioVisualizerPro";
 import { SyncedLyricsScribe } from "./SyncedLyricsScribe";
-import type { RadioCatalog, RadioTrack, TtsPersonaKey } from "./radioTypes";
-import { buildAnnouncementText, buildSamayaState, currentFrequency, loadRadioCatalog, ttsPersonas } from "./radioRuntime";
+import type { RadioAudioImportManifest, RadioCatalog, RadioMediaMap, RadioTrack, TtsPersonaKey } from "./radioTypes";
+import {
+  buildAnnouncementText,
+  buildSamayaState,
+  currentFrequency,
+  loadAudioImportManifest,
+  loadRadioCatalog,
+  loadRadioMediaMap,
+  mediaForStation,
+  ttsPersonas
+} from "./radioRuntime";
 
 export function RadioVaigyaaniqDashboard() {
   const [catalog, setCatalog] = useState<RadioCatalog | null>(null);
+  const [mediaMap, setMediaMap] = useState<RadioMediaMap | null>(null);
+  const [audioImport, setAudioImport] = useState<RadioAudioImportManifest | null>(null);
   const [stationIndex, setStationIndex] = useState(0);
   const [trackIndex, setTrackIndex] = useState(0);
   const [clock, setClock] = useState("00:00:00 DRAFT");
@@ -22,6 +33,8 @@ export function RadioVaigyaaniqDashboard() {
     loadRadioCatalog().then(setCatalog).catch((error) => {
       setModal(`Catalog load failed: ${error.message}`);
     });
+    loadRadioMediaMap().then(setMediaMap).catch(() => setMediaMap(null));
+    loadAudioImportManifest().then(setAudioImport).catch(() => setAudioImport(null));
     try {
       setSocial(JSON.parse(localStorage.getItem("radioVaigyaaniq.react.social.v1") || "{}"));
     } catch {
@@ -52,6 +65,11 @@ export function RadioVaigyaaniqDashboard() {
 
   const station = catalog?.shows[stationIndex];
   const track = station?.songs[trackIndex] as RadioTrack | undefined;
+  const stationMedia = station ? mediaForStation(mediaMap, station.name, stationIndex) : null;
+  const currentCover = stationMedia?.cover || track?.c || station?.hero || mediaMap?.fallbackCover.path || "/radio-html/assets/images/radio-vaigyaaniq-runtime-hero.svg";
+  const currentEvidenceHref = stationMedia?.evidenceId
+    ? `${stationMedia.evidencePath}#${stationMedia.evidenceId}`
+    : "/radio-html/assets/evidence.html";
   const samaya = useMemo(() => {
     if (!station || !track) return null;
     return buildSamayaState(station, track, stationIndex, trackIndex);
@@ -147,7 +165,7 @@ export function RadioVaigyaaniqDashboard() {
         </header>
 
         <section className="radio-react-hero">
-          <img src="/radio-html/assets/radio-vaigyaaniq-landing-hero.png" alt="" />
+          <img src={currentCover} alt="" />
           <div>
             <p>Quantum Resonance Tuner</p>
             <h2>{currentFrequency(stationIndex)} <span>MHz</span></h2>
@@ -155,16 +173,37 @@ export function RadioVaigyaaniqDashboard() {
           </div>
           <div className="radio-react-hud">
             <b>{track.t}</b>
-            <span>PHKD FAIL-CLOSED · LOCAL DRAFT</span>
+            <span>PHKD FAIL-CLOSED · {stationMedia?.verification?.toUpperCase() || "FALLBACK"} · {stationMedia?.shader || "SHADER NULL"}</span>
+            <a href={currentEvidenceHref}>Evidence</a>
+          </div>
+        </section>
+
+        <section className="radio-react-media-panel">
+          <img src={currentCover} alt="" />
+          <div>
+            <p className="radio-react-kicker">Runtime Media Wiring</p>
+            <h2>{stationMedia?.label || station.name}</h2>
+            <p>Cover, shader palette, player strip, and evidence link are resolved from the local media data frame. Fallback cover applies when station evidence is missing.</p>
+            <div className="radio-react-palette" aria-label="Station shader palette">
+              <i style={{ background: stationMedia?.palette.primary || "#ff6b35" }} />
+              <i style={{ background: stationMedia?.palette.secondary || "#dfb15b" }} />
+              <i style={{ background: stationMedia?.palette.accent || "#00f5d4" }} />
+            </div>
+          </div>
+          <div>
+            <span className="radio-react-kicker">Audio Import Lane</span>
+            <b>{audioImport?.counts.imports ?? 0} imports · {audioImport?.counts.playable ?? 0} playable</b>
+            <p>Playback remains blocked for imported files until checksum, rights, source, and verification evidence exist.</p>
+            <a href="/radio-html/surfaces/audio-import.html">Open Audio Import</a>
           </div>
         </section>
 
         <section className="radio-react-grid">
           {catalog.shows.slice(0, 9).map((item, index) => (
             <button className={index === stationIndex ? "active" : ""} key={item.name} onClick={() => { setStationIndex(index); setTrackIndex(0); }}>
-              <img src={item.hero || item.songs[0]?.c || ""} alt="" />
+              <img src={mediaForStation(mediaMap, item.name, index)?.cover || item.hero || item.songs[0]?.c || mediaMap?.fallbackCover.path || ""} alt="" />
               <b>{item.name}</b>
-              <span>{item.count} tracks</span>
+              <span>{item.count} tracks · {mediaForStation(mediaMap, item.name, index)?.verification || "fallback"}</span>
             </button>
           ))}
         </section>
@@ -208,7 +247,7 @@ export function RadioVaigyaaniqDashboard() {
             <div className="radio-react-track-list">
               {station.songs.slice(0, 12).map((item, index) => (
                 <button className={index === trackIndex ? "active" : ""} key={`${item.t}-${index}`} onClick={() => setTrackIndex(index)}>
-                  <img src={item.c || station.hero || ""} alt="" />
+                  <img src={stationMedia?.cover || mediaMap?.fallbackCover.path || currentCover} alt="" />
                   <span>{item.t}</span>
                   <small>{item.d || "--"}</small>
                 </button>
@@ -222,6 +261,8 @@ export function RadioVaigyaaniqDashboard() {
         <span>LIVE</span>
         <b>{track.t}</b>
         <small>{track.r || catalog.artist} · {station.name}</small>
+        <img src={currentCover} alt="" />
+        <a href={currentEvidenceHref}>Evidence</a>
         <a href={projectHref}>Create Project</a>
         <button onClick={() => updateSocial({ liked: !socialState.liked })}>{socialState.liked ? "Liked" : "Like"}</button>
         <button onClick={() => updateSocial({ saved: !socialState.saved })}>{socialState.saved ? "Saved" : "Save"}</button>

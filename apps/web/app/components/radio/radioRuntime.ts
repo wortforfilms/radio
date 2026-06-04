@@ -1,4 +1,15 @@
-import type { RadioCatalog, RadioStation, RadioTrack, SamayaState, TtsPersona, TtsPersonaKey } from "./radioTypes";
+import type {
+  RadioAudioImportManifest,
+  RadioCatalog,
+  RadioMediaMap,
+  RadioMediaStation,
+  RadioRuntimeData,
+  RadioStation,
+  RadioTrack,
+  SamayaState,
+  TtsPersona,
+  TtsPersonaKey
+} from "./radioTypes";
 
 export const ttsPersonas: Record<TtsPersonaKey, TtsPersona> = {
   maataa: {
@@ -31,11 +42,77 @@ export const ttsPersonas: Record<TtsPersonaKey, TtsPersona> = {
   }
 };
 
+const nullCatalog: RadioCatalog = {
+  artist: "NULL",
+  total_songs: 0,
+  total_clips: 0,
+  source: "/radio-html/Radio_Vaigyaaniq_App_Prototype.html",
+  sourceStatus: "blocked",
+  shows: [
+    {
+      name: "NULL",
+      count: 0,
+      hero: "/radio-html/assets/images/radio-vaigyaaniq-runtime-hero.svg",
+      songs: [
+        {
+          t: "NULL",
+          r: "NULL",
+          d: "NULL",
+          ly: "NULL",
+          theme: "NULL"
+        }
+      ]
+    }
+  ]
+};
+
 export async function loadRadioCatalog(): Promise<RadioCatalog> {
-  const html = await fetch("/radio-html/Radio_Vaigyaaniq_App_Prototype.html").then((response) => response.text());
-  const match = html.match(/const DATA=(\{[\s\S]*?\});\nconst AYO=/);
-  if (!match) throw new Error("Catalog DATA block not found");
-  return JSON.parse(match[1]) as RadioCatalog;
+  try {
+    const runtimeData = await fetch("/radio-html/data/radio-runtime-data.json", { cache: "no-store" })
+      .then((response) => {
+        if (!response.ok) throw new Error(`Runtime data request failed: ${response.status}`);
+        return response.json();
+      }) as RadioRuntimeData;
+    if (runtimeData.catalog?.shows?.length) return runtimeData.catalog;
+  } catch {
+    // Keep the runtime fail-closed: fall back to source extraction, then NULL metadata.
+  }
+
+  try {
+    const html = await fetch("/radio-html/Radio_Vaigyaaniq_App_Prototype.html", { cache: "no-store" }).then((response) => {
+      if (!response.ok) throw new Error(`Prototype request failed: ${response.status}`);
+      return response.text();
+    });
+    const match = html.match(/const DATA\s*=\s*(\{[\s\S]*?\})\s*;\s*const AYO\s*=/);
+    if (!match) return nullCatalog;
+    return JSON.parse(match[1]) as RadioCatalog;
+  } catch {
+    return nullCatalog;
+  }
+}
+
+export async function loadRadioMediaMap(): Promise<RadioMediaMap> {
+  return fetch("/radio-html/data/radio-media.json").then((response) => response.json()) as Promise<RadioMediaMap>;
+}
+
+export async function loadAudioImportManifest(): Promise<RadioAudioImportManifest> {
+  return fetch("/radio-html/data/audio-import-manifest.json").then((response) => response.json()) as Promise<RadioAudioImportManifest>;
+}
+
+export function stationKey(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/the\s+/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+export function mediaForStation(mediaMap: RadioMediaMap | null, stationName: string, stationIndex: number): RadioMediaStation | null {
+  if (!mediaMap) return null;
+  const key = stationKey(stationName);
+  return mediaMap.stations.find((station) => station.key === key || stationKey(station.label) === key)
+    || mediaMap.stations[stationIndex % mediaMap.stations.length]
+    || null;
 }
 
 export function currentFrequency(stationIndex: number): string {

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - Audio Import</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav><a href="./index.html">Index</a><a href="./runtime.html">Runtime</a><a href="../assets/evidence.html">Evidence</a><a href="./production-freeze.html">Freeze</a></nav>
+      <span>PHKD</span>
+    </aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">Audio Import Lane</p>
+          <h1>Import Without Claims</h1>
+          <p>Local audio can enter the system only with source, checksum, rights status, and verification state. Until those exist, playback and release remain blocked.</p>
+          <div class="surface-actions">
+            <a href="../data/audio-import-manifest.json">Import Manifest</a>
+            <a href="../assets/audio/PHKD_AUDIO_PLACEHOLDER.json">Audio Placeholder</a>
+            <a href="../assets/evidence.html">Asset Evidence</a>
+          </div>
+        </div>
+        <div class="status-chip"><span>Playable</span><b id="playableCount">0</b><small>verified imports</small></div>
+      </section>
+      <section class="surface-grid three" id="audioMetrics"></section>
+      <section class="surface-card">
+        <span class="surface-label">Schema</span>
+        <h2>Required Import Fields</h2>
+        <div class="surface-grid three" id="audioSchema"></div>
+      </section>
+      <section class="surface-card">
+        <span class="surface-label">Import Records</span>
+        <h2>Current Queue</h2>
+        <p id="importQueue">Loading...</p>
+      </section>
+    </section>
+  </main>
+  <script>
+    fetch("../data/audio-import-manifest.json")
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("playableCount").textContent = data.counts.playable;
+        document.getElementById("audioMetrics").innerHTML = [
+          ["Imports", data.counts.imports, "Imported local audio records."],
+          ["Blocked", data.counts.blocked, "Audio blocked by missing evidence."],
+          ["NULL Evidence", data.counts.nullEvidence, "Placeholder-only audio state."]
+        ].map(([label, value, body]) => `<article class="surface-card"><span class="surface-label">${label}</span><b>${value}</b><p>${body}</p></article>`).join("");
+        document.getElementById("audioSchema").innerHTML = data.schema.required.map((field) => `
+          <article class="surface-card"><span class="surface-label">${field}</span><b>${field}</b><p>${data.schema.fields[field] || "Required field."}</p></article>
+        `).join("");
+        document.getElementById("importQueue").textContent = data.imports.length
+          ? `${data.imports.length} imports available.`
+          : "No imported audio records. Playback remains NULL.";
+      });
+  </script>
+</body>
+</html>

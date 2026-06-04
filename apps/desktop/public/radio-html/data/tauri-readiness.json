@@ -1,0 +1,65 @@
+{
+  "id": "radio-vaigyaaniq-tauri-readiness",
+  "title": "Radio Vaigyaaniq Tauri Shipping Readiness",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "notes": [
+      "Data frames describe local runtime behavior only.",
+      "No audio, rights, payment, production readiness, or external telemetry claim is introduced.",
+      "Evidence upgrades require source, creator, artifact checksum, rights, reviewer, and reviewedAt."
+    ]
+  },
+  "shipDecision": "NO_SHIP",
+  "reason": "Installer, signing, audio rights, payment, and release review evidence remain NULL.",
+  "checklist": [
+    {
+      "key": "html-bundle",
+      "label": "HTML bundle path inventory",
+      "status": "draft-ready",
+      "evidence": "/radio-html/Radio_Vaigyaaniq_All_Html_Links.json"
+    },
+    {
+      "key": "desktop-mirror",
+      "label": "Desktop mirror copy",
+      "status": "draft-ready",
+      "evidence": "/apps/desktop/public/radio-html"
+    },
+    {
+      "key": "asset-evidence",
+      "label": "Asset checksum evidence",
+      "status": "draft-ready",
+      "evidence": "/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json"
+    },
+    {
+      "key": "audio-rights",
+      "label": "Playable audio rights",
+      "status": "blocked",
+      "evidence": null
+    },
+    {
+      "key": "payment-gift",
+      "label": "Gift/payment mechanism",
+      "status": "blocked",
+      "evidence": null
+    },
+    {
+      "key": "installer",
+      "label": "Signed Tauri installer",
+      "status": "blocked",
+      "evidence": null
+    },
+    {
+      "key": "release-review",
+      "label": "Human release review",
+      "status": "blocked",
+      "evidence": null
+    }
+  ],
+  "counts": {
+    "draftReady": 3,
+    "blocked": 4
+  }
+}

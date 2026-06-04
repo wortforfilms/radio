@@ -1,0 +1,177 @@
+{
+  "id": "radio-vaigyaaniq-visual-qa",
+  "title": "Radio Vaigyaaniq Visual QA Board",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "notes": [
+      "Data frames describe local runtime behavior only.",
+      "No audio, rights, payment, production readiness, or external telemetry claim is introduced.",
+      "Evidence upgrades require source, creator, artifact checksum, rights, reviewer, and reviewedAt."
+    ]
+  },
+  "counts": {
+    "targets": 14,
+    "capturedScreenshots": 14,
+    "pass": 14,
+    "blocked": 0
+  },
+  "targets": [
+    {
+      "title": "Image Landing",
+      "path": "/radio-html/surfaces/image-landing.html",
+      "screenshot": "/radio-html/qa/screenshots/image-landing.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pending-mobile-sweep",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/image-landing.html",
+      "slug": "image-landing"
+    },
+    {
+      "title": "Asset Evidence",
+      "path": "/radio-html/assets/evidence.html",
+      "screenshot": "/radio-html/qa/screenshots/asset-evidence.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pending-mobile-sweep",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/assets/evidence.html",
+      "slug": "asset-evidence"
+    },
+    {
+      "title": "Asset Catalog",
+      "path": "/radio-html/assets/index.html",
+      "screenshot": "/radio-html/qa/screenshots/asset-catalog.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pending-mobile-sweep",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/assets/index.html",
+      "slug": "asset-catalog"
+    },
+    {
+      "title": "Runtime Surface",
+      "path": "/radio-html/surfaces/runtime.html",
+      "screenshot": "/radio-html/qa/screenshots/runtime-surface.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pending-mobile-sweep",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/runtime.html",
+      "slug": "runtime-surface"
+    },
+    {
+      "title": "Visualizer",
+      "path": "/radio-html/surfaces/visualizer.html",
+      "screenshot": "/radio-html/qa/screenshots/visualizer.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pending-mobile-sweep",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/visualizer.html",
+      "slug": "visualizer"
+    },
+    {
+      "title": "Lyrics Scribe",
+      "path": "/radio-html/surfaces/lyrics.html",
+      "screenshot": "/radio-html/qa/screenshots/lyrics-scribe.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pending-mobile-sweep",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/lyrics.html",
+      "slug": "lyrics-scribe"
+    },
+    {
+      "title": "TTS",
+      "path": "/radio-html/surfaces/tts.html",
+      "screenshot": "/radio-html/qa/screenshots/tts.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pending-mobile-sweep",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/tts.html",
+      "slug": "tts"
+    },
+    {
+      "title": "Social Gift",
+      "path": "/radio-html/surfaces/social-gift.html",
+      "screenshot": "/radio-html/qa/screenshots/social-gift.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pending-mobile-sweep",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/social-gift.html",
+      "slug": "social-gift"
+    },
+    {
+      "title": "Storyboard",
+      "path": "/radio-html/surfaces/storyboard.html",
+      "screenshot": "/radio-html/qa/screenshots/storyboard.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pending-mobile-sweep",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/storyboard.html",
+      "slug": "storyboard"
+    },
+    {
+      "title": "Audio Import",
+      "path": "/radio-html/surfaces/audio-import.html",
+      "screenshot": "/radio-html/qa/screenshots/audio-import.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pending-mobile-sweep",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/audio-import.html",
+      "slug": "audio-import"
+    },
+    {
+      "title": "Visual QA",
+      "path": "/radio-html/surfaces/visual-qa.html",
+      "screenshot": "/radio-html/qa/screenshots/visual-qa.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pending-mobile-sweep",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/visual-qa.html",
+      "slug": "visual-qa"
+    },
+    {
+      "title": "Tauri Readiness",
+      "path": "/radio-html/surfaces/tauri-readiness.html",
+      "screenshot": "/radio-html/qa/screenshots/tauri-readiness.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pending-mobile-sweep",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/tauri-readiness.html",
+      "slug": "tauri-readiness"
+    },
+    {
+      "title": "Production Freeze",
+      "path": "/radio-html/surfaces/production-freeze.html",
+      "screenshot": "/radio-html/qa/screenshots/production-freeze.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pending-mobile-sweep",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/production-freeze.html",
+      "slug": "production-freeze"
+    },
+    {
+      "title": "Runtime Data",
+      "path": "/radio-html/surfaces/runtime-data.html",
+      "screenshot": "/radio-html/qa/screenshots/runtime-data.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pending-mobile-sweep",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/runtime-data.html",
+      "slug": "runtime-data"
+    }
+  ]
+}

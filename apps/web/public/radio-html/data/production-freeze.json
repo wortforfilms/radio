@@ -1,0 +1,57 @@
+{
+  "id": "radio-vaigyaaniq-production-freeze",
+  "title": "Radio Vaigyaaniq Production Freeze",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "notes": [
+      "Data frames describe local runtime behavior only.",
+      "No audio, rights, payment, production readiness, or external telemetry claim is introduced.",
+      "Evidence upgrades require source, creator, artifact checksum, rights, reviewer, and reviewedAt."
+    ]
+  },
+  "freezeState": "draft-freeze",
+  "productionReady": false,
+  "frozenDrafts": [
+    {
+      "key": "route-matrix",
+      "path": "/radio-html/Radio_Vaigyaaniq_Html_Route_Matrix.json",
+      "state": "frozen-draft"
+    },
+    {
+      "key": "asset-manifest",
+      "path": "/radio-html/Radio_Vaigyaaniq_Asset_Manifest.json",
+      "state": "frozen-draft"
+    },
+    {
+      "key": "asset-evidence",
+      "path": "/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json",
+      "state": "frozen-draft"
+    },
+    {
+      "key": "audio-import-schema",
+      "path": "/radio-html/data/audio-import-manifest.json",
+      "state": "frozen-draft"
+    },
+    {
+      "key": "runtime-data",
+      "path": "/radio-html/data/radio-runtime-data.json",
+      "state": "frozen-draft"
+    },
+    {
+      "key": "tauri-readiness",
+      "path": "/radio-html/data/tauri-readiness.json",
+      "state": "frozen-draft"
+    }
+  ],
+  "blockedProductionClaims": [
+    "productionReady",
+    "playableAudio",
+    "verifiedRights",
+    "signedInstaller",
+    "paymentReceipt",
+    "externalTelemetry"
+  ]
+}

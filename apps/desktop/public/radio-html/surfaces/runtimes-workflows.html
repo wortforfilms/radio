@@ -30,11 +30,12 @@
             <a href="../Radio_Vaigyaaniq_Full_App.html#runtime">Full Runtime</a>
             <a href="../Radio_Vaigyaaniq_Full_App.html#scaffold">Full Scaffold</a>
             <a href="../Radio_Vaigyaaniq_Full_App_Scaffold.json">Scaffold JSON</a>
+            <a href="./runtime-data.html">Runtime Data</a>
           </div>
         </div>
         <div class="status-chip">
           <span>Coverage</span>
-          <b>8</b>
+          <b>10</b>
           <small>runtimes mapped</small>
         </div>
       </section>
@@ -53,6 +54,8 @@
           <article class="runtime-row"><span>RT-06</span><div><b>Social Gift Runtime</b><p>Like/save local toggles, gift modal, and project intake links.</p></div><small class="surface-state-pill">intent only</small></article>
           <article class="runtime-row"><span>RT-07</span><div><b>Storyboard Runtime</b><p>7 sequences and 20 shots for current surface behavior and handoff.</p></div><small class="surface-state-pill">implemented</small></article>
           <article class="runtime-row"><span>RT-08</span><div><b>Evidence Export Runtime</b><p>Media HKD, lyric HKD, LRC, WebM, and scaffold manifest routes.</p></div><small class="surface-state-pill">preserves state</small></article>
+          <article class="runtime-row"><span>RT-09</span><div><b>Audio Import Runtime</b><p>Manifest-only local audio intake with source, checksum, rights, and verification gates.</p></div><small class="surface-state-pill">blocked by default</small></article>
+          <article class="runtime-row"><span>RT-10</span><div><b>Visual QA Runtime</b><p>Screenshot, render, link, image, and mobile status tracking for Radio surfaces.</p></div><small class="surface-state-pill">draft evidence</small></article>
         </div>
 
         <div class="workflow-lane">
@@ -68,6 +71,7 @@
           <article class="workflow-row"><span>06</span><div><b>Act</b><p>Like, save, open gift intent, or create project draft.</p></div><small>event: gift:intentOpened</small></article>
           <article class="workflow-row"><span>07</span><div><b>Package</b><p>Move exported draft artifacts into Ayodhya/project evidence flow.</p></div><small>event: project:intake</small></article>
           <article class="workflow-row"><span>08</span><div><b>Verify</b><p>Attach source, creator, artifact, date, and verification evidence before upgrading status.</p></div><small>event: evidence:verified</small></article>
+          <article class="workflow-row"><span>09</span><div><b>Freeze</b><p>Review draft-frozen route, asset, evidence, audio, runtime, and Tauri contracts.</p></div><small>event: freeze:statusReviewed</small></article>
         </div>
       </section>
 

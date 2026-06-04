@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Radio Surface - Runtime Data</title><link rel="stylesheet" href="./surface-kit.css"></head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail"><div class="surface-mark">RV</div><nav><a href="./index.html">Index</a><a href="./runtime.html">Runtime</a><a href="./audio-import.html">Audio</a><a href="./production-freeze.html">Freeze</a></nav><span>PHKD</span></aside>
+    <section class="surface-main">
+      <section class="surface-hero"><div><p class="eyebrow">Runtime Data Layer</p><h1>Frames, Events, Storage</h1><p>Normalized data frames now describe media, audio imports, asset evidence, visual QA, Tauri readiness, production freeze, runtime events, and storage posture.</p><div class="surface-actions"><a href="../data/radio-runtime-data.json">Runtime Data JSON</a><a href="../data/radio-media.json">Media Map</a></div></div><div class="status-chip"><span>Frames</span><b id="frameCount">0</b><small>data contracts</small></div></section>
+      <section class="surface-grid three" id="frameGrid"></section>
+      <section class="surface-grid three" id="eventGrid"></section>
+      <section class="surface-card"><span class="surface-label">Storage</span><div class="surface-grid three" id="storageGrid"></div></section>
+    </section>
+  </main>
+  <script>
+    fetch("../data/radio-runtime-data.json").then((response) => response.json()).then((data) => {
+      document.getElementById("frameCount").textContent = data.frames.length;
+      document.getElementById("frameGrid").innerHTML = data.frames.map((frame) => `<a class="surface-tile" href="..${frame.path.replace('/radio-html', '')}"><span class="surface-label">${frame.key}</span><b>${frame.status}</b><p>${frame.path}</p></a>`).join("");
+      document.getElementById("eventGrid").innerHTML = data.events.map((event) => `<article class="surface-card"><span class="surface-label">Event</span><b>${event}</b></article>`).join("");
+      document.getElementById("storageGrid").innerHTML = data.storage.map((item) => `<article class="surface-card"><span class="surface-label">${item.key}</span><b>${item.mechanism}</b><p>${item.status}</p></article>`).join("");
+    });
+  </script>
+</body>
+</html>

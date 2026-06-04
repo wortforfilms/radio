@@ -1,0 +1,44 @@
+{
+  "id": "radio-vaigyaaniq-audio-import-manifest",
+  "title": "Radio Vaigyaaniq Audio Import Manifest",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "notes": [
+      "Data frames describe local runtime behavior only.",
+      "No audio, rights, payment, production readiness, or external telemetry claim is introduced.",
+      "Evidence upgrades require source, creator, artifact checksum, rights, reviewer, and reviewedAt."
+    ]
+  },
+  "counts": {
+    "imports": 0,
+    "playable": 0,
+    "blocked": 0,
+    "nullEvidence": 1
+  },
+  "schema": {
+    "required": [
+      "id",
+      "title",
+      "source",
+      "checksum",
+      "rightsStatus",
+      "verificationState"
+    ],
+    "fields": {
+      "id": "Stable local import id",
+      "title": "Track or clip title",
+      "artist": "Creator/artist, NULL if unknown",
+      "language": "Language, NULL if unknown",
+      "source": "Local path or external source reference",
+      "checksum": "sha256 for imported local file",
+      "rightsStatus": "NULL | draft | verified | blocked",
+      "verificationState": "NULL | draft | verified | blocked",
+      "playable": "false until source, rights, and checksum are verified"
+    }
+  },
+  "imports": [],
+  "placeholder": "/radio-html/assets/audio/PHKD_AUDIO_PLACEHOLDER.json"
+}

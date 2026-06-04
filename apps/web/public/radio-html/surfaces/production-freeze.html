@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Radio Surface - Production Freeze</title><link rel="stylesheet" href="./surface-kit.css"></head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail"><div class="surface-mark">RV</div><nav><a href="./index.html">Index</a><a href="./runtime-data.html">Data</a><a href="./tauri-readiness.html">Tauri</a><a href="../assets/evidence.html">Evidence</a></nav><span>PHKD</span></aside>
+    <section class="surface-main">
+      <section class="surface-hero"><div><p class="eyebrow">Production Freeze</p><h1>Draft-Frozen, Not Production Ready</h1><p>Route matrix, asset schema, evidence schema, audio import schema, runtime data, and Tauri readiness are frozen as draft contracts. Production claims remain blocked.</p><div class="surface-actions"><a href="../data/production-freeze.json">Freeze JSON</a><a href="../routes/html-vs-real-route-matrix.html">Route Matrix</a></div></div><div class="status-chip"><span>State</span><b id="freezeState">DRAFT</b><small>contracts frozen</small></div></section>
+      <section class="runtime-lane" id="freezeList"></section>
+      <section class="surface-card"><span class="surface-label">Blocked Production Claims</span><div class="chip-row" id="blockedClaims"></div></section>
+    </section>
+  </main>
+  <script>
+    fetch("../data/production-freeze.json").then((response) => response.json()).then((data) => {
+      document.getElementById("freezeState").textContent = data.freezeState;
+      document.getElementById("freezeList").innerHTML = data.frozenDrafts.map((item) => `
+        <article class="runtime-row"><span>${item.key}</span><div><b>${item.state}</b><p>${item.path}</p></div><small class="surface-state-pill">frozen draft</small></article>
+      `).join("");
+      document.getElementById("blockedClaims").innerHTML = data.blockedProductionClaims.map((claim) => `<span class="surface-state-pill">${claim}</span>`).join("");
+    });
+  </script>
+</body>
+</html>

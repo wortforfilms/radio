@@ -9,14 +9,19 @@
     "notes": [
       "Checksums prove local file identity only; they do not prove production readiness, rights, external source, or playable audio availability.",
       "Unknown source and creator values are stored as NULL.",
-      "No fabricated citations or media claims are introduced."
+      "No fabricated citations or media claims are introduced.",
+      "P2 rights fields are present, but no release rights are asserted.",
+      "Reviewer and reviewedAt remain NULL until a human review is recorded."
     ]
   },
   "counts": {
     "records": 19,
     "productionReady": 0,
+    "releaseAllowed": 0,
     "nullAudioAssets": 0,
-    "nullEvidencePlaceholders": 1
+    "nullEvidencePlaceholders": 1,
+    "rightsNull": 5,
+    "unreviewed": 19
   },
   "records": [
     {
@@ -46,9 +51,26 @@
         ],
         "unknownValues": [
           "creator",
-          "externalSource"
-        ]
-      }
+          "externalSource",
+          "license",
+          "reviewer",
+          "reviewedAt"
+        ],
+        "releaseAllowed": false
+      },
+      "rights": {
+        "license": null,
+        "rightsStatus": "NULL",
+        "usage": "draft-interface-reference",
+        "releaseAllowed": false
+      },
+      "review": {
+        "sourceConfidence": "local-file-checksum-only",
+        "reviewer": null,
+        "reviewedAt": null,
+        "reviewState": "unreviewed"
+      },
+      "evidenceStatus": "draft"
     },
     {
       "id": "radio-vaigyaaniq-divine-hero-png",
@@ -77,9 +99,26 @@
         ],
         "unknownValues": [
           "creator",
-          "externalSource"
-        ]
-      }
+          "externalSource",
+          "license",
+          "reviewer",
+          "reviewedAt"
+        ],
+        "releaseAllowed": false
+      },
+      "rights": {
+        "license": null,
+        "rightsStatus": "NULL",
+        "usage": "draft-interface-reference",
+        "releaseAllowed": false
+      },
+      "review": {
+        "sourceConfidence": "local-file-checksum-only",
+        "reviewer": null,
+        "reviewedAt": null,
+        "reviewState": "unreviewed"
+      },
+      "evidenceStatus": "draft"
     },
     {
       "id": "images-radio-vaigyaaniq-runtime-hero-svg",
@@ -107,9 +146,26 @@
           "Local file exists at the recorded path."
         ],
         "unknownValues": [
-          "externalSource"
-        ]
-      }
+          "externalSource",
+          "license",
+          "reviewer",
+          "reviewedAt"
+        ],
+        "releaseAllowed": false
+      },
+      "rights": {
+        "license": null,
+        "rightsStatus": "local-draft-no-release-claim",
+        "usage": "draft-interface-reference",
+        "releaseAllowed": false
+      },
+      "review": {
+        "sourceConfidence": "local-file-checksum-only",
+        "reviewer": null,
+        "reviewedAt": null,
+        "reviewState": "unreviewed"
+      },
+      "evidenceStatus": "draft"
     },
     {
       "id": "images-radio-vaigyaaniq-samaya-panel-svg",
@@ -137,9 +193,26 @@
           "Local file exists at the recorded path."
         ],
         "unknownValues": [
-          "externalSource"
-        ]
-      }
+          "externalSource",
+          "license",
+          "reviewer",
+          "reviewedAt"
+        ],
+        "releaseAllowed": false
+      },
+      "rights": {
+        "license": null,
+        "rightsStatus": "local-draft-no-release-claim",
+        "usage": "draft-interface-reference",
+        "releaseAllowed": false
+      },
+      "review": {
+        "sourceConfidence": "local-file-checksum-only",
+        "reviewer": null,
+        "reviewedAt": null,
+        "reviewState": "unreviewed"
+      },
+      "evidenceStatus": "draft"
     },
     {
       "id": "covers-mahamatya-svg",
@@ -167,9 +240,26 @@
           "Local file exists at the recorded path."
         ],
         "unknownValues": [
-          "externalSource"
-        ]
-      }
+          "externalSource",
+          "license",
+          "reviewer",
+          "reviewedAt"
+        ],
+        "releaseAllowed": false
+      },
+      "rights": {
+        "license": null,
+        "rightsStatus": "local-draft-no-release-claim",
+        "usage": "draft-interface-reference",
+        "releaseAllowed": false
+      },
+      "review": {
+        "sourceConfidence": "local-file-checksum-only",
+        "reviewer": null,
+        "reviewedAt": null,
+        "reviewState": "unreviewed"
+      },
+      "evidenceStatus": "draft"
     },
     {
       "id": "covers-gokul-svg",
@@ -197,9 +287,26 @@
           "Local file exists at the recorded path."
         ],
         "unknownValues": [
-          "externalSource"
-        ]
-      }
+          "externalSource",
+          "license",
+          "reviewer",
+          "reviewedAt"
+        ],
+        "releaseAllowed": false
+      },
+      "rights": {
+        "license": null,
+        "rightsStatus": "local-draft-no-release-claim",
+        "usage": "draft-interface-reference",
+        "releaseAllowed": false
+      },
+      "review": {
+        "sourceConfidence": "local-file-checksum-only",
+        "reviewer": null,
+        "reviewedAt": null,
+        "reviewState": "unreviewed"
+      },
+      "evidenceStatus": "draft"
     },
     {
       "id": "covers-kaal-chakra-svg",
@@ -227,9 +334,26 @@
           "Local file exists at the recorded path."
         ],
         "unknownValues": [
-          "externalSource"
-        ]
-      }
+          "externalSource",
+          "license",
+          "reviewer",
+          "reviewedAt"
+        ],
+        "releaseAllowed": false
+      },
+      "rights": {
+        "license": null,
+        "rightsStatus": "local-draft-no-release-claim",
+        "usage": "draft-interface-reference",
+        "releaseAllowed": false
+      },
+      "review": {
+        "sourceConfidence": "local-file-checksum-only",
+        "reviewer": null,
+        "reviewedAt": null,
+        "reviewState": "unreviewed"
+      },
+      "evidenceStatus": "draft"
     },
     {
       "id": "covers-swarnim-sale-svg",
@@ -257,9 +381,26 @@
           "Local file exists at the recorded path."
         ],
         "unknownValues": [
-          "externalSource"
-        ]
-      }
+          "externalSource",
+          "license",
+          "reviewer",
+          "reviewedAt"
+        ],
+        "releaseAllowed": false
+      },
+      "rights": {
+        "license": null,
+        "rightsStatus": "local-draft-no-release-claim",
+        "usage": "draft-interface-reference",
+        "releaseAllowed": false
+      },
+      "review": {
+        "sourceConfidence": "local-file-checksum-only",
+        "reviewer": null,
+        "reviewedAt": null,
+        "reviewState": "unreviewed"
+      },
+      "evidenceStatus": "draft"
     },
     {
       "id": "icons-like-svg",
@@ -287,9 +428,26 @@
           "Local file exists at the recorded path."
         ],
         "unknownValues": [
-          "externalSource"
-        ]
-      }
+          "externalSource",
+          "license",
+          "reviewer",
+          "reviewedAt"
+        ],
+        "releaseAllowed": false
+      },
+      "rights": {
+        "license": null,
+        "rightsStatus": "local-draft-no-release-claim",
+        "usage": "draft-interface-reference",
+        "releaseAllowed": false
+      },
+      "review": {
+        "sourceConfidence": "local-file-checksum-only",
+        "reviewer": null,
+        "reviewedAt": null,
+        "reviewState": "unreviewed"
+      },
+      "evidenceStatus": "draft"
     },
     {
       "id": "icons-save-svg",
@@ -317,9 +475,26 @@
           "Local file exists at the recorded path."
         ],
         "unknownValues": [
-          "externalSource"
-        ]
-      }
+          "externalSource",
+          "license",
+          "reviewer",
+          "reviewedAt"
+        ],
+        "releaseAllowed": false
+      },
+      "rights": {
+        "license": null,
+        "rightsStatus": "local-draft-no-release-claim",
+        "usage": "draft-interface-reference",
+        "releaseAllowed": false
+      },
+      "review": {
+        "sourceConfidence": "local-file-checksum-only",
+        "reviewer": null,
+        "reviewedAt": null,
+        "reviewState": "unreviewed"
+      },
+      "evidenceStatus": "draft"
     },
     {
       "id": "icons-gift-svg",
@@ -347,9 +522,26 @@
           "Local file exists at the recorded path."
         ],
         "unknownValues": [
-          "externalSource"
-        ]
-      }
+          "externalSource",
+          "license",
+          "reviewer",
+          "reviewedAt"
+        ],
+        "releaseAllowed": false
+      },
+      "rights": {
+        "license": null,
+        "rightsStatus": "local-draft-no-release-claim",
+        "usage": "draft-interface-reference",
+        "releaseAllowed": false
+      },
+      "review": {
+        "sourceConfidence": "local-file-checksum-only",
+        "reviewer": null,
+        "reviewedAt": null,
+        "reviewState": "unreviewed"
+      },
+      "evidenceStatus": "draft"
     },
     {
       "id": "icons-share-svg",
@@ -377,9 +569,26 @@
           "Local file exists at the recorded path."
         ],
         "unknownValues": [
-          "externalSource"
-        ]
-      }
+          "externalSource",
+          "license",
+          "reviewer",
+          "reviewedAt"
+        ],
+        "releaseAllowed": false
+      },
+      "rights": {
+        "license": null,
+        "rightsStatus": "local-draft-no-release-claim",
+        "usage": "draft-interface-reference",
+        "releaseAllowed": false
+      },
+      "review": {
+        "sourceConfidence": "local-file-checksum-only",
+        "reviewer": null,
+        "reviewedAt": null,
+        "reviewState": "unreviewed"
+      },
+      "evidenceStatus": "draft"
     },
     {
       "id": "icons-tts-svg",
@@ -407,9 +616,26 @@
           "Local file exists at the recorded path."
         ],
         "unknownValues": [
-          "externalSource"
-        ]
-      }
+          "externalSource",
+          "license",
+          "reviewer",
+          "reviewedAt"
+        ],
+        "releaseAllowed": false
+      },
+      "rights": {
+        "license": null,
+        "rightsStatus": "local-draft-no-release-claim",
+        "usage": "draft-interface-reference",
+        "releaseAllowed": false
+      },
+      "review": {
+        "sourceConfidence": "local-file-checksum-only",
+        "reviewer": null,
+        "reviewedAt": null,
+        "reviewState": "unreviewed"
+      },
+      "evidenceStatus": "draft"
     },
     {
       "id": "icons-mic-svg",
@@ -437,9 +663,26 @@
           "Local file exists at the recorded path."
         ],
         "unknownValues": [
-          "externalSource"
-        ]
-      }
+          "externalSource",
+          "license",
+          "reviewer",
+          "reviewedAt"
+        ],
+        "releaseAllowed": false
+      },
+      "rights": {
+        "license": null,
+        "rightsStatus": "local-draft-no-release-claim",
+        "usage": "draft-interface-reference",
+        "releaseAllowed": false
+      },
+      "review": {
+        "sourceConfidence": "local-file-checksum-only",
+        "reviewer": null,
+        "reviewedAt": null,
+        "reviewState": "unreviewed"
+      },
+      "evidenceStatus": "draft"
     },
     {
       "id": "shaders-radio-spectrum-frag",
@@ -467,9 +710,26 @@
           "Local file exists at the recorded path."
         ],
         "unknownValues": [
-          "externalSource"
-        ]
-      }
+          "externalSource",
+          "license",
+          "reviewer",
+          "reviewedAt"
+        ],
+        "releaseAllowed": false
+      },
+      "rights": {
+        "license": null,
+        "rightsStatus": "local-draft-no-release-claim",
+        "usage": "draft-interface-reference",
+        "releaseAllowed": false
+      },
+      "review": {
+        "sourceConfidence": "local-file-checksum-only",
+        "reviewer": null,
+        "reviewedAt": null,
+        "reviewState": "unreviewed"
+      },
+      "evidenceStatus": "draft"
     },
     {
       "id": "shaders-radio-yantra-vert",
@@ -497,9 +757,26 @@
           "Local file exists at the recorded path."
         ],
         "unknownValues": [
-          "externalSource"
-        ]
-      }
+          "externalSource",
+          "license",
+          "reviewer",
+          "reviewedAt"
+        ],
+        "releaseAllowed": false
+      },
+      "rights": {
+        "license": null,
+        "rightsStatus": "local-draft-no-release-claim",
+        "usage": "draft-interface-reference",
+        "releaseAllowed": false
+      },
+      "review": {
+        "sourceConfidence": "local-file-checksum-only",
+        "reviewer": null,
+        "reviewedAt": null,
+        "reviewState": "unreviewed"
+      },
+      "evidenceStatus": "draft"
     },
     {
       "id": "audio-phkd-audio-placeholder-json",
@@ -529,9 +806,26 @@
         "unknownValues": [
           "playableAudio",
           "creator",
-          "externalSource"
-        ]
-      }
+          "externalSource",
+          "license",
+          "reviewer",
+          "reviewedAt"
+        ],
+        "releaseAllowed": false
+      },
+      "rights": {
+        "license": null,
+        "rightsStatus": "NULL",
+        "usage": "draft-interface-reference",
+        "releaseAllowed": false
+      },
+      "review": {
+        "sourceConfidence": "local-file-checksum-only",
+        "reviewer": null,
+        "reviewedAt": null,
+        "reviewState": "unreviewed"
+      },
+      "evidenceStatus": "NULL"
     },
     {
       "id": "vendor-three-min-js",
@@ -560,9 +854,26 @@
         ],
         "unknownValues": [
           "creator",
-          "externalSource"
-        ]
-      }
+          "externalSource",
+          "license",
+          "reviewer",
+          "reviewedAt"
+        ],
+        "releaseAllowed": false
+      },
+      "rights": {
+        "license": null,
+        "rightsStatus": "NULL",
+        "usage": "draft-interface-reference",
+        "releaseAllowed": false
+      },
+      "review": {
+        "sourceConfidence": "local-file-checksum-only",
+        "reviewer": null,
+        "reviewedAt": null,
+        "reviewState": "unreviewed"
+      },
+      "evidenceStatus": "draft"
     },
     {
       "id": "vendor-three-module-min-js",
@@ -591,9 +902,53 @@
         ],
         "unknownValues": [
           "creator",
-          "externalSource"
-        ]
-      }
+          "externalSource",
+          "license",
+          "reviewer",
+          "reviewedAt"
+        ],
+        "releaseAllowed": false
+      },
+      "rights": {
+        "license": null,
+        "rightsStatus": "NULL",
+        "usage": "draft-interface-reference",
+        "releaseAllowed": false
+      },
+      "review": {
+        "sourceConfidence": "local-file-checksum-only",
+        "reviewer": null,
+        "reviewedAt": null,
+        "reviewState": "unreviewed"
+      },
+      "evidenceStatus": "draft"
     }
-  ]
+  ],
+  "filters": {
+    "evidenceStatus": [
+      "NULL",
+      "draft",
+      "verified",
+      "blocked"
+    ],
+    "groups": [
+      "audio",
+      "covers",
+      "icons",
+      "images",
+      "shaders",
+      "vendor"
+    ],
+    "reviewState": [
+      "unreviewed",
+      "reviewed",
+      "blocked"
+    ],
+    "rightsStatus": [
+      "NULL",
+      "local-draft-no-release-claim",
+      "verified",
+      "blocked"
+    ]
+  }
 }

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - Visual QA</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+  <style>
+    .qa-row { display:grid; grid-template-columns:minmax(180px,.7fr) minmax(0,1.2fr) minmax(160px,.45fr); gap:12px; align-items:start; border:1px solid var(--line); border-radius:8px; padding:14px; background:var(--panel); }
+    .qa-row code { color:#d7fff8; overflow-wrap:anywhere; }
+    .qa-row img { width:100%; border:1px solid var(--line); border-radius:8px; background:#050b10; }
+    @media (max-width: 900px) { .qa-row { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail"><div class="surface-mark">RV</div><nav><a href="./index.html">Index</a><a href="./runtime.html">Runtime</a><a href="./audio-import.html">Audio</a><a href="./tauri-readiness.html">Tauri</a></nav><span>PHKD</span></aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div><p class="eyebrow">Visual QA Board</p><h1>Screenshots, Links, Render State</h1><p>QA targets track screenshots, render state, link status, image status, and mobile status. Pending values remain draft evidence, not production approval.</p><div class="surface-actions"><a href="../data/visual-qa.json">QA JSON</a><a href="../qa/screenshots/">Screenshot Folder</a></div></div>
+        <div class="status-chip"><span>Targets</span><b id="targetCount">0</b><small>surfaces tracked</small></div>
+      </section>
+      <section class="surface-grid four" id="qaMetrics"></section>
+      <section class="evidence-board" id="qaBoard"></section>
+    </section>
+  </main>
+  <script>
+    function statusPill(value) { return `<span class="surface-state-pill">${value || "NULL"}</span>`; }
+    fetch("../data/visual-qa.json")
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("targetCount").textContent = data.counts.targets;
+        document.getElementById("qaMetrics").innerHTML = [
+          ["Captured", data.counts.capturedScreenshots],
+          ["Pass", data.counts.pass],
+          ["Blocked", data.counts.blocked],
+          ["State", data.verificationState]
+        ].map(([label, value]) => `<article class="surface-card"><span class="surface-label">${label}</span><b>${value}</b></article>`).join("");
+        document.getElementById("qaBoard").innerHTML = data.targets.map((target) => `
+          <article class="qa-row">
+            <div><span class="surface-label">${target.title}</span><b>${target.renderStatus}</b><p>${target.notes}</p></div>
+            <div><code>${target.path}</code><p>${statusPill(target.linkStatus)} ${statusPill(target.imageStatus)} ${statusPill(target.mobileStatus)}</p></div>
+            <div>${target.screenshot ? `<img src="${target.screenshot}" alt="">` : "<p>Screenshot NULL</p>"}</div>
+          </article>
+        `).join("");
+      });
+  </script>
+</body>
+</html>

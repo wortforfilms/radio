@@ -13,8 +13,8 @@
     ]
   },
   "counts": {
-    "webHtml": 24,
-    "desktopHtml": 24
+    "webHtml": 29,
+    "desktopHtml": 29
   },
   "servedIndex": "/radio-html/all-html.html",
   "groups": [
@@ -50,6 +50,11 @@
         { "title": "Image Landing", "path": "/radio-html/surfaces/image-landing.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/image-landing.html" },
         { "title": "Runtime", "path": "/radio-html/surfaces/runtime.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/runtime.html" },
         { "title": "Runtimes And Workflows", "path": "/radio-html/surfaces/runtimes-workflows.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/runtimes-workflows.html" },
+        { "title": "Runtime Data", "path": "/radio-html/surfaces/runtime-data.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/runtime-data.html" },
+        { "title": "Audio Import", "path": "/radio-html/surfaces/audio-import.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/audio-import.html" },
+        { "title": "Visual QA", "path": "/radio-html/surfaces/visual-qa.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/visual-qa.html" },
+        { "title": "Tauri Readiness", "path": "/radio-html/surfaces/tauri-readiness.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/tauri-readiness.html" },
+        { "title": "Production Freeze", "path": "/radio-html/surfaces/production-freeze.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/production-freeze.html" },
         { "title": "ASCII Wireframes", "path": "/radio-html/surfaces/ascii-wireframes.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/ascii-wireframes.html" },
         { "title": "Visualizer", "path": "/radio-html/surfaces/visualizer.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/visualizer.html" },
         { "title": "Lyrics", "path": "/radio-html/surfaces/lyrics.html", "desktopPath": "/apps/desktop/public/radio-html/surfaces/lyrics.html" },

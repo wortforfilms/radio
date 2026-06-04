@@ -14,7 +14,7 @@
     ]
   },
   "counts": {
-    "matrixRows": 34,
+    "matrixRows": 45,
     "groups": 6
   },
   "matrixHtml": "/radio-html/routes/html-vs-real-route-matrix.html",
@@ -141,6 +141,46 @@
           "state": "implemented-draft"
         },
         {
+          "surface": "Runtime Data",
+          "staticHtml": "/radio-html/surfaces/runtime-data.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/runtime-data.html",
+          "source": "apps/web/public/radio-html/data/radio-runtime-data.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Audio Import",
+          "staticHtml": "/radio-html/surfaces/audio-import.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/audio-import.html",
+          "source": "apps/web/public/radio-html/data/audio-import-manifest.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Visual QA",
+          "staticHtml": "/radio-html/surfaces/visual-qa.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/visual-qa.html",
+          "source": "apps/web/public/radio-html/data/visual-qa.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Tauri Readiness",
+          "staticHtml": "/radio-html/surfaces/tauri-readiness.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/tauri-readiness.html",
+          "source": "apps/web/public/radio-html/data/tauri-readiness.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Production Freeze",
+          "staticHtml": "/radio-html/surfaces/production-freeze.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/production-freeze.html",
+          "source": "apps/web/public/radio-html/data/production-freeze.json",
+          "state": "implemented-draft"
+        },
+        {
           "surface": "ASCII Wireframes",
           "staticHtml": "/radio-html/surfaces/ascii-wireframes.html",
           "realRoute": "served-static",
@@ -248,6 +288,54 @@
           "realRoute": "served-static-json",
           "desktopCopy": "/apps/desktop/public/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json",
           "source": "apps/web/public/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Radio Media Data",
+          "staticHtml": "/radio-html/data/radio-media.json",
+          "realRoute": "served-static-json",
+          "desktopCopy": "/apps/desktop/public/radio-html/data/radio-media.json",
+          "source": "apps/web/public/radio-html/data/radio-media.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Audio Import Data",
+          "staticHtml": "/radio-html/data/audio-import-manifest.json",
+          "realRoute": "served-static-json",
+          "desktopCopy": "/apps/desktop/public/radio-html/data/audio-import-manifest.json",
+          "source": "apps/web/public/radio-html/data/audio-import-manifest.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Runtime Data JSON",
+          "staticHtml": "/radio-html/data/radio-runtime-data.json",
+          "realRoute": "served-static-json",
+          "desktopCopy": "/apps/desktop/public/radio-html/data/radio-runtime-data.json",
+          "source": "apps/web/public/radio-html/data/radio-runtime-data.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Visual QA Data",
+          "staticHtml": "/radio-html/data/visual-qa.json",
+          "realRoute": "served-static-json",
+          "desktopCopy": "/apps/desktop/public/radio-html/data/visual-qa.json",
+          "source": "apps/web/public/radio-html/data/visual-qa.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Tauri Readiness Data",
+          "staticHtml": "/radio-html/data/tauri-readiness.json",
+          "realRoute": "served-static-json",
+          "desktopCopy": "/apps/desktop/public/radio-html/data/tauri-readiness.json",
+          "source": "apps/web/public/radio-html/data/tauri-readiness.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Production Freeze Data",
+          "staticHtml": "/radio-html/data/production-freeze.json",
+          "realRoute": "served-static-json",
+          "desktopCopy": "/apps/desktop/public/radio-html/data/production-freeze.json",
+          "source": "apps/web/public/radio-html/data/production-freeze.json",
           "state": "implemented-draft"
         },
         {
