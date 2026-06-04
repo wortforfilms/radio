@@ -110,6 +110,7 @@
           <p>A forward-compatible folder plan for growing Radio Vaigyaaniq without breaking the current browser-openable HTML archive. Current files stay in place; future modules move into typed lanes with redirect or shim pages when required.</p>
           <div class="surface-actions">
             <a href="../Radio_Vaigyaaniq_Future_Structure.json">Structure JSON</a>
+            <a href="../Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md">Claude Prompt</a>
             <a href="../Radio_Vaigyaaniq_Full_App_Scaffold.json">Current Scaffold</a>
             <a href="../surfaces/ascii-wireframes.html">ASCII Wireframes</a>
           </div>
@@ -359,6 +360,58 @@ Target ship path:
 12 record bundle hash, platform, date, source commit
 13 mark blocked unless installer opens and evidence exists</pre>
         </article>
+      </section>
+
+      <section class="tree-panel">
+        <span class="surface-label">Claude</span>
+        <h2>Prompt To Produce Shipping Scaffold</h2>
+<pre>You are a senior desktop platform architect and Tauri release engineer.
+
+Objective:
+Create a production-oriented, fail-closed Tauri desktop shipping scaffold for Radio Vaigyaaniq in this repository.
+
+Use:
+  apps/web                                  active web app
+  apps/web/public/radio-html                Radio HTML archive
+  apps/web/public/radio-html/structure      structure map
+  _radio_index/tauri_app/src-tauri          legacy/reference Tauri scaffold
+  apps/desktop                              target desktop app
+
+PHKD:
+  unknown values = NULL
+  no fabricated build, installer, audio, telemetry, payment, or release claims
+  preserve provenance
+  fail closed when evidence is missing
+
+Output:
+  scaffold apps/desktop
+  wire Tauri shell to Radio archive
+  copy/bundle radio-html assets
+  add least-privilege capabilities
+  add Rust commands for evidence, storage, and bundle metadata
+  add evidence JSON reports
+  add dev/build/check scripts
+  add README with blocked release rules
+
+Gates:
+  npm test
+  npm run build
+  cargo check in apps/desktop/src-tauri
+  tauri dev smoke
+  tauri build bundle
+  bundle hash
+  platform metadata
+  source commit
+  installer open evidence
+
+Final response:
+  files changed
+  commands run with actual results
+  blocked gates with exact reasons
+  final state: draft, blocked, or verified</pre>
+        <div class="surface-actions">
+          <a href="../Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md">Open Full Claude Prompt</a>
+        </div>
       </section>
     </section>
   </main>
