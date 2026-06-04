@@ -1,0 +1,77 @@
+{
+  "report": "qa-report",
+  "generated_at": "2026-06-04T12:15:42.641Z",
+  "source_commit": "272f61108c7f3ef8ef99c67489f6895c7ee753eb",
+  "branch": "master",
+  "evidence_host": {
+    "os": "linux",
+    "arch": "arm64",
+    "node": "v22.22.0",
+    "npm": "10.9.4",
+    "cargo": null,
+    "rustc": null,
+    "tauri_cli": null,
+    "note": "evidence-generation host; NOT a verified macOS/Windows build host"
+  },
+  "gates": [
+    {
+      "gate": "npm test",
+      "status": "blocked",
+      "detail": "environment: Error: Cannot find native binding. npm has a bug related to optional dependencies (https://github.com/npm/cli/issues/4828). Please try `npm i` again after removing both package-lock.json and node_modules directory."
+    },
+    {
+      "gate": "npm run build",
+      "status": "not-run",
+      "detail": "Deferred: heavy Next build. Run `npm run build` at repo root on a dev machine and re-run evidence."
+    },
+    {
+      "gate": "cargo check (apps/desktop/src-tauri)",
+      "status": "blocked",
+      "detail": "cargo/rustc not installed in this environment"
+    },
+    {
+      "gate": "tauri dev smoke test",
+      "status": "blocked",
+      "detail": "tauri CLI not installed"
+    },
+    {
+      "gate": "tauri bundle build",
+      "status": "blocked",
+      "detail": "tauri CLI not installed"
+    },
+    {
+      "gate": "bundle hash recorded",
+      "status": "blocked",
+      "detail": "no bundle artifact produced; nothing to hash"
+    },
+    {
+      "gate": "platform metadata recorded",
+      "status": "pass",
+      "detail": "linux-arm64 (evidence host; target build host = NULL)"
+    },
+    {
+      "gate": "source commit recorded",
+      "status": "pass",
+      "detail": "272f611"
+    },
+    {
+      "gate": "installer opens successfully",
+      "status": "blocked",
+      "detail": "no installer produced; cannot verify it opens"
+    },
+    {
+      "gate": "QA report records every gate",
+      "status": "pass",
+      "detail": "10 gates recorded"
+    }
+  ],
+  "summary": {
+    "pass": 3,
+    "fail": 0,
+    "blocked": 6,
+    "not-run": 1,
+    "total": 10
+  },
+  "verdict": "draft",
+  "phkd": "fail-closed: unknowns are NULL; missing tools are blocked, not faked."
+}

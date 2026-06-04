@@ -1,0 +1,1129 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Vaigyaaniq - Full App HTML</title>
+  <style>
+    :root {
+      --bg: #080d12;
+      --panel: rgba(14, 22, 29, .78);
+      --panel-strong: rgba(5, 11, 16, .86);
+      --line: rgba(255,255,255,.09);
+      --muted: rgba(226,232,240,.68);
+      --text: #e2e8f0;
+      --white: #fff;
+      --cyan: #00f5d4;
+      --orange: #ff6b35;
+      --gold: #dfb15b;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px),
+        radial-gradient(circle at 75% 10%, rgba(0,245,212,.13), transparent 30%),
+        radial-gradient(circle at 25% 85%, rgba(255,107,53,.18), transparent 34%),
+        var(--bg);
+      background-size: 48px 48px, 48px 48px, auto, auto, auto;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, select, input, textarea {
+      font: inherit;
+    }
+
+    .shell {
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    .rail {
+      position: sticky;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
+      border-right: 1px solid var(--line);
+      padding: 18px 12px;
+      background: rgba(5,10,14,.9);
+      backdrop-filter: blur(18px);
+      z-index: 5;
+    }
+
+    .mark {
+      display: grid;
+      width: 54px;
+      height: 54px;
+      place-items: center;
+      border: 1px solid rgba(0,245,212,.38);
+      border-radius: 8px;
+      color: var(--cyan);
+      font-weight: 900;
+    }
+
+    .rail nav {
+      display: grid;
+      gap: 9px;
+    }
+
+    .rail a,
+    .rail > span {
+      display: grid;
+      min-height: 42px;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: rgba(226,232,240,.76);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .rail a:hover,
+    .module:hover,
+    .story-map a:hover {
+      border-color: rgba(255,107,53,.55);
+      background: rgba(255,107,53,.08);
+    }
+
+    .rail > span { color: var(--orange); }
+
+    .main {
+      display: grid;
+      gap: 20px;
+      padding: 22px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .eyebrow,
+    .kicker,
+    .status span,
+    .hero-copy > span,
+    .card-label {
+      margin: 0 0 10px;
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 { color: var(--white); letter-spacing: 0; }
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 68px);
+      line-height: .95;
+    }
+
+    .status {
+      display: grid;
+      min-width: 190px;
+      gap: 3px;
+      border: 1px solid rgba(0,245,212,.24);
+      border-radius: 8px;
+      padding: 12px;
+      text-align: right;
+      background: rgba(0,245,212,.055);
+    }
+
+    .status b { color: var(--orange); }
+    .status small { color: rgba(226,232,240,.58); }
+
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, .38fr);
+      min-height: min(68vh, 700px);
+      overflow: hidden;
+      align-items: end;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #050b10;
+    }
+
+    .hero::after {
+      position: absolute;
+      inset: 0;
+      content: "";
+      background:
+        linear-gradient(90deg, rgba(5,11,16,.92), rgba(5,11,16,.56) 48%, rgba(5,11,16,.18)),
+        linear-gradient(0deg, rgba(5,11,16,.86), rgba(5,11,16,.04) 54%);
+    }
+
+    .hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-copy,
+    .now-card {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-copy {
+      max-width: 850px;
+      padding: 32px;
+    }
+
+    .hero-copy h2 {
+      margin: 10px 0 0;
+      font-size: clamp(46px, 7vw, 96px);
+      line-height: .92;
+    }
+
+    .hero-copy p,
+    .band > div > p,
+    .sequence-head p,
+    .shot p,
+    dd {
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .actions a,
+    .buttonish,
+    button,
+    select,
+    .download {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      border: 1px solid rgba(0,245,212,.36);
+      border-radius: 6px;
+      padding: 9px 13px;
+      color: var(--cyan);
+      background: rgba(5,11,16,.42);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .actions a:first-child,
+    button.primary {
+      border-color: rgba(255,107,53,.65);
+      color: var(--white);
+      background: rgba(255,107,53,.18);
+    }
+
+    .now-card {
+      align-self: end;
+      margin: 22px;
+      border: 1px solid rgba(255,255,255,.11);
+      border-radius: 8px;
+      padding: 16px;
+      background: rgba(5,11,16,.76);
+      backdrop-filter: blur(18px);
+    }
+
+    .now-card small,
+    .card-label { color: var(--cyan); }
+    .now-card b {
+      display: block;
+      margin: 8px 0 4px;
+      color: var(--white);
+      font-size: 24px;
+    }
+
+    .console,
+    .runtime-grid,
+    .module-grid,
+    .workflow-grid,
+    .evidence-grid,
+    .scaffold-grid,
+    .state-grid,
+    .story-map,
+    .shot-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .console { grid-template-columns: 1.1fr .9fr .8fr; }
+    .runtime-grid { grid-template-columns: .9fr 1.1fr; }
+    .module-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .workflow-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .evidence-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .scaffold-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .state-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .story-map { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .shot-grid { grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); }
+
+    .card,
+    .module,
+    .workflow,
+    .evidence,
+    .scaffold-card,
+    .state-card,
+    .story-map a,
+    .shot,
+    .visualizer,
+    .lyrics,
+    .player {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: var(--panel);
+    }
+
+    .tuner-bars {
+      display: flex;
+      align-items: end;
+      gap: 4px;
+      height: 92px;
+      margin-top: 20px;
+    }
+
+    .tuner-bars i,
+    .mini-bars i {
+      width: 100%;
+      border-radius: 999px 999px 0 0;
+      background: linear-gradient(180deg, var(--cyan), var(--orange));
+      animation: pulse 1.6s ease-in-out infinite alternate;
+    }
+
+    .tuner-bars i:nth-child(2n) { animation-delay: .15s; }
+    .tuner-bars i:nth-child(3n) { animation-delay: .3s; }
+
+    @keyframes pulse {
+      from { opacity: .42; transform: scaleY(.75); }
+      to { opacity: 1; transform: scaleY(1.04); }
+    }
+
+    .band {
+      display: grid;
+      grid-template-columns: minmax(260px, .72fr) minmax(0, 1fr);
+      gap: 24px;
+      border-top: 1px solid var(--line);
+      padding: 42px 0 0;
+    }
+
+    .module {
+      display: grid;
+      min-height: 170px;
+      align-content: start;
+      gap: 10px;
+      color: var(--text);
+      background: linear-gradient(135deg, rgba(0,245,212,.08), rgba(255,107,53,.07)), var(--panel);
+    }
+
+    .module span,
+    .workflow span,
+    .shot header span {
+      width: max-content;
+      border: 1px solid rgba(255,107,53,.35);
+      border-radius: 999px;
+      padding: 5px 8px;
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .module strong,
+    .workflow b,
+    .scaffold-card b,
+    .state-card b,
+    .shot h3 {
+      color: var(--white);
+      font-size: 21px;
+      line-height: 1.08;
+    }
+
+    .runtime {
+      display: grid;
+      gap: 18px;
+      border-top: 1px solid var(--line);
+      padding-top: 42px;
+    }
+
+    .station-list,
+    .track-list,
+    .tts-controls,
+    .viz-controls,
+    .lyrics-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .station {
+      display: grid;
+      min-width: 150px;
+      gap: 6px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      color: var(--text);
+      background: rgba(5,11,16,.42);
+      cursor: pointer;
+    }
+
+    .station.active { border-color: var(--orange); }
+    .station small,
+    .workflow small,
+    .story-map small,
+    .shot small {
+      color: rgba(226,232,240,.6);
+    }
+
+    .visualizer canvas {
+      display: block;
+      width: 100%;
+      height: 360px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: radial-gradient(circle at 50% 50%, rgba(0,245,212,.18), transparent 32%), #050b10;
+    }
+
+    .mini-bars {
+      display: flex;
+      align-items: end;
+      gap: 3px;
+      height: 80px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 104px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      color: var(--text);
+      background: rgba(5,11,16,.68);
+      resize: vertical;
+    }
+
+    audio {
+      width: 100%;
+      accent-color: var(--orange);
+    }
+
+    .progress {
+      height: 10px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+    }
+
+    .progress i {
+      display: block;
+      width: 42%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--orange), var(--cyan));
+    }
+
+    .storyboard {
+      display: grid;
+      gap: 24px;
+      border-top: 1px solid var(--line);
+      padding-top: 42px;
+    }
+
+    .scaffold {
+      display: grid;
+      gap: 24px;
+      border-top: 1px solid var(--line);
+      padding-top: 42px;
+    }
+
+    .scaffold-card,
+    .state-card {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+
+    .scaffold-card ul,
+    .state-card ul {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .scaffold-card li,
+    .state-card li {
+      border-top: 1px solid rgba(255,255,255,.07);
+      padding-top: 8px;
+      color: rgba(226,232,240,.72);
+      line-height: 1.4;
+    }
+
+    .scaffold-card li::before,
+    .state-card li::before {
+      color: var(--orange);
+      content: "• ";
+    }
+
+    .sequence {
+      display: grid;
+      gap: 16px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .sequence-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: end;
+    }
+
+    .shot header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .shot dl {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+    }
+
+    .shot dl div {
+      border-top: 1px solid rgba(255,255,255,.07);
+      padding-top: 10px;
+    }
+
+    dt {
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    dd { margin: 4px 0 0; }
+
+    .ui-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .ui-list span {
+      border: 1px solid rgba(0,245,212,.22);
+      border-radius: 999px;
+      padding: 6px 9px;
+      color: rgba(226,232,240,.8);
+      font-size: 12px;
+      font-weight: 760;
+    }
+
+    .player {
+      position: sticky;
+      bottom: 0;
+      z-index: 4;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      background: rgba(5,11,16,.94);
+      backdrop-filter: blur(18px);
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      place-items: center;
+      padding: 18px;
+      background: rgba(0,0,0,.72);
+      z-index: 20;
+    }
+
+    .modal.active { display: grid; }
+    .modal > div {
+      width: min(520px, 100%);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      background: var(--panel-strong);
+    }
+
+    @media (max-width: 1100px) {
+      .shell,
+      .hero,
+      .console,
+      .runtime-grid,
+      .band,
+      .sequence-head {
+        grid-template-columns: 1fr;
+      }
+
+      .rail {
+        position: static;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        height: auto;
+        gap: 12px;
+      }
+
+      .rail nav {
+        display: flex;
+        overflow-x: auto;
+      }
+
+      .rail a { min-width: 96px; }
+      .module-grid,
+      .evidence-grid,
+      .scaffold-grid,
+      .state-grid,
+      .story-map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .workflow-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 640px) {
+      .main { padding: 14px; }
+      .topbar,
+      .rail {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .mark { width: 100%; }
+      .hero { min-height: 700px; }
+      .hero-copy { padding: 22px; }
+      .hero-copy h2 { font-size: 43px; }
+      .actions,
+      .station-list,
+      .track-list,
+      .tts-controls,
+      .viz-controls,
+      .lyrics-actions {
+        display: grid;
+      }
+
+      .module-grid,
+      .workflow-grid,
+      .evidence-grid,
+      .scaffold-grid,
+      .state-grid,
+      .story-map,
+      .shot-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <aside class="rail" aria-label="Radio app navigation">
+      <div class="mark">RV</div>
+      <nav>
+        <a href="#landing">Home</a>
+        <a href="#runtime">Runtime</a>
+        <a href="#visualizer">Visual</a>
+        <a href="#lyrics">Lyrics</a>
+        <a href="#scaffold">Scaffold</a>
+        <a href="#storyboard">Storyboard</a>
+        <a href="./surfaces/index.html">Surfaces</a>
+        <a href="/radio">React</a>
+      </nav>
+      <span>PHKD</span>
+    </aside>
+
+    <section class="main">
+      <header class="topbar" id="landing">
+        <div>
+          <p class="eyebrow">Radio Vaigyaaniq</p>
+          <h1>Full App HTML</h1>
+        </div>
+        <div class="status">
+          <span>LOCAL</span>
+          <b>DRAFT</b>
+          <small>verification state</small>
+        </div>
+      </header>
+
+      <section class="hero">
+        <img src="./assets/radio-vaigyaaniq-landing-hero.png" alt="" aria-hidden="true">
+        <div class="hero-copy">
+          <span>102.5 MHz</span>
+          <h2>Discover the Science, Tune into the Future.</h2>
+          <p>Single-file HTML surface for the Radio landing, runtime storyboard, visualizer controls, synced lyric workflow, TTS announcement state, gifting intent, and HKD evidence posture.</p>
+          <div class="actions">
+            <a href="/radio/runtime">Open React Runtime</a>
+            <a href="/radio/frame">Three Frame</a>
+            <a href="/radio/storyboard">React Storyboard</a>
+          </div>
+        </div>
+        <div class="now-card">
+          <small>Now Routed</small>
+          <b>Radio Runtime</b>
+          <span>Visualizer · TTS · Lyrics · Gift intent</span>
+        </div>
+      </section>
+
+      <section class="console">
+        <article class="card">
+          <span class="card-label">Quantum Resonance Tuner</span>
+          <h2>LIVE DRAFT</h2>
+          <div class="tuner-bars" id="tunerBars"></div>
+        </article>
+        <article class="card">
+          <span class="card-label">Hemant Samwat Samaya</span>
+          <h2>Muhurat · Utsav · Divas</h2>
+          <p>Announcement and vishaya vaachan are computed as local draft states until evidence is attached.</p>
+        </article>
+        <article class="card">
+          <span class="card-label">Fail Closed</span>
+          <h2>No fabricated audio, citations, checkout, or verification claims.</h2>
+          <a class="buttonish" href="/scopes/media-universe">Open Media Scope</a>
+        </article>
+      </section>
+
+      <section class="band">
+        <div>
+          <p class="kicker">Runtime Modules</p>
+          <h2>Modules arranged for repeated operation.</h2>
+          <p>All major Radio surfaces are present in this single HTML: landing, runtime, TTS, visualizer, lyrics, gift/project intake, archive, export, and storyboard coverage.</p>
+        </div>
+        <div class="module-grid" id="moduleGrid"></div>
+      </section>
+
+      <section class="runtime" id="runtime">
+        <div>
+          <p class="kicker">Live Runtime Mock</p>
+          <h2>Station, track, announcement, and action state.</h2>
+        </div>
+        <div class="runtime-grid">
+          <article class="card">
+            <span class="card-label">Stations</span>
+            <div class="station-list" id="stationList"></div>
+          </article>
+          <article class="card">
+            <span class="card-label">Current Track</span>
+            <h2 id="trackTitle">THE SWARNIM SALE</h2>
+            <p id="trackMeta">Gokul · Rise of Resistance · LOCAL DRAFT</p>
+            <div class="track-list" id="trackList"></div>
+          </article>
+        </div>
+
+        <article class="card">
+          <span class="card-label">Samaya Announcement TTS</span>
+          <h2 id="clock">00:00:00 DRAFT</h2>
+          <p id="announcement">Vishaya vaachan: sacred-science broadcast context. Server audio evidence NULL.</p>
+          <div class="tts-controls">
+            <select id="persona">
+              <option>Maataa</option>
+              <option>Rishi</option>
+              <option>Samaya</option>
+              <option>Vigyaaniq</option>
+            </select>
+            <button class="primary" id="speakBtn">Speak</button>
+            <button id="stopBtn">Stop</button>
+          </div>
+          <p id="ttsStatus">LOCAL BROWSER TTS · VOICE EVIDENCE NULL UNTIL DEVICE VOICE EXISTS</p>
+        </article>
+      </section>
+
+      <section class="visualizer" id="visualizer">
+        <div>
+          <p class="kicker">3D Audio Visualizer Pro</p>
+          <h2>Browser HTML visualizer placeholder with scene controls.</h2>
+          <p id="vizStatus">Scene: Sphere · Input: NULL · Recording: stopped</p>
+        </div>
+        <canvas id="vizCanvas" width="1280" height="520" aria-label="Canvas audio visualizer"></canvas>
+        <div class="viz-controls" id="vizControls"></div>
+        <audio controls preload="metadata"></audio>
+      </section>
+
+      <section class="lyrics" id="lyrics">
+        <div>
+          <p class="kicker">Synced Lyrics Scribe</p>
+          <h2>Draft cue workflow</h2>
+          <p>Lyrics and timing stay local draft state until citations and performance evidence exist.</p>
+        </div>
+        <audio controls preload="metadata"></audio>
+        <div class="progress"><i></i></div>
+        <textarea id="lyricDraft" placeholder="Write or paste one lyric line, then mark it at the current playhead.">कोई बताओ इन रेखाओं को</textarea>
+        <div class="lyrics-actions">
+          <button class="primary" id="markLine">Mark Line @ Playhead</button>
+          <a class="download" id="downloadLrc" download="radio-vaigyaaniq-draft.lrc" href="#">Export LRC</a>
+          <a class="download" id="downloadHkd" download="radio-vaigyaaniq-draft.hkd.json" href="#">Export HKD</a>
+        </div>
+        <div class="card" id="lyricList">
+          <span class="card-label">Cue List</span>
+          <p>No verified cues yet. Draft line ready.</p>
+        </div>
+      </section>
+
+      <section class="band">
+        <div>
+          <p class="kicker">Operator Flow</p>
+          <h2>From signal to evidence.</h2>
+        </div>
+        <div class="workflow-grid" id="workflowGrid"></div>
+      </section>
+
+      <section class="band">
+        <div>
+          <p class="kicker">Evidence State</p>
+          <h2>PHKD fail-closed by design.</h2>
+        </div>
+        <div class="evidence-grid" id="evidenceGrid"></div>
+      </section>
+
+      <section class="scaffold" id="scaffold">
+        <div>
+          <p class="kicker">Full Scaffold</p>
+          <h2>Routes, components, states, events, storage, exports, and QA gates.</h2>
+          <p>Scaffold entries describe implementation surfaces only. They do not create verification, payment, audio-quality, or production-readiness claims.</p>
+          <div class="actions">
+            <a href="./Radio_Vaigyaaniq_Full_App_Scaffold.json">Open Scaffold JSON</a>
+            <a href="/radio/storyboard">Open React Storyboard</a>
+          </div>
+        </div>
+        <div class="scaffold-grid" id="scaffoldGrid"></div>
+        <div class="state-grid" id="stateGrid"></div>
+      </section>
+
+      <section class="storyboard" id="storyboard">
+        <div>
+          <p class="kicker">Storyboard Coverage</p>
+          <h2>7 sequences · 20 implemented shots</h2>
+          <p>Every shot has a route, UI list, motion note, data state, PHKD guardrail, and next action.</p>
+        </div>
+        <div class="story-map" id="storyMap"></div>
+        <div id="storySequences"></div>
+      </section>
+
+      <footer class="player">
+        <div>
+          <span class="card-label">LIVE</span>
+          <b id="footerTrack">THE SWARNIM SALE</b>
+          <small>Radio Vaigyaaniq · local browser draft</small>
+        </div>
+        <div class="actions">
+          <a href="/projects/new">Create Project</a>
+          <button id="likeBtn">Like</button>
+          <button id="saveBtn">Save</button>
+          <button id="giftBtn">Gift</button>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <section class="modal" id="giftModal" aria-modal="true" role="dialog">
+    <div>
+      <h2>Gift Intent</h2>
+      <p>Gift action staged locally. Checkout, payment, wallet, receipt, and delivery evidence are NULL until explicitly verified.</p>
+      <button class="primary" id="closeGift">Close</button>
+    </div>
+  </section>
+
+  <script>
+    const modules = [
+      ["VIZ", "3D Visualizer", "Mic, files, cinematic shader scenes, lighting, shadows, particles, and WebM capture.", "#visualizer"],
+      ["LRC", "Synced Lyrics", "Draft LRC timing, Hindi lines, transcript import, HKD lyric evidence export.", "#lyrics"],
+      ["TTS", "Persona TTS", "Maataa, Rishi, Samaya, and Vigyaaniq browser voices for announcements.", "#runtime"],
+      ["ACT", "Gift Loop", "Like, save, gift intent, and project creation remain local until evidence exists.", "#runtime"],
+      ["SB", "Storyboard", "Full shot plan for landing, runtime, visualizer, lyrics, TTS, gift, project, archive, and export.", "#storyboard"],
+      ["SURF", "All Surfaces", "Dedicated HTML pages for every major Radio surface in the scaffold.", "./surfaces/index.html"],
+      ["FLOW", "Runtimes + Workflows", "Runtime lane, workflow lane, event triggers, states, and PHKD gates.", "./surfaces/runtimes-workflows.html"],
+      ["ASCII", "ASCII Wireframes", "Full application wireframes covering surfaces, routes, state, persistence, QA, and operator flow.", "./surfaces/ascii-wireframes.html"],
+      ["TREE", "Future Structure", "Folder architecture, migration phases, compatibility rules, and structure manifest for future Radio growth.", "./structure/index.html"],
+      ["HKD", "HKD Export", "Media universe exports preserve provenance and NULL unknowns.", "/api/export?format=hkd&scope=media-universe"],
+      ["HTML", "HTML Archive", "Original uploaded single-file dashboard remains inspectable.", "./Radio_Vaigyaaniq_UX_Dashboard.html"]
+    ];
+
+    const workflows = [
+      ["01", "Tune", "Select station and track context"],
+      ["02", "Announce", "Speak local persona message"],
+      ["03", "Visualize", "Run visual scenes"],
+      ["04", "Scribe", "Capture draft lyric timing"],
+      ["05", "Package", "Create Ayodhya project intake"],
+      ["06", "Export", "Ship HKD evidence bundle"]
+    ];
+
+    const evidence = [
+      ["Audio source", "Draft until source and creator are verified"],
+      ["Gift action", "Intent only; checkout and receipt evidence NULL"],
+      ["Lyrics sync", "Local draft cues; not verified performance timing"],
+      ["Generated media", "Presentation does not imply production readiness"]
+    ];
+
+    const scaffold = [
+      ["Routes", [
+        "/radio landing command surface",
+        "/radio/runtime React runtime",
+        "/radio/frame absorbed Three.js frame",
+        "/radio/storyboard full storyboard",
+        "/radio-html/Radio_Vaigyaaniq_Full_App.html standalone HTML",
+        "/api/export?format=hkd&scope=media-universe HKD export"
+      ]],
+      ["Core Components", [
+        "App rail and command topbar",
+        "Hero banner and now-routed card",
+        "Quantum tuner and spectrum bars",
+        "Station grid and track list",
+        "Samaya/TTS controls",
+        "Canvas visualizer",
+        "Lyrics scribe",
+        "Gift modal",
+        "Storyboard and scaffold panels"
+      ]],
+      ["Data Contracts", [
+        "Station: id, name, count, hero, songs[]",
+        "Track: title, transliteration, duration, audio, cover, transcript",
+        "Lyric cue: time, text, source, verification",
+        "Storyboard shot: route, ui, motion, data, PHKD, next action",
+        "Export: hkdType, verification, provenance, unknowns as NULL"
+      ]],
+      ["Events", [
+        "station:selected",
+        "track:selected",
+        "tts:speak",
+        "tts:stop",
+        "visualizer:sceneChanged",
+        "lyrics:markLine",
+        "social:liked",
+        "social:saved",
+        "gift:intentOpened",
+        "export:hkdDraft"
+      ]],
+      ["Storage", [
+        "localStorage for like/save state",
+        "localStorage-ready lyric cue keys",
+        "Blob URLs for draft LRC/HKD exports",
+        "No wallet, checkout, receipt, or server payment storage in this scaffold"
+      ]],
+      ["PHKD Gates", [
+        "No fabricated citations",
+        "No production-ready audio claim",
+        "No verified lyric timing without evidence",
+        "No payment success without receipt evidence",
+        "No telemetry claim from decorative frequency UI",
+        "Unknown values remain NULL"
+      ]]
+    ];
+
+    const stateMatrix = [
+      ["Draft", ["Default state for visual, lyric, TTS, gift, and export artifacts"]],
+      ["Local", ["Browser-only actions: TTS, canvas, social toggles, lyric cue drafts"]],
+      ["Evidence Pending", ["Requires source, creator, artifact, date, and verification chain"]],
+      ["Verified", ["Reserved for future evidence-backed assets only; not asserted here"]]
+    ];
+
+    const stations = [
+      ["Mahamatya", "12 tracks"],
+      ["Gokul", "8 tracks"],
+      ["Kaal Chakra", "9 tracks"],
+      ["Swarnim Sale", "7 tracks"],
+      ["Biolab Radio", "5 tracks"],
+      ["Cosmic Conversations", "6 tracks"]
+    ];
+
+    const tracks = [
+      "THE SWARNIM SALE",
+      "Raja Core Anthem",
+      "Gokul Battle Cry",
+      "Kaal Bhairav Stotra",
+      "Mukti Dynamic Rhythm"
+    ];
+
+    const scenes = ["Sphere", "Bars", "Particles", "Waveform", "Terrain", "Rings", "Mandala", "Gravity", "Cloth", "Vortex", "Shockwave", "Shader", "Shadow", "Liquid"];
+
+    const storyboard = [
+      ["Landing Command Surface", "/radio", ["Operator Enters Radio", "Broadcast Hero Locks Context", "Console Confirms Evidence Posture"]],
+      ["Live Runtime Broadcast", "/radio/runtime", ["Catalog Loads Into Runtime", "Operator Tunes Station", "Operator Selects Track"]],
+      ["Samaya Announcement TTS", "/radio/runtime#radioSamaya", ["Samaya Panel Generates Local Context", "Persona Voice Speaks Announcement"]],
+      ["3D Audio Visualizer Pro", "/radio/runtime#radioVisualizer", ["Visualizer Scene Opens", "Operator Selects Advanced Scene", "Operator Records Visual Output"]],
+      ["Synced Lyrics Scribe", "/radio/runtime#radioLyricsScribe", ["Lyrics Scribe Opens Track", "Operator Marks Draft Line", "Operator Imports And Exports Lyrics"]],
+      ["Social, Gift, And Project Intake", "/radio/runtime", ["Operator Saves Or Likes Track", "Gift Intent Opens Modal", "Create Project From Track"]],
+      ["Archive, Frame, And Export", "/radio/frame", ["Open Absorbed Three Frame", "Open Original HTML Prototype", "Export Media Universe HKD"]]
+    ];
+
+    const byId = (id) => document.getElementById(id);
+
+    function renderCards() {
+      byId("moduleGrid").innerHTML = modules.map(([code, title, body, href]) => `
+        <a class="module" href="${href}"><span>${code}</span><strong>${title}</strong><p>${body}</p></a>
+      `).join("");
+
+      byId("workflowGrid").innerHTML = workflows.map(([step, title, body]) => `
+        <article class="workflow"><span>${step}</span><b>${title}</b><small>${body}</small></article>
+      `).join("");
+
+      byId("evidenceGrid").innerHTML = evidence.map(([title, body]) => `
+        <article class="evidence"><span class="card-label">${title}</span><p>${body}</p></article>
+      `).join("");
+
+      byId("scaffoldGrid").innerHTML = scaffold.map(([title, items]) => `
+        <article class="scaffold-card"><span class="card-label">${title}</span><b>${items.length} entries</b><ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul></article>
+      `).join("");
+
+      byId("stateGrid").innerHTML = stateMatrix.map(([title, items]) => `
+        <article class="state-card"><span class="card-label">${title}</span><b>${title}</b><ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul></article>
+      `).join("");
+
+      byId("stationList").innerHTML = stations.map(([name, count], index) => `
+        <button class="station ${index === 0 ? "active" : ""}" data-station="${name}"><b>${name}</b><small>${count}</small></button>
+      `).join("");
+
+      byId("trackList").innerHTML = tracks.map((track, index) => `
+        <button class="station ${index === 0 ? "active" : ""}" data-track="${track}"><b>${track}</b><small>${index ? "DRAFT" : "LIVE"}</small></button>
+      `).join("");
+
+      byId("vizControls").innerHTML = scenes.map((scene, index) => `
+        <button class="${index === 0 ? "primary" : ""}" data-scene="${scene}">${scene}</button>
+      `).join("") + '<button data-scene="Mic Input">Mic Input</button><button data-scene="Record">Record</button><button data-scene="Stop">Stop</button>';
+
+      byId("storyMap").innerHTML = storyboard.map((sequence, index) => `
+        <a href="#sequence-${index + 1}"><span>${String(index + 1).padStart(2, "0")}</span><b>${sequence[0]}</b><small>${sequence[2].length} shots · ${sequence[1]}</small></a>
+      `).join("");
+
+      byId("storySequences").innerHTML = storyboard.map((sequence, sequenceIndex) => `
+        <section class="sequence" id="sequence-${sequenceIndex + 1}">
+          <div class="sequence-head">
+            <div><p class="kicker">Sequence ${String(sequenceIndex + 1).padStart(2, "0")}</p><h2>${sequence[0]}</h2><p>Route: ${sequence[1]}</p></div>
+            <a class="buttonish" href="${sequence[1]}">Open Surface</a>
+          </div>
+          <div class="shot-grid">
+            ${sequence[2].map((shot, shotIndex) => `
+              <article class="shot">
+                <header><span>RV-SB-${String(sequenceIndex * 3 + shotIndex + 1).padStart(3, "0")}</span><small>implemented</small></header>
+                <h3>${shot}</h3>
+                <p>User intent, motion, data state, and PHKD guardrail are preserved from the React storyboard registry.</p>
+                <dl>
+                  <div><dt>Data</dt><dd>Local draft state; source/provenance required before verification.</dd></div>
+                  <div><dt>PHKD</dt><dd>Unknowns remain NULL and no production claim is inferred from presentation.</dd></div>
+                  <div><dt>Next</dt><dd>Continue to the linked runtime surface.</dd></div>
+                </dl>
+                <div class="ui-list"><span>Route</span><span>UI</span><span>Motion</span><span>PHKD</span></div>
+              </article>
+            `).join("")}
+          </div>
+        </section>
+      `).join("");
+
+      byId("tunerBars").innerHTML = Array.from({ length: 28 }, (_, index) => `<i style="height:${18 + Math.abs(Math.sin(index * .46)) * 72}px"></i>`).join("");
+    }
+
+    function drawVisualizer() {
+      const canvas = byId("vizCanvas");
+      const ctx = canvas.getContext("2d");
+      let tick = 0;
+      function frame() {
+        tick += .03;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        const grad = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 30, canvas.width / 2, canvas.height / 2, canvas.width / 2);
+        grad.addColorStop(0, "rgba(0,245,212,.32)");
+        grad.addColorStop(1, "rgba(5,11,16,1)");
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        for (let i = 0; i < 80; i++) {
+          const x = i / 79 * canvas.width;
+          const h = Math.abs(Math.sin(i * .26 + tick)) * 220 + 20;
+          ctx.fillStyle = i % 3 ? "rgba(0,245,212,.72)" : "rgba(255,107,53,.72)";
+          ctx.fillRect(x, canvas.height / 2 - h / 2, canvas.width / 120, h);
+        }
+        ctx.strokeStyle = "rgba(255,255,255,.48)";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        for (let i = 0; i < 180; i++) {
+          const x = i / 179 * canvas.width;
+          const y = canvas.height / 2 + Math.sin(i * .16 + tick * 2) * 70 + Math.cos(i * .04 - tick) * 30;
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+        requestAnimationFrame(frame);
+      }
+      frame();
+    }
+
+    function bindInteractions() {
+      document.querySelectorAll("[data-track]").forEach((button) => {
+        button.addEventListener("click", () => {
+          document.querySelectorAll("[data-track]").forEach((item) => item.classList.remove("active"));
+          button.classList.add("active");
+          byId("trackTitle").textContent = button.dataset.track;
+          byId("footerTrack").textContent = button.dataset.track;
+        });
+      });
+
+      document.querySelectorAll("[data-station]").forEach((button) => {
+        button.addEventListener("click", () => {
+          document.querySelectorAll("[data-station]").forEach((item) => item.classList.remove("active"));
+          button.classList.add("active");
+          byId("trackMeta").textContent = `${button.dataset.station} · LOCAL DRAFT`;
+        });
+      });
+
+      document.querySelectorAll("[data-scene]").forEach((button) => {
+        button.addEventListener("click", () => {
+          byId("vizStatus").textContent = `Scene: ${button.dataset.scene} · Input: local/browser · Recording: draft`;
+        });
+      });
+
+      byId("speakBtn").addEventListener("click", () => {
+        const text = `${byId("persona").value} announcement. ${byId("announcement").textContent}`;
+        byId("ttsStatus").textContent = `SPEAKING · ${byId("persona").value.toUpperCase()} · LOCAL BROWSER TTS`;
+        if ("speechSynthesis" in window) {
+          speechSynthesis.cancel();
+          speechSynthesis.speak(new SpeechSynthesisUtterance(text));
+        }
+      });
+
+      byId("stopBtn").addEventListener("click", () => {
+        if ("speechSynthesis" in window) speechSynthesis.cancel();
+        byId("ttsStatus").textContent = "STOPPED · LOCAL BROWSER TTS";
+      });
+
+      byId("markLine").addEventListener("click", () => {
+        const line = byId("lyricDraft").value || "NULL";
+        byId("lyricList").innerHTML = `<span class="card-label">Cue List</span><p>[00:00.00] ${line}</p><small>DRAFT · VERIFIED NULL</small>`;
+        const lrc = `[00:00.00] ${line}`;
+        const hkd = JSON.stringify({ hkdType: "radio.lyrics.scribe", verification: "draft", line }, null, 2);
+        byId("downloadLrc").href = URL.createObjectURL(new Blob([lrc], { type: "text/plain" }));
+        byId("downloadHkd").href = URL.createObjectURL(new Blob([hkd], { type: "application/json" }));
+      });
+
+      byId("likeBtn").addEventListener("click", (event) => event.currentTarget.textContent = event.currentTarget.textContent === "Like" ? "Liked" : "Like");
+      byId("saveBtn").addEventListener("click", (event) => event.currentTarget.textContent = event.currentTarget.textContent === "Save" ? "Saved" : "Save");
+      byId("giftBtn").addEventListener("click", () => byId("giftModal").classList.add("active"));
+      byId("closeGift").addEventListener("click", () => byId("giftModal").classList.remove("active"));
+      byId("giftModal").addEventListener("click", (event) => {
+        if (event.target.id === "giftModal") byId("giftModal").classList.remove("active");
+      });
+
+      setInterval(() => {
+        byId("clock").textContent = `${new Date().toTimeString().split(" ")[0]} DRAFT`;
+      }, 1000);
+    }
+
+    renderCards();
+    drawVisualizer();
+    bindInteractions();
+  </script>
+</body>
+</html>

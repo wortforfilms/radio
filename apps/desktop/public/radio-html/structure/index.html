@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Vaigyaaniq - Future File Structure</title>
+  <link rel="stylesheet" href="../surfaces/surface-kit.css">
+  <style>
+    .tree-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 14px;
+    }
+
+    .tree-panel {
+      display: grid;
+      gap: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: var(--panel);
+    }
+
+    .tree-panel pre {
+      overflow-x: auto;
+      margin: 0;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 8px;
+      padding: 14px;
+      color: #d7fff8;
+      background: rgba(5, 11, 16, .82);
+      font: 12px/1.42 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      white-space: pre;
+    }
+
+    .structure-lane {
+      display: grid;
+      gap: 8px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255,255,255,.035);
+    }
+
+    .structure-lane b {
+      color: var(--ink);
+    }
+
+    .html-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .html-table th,
+    .html-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .html-table th {
+      color: var(--muted);
+      font: 11px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .html-table td {
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    .html-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .html-table a {
+      color: #d7fff8;
+      text-decoration: none;
+    }
+
+    .html-table a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav>
+        <a href="../index.html">HTML</a>
+        <a href="../surfaces/index.html">Surfaces</a>
+        <a href="../surfaces/scaffold.html">Scaffold</a>
+        <a href="../Radio_Vaigyaaniq_Full_App.html">Full</a>
+      </nav>
+      <span>PHKD</span>
+    </aside>
+
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">Future Structure</p>
+          <h1>Radio File Architecture Map</h1>
+          <p>A forward-compatible folder plan for growing Radio Vaigyaaniq without breaking the current browser-openable HTML archive. Current files stay in place; future modules move into typed lanes with redirect or shim pages when required.</p>
+          <div class="surface-actions">
+            <a href="../Radio_Vaigyaaniq_Future_Structure.json">Structure JSON</a>
+            <a href="../Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md">Claude Prompt</a>
+            <a href="../Radio_Vaigyaaniq_Full_App_Scaffold.json">Current Scaffold</a>
+            <a href="../surfaces/ascii-wireframes.html">ASCII Wireframes</a>
+          </div>
+        </div>
+        <div class="status-chip">
+          <span>Mode</span>
+          <b>18</b>
+          <small>html pages mapped</small>
+        </div>
+      </section>
+
+      <section class="tree-grid">
+        <article class="tree-panel">
+          <span class="surface-label">Current</span>
+          <h2>Preserved Browser Archive</h2>
+<pre>radio-html/
+  index.html
+  Radio_Vaigyaaniq_Full_App.html
+  Radio_Vaigyaaniq_Full_App_Scaffold.json
+  Radio_Vaigyaaniq_UX_Dashboard.html
+  Radio_Vaigyaaniq_App_Prototype.html
+  Radio_Vaigyaaniq_Maataa.html
+  assets/
+    radio-vaigyaaniq-landing-hero.png
+    radio-vaigyaaniq-divine-hero.png
+    vendor/
+      three.min.js
+      three.module.min.js
+  surfaces/
+    index.html
+    landing.html
+    runtime.html
+    runtimes-workflows.html
+    ascii-wireframes.html
+    visualizer.html
+    lyrics.html
+    tts.html
+    social-gift.html
+    storyboard.html
+    evidence-export.html
+    scaffold.html
+  structure/
+    index.html</pre>
+        </article>
+
+        <article class="tree-panel">
+          <span class="surface-label">Future</span>
+          <h2>Target Growth Structure</h2>
+<pre>radio-html/
+  app/
+    full-app.html
+    shell.html
+    frame.html
+  surfaces/
+    landing/
+    runtime/
+    visualizer/
+    lyrics/
+    tts/
+    social/
+    storyboard/
+    evidence/
+    scaffold/
+  runtimes/
+    audio/
+    tts/
+    threejs/
+    lyrics/
+    social/
+    project-intake/
+  workflows/
+    station-selection/
+    announcement/
+    visualization/
+    lyric-sync/
+    gifting/
+    export/
+  data/
+    stations/
+    tracks/
+    lyrics/
+    storyboards/
+    evidence/
+    schemas/
+  assets/
+    images/
+    covers/
+    audio/
+    shaders/
+    vendor/
+  imports/
+    html/
+    json/
+    csv/
+    markdown/
+    hkd/
+  exports/
+    hkd/
+    lrc/
+    json/
+    webm/
+  docs/
+    wireframes/
+    storyboards/
+    qa/
+    release/
+  structure/
+    index.html
+    manifest.json</pre>
+        </article>
+      </section>
+
+      <section class="tree-panel">
+        <span class="surface-label">Inventory</span>
+        <h2>All HTML Files</h2>
+        <p>Current browser-openable HTML pages. AppleDouble `._*.html` metadata sidecars are intentionally excluded from this catalog.</p>
+        <table class="html-table">
+          <thead>
+            <tr>
+              <th>Path</th>
+              <th>Role</th>
+              <th>Future Lane</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><a href="../index.html">radio-html/index.html</a></td><td>Static HTML archive index</td><td>app / catalog</td></tr>
+            <tr><td><a href="../Radio_Vaigyaaniq_Full_App.html">radio-html/Radio_Vaigyaaniq_Full_App.html</a></td><td>Standalone full app shell</td><td>app / full-app</td></tr>
+            <tr><td><a href="../Radio_Vaigyaaniq_UX_Dashboard.html">radio-html/Radio_Vaigyaaniq_UX_Dashboard.html</a></td><td>Absorbed UX dashboard prototype</td><td>imports / html archive</td></tr>
+            <tr><td><a href="../Radio_Vaigyaaniq_App_Prototype.html">radio-html/Radio_Vaigyaaniq_App_Prototype.html</a></td><td>Original mobile/app prototype</td><td>imports / html archive</td></tr>
+            <tr><td><a href="../Radio_Vaigyaaniq_Maataa.html">radio-html/Radio_Vaigyaaniq_Maataa.html</a></td><td>Maataa radio prototype surface</td><td>imports / html archive</td></tr>
+            <tr><td><a href="./index.html">radio-html/structure/index.html</a></td><td>Future structure map</td><td>structure</td></tr>
+            <tr><td><a href="../surfaces/index.html">radio-html/surfaces/index.html</a></td><td>Standalone surface index</td><td>surfaces / index</td></tr>
+            <tr><td><a href="../surfaces/landing.html">radio-html/surfaces/landing.html</a></td><td>Landing command surface</td><td>surfaces / landing</td></tr>
+            <tr><td><a href="../surfaces/runtime.html">radio-html/surfaces/runtime.html</a></td><td>Live runtime surface</td><td>surfaces / runtime</td></tr>
+            <tr><td><a href="../surfaces/runtimes-workflows.html">radio-html/surfaces/runtimes-workflows.html</a></td><td>Runtime and workflow board</td><td>workflows / overview</td></tr>
+            <tr><td><a href="../surfaces/ascii-wireframes.html">radio-html/surfaces/ascii-wireframes.html</a></td><td>Full application ASCII wireframes</td><td>docs / wireframes</td></tr>
+            <tr><td><a href="../surfaces/visualizer.html">radio-html/surfaces/visualizer.html</a></td><td>3D visualizer surface</td><td>surfaces / visualizer</td></tr>
+            <tr><td><a href="../surfaces/lyrics.html">radio-html/surfaces/lyrics.html</a></td><td>Synced lyrics scribe surface</td><td>surfaces / lyrics</td></tr>
+            <tr><td><a href="../surfaces/tts.html">radio-html/surfaces/tts.html</a></td><td>Persona TTS Samaya surface</td><td>surfaces / tts</td></tr>
+            <tr><td><a href="../surfaces/social-gift.html">radio-html/surfaces/social-gift.html</a></td><td>Social actions and gift intent surface</td><td>surfaces / social</td></tr>
+            <tr><td><a href="../surfaces/storyboard.html">radio-html/surfaces/storyboard.html</a></td><td>Storyboard coverage surface</td><td>docs / storyboards</td></tr>
+            <tr><td><a href="../surfaces/evidence-export.html">radio-html/surfaces/evidence-export.html</a></td><td>Evidence and export boundary surface</td><td>surfaces / evidence</td></tr>
+            <tr><td><a href="../surfaces/scaffold.html">radio-html/surfaces/scaffold.html</a></td><td>Implementation scaffold surface</td><td>docs / release</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="surface-grid three">
+        <article class="surface-card">
+          <span class="surface-label">Rule</span>
+          <b>Keep Compatibility</b>
+          <p>Do not move existing public HTML files until a shim or redirect preserves the current file URL.</p>
+        </article>
+        <article class="surface-card">
+          <span class="surface-label">Rule</span>
+          <b>Separate Data From Views</b>
+          <p>Future station, track, lyric, storyboard, and evidence records should live in `data/` before UI pages consume them.</p>
+        </article>
+        <article class="surface-card">
+          <span class="surface-label">Rule</span>
+          <b>Fail Closed</b>
+          <p>Missing source, creator, receipt, citation, timing, or verification remains NULL in every lane.</p>
+        </article>
+      </section>
+
+      <section class="tree-grid">
+        <article class="tree-panel">
+          <span class="surface-label">Migration</span>
+          <h2>Phased Move Plan</h2>
+<pre>Phase 01: keep current files, add structure manifest
+Phase 02: extract shared data into data/*.json
+Phase 03: split repeated UI into surface modules
+Phase 04: move Three.js runtime assets into runtimes/threejs
+Phase 05: add import/export lanes and schema validation
+Phase 06: create compatibility shims for any moved public HTML
+Phase 07: add browser QA snapshots and evidence reports
+Phase 08: promote only verified surfaces, keep draft surfaces labeled</pre>
+        </article>
+
+        <article class="tree-panel">
+          <span class="surface-label">Ownership</span>
+          <h2>Folder Responsibility</h2>
+<pre>app/         complete browser app shells
+surfaces/    individual user-facing pages
+runtimes/    reusable engines and browser APIs
+workflows/   task flows and operator sequences
+data/        normalized content and schemas
+assets/      images, covers, audio, shaders, vendor libraries
+imports/     raw incoming user/source files
+exports/     generated draft artifacts
+docs/        design, QA, release, and evidence notes
+structure/   future architecture maps and manifests</pre>
+        </article>
+      </section>
+
+      <section class="tree-grid">
+        <article class="tree-panel">
+          <span class="surface-label">Tauri</span>
+          <h2>Path To Ship Full Tauri</h2>
+<pre>Current evidence:
+  apps/web/                         active Next.js app
+  apps/web/public/radio-html/       browser-openable Radio archive
+  _radio_index/tauri_app/src-tauri/ legacy/reference Tauri scaffold
+  apps/desktop/                     NULL / not implemented
+
+Target ship path:
+  apps/desktop/
+    package.json
+    index.html
+    src/
+      main.tsx
+      app-shell.tsx
+      radio-bridge.ts
+    src-tauri/
+      Cargo.toml
+      build.rs
+      tauri.conf.json
+      capabilities/
+      icons/
+      src/
+        main.rs
+        commands.rs
+        evidence.rs
+        storage.rs
+    public/
+      radio-html/                   copied or bundled from apps/web/public
+    evidence/
+      tauri-build-report.json
+      bundle-report.json
+      qa-report.json</pre>
+        </article>
+
+        <article class="tree-panel">
+          <span class="surface-label">Gates</span>
+          <h2>Tauri Shipping Gates</h2>
+<pre>01 scaffold apps/desktop from verified current web assets
+02 pin Tauri version and Rust toolchain
+03 define capabilities with least privilege
+04 copy Radio HTML archive into desktop public bundle
+05 wire app shell to /radio and /radio-html entrypoints
+06 add desktop-safe storage and evidence commands
+07 run npm test
+08 run npm run build
+09 run cargo check inside apps/desktop/src-tauri
+10 run tauri dev smoke test
+11 run tauri build bundle
+12 record bundle hash, platform, date, source commit
+13 mark blocked unless installer opens and evidence exists</pre>
+        </article>
+      </section>
+
+      <section class="tree-panel">
+        <span class="surface-label">Claude</span>
+        <h2>Prompt To Produce Shipping Scaffold</h2>
+<pre>You are a senior desktop platform architect and Tauri release engineer.
+
+Objective:
+Create a production-oriented, fail-closed Tauri desktop shipping scaffold for Radio Vaigyaaniq in this repository.
+
+Use:
+  apps/web                                  active web app
+  apps/web/public/radio-html                Radio HTML archive
+  apps/web/public/radio-html/structure      structure map
+  _radio_index/tauri_app/src-tauri          legacy/reference Tauri scaffold
+  apps/desktop                              target desktop app
+
+PHKD:
+  unknown values = NULL
+  no fabricated build, installer, audio, telemetry, payment, or release claims
+  preserve provenance
+  fail closed when evidence is missing
+
+Output:
+  scaffold apps/desktop
+  wire Tauri shell to Radio archive
+  copy/bundle radio-html assets
+  add least-privilege capabilities
+  add Rust commands for evidence, storage, and bundle metadata
+  add evidence JSON reports
+  add dev/build/check scripts
+  add README with blocked release rules
+
+Gates:
+  npm test
+  npm run build
+  cargo check in apps/desktop/src-tauri
+  tauri dev smoke
+  tauri build bundle
+  bundle hash
+  platform metadata
+  source commit
+  installer open evidence
+
+Final response:
+  files changed
+  commands run with actual results
+  blocked gates with exact reasons
+  final state: draft, blocked, or verified</pre>
+        <div class="surface-actions">
+          <a href="../Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md">Open Full Claude Prompt</a>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

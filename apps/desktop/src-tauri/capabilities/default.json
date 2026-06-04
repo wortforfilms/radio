@@ -1,0 +1,13 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Least-privilege capability for the main window. Only core defaults; custom evidence/storage/bundle commands are exposed via the invoke handler. No fs, shell, http, or dialog plugins are granted.",
+  "local": true,
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "core:window:allow-set-title",
+    "core:app:allow-version",
+    "core:app:allow-name"
+  ]
+}

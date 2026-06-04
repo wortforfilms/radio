@@ -1,0 +1,58 @@
+{
+  "report": "bundle-report",
+  "generated_at": "2026-06-04T12:15:42.641Z",
+  "source_commit": "272f61108c7f3ef8ef99c67489f6895c7ee753eb",
+  "bundle": null,
+  "installer": null,
+  "bundle_hash": null,
+  "bundle_platform": null,
+  "status": "blocked",
+  "reason": "No bundle built in this environment (cargo/tauri CLI absent).",
+  "asset_provenance": [
+    {
+      "file": "radio-html/PROVENANCE.json",
+      "sha256": "7dfa25b297b2bcd3777d6c3fbee3e66ae5879dc355018629a48af8d6bc2ba986",
+      "bytes": 324
+    },
+    {
+      "file": "radio-html/Radio_Vaigyaaniq_App_Prototype.html",
+      "sha256": "fd1ae7e3f3c7ae1d6851d08ac613b75af88845260b03449fae3e50a36af4480d",
+      "bytes": 866256
+    },
+    {
+      "file": "radio-html/Radio_Vaigyaaniq_Full_App.html",
+      "sha256": "da8936103451b0c954c763e4c1366ee8565d2e7ba2c4e6a4653967ad97c9cd33",
+      "bytes": 37011
+    },
+    {
+      "file": "radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json",
+      "sha256": "8d3d68fbe2c0e6e0e1faace5eb5848d995b147f86b77bea188559efbde2f05e1",
+      "bytes": 6704
+    },
+    {
+      "file": "radio-html/Radio_Vaigyaaniq_Future_Structure.json",
+      "sha256": "3e7570920a53ec7f87a528b3d7a60edb9d6126cb60a6e460f4eca323aa11dd88",
+      "bytes": 8075
+    },
+    {
+      "file": "radio-html/Radio_Vaigyaaniq_Maataa.html",
+      "sha256": "ab5186f6ecf24c1a7ac909fec3e11a327e1e95bd3e04ff72410ef7857ab837d9",
+      "bytes": 112538
+    },
+    {
+      "file": "radio-html/Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md",
+      "sha256": "2de9e4e1cfc9dc5a382364c305e833aea768bd50509e89f199ec7468f716f375",
+      "bytes": 3276
+    },
+    {
+      "file": "radio-html/Radio_Vaigyaaniq_UX_Dashboard.html",
+      "sha256": "46732aa77678c52582e671a8b1617bc2d2cf89c5e5cb0bbd2d0064e45fd1a1cb",
+      "bytes": 82397
+    },
+    {
+      "file": "radio-html/index.html",
+      "sha256": "abd56ce6b02a97c8a7338894b22b09813fd32f705c05608720a39678f1424ea2",
+      "bytes": 2432
+    }
+  ]
+}

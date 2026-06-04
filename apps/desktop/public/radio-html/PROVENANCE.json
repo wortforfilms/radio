@@ -1,0 +1,7 @@
+{
+  "copied_from": "apps/web/public/radio-html",
+  "copied_at": "2026-06-04T12:14:48Z",
+  "source_commit": "272f61108c7f3ef8ef99c67489f6895c7ee753eb",
+  "note": "Copy preserves original; apps/web/public/radio-html is unchanged. Per-file sha256 in apps/desktop/evidence/bundle-report.json.",
+  "appledouble_excluded": true
+}

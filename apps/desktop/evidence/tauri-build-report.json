@@ -1,0 +1,37 @@
+{
+  "report": "tauri-build-report",
+  "generated_at": "2026-06-04T12:15:42.641Z",
+  "source_commit": "272f61108c7f3ef8ef99c67489f6895c7ee753eb",
+  "source_commit_short": "272f611",
+  "branch": "master",
+  "evidence_host": {
+    "os": "linux",
+    "arch": "arm64",
+    "node": "v22.22.0",
+    "npm": "10.9.4",
+    "cargo": null,
+    "rustc": null,
+    "tauri_cli": null,
+    "note": "evidence-generation host; NOT a verified macOS/Windows build host"
+  },
+  "gates": {
+    "frontend_build": {
+      "status": "not-run",
+      "detail": "Deferred: heavy Next build. Run `npm run build` at repo root on a dev machine and re-run evidence."
+    },
+    "cargo_check": {
+      "status": "blocked",
+      "detail": "cargo/rustc not installed in this environment"
+    },
+    "tauri_dev_smoke": {
+      "status": "blocked",
+      "detail": "tauri CLI not installed"
+    },
+    "tauri_bundle": {
+      "status": "blocked",
+      "detail": "tauri CLI not installed"
+    }
+  },
+  "status": "blocked",
+  "notes": "Rust/Tauri gates require cargo + tauri CLI + a display + a built bundle. Run on the target macOS/Windows host."
+}
