@@ -2,7 +2,7 @@
   "id": "radio-vaigyaaniq-installer-pipeline",
   "title": "Radio Vaigyaaniq Tauri Installer Pipeline",
   "generatedAt": "2026-06-05",
-  "verificationState": "draft",
+  "verificationState": "draft-local-app-built",
   "phkd": {
     "rule": "fail_closed",
     "unknownValues": "NULL",
@@ -14,8 +14,9 @@
     "platformTargets": 3,
     "artifactSlots": 6,
     "signedArtifacts": 0,
-    "nullArtifacts": 6,
-    "blocked": 6
+    "nullArtifacts": 5,
+    "blocked": 5,
+    "localUnsignedArtifacts": 1
   },
   "commands": [
     {
@@ -32,9 +33,9 @@
     },
     {
       "key": "tauri-build",
-      "command": "npm run tauri:build",
-      "status": "blocked",
-      "description": "Blocked until a verified Tauri app and signing identity exist."
+      "command": "cd apps/desktop && npm run evidence",
+      "status": "pass-local-app",
+      "description": "Builds unsigned local macOS .app and records bundle hash; signing remains blocked."
     }
   ],
   "records": [
@@ -42,10 +43,10 @@
       "key": "macos-app",
       "platform": "macOS",
       "format": "app",
-      "path": null,
-      "checksum": null,
+      "path": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
+      "checksum": "7f2c93d899e651c04ba4495ccef51eb41cefb030341f663114a575bff4e780c8",
       "signingEvidence": null,
-      "status": "blocked"
+      "status": "draft-ready-unsigned"
     },
     {
       "key": "macos-dmg",

@@ -2,7 +2,7 @@
   "id": "radio-vaigyaaniq-desktop-alpha-bundle",
   "title": "Radio Vaigyaaniq Desktop Alpha Bundle",
   "generatedAt": "2026-06-05",
-  "verificationState": "draft-alpha",
+  "verificationState": "draft-local-app-built",
   "phkd": {
     "rule": "fail_closed",
     "unknownValues": "NULL",
@@ -15,7 +15,8 @@
     "includedDataFrames": 17,
     "signedInstallers": 0,
     "productionReady": 0,
-    "blockers": 4
+    "blockers": 4,
+    "localUnsignedArtifacts": 1
   },
   "alphaState": "local-alpha-no-ship",
   "launchModes": [
@@ -32,13 +33,19 @@
       "evidence": "/radio-html/surfaces/index.html"
     },
     {
-      "key": "tauri-installer",
-      "label": "Signed Tauri installer",
-      "status": "blocked",
-      "evidence": "/radio-html/data/installer-evidence.json"
+      "key": "tauri-app",
+      "label": "Unsigned local macOS .app",
+      "status": "draft-ready-unsigned",
+      "evidence": "/apps/desktop/evidence/bundle-report.json"
     }
   ],
   "records": [
+    {
+      "key": "local-macos-app",
+      "label": "Unsigned local macOS .app built",
+      "status": "draft-ready-unsigned",
+      "blocker": "signing/notarization and manual open evidence still NULL"
+    },
     {
       "key": "no-ship-labels",
       "label": "Visible NO_SHIP labels",

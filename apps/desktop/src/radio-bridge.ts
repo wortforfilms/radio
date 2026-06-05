@@ -8,8 +8,8 @@ let invokeFn: ((cmd: string, args?: Json) => Promise<unknown>) | null = null;
 async function getInvoke() {
   if (invokeFn) return invokeFn;
   try {
-    const core = await import("@tauri-apps/api/core");
-    invokeFn = core.invoke as typeof invokeFn;
+    const core = await import(/* @vite-ignore */ "@tauri-apps/api/core") as { invoke?: typeof invokeFn };
+    invokeFn = core.invoke ?? null;
     return invokeFn;
   } catch {
     return null; // not in Tauri runtime

@@ -74,6 +74,7 @@
       document.getElementById("tauriMetrics").innerHTML = [
         ["Draft Ready", data.counts.draftReady, "Checklist gates with draft-local evidence."],
         ["Blocked", data.counts.blocked, "Gates that remain fail-closed."],
+        ["Not Run", data.counts.notRun, "Manual/GUI gates still requiring human evidence."],
         ["Reason", data.reason, "Why shipment cannot be claimed."]
       ].map(([label, value, body]) => `<article class="surface-card"><span class="surface-label">${label}</span><b>${valueText(value)}</b><p>${body}</p></article>`).join("");
 
@@ -94,8 +95,8 @@
 
       document.getElementById("platformMatrix").innerHTML = (data.platformMatrix || []).map((platform) => `
         <article class="runtime-row">
-          <span>${platform.key}</span>
-          <div><b>${platform.label}</b><p>artifact ${valueText(platform.artifact)} · signature ${valueText(platform.signature)} · notarization ${valueText(platform.notarization)}</p></div>
+          <span>${platform.key || platform.platform}</span>
+          <div><b>${platform.label || platform.platform}</b><p>artifact ${valueText(platform.artifact)} · checksum ${valueText(platform.checksum)} · signature ${valueText(platform.signature)} · notarization ${valueText(platform.notarization)}</p></div>
           <small class="surface-state-pill">${platform.status}</small>
         </article>
       `).join("");

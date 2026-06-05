@@ -1,28 +1,31 @@
 {
   "report": "qa-report",
-  "generated_at": "2026-06-04T13:13:32.411Z",
-  "source_commit": "c0912cc163dd3c9d2cfd297bab9a2e864a351820",
+  "generated_at": "2026-06-05T12:01:32.021Z",
+  "source_commit": "a55d53b66810678d71b4ce5514db5935f2ac7e30",
   "branch": "master",
   "evidence_host": {
     "os": "darwin",
     "arch": "arm64",
+    "appleDoubleRemoved": 145,
+    "cargoTargetDir": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target",
     "node": "v22.22.3",
     "npm": "10.9.8",
-    "cargo": "cargo 1.91.0 (ea2d97820 2025-10-10)",
-    "rustc": "rustc 1.91.0 (f8297e351 2025-10-28)",
+    "cargo": "cargo 1.91.0 (Homebrew)",
+    "rustc": "rustc 1.91.0 (f8297e351 2025-10-28) (Homebrew)",
     "tauri_cli": "tauri-cli 2.11.2",
+    "tauri_command": "cargo tauri",
     "note": "evidence-generation host; NOT a verified macOS/Windows build host"
   },
   "gates": [
     {
       "gate": "npm test",
       "status": "pass",
-      "detail": "      Tests  27 passed (27) |    Start at  18:43:38 |    Duration  561ms (transform 588ms, setup 0ms, import 852ms, tests 31ms, environment 1ms)"
+      "detail": "      Tests  35 passed (35) |    Start at  17:31:44 |    Duration  676ms (transform 1.17s, setup 0ms, import 1.61s, tests 88ms, environment 1ms)"
     },
     {
       "gate": "npm run build",
-      "status": "not-run",
-      "detail": "Deferred: heavy Next build. Run `npm run build` at repo root on a dev machine and re-run evidence."
+      "status": "pass",
+      "detail": "○  (Static)   prerendered as static content | ●  (SSG)      prerendered as static HTML (uses generateStaticParams) | ƒ  (Dynamic)  server-rendered on demand"
     },
     {
       "gate": "cargo check (apps/desktop/src-tauri)",
@@ -36,13 +39,13 @@
     },
     {
       "gate": "tauri bundle build",
-      "status": "blocked",
-      "detail": "bundle build not executed in this environment"
+      "status": "pass",
+      "detail": "tauri build ok; 1 installer artifact(s) under target/release/bundle"
     },
     {
       "gate": "bundle hash recorded",
-      "status": "blocked",
-      "detail": "no bundle artifact produced; nothing to hash"
+      "status": "pass",
+      "detail": "5 artifact(s) sha256-hashed (primary 7f2c93d899e6…)"
     },
     {
       "gate": "platform metadata recorded",
@@ -52,12 +55,12 @@
     {
       "gate": "source commit recorded",
       "status": "pass",
-      "detail": "c0912cc"
+      "detail": "a55d53b"
     },
     {
       "gate": "installer opens successfully",
-      "status": "blocked",
-      "detail": "no installer produced; cannot verify it opens"
+      "status": "not-run",
+      "detail": "installer built (../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app); automated open not performed — verify by launching it"
     },
     {
       "gate": "QA report records every gate",
@@ -65,13 +68,41 @@
       "detail": "10 gates recorded"
     }
   ],
+  "release_blockers": [
+    {
+      "gate": "installer signing evidence",
+      "status": "blocked",
+      "detail": "signing identity, signature verification, and notarization evidence are NULL"
+    },
+    {
+      "gate": "audio rights evidence",
+      "status": "blocked",
+      "detail": "releaseAllowed=0 blocked=19"
+    },
+    {
+      "gate": "gift/payment proof",
+      "status": "blocked",
+      "detail": "paymentReceipts=0 blocked=4"
+    },
+    {
+      "gate": "human release review",
+      "status": "blocked",
+      "detail": "verified=0 blocked=4"
+    }
+  ],
   "summary": {
-    "pass": 5,
+    "pass": 8,
     "fail": 0,
-    "blocked": 4,
+    "blocked": 1,
     "not-run": 1,
     "total": 10
   },
+  "release_blocker_summary": {
+    "pass": 0,
+    "blocked": 4,
+    "total": 4
+  },
   "verdict": "draft",
+  "ship_decision": "NO_SHIP",
   "phkd": "fail-closed: unknowns are NULL; missing tools are blocked, not faked."
 }

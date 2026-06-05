@@ -1,23 +1,26 @@
 {
   "report": "tauri-build-report",
-  "generated_at": "2026-06-04T13:13:32.411Z",
-  "source_commit": "c0912cc163dd3c9d2cfd297bab9a2e864a351820",
-  "source_commit_short": "c0912cc",
+  "generated_at": "2026-06-05T12:01:32.021Z",
+  "source_commit": "a55d53b66810678d71b4ce5514db5935f2ac7e30",
+  "source_commit_short": "a55d53b",
   "branch": "master",
   "evidence_host": {
     "os": "darwin",
     "arch": "arm64",
+    "appleDoubleRemoved": 145,
+    "cargoTargetDir": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target",
     "node": "v22.22.3",
     "npm": "10.9.8",
-    "cargo": "cargo 1.91.0 (ea2d97820 2025-10-10)",
-    "rustc": "rustc 1.91.0 (f8297e351 2025-10-28)",
+    "cargo": "cargo 1.91.0 (Homebrew)",
+    "rustc": "rustc 1.91.0 (f8297e351 2025-10-28) (Homebrew)",
     "tauri_cli": "tauri-cli 2.11.2",
+    "tauri_command": "cargo tauri",
     "note": "evidence-generation host; NOT a verified macOS/Windows build host"
   },
   "gates": {
     "frontend_build": {
-      "status": "not-run",
-      "detail": "Deferred: heavy Next build. Run `npm run build` at repo root on a dev machine and re-run evidence."
+      "status": "pass",
+      "detail": "○  (Static)   prerendered as static content | ●  (SSG)      prerendered as static HTML (uses generateStaticParams) | ƒ  (Dynamic)  server-rendered on demand"
     },
     "cargo_check": {
       "status": "pass",
@@ -28,10 +31,33 @@
       "detail": "no display in this environment for a dev smoke test"
     },
     "tauri_bundle": {
-      "status": "blocked",
-      "detail": "bundle build not executed in this environment"
+      "status": "pass",
+      "detail": "tauri build ok; 1 installer artifact(s) under target/release/bundle"
     }
   },
+  "release_blockers": [
+    {
+      "gate": "installer signing evidence",
+      "status": "blocked",
+      "detail": "signing identity, signature verification, and notarization evidence are NULL"
+    },
+    {
+      "gate": "audio rights evidence",
+      "status": "blocked",
+      "detail": "releaseAllowed=0 blocked=19"
+    },
+    {
+      "gate": "gift/payment proof",
+      "status": "blocked",
+      "detail": "paymentReceipts=0 blocked=4"
+    },
+    {
+      "gate": "human release review",
+      "status": "blocked",
+      "detail": "verified=0 blocked=4"
+    }
+  ],
+  "ship_decision": "NO_SHIP",
   "status": "partial",
   "notes": "Rust/Tauri gates require cargo + tauri CLI + a display + a built bundle. Run on the target macOS/Windows host."
 }

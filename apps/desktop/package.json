@@ -7,8 +7,8 @@
   "scripts": {
     "fe:dev": "vite",
     "fe:build": "vite build",
-    "dev": "tauri dev",
-    "build": "tauri build",
+    "dev": "cargo tauri dev",
+    "build": "node scripts/tauri-build.mjs",
     "cargo:check": "cargo check --manifest-path src-tauri/Cargo.toml",
     "evidence": "node scripts/generate-evidence.mjs"
   },

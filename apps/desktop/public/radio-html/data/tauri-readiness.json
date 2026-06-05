@@ -3,7 +3,7 @@
   "title": "Radio Vaigyaaniq Tauri Shipping Readiness",
   "generatedAt": "2026-06-05",
   "version": "2.0.0",
-  "verificationState": "draft",
+  "verificationState": "draft-local-app-built",
   "phkd": {
     "rule": "fail_closed",
     "unknownValues": "NULL",
@@ -14,7 +14,7 @@
     ]
   },
   "shipDecision": "NO_SHIP",
-  "reason": "Installer, signing, audio rights, payment, and release review evidence remain NULL.",
+  "reason": "Local macOS .app bundle, bundle hash, tests, build, and cargo check are recorded. Shipment remains NO_SHIP until GUI smoke, installer-open verification, signing/notarization, rights, payment, and human release review evidence exist.",
   "noShipDashboard": {
     "productionReady": false,
     "playableAudio": false,
@@ -102,9 +102,13 @@
       ],
       "signed": false,
       "notarized": false,
-      "artifact": null,
-      "checksum": null,
-      "status": "blocked"
+      "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
+      "checksum": "7f2c93d899e651c04ba4495ccef51eb41cefb030341f663114a575bff4e780c8",
+      "status": "draft-ready-unsigned",
+      "key": "macos",
+      "label": "macOS local app bundle",
+      "signature": null,
+      "notarization": null
     },
     {
       "platform": "Windows",
@@ -136,10 +140,10 @@
       "key": "macos-app",
       "platform": "macOS",
       "format": "app",
-      "path": null,
-      "checksum": null,
+      "path": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
+      "checksum": "7f2c93d899e651c04ba4495ccef51eb41cefb030341f663114a575bff4e780c8",
       "signingEvidence": null,
-      "status": "blocked"
+      "status": "draft-ready-unsigned"
     },
     {
       "key": "macos-dmg",
@@ -265,10 +269,54 @@
       "label": "Desktop Alpha Bundle",
       "status": "draft-ready",
       "evidence": "/radio-html/data/desktop-alpha-bundle.json"
+    },
+    {
+      "key": "tauri-app-bundle",
+      "label": "Local macOS .app bundle",
+      "status": "draft-ready",
+      "evidence": "/apps/desktop/evidence/bundle-report.json"
+    },
+    {
+      "key": "bundle-hash",
+      "label": "Bundle hash recorded",
+      "status": "draft-ready",
+      "evidence": "/apps/desktop/evidence/bundle-report.json"
+    },
+    {
+      "key": "gui-smoke",
+      "label": "Tauri dev smoke test",
+      "status": "blocked",
+      "evidence": "/apps/desktop/evidence/qa-report.json"
+    },
+    {
+      "key": "installer-open",
+      "label": "Installer/app opens successfully",
+      "status": "not-run",
+      "evidence": "/apps/desktop/evidence/qa-report.json"
     }
   ],
   "counts": {
-    "draftReady": 5,
-    "blocked": 8
+    "draftReady": 7,
+    "blocked": 9,
+    "notRun": 1
+  },
+  "localDesktopEvidence": {
+    "qaReport": "/apps/desktop/evidence/qa-report.json",
+    "bundleReport": "/apps/desktop/evidence/bundle-report.json",
+    "tauriBuildReport": "/apps/desktop/evidence/tauri-build-report.json",
+    "verdict": "draft",
+    "shipDecision": "NO_SHIP",
+    "summary": {
+      "pass": 8,
+      "fail": 0,
+      "blocked": 1,
+      "not-run": 1,
+      "total": 10
+    },
+    "releaseBlockerSummary": {
+      "pass": 0,
+      "blocked": 4,
+      "total": 4
+    }
   }
 }
