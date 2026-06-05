@@ -3,7 +3,7 @@
   "title": "Radio Vaigyaaniq Tauri Shipping Readiness",
   "generatedAt": "2026-06-05",
   "version": "2.0.0",
-  "verificationState": "draft-local-app-built",
+  "verificationState": "draft-local-app-built-open-proof-null",
   "phkd": {
     "rule": "fail_closed",
     "unknownValues": "NULL",
@@ -14,7 +14,7 @@
     ]
   },
   "shipDecision": "NO_SHIP",
-  "reason": "Local macOS .app bundle, bundle hash, tests, build, and cargo check are recorded. Shipment remains NO_SHIP until GUI smoke, installer-open verification, signing/notarization, rights, payment, and human release review evidence exist.",
+  "reason": "Local macOS .app bundle, bundle hash, tests, build, cargo check, and app bundle structure are recorded. Shipment remains NO_SHIP until GUI smoke/open proof, signing/notarization, rights, payment, and human release review evidence exist.",
   "noShipDashboard": {
     "productionReady": false,
     "playableAudio": false,
@@ -103,7 +103,7 @@
       "signed": false,
       "notarized": false,
       "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-      "checksum": "7f2c93d899e651c04ba4495ccef51eb41cefb030341f663114a575bff4e780c8",
+      "checksum": "41eeec852a44ec86299911ae90561576eb1c874badee9fcc23148d15c3c324e4",
       "status": "draft-ready-unsigned",
       "key": "macos",
       "label": "macOS local app bundle",
@@ -141,7 +141,7 @@
       "platform": "macOS",
       "format": "app",
       "path": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-      "checksum": "7f2c93d899e651c04ba4495ccef51eb41cefb030341f663114a575bff4e780c8",
+      "checksum": "41eeec852a44ec86299911ae90561576eb1c874badee9fcc23148d15c3c324e4",
       "signingEvidence": null,
       "status": "draft-ready-unsigned"
     },
@@ -292,11 +292,17 @@
       "key": "installer-open",
       "label": "Installer/app opens successfully",
       "status": "not-run",
-      "evidence": "/apps/desktop/evidence/qa-report.json"
+      "evidence": "/apps/desktop/evidence/app-open-report.json"
+    },
+    {
+      "key": "app-bundle-structure",
+      "label": "App bundle structure",
+      "status": "draft-ready",
+      "evidence": "/apps/desktop/evidence/app-open-report.json"
     }
   ],
   "counts": {
-    "draftReady": 7,
+    "draftReady": 8,
     "blocked": 9,
     "notRun": 1
   },
@@ -304,6 +310,7 @@
     "qaReport": "/apps/desktop/evidence/qa-report.json",
     "bundleReport": "/apps/desktop/evidence/bundle-report.json",
     "tauriBuildReport": "/apps/desktop/evidence/tauri-build-report.json",
+    "appOpenReport": "/apps/desktop/evidence/app-open-report.json",
     "verdict": "draft",
     "shipDecision": "NO_SHIP",
     "summary": {
@@ -317,6 +324,11 @@
       "pass": 0,
       "blocked": 4,
       "total": 4
+    },
+    "appOpenGate": {
+      "name": "installer opens successfully",
+      "status": "not-run",
+      "detail": "App bundle structure is valid, but GUI open proof is NULL."
     }
   }
 }

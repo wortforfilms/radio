@@ -1,0 +1,42 @@
+{
+  "report": "app-open-report",
+  "generated_at": "2026-06-05T12:35:52.640Z",
+  "source_commit": "2f301fdc88d4c54d51f0f5c0df212f26185c740f",
+  "source_commit_short": "2f301fd",
+  "verification_state": "bundle-structure-verified-open-proof-null",
+  "phkd": {
+    "rule": "fail_closed",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "A successful open command is not treated as proof that the GUI opened correctly. Manual screenshot/log proof is required for pass."
+  },
+  "app": {
+    "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
+    "artifact_path": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
+    "bundle_hash": "41eeec852a44ec86299911ae90561576eb1c874badee9fcc23148d15c3c324e4",
+    "exists": true,
+    "info_plist": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app/Contents/Info.plist",
+    "info_plist_exists": true,
+    "executable": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app/Contents/MacOS/radio-vaigyaaniq-desktop",
+    "executable_exists": true,
+    "bundle_structure_ok": true
+  },
+  "open_attempt": {
+    "command": "open -n /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
+    "exitCode": 1,
+    "stdout": "",
+    "stderr": "The application cannot be opened for an unexpected reason, error=Error Domain=NSOSStatusErrorDomain Code=-10822 \"kLSServerCommunicationErr: The server process (registration and recent items) is not available\" UserInfo={_LSLine=517, _LSFunction=-[_LSRemoteOpenCall invokeWithError:]}",
+    "launchRequestAccepted": false
+  },
+  "manual_evidence": {
+    "screenshot": null,
+    "screenshot_exists": false,
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  "gate": {
+    "name": "installer opens successfully",
+    "status": "not-run",
+    "detail": "App bundle structure is valid, but GUI open proof is NULL."
+  }
+}

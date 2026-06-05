@@ -1,13 +1,13 @@
 {
   "report": "tauri-build-report",
-  "generated_at": "2026-06-05T12:01:32.021Z",
-  "source_commit": "a55d53b66810678d71b4ce5514db5935f2ac7e30",
-  "source_commit_short": "a55d53b",
+  "generated_at": "2026-06-05T12:31:45.777Z",
+  "source_commit": "2f301fdc88d4c54d51f0f5c0df212f26185c740f",
+  "source_commit_short": "2f301fd",
   "branch": "master",
   "evidence_host": {
     "os": "darwin",
     "arch": "arm64",
-    "appleDoubleRemoved": 145,
+    "appleDoubleRemoved": 7,
     "cargoTargetDir": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target",
     "node": "v22.22.3",
     "npm": "10.9.8",

@@ -13,12 +13,14 @@ computing gzip size...
 dist/index.html                  0.41 kB │ gzip:  0.30 kB
 dist/assets/index-BTxTaLkK.js  144.96 kB │ gzip: 47.72 kB
 
-✓ built in 2.35s
+✓ built in 3.12s
 
         Info Looking up installed tauri packages to check mismatched versions...
      Running beforeBuildCommand `npm run fe:build`
+[33m[PLUGIN_TIMINGS] [0mYour build spent significant time in plugin `vite:prepare-out-dir`. See https://rolldown.rs/options/checks#plugintimings for more details.
+
    Compiling radio-vaigyaaniq-desktop v0.1.0 (/Volumes/LaCie/pprm/for_radio/apps/desktop/src-tauri)
-    Finished `release` profile [optimized] target(s) in 48.03s
+    Finished `release` profile [optimized] target(s) in 51.33s
        Built application at: /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/radio-vaigyaaniq-desktop
     Bundling Radio Vaigyaaniq.app (/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app)
     Finished 1 bundle at:

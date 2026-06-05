@@ -204,9 +204,16 @@ const gBundleHash = hashed.length > 0
   ? { status: "pass", detail: `${hashed.length} artifact(s) sha256-hashed (primary ${installers.find(i => i.sha256)?.sha256?.slice(0, 12) ?? "n/a"}…)` }
   : { status: "blocked", detail: "no bundle artifact produced; nothing to hash" };
 
-const gInstaller = installers.length > 0
-  ? { status: "not-run", detail: `installer built (${installers[0].artifact}); automated open not performed — verify by launching it` }
-  : { status: "blocked", detail: "no installer produced; cannot verify it opens" };
+const appOpenReportPath = path.join(EVID, "app-open-report.json");
+const appOpenReport = fs.existsSync(appOpenReportPath) ? JSON.parse(fs.readFileSync(appOpenReportPath, "utf8")) : null;
+const gInstaller = appOpenReport?.gate
+  ? {
+      status: appOpenReport.gate.status,
+      detail: `${appOpenReport.gate.detail} Evidence: apps/desktop/evidence/app-open-report.json`
+    }
+  : installers.length > 0
+    ? { status: "not-run", detail: `installer built (${installers[0].artifact}); automated open not performed — verify by launching it` }
+    : { status: "blocked", detail: "no installer produced; cannot verify it opens" };
 // 7. platform metadata recorded
 const gPlatform = { status: "pass", detail: `${host.os}-${host.arch} (evidence host; target build host = NULL)` };
 // 8. source commit recorded

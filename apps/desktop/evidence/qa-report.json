@@ -1,12 +1,12 @@
 {
   "report": "qa-report",
-  "generated_at": "2026-06-05T12:01:32.021Z",
-  "source_commit": "a55d53b66810678d71b4ce5514db5935f2ac7e30",
+  "generated_at": "2026-06-05T12:31:45.777Z",
+  "source_commit": "2f301fdc88d4c54d51f0f5c0df212f26185c740f",
   "branch": "master",
   "evidence_host": {
     "os": "darwin",
     "arch": "arm64",
-    "appleDoubleRemoved": 145,
+    "appleDoubleRemoved": 7,
     "cargoTargetDir": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target",
     "node": "v22.22.3",
     "npm": "10.9.8",
@@ -20,7 +20,7 @@
     {
       "gate": "npm test",
       "status": "pass",
-      "detail": "      Tests  35 passed (35) |    Start at  17:31:44 |    Duration  676ms (transform 1.17s, setup 0ms, import 1.61s, tests 88ms, environment 1ms)"
+      "detail": "      Tests  35 passed (35) |    Start at  18:02:00 |    Duration  1.06s (transform 1.30s, setup 0ms, import 1.62s, tests 116ms, environment 1ms)"
     },
     {
       "gate": "npm run build",
@@ -45,7 +45,7 @@
     {
       "gate": "bundle hash recorded",
       "status": "pass",
-      "detail": "5 artifact(s) sha256-hashed (primary 7f2c93d899e6…)"
+      "detail": "5 artifact(s) sha256-hashed (primary 41eeec852a44…)"
     },
     {
       "gate": "platform metadata recorded",
@@ -55,12 +55,12 @@
     {
       "gate": "source commit recorded",
       "status": "pass",
-      "detail": "a55d53b"
+      "detail": "2f301fd"
     },
     {
       "gate": "installer opens successfully",
       "status": "not-run",
-      "detail": "installer built (../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app); automated open not performed — verify by launching it"
+      "detail": "App bundle structure is valid, but GUI open proof is NULL. Evidence: apps/desktop/evidence/app-open-report.json"
     },
     {
       "gate": "QA report records every gate",

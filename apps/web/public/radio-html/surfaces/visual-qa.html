@@ -17,10 +17,11 @@
     <aside class="surface-rail"><div class="surface-mark">RV</div><nav><a href="./index.html">Index</a><a href="./runtime.html">Runtime</a><a href="./audio-import.html">Audio</a><a href="./tauri-readiness.html">Tauri</a></nav><span>PHKD</span></aside>
     <section class="surface-main">
       <section class="surface-hero">
-        <div><p class="eyebrow">Visual QA Board</p><h1>Screenshots, Links, Render State</h1><p>QA targets track screenshots, render state, link status, image status, and mobile status. Pending values remain draft evidence, not production approval.</p><div class="surface-actions"><a href="../data/visual-qa.json">QA JSON</a><a href="../qa/screenshots/">Screenshot Folder</a></div></div>
+        <div><p class="eyebrow">Visual QA Board</p><h1>Screenshots, Links, Render State</h1><p>QA targets track screenshots, render state, link status, image status, and mobile status. Pending values remain draft evidence, not production approval.</p><div class="surface-actions"><a href="../data/visual-qa.json">QA JSON</a><a href="../data/visual-qa-validation-run.json">Validation Run</a><a href="../qa/screenshots/">Screenshot Folder</a></div></div>
         <div class="status-chip"><span>Targets</span><b id="targetCount">0</b><small>surfaces tracked</small></div>
       </section>
       <section class="surface-grid four" id="qaMetrics"></section>
+      <section class="surface-card" id="validationRun" hidden></section>
       <section class="evidence-board" id="qaBoard"></section>
     </section>
   </main>
@@ -44,6 +45,15 @@
           </article>
         `).join("");
       });
+    fetch("../data/visual-qa-validation-run.json")
+      .then((response) => response.ok ? response.json() : null)
+      .then((run) => {
+        if (!run) return;
+        const el = document.getElementById("validationRun");
+        el.hidden = false;
+        el.innerHTML = `<span class="surface-label">Existing Evidence Validation</span><h2>${run.verificationState}</h2><p>web ${run.counts.webScreenshots}/${run.counts.targets} · desktop ${run.counts.desktopScreenshots}/${run.counts.targets} · blocked ${run.counts.blocked}</p>`;
+      })
+      .catch(() => {});
   </script>
 </body>
 </html>
