@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - GUI Smoke Evidence</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav>
+        <a href="./index.html">Index</a>
+        <a href="./tauri-readiness.html">Tauri</a>
+        <a href="./installer-pipeline.html">Pipeline</a>
+        <a href="./visual-qa.html">Visual QA</a>
+        <a href="./production-freeze.html">Freeze</a>
+      </nav>
+      <span>PHKD</span>
+    </aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">GUI Smoke Evidence Lane</p>
+          <h1>Desktop Proof Stays Blocked Until Human Evidence Exists</h1>
+          <p>GUI smoke requires a launched desktop screenshot, reviewer, first paint, navigation, no-crash observation, NO_SHIP visibility, audio-gate visibility, and renderer error review.</p>
+          <div class="surface-actions">
+            <a href="../data/gui-smoke-evidence.json">GUI Smoke JSON</a>
+            <a href="../data/tauri-readiness.json">Tauri Readiness JSON</a>
+            <a href="./installer-evidence.html">Installer Evidence</a>
+          </div>
+        </div>
+        <div class="status-chip">
+          <span>Gate</span>
+          <b id="guiGate">BLOCKED</b>
+          <small id="guiState">proof NULL</small>
+        </div>
+      </section>
+
+      <section class="surface-grid three" id="guiMetrics"></section>
+
+      <section class="surface-card">
+        <span class="surface-label">Manual Intake</span>
+        <h2>Required Proof</h2>
+        <section class="runtime-lane" id="requiredEvidence"></section>
+      </section>
+
+      <section class="surface-card">
+        <span class="surface-label">Checklist</span>
+        <h2>Smoke Assertions</h2>
+        <section class="runtime-lane" id="guiChecks"></section>
+      </section>
+
+      <section class="surface-card">
+        <span class="surface-label">Evidence Command</span>
+        <h2>Attach Proof Without Claim Inflation</h2>
+        <section class="runtime-lane" id="guiCommands"></section>
+      </section>
+    </section>
+  </main>
+  <script>
+    const valueText = (value) => value === null || value === undefined || value === "" ? "NULL" : String(value);
+    fetch("../data/gui-smoke-evidence.json").then((response) => response.json()).then((data) => {
+      document.getElementById("guiGate").textContent = data.gate?.status || "blocked";
+      document.getElementById("guiState").textContent = data.verificationState || "proof NULL";
+      document.getElementById("guiMetrics").innerHTML = [
+        ["Passed Checks", data.counts?.passedChecks, "Checklist assertions with attached evidence."],
+        ["Blocked Checks", data.counts?.blockedChecks, "Missing GUI proof kept fail-closed."],
+        ["Screenshots", data.counts?.screenshots, "Desktop screenshot evidence count."],
+        ["Reviewer", data.counts?.reviewers, "Human reviewer evidence count."],
+        ["Ship", data.shipDecision, "Release decision remains fail-closed."]
+      ].map(([label, value, body]) => `<article class="surface-card"><span class="surface-label">${label}</span><b>${valueText(value)}</b><p>${body}</p></article>`).join("");
+
+      document.getElementById("requiredEvidence").innerHTML = (data.requiredEvidence || []).map((item, index) => `
+        <article class="runtime-row">
+          <span>${String(index + 1).padStart(2, "0")}</span>
+          <div><b>${item}</b><p>Evidence must be explicit. Unknown values remain NULL.</p></div>
+          <small class="surface-state-pill">required</small>
+        </article>
+      `).join("");
+
+      document.getElementById("guiChecks").innerHTML = (data.checks || []).map((item) => `
+        <article class="runtime-row">
+          <span>${item.key}</span>
+          <div><b>${item.label}</b><p>${item.blocker || `Evidence: ${valueText(item.evidence)}`}</p></div>
+          <small class="surface-state-pill">${item.status}</small>
+        </article>
+      `).join("");
+
+      document.getElementById("guiCommands").innerHTML = (data.commands || []).map((item) => `
+        <article class="runtime-row">
+          <span>${item.key}</span>
+          <div><b>${item.status}</b><p><code>${item.command}</code></p></div>
+          <small class="surface-state-pill">${item.status}</small>
+        </article>
+      `).join("");
+    });
+  </script>
+</body>
+</html>

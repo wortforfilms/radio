@@ -108,8 +108,15 @@ const gNpmBuild = SKIP_ROOT_BUILD
 const gCargo = tool.cargo
   ? runGate("cargo", ["check", "--manifest-path", "src-tauri/Cargo.toml"], DESKTOP, 120000)
   : { status: "blocked", detail: "cargo/rustc not installed in this environment" };
-// 4. Tauri dev smoke test still needs a display; left honest.
-const gTauriDev = { status: "blocked", detail: tool.tauri_cli ? "no display in this environment for a dev smoke test" : "tauri CLI not installed" };
+// 4. Tauri GUI smoke requires manual desktop proof; left honest.
+const guiSmokeReportPath = path.join(EVID, "gui-smoke-report.json");
+const guiSmokeReport = fs.existsSync(guiSmokeReportPath) ? JSON.parse(fs.readFileSync(guiSmokeReportPath, "utf8")) : null;
+const gTauriDev = guiSmokeReport?.gate
+  ? {
+      status: guiSmokeReport.gate.status,
+      detail: `${guiSmokeReport.gate.detail} Evidence: apps/desktop/evidence/gui-smoke-report.json`
+    }
+  : { status: "blocked", detail: tool.tauri_cli ? "GUI smoke screenshot/reviewer proof is NULL" : "tauri CLI not installed" };
 
 // ---- 5-6,9: Tauri bundle build + artifact hashing ----
 // Actually invokes `tauri build` (via `npm run build`) when the CLI is present,
@@ -232,11 +239,15 @@ function readJson(relativePath, fallback) {
 const rightsEvidence = readJson("apps/web/public/radio-html/data/rights-evidence.json", { counts: { blocked: 0, releaseAllowed: 0 } });
 const giftPaymentEvidence = readJson("apps/web/public/radio-html/data/gift-payment-evidence.json", { counts: { blocked: 0, paymentReceipts: 0 } });
 const releaseReviewEvidence = readJson("apps/web/public/radio-html/data/release-review.json", { counts: { blocked: 0, verified: 0 } });
+const signingReportPath = path.join(EVID, "signing-notarization-report.json");
+const signingReport = fs.existsSync(signingReportPath) ? JSON.parse(fs.readFileSync(signingReportPath, "utf8")) : null;
 const releaseBlockers = [
   {
     gate: "installer signing evidence",
-    status: "blocked",
-    detail: "signing identity, signature verification, and notarization evidence are NULL"
+    status: signingReport?.gate?.status === "pass" ? "pass" : "blocked",
+    detail: signingReport?.gate?.detail
+      ? `${signingReport.gate.detail} Evidence: apps/desktop/evidence/signing-notarization-report.json`
+      : "signing identity, signature verification, and notarization evidence are NULL"
   },
   {
     gate: "audio rights evidence",

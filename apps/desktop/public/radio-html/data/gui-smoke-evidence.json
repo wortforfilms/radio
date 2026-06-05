@@ -1,0 +1,137 @@
+{
+  "id": "radio-vaigyaaniq-gui-smoke-evidence",
+  "title": "Radio Vaigyaaniq GUI Smoke Evidence",
+  "generatedAt": "2026-06-05",
+  "verificationState": "blocked-gui-proof-null",
+  "shipDecision": "NO_SHIP",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "This data frame records GUI smoke proof requirements. It does not claim the app opened unless screenshot, reviewer, and checklist proof exist."
+  },
+  "counts": {
+    "checks": 9,
+    "passedChecks": 1,
+    "blockedChecks": 8,
+    "screenshots": 0,
+    "reviewers": 0,
+    "appOpenProof": 0
+  },
+  "gate": {
+    "name": "GUI smoke proof",
+    "status": "blocked",
+    "detail": "GUI smoke proof incomplete: manual-screenshot, reviewer, first-paint, navigation, no-crash, no-ship-visible, audio-gate-visible, error-review."
+  },
+  "app": {
+    "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
+    "artifact_path": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
+    "bundle_hash": "6cb5e4d8c56bb75cae449128e77923eef320c9623f244d5d30fab327d5e1cdec",
+    "bundle_structure_ok": true,
+    "open_attempt": null
+  },
+  "manualEvidence": {
+    "route": "radio-html/surfaces/landing.html",
+    "screenshot": null,
+    "screenshot_path": null,
+    "screenshot_exists": false,
+    "screenshot_sha256": null,
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  },
+  "checks": [
+    {
+      "key": "bundle-structure",
+      "label": "App bundle structure exists",
+      "status": "pass",
+      "evidence": "/Volumes/LaCie/pprm/for_radio/apps/desktop/evidence/app-open-report.json",
+      "blocker": null
+    },
+    {
+      "key": "manual-screenshot",
+      "label": "Desktop GUI screenshot attached",
+      "status": "blocked",
+      "evidence": null,
+      "blocker": "EVIDENCE_GUI_SMOKE_SCREENSHOT missing or file does not exist"
+    },
+    {
+      "key": "reviewer",
+      "label": "Human reviewer attached",
+      "status": "blocked",
+      "evidence": null,
+      "blocker": "EVIDENCE_GUI_SMOKE_REVIEWER missing"
+    },
+    {
+      "key": "first-paint",
+      "label": "First paint visible",
+      "status": "blocked",
+      "evidence": "radio-html/surfaces/landing.html",
+      "blocker": "EVIDENCE_GUI_SMOKE_FIRST_PAINT must be true"
+    },
+    {
+      "key": "navigation",
+      "label": "Primary navigation responds",
+      "status": "blocked",
+      "evidence": "radio-html/surfaces/landing.html",
+      "blocker": "EVIDENCE_GUI_SMOKE_NAVIGATION must be true"
+    },
+    {
+      "key": "no-crash",
+      "label": "No crash or blank screen observed",
+      "status": "blocked",
+      "evidence": "radio-html/surfaces/landing.html",
+      "blocker": "EVIDENCE_GUI_SMOKE_NO_CRASH must be true"
+    },
+    {
+      "key": "no-ship-visible",
+      "label": "NO_SHIP state visible",
+      "status": "blocked",
+      "evidence": "radio-html/surfaces/landing.html",
+      "blocker": "EVIDENCE_GUI_SMOKE_NO_SHIP must be true"
+    },
+    {
+      "key": "audio-gate-visible",
+      "label": "Audio rights/playback gate visible",
+      "status": "blocked",
+      "evidence": "radio-html/surfaces/landing.html",
+      "blocker": "EVIDENCE_GUI_SMOKE_AUDIO_GATE must be true"
+    },
+    {
+      "key": "error-review",
+      "label": "Renderer console/errors reviewed",
+      "status": "blocked",
+      "evidence": null,
+      "blocker": "EVIDENCE_GUI_SMOKE_ERROR_REVIEW must be true"
+    }
+  ],
+  "requiredEvidence": [
+    "desktop screenshot of launched app",
+    "human reviewer",
+    "first paint confirmation",
+    "navigation confirmation",
+    "no crash or blank screen confirmation",
+    "visible NO_SHIP state",
+    "visible audio rights/playback gate",
+    "renderer error review"
+  ],
+  "commands": [
+    {
+      "key": "create-gui-smoke-report",
+      "command": "cd apps/desktop && npm run evidence:gui-smoke",
+      "status": "configured"
+    },
+    {
+      "key": "attach-manual-proof",
+      "command": "EVIDENCE_GUI_SMOKE_SCREENSHOT=/abs/path.png EVIDENCE_GUI_SMOKE_REVIEWER=name EVIDENCE_GUI_SMOKE_FIRST_PAINT=1 EVIDENCE_GUI_SMOKE_NAVIGATION=1 EVIDENCE_GUI_SMOKE_NO_CRASH=1 EVIDENCE_GUI_SMOKE_NO_SHIP=1 EVIDENCE_GUI_SMOKE_AUDIO_GATE=1 EVIDENCE_GUI_SMOKE_ERROR_REVIEW=1 npm run evidence:gui-smoke",
+      "status": "blocked-until-human-proof"
+    }
+  ],
+  "sources": {
+    "guiSmokeReport": "/apps/desktop/evidence/gui-smoke-report.json",
+    "appOpenReport": "/apps/desktop/evidence/app-open-report.json",
+    "qaReport": "/apps/desktop/evidence/qa-report.json",
+    "bundleReport": "/apps/desktop/evidence/bundle-report.json"
+  }
+}

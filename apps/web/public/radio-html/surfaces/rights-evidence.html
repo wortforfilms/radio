@@ -19,11 +19,12 @@
           <p class="eyebrow">Rights Evidence Lane</p>
           <h1>Audio Rights Stay Blocked</h1>
           <p>Every release claim requires source, creator, license, rights status, checksum, reviewer, reviewedAt, and audit verification. Unknown values remain NULL.</p>
-          <div class="surface-actions"><a href="../data/rights-evidence.json">Rights JSON</a><a href="../assets/evidence.html">Asset Evidence</a><a href="/api/governance?view=rights-evidence">Rights API</a></div>
+          <div class="surface-actions"><a href="../data/rights-evidence.json">Rights JSON</a><a href="./rights-closure.html">Closure</a><a href="../assets/evidence.html">Asset Evidence</a><a href="/api/governance?view=rights-evidence">Rights API</a></div>
         </div>
         <div class="status-chip"><span>Release Allowed</span><b id="releaseAllowed">0</b><small>verified rights</small></div>
       </section>
       <section class="surface-grid three" id="rightsMetrics"></section>
+      <section class="surface-card"><span class="surface-label">Closure Gate</span><h2>Rights Proof Closure</h2><section class="runtime-lane" id="closureGate"></section></section>
       <section class="surface-card"><span class="surface-label">Required Evidence</span><h2>Fail-Closed Fields</h2><div class="chip-row" id="requiredEvidence"></div></section>
       <section class="surface-card"><span class="surface-label">Unreviewed Rights Records</span><h2>Current Queue</h2><section class="runtime-lane" id="rightsQueue"></section></section>
     </section>
@@ -34,6 +35,9 @@
       document.getElementById("rightsMetrics").innerHTML = Object.entries(data.counts).map(([label, value]) => `
         <article class="surface-card"><span class="surface-label">${label}</span><b>${value}</b></article>
       `).join("");
+      document.getElementById("closureGate").innerHTML = data.closureGate ? `
+        <article class="runtime-row"><span>${data.closureGate.status}</span><div><b>${data.closureGate.name}</b><p>${data.closureGate.detail}</p></div><small class="surface-state-pill">${data.verificationState}</small></article>
+      ` : "";
       document.getElementById("requiredEvidence").innerHTML = data.requiredEvidence.map((field) => `<span class="surface-state-pill">${field}</span>`).join("");
       document.getElementById("rightsQueue").innerHTML = data.records.slice(0, 24).map((record) => `
         <article class="runtime-row"><span>${record.releaseAllowed ? "ok" : "blocked"}</span><div><b>${record.path}</b><p>${record.blocker}</p></div><small class="surface-state-pill">${record.reviewState}</small></article>

@@ -3,7 +3,7 @@
   "title": "Radio Vaigyaaniq Tauri Shipping Readiness",
   "generatedAt": "2026-06-05",
   "version": "2.0.0",
-  "verificationState": "draft-local-app-built-open-proof-null",
+  "verificationState": "draft-local-app-built-signing-proof-blocked",
   "phkd": {
     "rule": "fail_closed",
     "unknownValues": "NULL",
@@ -91,6 +91,18 @@
       "label": "Desktop Alpha Bundle",
       "path": "/radio-html/data/desktop-alpha-bundle.json",
       "status": "implemented-draft"
+    },
+    {
+      "key": "gui-smoke-evidence",
+      "label": "GUI Smoke Evidence Lane",
+      "path": "/radio-html/data/gui-smoke-evidence.json",
+      "status": "blocked"
+    },
+    {
+      "key": "signing-notarization-evidence",
+      "label": "Signing + Notarization Evidence Lane",
+      "path": "/radio-html/data/signing-notarization-evidence.json",
+      "status": "blocked"
     }
   ],
   "platformMatrix": [
@@ -103,11 +115,11 @@
       "signed": false,
       "notarized": false,
       "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-      "checksum": "41eeec852a44ec86299911ae90561576eb1c874badee9fcc23148d15c3c324e4",
+      "checksum": "c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11",
       "status": "draft-ready-unsigned",
       "key": "macos",
       "label": "macOS local app bundle",
-      "signature": null,
+      "signature": "adhoc",
       "notarization": null
     },
     {
@@ -141,8 +153,8 @@
       "platform": "macOS",
       "format": "app",
       "path": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-      "checksum": "41eeec852a44ec86299911ae90561576eb1c874badee9fcc23148d15c3c324e4",
-      "signingEvidence": null,
+      "checksum": "c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11",
+      "signingEvidence": "/radio-html/data/signing-notarization-evidence.json",
       "status": "draft-ready-unsigned"
     },
     {
@@ -284,9 +296,9 @@
     },
     {
       "key": "gui-smoke",
-      "label": "Tauri dev smoke test",
+      "label": "GUI smoke screenshot/reviewer proof",
       "status": "blocked",
-      "evidence": "/apps/desktop/evidence/qa-report.json"
+      "evidence": "/apps/desktop/evidence/gui-smoke-report.json"
     },
     {
       "key": "installer-open",
@@ -299,11 +311,17 @@
       "label": "App bundle structure",
       "status": "draft-ready",
       "evidence": "/apps/desktop/evidence/app-open-report.json"
+    },
+    {
+      "key": "signing-notarization",
+      "label": "Signing and notarization proof",
+      "status": "blocked",
+      "evidence": "/apps/desktop/evidence/signing-notarization-report.json"
     }
   ],
   "counts": {
     "draftReady": 8,
-    "blocked": 9,
+    "blocked": 10,
     "notRun": 1
   },
   "localDesktopEvidence": {
@@ -329,6 +347,23 @@
       "name": "installer opens successfully",
       "status": "not-run",
       "detail": "App bundle structure is valid, but GUI open proof is NULL."
+    },
+    "guiSmokeReport": "/apps/desktop/evidence/gui-smoke-report.json",
+    "guiSmokeGate": {
+      "name": "GUI smoke proof",
+      "status": "blocked",
+      "detail": "GUI smoke proof incomplete: manual-screenshot, reviewer, first-paint, navigation, no-crash, no-ship-visible, audio-gate-visible, error-review."
+    },
+    "bundle": {
+      "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
+      "bytes": 21211612,
+      "sha256": "c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11"
+    },
+    "signingNotarizationReport": "/apps/desktop/evidence/signing-notarization-report.json",
+    "signingGate": {
+      "name": "installer signing evidence",
+      "status": "blocked",
+      "detail": "Signing/notarization proof incomplete: codesign-verify, developer-id, not-adhoc, gatekeeper, notarization, reviewer."
     }
   }
 }

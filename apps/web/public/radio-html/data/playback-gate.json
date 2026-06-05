@@ -2,7 +2,7 @@
   "id": "radio-vaigyaaniq-playback-gate",
   "title": "Radio Vaigyaaniq Playable Audio Import Gate",
   "generatedAt": "2026-06-05",
-  "verificationState": "draft",
+  "verificationState": "draft-rights-closure-blocked",
   "phkd": {
     "rule": "fail_closed",
     "unknownValues": "NULL",
@@ -15,14 +15,18 @@
     "playable": 0,
     "blocked": 1,
     "nullEvidence": 1,
-    "stationSlots": 4
+    "stationSlots": 4,
+    "rightsClosed": 0,
+    "rightsBlocked": 19,
+    "releaseAllowed": 0
   },
   "gateRules": [
     "audio source must exist",
     "sha256 checksum must exist",
     "rightsStatus must be verified",
     "releaseAllowed must be true",
-    "AuditLog.verified must exist"
+    "AuditLog.verified must exist",
+    "rights closure must pass for every playable record"
   ],
   "records": [
     {
@@ -30,7 +34,13 @@
       "label": "No verified imported audio",
       "canPlay": false,
       "status": "blocked",
-      "blocker": "audio import manifest has no verified records"
+      "blocker": "rights closure is blocked"
     }
-  ]
+  ],
+  "rightsClosureGate": {
+    "name": "Rights Evidence Closure",
+    "status": "blocked",
+    "detail": "Rights closure blocked: 19 record(s) lack complete proof."
+  },
+  "rightsClosureReport": "/radio-html/data/rights-closure-report.json"
 }

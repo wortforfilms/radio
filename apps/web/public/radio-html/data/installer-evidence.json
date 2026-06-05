@@ -2,7 +2,7 @@
   "id": "radio-vaigyaaniq-installer-evidence",
   "title": "Radio Vaigyaaniq Installer Evidence Lane",
   "generatedAt": "2026-06-05",
-  "verificationState": "draft",
+  "verificationState": "draft-local-app-built-signing-proof-blocked",
   "phkd": {
     "rule": "fail_closed",
     "unknownValues": "NULL",
@@ -15,22 +15,30 @@
   "counts": {
     "artifactSlots": 6,
     "signedArtifacts": 0,
-    "unsignedArtifacts": 0,
-    "nullArtifacts": 6,
-    "blocked": 6
+    "unsignedArtifacts": 1,
+    "nullArtifacts": 5,
+    "blocked": 6,
+    "signingChecks": 8,
+    "signingBlockedChecks": 6,
+    "notarizedArtifacts": 0
   },
   "platformMatrix": [
     {
+      "key": "macos",
       "platform": "macOS",
+      "label": "macOS local app bundle",
       "formats": [
         "app",
         "dmg"
       ],
       "signed": false,
       "notarized": false,
-      "artifact": null,
-      "checksum": null,
-      "status": "blocked"
+      "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
+      "checksum": "c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11",
+      "signature": "adhoc",
+      "notarization": null,
+      "signingEvidence": "/radio-html/data/signing-notarization-evidence.json",
+      "status": "draft-ready-unsigned"
     },
     {
       "platform": "Windows",
@@ -62,10 +70,10 @@
       "key": "macos-app",
       "platform": "macOS",
       "format": "app",
-      "path": null,
-      "checksum": null,
-      "signingEvidence": null,
-      "status": "blocked"
+      "path": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
+      "checksum": "c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11",
+      "signingEvidence": "/radio-html/data/signing-notarization-evidence.json",
+      "status": "draft-ready-unsigned"
     },
     {
       "key": "macos-dmg",
@@ -120,6 +128,71 @@
     "signingIdentity",
     "signatureVerification",
     "notarizationTicket when platform requires it",
-    "AuditLog.verified"
-  ]
+    "AuditLog.verified",
+    "Gatekeeper assessment",
+    "stapled notarization validation"
+  ],
+  "signingChecks": [
+    {
+      "key": "artifact",
+      "label": "macOS .app artifact exists",
+      "status": "pass",
+      "evidence": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
+      "blocker": null
+    },
+    {
+      "key": "codesign-tool",
+      "label": "codesign tool available",
+      "status": "pass",
+      "evidence": "/usr/bin/codesign",
+      "blocker": null
+    },
+    {
+      "key": "codesign-verify",
+      "label": "codesign verification passes",
+      "status": "blocked",
+      "evidence": "codesign --verify --deep --strict --verbose=4",
+      "blocker": "codesign verification failed or was not run"
+    },
+    {
+      "key": "developer-id",
+      "label": "Developer ID signing identity",
+      "status": "blocked",
+      "evidence": [],
+      "blocker": "Developer ID Application authority is NULL"
+    },
+    {
+      "key": "not-adhoc",
+      "label": "Signature is not ad-hoc",
+      "status": "blocked",
+      "evidence": "adhoc",
+      "blocker": "signature is ad-hoc or NULL"
+    },
+    {
+      "key": "gatekeeper",
+      "label": "Gatekeeper assessment passes",
+      "status": "blocked",
+      "evidence": "spctl --assess --type execute --verbose=4",
+      "blocker": "Gatekeeper assessment failed or was not run"
+    },
+    {
+      "key": "notarization",
+      "label": "Stapled notarization ticket validates",
+      "status": "blocked",
+      "evidence": "xcrun stapler validate",
+      "blocker": "notarization ticket/staple proof is NULL"
+    },
+    {
+      "key": "reviewer",
+      "label": "Human signing reviewer attached",
+      "status": "blocked",
+      "evidence": null,
+      "blocker": "EVIDENCE_SIGNING_REVIEWER missing"
+    }
+  ],
+  "signingGate": {
+    "name": "installer signing evidence",
+    "status": "blocked",
+    "detail": "Signing/notarization proof incomplete: codesign-verify, developer-id, not-adhoc, gatekeeper, notarization, reviewer."
+  }
 }

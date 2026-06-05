@@ -2,7 +2,7 @@
   "id": "radio-vaigyaaniq-installer-pipeline",
   "title": "Radio Vaigyaaniq Tauri Installer Pipeline",
   "generatedAt": "2026-06-05",
-  "verificationState": "draft-local-app-built-open-proof-null",
+  "verificationState": "draft-local-app-built-signing-proof-blocked",
   "phkd": {
     "rule": "fail_closed",
     "unknownValues": "NULL",
@@ -17,7 +17,10 @@
     "nullArtifacts": 5,
     "blocked": 5,
     "localUnsignedArtifacts": 1,
-    "appOpenProof": 0
+    "appOpenProof": 0,
+    "guiSmokeProof": 0,
+    "notarizedArtifacts": 0,
+    "signingBlockedChecks": 6
   },
   "commands": [
     {
@@ -37,6 +40,18 @@
       "command": "cd apps/desktop && npm run evidence",
       "status": "pass-local-app",
       "description": "Builds unsigned local macOS .app and records bundle hash; signing and GUI proof remain blocked/not-run."
+    },
+    {
+      "key": "gui-smoke-evidence",
+      "command": "cd apps/desktop && npm run evidence:gui-smoke && npm run evidence",
+      "status": "blocked",
+      "description": "Records GUI smoke proof from screenshot, reviewer, and explicit checklist confirmations."
+    },
+    {
+      "key": "signing-notarization-evidence",
+      "command": "cd apps/desktop && npm run evidence:signing && npm run evidence",
+      "status": "blocked",
+      "description": "Runs read-only codesign, Gatekeeper, and stapler verification; does not sign or submit notarization."
     }
   ],
   "records": [

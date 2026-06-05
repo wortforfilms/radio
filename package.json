@@ -11,6 +11,7 @@
     "prisma:migrate": "prisma migrate dev",
     "prisma:seed": "tsx prisma/seed.ts",
     "radio:milestones": "node scripts/product-factory/complete-radio-next-milestones.mjs",
+    "radio:rights:closure": "node scripts/product-factory/verify-radio-rights-closure.mjs",
     "radio:release:check": "node scripts/product-factory/radio-release-evidence-orchestrator.mjs",
     "test": "vitest run"
   },

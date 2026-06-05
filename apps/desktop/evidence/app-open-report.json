@@ -1,8 +1,8 @@
 {
   "report": "app-open-report",
-  "generated_at": "2026-06-05T12:35:52.640Z",
-  "source_commit": "2f301fdc88d4c54d51f0f5c0df212f26185c740f",
-  "source_commit_short": "2f301fd",
+  "generated_at": "2026-06-05T13:21:01.139Z",
+  "source_commit": "639c2f72255dc558bc0e9ed41ec48d141ddc4670",
+  "source_commit_short": "639c2f7",
   "verification_state": "bundle-structure-verified-open-proof-null",
   "phkd": {
     "rule": "fail_closed",
@@ -13,7 +13,7 @@
   "app": {
     "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
     "artifact_path": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-    "bundle_hash": "41eeec852a44ec86299911ae90561576eb1c874badee9fcc23148d15c3c324e4",
+    "bundle_hash": "c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11",
     "exists": true,
     "info_plist": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app/Contents/Info.plist",
     "info_plist_exists": true,
@@ -21,13 +21,7 @@
     "executable_exists": true,
     "bundle_structure_ok": true
   },
-  "open_attempt": {
-    "command": "open -n /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-    "exitCode": 1,
-    "stdout": "",
-    "stderr": "The application cannot be opened for an unexpected reason, error=Error Domain=NSOSStatusErrorDomain Code=-10822 \"kLSServerCommunicationErr: The server process (registration and recent items) is not available\" UserInfo={_LSLine=517, _LSFunction=-[_LSRemoteOpenCall invokeWithError:]}",
-    "launchRequestAccepted": false
-  },
+  "open_attempt": null,
   "manual_evidence": {
     "screenshot": null,
     "screenshot_exists": false,

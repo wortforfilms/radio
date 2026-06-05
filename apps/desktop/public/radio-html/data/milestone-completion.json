@@ -15,15 +15,17 @@
     "implementedDraft": 7,
     "evidenceBlocked": 6,
     "productionReady": 0,
-    "shipDecision": "NO_SHIP"
+    "shipDecision": "NO_SHIP",
+    "rightsClosureClosed": 0,
+    "rightsClosureBlocked": 19
   },
   "milestones": [
     {
       "key": "rights-evidence-closure",
       "label": "Rights Evidence Closure",
       "status": "implemented-draft",
-      "evidence": "/radio-html/data/rights-review-workbench.json",
-      "blocker": "real rights proof and reviewer evidence still required"
+      "evidence": "/radio-html/data/rights-closure-report.json",
+      "blocker": "Rights closure blocked: 19 record(s) lack complete proof."
     },
     {
       "key": "playable-audio-import-gate",

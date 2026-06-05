@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - Rights Closure</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav>
+        <a href="./index.html">Index</a>
+        <a href="./rights-evidence.html">Rights</a>
+        <a href="./rights-review.html">Review</a>
+        <a href="./playback-gate.html">Playback</a>
+        <a href="./production-freeze.html">Freeze</a>
+      </nav>
+      <span>PHKD</span>
+    </aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">Rights Evidence Closure</p>
+          <h1>No Release Rights Close Without Proof</h1>
+          <p>Closure requires source, creator, license, verified rights status, citation, reviewer, reviewedAt, checksum, AuditLog.verified, and explicit releaseAllowed=true for every record.</p>
+          <div class="surface-actions">
+            <a href="../data/rights-closure-report.json">Closure JSON</a>
+            <a href="../data/rights-evidence.json">Rights JSON</a>
+            <a href="./rights-review.html">Review Queue</a>
+          </div>
+        </div>
+        <div class="status-chip">
+          <span>Gate</span>
+          <b id="rightsClosureGate">BLOCKED</b>
+          <small id="rightsClosureState">proof NULL</small>
+        </div>
+      </section>
+
+      <section class="surface-grid three" id="closureMetrics"></section>
+
+      <section class="surface-card">
+        <span class="surface-label">Import Contract</span>
+        <h2>JSON/CSV Proof Intake</h2>
+        <section class="runtime-lane" id="importContract"></section>
+      </section>
+
+      <section class="surface-card">
+        <span class="surface-label">Required Evidence</span>
+        <h2>Fail-Closed Fields</h2>
+        <div class="chip-row" id="requiredEvidence"></div>
+      </section>
+
+      <section class="surface-card">
+        <span class="surface-label">Closure Queue</span>
+        <h2>Blocked Records</h2>
+        <section class="runtime-lane" id="closureQueue"></section>
+      </section>
+    </section>
+  </main>
+  <script>
+    const valueText = (value) => value === null || value === undefined || value === "" ? "NULL" : Array.isArray(value) ? value.join(", ") : String(value);
+    fetch("../data/rights-closure-report.json").then((response) => response.json()).then((data) => {
+      document.getElementById("rightsClosureGate").textContent = data.gate?.status || "blocked";
+      document.getElementById("rightsClosureState").textContent = data.verificationState || "proof NULL";
+      document.getElementById("closureMetrics").innerHTML = [
+        ["Records", data.summary?.records, "Rights records under closure audit."],
+        ["Closed", data.summary?.closed, "Records with complete proof."],
+        ["Blocked", data.summary?.blocked, "Records still fail-closed."],
+        ["Imported Proofs", data.summary?.importedProofs, "JSON/CSV proof rows loaded."],
+        ["Matched Proofs", data.summary?.matchedProofs, "Proof rows mapped to records."],
+        ["Release Allowed", data.summary?.releaseAllowed, "Records allowed to release."]
+      ].map(([label, value, body]) => `<article class="surface-card"><span class="surface-label">${label}</span><b>${valueText(value)}</b><p>${body}</p></article>`).join("");
+
+      document.getElementById("importContract").innerHTML = [
+        ["env", data.import?.env],
+        ["path", data.import?.path],
+        ["status", data.import?.status],
+        ["accepted", data.import?.acceptedFormats],
+        ["error", data.import?.error]
+      ].map(([label, value]) => `
+        <article class="runtime-row">
+          <span>${label}</span>
+          <div><b>${valueText(value)}</b><p>Closure import values remain NULL until a real proof file is attached.</p></div>
+          <small class="surface-state-pill">${data.import?.status || "not-run"}</small>
+        </article>
+      `).join("");
+
+      document.getElementById("requiredEvidence").innerHTML = (data.requiredEvidence || []).map((field) => `<span class="surface-state-pill">${field}</span>`).join("");
+
+      document.getElementById("closureQueue").innerHTML = (data.records || []).slice(0, 32).map((record) => `
+        <article class="runtime-row">
+          <span>${record.status}</span>
+          <div><b>${record.path}</b><p>${record.blocker || "closed"} · missing ${valueText(record.missing)}</p></div>
+          <small class="surface-state-pill">${record.proofAttached ? "proof-attached" : "proof-null"}</small>
+        </article>
+      `).join("");
+    });
+  </script>
+</body>
+</html>

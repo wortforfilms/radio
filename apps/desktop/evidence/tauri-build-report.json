@@ -1,13 +1,13 @@
 {
   "report": "tauri-build-report",
-  "generated_at": "2026-06-05T12:31:45.777Z",
-  "source_commit": "2f301fdc88d4c54d51f0f5c0df212f26185c740f",
-  "source_commit_short": "2f301fd",
+  "generated_at": "2026-06-05T13:18:19.087Z",
+  "source_commit": "639c2f72255dc558bc0e9ed41ec48d141ddc4670",
+  "source_commit_short": "639c2f7",
   "branch": "master",
   "evidence_host": {
     "os": "darwin",
     "arch": "arm64",
-    "appleDoubleRemoved": 7,
+    "appleDoubleRemoved": 4,
     "cargoTargetDir": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target",
     "node": "v22.22.3",
     "npm": "10.9.8",
@@ -28,7 +28,7 @@
     },
     "tauri_dev_smoke": {
       "status": "blocked",
-      "detail": "no display in this environment for a dev smoke test"
+      "detail": "GUI smoke proof incomplete: manual-screenshot, reviewer, first-paint, navigation, no-crash, no-ship-visible, audio-gate-visible, error-review. Evidence: apps/desktop/evidence/gui-smoke-report.json"
     },
     "tauri_bundle": {
       "status": "pass",
@@ -39,7 +39,7 @@
     {
       "gate": "installer signing evidence",
       "status": "blocked",
-      "detail": "signing identity, signature verification, and notarization evidence are NULL"
+      "detail": "Signing/notarization proof incomplete: codesign-verify, developer-id, not-adhoc, gatekeeper, notarization, reviewer. Evidence: apps/desktop/evidence/signing-notarization-report.json"
     },
     {
       "gate": "audio rights evidence",

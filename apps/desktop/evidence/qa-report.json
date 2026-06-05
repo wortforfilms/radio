@@ -1,12 +1,12 @@
 {
   "report": "qa-report",
-  "generated_at": "2026-06-05T12:31:45.777Z",
-  "source_commit": "2f301fdc88d4c54d51f0f5c0df212f26185c740f",
+  "generated_at": "2026-06-05T13:18:19.087Z",
+  "source_commit": "639c2f72255dc558bc0e9ed41ec48d141ddc4670",
   "branch": "master",
   "evidence_host": {
     "os": "darwin",
     "arch": "arm64",
-    "appleDoubleRemoved": 7,
+    "appleDoubleRemoved": 4,
     "cargoTargetDir": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target",
     "node": "v22.22.3",
     "npm": "10.9.8",
@@ -20,7 +20,7 @@
     {
       "gate": "npm test",
       "status": "pass",
-      "detail": "      Tests  35 passed (35) |    Start at  18:02:00 |    Duration  1.06s (transform 1.30s, setup 0ms, import 1.62s, tests 116ms, environment 1ms)"
+      "detail": "      Tests  35 passed (35) |    Start at  18:48:35 |    Duration  1.54s (transform 2.07s, setup 0ms, import 2.73s, tests 112ms, environment 1ms)"
     },
     {
       "gate": "npm run build",
@@ -35,7 +35,7 @@
     {
       "gate": "tauri dev smoke test",
       "status": "blocked",
-      "detail": "no display in this environment for a dev smoke test"
+      "detail": "GUI smoke proof incomplete: manual-screenshot, reviewer, first-paint, navigation, no-crash, no-ship-visible, audio-gate-visible, error-review. Evidence: apps/desktop/evidence/gui-smoke-report.json"
     },
     {
       "gate": "tauri bundle build",
@@ -45,7 +45,7 @@
     {
       "gate": "bundle hash recorded",
       "status": "pass",
-      "detail": "5 artifact(s) sha256-hashed (primary 41eeec852a44…)"
+      "detail": "5 artifact(s) sha256-hashed (primary c3856014f55d…)"
     },
     {
       "gate": "platform metadata recorded",
@@ -55,7 +55,7 @@
     {
       "gate": "source commit recorded",
       "status": "pass",
-      "detail": "2f301fd"
+      "detail": "639c2f7"
     },
     {
       "gate": "installer opens successfully",
@@ -72,7 +72,7 @@
     {
       "gate": "installer signing evidence",
       "status": "blocked",
-      "detail": "signing identity, signature verification, and notarization evidence are NULL"
+      "detail": "Signing/notarization proof incomplete: codesign-verify, developer-id, not-adhoc, gatekeeper, notarization, reviewer. Evidence: apps/desktop/evidence/signing-notarization-report.json"
     },
     {
       "gate": "audio rights evidence",

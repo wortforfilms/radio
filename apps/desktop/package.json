@@ -11,7 +11,9 @@
     "build": "node scripts/tauri-build.mjs",
     "cargo:check": "cargo check --manifest-path src-tauri/Cargo.toml",
     "evidence": "node scripts/generate-evidence.mjs",
-    "evidence:app-open": "node scripts/verify-app-open.mjs"
+    "evidence:app-open": "node scripts/verify-app-open.mjs",
+    "evidence:gui-smoke": "node scripts/verify-gui-smoke.mjs",
+    "evidence:signing": "node scripts/verify-signing-notarization.mjs"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.1.1"

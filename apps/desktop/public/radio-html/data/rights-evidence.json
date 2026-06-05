@@ -2,7 +2,7 @@
   "id": "radio-vaigyaaniq-rights-evidence",
   "title": "Radio Vaigyaaniq Rights Evidence Lane",
   "generatedAt": "2026-06-05",
-  "verificationState": "draft",
+  "verificationState": "draft-rights-closure-blocked",
   "phkd": {
     "rule": "fail_closed",
     "unknownValues": "NULL",
@@ -18,7 +18,9 @@
     "rightsNull": 5,
     "unreviewed": 19,
     "verifiedRights": 0,
-    "blocked": 19
+    "blocked": 19,
+    "closureProofs": 0,
+    "closureMatchedProofs": 0
   },
   "requirements": [
     "source",
@@ -43,7 +45,19 @@
       "reviewedAt": null,
       "reviewState": "unreviewed",
       "checksum": "672266dd33b9b5d9c57c5f5e5f4a375bd162dc056a3b4d36f4ce783e0e012d69",
-      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed",
+      "closureStatus": "blocked",
+      "closureMissing": [
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "auditVerified",
+        "releaseAllowed"
+      ]
     },
     {
       "id": "radio-vaigyaaniq-divine-hero-png",
@@ -57,7 +71,19 @@
       "reviewedAt": null,
       "reviewState": "unreviewed",
       "checksum": "c1d8967df4a3a314a273d510c3c13e7c00c19386c0147e93ed7238a959d008e6",
-      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed",
+      "closureStatus": "blocked",
+      "closureMissing": [
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "auditVerified",
+        "releaseAllowed"
+      ]
     },
     {
       "id": "images-radio-vaigyaaniq-runtime-hero-svg",
@@ -71,7 +97,19 @@
       "reviewedAt": null,
       "reviewState": "unreviewed",
       "checksum": "6264c9011abd5eb8860e63f56ca473675fd29134f3b94dec1dc7838bd17ae38a",
-      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed",
+      "closureStatus": "blocked",
+      "closureMissing": [
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "auditVerified",
+        "releaseAllowed"
+      ]
     },
     {
       "id": "images-radio-vaigyaaniq-samaya-panel-svg",
@@ -85,7 +123,19 @@
       "reviewedAt": null,
       "reviewState": "unreviewed",
       "checksum": "cb117925d2260d5a607621275e93aae05e0c39c70901e647503cf14be30c1f1b",
-      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed",
+      "closureStatus": "blocked",
+      "closureMissing": [
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "auditVerified",
+        "releaseAllowed"
+      ]
     },
     {
       "id": "covers-mahamatya-svg",
@@ -99,7 +149,19 @@
       "reviewedAt": null,
       "reviewState": "unreviewed",
       "checksum": "0f57b5f1b3ec614e86bb8fd827435e37ee058d94b16659007af78bc5dab58e01",
-      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed",
+      "closureStatus": "blocked",
+      "closureMissing": [
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "auditVerified",
+        "releaseAllowed"
+      ]
     },
     {
       "id": "covers-gokul-svg",
@@ -113,7 +175,19 @@
       "reviewedAt": null,
       "reviewState": "unreviewed",
       "checksum": "736819e1fd88477ed533a7638ee08c474104cb421ebab29ff602b4351e6d4a41",
-      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed",
+      "closureStatus": "blocked",
+      "closureMissing": [
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "auditVerified",
+        "releaseAllowed"
+      ]
     },
     {
       "id": "covers-kaal-chakra-svg",
@@ -127,7 +201,19 @@
       "reviewedAt": null,
       "reviewState": "unreviewed",
       "checksum": "842077b4b2b9ed5157c2f131391bf200e02d181705e13f5a76ccfa8cd4c78e21",
-      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed",
+      "closureStatus": "blocked",
+      "closureMissing": [
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "auditVerified",
+        "releaseAllowed"
+      ]
     },
     {
       "id": "covers-swarnim-sale-svg",
@@ -141,7 +227,19 @@
       "reviewedAt": null,
       "reviewState": "unreviewed",
       "checksum": "7c5ec0fe02363c884de46e08c85244300d2098b0b62a5a804256da119d55bec8",
-      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed",
+      "closureStatus": "blocked",
+      "closureMissing": [
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "auditVerified",
+        "releaseAllowed"
+      ]
     },
     {
       "id": "icons-like-svg",
@@ -155,7 +253,19 @@
       "reviewedAt": null,
       "reviewState": "unreviewed",
       "checksum": "511b5792d02e1088d44f243b1896c4a39179a97f466b6c5d059505901cc260a7",
-      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed",
+      "closureStatus": "blocked",
+      "closureMissing": [
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "auditVerified",
+        "releaseAllowed"
+      ]
     },
     {
       "id": "icons-save-svg",
@@ -169,7 +279,19 @@
       "reviewedAt": null,
       "reviewState": "unreviewed",
       "checksum": "ace9452bdfe260673d75f67e4895c8c26de8c4dbd848d831831b5fb2034bd9ab",
-      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed",
+      "closureStatus": "blocked",
+      "closureMissing": [
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "auditVerified",
+        "releaseAllowed"
+      ]
     },
     {
       "id": "icons-gift-svg",
@@ -183,7 +305,19 @@
       "reviewedAt": null,
       "reviewState": "unreviewed",
       "checksum": "fcb19152e1fe8540a79a42efc46f0dfce45bea82f88049445c360c52236ff80a",
-      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed",
+      "closureStatus": "blocked",
+      "closureMissing": [
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "auditVerified",
+        "releaseAllowed"
+      ]
     },
     {
       "id": "icons-share-svg",
@@ -197,7 +331,19 @@
       "reviewedAt": null,
       "reviewState": "unreviewed",
       "checksum": "15d20f99bc8b00f343560b33beeae2eecdeef2ec5d5e7d4b855cc14c7ca10d4b",
-      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed",
+      "closureStatus": "blocked",
+      "closureMissing": [
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "auditVerified",
+        "releaseAllowed"
+      ]
     },
     {
       "id": "icons-tts-svg",
@@ -211,7 +357,19 @@
       "reviewedAt": null,
       "reviewState": "unreviewed",
       "checksum": "5b9648590dad896ae63af55051bdf1829ceb0468fd35f7b1ddbaeee5d2349d3d",
-      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed",
+      "closureStatus": "blocked",
+      "closureMissing": [
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "auditVerified",
+        "releaseAllowed"
+      ]
     },
     {
       "id": "icons-mic-svg",
@@ -225,7 +383,19 @@
       "reviewedAt": null,
       "reviewState": "unreviewed",
       "checksum": "8ce10da9cbb8039ca912e862d31c7a7fb1bab667ddce165c945044ac53253bfc",
-      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed",
+      "closureStatus": "blocked",
+      "closureMissing": [
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "auditVerified",
+        "releaseAllowed"
+      ]
     },
     {
       "id": "shaders-radio-spectrum-frag",
@@ -239,7 +409,19 @@
       "reviewedAt": null,
       "reviewState": "unreviewed",
       "checksum": "c12c21d44d7d820daf7a77d510d37e1c972be76a94abba0d756a3e3d3ebb28ec",
-      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed",
+      "closureStatus": "blocked",
+      "closureMissing": [
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "auditVerified",
+        "releaseAllowed"
+      ]
     },
     {
       "id": "shaders-radio-yantra-vert",
@@ -253,7 +435,19 @@
       "reviewedAt": null,
       "reviewState": "unreviewed",
       "checksum": "a3af18c131c3b49da7822b9ef791164cd8a422c7d9b6ba76089aa693f94d3eb8",
-      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed",
+      "closureStatus": "blocked",
+      "closureMissing": [
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "auditVerified",
+        "releaseAllowed"
+      ]
     },
     {
       "id": "audio-phkd-audio-placeholder-json",
@@ -267,7 +461,19 @@
       "reviewedAt": null,
       "reviewState": "unreviewed",
       "checksum": "7654f1f0909d18c4ea870b464c7d43b838030df9e454dc34c6709ca159dfa978",
-      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed",
+      "closureStatus": "blocked",
+      "closureMissing": [
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "auditVerified",
+        "releaseAllowed"
+      ]
     },
     {
       "id": "vendor-three-min-js",
@@ -281,7 +487,19 @@
       "reviewedAt": null,
       "reviewState": "unreviewed",
       "checksum": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2",
-      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed",
+      "closureStatus": "blocked",
+      "closureMissing": [
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "auditVerified",
+        "releaseAllowed"
+      ]
     },
     {
       "id": "vendor-three-module-min-js",
@@ -295,7 +513,42 @@
       "reviewedAt": null,
       "reviewState": "unreviewed",
       "checksum": "36a60b0120335f89a80a0dab70292292b0ec414b3d05e83cd09a3ea428c6712a",
-      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed",
+      "closureStatus": "blocked",
+      "closureMissing": [
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "auditVerified",
+        "releaseAllowed"
+      ]
     }
-  ]
+  ],
+  "closureGate": {
+    "name": "Rights Evidence Closure",
+    "status": "blocked",
+    "detail": "Rights closure blocked: 19 record(s) lack complete proof."
+  },
+  "closureCounts": {
+    "records": 19,
+    "importedProofs": 0,
+    "matchedProofs": 0,
+    "unmatchedProofs": 0,
+    "closed": 0,
+    "blocked": 19,
+    "releaseAllowed": 0,
+    "missingSource": 19,
+    "missingCreator": 19,
+    "missingLicense": 19,
+    "missingCitation": 19,
+    "missingReviewer": 19,
+    "missingReviewedAt": 19,
+    "auditUnverified": 19,
+    "checksumIssues": 0
+  },
+  "closureReport": "/radio-html/data/rights-closure-report.json"
 }
