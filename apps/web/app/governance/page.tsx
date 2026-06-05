@@ -63,6 +63,12 @@ export default function GovernanceEvidenceCenterPage() {
     counts: { milestones: 0, implementedDraft: 0, evidenceBlocked: 0, productionReady: 0, shipDecision: "NO_SHIP" },
     milestones: [] as { key: string; label: string; status: string; evidence: string; blocker: string | null }[]
   });
+  const customerRelease = readJson("radio-html/data/customer-release-milestone.json", {
+    verificationState: "NULL",
+    shipDecision: "NO_SHIP",
+    counts: { gates: 0, draftPass: 0, blocked: 0, customerReleaseReady: 0, releaseAllowed: 0 },
+    blockers: [] as { key: string; label: string; blocker: string; evidence: string }[]
+  });
   const playbackGate = readJson("radio-html/data/playback-gate.json", {
     counts: { imports: 0, playable: 0, blocked: 0, nullEvidence: 0 }
   });
@@ -94,6 +100,8 @@ export default function GovernanceEvidenceCenterPage() {
     "Milestones": milestoneCompletion.counts.milestones,
     "Milestone drafts": milestoneCompletion.counts.implementedDraft,
     "Evidence blocked": milestoneCompletion.counts.evidenceBlocked,
+    "Customer release blocked": customerRelease.counts.blocked,
+    "Customer release ready": customerRelease.counts.customerReleaseReady,
     "Playable audio": playbackGate.counts.playable,
     "Payment receipts": paymentProofLane.counts.paymentReceipts,
     "Pipeline signed": installerPipeline.counts.signedArtifacts,
@@ -278,7 +286,7 @@ export default function GovernanceEvidenceCenterPage() {
               <p>{milestone.blocker ?? "No blocker recorded."}</p>
               <div className="governance-lane-actions">
                 <a href={milestone.evidence}>Open Evidence</a>
-                <a href={`/api/radio-release?view=${milestone.key.includes("rights") ? "rights-workbench" : milestone.key.includes("playable") ? "playback-gate" : milestone.key.includes("gift") ? "payment-proof" : milestone.key.includes("tauri") ? "installer-pipeline" : milestone.key.includes("orchestration") ? "release-orchestration" : milestone.key.includes("desktop") ? "desktop-alpha" : "release-review"}`}>Open API</a>
+                <a href={`/api/radio-release?view=${milestone.key.includes("customer") ? "customer-release" : milestone.key.includes("rights") ? "rights-workbench" : milestone.key.includes("playable") ? "playback-gate" : milestone.key.includes("gift") ? "payment-proof" : milestone.key.includes("tauri") ? "installer-pipeline" : milestone.key.includes("orchestration") ? "release-orchestration" : milestone.key.includes("desktop") ? "desktop-alpha" : "release-review"}`}>Open API</a>
               </div>
             </article>
           ))}

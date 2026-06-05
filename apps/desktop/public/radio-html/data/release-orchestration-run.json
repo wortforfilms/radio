@@ -1,6 +1,6 @@
 {
   "id": "radio-vaigyaaniq-release-evidence-orchestration-run",
-  "generatedAt": "2026-06-05T20:07:34.349Z",
+  "generatedAt": "2026-06-05T22:31:26.227Z",
   "verificationState": "draft-verified-local",
   "phkd": {
     "rule": "fail_closed",
@@ -10,8 +10,8 @@
     "note": "This report verifies local commands only. It does not verify rights, payment settlement, installer signing, release approval, external telemetry, or production readiness."
   },
   "counts": {
-    "steps": 14,
-    "pass": 14,
+    "steps": 15,
+    "pass": 15,
     "fail": 0,
     "browserChecks": 0
   },
@@ -22,8 +22,8 @@
       "command": "/Users/vesahe/.nvm/versions/node/v22.22.3/bin/node scripts/product-factory/complete-radio-milestones.mjs",
       "status": "pass",
       "exitCode": 0,
-      "startedAt": "2026-06-05T20:06:04.070Z",
-      "finishedAt": "2026-06-05T20:06:04.390Z",
+      "startedAt": "2026-06-05T22:30:05.944Z",
+      "finishedAt": "2026-06-05T22:30:06.173Z",
       "stdout": "",
       "stderr": ""
     },
@@ -32,8 +32,8 @@
       "command": "/Users/vesahe/.nvm/versions/node/v22.22.3/bin/node scripts/product-factory/complete-radio-next-milestones.mjs",
       "status": "pass",
       "exitCode": 0,
-      "startedAt": "2026-06-05T20:06:04.390Z",
-      "finishedAt": "2026-06-05T20:06:04.623Z",
+      "startedAt": "2026-06-05T22:30:06.174Z",
+      "finishedAt": "2026-06-05T22:30:06.404Z",
       "stdout": "{\n  \"generatedAt\": \"2026-06-05\",\n  \"surfaces\": 6,\n  \"dataFrames\": 7,\n  \"visualQa\": {\n    \"targets\": 25,\n    \"capturedScreenshots\": 25,\n    \"pass\": 25,\n    \"blocked\": 0\n  },\n  \"tauri\": {\n    \"draftReady\": 5,\n    \"blocked\": 8\n  },\n  \"shipDecision\": \"NO_SHIP\"\n}\n",
       "stderr": ""
     },
@@ -42,8 +42,8 @@
       "command": "npm run evidence:signing",
       "status": "pass",
       "exitCode": 0,
-      "startedAt": "2026-06-05T20:06:04.623Z",
-      "finishedAt": "2026-06-05T20:06:05.156Z",
+      "startedAt": "2026-06-05T22:30:06.404Z",
+      "finishedAt": "2026-06-05T22:30:07.032Z",
       "stdout": "\n> @vaishviq/desktop@0.1.0 evidence:signing\n> node scripts/verify-signing-notarization.mjs\n\n{\n  \"report\": \"apps/desktop/evidence/signing-notarization-report.json\",\n  \"verificationState\": \"blocked-signing-notarization-proof-null\",\n  \"gate\": {\n    \"name\": \"installer signing evidence\",\n    \"status\": \"blocked\",\n    \"detail\": \"Signing/notarization proof incomplete: codesign-verify, developer-id, not-adhoc, gatekeeper, notarization, reviewer.\"\n  },\n  \"summary\": {\n    \"pass\": 2,\n    \"blocked\": 6,\n    \"total\": 8\n  }\n}\n",
       "stderr": ""
     },
@@ -52,8 +52,8 @@
       "command": "/Users/vesahe/.nvm/versions/node/v22.22.3/bin/node scripts/product-factory/sync-radio-gui-smoke-evidence.mjs",
       "status": "pass",
       "exitCode": 0,
-      "startedAt": "2026-06-05T20:06:05.156Z",
-      "finishedAt": "2026-06-05T20:06:05.244Z",
+      "startedAt": "2026-06-05T22:30:07.032Z",
+      "finishedAt": "2026-06-05T22:30:07.102Z",
       "stdout": "{\n  \"report\": \"radio-gui-smoke-evidence-sync\",\n  \"gate\": {\n    \"name\": \"GUI smoke proof\",\n    \"status\": \"blocked\",\n    \"detail\": \"GUI smoke proof incomplete: manual-screenshot, reviewer, first-paint, navigation, no-crash, no-ship-visible, audio-gate-visible, error-review.\"\n  },\n  \"checks\": {\n    \"checks\": 9,\n    \"passedChecks\": 1,\n    \"blockedChecks\": 8,\n    \"screenshots\": 0,\n    \"reviewers\": 0,\n    \"appOpenProof\": 0\n  }\n}\n",
       "stderr": ""
     },
@@ -62,8 +62,8 @@
       "command": "/Users/vesahe/.nvm/versions/node/v22.22.3/bin/node scripts/product-factory/sync-radio-signing-evidence.mjs",
       "status": "pass",
       "exitCode": 0,
-      "startedAt": "2026-06-05T20:06:05.244Z",
-      "finishedAt": "2026-06-05T20:06:05.331Z",
+      "startedAt": "2026-06-05T22:30:07.102Z",
+      "finishedAt": "2026-06-05T22:30:07.162Z",
       "stdout": "{\n  \"report\": \"radio-signing-evidence-sync\",\n  \"gate\": {\n    \"name\": \"installer signing evidence\",\n    \"status\": \"blocked\",\n    \"detail\": \"Signing/notarization proof incomplete: codesign-verify, developer-id, not-adhoc, gatekeeper, notarization, reviewer.\"\n  },\n  \"counts\": {\n    \"checks\": 8,\n    \"passedChecks\": 2,\n    \"blockedChecks\": 6,\n    \"signedArtifacts\": 0,\n    \"notarizedArtifacts\": 0,\n    \"developerIdIdentities\": 0,\n    \"adhocSignatures\": 1\n  }\n}\n",
       "stderr": ""
     },
@@ -72,8 +72,8 @@
       "command": "/Users/vesahe/.nvm/versions/node/v22.22.3/bin/node scripts/product-factory/complete-radio-proof-milestones.mjs",
       "status": "pass",
       "exitCode": 0,
-      "startedAt": "2026-06-05T20:06:05.331Z",
-      "finishedAt": "2026-06-05T20:06:05.596Z",
+      "startedAt": "2026-06-05T22:30:07.162Z",
+      "finishedAt": "2026-06-05T22:30:07.505Z",
       "stdout": "{\n  \"report\": \"radio-proof-milestones\",\n  \"dataFrames\": 13,\n  \"surfaces\": 13,\n  \"shipDecision\": \"NO_SHIP\"\n}\n",
       "stderr": ""
     },
@@ -82,8 +82,8 @@
       "command": "/Users/vesahe/.nvm/versions/node/v22.22.3/bin/node scripts/product-factory/verify-radio-payment-proof.mjs",
       "status": "pass",
       "exitCode": 0,
-      "startedAt": "2026-06-05T20:06:05.596Z",
-      "finishedAt": "2026-06-05T20:06:05.646Z",
+      "startedAt": "2026-06-05T22:30:07.505Z",
+      "finishedAt": "2026-06-05T22:30:07.571Z",
       "stdout": "{\n  \"report\": \"radio-payment-proof\",\n  \"gate\": {\n    \"name\": \"Gift / Payment Proof\",\n    \"status\": \"blocked\",\n    \"detail\": \"Gift/payment proof blocked: 5 state(s) lack complete proof.\"\n  },\n  \"summary\": {\n    \"importedProofs\": 0,\n    \"candidateOnlyProofs\": 0,\n    \"giftIntents\": 0,\n    \"checkoutSessions\": 0,\n    \"paymentReceipts\": 0,\n    \"webhookEvents\": 0,\n    \"fulfilledGifts\": 0,\n    \"verifiedStates\": 0,\n    \"blockedStates\": 5,\n    \"missingPayerId\": 2,\n    \"missingRecipientId\": 2,\n    \"missingCheckoutSession\": 1,\n    \"missingPaymentReceipt\": 2,\n    \"missingWebhookSignature\": 1,\n    \"missingDeliveryProof\": 1,\n    \"auditUnverified\": 2\n  },\n  \"import\": {\n    \"path\": null,\n    \"status\": \"not-run\",\n    \"records\": 0,\n    \"error\": null,\n    \"acceptedFormats\": [\n      \"json\",\n      \"csv\"\n    ],\n    \"env\": \"EVIDENCE_PAYMENT_IMPORT\"\n  }\n}\n",
       "stderr": ""
     },
@@ -92,8 +92,8 @@
       "command": "/Users/vesahe/.nvm/versions/node/v22.22.3/bin/node scripts/product-factory/prepare-radio-rights-closure-packet.mjs",
       "status": "pass",
       "exitCode": 0,
-      "startedAt": "2026-06-05T20:06:05.646Z",
-      "finishedAt": "2026-06-05T20:06:05.696Z",
+      "startedAt": "2026-06-05T22:30:07.571Z",
+      "finishedAt": "2026-06-05T22:30:07.621Z",
       "stdout": "{\n  \"report\": \"radio-rights-closure-packet\",\n  \"paths\": {\n    \"json\": \"/radio-html/data/rights-closure-packet.json\",\n    \"csv\": \"/radio-html/data/rights-closure-import-template.csv\",\n    \"report\": \"/radio-html/data/rights-closure-report.json\"\n  },\n  \"counts\": {\n    \"records\": 19,\n    \"rowsPrepared\": 19,\n    \"nullProofFields\": 209,\n    \"releaseAllowed\": 0,\n    \"blocked\": 19,\n    \"closed\": 0\n  },\n  \"verificationState\": \"draft-rights-closure-packet-no-proof\"\n}\n",
       "stderr": ""
     },
@@ -102,8 +102,8 @@
       "command": "/Users/vesahe/.nvm/versions/node/v22.22.3/bin/node scripts/product-factory/verify-radio-rights-closure.mjs",
       "status": "pass",
       "exitCode": 0,
-      "startedAt": "2026-06-05T20:06:05.696Z",
-      "finishedAt": "2026-06-05T20:06:05.753Z",
+      "startedAt": "2026-06-05T22:30:07.622Z",
+      "finishedAt": "2026-06-05T22:30:07.686Z",
       "stdout": "{\n  \"report\": \"radio-rights-closure\",\n  \"gate\": {\n    \"name\": \"Rights Evidence Closure\",\n    \"status\": \"blocked\",\n    \"detail\": \"Rights closure blocked: 19 record(s) lack complete proof.\"\n  },\n  \"summary\": {\n    \"records\": 19,\n    \"importedProofs\": 0,\n    \"matchedProofs\": 0,\n    \"unmatchedProofs\": 0,\n    \"closed\": 0,\n    \"blocked\": 19,\n    \"releaseAllowed\": 0,\n    \"missingSource\": 19,\n    \"missingCreator\": 19,\n    \"missingLicense\": 19,\n    \"missingCitation\": 19,\n    \"missingReviewer\": 19,\n    \"missingReviewedAt\": 19,\n    \"auditUnverified\": 19,\n    \"checksumIssues\": 0\n  },\n  \"import\": {\n    \"path\": null,\n    \"status\": \"not-run\",\n    \"records\": 0,\n    \"error\": null,\n    \"acceptedFormats\": [\n      \"json\",\n      \"csv\"\n    ],\n    \"env\": \"EVIDENCE_RIGHTS_IMPORT\"\n  }\n}\n",
       "stderr": ""
     },
@@ -112,8 +112,8 @@
       "command": "/Users/vesahe/.nvm/versions/node/v22.22.3/bin/node scripts/product-factory/verify-radio-release-review.mjs",
       "status": "pass",
       "exitCode": 0,
-      "startedAt": "2026-06-05T20:06:05.753Z",
-      "finishedAt": "2026-06-05T20:06:05.814Z",
+      "startedAt": "2026-06-05T22:30:07.686Z",
+      "finishedAt": "2026-06-05T22:30:07.754Z",
       "stdout": "{\n  \"report\": \"radio-release-review\",\n  \"gate\": {\n    \"name\": \"Release Review\",\n    \"status\": \"blocked\",\n    \"detail\": \"Release review blocked: 23 item(s) lack complete approval proof.\"\n  },\n  \"summary\": {\n    \"reviewItems\": 23,\n    \"importedReviews\": 0,\n    \"matchedReviews\": 0,\n    \"verified\": 0,\n    \"rejected\": 0,\n    \"blocked\": 23,\n    \"reviewerAssignments\": 0,\n    \"missingReviewer\": 23,\n    \"missingReviewedAt\": 23,\n    \"missingCitation\": 23,\n    \"missingReason\": 23,\n    \"auditUnverified\": 23,\n    \"productionReady\": false,\n    \"releaseAllowed\": false\n  }\n}\n",
       "stderr": ""
     },
@@ -122,9 +122,19 @@
       "command": "/Users/vesahe/.nvm/versions/node/v22.22.3/bin/node scripts/product-factory/prepare-radio-remaining-proof-packets.mjs",
       "status": "pass",
       "exitCode": 0,
-      "startedAt": "2026-06-05T20:06:05.814Z",
-      "finishedAt": "2026-06-05T20:06:05.879Z",
+      "startedAt": "2026-06-05T22:30:07.754Z",
+      "finishedAt": "2026-06-05T22:30:07.853Z",
       "stdout": "{\n  \"report\": \"radio-remaining-proof-packets\",\n  \"counts\": {\n    \"packets\": 3,\n    \"rowsPrepared\": 34,\n    \"nullProofFields\": 311,\n    \"releaseAllowed\": 0,\n    \"blockedLanes\": 3\n  },\n  \"packets\": [\n    {\n      \"key\": \"payment\",\n      \"data\": \"/radio-html/data/payment-proof-packet.json\",\n      \"csv\": \"/radio-html/data/payment-proof-import-packet.csv\",\n      \"rows\": 5\n    },\n    {\n      \"key\": \"signing\",\n      \"data\": \"/radio-html/data/signing-proof-packet.json\",\n      \"csv\": \"/radio-html/data/signing-proof-import-template.csv\",\n      \"rows\": 6\n    },\n    {\n      \"key\": \"release-review\",\n      \"data\": \"/radio-html/data/release-review-packet.json\",\n      \"csv\": \"/radio-html/data/release-review-import-template.csv\",\n      \"rows\": 23\n    }\n  ],\n  \"verificationState\": \"draft-packets-no-proof\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "key": "customer-release",
+      "command": "/Users/vesahe/.nvm/versions/node/v22.22.3/bin/node scripts/product-factory/prepare-radio-customer-release-milestone.mjs",
+      "status": "pass",
+      "exitCode": 0,
+      "startedAt": "2026-06-05T22:30:07.853Z",
+      "finishedAt": "2026-06-05T22:30:07.982Z",
+      "stdout": "{\n  \"report\": \"radio-customer-release-milestone\",\n  \"data\": \"/radio-html/data/customer-release-milestone.json\",\n  \"surface\": \"/radio-html/surfaces/customer-release.html\",\n  \"counts\": {\n    \"gates\": 10,\n    \"draftPass\": 3,\n    \"verified\": 0,\n    \"blocked\": 7,\n    \"customerReleaseReady\": 0,\n    \"productionReady\": 0,\n    \"releaseAllowed\": 0,\n    \"rightsClosed\": 0,\n    \"rightsBlocked\": 19,\n    \"playableAudio\": 0,\n    \"paymentReceipts\": 0,\n    \"webhookEvents\": 0,\n    \"signedArtifacts\": 0,\n    \"notarizedArtifacts\": 0,\n    \"releaseReviewsVerified\": 0,\n    \"guiSmokeScreenshots\": 0,\n    \"customerFrontFailedLinks\": 0,\n    \"visualQaBlocked\": 0,\n    \"remainingPacketRowsPrepared\": 34,\n    \"remainingPacketNullFields\": 311\n  },\n  \"shipDecision\": \"NO_SHIP\",\n  \"verificationState\": \"blocked-customer-release-proof-null\"\n}\n",
       "stderr": ""
     },
     {
@@ -132,19 +142,19 @@
       "command": "npm run radio:hdfc:test",
       "status": "pass",
       "exitCode": 0,
-      "startedAt": "2026-06-05T20:06:05.879Z",
-      "finishedAt": "2026-06-05T20:06:07.125Z",
+      "startedAt": "2026-06-05T22:30:07.982Z",
+      "finishedAt": "2026-06-05T22:30:08.312Z",
       "stdout": "\n> vaishviq-knowledge-runtime@0.1.0 radio:hdfc:test\n> PYTHONPATH=integrations/hdfc-upi-parser python3 -m unittest discover -s integrations/hdfc-upi-parser/tests\n\n",
-      "stderr": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.135s\n\nOK\n"
+      "stderr": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.083s\n\nOK\n"
     },
     {
       "key": "tests",
       "command": "npm test",
       "status": "pass",
       "exitCode": 0,
-      "startedAt": "2026-06-05T20:06:07.125Z",
-      "finishedAt": "2026-06-05T20:06:22.540Z",
-      "stdout": "\n> vaishviq-knowledge-runtime@0.1.0 test\n> vitest run\n\n\n RUN  v4.1.8 /Volumes/LaCie/pprm/for_radio\n\n\n Test Files  16 passed (16)\n      Tests  40 passed (40)\n   Start at  01:36:21\n   Duration  1.11s (transform 1.95s, setup 0ms, import 3.09s, tests 254ms, environment 1ms)\n\n",
+      "startedAt": "2026-06-05T22:30:08.312Z",
+      "finishedAt": "2026-06-05T22:30:11.771Z",
+      "stdout": "\n> vaishviq-knowledge-runtime@0.1.0 test\n> vitest run\n\n\n RUN  v4.1.8 /Volumes/LaCie/pprm/for_radio\n\n\n Test Files  16 passed (16)\n      Tests  41 passed (41)\n   Start at  04:00:10\n   Duration  822ms (transform 1.14s, setup 0ms, import 1.62s, tests 79ms, environment 2ms)\n\n",
       "stderr": ""
     },
     {
@@ -152,9 +162,9 @@
       "command": "npm run build",
       "status": "pass",
       "exitCode": 0,
-      "startedAt": "2026-06-05T20:06:22.540Z",
-      "finishedAt": "2026-06-05T20:07:34.348Z",
-      "stdout": "\n> vaishviq-knowledge-runtime@0.1.0 build\n> next build apps/web\n\n▲ Next.js 16.2.6 (Turbopack)\n\n  Creating an optimized production build ...\n✓ Compiled successfully in 18.3s\n  Running TypeScript ...\n  Finished TypeScript in 11.1s ...\n  Collecting page data using 11 workers ...\n  Generating static pages using 11 workers (0/150) ...\n  Generating static pages using 11 workers (37/150) \r\n  Generating static pages using 11 workers (74/150) \r\n  Generating static pages using 11 workers (112/150) \r\n✓ Generating static pages using 11 workers (150/150) in 26.2s\n  Finalizing page optimization ...\n\nRoute (app)\n┌ ○ /\n├ ○ /_not-found\n├ ○ /admin\n├ ƒ /api/analytics\n├ ƒ /api/assistant\n├ ƒ /api/audit\n├ ƒ /api/audit/[action]\n├ ƒ /api/civilizations\n├ ƒ /api/export\n├ ƒ /api/governance\n├ ƒ /api/guru-maataa\n├ ƒ /api/hkd3d\n├ ƒ /api/import\n├ ƒ /api/knowledge-graph\n├ ƒ /api/lipi\n├ ƒ /api/pitra\n├ ƒ /api/radio-release\n├ ƒ /api/rishi\n├ ƒ /api/rishika\n├ ƒ /api/sanskrit-dictionary\n├ ƒ /api/search\n├ ƒ /api/subjects\n├ ƒ /api/texts\n├ ƒ /api/timeline\n├ ƒ /api/universal-dictionary\n├ ○ /ayodhya\n├ ● /ayodhya/[module]\n│ ├ /ayodhya/scripts\n│ ├ /ayodhya/storyboards\n│ ├ /ayodhya/images\n│ └ [+12 more paths]\n├ ○ /dashboard\n├ ƒ /dictionary\n├ ○ /governance\n├ ○ /hkd-banners\n├ ○ /hkd3d\n├ ● /hkd3d/characters/[character]\n│ ├ /hkd3d/characters/ram\n│ ├ /hkd3d/characters/sita\n│ ├ /hkd3d/characters/lakshman\n│ └ [+5 more paths]\n├ ● /hkd3d/stages/[stage]\n│ ├ /hkd3d/stages/base-human-model\n│ ├ /hkd3d/stages/texture-system\n│ ├ /hkd3d/stages/rig-system\n│ └ [+7 more paths]\n├ ○ /lineage\n├ ○ /lipi\n├ ● /lipi/[explorer]\n│ ├ /lipi/civilization\n│ ├ /lipi/religion\n│ ├ /lipi/language\n│ └ [+8 more paths]\n├ ƒ /projects/new\n├ ○ /radio\n├ ƒ /radio-html/suno_backup/[...assetPath]\n├ ○ /radio/frame\n├ ○ /radio/runtime\n├ ○ /radio/storyboard\n├ ○ /scopes\n├ ● /scopes/[key]\n│ ├ /scopes/all\n│ ├ /scopes/pitra\n│ ├ /scopes/guru-maataa\n│ └ [+39 more paths]\n├ ○ /sprints\n├ ○ /universes\n├ ● /universes/[slug]\n│ ├ /universes/universal-knowledge-lineage-explorer\n│ ├ /universes/pitra-universe\n│ ├ /universes/guru-maataa-universe\n│ └ [+19 more paths]\n└ ○ /wireframes\n\n\n○  (Static)   prerendered as static content\n●  (SSG)      prerendered as static HTML (uses generateStaticParams)\nƒ  (Dynamic)  server-rendered on demand\n\n",
+      "startedAt": "2026-06-05T22:30:11.771Z",
+      "finishedAt": "2026-06-05T22:31:26.226Z",
+      "stdout": "\n> vaishviq-knowledge-runtime@0.1.0 build\n> next build apps/web\n\n▲ Next.js 16.2.6 (Turbopack)\n\n  Creating an optimized production build ...\n✓ Compiled successfully in 17.6s\n  Running TypeScript ...\n  Finished TypeScript in 12.8s ...\n  Collecting page data using 11 workers ...\n  Generating static pages using 11 workers (0/150) ...\n  Generating static pages using 11 workers (37/150) \r\n  Generating static pages using 11 workers (74/150) \r\n  Generating static pages using 11 workers (112/150) \r\n✓ Generating static pages using 11 workers (150/150) in 27.4s\n  Finalizing page optimization ...\n\nRoute (app)\n┌ ○ /\n├ ○ /_not-found\n├ ○ /admin\n├ ƒ /api/analytics\n├ ƒ /api/assistant\n├ ƒ /api/audit\n├ ƒ /api/audit/[action]\n├ ƒ /api/civilizations\n├ ƒ /api/export\n├ ƒ /api/governance\n├ ƒ /api/guru-maataa\n├ ƒ /api/hkd3d\n├ ƒ /api/import\n├ ƒ /api/knowledge-graph\n├ ƒ /api/lipi\n├ ƒ /api/pitra\n├ ƒ /api/radio-release\n├ ƒ /api/rishi\n├ ƒ /api/rishika\n├ ƒ /api/sanskrit-dictionary\n├ ƒ /api/search\n├ ƒ /api/subjects\n├ ƒ /api/texts\n├ ƒ /api/timeline\n├ ƒ /api/universal-dictionary\n├ ○ /ayodhya\n├ ● /ayodhya/[module]\n│ ├ /ayodhya/scripts\n│ ├ /ayodhya/storyboards\n│ ├ /ayodhya/images\n│ └ [+12 more paths]\n├ ○ /dashboard\n├ ƒ /dictionary\n├ ○ /governance\n├ ○ /hkd-banners\n├ ○ /hkd3d\n├ ● /hkd3d/characters/[character]\n│ ├ /hkd3d/characters/ram\n│ ├ /hkd3d/characters/sita\n│ ├ /hkd3d/characters/lakshman\n│ └ [+5 more paths]\n├ ● /hkd3d/stages/[stage]\n│ ├ /hkd3d/stages/base-human-model\n│ ├ /hkd3d/stages/texture-system\n│ ├ /hkd3d/stages/rig-system\n│ └ [+7 more paths]\n├ ○ /lineage\n├ ○ /lipi\n├ ● /lipi/[explorer]\n│ ├ /lipi/civilization\n│ ├ /lipi/religion\n│ ├ /lipi/language\n│ └ [+8 more paths]\n├ ƒ /projects/new\n├ ○ /radio\n├ ƒ /radio-html/suno_backup/[...assetPath]\n├ ○ /radio/frame\n├ ○ /radio/runtime\n├ ○ /radio/storyboard\n├ ○ /scopes\n├ ● /scopes/[key]\n│ ├ /scopes/all\n│ ├ /scopes/pitra\n│ ├ /scopes/guru-maataa\n│ └ [+39 more paths]\n├ ○ /sprints\n├ ○ /universes\n├ ● /universes/[slug]\n│ ├ /universes/universal-knowledge-lineage-explorer\n│ ├ /universes/pitra-universe\n│ ├ /universes/guru-maataa-universe\n│ └ [+19 more paths]\n└ ○ /wireframes\n\n\n○  (Static)   prerendered as static content\n●  (SSG)      prerendered as static HTML (uses generateStaticParams)\nƒ  (Dynamic)  server-rendered on demand\n\n",
       "stderr": ""
     }
   ]

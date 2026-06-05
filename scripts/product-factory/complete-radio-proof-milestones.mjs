@@ -445,7 +445,7 @@ const refreshCommand = {
   },
   command: "npm run radio:release:check",
   counts: {
-    configuredCommands: 15,
+    configuredCommands: 16,
     optionalBrowserChecks: 2,
     externalProofCreated: 0,
     productionReady: 0,
@@ -463,6 +463,7 @@ const refreshCommand = {
     ["rights-closure", "node scripts/product-factory/verify-radio-rights-closure.mjs"],
     ["release-review", "node scripts/product-factory/verify-radio-release-review.mjs"],
     ["remaining-packets", "node scripts/product-factory/prepare-radio-remaining-proof-packets.mjs"],
+    ["customer-release", "node scripts/product-factory/prepare-radio-customer-release-milestone.mjs"],
     ["hdfc-parser-tests", "npm run radio:hdfc:test"],
     ["tests", "npm test"],
     ["build", "npm run build"],

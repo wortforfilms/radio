@@ -1,0 +1,471 @@
+{
+  "id": "radio-customer-release-milestone",
+  "title": "Radio Vaigyaaniq Customer Release Milestone",
+  "generatedAt": "2026-06-06",
+  "verificationState": "blocked-customer-release-proof-null",
+  "shipDecision": "NO_SHIP",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "Customer release stays blocked until rights, playable audio, payment receipt, webhook, signing, notarization, GUI smoke, release review, and packaging evidence are independently present and verified."
+  },
+  "counts": {
+    "gates": 10,
+    "draftPass": 3,
+    "verified": 0,
+    "blocked": 7,
+    "customerReleaseReady": 0,
+    "productionReady": 0,
+    "releaseAllowed": 0,
+    "rightsClosed": 0,
+    "rightsBlocked": 19,
+    "playableAudio": 0,
+    "paymentReceipts": 0,
+    "webhookEvents": 0,
+    "signedArtifacts": 0,
+    "notarizedArtifacts": 0,
+    "releaseReviewsVerified": 0,
+    "guiSmokeScreenshots": 0,
+    "customerFrontFailedLinks": 0,
+    "visualQaBlocked": 0,
+    "remainingPacketRowsPrepared": 34,
+    "remainingPacketNullFields": 311
+  },
+  "gates": [
+    {
+      "key": "customer-front-playwright",
+      "label": "Customer Front Playwright",
+      "category": "local-ui",
+      "status": "draft-pass",
+      "evidence": "/radio-html/qa/customer-front/radio-customer-front-playwright-report.json",
+      "apiView": null,
+      "blocker": null,
+      "observed": {
+        "modules": 13,
+        "workflows": 6,
+        "evidenceCards": 4,
+        "imagesDesktop": 1,
+        "brokenDesktopImages": 0,
+        "brokenMobileImages": 0,
+        "links": 28,
+        "failedLinks": 0
+      },
+      "requiredEvidence": [
+        "routeLoaded",
+        "heroPresent",
+        "navComplete",
+        "noBrokenImages",
+        "internalLinksOk",
+        "phkdGuardVisible"
+      ]
+    },
+    {
+      "key": "visual-qa",
+      "label": "Visual QA Board",
+      "category": "local-ui",
+      "status": "draft-pass",
+      "evidence": "/radio-html/data/visual-qa.json",
+      "apiView": null,
+      "blocker": null,
+      "observed": {
+        "targets": 25,
+        "capturedScreenshots": 25,
+        "pass": 25,
+        "blocked": 0
+      },
+      "requiredEvidence": [
+        "capturedScreenshots",
+        "passEqualsTargets",
+        "blockedEqualsZero"
+      ]
+    },
+    {
+      "key": "release-orchestration",
+      "label": "Local Release Orchestration",
+      "category": "local-command",
+      "status": "draft-pass",
+      "evidence": "/radio-html/data/release-orchestration-run.json",
+      "apiView": "release-orchestration",
+      "blocker": null,
+      "observed": {
+        "steps": 15,
+        "pass": 15,
+        "fail": 0,
+        "browserChecks": 0
+      },
+      "requiredEvidence": [
+        "steps",
+        "pass",
+        "fail"
+      ]
+    },
+    {
+      "key": "gui-smoke",
+      "label": "Desktop GUI Smoke",
+      "category": "desktop-proof",
+      "status": "blocked",
+      "evidence": "/radio-html/data/gui-smoke-evidence.json",
+      "apiView": null,
+      "blocker": "Manual GUI screenshot, reviewer, no-crash, and visible no-ship proof are incomplete.",
+      "observed": {
+        "checks": 9,
+        "passedChecks": 1,
+        "blockedChecks": 8,
+        "screenshots": 0,
+        "reviewers": 0,
+        "appOpenProof": 0
+      },
+      "requiredEvidence": [
+        "screenshot",
+        "reviewer",
+        "firstPaint",
+        "navigation",
+        "noCrash",
+        "noShipVisible",
+        "audioGateVisible"
+      ]
+    },
+    {
+      "key": "rights-closure",
+      "label": "Rights Evidence Closure",
+      "category": "external-proof",
+      "status": "blocked",
+      "evidence": "/radio-html/data/rights-closure-report.json",
+      "apiView": "rights-closure-report",
+      "blocker": "Rights closure blocked: 19 record(s) lack complete proof.",
+      "observed": {
+        "records": 19,
+        "importedProofs": 0,
+        "matchedProofs": 0,
+        "unmatchedProofs": 0,
+        "closed": 0,
+        "blocked": 19,
+        "releaseAllowed": 0,
+        "missingSource": 19,
+        "missingCreator": 19,
+        "missingLicense": 19,
+        "missingCitation": 19,
+        "missingReviewer": 19,
+        "missingReviewedAt": 19,
+        "auditUnverified": 19,
+        "checksumIssues": 0
+      },
+      "requiredEvidence": [
+        "source",
+        "creator",
+        "license",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "AuditLog.verified",
+        "releaseAllowed"
+      ]
+    },
+    {
+      "key": "playback-gate",
+      "label": "Playable Audio Gate",
+      "category": "external-proof",
+      "status": "blocked",
+      "evidence": "/radio-html/data/playback-gate.json",
+      "apiView": "playback-gate",
+      "blocker": "Playable audio remains blocked until imported audio and rights evidence are verified.",
+      "observed": {
+        "imports": 0,
+        "playable": 0,
+        "blocked": 1,
+        "nullEvidence": 1,
+        "stationSlots": 4,
+        "rightsClosed": 0,
+        "rightsBlocked": 19,
+        "releaseAllowed": 0
+      },
+      "requiredEvidence": [
+        "audioImport",
+        "rightsClosed",
+        "releaseAllowed",
+        "canPlay"
+      ]
+    },
+    {
+      "key": "gift-payment-proof",
+      "label": "Gift Payment Proof",
+      "category": "external-proof",
+      "status": "blocked",
+      "evidence": "/radio-html/data/payment-proof-report.json",
+      "apiView": "payment-proof-report",
+      "blocker": "Gift/payment proof blocked: 5 state(s) lack complete proof.",
+      "observed": {
+        "importedProofs": 0,
+        "candidateOnlyProofs": 0,
+        "giftIntents": 0,
+        "checkoutSessions": 0,
+        "paymentReceipts": 0,
+        "webhookEvents": 0,
+        "fulfilledGifts": 0,
+        "verifiedStates": 0,
+        "blockedStates": 5,
+        "missingPayerId": 2,
+        "missingRecipientId": 2,
+        "missingCheckoutSession": 1,
+        "missingPaymentReceipt": 2,
+        "missingWebhookSignature": 1,
+        "missingDeliveryProof": 1,
+        "auditUnverified": 2
+      },
+      "requiredEvidence": [
+        "checkoutSession",
+        "paymentReceipt",
+        "webhookSignature",
+        "settlementStatus",
+        "fulfillment",
+        "AuditLog.created"
+      ]
+    },
+    {
+      "key": "signing-notarization",
+      "label": "Signing + Notarization",
+      "category": "external-proof",
+      "status": "blocked",
+      "evidence": "/radio-html/data/signing-notarization-evidence.json",
+      "apiView": null,
+      "blocker": "Signed artifact, notarization, Developer ID, Gatekeeper, and reviewer evidence are incomplete.",
+      "observed": {
+        "checks": 8,
+        "passedChecks": 2,
+        "blockedChecks": 6,
+        "signedArtifacts": 0,
+        "notarizedArtifacts": 0,
+        "developerIdIdentities": 0,
+        "adhocSignatures": 1
+      },
+      "requiredEvidence": [
+        "signedArtifact",
+        "developerId",
+        "notarizationTicket",
+        "gatekeeperAssessment",
+        "reviewer",
+        "AuditLog.verified"
+      ]
+    },
+    {
+      "key": "release-review",
+      "label": "Human Release Review",
+      "category": "external-proof",
+      "status": "blocked",
+      "evidence": "/radio-html/data/release-review-report.json",
+      "apiView": "release-review-report",
+      "blocker": "Release review blocked: 23 item(s) lack approval proof.",
+      "observed": {
+        "reviewItems": 23,
+        "importedReviews": 0,
+        "matchedReviews": 0,
+        "verified": 0,
+        "rejected": 0,
+        "blocked": 23,
+        "reviewerAssignments": 0,
+        "missingReviewer": 23,
+        "missingReviewedAt": 23,
+        "missingCitation": 23,
+        "missingReason": 23,
+        "auditUnverified": 23,
+        "productionReady": false,
+        "releaseAllowed": false
+      },
+      "requiredEvidence": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "decision",
+        "AuditLog.verified"
+      ]
+    },
+    {
+      "key": "tauri-readiness",
+      "label": "Tauri Readiness",
+      "category": "release-packaging",
+      "status": "blocked",
+      "evidence": "/radio-html/data/tauri-readiness.json",
+      "apiView": "tauri-readiness",
+      "blocker": "Tauri readiness remains NO_SHIP while blocked evidence lanes exist.",
+      "observed": {
+        "draftReady": 8,
+        "blocked": 10,
+        "notRun": 1
+      },
+      "requiredEvidence": [
+        "signedInstaller",
+        "notarizedInstaller",
+        "rightsClosed",
+        "paymentReceipt",
+        "releaseReview",
+        "shipDecision"
+      ]
+    }
+  ],
+  "blockers": [
+    {
+      "key": "gui-smoke",
+      "label": "Desktop GUI Smoke",
+      "evidence": "/radio-html/data/gui-smoke-evidence.json",
+      "blocker": "Manual GUI screenshot, reviewer, no-crash, and visible no-ship proof are incomplete.",
+      "requiredEvidence": [
+        "screenshot",
+        "reviewer",
+        "firstPaint",
+        "navigation",
+        "noCrash",
+        "noShipVisible",
+        "audioGateVisible"
+      ]
+    },
+    {
+      "key": "rights-closure",
+      "label": "Rights Evidence Closure",
+      "evidence": "/radio-html/data/rights-closure-report.json",
+      "blocker": "Rights closure blocked: 19 record(s) lack complete proof.",
+      "requiredEvidence": [
+        "source",
+        "creator",
+        "license",
+        "citation",
+        "reviewer",
+        "reviewedAt",
+        "AuditLog.verified",
+        "releaseAllowed"
+      ]
+    },
+    {
+      "key": "playback-gate",
+      "label": "Playable Audio Gate",
+      "evidence": "/radio-html/data/playback-gate.json",
+      "blocker": "Playable audio remains blocked until imported audio and rights evidence are verified.",
+      "requiredEvidence": [
+        "audioImport",
+        "rightsClosed",
+        "releaseAllowed",
+        "canPlay"
+      ]
+    },
+    {
+      "key": "gift-payment-proof",
+      "label": "Gift Payment Proof",
+      "evidence": "/radio-html/data/payment-proof-report.json",
+      "blocker": "Gift/payment proof blocked: 5 state(s) lack complete proof.",
+      "requiredEvidence": [
+        "checkoutSession",
+        "paymentReceipt",
+        "webhookSignature",
+        "settlementStatus",
+        "fulfillment",
+        "AuditLog.created"
+      ]
+    },
+    {
+      "key": "signing-notarization",
+      "label": "Signing + Notarization",
+      "evidence": "/radio-html/data/signing-notarization-evidence.json",
+      "blocker": "Signed artifact, notarization, Developer ID, Gatekeeper, and reviewer evidence are incomplete.",
+      "requiredEvidence": [
+        "signedArtifact",
+        "developerId",
+        "notarizationTicket",
+        "gatekeeperAssessment",
+        "reviewer",
+        "AuditLog.verified"
+      ]
+    },
+    {
+      "key": "release-review",
+      "label": "Human Release Review",
+      "evidence": "/radio-html/data/release-review-report.json",
+      "blocker": "Release review blocked: 23 item(s) lack approval proof.",
+      "requiredEvidence": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "decision",
+        "AuditLog.verified"
+      ]
+    },
+    {
+      "key": "tauri-readiness",
+      "label": "Tauri Readiness",
+      "evidence": "/radio-html/data/tauri-readiness.json",
+      "blocker": "Tauri readiness remains NO_SHIP while blocked evidence lanes exist.",
+      "requiredEvidence": [
+        "signedInstaller",
+        "notarizedInstaller",
+        "rightsClosed",
+        "paymentReceipt",
+        "releaseReview",
+        "shipDecision"
+      ]
+    }
+  ],
+  "releaseCriteria": [
+    "rights closure closed for every release asset",
+    "playable audio imported with verified rights",
+    "gift/payment receipt, webhook signature, settlement, and fulfillment proof",
+    "signed and notarized desktop artifacts with reviewer evidence",
+    "desktop GUI smoke proof with reviewer and screenshot",
+    "human release review with citation, reason, decision, and audit record",
+    "Tauri readiness no longer reports NO_SHIP",
+    "customer front and visual QA remain locally passing"
+  ],
+  "sourceFrames": [
+    {
+      "key": "rights-closure",
+      "path": "/radio-html/data/rights-closure-report.json",
+      "verificationState": "blocked-rights-proof-null"
+    },
+    {
+      "key": "playback-gate",
+      "path": "/radio-html/data/playback-gate.json",
+      "verificationState": "draft-rights-closure-blocked"
+    },
+    {
+      "key": "payment-proof",
+      "path": "/radio-html/data/payment-proof-report.json",
+      "verificationState": "blocked-payment-proof-null"
+    },
+    {
+      "key": "signing",
+      "path": "/radio-html/data/signing-notarization-evidence.json",
+      "verificationState": "blocked-signing-notarization-proof-null"
+    },
+    {
+      "key": "release-review",
+      "path": "/radio-html/data/release-review-report.json",
+      "verificationState": "blocked-release-review-null"
+    },
+    {
+      "key": "gui-smoke",
+      "path": "/radio-html/data/gui-smoke-evidence.json",
+      "verificationState": "blocked-gui-proof-null"
+    },
+    {
+      "key": "customer-front",
+      "path": "/radio-html/qa/customer-front/radio-customer-front-playwright-report.json",
+      "verificationState": "draft-playwright-evidence"
+    },
+    {
+      "key": "visual-qa",
+      "path": "/radio-html/data/visual-qa.json",
+      "verificationState": "draft"
+    },
+    {
+      "key": "tauri-readiness",
+      "path": "/radio-html/data/tauri-readiness.json",
+      "verificationState": "draft-local-app-built-signing-proof-blocked"
+    },
+    {
+      "key": "release-orchestration-run",
+      "path": "/radio-html/data/release-orchestration-run.json",
+      "verificationState": "draft-verified-local"
+    }
+  ]
+}

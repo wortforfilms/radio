@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - Customer Release Milestone</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav>
+        <a href="./index.html">Index</a>
+        <a href="./no-ship-dashboard.html">No-Ship</a>
+        <a href="./rights-closure.html">Rights</a>
+        <a href="./payment-proof-report.html">Pay</a>
+        <a href="./signing-notarization-evidence.html">Sign</a>
+        <a href="./release-review.html">Review</a>
+      </nav>
+      <span>PHKD</span>
+    </aside>
+    <section class="surface-main">
+      <section class="surface-hero with-image">
+        <img src="../assets/radio-vaigyaaniq-landing-hero.png" alt="" aria-hidden="true">
+        <div>
+          <p class="eyebrow">Customer Release Milestone</p>
+          <h1>Radio Vaigyaaniq Customer Release Milestone</h1>
+          <p>Customer release stays blocked until rights, playable audio, payment receipt, webhook, signing, notarization, GUI smoke, release review, and packaging evidence are independently present and verified.</p>
+          <div class="surface-actions">
+            <a href="../data/customer-release-milestone.json">Milestone JSON</a>
+            <a href="/api/radio-release?view=customer-release">Release API</a>
+            <a href="./no-ship-dashboard.html">No-Ship Dashboard</a>
+          </div>
+        </div>
+        <div class="status-chip">
+          <span>Decision</span>
+          <b>NO_SHIP</b>
+          <small>blocked-customer-release-proof-null</small>
+        </div>
+      </section>
+      <section class="surface-grid four">
+        <article class="surface-card"><span class="surface-label">Gates</span><b>10</b><p>Customer release checks.</p></article>
+        <article class="surface-card"><span class="surface-label">Blocked</span><b>7</b><p>Must close before customer release.</p></article>
+        <article class="surface-card"><span class="surface-label">Draft Pass</span><b>3</b><p>Local-only evidence passes.</p></article>
+        <article class="surface-card"><span class="surface-label">Release Allowed</span><b>0</b><p>Fail-closed external allowance.</p></article>
+      </section>
+      <section class="surface-card">
+        <span class="surface-label">Gate Matrix</span>
+        <h2>Customer Release Readiness</h2>
+        <section class="runtime-lane">
+        <article class="runtime-row">
+          <span>draft-pass</span>
+          <div>
+            <b>Customer Front Playwright</b>
+            <p>Gate has local draft evidence. It does not override PHKD release blockers.</p>
+            <small>routeLoaded · heroPresent · navComplete · noBrokenImages · internalLinksOk · phkdGuardVisible</small>
+          </div>
+          <a href="/radio-html/qa/customer-front/radio-customer-front-playwright-report.json">Evidence</a>
+        </article>
+        <article class="runtime-row">
+          <span>draft-pass</span>
+          <div>
+            <b>Visual QA Board</b>
+            <p>Gate has local draft evidence. It does not override PHKD release blockers.</p>
+            <small>capturedScreenshots · passEqualsTargets · blockedEqualsZero</small>
+          </div>
+          <a href="/radio-html/data/visual-qa.json">Evidence</a>
+        </article>
+        <article class="runtime-row">
+          <span>draft-pass</span>
+          <div>
+            <b>Local Release Orchestration</b>
+            <p>Gate has local draft evidence. It does not override PHKD release blockers.</p>
+            <small>steps · pass · fail</small>
+          </div>
+          <a href="/radio-html/data/release-orchestration-run.json">Evidence</a>
+        </article>
+        <article class="runtime-row">
+          <span>blocked</span>
+          <div>
+            <b>Desktop GUI Smoke</b>
+            <p>Manual GUI screenshot, reviewer, no-crash, and visible no-ship proof are incomplete.</p>
+            <small>screenshot · reviewer · firstPaint · navigation · noCrash · noShipVisible · audioGateVisible</small>
+          </div>
+          <a href="/radio-html/data/gui-smoke-evidence.json">Evidence</a>
+        </article>
+        <article class="runtime-row">
+          <span>blocked</span>
+          <div>
+            <b>Rights Evidence Closure</b>
+            <p>Rights closure blocked: 19 record(s) lack complete proof.</p>
+            <small>source · creator · license · citation · reviewer · reviewedAt · AuditLog.verified · releaseAllowed</small>
+          </div>
+          <a href="/radio-html/data/rights-closure-report.json">Evidence</a>
+        </article>
+        <article class="runtime-row">
+          <span>blocked</span>
+          <div>
+            <b>Playable Audio Gate</b>
+            <p>Playable audio remains blocked until imported audio and rights evidence are verified.</p>
+            <small>audioImport · rightsClosed · releaseAllowed · canPlay</small>
+          </div>
+          <a href="/radio-html/data/playback-gate.json">Evidence</a>
+        </article>
+        <article class="runtime-row">
+          <span>blocked</span>
+          <div>
+            <b>Gift Payment Proof</b>
+            <p>Gift/payment proof blocked: 5 state(s) lack complete proof.</p>
+            <small>checkoutSession · paymentReceipt · webhookSignature · settlementStatus · fulfillment · AuditLog.created</small>
+          </div>
+          <a href="/radio-html/data/payment-proof-report.json">Evidence</a>
+        </article>
+        <article class="runtime-row">
+          <span>blocked</span>
+          <div>
+            <b>Signing + Notarization</b>
+            <p>Signed artifact, notarization, Developer ID, Gatekeeper, and reviewer evidence are incomplete.</p>
+            <small>signedArtifact · developerId · notarizationTicket · gatekeeperAssessment · reviewer · AuditLog.verified</small>
+          </div>
+          <a href="/radio-html/data/signing-notarization-evidence.json">Evidence</a>
+        </article>
+        <article class="runtime-row">
+          <span>blocked</span>
+          <div>
+            <b>Human Release Review</b>
+            <p>Release review blocked: 23 item(s) lack approval proof.</p>
+            <small>reviewer · reviewedAt · citation · reason · decision · AuditLog.verified</small>
+          </div>
+          <a href="/radio-html/data/release-review-report.json">Evidence</a>
+        </article>
+        <article class="runtime-row">
+          <span>blocked</span>
+          <div>
+            <b>Tauri Readiness</b>
+            <p>Tauri readiness remains NO_SHIP while blocked evidence lanes exist.</p>
+            <small>signedInstaller · notarizedInstaller · rightsClosed · paymentReceipt · releaseReview · shipDecision</small>
+          </div>
+          <a href="/radio-html/data/tauri-readiness.json">Evidence</a>
+        </article></section>
+      </section>
+      <section class="surface-grid three">
+
+        <article class="surface-card blocked">
+          <span class="surface-label">gui-smoke</span>
+          <h2>Desktop GUI Smoke</h2>
+          <p>Manual GUI screenshot, reviewer, no-crash, and visible no-ship proof are incomplete.</p>
+          <a href="/radio-html/data/gui-smoke-evidence.json">Open proof frame</a>
+        </article>
+        <article class="surface-card blocked">
+          <span class="surface-label">rights-closure</span>
+          <h2>Rights Evidence Closure</h2>
+          <p>Rights closure blocked: 19 record(s) lack complete proof.</p>
+          <a href="/radio-html/data/rights-closure-report.json">Open proof frame</a>
+        </article>
+        <article class="surface-card blocked">
+          <span class="surface-label">playback-gate</span>
+          <h2>Playable Audio Gate</h2>
+          <p>Playable audio remains blocked until imported audio and rights evidence are verified.</p>
+          <a href="/radio-html/data/playback-gate.json">Open proof frame</a>
+        </article>
+        <article class="surface-card blocked">
+          <span class="surface-label">gift-payment-proof</span>
+          <h2>Gift Payment Proof</h2>
+          <p>Gift/payment proof blocked: 5 state(s) lack complete proof.</p>
+          <a href="/radio-html/data/payment-proof-report.json">Open proof frame</a>
+        </article>
+        <article class="surface-card blocked">
+          <span class="surface-label">signing-notarization</span>
+          <h2>Signing + Notarization</h2>
+          <p>Signed artifact, notarization, Developer ID, Gatekeeper, and reviewer evidence are incomplete.</p>
+          <a href="/radio-html/data/signing-notarization-evidence.json">Open proof frame</a>
+        </article>
+        <article class="surface-card blocked">
+          <span class="surface-label">release-review</span>
+          <h2>Human Release Review</h2>
+          <p>Release review blocked: 23 item(s) lack approval proof.</p>
+          <a href="/radio-html/data/release-review-report.json">Open proof frame</a>
+        </article>
+        <article class="surface-card blocked">
+          <span class="surface-label">tauri-readiness</span>
+          <h2>Tauri Readiness</h2>
+          <p>Tauri readiness remains NO_SHIP while blocked evidence lanes exist.</p>
+          <a href="/radio-html/data/tauri-readiness.json">Open proof frame</a>
+        </article>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

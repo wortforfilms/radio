@@ -18,6 +18,7 @@
     "radio:rights:closure": "node scripts/product-factory/verify-radio-rights-closure.mjs",
     "radio:remaining:packets": "node scripts/product-factory/prepare-radio-remaining-proof-packets.mjs",
     "radio:release:review": "node scripts/product-factory/verify-radio-release-review.mjs",
+    "radio:customer:release": "node scripts/product-factory/prepare-radio-customer-release-milestone.mjs",
     "radio:release:check": "node scripts/product-factory/radio-release-evidence-orchestrator.mjs",
     "test": "vitest run"
   },

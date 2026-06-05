@@ -13,7 +13,7 @@
   },
   "command": "npm run radio:release:check",
   "counts": {
-    "configuredCommands": 15,
+    "configuredCommands": 16,
     "optionalBrowserChecks": 2,
     "externalProofCreated": 0,
     "productionReady": 0,
@@ -73,6 +73,11 @@
     {
       "key": "remaining-packets",
       "command": "node scripts/product-factory/prepare-radio-remaining-proof-packets.mjs",
+      "status": "configured"
+    },
+    {
+      "key": "customer-release",
+      "command": "node scripts/product-factory/prepare-radio-customer-release-milestone.mjs",
       "status": "configured"
     },
     {

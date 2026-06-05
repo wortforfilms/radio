@@ -22,6 +22,7 @@ const DATASETS = {
   "signing-proof-packet": "radio-html/data/signing-proof-packet.json",
   "release-review-packet": "radio-html/data/release-review-packet.json",
   "remaining-proof-packets": "radio-html/data/remaining-proof-packets.json",
+  "customer-release": "radio-html/data/customer-release-milestone.json",
   "hdfc-upi-parser-adapter": "radio-html/data/hdfc-upi-parser-adapter.json",
   "evidence-refresh-command": "radio-html/data/evidence-refresh-command.json",
   "installer-signing-proof": "radio-html/data/installer-signing-proof.json",

@@ -70,10 +70,11 @@ describe("radio proof milestone completion", () => {
     expect(reviewReport.summary.blocked).toBeGreaterThan(0);
     expect(reviewReport.shipDecision).toBe("NO_SHIP");
     expect(signing.counts).toMatchObject({ signedArtifacts: 0, notarizedArtifacts: 0 });
-    expect(orchestration.counts).toMatchObject({ configuredCommands: 15, externalProofCreated: 0 });
+    expect(orchestration.counts).toMatchObject({ configuredCommands: 16, externalProofCreated: 0 });
     expect(orchestration.steps.map((step) => step.key)).toContain("proof-milestones");
     expect(orchestration.steps.map((step) => step.key)).toContain("rights-packet");
     expect(orchestration.steps.map((step) => step.key)).toContain("remaining-packets");
+    expect(orchestration.steps.map((step) => step.key)).toContain("customer-release");
     expect(orchestration.steps.map((step) => step.key)).toContain("release-review");
     expect(orchestration.steps.map((step) => step.key)).toContain("hdfc-parser-tests");
   });
