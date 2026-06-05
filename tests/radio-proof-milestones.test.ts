@@ -41,6 +41,7 @@ describe("radio proof milestone completion", () => {
       "webhook-signature-proof.html",
       "receipt-settlement-proof.html",
       "rights-proof-import-templates.html",
+      "rights-closure-packet.html",
       "release-review-board.html",
       "installer-signing-proof.html",
       "evidence-refresh-command.html"
@@ -52,18 +53,22 @@ describe("radio proof milestone completion", () => {
     const rights = readJson<{ counts: { closed: number; blocked: number } }>("rights-proof-import-templates.json");
     const review = readJson<{ counts: { reviewerAssignments: number; verified: number } }>("release-review-board.json");
     const signing = readJson<{ counts: { signedArtifacts: number; notarizedArtifacts: number } }>("installer-signing-proof.json");
+    const rightsPacket = readJson<{ counts: { records: number; releaseAllowed: number }; records: { source: null; creator: null; releaseAllowed: false }[] }>("rights-closure-packet.json");
     const orchestration = readJson<{ counts: { configuredCommands: number; externalProofCreated: number }; steps: { key: string }[] }>("evidence-refresh-command.json");
     const reviewReport = readJson<{ summary: { releaseAllowed: boolean; blocked: number; verified: number }; shipDecision: string }>("release-review-report.json");
 
     expect(rights.counts.closed).toBe(0);
     expect(rights.counts.blocked).toBeGreaterThan(0);
+    expect(rightsPacket.counts).toMatchObject({ records: 19, releaseAllowed: 0 });
+    expect(rightsPacket.records[0]).toMatchObject({ source: null, creator: null, releaseAllowed: false });
     expect(review.counts).toMatchObject({ reviewerAssignments: 0, verified: 0 });
     expect(reviewReport.summary).toMatchObject({ releaseAllowed: false, verified: 0 });
     expect(reviewReport.summary.blocked).toBeGreaterThan(0);
     expect(reviewReport.shipDecision).toBe("NO_SHIP");
     expect(signing.counts).toMatchObject({ signedArtifacts: 0, notarizedArtifacts: 0 });
-    expect(orchestration.counts).toMatchObject({ configuredCommands: 13, externalProofCreated: 0 });
+    expect(orchestration.counts).toMatchObject({ configuredCommands: 14, externalProofCreated: 0 });
     expect(orchestration.steps.map((step) => step.key)).toContain("proof-milestones");
+    expect(orchestration.steps.map((step) => step.key)).toContain("rights-packet");
     expect(orchestration.steps.map((step) => step.key)).toContain("release-review");
     expect(orchestration.steps.map((step) => step.key)).toContain("hdfc-parser-tests");
   });

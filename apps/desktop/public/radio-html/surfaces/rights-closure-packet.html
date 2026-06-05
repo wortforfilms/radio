@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - Rights Closure Packet</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav>
+        <a href="./index.html">Index</a>
+        <a href="./rights-closure.html">Rights</a>
+        <a href="./rights-proof-import-templates.html">Templates</a>
+        <a href="./release-orchestration.html">Ship</a>
+      </nav>
+      <span>PHKD</span>
+    </aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">Rights Gate</p>
+          <h1>Rights Closure Packet</h1>
+          <p id="surfaceNote">Loading per-asset closure packet...</p>
+          <div class="surface-actions">
+            <a href="../data/rights-closure-packet.json">Packet JSON</a>
+            <a href="../data/rights-closure-import-template.csv">Import CSV</a>
+          </div>
+        </div>
+        <div class="status-chip">
+          <span>State</span>
+          <b id="surfaceState">BLOCKED</b>
+          <small id="surfaceShip">NO_SHIP</small>
+        </div>
+      </section>
+      <section class="surface-grid three" id="metrics"></section>
+      <section class="surface-card">
+        <h2>Required Proof</h2>
+        <pre id="required">Loading...</pre>
+      </section>
+      <section class="surface-card">
+        <h2>Packet Rows</h2>
+        <pre id="rawData">Loading...</pre>
+      </section>
+    </section>
+  </main>
+  <script>
+    fetch("../data/rights-closure-packet.json").then((response) => response.json()).then((data) => {
+      document.getElementById("surfaceNote").textContent = data.phkd.note;
+      document.getElementById("surfaceState").textContent = data.verificationState;
+      document.getElementById("surfaceShip").textContent = data.shipDecision;
+      const counts = data.counts || {};
+      document.getElementById("metrics").innerHTML = Object.entries(counts).map(([key, value]) =>
+        '<article class="surface-card"><span class="surface-label">' + key + '</span><b>' + value + '</b></article>'
+      ).join("");
+      document.getElementById("required").textContent = JSON.stringify(data.requiredEvidence, null, 2);
+      document.getElementById("rawData").textContent = JSON.stringify(data.records.slice(0, 6), null, 2);
+    });
+  </script>
+</body>
+</html>

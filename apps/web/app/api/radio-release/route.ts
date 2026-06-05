@@ -16,6 +16,8 @@ const DATASETS = {
   "release-review-report": "radio-html/data/release-review-report.json",
   "payment-proof-report": "radio-html/data/payment-proof-report.json",
   "rights-closure-report": "radio-html/data/rights-closure-report.json",
+  "rights-closure-packet": "radio-html/data/rights-closure-packet.json",
+  "rights-proof-import-templates": "radio-html/data/rights-proof-import-templates.json",
   "hdfc-upi-parser-adapter": "radio-html/data/hdfc-upi-parser-adapter.json",
   "evidence-refresh-command": "radio-html/data/evidence-refresh-command.json",
   "installer-signing-proof": "radio-html/data/installer-signing-proof.json",

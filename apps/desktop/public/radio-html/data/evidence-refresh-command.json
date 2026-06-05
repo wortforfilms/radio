@@ -13,7 +13,7 @@
   },
   "command": "npm run radio:release:check",
   "counts": {
-    "configuredCommands": 13,
+    "configuredCommands": 14,
     "optionalBrowserChecks": 2,
     "externalProofCreated": 0,
     "productionReady": 0,
@@ -53,6 +53,11 @@
     {
       "key": "payment-proof",
       "command": "node scripts/product-factory/verify-radio-payment-proof.mjs",
+      "status": "configured"
+    },
+    {
+      "key": "rights-packet",
+      "command": "node scripts/product-factory/prepare-radio-rights-closure-packet.mjs",
       "status": "configured"
     },
     {

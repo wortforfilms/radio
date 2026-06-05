@@ -279,6 +279,30 @@ const rightsTemplates = {
     { key: "release-allowance", required: ["releaseAllowed", "checksum"] }
   ]
 };
+const rightsPacket = readJson(path.join(webRoot, "data", "rights-closure-packet.json"), {
+  id: "radio-rights-closure-packet",
+  title: "Radio Vaigyaaniq Rights Closure Packet",
+  generatedAt: today,
+  verificationState: "draft-rights-closure-packet-no-proof",
+  shipDecision: "NO_SHIP",
+  phkd: {
+    rule: "fail_closed",
+    unknownValues: "NULL",
+    productionReady: false,
+    releaseAllowed: false,
+    note: "Run npm run radio:rights:packet to prepare per-asset JSON/CSV proof rows. Packet rows do not close rights until independently filled and verified."
+  },
+  importEnv: "EVIDENCE_RIGHTS_IMPORT",
+  counts: {
+    records: rightsClosure.summary?.records ?? 0,
+    rowsPrepared: 0,
+    releaseAllowed: 0,
+    blocked: rightsClosure.summary?.blocked ?? 0,
+    closed: rightsClosure.summary?.closed ?? 0
+  },
+  requiredEvidence: rightsTemplates.templates.flatMap((template) => template.required),
+  records: []
+});
 
 const releaseReview = readJson(path.join(webRoot, "data", "release-review.json"), { counts: {}, queue: [], reviewerRequirements: [] });
 const releaseReviewBoard = {
@@ -372,7 +396,7 @@ const refreshCommand = {
   },
   command: "npm run radio:release:check",
   counts: {
-    configuredCommands: 13,
+    configuredCommands: 14,
     optionalBrowserChecks: 2,
     externalProofCreated: 0,
     productionReady: 0,
@@ -386,6 +410,7 @@ const refreshCommand = {
     ["sync-signing-evidence", "node scripts/product-factory/sync-radio-signing-evidence.mjs"],
     ["proof-milestones", "node scripts/product-factory/complete-radio-proof-milestones.mjs"],
     ["payment-proof", "node scripts/product-factory/verify-radio-payment-proof.mjs"],
+    ["rights-packet", "node scripts/product-factory/prepare-radio-rights-closure-packet.mjs"],
     ["rights-closure", "node scripts/product-factory/verify-radio-rights-closure.mjs"],
     ["release-review", "node scripts/product-factory/verify-radio-release-review.mjs"],
     ["hdfc-parser-tests", "npm run radio:hdfc:test"],
@@ -422,6 +447,7 @@ const dataFrames = {
   "webhook-signature-proof.json": webhookProof,
   "receipt-settlement-proof.json": receiptProof,
   "rights-proof-import-templates.json": rightsTemplates,
+  "rights-closure-packet.json": rightsPacket,
   "release-review-board.json": releaseReviewBoard,
   "installer-signing-proof.json": signingProof,
   "evidence-refresh-command.json": refreshCommand
@@ -433,6 +459,7 @@ const surfaceSpec = [
   ["webhook-signature-proof.html", "Webhook Signature Proof", "Webhook Gate", "webhook-signature-proof.json"],
   ["receipt-settlement-proof.html", "Receipt + Settlement Proof", "Receipt Gate", "receipt-settlement-proof.json"],
   ["rights-proof-import-templates.html", "Rights Proof Import Templates", "Rights Gate", "rights-proof-import-templates.json"],
+  ["rights-closure-packet.html", "Rights Closure Packet", "Rights Gate", "rights-closure-packet.json"],
   ["release-review-board.html", "Release Review Board", "Review Gate", "release-review-board.json"],
   ["installer-signing-proof.html", "Installer Signing Proof", "Signing Gate", "installer-signing-proof.json"],
   ["evidence-refresh-command.html", "Evidence Refresh Command", "Command Gate", "evidence-refresh-command.json"]
