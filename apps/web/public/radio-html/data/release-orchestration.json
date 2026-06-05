@@ -11,7 +11,7 @@
     "note": "Milestone records describe local implementation and evidence gates only. They do not verify rights, payment settlement, installer signing, release approval, external telemetry, or production readiness."
   },
   "counts": {
-    "configuredCommands": 12,
+    "configuredCommands": 13,
     "optionalBrowserChecks": 2,
     "externalProofCreated": 0,
     "productionReady": 0,
@@ -64,6 +64,12 @@
     {
       "key": "rights-closure",
       "command": "node scripts/product-factory/verify-radio-rights-closure.mjs",
+      "status": "configured",
+      "description": "Configured local evidence refresh step."
+    },
+    {
+      "key": "release-review",
+      "command": "node scripts/product-factory/verify-radio-release-review.mjs",
       "status": "configured",
       "description": "Configured local evidence refresh step."
     },

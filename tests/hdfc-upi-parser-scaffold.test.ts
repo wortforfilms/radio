@@ -20,7 +20,7 @@ describe("HDFC UPI parser scaffold", () => {
     }>("hdfc-upi-parser-scaffold.json");
     const report = readJson<{
       parserIntegrations: { id: string; status: string; verificationState: string }[];
-      summary: { paymentReceipts: number; webhookEvents: number; fulfilledGifts: number };
+      summary: { paymentReceipts: number; webhookEvents: number; fulfilledGifts: number; candidateOnlyProofs: number };
     }>("payment-proof-report.json");
 
     expect(fs.existsSync(path.join(integrationRoot, "hdfc_upi_parser/core/email_parser.py"))).toBe(true);
@@ -43,8 +43,8 @@ describe("HDFC UPI parser scaffold", () => {
     expect(report.summary).toMatchObject({
       paymentReceipts: 0,
       webhookEvents: 0,
-      fulfilledGifts: 0
+      fulfilledGifts: 0,
+      candidateOnlyProofs: 0
     });
   });
 });
-

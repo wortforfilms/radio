@@ -244,7 +244,7 @@
       "key": "release-review",
       "label": "Human release review",
       "status": "blocked",
-      "evidence": "/radio-html/data/release-review.json"
+      "evidence": "/radio-html/data/release-review-report.json"
     },
     {
       "key": "rights-workbench",

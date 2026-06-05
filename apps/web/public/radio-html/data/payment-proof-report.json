@@ -46,6 +46,7 @@
   ],
   "summary": {
     "importedProofs": 0,
+    "candidateOnlyProofs": 0,
     "giftIntents": 0,
     "checkoutSessions": 0,
     "paymentReceipts": 0,
@@ -310,5 +311,6 @@
       "evidence": null
     }
   ],
+  "candidateOnlyProofs": [],
   "rawProofs": []
 }

@@ -19,7 +19,9 @@
     "paymentProofReceipts": 0,
     "paymentProofBlocked": 5,
     "rightsClosureClosed": 0,
-    "rightsClosureBlocked": 19
+    "rightsClosureBlocked": 19,
+    "releaseReviewVerified": 0,
+    "releaseReviewBlocked": 23
   },
   "milestones": [
     {
@@ -54,8 +56,8 @@
       "key": "release-review-board",
       "label": "Release Review Board",
       "status": "implemented-draft",
-      "evidence": "/radio-html/data/release-review.json",
-      "blocker": "human approval evidence NULL"
+      "evidence": "/radio-html/data/release-review-report.json",
+      "blocker": "human approval evidence incomplete"
     },
     {
       "key": "one-command-evidence-orchestration",

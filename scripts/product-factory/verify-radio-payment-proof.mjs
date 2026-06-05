@@ -63,7 +63,12 @@ function proofKind(record) {
   return normalize(value(record, ["kind", "type", "state", "eventType", "paymentState"])).toLowerCase();
 }
 
+function isCandidateOnly(record) {
+  return record?.candidateOnly === true || proofKind(record) === "hdfc-email-candidate";
+}
+
 function matchesKind(record, stateKey) {
+  if (isCandidateOnly(record)) return false;
   const kind = proofKind(record);
   if (!kind) return false;
   if (stateKey === "gift-intent") return /gift.*intent|intent/.test(kind);
@@ -171,6 +176,7 @@ function evaluateState(state) {
 }
 
 const evaluated = states.map(evaluateState);
+const candidateOnlyProofs = records.filter(isCandidateOnly);
 const giftIntents = evaluated.filter((item) => item.key === "gift-intent" && item.proofAttached).length;
 const checkoutSessions = evaluated.filter((item) => item.key === "checkout-session" && item.status === "verified").length;
 const paymentReceipts = evaluated.filter((item) => item.key === "payment-receipt" && item.status === "verified").length;
@@ -180,6 +186,7 @@ const blocked = evaluated.filter((item) => item.status !== "verified").length;
 const gatePass = checkoutSessions > 0 && paymentReceipts > 0 && webhookEvents > 0 && fulfilledGifts > 0 && blocked === 0;
 const summary = {
   importedProofs: records.length,
+  candidateOnlyProofs: candidateOnlyProofs.length,
   giftIntents,
   checkoutSessions,
   paymentReceipts,
@@ -246,6 +253,7 @@ const report = {
     detail: gatePass ? "Payment receipt, webhook, and fulfillment proof verified." : `Gift/payment proof blocked: ${blocked} state(s) lack complete proof.`
   },
   states: evaluated,
+  candidateOnlyProofs,
   rawProofs: records
 };
 

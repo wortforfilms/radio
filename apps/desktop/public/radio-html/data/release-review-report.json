@@ -1,62 +1,93 @@
 {
-  "id": "radio-vaigyaaniq-release-review",
-  "title": "Radio Vaigyaaniq Release Review Workflow",
+  "id": "radio-release-review-report",
+  "title": "Radio Vaigyaaniq Release Review Report",
   "generatedAt": "2026-06-05",
-  "verificationState": "draft-release-review-blocked",
+  "verificationState": "blocked-release-review-null",
+  "shipDecision": "NO_SHIP",
   "phkd": {
     "rule": "fail_closed",
     "unknownValues": "NULL",
-    "notes": [
-      "Data frames describe local runtime behavior only.",
-      "No audio, rights, payment, production readiness, or external telemetry claim is introduced.",
-      "Evidence upgrades require source, creator, artifact checksum, rights, reviewer, and reviewedAt."
-    ]
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "Release review requires named reviewer, reviewedAt, citation, reason, decision, and AuditLog.verified for each queued item. Review proof does not override rights, payment, or signing gates."
   },
-  "counts": {
-    "reviewItems": 23,
-    "unreviewed": 23,
-    "verified": 0,
-    "rejected": 0,
-    "blocked": 23
+  "import": {
+    "path": null,
+    "status": "not-run",
+    "records": 0,
+    "error": null,
+    "acceptedFormats": [
+      "json",
+      "csv"
+    ],
+    "env": "EVIDENCE_RELEASE_REVIEW_IMPORT"
   },
-  "workflow": [
-    {
-      "key": "collect-evidence",
-      "label": "Collect evidence",
-      "status": "draft-ready",
-      "api": "/api/governance"
-    },
-    {
-      "key": "rights-review",
-      "label": "Rights review",
-      "status": "blocked",
-      "api": "/api/audit/verified"
-    },
-    {
-      "key": "installer-review",
-      "label": "Installer review",
-      "status": "blocked",
-      "api": "/api/audit/verified"
-    },
-    {
-      "key": "payment-review",
-      "label": "Payment review",
-      "status": "blocked",
-      "api": "/api/audit/verified"
-    },
-    {
-      "key": "release-approval",
-      "label": "Release approval",
-      "status": "blocked",
-      "api": "/api/audit/verified"
-    }
-  ],
-  "reviewerRequirements": [
+  "requiredEvidence": [
     "reviewer",
     "reviewedAt",
     "citation",
     "reason",
+    "decision=approved",
     "AuditLog.verified"
+  ],
+  "summary": {
+    "reviewItems": 23,
+    "importedReviews": 0,
+    "matchedReviews": 0,
+    "verified": 0,
+    "rejected": 0,
+    "blocked": 23,
+    "reviewerAssignments": 0,
+    "missingReviewer": 23,
+    "missingReviewedAt": 23,
+    "missingCitation": 23,
+    "missingReason": 23,
+    "auditUnverified": 23,
+    "productionReady": false,
+    "releaseAllowed": false
+  },
+  "gate": {
+    "name": "Release Review",
+    "status": "blocked",
+    "detail": "Release review blocked: 23 item(s) lack complete approval proof."
+  },
+  "lanes": [
+    {
+      "key": "rights",
+      "label": "Rights reviewer",
+      "reviewer": null,
+      "status": "blocked",
+      "reviewedAt": null,
+      "citation": null,
+      "blocker": "item-level release review proof incomplete"
+    },
+    {
+      "key": "payment",
+      "label": "Payment reviewer",
+      "reviewer": null,
+      "status": "blocked",
+      "reviewedAt": null,
+      "citation": null,
+      "blocker": "item-level release review proof incomplete"
+    },
+    {
+      "key": "installer",
+      "label": "Installer reviewer",
+      "reviewer": null,
+      "status": "blocked",
+      "reviewedAt": null,
+      "citation": null,
+      "blocker": "item-level release review proof incomplete"
+    },
+    {
+      "key": "release",
+      "label": "Release approver",
+      "reviewer": null,
+      "status": "blocked",
+      "reviewedAt": null,
+      "citation": null,
+      "blocker": "item-level release review proof incomplete"
+    }
   ],
   "queue": [
     {
@@ -543,5 +574,5 @@
       ]
     }
   ],
-  "reviewReport": "/radio-html/data/release-review-report.json"
+  "rawReviews": []
 }

@@ -71,6 +71,7 @@ const steps = [
   runStep("proof-milestones", nodeBin, ["scripts/product-factory/complete-radio-proof-milestones.mjs"]),
   runStep("payment-proof", nodeBin, ["scripts/product-factory/verify-radio-payment-proof.mjs"]),
   runStep("rights-closure", nodeBin, ["scripts/product-factory/verify-radio-rights-closure.mjs"]),
+  runStep("release-review", nodeBin, ["scripts/product-factory/verify-radio-release-review.mjs"]),
   runStep("hdfc-parser-tests", "npm", ["run", "radio:hdfc:test"])
 ];
 

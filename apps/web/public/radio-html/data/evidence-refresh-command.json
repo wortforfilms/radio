@@ -13,7 +13,7 @@
   },
   "command": "npm run radio:release:check",
   "counts": {
-    "configuredCommands": 12,
+    "configuredCommands": 13,
     "optionalBrowserChecks": 2,
     "externalProofCreated": 0,
     "productionReady": 0,
@@ -58,6 +58,11 @@
     {
       "key": "rights-closure",
       "command": "node scripts/product-factory/verify-radio-rights-closure.mjs",
+      "status": "configured"
+    },
+    {
+      "key": "release-review",
+      "command": "node scripts/product-factory/verify-radio-release-review.mjs",
       "status": "configured"
     },
     {

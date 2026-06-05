@@ -11,7 +11,16 @@ const DATASETS = {
   "release-orchestration": "radio-html/data/release-orchestration.json",
   "desktop-alpha": "radio-html/data/desktop-alpha-bundle.json",
   "tauri-readiness": "radio-html/data/tauri-readiness.json",
-  "release-review": "radio-html/data/release-review.json"
+  "release-review": "radio-html/data/release-review.json",
+  "release-review-board": "radio-html/data/release-review-board.json",
+  "release-review-report": "radio-html/data/release-review-report.json",
+  "payment-proof-report": "radio-html/data/payment-proof-report.json",
+  "rights-closure-report": "radio-html/data/rights-closure-report.json",
+  "hdfc-upi-parser-adapter": "radio-html/data/hdfc-upi-parser-adapter.json",
+  "evidence-refresh-command": "radio-html/data/evidence-refresh-command.json",
+  "installer-signing-proof": "radio-html/data/installer-signing-proof.json",
+  "webhook-signature-proof": "radio-html/data/webhook-signature-proof.json",
+  "receipt-settlement-proof": "radio-html/data/receipt-settlement-proof.json"
 } as const;
 
 type RadioReleaseView = keyof typeof DATASETS;
