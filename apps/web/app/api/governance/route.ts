@@ -5,6 +5,7 @@ import { prisma } from "@runtime/db";
 import {
   governancePhkd,
   governancePolicies,
+  governanceDraftThumbnails,
   governanceReleaseGates,
   governanceViews
 } from "@shared/governance";
@@ -69,6 +70,7 @@ export async function GET(request: NextRequest) {
     phkd: governancePhkd,
     views: governanceViews,
     policies: governancePolicies,
+    draftThumbnails: governanceDraftThumbnails,
     releaseGates,
     observatory: {
       auditLogCount,

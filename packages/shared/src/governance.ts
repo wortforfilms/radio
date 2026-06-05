@@ -30,6 +30,17 @@ export type GovernanceReleaseGate = {
   blocker: string | null;
 };
 
+export type GovernanceDraftThumbnail = {
+  key: string;
+  title: string;
+  summary: string;
+  image: string;
+  href: string;
+  evidence: string;
+  status: "draft" | "draft-ready" | "blocked";
+  verificationState: string;
+};
+
 export const governancePhkd = {
   policy: "fail_closed",
   unknownValues: "NULL",
@@ -175,6 +186,89 @@ export const governanceReleaseGates: GovernanceReleaseGate[] = [
     status: "blocked",
     evidence: null,
     blocker: "reviewer and reviewedAt NULL"
+  }
+];
+
+export const governanceDraftThumbnails: GovernanceDraftThumbnail[] = [
+  {
+    key: "customer-front-desktop",
+    title: "Customer Front Desktop",
+    summary: "Desktop Playwright capture for the customer-facing Radio front.",
+    image: "/radio-html/qa/customer-front/radio-customer-desktop.png",
+    href: "/radio-html/qa/customer-front/radio-customer-desktop.png",
+    evidence: "/radio-html/qa/customer-front/radio-customer-front-playwright-report.json",
+    status: "draft-ready",
+    verificationState: "draft-playwright-evidence"
+  },
+  {
+    key: "customer-front-mobile",
+    title: "Customer Front Mobile",
+    summary: "Mobile Playwright capture used for overflow and broken-image checks.",
+    image: "/radio-html/qa/customer-front/radio-customer-mobile.png",
+    href: "/radio-html/qa/customer-front/radio-customer-mobile.png",
+    evidence: "/radio-html/qa/customer-front/radio-customer-front-playwright-report.json",
+    status: "draft-ready",
+    verificationState: "draft-playwright-evidence"
+  },
+  {
+    key: "runtime-surface",
+    title: "Runtime Surface",
+    summary: "Draft runtime surface screenshot from the visual QA board.",
+    image: "/radio-html/qa/screenshots/runtime-surface.png",
+    href: "/radio-html/surfaces/runtime.html",
+    evidence: "/radio-html/data/visual-qa.json",
+    status: "draft",
+    verificationState: "draft"
+  },
+  {
+    key: "asset-evidence",
+    title: "Asset Evidence",
+    summary: "Draft asset evidence table with checksums, review state, and release gates.",
+    image: "/radio-html/qa/screenshots/asset-evidence.png",
+    href: "/radio-html/assets/evidence.html",
+    evidence: "/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json",
+    status: "draft",
+    verificationState: "draft"
+  },
+  {
+    key: "visual-qa",
+    title: "Visual QA Board",
+    summary: "Draft QA surface listing screenshot capture status for all Radio HTML surfaces.",
+    image: "/radio-html/qa/screenshots/visual-qa.png",
+    href: "/radio-html/surfaces/visual-qa.html",
+    evidence: "/radio-html/data/visual-qa.json",
+    status: "draft",
+    verificationState: "draft"
+  },
+  {
+    key: "tauri-readiness",
+    title: "Tauri Readiness",
+    summary: "Draft desktop ship-gate surface. Decision remains NO_SHIP.",
+    image: "/radio-html/qa/screenshots/tauri-readiness.png",
+    href: "/radio-html/surfaces/tauri-readiness.html",
+    evidence: "/radio-html/data/tauri-readiness.json",
+    status: "blocked",
+    verificationState: "draft"
+  },
+  {
+    key: "production-freeze",
+    title: "Production Freeze",
+    summary: "Draft freeze surface preserving blocked production claims.",
+    image: "/radio-html/qa/screenshots/production-freeze.png",
+    href: "/radio-html/surfaces/production-freeze.html",
+    evidence: "/radio-html/data/production-freeze.json",
+    status: "blocked",
+    verificationState: "draft"
+  },
+  {
+    key: "audio-import",
+    title: "Audio Import",
+    summary: "Draft audio-import lane. Playable audio remains blocked until rights evidence exists.",
+    image: "/radio-html/qa/screenshots/audio-import.png",
+    href: "/radio-html/surfaces/audio-import.html",
+    evidence: "/radio-html/data/audio-import-manifest.json",
+    status: "blocked",
+    verificationState: "draft"
   }
 ];
 

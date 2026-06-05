@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   getGovernanceActionRequirements,
+  governanceDraftThumbnails,
   governancePolicies,
   governanceReleaseGates,
   isGovernanceAuditAction
@@ -25,6 +26,17 @@ describe("governance fail-closed gates", () => {
       "payment-gift",
       "signed-installer",
       "release-review"
+    ]);
+  });
+
+  it("exposes draft thumbnails with evidence links", () => {
+    expect(governanceDraftThumbnails).toHaveLength(8);
+    expect(governanceDraftThumbnails.every((thumbnail) => thumbnail.image.startsWith("/radio-html/"))).toBe(true);
+    expect(governanceDraftThumbnails.every((thumbnail) => thumbnail.evidence.startsWith("/radio-html/"))).toBe(true);
+    expect(governanceDraftThumbnails.filter((thumbnail) => thumbnail.status === "blocked").map((thumbnail) => thumbnail.key)).toEqual([
+      "tauri-readiness",
+      "production-freeze",
+      "audio-import"
     ]);
   });
 

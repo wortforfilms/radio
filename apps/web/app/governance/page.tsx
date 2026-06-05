@@ -3,6 +3,7 @@ import path from "node:path";
 import {
   governancePhkd,
   governancePolicies,
+  governanceDraftThumbnails,
   governanceReleaseGates,
   governanceViews
 } from "@shared/governance";
@@ -151,6 +152,33 @@ export default function GovernanceEvidenceCenterPage() {
             <article key={label}>
               <span>{label}</span>
               <b>{String(value ?? "NULL")}</b>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="governance-section" id="draft-thumbnails">
+        <div className="reference-feed-head">
+          <div>
+            <p className="section-kicker">Draft Thumbnails</p>
+            <h2>Evidence previews for draft and blocked surfaces</h2>
+            <p>These thumbnails are visual pointers to draft evidence only. They do not make production, rights, payment, installer, or release claims.</p>
+          </div>
+          <a href="/api/governance">Thumbnail API</a>
+        </div>
+        <div className="governance-thumbnail-grid">
+          {governanceDraftThumbnails.map((thumbnail) => (
+            <article className={thumbnail.status === "blocked" ? "governance-thumbnail-card blocked" : "governance-thumbnail-card"} key={thumbnail.key}>
+              <a href={thumbnail.href}>
+                <img src={thumbnail.image} alt={`${thumbnail.title} draft thumbnail`} />
+              </a>
+              <div>
+                <span>{thumbnail.status}</span>
+                <strong>{thumbnail.title}</strong>
+                <p>{thumbnail.summary}</p>
+                <small>{thumbnail.verificationState}</small>
+                <a href={thumbnail.evidence}>Evidence</a>
+              </div>
             </article>
           ))}
         </div>
