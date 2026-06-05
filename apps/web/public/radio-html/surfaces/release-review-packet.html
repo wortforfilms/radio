@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - Release Review Packet</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav>
+        <a href="./index.html">Index</a>
+        <a href="./payment-proof-report.html">Pay</a>
+        <a href="./installer-signing-proof.html">Sign</a>
+        <a href="./release-review-board.html">Review</a>
+        <a href="./release-orchestration.html">Ship</a>
+      </nav>
+      <span>PHKD</span>
+    </aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">Review Gate</p>
+          <h1>Release Review Packet</h1>
+          <p id="surfaceNote">Loading fail-closed proof packet...</p>
+          <div class="surface-actions">
+            <a href="../data/release-review-packet.json">Packet JSON</a>
+            <a href="../data/release-review-import-template.csv">Import CSV</a>
+          </div>
+        </div>
+        <div class="status-chip">
+          <span>State</span>
+          <b id="surfaceState">BLOCKED</b>
+          <small id="surfaceShip">NO_SHIP</small>
+        </div>
+      </section>
+      <section class="surface-grid three" id="metrics"></section>
+      <section class="surface-card">
+        <h2>Required Proof</h2>
+        <pre id="required">Loading...</pre>
+      </section>
+      <section class="surface-card">
+        <h2>Packet Rows</h2>
+        <pre id="rawData">Loading...</pre>
+      </section>
+    </section>
+  </main>
+  <script>
+    fetch("../data/release-review-packet.json").then((response) => response.json()).then((data) => {
+      document.getElementById("surfaceNote").textContent = data.phkd.note;
+      document.getElementById("surfaceState").textContent = data.verificationState;
+      document.getElementById("surfaceShip").textContent = data.shipDecision;
+      const counts = data.counts || {};
+      document.getElementById("metrics").innerHTML = Object.entries(counts).map(([key, value]) =>
+        '<article class="surface-card"><span class="surface-label">' + key + '</span><b>' + value + '</b></article>'
+      ).join("");
+      document.getElementById("required").textContent = JSON.stringify(data.requiredEvidence, null, 2);
+      document.getElementById("rawData").textContent = JSON.stringify((data.records || []).slice(0, 8), null, 2);
+    });
+  </script>
+</body>
+</html>

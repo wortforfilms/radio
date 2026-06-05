@@ -1,0 +1,6 @@
+kind,stateKey,payerId,recipientId,amount,currency,checkoutProvider,checkoutSessionId,checkoutStatus,paymentReceiptId,providerEventId,signatureHeader,webhookVerified,deliveredAt,fulfillmentId,auditCreated,providerDashboardCitation,reason
+gift-intent,gift-intent,,,,,,,,,,,false,,,false,,
+checkout-session,checkout-session,,,,,,,,,,,false,,,false,,
+payment-receipt,payment-receipt,,,,,,,,,,,false,,,false,,
+webhook-event,webhook-event,,,,,,,,,,,false,,,false,,
+delivery-proof,delivery-proof,,,,,,,,,,,false,,,false,,

@@ -73,6 +73,7 @@ const steps = [
   runStep("rights-packet", nodeBin, ["scripts/product-factory/prepare-radio-rights-closure-packet.mjs"]),
   runStep("rights-closure", nodeBin, ["scripts/product-factory/verify-radio-rights-closure.mjs"]),
   runStep("release-review", nodeBin, ["scripts/product-factory/verify-radio-release-review.mjs"]),
+  runStep("remaining-packets", nodeBin, ["scripts/product-factory/prepare-radio-remaining-proof-packets.mjs"]),
   runStep("hdfc-parser-tests", "npm", ["run", "radio:hdfc:test"])
 ];
 

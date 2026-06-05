@@ -37,11 +37,15 @@ describe("radio proof milestone completion", () => {
   it("adds review, signing, rights, adapter, and orchestration surfaces", () => {
     const required = [
       "payment-proof-import-templates.html",
+      "payment-proof-packet.html",
       "hdfc-upi-parser-adapter.html",
       "webhook-signature-proof.html",
       "receipt-settlement-proof.html",
       "rights-proof-import-templates.html",
       "rights-closure-packet.html",
+      "signing-proof-packet.html",
+      "release-review-packet.html",
+      "remaining-proof-packets.html",
       "release-review-board.html",
       "installer-signing-proof.html",
       "evidence-refresh-command.html"
@@ -66,9 +70,10 @@ describe("radio proof milestone completion", () => {
     expect(reviewReport.summary.blocked).toBeGreaterThan(0);
     expect(reviewReport.shipDecision).toBe("NO_SHIP");
     expect(signing.counts).toMatchObject({ signedArtifacts: 0, notarizedArtifacts: 0 });
-    expect(orchestration.counts).toMatchObject({ configuredCommands: 14, externalProofCreated: 0 });
+    expect(orchestration.counts).toMatchObject({ configuredCommands: 15, externalProofCreated: 0 });
     expect(orchestration.steps.map((step) => step.key)).toContain("proof-milestones");
     expect(orchestration.steps.map((step) => step.key)).toContain("rights-packet");
+    expect(orchestration.steps.map((step) => step.key)).toContain("remaining-packets");
     expect(orchestration.steps.map((step) => step.key)).toContain("release-review");
     expect(orchestration.steps.map((step) => step.key)).toContain("hdfc-parser-tests");
   });

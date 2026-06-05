@@ -1,0 +1,41 @@
+{
+  "id": "radio-remaining-proof-packets",
+  "title": "Radio Vaigyaaniq Remaining Proof Packets",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft-packets-no-proof",
+  "shipDecision": "NO_SHIP",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "Remaining packets prepare intake rows only. They do not create external rights, payment, signing, or release approval proof."
+  },
+  "counts": {
+    "packets": 3,
+    "rowsPrepared": 34,
+    "nullProofFields": 311,
+    "releaseAllowed": 0,
+    "blockedLanes": 3
+  },
+  "packets": [
+    {
+      "key": "payment",
+      "data": "/radio-html/data/payment-proof-packet.json",
+      "csv": "/radio-html/data/payment-proof-import-packet.csv",
+      "rows": 5
+    },
+    {
+      "key": "signing",
+      "data": "/radio-html/data/signing-proof-packet.json",
+      "csv": "/radio-html/data/signing-proof-import-template.csv",
+      "rows": 6
+    },
+    {
+      "key": "release-review",
+      "data": "/radio-html/data/release-review-packet.json",
+      "csv": "/radio-html/data/release-review-import-template.csv",
+      "rows": 23
+    }
+  ]
+}

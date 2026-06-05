@@ -303,6 +303,55 @@ const rightsPacket = readJson(path.join(webRoot, "data", "rights-closure-packet.
   requiredEvidence: rightsTemplates.templates.flatMap((template) => template.required),
   records: []
 });
+const remainingPackets = readJson(path.join(webRoot, "data", "remaining-proof-packets.json"), {
+  id: "radio-remaining-proof-packets",
+  title: "Radio Vaigyaaniq Remaining Proof Packets",
+  generatedAt: today,
+  verificationState: "draft-packets-no-proof",
+  shipDecision: "NO_SHIP",
+  phkd: {
+    rule: "fail_closed",
+    unknownValues: "NULL",
+    productionReady: false,
+    releaseAllowed: false,
+    note: "Run npm run radio:remaining:packets to prepare payment, signing, and release review intake packets. Packets do not close evidence gates."
+  },
+  counts: {
+    packets: 3,
+    rowsPrepared: 0,
+    nullProofFields: 0,
+    releaseAllowed: 0,
+    blockedLanes: 3
+  },
+  packets: []
+});
+const paymentPacket = readJson(path.join(webRoot, "data", "payment-proof-packet.json"), {
+  id: "radio-payment-proof-packet",
+  title: "Radio Vaigyaaniq Payment Proof Packet",
+  generatedAt: today,
+  verificationState: "draft-payment-proof-packet-no-proof",
+  shipDecision: "NO_SHIP",
+  counts: { states: 0, rowsPrepared: 0, releaseAllowed: 0, blocked: paymentTemplate.counts.blocked },
+  records: []
+});
+const signingPacket = readJson(path.join(webRoot, "data", "signing-proof-packet.json"), {
+  id: "radio-signing-proof-packet",
+  title: "Radio Vaigyaaniq Signing Proof Packet",
+  generatedAt: today,
+  verificationState: "draft-signing-proof-packet-no-proof",
+  shipDecision: "NO_SHIP",
+  counts: { artifactSlots: 0, rowsPrepared: 0, releaseAllowed: 0, blocked: 0 },
+  records: []
+});
+const releaseReviewPacket = readJson(path.join(webRoot, "data", "release-review-packet.json"), {
+  id: "radio-release-review-packet",
+  title: "Radio Vaigyaaniq Release Review Packet",
+  generatedAt: today,
+  verificationState: "draft-release-review-packet-no-proof",
+  shipDecision: "NO_SHIP",
+  counts: { reviewItems: 0, rowsPrepared: 0, releaseAllowed: 0, blocked: 0 },
+  records: []
+});
 
 const releaseReview = readJson(path.join(webRoot, "data", "release-review.json"), { counts: {}, queue: [], reviewerRequirements: [] });
 const releaseReviewBoard = {
@@ -396,7 +445,7 @@ const refreshCommand = {
   },
   command: "npm run radio:release:check",
   counts: {
-    configuredCommands: 14,
+    configuredCommands: 15,
     optionalBrowserChecks: 2,
     externalProofCreated: 0,
     productionReady: 0,
@@ -413,6 +462,7 @@ const refreshCommand = {
     ["rights-packet", "node scripts/product-factory/prepare-radio-rights-closure-packet.mjs"],
     ["rights-closure", "node scripts/product-factory/verify-radio-rights-closure.mjs"],
     ["release-review", "node scripts/product-factory/verify-radio-release-review.mjs"],
+    ["remaining-packets", "node scripts/product-factory/prepare-radio-remaining-proof-packets.mjs"],
     ["hdfc-parser-tests", "npm run radio:hdfc:test"],
     ["tests", "npm test"],
     ["build", "npm run build"],
@@ -443,11 +493,15 @@ if (hdfcScaffold) {
 
 const dataFrames = {
   "payment-proof-import-templates.json": paymentTemplate,
+  "payment-proof-packet.json": paymentPacket,
   "hdfc-upi-parser-adapter.json": hdfcAdapter,
   "webhook-signature-proof.json": webhookProof,
   "receipt-settlement-proof.json": receiptProof,
   "rights-proof-import-templates.json": rightsTemplates,
   "rights-closure-packet.json": rightsPacket,
+  "signing-proof-packet.json": signingPacket,
+  "release-review-packet.json": releaseReviewPacket,
+  "remaining-proof-packets.json": remainingPackets,
   "release-review-board.json": releaseReviewBoard,
   "installer-signing-proof.json": signingProof,
   "evidence-refresh-command.json": refreshCommand
@@ -455,11 +509,15 @@ const dataFrames = {
 
 const surfaceSpec = [
   ["payment-proof-import-templates.html", "Payment Proof Import Templates", "Template Contract", "payment-proof-import-templates.json"],
+  ["payment-proof-packet.html", "Payment Proof Packet", "Payment Gate", "payment-proof-packet.json"],
   ["hdfc-upi-parser-adapter.html", "HDFC Parser Evidence Adapter", "Candidate Adapter", "hdfc-upi-parser-adapter.json"],
   ["webhook-signature-proof.html", "Webhook Signature Proof", "Webhook Gate", "webhook-signature-proof.json"],
   ["receipt-settlement-proof.html", "Receipt + Settlement Proof", "Receipt Gate", "receipt-settlement-proof.json"],
   ["rights-proof-import-templates.html", "Rights Proof Import Templates", "Rights Gate", "rights-proof-import-templates.json"],
   ["rights-closure-packet.html", "Rights Closure Packet", "Rights Gate", "rights-closure-packet.json"],
+  ["signing-proof-packet.html", "Signing Proof Packet", "Signing Gate", "signing-proof-packet.json"],
+  ["release-review-packet.html", "Release Review Packet", "Review Gate", "release-review-packet.json"],
+  ["remaining-proof-packets.html", "Remaining Proof Packets", "Remaining Gates", "remaining-proof-packets.json"],
   ["release-review-board.html", "Release Review Board", "Review Gate", "release-review-board.json"],
   ["installer-signing-proof.html", "Installer Signing Proof", "Signing Gate", "installer-signing-proof.json"],
   ["evidence-refresh-command.html", "Evidence Refresh Command", "Command Gate", "evidence-refresh-command.json"]

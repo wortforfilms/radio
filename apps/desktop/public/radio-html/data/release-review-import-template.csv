@@ -1,0 +1,24 @@
+key,scope,label,reviewer,reviewedAt,citation,reason,decision,auditVerified,releaseAllowed
+radio-vaigyaaniq-landing-hero-png,rights,/radio-html/assets/radio-vaigyaaniq-landing-hero.png,,,,,,false,false
+radio-vaigyaaniq-divine-hero-png,rights,/radio-html/assets/radio-vaigyaaniq-divine-hero.png,,,,,,false,false
+images-radio-vaigyaaniq-runtime-hero-svg,rights,/radio-html/assets/images/radio-vaigyaaniq-runtime-hero.svg,,,,,,false,false
+images-radio-vaigyaaniq-samaya-panel-svg,rights,/radio-html/assets/images/radio-vaigyaaniq-samaya-panel.svg,,,,,,false,false
+covers-mahamatya-svg,rights,/radio-html/assets/covers/mahamatya.svg,,,,,,false,false
+covers-gokul-svg,rights,/radio-html/assets/covers/gokul.svg,,,,,,false,false
+covers-kaal-chakra-svg,rights,/radio-html/assets/covers/kaal-chakra.svg,,,,,,false,false
+covers-swarnim-sale-svg,rights,/radio-html/assets/covers/swarnim-sale.svg,,,,,,false,false
+icons-like-svg,rights,/radio-html/assets/icons/like.svg,,,,,,false,false
+icons-save-svg,rights,/radio-html/assets/icons/save.svg,,,,,,false,false
+icons-gift-svg,rights,/radio-html/assets/icons/gift.svg,,,,,,false,false
+icons-share-svg,rights,/radio-html/assets/icons/share.svg,,,,,,false,false
+icons-tts-svg,rights,/radio-html/assets/icons/tts.svg,,,,,,false,false
+icons-mic-svg,rights,/radio-html/assets/icons/mic.svg,,,,,,false,false
+shaders-radio-spectrum-frag,rights,/radio-html/assets/shaders/radio-spectrum.frag,,,,,,false,false
+shaders-radio-yantra-vert,rights,/radio-html/assets/shaders/radio-yantra.vert,,,,,,false,false
+audio-phkd-audio-placeholder-json,rights,/radio-html/assets/audio/PHKD_AUDIO_PLACEHOLDER.json,,,,,,false,false
+vendor-three-min-js,rights,/radio-html/assets/vendor/three.min.js,,,,,,false,false
+vendor-three-module-min-js,rights,/radio-html/assets/vendor/three.module.min.js,,,,,,false,false
+audio-rights,ship-gate,Playable audio rights,,,,,,false,false
+payment-gift,ship-gate,Gift/payment receipt,,,,,,false,false
+installer,ship-gate,Signed installer,,,,,,false,false
+release-review,ship-gate,Human release approval,,,,,,false,false

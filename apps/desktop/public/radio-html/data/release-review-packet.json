@@ -1,0 +1,529 @@
+{
+  "id": "radio-release-review-packet",
+  "title": "Radio Vaigyaaniq Release Review Packet",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft-release-review-packet-no-proof",
+  "shipDecision": "NO_SHIP",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "This packet prepares human release review rows. Review rows cannot override rights, payment, signing, or production gates."
+  },
+  "importEnv": "EVIDENCE_RELEASE_REVIEW_IMPORT",
+  "verifier": "npm run radio:release:review",
+  "paths": {
+    "json": "/radio-html/data/release-review-packet.json",
+    "csv": "/radio-html/data/release-review-import-template.csv",
+    "report": "/radio-html/data/release-review-report.json"
+  },
+  "usage": [
+    "Fill reviewer, reviewedAt, citation, reason, decision, and auditVerified for every row.",
+    "Use decision=approved only after source evidence has been independently reviewed.",
+    "Run EVIDENCE_RELEASE_REVIEW_IMPORT=/absolute/path/to/completed-release-review.json npm run radio:release:review."
+  ],
+  "requiredEvidence": [
+    "reviewer",
+    "reviewedAt",
+    "citation",
+    "reason",
+    "decision=approved",
+    "AuditLog.verified"
+  ],
+  "csvHeader": "key,scope,label,reviewer,reviewedAt,citation,reason,decision,auditVerified,releaseAllowed",
+  "counts": {
+    "reviewItems": 23,
+    "rowsPrepared": 23,
+    "nullProofFields": 161,
+    "verified": 0,
+    "reviewerAssignments": 0,
+    "releaseAllowed": 0,
+    "blocked": 23
+  },
+  "records": [
+    {
+      "key": "radio-vaigyaaniq-landing-hero-png",
+      "scope": "rights",
+      "label": "/radio-html/assets/radio-vaigyaaniq-landing-hero.png",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "radio-vaigyaaniq-divine-hero-png",
+      "scope": "rights",
+      "label": "/radio-html/assets/radio-vaigyaaniq-divine-hero.png",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "images-radio-vaigyaaniq-runtime-hero-svg",
+      "scope": "rights",
+      "label": "/radio-html/assets/images/radio-vaigyaaniq-runtime-hero.svg",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "images-radio-vaigyaaniq-samaya-panel-svg",
+      "scope": "rights",
+      "label": "/radio-html/assets/images/radio-vaigyaaniq-samaya-panel.svg",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "covers-mahamatya-svg",
+      "scope": "rights",
+      "label": "/radio-html/assets/covers/mahamatya.svg",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "covers-gokul-svg",
+      "scope": "rights",
+      "label": "/radio-html/assets/covers/gokul.svg",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "covers-kaal-chakra-svg",
+      "scope": "rights",
+      "label": "/radio-html/assets/covers/kaal-chakra.svg",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "covers-swarnim-sale-svg",
+      "scope": "rights",
+      "label": "/radio-html/assets/covers/swarnim-sale.svg",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "icons-like-svg",
+      "scope": "rights",
+      "label": "/radio-html/assets/icons/like.svg",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "icons-save-svg",
+      "scope": "rights",
+      "label": "/radio-html/assets/icons/save.svg",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "icons-gift-svg",
+      "scope": "rights",
+      "label": "/radio-html/assets/icons/gift.svg",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "icons-share-svg",
+      "scope": "rights",
+      "label": "/radio-html/assets/icons/share.svg",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "icons-tts-svg",
+      "scope": "rights",
+      "label": "/radio-html/assets/icons/tts.svg",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "icons-mic-svg",
+      "scope": "rights",
+      "label": "/radio-html/assets/icons/mic.svg",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "shaders-radio-spectrum-frag",
+      "scope": "rights",
+      "label": "/radio-html/assets/shaders/radio-spectrum.frag",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "shaders-radio-yantra-vert",
+      "scope": "rights",
+      "label": "/radio-html/assets/shaders/radio-yantra.vert",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "audio-phkd-audio-placeholder-json",
+      "scope": "rights",
+      "label": "/radio-html/assets/audio/PHKD_AUDIO_PLACEHOLDER.json",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "vendor-three-min-js",
+      "scope": "rights",
+      "label": "/radio-html/assets/vendor/three.min.js",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "vendor-three-module-min-js",
+      "scope": "rights",
+      "label": "/radio-html/assets/vendor/three.module.min.js",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "audio-rights",
+      "scope": "ship-gate",
+      "label": "Playable audio rights",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "payment-gift",
+      "scope": "ship-gate",
+      "label": "Gift/payment receipt",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "installer",
+      "scope": "ship-gate",
+      "label": "Signed installer",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    },
+    {
+      "key": "release-review",
+      "scope": "ship-gate",
+      "label": "Human release approval",
+      "reviewer": null,
+      "reviewedAt": null,
+      "citation": null,
+      "reason": null,
+      "decision": null,
+      "auditVerified": false,
+      "releaseAllowed": false,
+      "currentStatus": "unreviewed",
+      "missing": [
+        "reviewer",
+        "reviewedAt",
+        "citation",
+        "reason",
+        "AuditLog.verified",
+        "decision"
+      ]
+    }
+  ]
+}

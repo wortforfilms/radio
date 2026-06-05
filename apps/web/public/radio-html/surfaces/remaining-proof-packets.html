@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - Remaining Proof Packets</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav>
+        <a href="./index.html">Index</a>
+        <a href="./payment-proof-packet.html">Payment</a>
+        <a href="./signing-proof-packet.html">Signing</a>
+        <a href="./release-review-packet.html">Review</a>
+        <a href="./release-orchestration.html">Ship</a>
+      </nav>
+      <span>PHKD</span>
+    </aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">Remaining Gates</p>
+          <h1>Remaining Proof Packets</h1>
+          <p id="surfaceNote">Loading remaining proof packet summary...</p>
+          <div class="surface-actions">
+            <a href="../data/remaining-proof-packets.json">Summary JSON</a>
+            <a href="./evidence-refresh-command.html">Refresh Command</a>
+          </div>
+        </div>
+        <div class="status-chip">
+          <span>State</span>
+          <b id="surfaceState">BLOCKED</b>
+          <small id="surfaceShip">NO_SHIP</small>
+        </div>
+      </section>
+      <section class="surface-grid three" id="metrics"></section>
+      <section class="surface-grid three" id="packetLinks"></section>
+      <section class="surface-card">
+        <h2>Packet Summary</h2>
+        <pre id="rawData">Loading...</pre>
+      </section>
+    </section>
+  </main>
+  <script>
+    fetch("../data/remaining-proof-packets.json").then((response) => response.json()).then((data) => {
+      document.getElementById("surfaceNote").textContent = data.phkd.note;
+      document.getElementById("surfaceState").textContent = data.verificationState;
+      document.getElementById("surfaceShip").textContent = data.shipDecision;
+      document.getElementById("metrics").innerHTML = Object.entries(data.counts || {}).map(([key, value]) =>
+        '<article class="surface-card"><span class="surface-label">' + key + '</span><b>' + value + '</b></article>'
+      ).join("");
+      document.getElementById("packetLinks").innerHTML = (data.packets || []).map((packet) =>
+        '<a class="surface-card" href="..' + packet.data + '"><span class="surface-label">' + packet.key + '</span><b>' + packet.rows + ' rows</b><p>' + packet.csv + '</p></a>'
+      ).join("");
+      document.getElementById("rawData").textContent = JSON.stringify(data, null, 2);
+    });
+  </script>
+</body>
+</html>
