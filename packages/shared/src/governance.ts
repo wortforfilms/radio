@@ -163,28 +163,28 @@ export const governanceReleaseGates: GovernanceReleaseGate[] = [
     key: "audio-rights",
     label: "Playable audio rights",
     status: "blocked",
-    evidence: null,
+    evidence: "/radio-html/data/rights-evidence.json",
     blocker: "rights evidence NULL"
   },
   {
     key: "payment-gift",
     label: "Gift and payment receipt",
     status: "blocked",
-    evidence: null,
+    evidence: "/radio-html/data/gift-payment-evidence.json",
     blocker: "checkout/payment evidence NULL"
   },
   {
     key: "signed-installer",
     label: "Signed Tauri installer",
     status: "blocked",
-    evidence: null,
+    evidence: "/radio-html/data/installer-evidence.json",
     blocker: "signed installer evidence NULL"
   },
   {
     key: "release-review",
     label: "Human release review",
     status: "blocked",
-    evidence: null,
+    evidence: "/radio-html/data/release-review.json",
     blocker: "reviewer and reviewedAt NULL"
   }
 ];
@@ -207,6 +207,16 @@ export const governanceDraftThumbnails: GovernanceDraftThumbnail[] = [
     image: "/radio-html/qa/customer-front/radio-customer-mobile.png",
     href: "/radio-html/qa/customer-front/radio-customer-mobile.png",
     evidence: "/radio-html/qa/customer-front/radio-customer-front-playwright-report.json",
+    status: "draft-ready",
+    verificationState: "draft-playwright-evidence"
+  },
+  {
+    key: "governance-center",
+    title: "Governance Evidence Center",
+    summary: "Desktop Playwright capture for governance lanes, no-ship state, and release gates.",
+    image: "/radio-html/qa/governance/governance-desktop.png",
+    href: "/governance",
+    evidence: "/radio-html/qa/governance/governance-playwright-report.json",
     status: "draft-ready",
     verificationState: "draft-playwright-evidence"
   },

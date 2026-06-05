@@ -14,102 +14,789 @@
     ]
   },
   "routes": [
-    { "path": "/radio", "surface": "React landing command surface", "status": "implemented" },
-    { "path": "/radio/runtime", "surface": "React runtime", "status": "implemented" },
-    { "path": "/radio/frame", "surface": "Absorbed React Three.js frame", "status": "implemented" },
-    { "path": "/radio/storyboard", "surface": "Full storyboard route", "status": "implemented" },
-    { "path": "/radio-html/Radio_Vaigyaaniq_Full_App.html", "surface": "Standalone full app HTML", "status": "implemented" },
-    { "path": "/radio-html/all-html.html", "surface": "All HTML links directory", "status": "implemented" },
-    { "path": "/radio-html/assets/index.html", "surface": "Asset catalog HTML surface", "status": "implemented" },
-    { "path": "/radio-html/assets/evidence.html", "surface": "Asset evidence HTML surface", "status": "implemented" },
-    { "path": "/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json", "surface": "Machine-readable asset evidence manifest", "status": "implemented" },
-    { "path": "/radio-html/data/radio-media.json", "surface": "Station media map data frame", "status": "implemented" },
-    { "path": "/radio-html/data/audio-import-manifest.json", "surface": "Audio import manifest data frame", "status": "implemented" },
-    { "path": "/radio-html/data/radio-runtime-data.json", "surface": "Runtime data layer manifest", "status": "implemented" },
-    { "path": "/radio-html/data/visual-qa.json", "surface": "Visual QA data frame", "status": "implemented" },
-    { "path": "/radio-html/data/tauri-readiness.json", "surface": "Tauri readiness data frame", "status": "implemented" },
-    { "path": "/radio-html/data/production-freeze.json", "surface": "Production freeze data frame", "status": "implemented" },
-    { "path": "/radio-html/surfaces/index.html", "surface": "All standalone HTML surfaces index", "status": "implemented" },
-    { "path": "/radio-html/surfaces/landing.html", "surface": "Landing command HTML surface", "status": "implemented" },
-    { "path": "/radio-html/surfaces/image-landing.html", "surface": "Image-led landing HTML surface", "status": "implemented" },
-    { "path": "/radio-html/surfaces/runtime.html", "surface": "Runtime HTML surface", "status": "implemented" },
-    { "path": "/radio-html/surfaces/runtimes-workflows.html", "surface": "Runtimes and workflows HTML surface", "status": "implemented" },
-    { "path": "/radio-html/surfaces/runtime-data.html", "surface": "Runtime data HTML surface", "status": "implemented" },
-    { "path": "/radio-html/surfaces/audio-import.html", "surface": "Audio import HTML surface", "status": "implemented" },
-    { "path": "/radio-html/surfaces/visual-qa.html", "surface": "Visual QA HTML surface", "status": "implemented" },
-    { "path": "/radio-html/surfaces/tauri-readiness.html", "surface": "Tauri readiness HTML surface", "status": "implemented" },
-    { "path": "/radio-html/surfaces/production-freeze.html", "surface": "Production freeze HTML surface", "status": "implemented" },
-    { "path": "/radio-html/surfaces/ascii-wireframes.html", "surface": "Full application ASCII wireframes HTML surface", "status": "implemented" },
-    { "path": "/radio-html/surfaces/visualizer.html", "surface": "Visualizer HTML surface", "status": "implemented" },
-    { "path": "/radio-html/surfaces/lyrics.html", "surface": "Lyrics scribe HTML surface", "status": "implemented" },
-    { "path": "/radio-html/surfaces/tts.html", "surface": "TTS Samaya HTML surface", "status": "implemented" },
-    { "path": "/radio-html/surfaces/social-gift.html", "surface": "Social and gift intent HTML surface", "status": "implemented" },
-    { "path": "/radio-html/surfaces/storyboard.html", "surface": "Storyboard HTML surface", "status": "implemented" },
-    { "path": "/radio-html/surfaces/evidence-export.html", "surface": "Evidence and export HTML surface", "status": "implemented" },
-    { "path": "/radio-html/surfaces/scaffold.html", "surface": "Scaffold HTML surface", "status": "implemented" },
-    { "path": "/radio-html/structure/index.html", "surface": "Future file structure HTML surface", "status": "implemented" },
-    { "path": "/radio-html/routes/index.html", "surface": "All routes HTML catalog", "status": "implemented" },
-    { "path": "/radio-html/routes/html-vs-real-route-matrix.html", "surface": "HTML artifact vs real route matrix", "status": "implemented" },
-    { "path": "/radio-html/Radio_Vaigyaaniq_Route_Catalog.json", "surface": "Machine-readable route catalog", "status": "implemented" },
-    { "path": "/radio-html/Radio_Vaigyaaniq_All_Html_Links.json", "surface": "Machine-readable all HTML links manifest", "status": "implemented" },
-    { "path": "/radio-html/Radio_Vaigyaaniq_Asset_Manifest.json", "surface": "Machine-readable asset manifest", "status": "implemented" },
-    { "path": "/radio-html/Radio_Vaigyaaniq_Html_Route_Matrix.json", "surface": "Machine-readable HTML vs real route matrix", "status": "implemented" },
-    { "path": "/radio-html/Radio_Vaigyaaniq_Future_Structure.json", "surface": "Machine-readable future structure manifest", "status": "implemented" },
-    { "path": "/radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json", "surface": "Machine-readable scaffold manifest", "status": "implemented" },
-    { "path": "/api/export?format=hkd&scope=media-universe", "surface": "Media HKD export", "status": "implemented" }
+    {
+      "path": "/radio",
+      "surface": "React landing command surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio/runtime",
+      "surface": "React runtime",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio/frame",
+      "surface": "Absorbed React Three.js frame",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio/storyboard",
+      "surface": "Full storyboard route",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/Radio_Vaigyaaniq_Full_App.html",
+      "surface": "Standalone full app HTML",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/all-html.html",
+      "surface": "All HTML links directory",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/assets/index.html",
+      "surface": "Asset catalog HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/assets/evidence.html",
+      "surface": "Asset evidence HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json",
+      "surface": "Machine-readable asset evidence manifest",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/data/radio-media.json",
+      "surface": "Station media map data frame",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/data/audio-import-manifest.json",
+      "surface": "Audio import manifest data frame",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/data/radio-runtime-data.json",
+      "surface": "Runtime data layer manifest",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/data/visual-qa.json",
+      "surface": "Visual QA data frame",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/data/tauri-readiness.json",
+      "surface": "Tauri readiness data frame",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/data/production-freeze.json",
+      "surface": "Production freeze data frame",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/index.html",
+      "surface": "All standalone HTML surfaces index",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/landing.html",
+      "surface": "Landing command HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/image-landing.html",
+      "surface": "Image-led landing HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/runtime.html",
+      "surface": "Runtime HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/runtimes-workflows.html",
+      "surface": "Runtimes and workflows HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/runtime-data.html",
+      "surface": "Runtime data HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/audio-import.html",
+      "surface": "Audio import HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/visual-qa.html",
+      "surface": "Visual QA HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/tauri-readiness.html",
+      "surface": "Tauri readiness HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/production-freeze.html",
+      "surface": "Production freeze HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/ascii-wireframes.html",
+      "surface": "Full application ASCII wireframes HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/visualizer.html",
+      "surface": "Visualizer HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/lyrics.html",
+      "surface": "Lyrics scribe HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/tts.html",
+      "surface": "TTS Samaya HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/social-gift.html",
+      "surface": "Social and gift intent HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/storyboard.html",
+      "surface": "Storyboard HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/evidence-export.html",
+      "surface": "Evidence and export HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/scaffold.html",
+      "surface": "Scaffold HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/structure/index.html",
+      "surface": "Future file structure HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/routes/index.html",
+      "surface": "All routes HTML catalog",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/routes/html-vs-real-route-matrix.html",
+      "surface": "HTML artifact vs real route matrix",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/Radio_Vaigyaaniq_Route_Catalog.json",
+      "surface": "Machine-readable route catalog",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/Radio_Vaigyaaniq_All_Html_Links.json",
+      "surface": "Machine-readable all HTML links manifest",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/Radio_Vaigyaaniq_Asset_Manifest.json",
+      "surface": "Machine-readable asset manifest",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/Radio_Vaigyaaniq_Html_Route_Matrix.json",
+      "surface": "Machine-readable HTML vs real route matrix",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/Radio_Vaigyaaniq_Future_Structure.json",
+      "surface": "Machine-readable future structure manifest",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json",
+      "surface": "Machine-readable scaffold manifest",
+      "status": "implemented"
+    },
+    {
+      "path": "/api/export?format=hkd&scope=media-universe",
+      "surface": "Media HKD export",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/data/rights-evidence.json",
+      "surface": "Rights Evidence Data frame",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/data/gift-payment-evidence.json",
+      "surface": "Gift Payment Evidence Data frame",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/data/installer-evidence.json",
+      "surface": "Installer Evidence Data frame",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/data/release-review.json",
+      "surface": "Release Review Data frame",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/rights-evidence.html",
+      "surface": "Rights Evidence HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/gift-payment-evidence.html",
+      "surface": "Gift Payment Evidence HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/installer-evidence.html",
+      "surface": "Installer Evidence HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/release-review.html",
+      "surface": "Release Review HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/no-ship-dashboard.html",
+      "surface": "No-Ship Dashboard HTML surface",
+      "status": "implemented"
+    }
   ],
   "components": [
-    { "key": "app-rail", "name": "App Rail", "elements": ["RV mark", "Home", "Runtime", "Visual", "Lyrics", "Scaffold", "Storyboard", "React", "PHKD badge"] },
-    { "key": "hero", "name": "Hero Banner", "elements": ["Hero image", "Frequency label", "Headline", "Runtime links", "Now routed card"] },
-    { "key": "console", "name": "Console", "elements": ["Quantum tuner", "Spectrum bars", "Samaya card", "Fail closed card"] },
-    { "key": "runtime", "name": "Runtime Mock", "elements": ["Stations", "Tracks", "Current track", "TTS controls", "Clock", "Status"] },
-    { "key": "visualizer", "name": "Canvas Visualizer", "elements": ["Canvas", "Scene buttons", "Audio player", "Status"] },
-    { "key": "lyrics", "name": "Lyrics Scribe", "elements": ["Audio player", "Progress", "Textarea", "Mark line", "Export LRC", "Export HKD", "Cue list"] },
-    { "key": "social", "name": "Social And Gift", "elements": ["Create Project", "Like", "Save", "Gift", "Gift modal"] },
-    { "key": "storyboard", "name": "Storyboard", "elements": ["Sequence map", "Shot cards", "PHKD notes", "Route links"] }
+    {
+      "key": "app-rail",
+      "name": "App Rail",
+      "elements": [
+        "RV mark",
+        "Home",
+        "Runtime",
+        "Visual",
+        "Lyrics",
+        "Scaffold",
+        "Storyboard",
+        "React",
+        "PHKD badge"
+      ]
+    },
+    {
+      "key": "hero",
+      "name": "Hero Banner",
+      "elements": [
+        "Hero image",
+        "Frequency label",
+        "Headline",
+        "Runtime links",
+        "Now routed card"
+      ]
+    },
+    {
+      "key": "console",
+      "name": "Console",
+      "elements": [
+        "Quantum tuner",
+        "Spectrum bars",
+        "Samaya card",
+        "Fail closed card"
+      ]
+    },
+    {
+      "key": "runtime",
+      "name": "Runtime Mock",
+      "elements": [
+        "Stations",
+        "Tracks",
+        "Current track",
+        "TTS controls",
+        "Clock",
+        "Status"
+      ]
+    },
+    {
+      "key": "visualizer",
+      "name": "Canvas Visualizer",
+      "elements": [
+        "Canvas",
+        "Scene buttons",
+        "Audio player",
+        "Status"
+      ]
+    },
+    {
+      "key": "lyrics",
+      "name": "Lyrics Scribe",
+      "elements": [
+        "Audio player",
+        "Progress",
+        "Textarea",
+        "Mark line",
+        "Export LRC",
+        "Export HKD",
+        "Cue list"
+      ]
+    },
+    {
+      "key": "social",
+      "name": "Social And Gift",
+      "elements": [
+        "Create Project",
+        "Like",
+        "Save",
+        "Gift",
+        "Gift modal"
+      ]
+    },
+    {
+      "key": "storyboard",
+      "name": "Storyboard",
+      "elements": [
+        "Sequence map",
+        "Shot cards",
+        "PHKD notes",
+        "Route links"
+      ]
+    }
   ],
   "dataContracts": {
-    "station": ["id", "name", "count", "hero", "songs"],
-    "track": ["title", "transliteration", "duration", "audio", "cover", "transcript"],
-    "lyricCue": ["time", "text", "source", "verification"],
-    "storyboardShot": ["route", "primaryUi", "motion", "dataState", "phkdGuardrail", "nextAction"],
-    "hkdExport": ["hkdType", "verification", "provenance", "unknowns"]
+    "station": [
+      "id",
+      "name",
+      "count",
+      "hero",
+      "songs"
+    ],
+    "track": [
+      "title",
+      "transliteration",
+      "duration",
+      "audio",
+      "cover",
+      "transcript"
+    ],
+    "lyricCue": [
+      "time",
+      "text",
+      "source",
+      "verification"
+    ],
+    "storyboardShot": [
+      "route",
+      "primaryUi",
+      "motion",
+      "dataState",
+      "phkdGuardrail",
+      "nextAction"
+    ],
+    "hkdExport": [
+      "hkdType",
+      "verification",
+      "provenance",
+      "unknowns"
+    ]
   },
   "dataFrames": [
-    { "key": "station-frame", "name": "Station Frame", "fields": ["id", "name", "count", "hero", "songs"], "status": "draft-contract" },
-    { "key": "track-frame", "name": "Track Frame", "fields": ["title", "transliteration", "duration", "audio", "cover", "transcript"], "status": "draft-contract" },
-    { "key": "audio-source-frame", "name": "Audio Source Frame", "fields": ["url", "type", "duration", "source", "verification"], "status": "draft-contract" },
-    { "key": "cover-asset-frame", "name": "Cover Asset Frame", "fields": ["url", "alt", "source", "creator", "verification"], "status": "draft-contract" },
-    { "key": "lyric-cue-frame", "name": "Lyric Cue Frame", "fields": ["time", "text", "source", "verification"], "status": "draft-contract" },
-    { "key": "lyrics-export-frame", "name": "Lyrics Export Frame", "fields": ["format", "cues", "source", "verification", "unknowns"], "status": "draft-contract" },
-    { "key": "storyboard-shot-frame", "name": "Storyboard Shot Frame", "fields": ["route", "primaryUi", "motion", "dataState", "phkdGuardrail", "nextAction"], "status": "draft-contract" },
-    { "key": "runtime-state-frame", "name": "Runtime State Frame", "fields": ["stationIndex", "trackIndex", "playing", "volume", "mode"], "status": "draft-contract" },
-    { "key": "visualizer-scene-frame", "name": "Visualizer Scene Frame", "fields": ["scene", "input", "bars", "particles", "recordingState"], "status": "draft-contract" },
-    { "key": "tts-persona-frame", "name": "TTS Persona Frame", "fields": ["persona", "language", "announcement", "voiceState", "verification"], "status": "draft-contract" },
-    { "key": "samaya-announcement-frame", "name": "Samaya Announcement Frame", "fields": ["muhurat", "utsav", "divas", "vishaya", "verification"], "status": "draft-contract" },
-    { "key": "social-state-frame", "name": "Social State Frame", "fields": ["likes", "saves", "comments", "shares", "localOnly"], "status": "draft-contract" },
-    { "key": "gift-intent-frame", "name": "Gift Intent Frame", "fields": ["track", "amount", "message", "checkoutEvidence", "deliveryEvidence"], "status": "draft-contract" },
-    { "key": "project-intake-frame", "name": "Project Intake Frame", "fields": ["title", "translit", "type", "lang", "src", "desc"], "status": "draft-contract" },
-    { "key": "route-record-frame", "name": "Route Record Frame", "fields": ["path", "surface", "status", "source", "verification"], "status": "draft-contract" },
-    { "key": "html-link-frame", "name": "HTML Link Frame", "fields": ["title", "path", "desktopPath", "verification"], "status": "draft-contract" },
-    { "key": "html-route-matrix-frame", "name": "HTML Route Matrix Frame", "fields": ["surface", "staticHtml", "realRoute", "desktopCopy", "source", "state"], "status": "draft-contract" },
-    { "key": "evidence-record-frame", "name": "Evidence Record Frame", "fields": ["id", "source", "creator", "date", "status", "verification"], "status": "draft-contract" },
-    { "key": "export-artifact-frame", "name": "Export Artifact Frame", "fields": ["format", "payload", "provenance", "unknowns", "verification"], "status": "draft-contract" },
-    { "key": "hkd-export-frame", "name": "HKD Export Frame", "fields": ["hkdType", "verification", "provenance", "unknowns"], "status": "draft-contract" }
+    {
+      "key": "station-frame",
+      "name": "Station Frame",
+      "fields": [
+        "id",
+        "name",
+        "count",
+        "hero",
+        "songs"
+      ],
+      "status": "draft-contract"
+    },
+    {
+      "key": "track-frame",
+      "name": "Track Frame",
+      "fields": [
+        "title",
+        "transliteration",
+        "duration",
+        "audio",
+        "cover",
+        "transcript"
+      ],
+      "status": "draft-contract"
+    },
+    {
+      "key": "audio-source-frame",
+      "name": "Audio Source Frame",
+      "fields": [
+        "url",
+        "type",
+        "duration",
+        "source",
+        "verification"
+      ],
+      "status": "draft-contract"
+    },
+    {
+      "key": "cover-asset-frame",
+      "name": "Cover Asset Frame",
+      "fields": [
+        "url",
+        "alt",
+        "source",
+        "creator",
+        "verification"
+      ],
+      "status": "draft-contract"
+    },
+    {
+      "key": "lyric-cue-frame",
+      "name": "Lyric Cue Frame",
+      "fields": [
+        "time",
+        "text",
+        "source",
+        "verification"
+      ],
+      "status": "draft-contract"
+    },
+    {
+      "key": "lyrics-export-frame",
+      "name": "Lyrics Export Frame",
+      "fields": [
+        "format",
+        "cues",
+        "source",
+        "verification",
+        "unknowns"
+      ],
+      "status": "draft-contract"
+    },
+    {
+      "key": "storyboard-shot-frame",
+      "name": "Storyboard Shot Frame",
+      "fields": [
+        "route",
+        "primaryUi",
+        "motion",
+        "dataState",
+        "phkdGuardrail",
+        "nextAction"
+      ],
+      "status": "draft-contract"
+    },
+    {
+      "key": "runtime-state-frame",
+      "name": "Runtime State Frame",
+      "fields": [
+        "stationIndex",
+        "trackIndex",
+        "playing",
+        "volume",
+        "mode"
+      ],
+      "status": "draft-contract"
+    },
+    {
+      "key": "visualizer-scene-frame",
+      "name": "Visualizer Scene Frame",
+      "fields": [
+        "scene",
+        "input",
+        "bars",
+        "particles",
+        "recordingState"
+      ],
+      "status": "draft-contract"
+    },
+    {
+      "key": "tts-persona-frame",
+      "name": "TTS Persona Frame",
+      "fields": [
+        "persona",
+        "language",
+        "announcement",
+        "voiceState",
+        "verification"
+      ],
+      "status": "draft-contract"
+    },
+    {
+      "key": "samaya-announcement-frame",
+      "name": "Samaya Announcement Frame",
+      "fields": [
+        "muhurat",
+        "utsav",
+        "divas",
+        "vishaya",
+        "verification"
+      ],
+      "status": "draft-contract"
+    },
+    {
+      "key": "social-state-frame",
+      "name": "Social State Frame",
+      "fields": [
+        "likes",
+        "saves",
+        "comments",
+        "shares",
+        "localOnly"
+      ],
+      "status": "draft-contract"
+    },
+    {
+      "key": "gift-intent-frame",
+      "name": "Gift Intent Frame",
+      "fields": [
+        "track",
+        "amount",
+        "message",
+        "checkoutEvidence",
+        "deliveryEvidence"
+      ],
+      "status": "draft-contract"
+    },
+    {
+      "key": "project-intake-frame",
+      "name": "Project Intake Frame",
+      "fields": [
+        "title",
+        "translit",
+        "type",
+        "lang",
+        "src",
+        "desc"
+      ],
+      "status": "draft-contract"
+    },
+    {
+      "key": "route-record-frame",
+      "name": "Route Record Frame",
+      "fields": [
+        "path",
+        "surface",
+        "status",
+        "source",
+        "verification"
+      ],
+      "status": "draft-contract"
+    },
+    {
+      "key": "html-link-frame",
+      "name": "HTML Link Frame",
+      "fields": [
+        "title",
+        "path",
+        "desktopPath",
+        "verification"
+      ],
+      "status": "draft-contract"
+    },
+    {
+      "key": "html-route-matrix-frame",
+      "name": "HTML Route Matrix Frame",
+      "fields": [
+        "surface",
+        "staticHtml",
+        "realRoute",
+        "desktopCopy",
+        "source",
+        "state"
+      ],
+      "status": "draft-contract"
+    },
+    {
+      "key": "evidence-record-frame",
+      "name": "Evidence Record Frame",
+      "fields": [
+        "id",
+        "source",
+        "creator",
+        "date",
+        "status",
+        "verification"
+      ],
+      "status": "draft-contract"
+    },
+    {
+      "key": "export-artifact-frame",
+      "name": "Export Artifact Frame",
+      "fields": [
+        "format",
+        "payload",
+        "provenance",
+        "unknowns",
+        "verification"
+      ],
+      "status": "draft-contract"
+    },
+    {
+      "key": "hkd-export-frame",
+      "name": "HKD Export Frame",
+      "fields": [
+        "hkdType",
+        "verification",
+        "provenance",
+        "unknowns"
+      ],
+      "status": "draft-contract"
+    }
   ],
   "typeCatalog": [
-    { "group": "runtime-types", "types": ["RadioTrack", "RadioStation", "RadioCatalog", "SamayaState", "TtsPersonaKey", "TtsPersona"] },
-    { "group": "surface-types", "types": ["React route", "Static HTML surface", "HTML artifact", "API route", "Desktop bundle copy", "Machine manifest"] },
-    { "group": "frame-types", "types": ["Station Frame", "Track Frame", "Audio Source Frame", "Cover Asset Frame", "Lyric Cue Frame", "Lyrics Export Frame", "Storyboard Shot Frame", "Runtime State Frame", "Visualizer Scene Frame", "TTS Persona Frame", "Samaya Announcement Frame", "Social State Frame", "Gift Intent Frame", "Project Intake Frame", "Route Record Frame", "HTML Link Frame", "HTML Route Matrix Frame", "Evidence Record Frame", "Export Artifact Frame", "HKD Export Frame"] },
-    { "group": "event-types", "types": ["station:selected", "track:selected", "tts:speak", "tts:stop", "visualizer:sceneChanged", "lyrics:markLine", "social:liked", "social:saved", "gift:intentOpened", "export:hkdDraft"] },
-    { "group": "storage-types", "types": ["localStorage", "localStorage-ready", "Blob URL"] },
-    { "group": "export-types", "types": ["LRC", "HKD JSON", "WebM", "Media Universe HKD"] },
-    { "group": "status-types", "types": ["implemented", "draft", "draft-contract", "blocked", "NULL"] },
-    { "group": "verification-types", "types": ["draft", "verified", "unverified", "blocked", "NULL"] },
-    { "group": "persona-types", "types": ["maataa", "rishi", "samaya", "vigyaaniq"] },
-    { "group": "visualizer-scene-types", "types": ["sphere", "bars", "particles", "waveform", "terrain", "rings", "mandala", "gravity", "cloth", "vortex", "shockwave", "shader", "shadow", "liquid"] },
-    { "group": "persistence-format-types", "types": ["json", "csv", "graphml", "markdown", "hkd"] },
-    { "group": "phkd-boundary-types", "types": ["fail_closed", "unknownValues:NULL", "noFabricatedCitations", "noProductionReadyClaim"] }
+    {
+      "group": "runtime-types",
+      "types": [
+        "RadioTrack",
+        "RadioStation",
+        "RadioCatalog",
+        "SamayaState",
+        "TtsPersonaKey",
+        "TtsPersona"
+      ]
+    },
+    {
+      "group": "surface-types",
+      "types": [
+        "React route",
+        "Static HTML surface",
+        "HTML artifact",
+        "API route",
+        "Desktop bundle copy",
+        "Machine manifest"
+      ]
+    },
+    {
+      "group": "frame-types",
+      "types": [
+        "Station Frame",
+        "Track Frame",
+        "Audio Source Frame",
+        "Cover Asset Frame",
+        "Lyric Cue Frame",
+        "Lyrics Export Frame",
+        "Storyboard Shot Frame",
+        "Runtime State Frame",
+        "Visualizer Scene Frame",
+        "TTS Persona Frame",
+        "Samaya Announcement Frame",
+        "Social State Frame",
+        "Gift Intent Frame",
+        "Project Intake Frame",
+        "Route Record Frame",
+        "HTML Link Frame",
+        "HTML Route Matrix Frame",
+        "Evidence Record Frame",
+        "Export Artifact Frame",
+        "HKD Export Frame"
+      ]
+    },
+    {
+      "group": "event-types",
+      "types": [
+        "station:selected",
+        "track:selected",
+        "tts:speak",
+        "tts:stop",
+        "visualizer:sceneChanged",
+        "lyrics:markLine",
+        "social:liked",
+        "social:saved",
+        "gift:intentOpened",
+        "export:hkdDraft"
+      ]
+    },
+    {
+      "group": "storage-types",
+      "types": [
+        "localStorage",
+        "localStorage-ready",
+        "Blob URL"
+      ]
+    },
+    {
+      "group": "export-types",
+      "types": [
+        "LRC",
+        "HKD JSON",
+        "WebM",
+        "Media Universe HKD"
+      ]
+    },
+    {
+      "group": "status-types",
+      "types": [
+        "implemented",
+        "draft",
+        "draft-contract",
+        "blocked",
+        "NULL"
+      ]
+    },
+    {
+      "group": "verification-types",
+      "types": [
+        "draft",
+        "verified",
+        "unverified",
+        "blocked",
+        "NULL"
+      ]
+    },
+    {
+      "group": "persona-types",
+      "types": [
+        "maataa",
+        "rishi",
+        "samaya",
+        "vigyaaniq"
+      ]
+    },
+    {
+      "group": "visualizer-scene-types",
+      "types": [
+        "sphere",
+        "bars",
+        "particles",
+        "waveform",
+        "terrain",
+        "rings",
+        "mandala",
+        "gravity",
+        "cloth",
+        "vortex",
+        "shockwave",
+        "shader",
+        "shadow",
+        "liquid"
+      ]
+    },
+    {
+      "group": "persistence-format-types",
+      "types": [
+        "json",
+        "csv",
+        "graphml",
+        "markdown",
+        "hkd"
+      ]
+    },
+    {
+      "group": "phkd-boundary-types",
+      "types": [
+        "fail_closed",
+        "unknownValues:NULL",
+        "noFabricatedCitations",
+        "noProductionReadyClaim"
+      ]
+    }
   ],
   "schemaRegistry": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -121,33 +808,343 @@
       "note": "Schema presence does not verify runtime data. Source, provenance, and verification fields must remain NULL until evidence exists."
     },
     "enums": {
-      "VerificationState": ["draft", "verified", "unverified", "blocked", "NULL"],
-      "ScaffoldStatus": ["implemented", "draft", "draft-contract", "blocked", "NULL"],
-      "PersonaKey": ["maataa", "rishi", "samaya", "vigyaaniq"],
-      "VisualizerSceneType": ["sphere", "bars", "particles", "waveform", "terrain", "rings", "mandala", "gravity", "cloth", "vortex", "shockwave", "shader", "shadow", "liquid"],
-      "PersistenceFormat": ["json", "csv", "graphml", "markdown", "hkd"],
-      "StorageType": ["localStorage", "localStorage-ready", "Blob URL"],
-      "ExportFormat": ["LRC", "HKD JSON", "WebM", "Media Universe HKD"]
+      "VerificationState": [
+        "draft",
+        "verified",
+        "unverified",
+        "blocked",
+        "NULL"
+      ],
+      "ScaffoldStatus": [
+        "implemented",
+        "draft",
+        "draft-contract",
+        "blocked",
+        "NULL"
+      ],
+      "PersonaKey": [
+        "maataa",
+        "rishi",
+        "samaya",
+        "vigyaaniq"
+      ],
+      "VisualizerSceneType": [
+        "sphere",
+        "bars",
+        "particles",
+        "waveform",
+        "terrain",
+        "rings",
+        "mandala",
+        "gravity",
+        "cloth",
+        "vortex",
+        "shockwave",
+        "shader",
+        "shadow",
+        "liquid"
+      ],
+      "PersistenceFormat": [
+        "json",
+        "csv",
+        "graphml",
+        "markdown",
+        "hkd"
+      ],
+      "StorageType": [
+        "localStorage",
+        "localStorage-ready",
+        "Blob URL"
+      ],
+      "ExportFormat": [
+        "LRC",
+        "HKD JSON",
+        "WebM",
+        "Media Universe HKD"
+      ]
     },
     "definitions": {
-      "RadioTrack": { "required": ["t"], "properties": { "t": "string", "r": "string|NULL", "a": "string|NULL", "c": "string|NULL", "d": "string|NULL", "ly": "string|NULL", "theme": "string|NULL" } },
-      "RadioStation": { "required": ["name", "count", "songs"], "properties": { "name": "string", "count": "number", "hero": "string|NULL", "songs": "RadioTrack[]" } },
-      "RadioCatalog": { "required": ["total_songs", "total_clips", "shows"], "properties": { "artist": "string|NULL", "total_songs": "number", "total_clips": "number", "shows": "RadioStation[]" } },
-      "SamayaState": { "required": ["day", "samwatDay", "muhurt", "utsav", "subject", "mantra", "announcement"], "properties": { "day": "string", "samwatDay": "number", "muhurt": "string", "utsav": "string", "subject": "string", "mantra": "string", "announcement": "string" } },
-      "TtsPersona": { "required": ["label", "prefix", "rate", "pitch", "langHints"], "properties": { "label": "string", "prefix": "string", "rate": "number", "pitch": "number", "langHints": "string[]" } },
-      "LyricCue": { "required": ["time", "text", "source", "verification"], "properties": { "time": "number|NULL", "text": "string", "source": "string|NULL", "verification": "VerificationState" } },
-      "StoryboardShot": { "required": ["route", "primaryUi", "motion", "dataState", "phkdGuardrail", "nextAction"], "properties": { "route": "string", "primaryUi": "string[]", "motion": "string", "dataState": "string", "phkdGuardrail": "string", "nextAction": "string" } },
-      "RuntimeState": { "required": ["stationIndex", "trackIndex", "playing", "volume", "mode"], "properties": { "stationIndex": "number", "trackIndex": "number", "playing": "boolean", "volume": "number", "mode": "string" } },
-      "VisualizerScene": { "required": ["scene", "input", "recordingState"], "properties": { "scene": "VisualizerSceneType", "input": "microphone|file|NULL", "bars": "number|NULL", "particles": "number|NULL", "recordingState": "idle|recording|exported|blocked" } },
-      "SocialState": { "required": ["likes", "saves", "comments", "shares", "localOnly"], "properties": { "likes": "number", "saves": "number", "comments": "number", "shares": "number", "localOnly": "boolean" } },
-      "GiftIntent": { "required": ["track", "amount", "message", "checkoutEvidence", "deliveryEvidence"], "properties": { "track": "string|NULL", "amount": "number|NULL", "message": "string|NULL", "checkoutEvidence": "string|NULL", "deliveryEvidence": "string|NULL" } },
-      "ProjectIntake": { "required": ["title", "translit", "type", "lang", "src", "desc"], "properties": { "title": "string", "translit": "string|NULL", "type": "string", "lang": "string", "src": "string|NULL", "desc": "string|NULL" } },
-      "RouteRecord": { "required": ["path", "surface", "status"], "properties": { "path": "string", "surface": "string", "status": "ScaffoldStatus", "source": "string|NULL", "verification": "VerificationState|NULL" } },
-      "HtmlLink": { "required": ["title", "path", "desktopPath"], "properties": { "title": "string", "path": "string", "desktopPath": "string", "verification": "VerificationState|NULL" } },
-      "HtmlRouteMatrix": { "required": ["surface", "staticHtml", "realRoute", "desktopCopy", "source", "state"], "properties": { "surface": "string", "staticHtml": "string|NULL", "realRoute": "string|NULL", "desktopCopy": "string|NULL", "source": "string|NULL", "state": "ScaffoldStatus" } },
-      "EvidenceRecord": { "required": ["id", "source", "creator", "date", "status", "verification"], "properties": { "id": "string", "source": "string|NULL", "creator": "string|NULL", "date": "string|NULL", "status": "ScaffoldStatus", "verification": "VerificationState" } },
-      "ExportArtifact": { "required": ["format", "payload", "provenance", "unknowns", "verification"], "properties": { "format": "ExportFormat|PersistenceFormat", "payload": "object|string|NULL", "provenance": "string|NULL", "unknowns": "string[]", "verification": "VerificationState" } },
-      "HkdExport": { "required": ["hkdType", "verification", "provenance", "unknowns"], "properties": { "hkdType": "string", "verification": "VerificationState", "provenance": "string|NULL", "unknowns": "string[]" } }
+      "RadioTrack": {
+        "required": [
+          "t"
+        ],
+        "properties": {
+          "t": "string",
+          "r": "string|NULL",
+          "a": "string|NULL",
+          "c": "string|NULL",
+          "d": "string|NULL",
+          "ly": "string|NULL",
+          "theme": "string|NULL"
+        }
+      },
+      "RadioStation": {
+        "required": [
+          "name",
+          "count",
+          "songs"
+        ],
+        "properties": {
+          "name": "string",
+          "count": "number",
+          "hero": "string|NULL",
+          "songs": "RadioTrack[]"
+        }
+      },
+      "RadioCatalog": {
+        "required": [
+          "total_songs",
+          "total_clips",
+          "shows"
+        ],
+        "properties": {
+          "artist": "string|NULL",
+          "total_songs": "number",
+          "total_clips": "number",
+          "shows": "RadioStation[]"
+        }
+      },
+      "SamayaState": {
+        "required": [
+          "day",
+          "samwatDay",
+          "muhurt",
+          "utsav",
+          "subject",
+          "mantra",
+          "announcement"
+        ],
+        "properties": {
+          "day": "string",
+          "samwatDay": "number",
+          "muhurt": "string",
+          "utsav": "string",
+          "subject": "string",
+          "mantra": "string",
+          "announcement": "string"
+        }
+      },
+      "TtsPersona": {
+        "required": [
+          "label",
+          "prefix",
+          "rate",
+          "pitch",
+          "langHints"
+        ],
+        "properties": {
+          "label": "string",
+          "prefix": "string",
+          "rate": "number",
+          "pitch": "number",
+          "langHints": "string[]"
+        }
+      },
+      "LyricCue": {
+        "required": [
+          "time",
+          "text",
+          "source",
+          "verification"
+        ],
+        "properties": {
+          "time": "number|NULL",
+          "text": "string",
+          "source": "string|NULL",
+          "verification": "VerificationState"
+        }
+      },
+      "StoryboardShot": {
+        "required": [
+          "route",
+          "primaryUi",
+          "motion",
+          "dataState",
+          "phkdGuardrail",
+          "nextAction"
+        ],
+        "properties": {
+          "route": "string",
+          "primaryUi": "string[]",
+          "motion": "string",
+          "dataState": "string",
+          "phkdGuardrail": "string",
+          "nextAction": "string"
+        }
+      },
+      "RuntimeState": {
+        "required": [
+          "stationIndex",
+          "trackIndex",
+          "playing",
+          "volume",
+          "mode"
+        ],
+        "properties": {
+          "stationIndex": "number",
+          "trackIndex": "number",
+          "playing": "boolean",
+          "volume": "number",
+          "mode": "string"
+        }
+      },
+      "VisualizerScene": {
+        "required": [
+          "scene",
+          "input",
+          "recordingState"
+        ],
+        "properties": {
+          "scene": "VisualizerSceneType",
+          "input": "microphone|file|NULL",
+          "bars": "number|NULL",
+          "particles": "number|NULL",
+          "recordingState": "idle|recording|exported|blocked"
+        }
+      },
+      "SocialState": {
+        "required": [
+          "likes",
+          "saves",
+          "comments",
+          "shares",
+          "localOnly"
+        ],
+        "properties": {
+          "likes": "number",
+          "saves": "number",
+          "comments": "number",
+          "shares": "number",
+          "localOnly": "boolean"
+        }
+      },
+      "GiftIntent": {
+        "required": [
+          "track",
+          "amount",
+          "message",
+          "checkoutEvidence",
+          "deliveryEvidence"
+        ],
+        "properties": {
+          "track": "string|NULL",
+          "amount": "number|NULL",
+          "message": "string|NULL",
+          "checkoutEvidence": "string|NULL",
+          "deliveryEvidence": "string|NULL"
+        }
+      },
+      "ProjectIntake": {
+        "required": [
+          "title",
+          "translit",
+          "type",
+          "lang",
+          "src",
+          "desc"
+        ],
+        "properties": {
+          "title": "string",
+          "translit": "string|NULL",
+          "type": "string",
+          "lang": "string",
+          "src": "string|NULL",
+          "desc": "string|NULL"
+        }
+      },
+      "RouteRecord": {
+        "required": [
+          "path",
+          "surface",
+          "status"
+        ],
+        "properties": {
+          "path": "string",
+          "surface": "string",
+          "status": "ScaffoldStatus",
+          "source": "string|NULL",
+          "verification": "VerificationState|NULL"
+        }
+      },
+      "HtmlLink": {
+        "required": [
+          "title",
+          "path",
+          "desktopPath"
+        ],
+        "properties": {
+          "title": "string",
+          "path": "string",
+          "desktopPath": "string",
+          "verification": "VerificationState|NULL"
+        }
+      },
+      "HtmlRouteMatrix": {
+        "required": [
+          "surface",
+          "staticHtml",
+          "realRoute",
+          "desktopCopy",
+          "source",
+          "state"
+        ],
+        "properties": {
+          "surface": "string",
+          "staticHtml": "string|NULL",
+          "realRoute": "string|NULL",
+          "desktopCopy": "string|NULL",
+          "source": "string|NULL",
+          "state": "ScaffoldStatus"
+        }
+      },
+      "EvidenceRecord": {
+        "required": [
+          "id",
+          "source",
+          "creator",
+          "date",
+          "status",
+          "verification"
+        ],
+        "properties": {
+          "id": "string",
+          "source": "string|NULL",
+          "creator": "string|NULL",
+          "date": "string|NULL",
+          "status": "ScaffoldStatus",
+          "verification": "VerificationState"
+        }
+      },
+      "ExportArtifact": {
+        "required": [
+          "format",
+          "payload",
+          "provenance",
+          "unknowns",
+          "verification"
+        ],
+        "properties": {
+          "format": "ExportFormat|PersistenceFormat",
+          "payload": "object|string|NULL",
+          "provenance": "string|NULL",
+          "unknowns": "string[]",
+          "verification": "VerificationState"
+        }
+      },
+      "HkdExport": {
+        "required": [
+          "hkdType",
+          "verification",
+          "provenance",
+          "unknowns"
+        ],
+        "properties": {
+          "hkdType": "string",
+          "verification": "VerificationState",
+          "provenance": "string|NULL",
+          "unknowns": "string[]"
+        }
+      }
     }
   },
   "events": [
@@ -163,10 +1160,26 @@
     "export:hkdDraft"
   ],
   "storage": [
-    { "key": "radioVaigyaaniq.react.social.v1", "type": "localStorage", "status": "implemented in React runtime" },
-    { "key": "radioVaigyaaniq.react.lyrics.v1.*", "type": "localStorage-ready", "status": "implemented in React lyrics scribe" },
-    { "key": "draft-lrc-blob-url", "type": "Blob URL", "status": "implemented in standalone HTML" },
-    { "key": "draft-hkd-blob-url", "type": "Blob URL", "status": "implemented in standalone HTML" }
+    {
+      "key": "radioVaigyaaniq.react.social.v1",
+      "type": "localStorage",
+      "status": "implemented in React runtime"
+    },
+    {
+      "key": "radioVaigyaaniq.react.lyrics.v1.*",
+      "type": "localStorage-ready",
+      "status": "implemented in React lyrics scribe"
+    },
+    {
+      "key": "draft-lrc-blob-url",
+      "type": "Blob URL",
+      "status": "implemented in standalone HTML"
+    },
+    {
+      "key": "draft-hkd-blob-url",
+      "type": "Blob URL",
+      "status": "implemented in standalone HTML"
+    }
   ],
   "fileArchitecture": {
     "currentRoots": [
@@ -196,10 +1209,22 @@
     "compatibilityRule": "Do not move current public HTML entrypoints until shim pages preserve existing file URLs."
   },
   "exports": [
-    { "format": "LRC", "verificationState": "draft" },
-    { "format": "HKD JSON", "verificationState": "draft" },
-    { "format": "WebM", "verificationState": "draft in React visualizer" },
-    { "format": "Media Universe HKD", "verificationState": "scope export preserves provenance" }
+    {
+      "format": "LRC",
+      "verificationState": "draft"
+    },
+    {
+      "format": "HKD JSON",
+      "verificationState": "draft"
+    },
+    {
+      "format": "WebM",
+      "verificationState": "draft in React visualizer"
+    },
+    {
+      "format": "Media Universe HKD",
+      "verificationState": "scope export preserves provenance"
+    }
   ],
   "qaGates": [
     "npm test",

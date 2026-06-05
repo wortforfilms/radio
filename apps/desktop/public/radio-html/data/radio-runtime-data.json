@@ -42,6 +42,26 @@
       "key": "production-freeze",
       "path": "/radio-html/data/production-freeze.json",
       "status": "implemented-draft"
+    },
+    {
+      "key": "rights-evidence",
+      "path": "/radio-html/data/rights-evidence.json",
+      "status": "implemented-draft"
+    },
+    {
+      "key": "gift-payment",
+      "path": "/radio-html/data/gift-payment-evidence.json",
+      "status": "implemented-draft"
+    },
+    {
+      "key": "installer-evidence",
+      "path": "/radio-html/data/installer-evidence.json",
+      "status": "implemented-draft"
+    },
+    {
+      "key": "release-review",
+      "path": "/radio-html/data/release-review.json",
+      "status": "implemented-draft"
     }
   ],
   "events": [
@@ -51,7 +71,11 @@
     "audio:importRequested",
     "qa:screenshotCaptured",
     "tauri:readinessChecked",
-    "freeze:statusReviewed"
+    "freeze:statusReviewed",
+    "rights:reviewQueued",
+    "gift:paymentBlocked",
+    "installer:evidenceQueued",
+    "release:reviewBlocked"
   ],
   "storage": [
     {
@@ -73,6 +97,26 @@
       "key": "audio-import",
       "mechanism": "manifest-only",
       "status": "NULL until imported"
+    },
+    {
+      "key": "rights-evidence",
+      "mechanism": "json-data-frame",
+      "status": "draft"
+    },
+    {
+      "key": "gift-payment",
+      "mechanism": "json-data-frame",
+      "status": "blocked"
+    },
+    {
+      "key": "installer-evidence",
+      "mechanism": "json-data-frame",
+      "status": "blocked"
+    },
+    {
+      "key": "release-review",
+      "mechanism": "json-data-frame",
+      "status": "blocked"
     }
   ],
   "media": [

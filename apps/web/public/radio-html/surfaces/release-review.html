@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - Release Review</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav><a href="./index.html">Index</a><a href="./tauri-readiness.html">Tauri</a><a href="./production-freeze.html">Freeze</a><a href="/governance#evidence-lanes">Governance</a></nav>
+      <span>PHKD</span>
+    </aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">Release Review Workflow</p>
+          <h1>Approval Requires Evidence</h1>
+          <p>Release approval stays blocked until human reviewer, reviewedAt, citation, reason, and AuditLog.verified exist for the rights, payment, installer, and ship gates.</p>
+          <div class="surface-actions"><a href="../data/release-review.json">Release Review JSON</a><a href="/api/governance?view=release-review">Release API</a><a href="/api/audit/verified">Audit API</a></div>
+        </div>
+        <div class="status-chip"><span>Verified Reviews</span><b id="verifiedReviews">0</b><small>release approval state</small></div>
+      </section>
+      <section class="surface-grid three" id="reviewMetrics"></section>
+      <section class="surface-card"><span class="surface-label">Workflow</span><h2>Approval Path</h2><section class="runtime-lane" id="reviewWorkflow"></section></section>
+      <section class="surface-card"><span class="surface-label">Review Queue</span><h2>Blocked Items</h2><section class="runtime-lane" id="reviewQueue"></section></section>
+    </section>
+  </main>
+  <script>
+    fetch("../data/release-review.json").then((response) => response.json()).then((data) => {
+      document.getElementById("verifiedReviews").textContent = data.counts.verified;
+      document.getElementById("reviewMetrics").innerHTML = Object.entries(data.counts).map(([label, value]) => `
+        <article class="surface-card"><span class="surface-label">${label}</span><b>${value}</b></article>
+      `).join("");
+      document.getElementById("reviewWorkflow").innerHTML = data.workflow.map((step) => `
+        <article class="runtime-row"><span>${step.key}</span><div><b>${step.label}</b><p>${step.api}</p></div><small class="surface-state-pill">${step.status}</small></article>
+      `).join("");
+      document.getElementById("reviewQueue").innerHTML = data.queue.slice(0, 28).map((item) => `
+        <article class="runtime-row"><span>${item.scope}</span><div><b>${item.label}</b><p>${item.blocker}</p></div><small class="surface-state-pill">${item.status}</small></article>
+      `).join("");
+    });
+  </script>
+</body>
+</html>

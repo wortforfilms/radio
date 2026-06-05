@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - No-Ship Dashboard</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav><a href="./index.html">Index</a><a href="./tauri-readiness.html">Tauri</a><a href="./production-freeze.html">Freeze</a><a href="/governance#no-ship-dashboard">Governance</a></nav>
+      <span>PHKD</span>
+    </aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">No-Ship Dashboard</p>
+          <h1>Blocked Until Evidence Exists</h1>
+          <p>Production, audio, rights, signing, payment, review, and telemetry claims stay false or NO_SHIP until verified external evidence is attached.</p>
+          <div class="surface-actions"><a href="../data/tauri-readiness.json">Tauri JSON</a><a href="/api/governance?view=no-ship">No-Ship API</a><a href="./release-review.html">Release Review</a></div>
+        </div>
+        <div class="status-chip"><span>Decision</span><b id="shipDecision">NO_SHIP</b><small>fail-closed</small></div>
+      </section>
+      <section class="surface-grid four" id="noShipCards"></section>
+      <section class="surface-card"><span class="surface-label">Evidence Lanes</span><h2>Required Proof</h2><section class="runtime-lane" id="noShipLanes"></section></section>
+    </section>
+  </main>
+  <script>
+    fetch("../data/tauri-readiness.json").then((response) => response.json()).then((data) => {
+      document.getElementById("shipDecision").textContent = data.shipDecision;
+      document.getElementById("noShipCards").innerHTML = Object.entries(data.noShipDashboard || {}).map(([key, value]) => `
+        <article class="surface-card"><span class="surface-label">${key}</span><b>${String(value)}</b></article>
+      `).join("");
+      document.getElementById("noShipLanes").innerHTML = (data.evidenceLanes || []).map((lane) => `
+        <article class="runtime-row"><span>${lane.key}</span><div><b>${lane.label}</b><p>${lane.path}</p></div><small class="surface-state-pill">${lane.status}</small></article>
+      `).join("");
+    });
+  </script>
+</body>
+</html>

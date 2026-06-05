@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - Installer Evidence</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav><a href="./index.html">Index</a><a href="./tauri-readiness.html">Tauri</a><a href="./production-freeze.html">Freeze</a><a href="/governance#evidence-lanes">Governance</a></nav>
+      <span>PHKD</span>
+    </aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">Installer Evidence Lane</p>
+          <h1>No Signed Installer Yet</h1>
+          <p>App, DMG, MSI, EXE, AppImage, and DEB artifact slots are placeholders until build paths, checksums, signing, notarization, and verification exist.</p>
+          <div class="surface-actions"><a href="../data/installer-evidence.json">Installer JSON</a><a href="./tauri-readiness.html">Tauri Surface</a><a href="/api/governance?view=installer-evidence">Installer API</a></div>
+        </div>
+        <div class="status-chip"><span>Signed Artifacts</span><b id="signedArtifacts">0</b><small>verified installer evidence</small></div>
+      </section>
+      <section class="surface-grid three" id="installerMetrics"></section>
+      <section class="surface-card"><span class="surface-label">Platform Matrix</span><h2>Distribution Targets</h2><section class="runtime-lane" id="platformMatrix"></section></section>
+      <section class="surface-card"><span class="surface-label">Artifact Slots</span><h2>Unsigned Queue</h2><section class="runtime-lane" id="artifactSlots"></section></section>
+    </section>
+  </main>
+  <script>
+    const valueText = (value) => value === null || value === undefined ? "NULL" : String(value);
+    fetch("../data/installer-evidence.json").then((response) => response.json()).then((data) => {
+      document.getElementById("signedArtifacts").textContent = data.counts.signedArtifacts;
+      document.getElementById("installerMetrics").innerHTML = Object.entries(data.counts).map(([label, value]) => `
+        <article class="surface-card"><span class="surface-label">${label}</span><b>${value}</b></article>
+      `).join("");
+      document.getElementById("platformMatrix").innerHTML = data.platformMatrix.map((platform) => `
+        <article class="runtime-row"><span>${platform.key}</span><div><b>${platform.label}</b><p>artifact ${valueText(platform.artifact)} · signature ${valueText(platform.signature)} · notarization ${valueText(platform.notarization)}</p></div><small class="surface-state-pill">${platform.status}</small></article>
+      `).join("");
+      document.getElementById("artifactSlots").innerHTML = data.artifactSlots.map((slot) => `
+        <article class="runtime-row"><span>${slot.key}</span><div><b>${slot.label}</b><p>${slot.blocker}</p></div><small class="surface-state-pill">${slot.status}</small></article>
+      `).join("");
+    });
+  </script>
+</body>
+</html>

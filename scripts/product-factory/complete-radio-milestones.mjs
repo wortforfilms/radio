@@ -259,6 +259,152 @@ const audioImport = {
   placeholder: "/radio-html/assets/audio/PHKD_AUDIO_PLACEHOLDER.json"
 };
 
+const rightsEvidence = {
+  id: "radio-vaigyaaniq-rights-evidence",
+  title: "Radio Vaigyaaniq Rights Evidence Lane",
+  generatedAt: today,
+  verificationState: "draft",
+  phkd: dataPhkd,
+  counts: {
+    records: evidence.records.length,
+    releaseAllowed: evidence.counts.releaseAllowed,
+    rightsNull: evidence.counts.rightsNull,
+    unreviewed: evidence.counts.unreviewed,
+    verifiedRights: 0,
+    blocked: evidence.records.filter((record) => record.rights?.releaseAllowed !== true).length
+  },
+  requirements: [
+    "source",
+    "creator",
+    "license",
+    "rightsStatus",
+    "checksum",
+    "reviewer",
+    "reviewedAt",
+    "AuditLog.verified"
+  ],
+  records: evidence.records.map((record) => ({
+    id: record.id,
+    path: record.path,
+    group: record.group,
+    status: record.status,
+    rightsStatus: record.rights?.rightsStatus ?? "NULL",
+    license: record.rights?.license ?? null,
+    releaseAllowed: record.rights?.releaseAllowed ?? false,
+    reviewer: record.review?.reviewer ?? null,
+    reviewedAt: record.review?.reviewedAt ?? null,
+    reviewState: record.review?.reviewState ?? "unreviewed",
+    checksum: record.evidence?.sha256 ?? null,
+    blocker: record.rights?.releaseAllowed === true ? null : "rights/reviewer/reviewedAt evidence incomplete"
+  }))
+};
+
+const giftPaymentEvidence = {
+  id: "radio-vaigyaaniq-gift-payment-evidence",
+  title: "Radio Vaigyaaniq Gift Payment Evidence Lane",
+  generatedAt: today,
+  verificationState: "draft",
+  phkd: dataPhkd,
+  counts: {
+    giftIntents: 0,
+    checkoutSessions: 0,
+    paymentReceipts: 0,
+    fulfilledGifts: 0,
+    blocked: 4
+  },
+  states: [
+    { key: "gift-intent", label: "Gift intent", status: "draft", evidence: "local UI intent only" },
+    { key: "checkout-session", label: "Checkout session", status: "blocked", evidence: null },
+    { key: "payment-receipt", label: "Payment receipt", status: "blocked", evidence: null },
+    { key: "delivery-proof", label: "Delivery proof", status: "blocked", evidence: null }
+  ],
+  requiredEvidence: [
+    "payerId",
+    "recipientId",
+    "checkoutProvider",
+    "checkoutSessionId",
+    "paymentReceiptId",
+    "amount",
+    "currency",
+    "deliveredAt",
+    "AuditLog.created"
+  ],
+  note: "Gift button remains local intent only. No payment, checkout, receipt, wallet, or delivery claim is made."
+};
+
+const installerEvidence = {
+  id: "radio-vaigyaaniq-installer-evidence",
+  title: "Radio Vaigyaaniq Installer Evidence Lane",
+  generatedAt: today,
+  verificationState: "draft",
+  phkd: dataPhkd,
+  counts: {
+    artifactSlots: 6,
+    signedArtifacts: 0,
+    unsignedArtifacts: 0,
+    nullArtifacts: 6,
+    blocked: 6
+  },
+  platformMatrix: [
+    { platform: "macOS", formats: ["app", "dmg"], signed: false, notarized: false, artifact: null, checksum: null, status: "blocked" },
+    { platform: "Windows", formats: ["msi", "exe"], signed: false, notarized: false, artifact: null, checksum: null, status: "blocked" },
+    { platform: "Linux", formats: ["AppImage", "deb"], signed: false, notarized: false, artifact: null, checksum: null, status: "blocked" }
+  ],
+  artifactSlots: [
+    { key: "macos-app", platform: "macOS", format: "app", path: null, checksum: null, signingEvidence: null, status: "blocked" },
+    { key: "macos-dmg", platform: "macOS", format: "dmg", path: null, checksum: null, signingEvidence: null, status: "blocked" },
+    { key: "windows-msi", platform: "Windows", format: "msi", path: null, checksum: null, signingEvidence: null, status: "blocked" },
+    { key: "windows-exe", platform: "Windows", format: "exe", path: null, checksum: null, signingEvidence: null, status: "blocked" },
+    { key: "linux-appimage", platform: "Linux", format: "AppImage", path: null, checksum: null, signingEvidence: null, status: "blocked" },
+    { key: "linux-deb", platform: "Linux", format: "deb", path: null, checksum: null, signingEvidence: null, status: "blocked" }
+  ],
+  requiredEvidence: [
+    "artifactPath",
+    "sha256",
+    "buildCommand",
+    "signingIdentity",
+    "signatureVerification",
+    "notarizationTicket when platform requires it",
+    "AuditLog.verified"
+  ]
+};
+
+const releaseReview = {
+  id: "radio-vaigyaaniq-release-review",
+  title: "Radio Vaigyaaniq Release Review Workflow",
+  generatedAt: today,
+  verificationState: "draft",
+  phkd: dataPhkd,
+  counts: {
+    reviewItems: evidence.records.length + 4,
+    unreviewed: evidence.counts.unreviewed,
+    verified: 0,
+    rejected: 0,
+    blocked: 4
+  },
+  workflow: [
+    { key: "collect-evidence", label: "Collect evidence", status: "draft-ready", api: "/api/governance" },
+    { key: "rights-review", label: "Rights review", status: "blocked", api: "/api/audit/verified" },
+    { key: "installer-review", label: "Installer review", status: "blocked", api: "/api/audit/verified" },
+    { key: "payment-review", label: "Payment review", status: "blocked", api: "/api/audit/verified" },
+    { key: "release-approval", label: "Release approval", status: "blocked", api: "/api/audit/verified" }
+  ],
+  reviewerRequirements: ["reviewer", "reviewedAt", "citation", "reason", "AuditLog.verified"],
+  queue: [
+    ...rightsEvidence.records.filter((record) => record.reviewState === "unreviewed").map((record) => ({
+      key: record.id,
+      label: record.path,
+      scope: "rights",
+      status: "unreviewed",
+      blocker: record.blocker
+    })),
+    { key: "audio-rights", label: "Playable audio rights", scope: "ship-gate", status: "blocked", blocker: "rights evidence NULL" },
+    { key: "payment-gift", label: "Gift/payment receipt", scope: "ship-gate", status: "blocked", blocker: "payment evidence NULL" },
+    { key: "installer", label: "Signed installer", scope: "ship-gate", status: "blocked", blocker: "installer evidence NULL" },
+    { key: "release-review", label: "Human release approval", scope: "ship-gate", status: "blocked", blocker: "reviewer/reviewedAt NULL" }
+  ]
+};
+
 const radioRuntimeData = {
   id: "radio-vaigyaaniq-runtime-data",
   title: "Radio Vaigyaaniq Runtime Data Layer",
@@ -271,7 +417,11 @@ const radioRuntimeData = {
     { key: "asset-evidence", path: "/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json", status: "implemented-draft" },
     { key: "visual-qa", path: "/radio-html/data/visual-qa.json", status: "implemented-draft" },
     { key: "tauri-readiness", path: "/radio-html/data/tauri-readiness.json", status: "implemented-draft" },
-    { key: "production-freeze", path: "/radio-html/data/production-freeze.json", status: "implemented-draft" }
+    { key: "production-freeze", path: "/radio-html/data/production-freeze.json", status: "implemented-draft" },
+    { key: "rights-evidence", path: "/radio-html/data/rights-evidence.json", status: "implemented-draft" },
+    { key: "gift-payment", path: "/radio-html/data/gift-payment-evidence.json", status: "implemented-draft" },
+    { key: "installer-evidence", path: "/radio-html/data/installer-evidence.json", status: "implemented-draft" },
+    { key: "release-review", path: "/radio-html/data/release-review.json", status: "implemented-draft" }
   ],
   events: [
     "station:selected",
@@ -280,13 +430,21 @@ const radioRuntimeData = {
     "audio:importRequested",
     "qa:screenshotCaptured",
     "tauri:readinessChecked",
-    "freeze:statusReviewed"
+    "freeze:statusReviewed",
+    "rights:reviewQueued",
+    "gift:paymentBlocked",
+    "installer:evidenceQueued",
+    "release:reviewBlocked"
   ],
   storage: [
     { key: "social", mechanism: "localStorage", status: "draft" },
     { key: "lyrics", mechanism: "localStorage", status: "draft" },
     { key: "visualizer-recording", mechanism: "Blob URL", status: "draft" },
-    { key: "audio-import", mechanism: "manifest-only", status: "NULL until imported" }
+    { key: "audio-import", mechanism: "manifest-only", status: "NULL until imported" },
+    { key: "rights-evidence", mechanism: "json-data-frame", status: "draft" },
+    { key: "gift-payment", mechanism: "json-data-frame", status: "blocked" },
+    { key: "installer-evidence", mechanism: "json-data-frame", status: "blocked" },
+    { key: "release-review", mechanism: "json-data-frame", status: "blocked" }
   ],
   media: stationMedia,
   catalog: buildCompactCatalog()
@@ -303,6 +461,11 @@ const qaTargets = [
   ["/radio-html/surfaces/social-gift.html", "Social Gift"],
   ["/radio-html/surfaces/storyboard.html", "Storyboard"],
   ["/radio-html/surfaces/audio-import.html", "Audio Import"],
+  ["/radio-html/surfaces/rights-evidence.html", "Rights Evidence"],
+  ["/radio-html/surfaces/gift-payment-evidence.html", "Gift Payment Evidence"],
+  ["/radio-html/surfaces/installer-evidence.html", "Installer Evidence"],
+  ["/radio-html/surfaces/release-review.html", "Release Review"],
+  ["/radio-html/surfaces/no-ship-dashboard.html", "No-Ship Dashboard"],
   ["/radio-html/surfaces/visual-qa.html", "Visual QA"],
   ["/radio-html/surfaces/tauri-readiness.html", "Tauri Readiness"],
   ["/radio-html/surfaces/production-freeze.html", "Production Freeze"],
@@ -348,18 +511,38 @@ const tauriReadiness = {
   id: "radio-vaigyaaniq-tauri-readiness",
   title: "Radio Vaigyaaniq Tauri Shipping Readiness",
   generatedAt: today,
+  version: "2.0.0",
   verificationState: "draft",
   phkd: dataPhkd,
   shipDecision: "NO_SHIP",
   reason: "Installer, signing, audio rights, payment, and release review evidence remain NULL.",
+  noShipDashboard: {
+    productionReady: false,
+    playableAudio: false,
+    verifiedRights: false,
+    signedInstaller: false,
+    paymentReceipt: false,
+    releaseReview: false,
+    externalTelemetry: false,
+    decision: "NO_SHIP"
+  },
+  evidenceLanes: [
+    { key: "rights", label: "Rights Evidence Lane", path: "/radio-html/data/rights-evidence.json", status: "blocked" },
+    { key: "gift-payment", label: "Gift Payment Evidence Lane", path: "/radio-html/data/gift-payment-evidence.json", status: "blocked" },
+    { key: "installer", label: "Installer Evidence Lane", path: "/radio-html/data/installer-evidence.json", status: "blocked" },
+    { key: "release-review", label: "Release Review Workflow", path: "/radio-html/data/release-review.json", status: "blocked" },
+    { key: "governance", label: "Governance Evidence Center", path: "/governance", status: "draft-ready" }
+  ],
+  platformMatrix: installerEvidence.platformMatrix,
+  artifactSlots: installerEvidence.artifactSlots,
   checklist: [
     { key: "html-bundle", label: "HTML bundle path inventory", status: "draft-ready", evidence: "/radio-html/Radio_Vaigyaaniq_All_Html_Links.json" },
     { key: "desktop-mirror", label: "Desktop mirror copy", status: "draft-ready", evidence: "/apps/desktop/public/radio-html" },
     { key: "asset-evidence", label: "Asset checksum evidence", status: "draft-ready", evidence: "/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json" },
-    { key: "audio-rights", label: "Playable audio rights", status: "blocked", evidence: null },
-    { key: "payment-gift", label: "Gift/payment mechanism", status: "blocked", evidence: null },
-    { key: "installer", label: "Signed Tauri installer", status: "blocked", evidence: null },
-    { key: "release-review", label: "Human release review", status: "blocked", evidence: null }
+    { key: "audio-rights", label: "Playable audio rights", status: "blocked", evidence: "/radio-html/data/rights-evidence.json" },
+    { key: "payment-gift", label: "Gift/payment mechanism", status: "blocked", evidence: "/radio-html/data/gift-payment-evidence.json" },
+    { key: "installer", label: "Signed Tauri installer", status: "blocked", evidence: "/radio-html/data/installer-evidence.json" },
+    { key: "release-review", label: "Human release review", status: "blocked", evidence: "/radio-html/data/release-review.json" }
   ]
 };
 tauriReadiness.counts = {
@@ -381,7 +564,11 @@ const productionFreeze = {
     { key: "asset-evidence", path: "/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json", state: "frozen-draft" },
     { key: "audio-import-schema", path: "/radio-html/data/audio-import-manifest.json", state: "frozen-draft" },
     { key: "runtime-data", path: "/radio-html/data/radio-runtime-data.json", state: "frozen-draft" },
-    { key: "tauri-readiness", path: "/radio-html/data/tauri-readiness.json", state: "frozen-draft" }
+    { key: "tauri-readiness", path: "/radio-html/data/tauri-readiness.json", state: "frozen-draft" },
+    { key: "rights-evidence", path: "/radio-html/data/rights-evidence.json", state: "frozen-draft" },
+    { key: "gift-payment", path: "/radio-html/data/gift-payment-evidence.json", state: "blocked-draft" },
+    { key: "installer-evidence", path: "/radio-html/data/installer-evidence.json", state: "blocked-draft" },
+    { key: "release-review", path: "/radio-html/data/release-review.json", state: "blocked-draft" }
   ],
   blockedProductionClaims: [
     "productionReady",
@@ -399,6 +586,10 @@ writeJson(path.join(root, "data/radio-runtime-data.json"), radioRuntimeData);
 writeJson(path.join(root, "data/visual-qa.json"), visualQa);
 writeJson(path.join(root, "data/tauri-readiness.json"), tauriReadiness);
 writeJson(path.join(root, "data/production-freeze.json"), productionFreeze);
+writeJson(path.join(root, "data/rights-evidence.json"), rightsEvidence);
+writeJson(path.join(root, "data/gift-payment-evidence.json"), giftPaymentEvidence);
+writeJson(path.join(root, "data/installer-evidence.json"), installerEvidence);
+writeJson(path.join(root, "data/release-review.json"), releaseReview);
 
 for (const file of [
   "Radio_Vaigyaaniq_Asset_Manifest.json",
@@ -408,7 +599,11 @@ for (const file of [
   "data/radio-runtime-data.json",
   "data/visual-qa.json",
   "data/tauri-readiness.json",
-  "data/production-freeze.json"
+  "data/production-freeze.json",
+  "data/rights-evidence.json",
+  "data/gift-payment-evidence.json",
+  "data/installer-evidence.json",
+  "data/release-review.json"
 ]) {
   fs.mkdirSync(path.dirname(path.join(desktopRoot, file)), { recursive: true });
   fs.copyFileSync(path.join(root, file), path.join(desktopRoot, file));

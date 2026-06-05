@@ -27,6 +27,20 @@ body {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+.surface-main,
+.surface-main * {
+  min-width: 0;
+}
+
+.surface-main a,
+.surface-main b,
+.surface-main p,
+.surface-main small,
+.runtime-row,
+.workflow-row {
+  overflow-wrap: anywhere;
+}
+
 a { color: inherit; text-decoration: none; }
 button, select, input, textarea { font: inherit; }
 
@@ -441,6 +455,10 @@ audio {
 }
 
 @media (max-width: 640px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .surface-main { padding: 14px; }
   .surface-rail,
   .surface-actions,
@@ -449,5 +467,21 @@ audio {
     display: grid;
     grid-template-columns: 1fr;
   }
+
+  .surface-actions a,
+  .button,
+  button,
+  select,
+  .download {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .runtime-row > span,
+  .workflow-row > span,
+  .surface-state-pill {
+    width: 100%;
+  }
+
   .surface-mark { width: 100%; }
 }

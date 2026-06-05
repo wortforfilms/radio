@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - Gift Payment Evidence</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav><a href="./index.html">Index</a><a href="./social-gift.html">Gift UI</a><a href="./tauri-readiness.html">Tauri</a><a href="/governance#evidence-lanes">Governance</a></nav>
+      <span>PHKD</span>
+    </aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">Gift Payment Evidence Lane</p>
+          <h1>Gift Intent Without Receipt</h1>
+          <p>Gift UI can collect local intent, but payment, receipt, fulfillment, refunds, and provider settlement are NULL until real evidence exists.</p>
+          <div class="surface-actions"><a href="../data/gift-payment-evidence.json">Gift Payment JSON</a><a href="./social-gift.html">Social Gift Surface</a><a href="/api/governance?view=gift-payment">Gift API</a></div>
+        </div>
+        <div class="status-chip"><span>Fulfilled Gifts</span><b id="fulfilledGifts">0</b><small>payment receipt evidence</small></div>
+      </section>
+      <section class="surface-grid three" id="giftMetrics"></section>
+      <section class="surface-card"><span class="surface-label">Required Evidence</span><h2>Payment Proof Fields</h2><div class="chip-row" id="giftRequired"></div></section>
+      <section class="surface-card"><span class="surface-label">Checkout States</span><h2>Blocked Flow</h2><section class="runtime-lane" id="giftStates"></section></section>
+    </section>
+  </main>
+  <script>
+    fetch("../data/gift-payment-evidence.json").then((response) => response.json()).then((data) => {
+      document.getElementById("fulfilledGifts").textContent = data.counts.fulfilledGifts;
+      document.getElementById("giftMetrics").innerHTML = Object.entries(data.counts).map(([label, value]) => `
+        <article class="surface-card"><span class="surface-label">${label}</span><b>${value}</b></article>
+      `).join("");
+      document.getElementById("giftRequired").innerHTML = data.requiredEvidence.map((field) => `<span class="surface-state-pill">${field}</span>`).join("");
+      document.getElementById("giftStates").innerHTML = data.states.map((state) => `
+        <article class="runtime-row"><span>${state.key}</span><div><b>${state.label}</b><p>${state.blocker}</p></div><small class="surface-state-pill">${state.status}</small></article>
+      `).join("");
+    });
+  </script>
+</body>
+</html>

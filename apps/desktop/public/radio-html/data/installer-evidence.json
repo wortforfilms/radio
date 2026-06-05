@@ -1,0 +1,125 @@
+{
+  "id": "radio-vaigyaaniq-installer-evidence",
+  "title": "Radio Vaigyaaniq Installer Evidence Lane",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "notes": [
+      "Data frames describe local runtime behavior only.",
+      "No audio, rights, payment, production readiness, or external telemetry claim is introduced.",
+      "Evidence upgrades require source, creator, artifact checksum, rights, reviewer, and reviewedAt."
+    ]
+  },
+  "counts": {
+    "artifactSlots": 6,
+    "signedArtifacts": 0,
+    "unsignedArtifacts": 0,
+    "nullArtifacts": 6,
+    "blocked": 6
+  },
+  "platformMatrix": [
+    {
+      "platform": "macOS",
+      "formats": [
+        "app",
+        "dmg"
+      ],
+      "signed": false,
+      "notarized": false,
+      "artifact": null,
+      "checksum": null,
+      "status": "blocked"
+    },
+    {
+      "platform": "Windows",
+      "formats": [
+        "msi",
+        "exe"
+      ],
+      "signed": false,
+      "notarized": false,
+      "artifact": null,
+      "checksum": null,
+      "status": "blocked"
+    },
+    {
+      "platform": "Linux",
+      "formats": [
+        "AppImage",
+        "deb"
+      ],
+      "signed": false,
+      "notarized": false,
+      "artifact": null,
+      "checksum": null,
+      "status": "blocked"
+    }
+  ],
+  "artifactSlots": [
+    {
+      "key": "macos-app",
+      "platform": "macOS",
+      "format": "app",
+      "path": null,
+      "checksum": null,
+      "signingEvidence": null,
+      "status": "blocked"
+    },
+    {
+      "key": "macos-dmg",
+      "platform": "macOS",
+      "format": "dmg",
+      "path": null,
+      "checksum": null,
+      "signingEvidence": null,
+      "status": "blocked"
+    },
+    {
+      "key": "windows-msi",
+      "platform": "Windows",
+      "format": "msi",
+      "path": null,
+      "checksum": null,
+      "signingEvidence": null,
+      "status": "blocked"
+    },
+    {
+      "key": "windows-exe",
+      "platform": "Windows",
+      "format": "exe",
+      "path": null,
+      "checksum": null,
+      "signingEvidence": null,
+      "status": "blocked"
+    },
+    {
+      "key": "linux-appimage",
+      "platform": "Linux",
+      "format": "AppImage",
+      "path": null,
+      "checksum": null,
+      "signingEvidence": null,
+      "status": "blocked"
+    },
+    {
+      "key": "linux-deb",
+      "platform": "Linux",
+      "format": "deb",
+      "path": null,
+      "checksum": null,
+      "signingEvidence": null,
+      "status": "blocked"
+    }
+  ],
+  "requiredEvidence": [
+    "artifactPath",
+    "sha256",
+    "buildCommand",
+    "signingIdentity",
+    "signatureVerification",
+    "notarizationTicket when platform requires it",
+    "AuditLog.verified"
+  ]
+}

@@ -30,11 +30,27 @@ export async function GET(request: NextRequest) {
   });
   const tauriReadiness = readJson("radio-html/data/tauri-readiness.json", {
     shipDecision: "NO_SHIP",
-    counts: { draftReady: 0, blocked: 0 }
+    counts: { draftReady: 0, blocked: 0 },
+    noShipDashboard: null,
+    evidenceLanes: []
   });
   const productionFreeze = readJson("radio-html/data/production-freeze.json", {
     productionReady: false,
     freezeState: "NULL"
+  });
+  const rightsEvidence = readJson("radio-html/data/rights-evidence.json", {
+    counts: { records: 0, releaseAllowed: 0, rightsNull: 0, unreviewed: 0, blocked: 0 }
+  });
+  const giftPaymentEvidence = readJson("radio-html/data/gift-payment-evidence.json", {
+    counts: { giftIntents: 0, checkoutSessions: 0, paymentReceipts: 0, fulfilledGifts: 0, blocked: 0 }
+  });
+  const installerEvidence = readJson("radio-html/data/installer-evidence.json", {
+    counts: { artifactSlots: 0, signedArtifacts: 0, nullArtifacts: 0, blocked: 0 },
+    platformMatrix: []
+  });
+  const releaseReview = readJson("radio-html/data/release-review.json", {
+    counts: { reviewItems: 0, unreviewed: 0, verified: 0, rejected: 0, blocked: 0 },
+    workflow: []
   });
   const visualQa = readJson("radio-html/data/visual-qa.json", {
     counts: { targets: 0, pass: 0, blocked: 0 }
@@ -80,6 +96,10 @@ export async function GET(request: NextRequest) {
       assetRecords: assetEvidence.counts.records,
       releaseAllowed: assetEvidence.counts.releaseAllowed,
       unreviewedAssets: assetEvidence.counts.unreviewed,
+      rightsBlocked: rightsEvidence.counts.blocked,
+      giftPaymentBlocked: giftPaymentEvidence.counts.blocked,
+      installerBlocked: installerEvidence.counts.blocked,
+      releaseReviewBlocked: releaseReview.counts.blocked,
       customerFrontFailedLinks: customerFrontQa.counts.failedLinks,
       visualQaPass: visualQa.counts.pass,
       visualQaBlocked: visualQa.counts.blocked,
@@ -87,14 +107,40 @@ export async function GET(request: NextRequest) {
       tauriBlocked: tauriReadiness.counts.blocked,
       productionReady: productionFreeze.productionReady
     },
+    lanes: {
+      rightsEvidence,
+      giftPaymentEvidence,
+      installerEvidence,
+      releaseReview
+    },
+    noShipDashboard: tauriReadiness.noShipDashboard ?? {
+      productionReady: false,
+      playableAudio: false,
+      verifiedRights: false,
+      signedInstaller: false,
+      paymentReceipt: false,
+      releaseReview: false,
+      externalTelemetry: false,
+      decision: "NO_SHIP"
+    },
     evidence: {
       assetEvidence: "/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json",
       customerFrontQa: "/radio-html/qa/customer-front/radio-customer-front-playwright-report.json",
       visualQa: "/radio-html/data/visual-qa.json",
       tauriReadiness: "/radio-html/data/tauri-readiness.json",
-      productionFreeze: "/radio-html/data/production-freeze.json"
+      productionFreeze: "/radio-html/data/production-freeze.json",
+      rightsEvidence: "/radio-html/data/rights-evidence.json",
+      giftPaymentEvidence: "/radio-html/data/gift-payment-evidence.json",
+      installerEvidence: "/radio-html/data/installer-evidence.json",
+      releaseReview: "/radio-html/data/release-review.json"
     }
   };
+
+  if (view === "rights-evidence") return Response.json({ phkd: governancePhkd, rightsEvidence });
+  if (view === "gift-payment") return Response.json({ phkd: governancePhkd, giftPaymentEvidence });
+  if (view === "installer-evidence") return Response.json({ phkd: governancePhkd, installerEvidence });
+  if (view === "release-review") return Response.json({ phkd: governancePhkd, releaseReview });
+  if (view === "no-ship") return Response.json({ phkd: governancePhkd, noShipDashboard: payload.noShipDashboard, releaseGates });
 
   if (view === "verification-queue") {
     return Response.json({
@@ -102,6 +148,10 @@ export async function GET(request: NextRequest) {
       queue: {
         unreviewedAssets: assetEvidence.counts.unreviewed,
         releaseAllowed: assetEvidence.counts.releaseAllowed,
+        rightsBlocked: rightsEvidence.counts.blocked,
+        giftPaymentBlocked: giftPaymentEvidence.counts.blocked,
+        installerBlocked: installerEvidence.counts.blocked,
+        releaseReviewBlocked: releaseReview.counts.blocked,
         failedLinks: customerFrontQa.counts.failedLinks,
         blockedVisualQa: visualQa.counts.blocked
       },

@@ -2,6 +2,7 @@
   "id": "radio-vaigyaaniq-tauri-readiness",
   "title": "Radio Vaigyaaniq Tauri Shipping Readiness",
   "generatedAt": "2026-06-05",
+  "version": "2.0.0",
   "verificationState": "draft",
   "phkd": {
     "rule": "fail_closed",
@@ -14,6 +15,142 @@
   },
   "shipDecision": "NO_SHIP",
   "reason": "Installer, signing, audio rights, payment, and release review evidence remain NULL.",
+  "noShipDashboard": {
+    "productionReady": false,
+    "playableAudio": false,
+    "verifiedRights": false,
+    "signedInstaller": false,
+    "paymentReceipt": false,
+    "releaseReview": false,
+    "externalTelemetry": false,
+    "decision": "NO_SHIP"
+  },
+  "evidenceLanes": [
+    {
+      "key": "rights",
+      "label": "Rights Evidence Lane",
+      "path": "/radio-html/data/rights-evidence.json",
+      "status": "blocked"
+    },
+    {
+      "key": "gift-payment",
+      "label": "Gift Payment Evidence Lane",
+      "path": "/radio-html/data/gift-payment-evidence.json",
+      "status": "blocked"
+    },
+    {
+      "key": "installer",
+      "label": "Installer Evidence Lane",
+      "path": "/radio-html/data/installer-evidence.json",
+      "status": "blocked"
+    },
+    {
+      "key": "release-review",
+      "label": "Release Review Workflow",
+      "path": "/radio-html/data/release-review.json",
+      "status": "blocked"
+    },
+    {
+      "key": "governance",
+      "label": "Governance Evidence Center",
+      "path": "/governance",
+      "status": "draft-ready"
+    }
+  ],
+  "platformMatrix": [
+    {
+      "platform": "macOS",
+      "formats": [
+        "app",
+        "dmg"
+      ],
+      "signed": false,
+      "notarized": false,
+      "artifact": null,
+      "checksum": null,
+      "status": "blocked"
+    },
+    {
+      "platform": "Windows",
+      "formats": [
+        "msi",
+        "exe"
+      ],
+      "signed": false,
+      "notarized": false,
+      "artifact": null,
+      "checksum": null,
+      "status": "blocked"
+    },
+    {
+      "platform": "Linux",
+      "formats": [
+        "AppImage",
+        "deb"
+      ],
+      "signed": false,
+      "notarized": false,
+      "artifact": null,
+      "checksum": null,
+      "status": "blocked"
+    }
+  ],
+  "artifactSlots": [
+    {
+      "key": "macos-app",
+      "platform": "macOS",
+      "format": "app",
+      "path": null,
+      "checksum": null,
+      "signingEvidence": null,
+      "status": "blocked"
+    },
+    {
+      "key": "macos-dmg",
+      "platform": "macOS",
+      "format": "dmg",
+      "path": null,
+      "checksum": null,
+      "signingEvidence": null,
+      "status": "blocked"
+    },
+    {
+      "key": "windows-msi",
+      "platform": "Windows",
+      "format": "msi",
+      "path": null,
+      "checksum": null,
+      "signingEvidence": null,
+      "status": "blocked"
+    },
+    {
+      "key": "windows-exe",
+      "platform": "Windows",
+      "format": "exe",
+      "path": null,
+      "checksum": null,
+      "signingEvidence": null,
+      "status": "blocked"
+    },
+    {
+      "key": "linux-appimage",
+      "platform": "Linux",
+      "format": "AppImage",
+      "path": null,
+      "checksum": null,
+      "signingEvidence": null,
+      "status": "blocked"
+    },
+    {
+      "key": "linux-deb",
+      "platform": "Linux",
+      "format": "deb",
+      "path": null,
+      "checksum": null,
+      "signingEvidence": null,
+      "status": "blocked"
+    }
+  ],
   "checklist": [
     {
       "key": "html-bundle",
@@ -37,25 +174,25 @@
       "key": "audio-rights",
       "label": "Playable audio rights",
       "status": "blocked",
-      "evidence": null
+      "evidence": "/radio-html/data/rights-evidence.json"
     },
     {
       "key": "payment-gift",
       "label": "Gift/payment mechanism",
       "status": "blocked",
-      "evidence": null
+      "evidence": "/radio-html/data/gift-payment-evidence.json"
     },
     {
       "key": "installer",
       "label": "Signed Tauri installer",
       "status": "blocked",
-      "evidence": null
+      "evidence": "/radio-html/data/installer-evidence.json"
     },
     {
       "key": "release-review",
       "label": "Human release review",
       "status": "blocked",
-      "evidence": null
+      "evidence": "/radio-html/data/release-review.json"
     }
   ],
   "counts": {

@@ -30,7 +30,7 @@ describe("governance fail-closed gates", () => {
   });
 
   it("exposes draft thumbnails with evidence links", () => {
-    expect(governanceDraftThumbnails).toHaveLength(8);
+    expect(governanceDraftThumbnails).toHaveLength(9);
     expect(governanceDraftThumbnails.every((thumbnail) => thumbnail.image.startsWith("/radio-html/"))).toBe(true);
     expect(governanceDraftThumbnails.every((thumbnail) => thumbnail.evidence.startsWith("/radio-html/"))).toBe(true);
     expect(governanceDraftThumbnails.filter((thumbnail) => thumbnail.status === "blocked").map((thumbnail) => thumbnail.key)).toEqual([

@@ -1,0 +1,224 @@
+{
+  "id": "radio-vaigyaaniq-release-review",
+  "title": "Radio Vaigyaaniq Release Review Workflow",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "notes": [
+      "Data frames describe local runtime behavior only.",
+      "No audio, rights, payment, production readiness, or external telemetry claim is introduced.",
+      "Evidence upgrades require source, creator, artifact checksum, rights, reviewer, and reviewedAt."
+    ]
+  },
+  "counts": {
+    "reviewItems": 23,
+    "unreviewed": 19,
+    "verified": 0,
+    "rejected": 0,
+    "blocked": 4
+  },
+  "workflow": [
+    {
+      "key": "collect-evidence",
+      "label": "Collect evidence",
+      "status": "draft-ready",
+      "api": "/api/governance"
+    },
+    {
+      "key": "rights-review",
+      "label": "Rights review",
+      "status": "blocked",
+      "api": "/api/audit/verified"
+    },
+    {
+      "key": "installer-review",
+      "label": "Installer review",
+      "status": "blocked",
+      "api": "/api/audit/verified"
+    },
+    {
+      "key": "payment-review",
+      "label": "Payment review",
+      "status": "blocked",
+      "api": "/api/audit/verified"
+    },
+    {
+      "key": "release-approval",
+      "label": "Release approval",
+      "status": "blocked",
+      "api": "/api/audit/verified"
+    }
+  ],
+  "reviewerRequirements": [
+    "reviewer",
+    "reviewedAt",
+    "citation",
+    "reason",
+    "AuditLog.verified"
+  ],
+  "queue": [
+    {
+      "key": "radio-vaigyaaniq-landing-hero-png",
+      "label": "/radio-html/assets/radio-vaigyaaniq-landing-hero.png",
+      "scope": "rights",
+      "status": "unreviewed",
+      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+    },
+    {
+      "key": "radio-vaigyaaniq-divine-hero-png",
+      "label": "/radio-html/assets/radio-vaigyaaniq-divine-hero.png",
+      "scope": "rights",
+      "status": "unreviewed",
+      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+    },
+    {
+      "key": "images-radio-vaigyaaniq-runtime-hero-svg",
+      "label": "/radio-html/assets/images/radio-vaigyaaniq-runtime-hero.svg",
+      "scope": "rights",
+      "status": "unreviewed",
+      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+    },
+    {
+      "key": "images-radio-vaigyaaniq-samaya-panel-svg",
+      "label": "/radio-html/assets/images/radio-vaigyaaniq-samaya-panel.svg",
+      "scope": "rights",
+      "status": "unreviewed",
+      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+    },
+    {
+      "key": "covers-mahamatya-svg",
+      "label": "/radio-html/assets/covers/mahamatya.svg",
+      "scope": "rights",
+      "status": "unreviewed",
+      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+    },
+    {
+      "key": "covers-gokul-svg",
+      "label": "/radio-html/assets/covers/gokul.svg",
+      "scope": "rights",
+      "status": "unreviewed",
+      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+    },
+    {
+      "key": "covers-kaal-chakra-svg",
+      "label": "/radio-html/assets/covers/kaal-chakra.svg",
+      "scope": "rights",
+      "status": "unreviewed",
+      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+    },
+    {
+      "key": "covers-swarnim-sale-svg",
+      "label": "/radio-html/assets/covers/swarnim-sale.svg",
+      "scope": "rights",
+      "status": "unreviewed",
+      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+    },
+    {
+      "key": "icons-like-svg",
+      "label": "/radio-html/assets/icons/like.svg",
+      "scope": "rights",
+      "status": "unreviewed",
+      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+    },
+    {
+      "key": "icons-save-svg",
+      "label": "/radio-html/assets/icons/save.svg",
+      "scope": "rights",
+      "status": "unreviewed",
+      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+    },
+    {
+      "key": "icons-gift-svg",
+      "label": "/radio-html/assets/icons/gift.svg",
+      "scope": "rights",
+      "status": "unreviewed",
+      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+    },
+    {
+      "key": "icons-share-svg",
+      "label": "/radio-html/assets/icons/share.svg",
+      "scope": "rights",
+      "status": "unreviewed",
+      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+    },
+    {
+      "key": "icons-tts-svg",
+      "label": "/radio-html/assets/icons/tts.svg",
+      "scope": "rights",
+      "status": "unreviewed",
+      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+    },
+    {
+      "key": "icons-mic-svg",
+      "label": "/radio-html/assets/icons/mic.svg",
+      "scope": "rights",
+      "status": "unreviewed",
+      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+    },
+    {
+      "key": "shaders-radio-spectrum-frag",
+      "label": "/radio-html/assets/shaders/radio-spectrum.frag",
+      "scope": "rights",
+      "status": "unreviewed",
+      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+    },
+    {
+      "key": "shaders-radio-yantra-vert",
+      "label": "/radio-html/assets/shaders/radio-yantra.vert",
+      "scope": "rights",
+      "status": "unreviewed",
+      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+    },
+    {
+      "key": "audio-phkd-audio-placeholder-json",
+      "label": "/radio-html/assets/audio/PHKD_AUDIO_PLACEHOLDER.json",
+      "scope": "rights",
+      "status": "unreviewed",
+      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+    },
+    {
+      "key": "vendor-three-min-js",
+      "label": "/radio-html/assets/vendor/three.min.js",
+      "scope": "rights",
+      "status": "unreviewed",
+      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+    },
+    {
+      "key": "vendor-three-module-min-js",
+      "label": "/radio-html/assets/vendor/three.module.min.js",
+      "scope": "rights",
+      "status": "unreviewed",
+      "blocker": "rights/reviewer/reviewedAt evidence incomplete"
+    },
+    {
+      "key": "audio-rights",
+      "label": "Playable audio rights",
+      "scope": "ship-gate",
+      "status": "blocked",
+      "blocker": "rights evidence NULL"
+    },
+    {
+      "key": "payment-gift",
+      "label": "Gift/payment receipt",
+      "scope": "ship-gate",
+      "status": "blocked",
+      "blocker": "payment evidence NULL"
+    },
+    {
+      "key": "installer",
+      "label": "Signed installer",
+      "scope": "ship-gate",
+      "status": "blocked",
+      "blocker": "installer evidence NULL"
+    },
+    {
+      "key": "release-review",
+      "label": "Human release approval",
+      "scope": "ship-gate",
+      "status": "blocked",
+      "blocker": "reviewer/reviewedAt NULL"
+    }
+  ]
+}

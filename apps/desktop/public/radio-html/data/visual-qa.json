@@ -13,9 +13,9 @@
     ]
   },
   "counts": {
-    "targets": 14,
-    "capturedScreenshots": 14,
-    "pass": 14,
+    "targets": 19,
+    "capturedScreenshots": 19,
+    "pass": 19,
     "blocked": 0
   },
   "targets": [
@@ -128,6 +128,61 @@
       "mobileStatus": "pending-mobile-sweep",
       "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/audio-import.html",
       "slug": "audio-import"
+    },
+    {
+      "title": "Rights Evidence",
+      "path": "/radio-html/surfaces/rights-evidence.html",
+      "screenshot": "/radio-html/qa/screenshots/rights-evidence.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pass",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/rights-evidence.html",
+      "slug": "rights-evidence"
+    },
+    {
+      "title": "Gift Payment Evidence",
+      "path": "/radio-html/surfaces/gift-payment-evidence.html",
+      "screenshot": "/radio-html/qa/screenshots/gift-payment-evidence.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pass",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/gift-payment-evidence.html",
+      "slug": "gift-payment-evidence"
+    },
+    {
+      "title": "Installer Evidence",
+      "path": "/radio-html/surfaces/installer-evidence.html",
+      "screenshot": "/radio-html/qa/screenshots/installer-evidence.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pass",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/installer-evidence.html",
+      "slug": "installer-evidence"
+    },
+    {
+      "title": "Release Review",
+      "path": "/radio-html/surfaces/release-review.html",
+      "screenshot": "/radio-html/qa/screenshots/release-review.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pass",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/release-review.html",
+      "slug": "release-review"
+    },
+    {
+      "title": "No-Ship Dashboard",
+      "path": "/radio-html/surfaces/no-ship-dashboard.html",
+      "screenshot": "/radio-html/qa/screenshots/no-ship-dashboard.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pass",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/no-ship-dashboard.html",
+      "slug": "no-ship-dashboard"
     },
     {
       "title": "Visual QA",

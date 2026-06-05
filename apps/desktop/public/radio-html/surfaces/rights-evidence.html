@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - Rights Evidence</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav><a href="./index.html">Index</a><a href="./tauri-readiness.html">Tauri</a><a href="./production-freeze.html">Freeze</a><a href="/governance#evidence-lanes">Governance</a></nav>
+      <span>PHKD</span>
+    </aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">Rights Evidence Lane</p>
+          <h1>Audio Rights Stay Blocked</h1>
+          <p>Every release claim requires source, creator, license, rights status, checksum, reviewer, reviewedAt, and audit verification. Unknown values remain NULL.</p>
+          <div class="surface-actions"><a href="../data/rights-evidence.json">Rights JSON</a><a href="../assets/evidence.html">Asset Evidence</a><a href="/api/governance?view=rights-evidence">Rights API</a></div>
+        </div>
+        <div class="status-chip"><span>Release Allowed</span><b id="releaseAllowed">0</b><small>verified rights</small></div>
+      </section>
+      <section class="surface-grid three" id="rightsMetrics"></section>
+      <section class="surface-card"><span class="surface-label">Required Evidence</span><h2>Fail-Closed Fields</h2><div class="chip-row" id="requiredEvidence"></div></section>
+      <section class="surface-card"><span class="surface-label">Unreviewed Rights Records</span><h2>Current Queue</h2><section class="runtime-lane" id="rightsQueue"></section></section>
+    </section>
+  </main>
+  <script>
+    fetch("../data/rights-evidence.json").then((response) => response.json()).then((data) => {
+      document.getElementById("releaseAllowed").textContent = data.counts.releaseAllowed;
+      document.getElementById("rightsMetrics").innerHTML = Object.entries(data.counts).map(([label, value]) => `
+        <article class="surface-card"><span class="surface-label">${label}</span><b>${value}</b></article>
+      `).join("");
+      document.getElementById("requiredEvidence").innerHTML = data.requiredEvidence.map((field) => `<span class="surface-state-pill">${field}</span>`).join("");
+      document.getElementById("rightsQueue").innerHTML = data.records.slice(0, 24).map((record) => `
+        <article class="runtime-row"><span>${record.releaseAllowed ? "ok" : "blocked"}</span><div><b>${record.path}</b><p>${record.blocker}</p></div><small class="surface-state-pill">${record.reviewState}</small></article>
+      `).join("");
+    });
+  </script>
+</body>
+</html>

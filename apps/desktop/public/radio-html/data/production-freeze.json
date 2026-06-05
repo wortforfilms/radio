@@ -44,6 +44,26 @@
       "key": "tauri-readiness",
       "path": "/radio-html/data/tauri-readiness.json",
       "state": "frozen-draft"
+    },
+    {
+      "key": "rights-evidence",
+      "path": "/radio-html/data/rights-evidence.json",
+      "state": "frozen-draft"
+    },
+    {
+      "key": "gift-payment",
+      "path": "/radio-html/data/gift-payment-evidence.json",
+      "state": "blocked-draft"
+    },
+    {
+      "key": "installer-evidence",
+      "path": "/radio-html/data/installer-evidence.json",
+      "state": "blocked-draft"
+    },
+    {
+      "key": "release-review",
+      "path": "/radio-html/data/release-review.json",
+      "state": "blocked-draft"
     }
   ],
   "blockedProductionClaims": [

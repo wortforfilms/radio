@@ -41,59 +41,308 @@
     }
   ],
   "htmlInventory": [
-    { "path": "/radio-html/index.html", "role": "Static HTML archive index", "futureLane": "app/catalog" },
-    { "path": "/radio-html/all-html.html", "role": "All browser HTML links directory", "futureLane": "docs/route-map" },
-    { "path": "/radio-html/assets/index.html", "role": "Asset catalog for generated and existing Radio assets", "futureLane": "assets/index" },
-    { "path": "/radio-html/assets/evidence.html", "role": "Asset evidence board with checksums and PHKD unknown values", "futureLane": "assets/evidence" },
-    { "path": "/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json", "role": "Machine-readable local asset evidence manifest", "futureLane": "assets/evidence" },
-    { "path": "/radio-html/data/radio-media.json", "role": "Station media, cover, palette, shader, and evidence map", "futureLane": "data/media" },
-    { "path": "/radio-html/data/audio-import-manifest.json", "role": "Audio import schema and blocked playback manifest", "futureLane": "data/audio" },
-    { "path": "/radio-html/data/radio-runtime-data.json", "role": "Runtime data layer, events, and storage posture", "futureLane": "data/runtime" },
-    { "path": "/radio-html/data/visual-qa.json", "role": "Visual QA target and screenshot status manifest", "futureLane": "data/qa" },
-    { "path": "/radio-html/data/tauri-readiness.json", "role": "Tauri ship/no-ship readiness manifest", "futureLane": "data/release" },
-    { "path": "/radio-html/data/production-freeze.json", "role": "Draft freeze contract manifest", "futureLane": "data/release" },
-    { "path": "/radio-html/Radio_Vaigyaaniq_Full_App.html", "role": "Standalone full app shell", "futureLane": "app/full-app" },
-    { "path": "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html", "role": "Absorbed UX dashboard prototype", "futureLane": "imports/html-archive" },
-    { "path": "/radio-html/Radio_Vaigyaaniq_App_Prototype.html", "role": "Original mobile/app prototype", "futureLane": "imports/html-archive" },
-    { "path": "/radio-html/Radio_Vaigyaaniq_Maataa.html", "role": "Maataa radio prototype surface", "futureLane": "imports/html-archive" },
-    { "path": "/radio-html/structure/index.html", "role": "Future structure map", "futureLane": "structure" },
-    { "path": "/radio-html/routes/index.html", "role": "Route catalog for app, API, generated, and static routes", "futureLane": "docs/route-map" },
-    { "path": "/radio-html/routes/html-vs-real-route-matrix.html", "role": "HTML artifact vs real route matrix", "futureLane": "docs/route-map" },
-    { "path": "/radio-html/surfaces/index.html", "role": "Standalone surface index", "futureLane": "surfaces/index" },
-    { "path": "/radio-html/surfaces/landing.html", "role": "Landing command surface", "futureLane": "surfaces/landing" },
-    { "path": "/radio-html/surfaces/image-landing.html", "role": "Image-led landing surface", "futureLane": "surfaces/landing" },
-    { "path": "/radio-html/surfaces/runtime.html", "role": "Live runtime surface", "futureLane": "surfaces/runtime" },
-    { "path": "/radio-html/surfaces/runtimes-workflows.html", "role": "Runtime and workflow board", "futureLane": "workflows/overview" },
-    { "path": "/radio-html/surfaces/runtime-data.html", "role": "Runtime data board", "futureLane": "surfaces/runtime" },
-    { "path": "/radio-html/surfaces/audio-import.html", "role": "Audio import lane", "futureLane": "surfaces/audio" },
-    { "path": "/radio-html/surfaces/visual-qa.html", "role": "Visual QA board", "futureLane": "surfaces/qa" },
-    { "path": "/radio-html/surfaces/tauri-readiness.html", "role": "Tauri readiness board", "futureLane": "surfaces/release" },
-    { "path": "/radio-html/surfaces/production-freeze.html", "role": "Production freeze board", "futureLane": "surfaces/release" },
-    { "path": "/radio-html/surfaces/ascii-wireframes.html", "role": "Full application ASCII wireframes", "futureLane": "docs/wireframes" },
-    { "path": "/radio-html/surfaces/visualizer.html", "role": "3D visualizer surface", "futureLane": "surfaces/visualizer" },
-    { "path": "/radio-html/surfaces/lyrics.html", "role": "Synced lyrics scribe surface", "futureLane": "surfaces/lyrics" },
-    { "path": "/radio-html/surfaces/tts.html", "role": "Persona TTS Samaya surface", "futureLane": "surfaces/tts" },
-    { "path": "/radio-html/surfaces/social-gift.html", "role": "Social actions and gift intent surface", "futureLane": "surfaces/social" },
-    { "path": "/radio-html/surfaces/storyboard.html", "role": "Storyboard coverage surface", "futureLane": "docs/storyboards" },
-    { "path": "/radio-html/surfaces/evidence-export.html", "role": "Evidence and export boundary surface", "futureLane": "surfaces/evidence" },
-    { "path": "/radio-html/surfaces/scaffold.html", "role": "Implementation scaffold surface", "futureLane": "docs/release" }
+    {
+      "path": "/radio-html/index.html",
+      "role": "Static HTML archive index",
+      "futureLane": "app/catalog"
+    },
+    {
+      "path": "/radio-html/all-html.html",
+      "role": "All browser HTML links directory",
+      "futureLane": "docs/route-map"
+    },
+    {
+      "path": "/radio-html/assets/index.html",
+      "role": "Asset catalog for generated and existing Radio assets",
+      "futureLane": "assets/index"
+    },
+    {
+      "path": "/radio-html/assets/evidence.html",
+      "role": "Asset evidence board with checksums and PHKD unknown values",
+      "futureLane": "assets/evidence"
+    },
+    {
+      "path": "/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json",
+      "role": "Machine-readable local asset evidence manifest",
+      "futureLane": "assets/evidence"
+    },
+    {
+      "path": "/radio-html/data/radio-media.json",
+      "role": "Station media, cover, palette, shader, and evidence map",
+      "futureLane": "data/media"
+    },
+    {
+      "path": "/radio-html/data/audio-import-manifest.json",
+      "role": "Audio import schema and blocked playback manifest",
+      "futureLane": "data/audio"
+    },
+    {
+      "path": "/radio-html/data/radio-runtime-data.json",
+      "role": "Runtime data layer, events, and storage posture",
+      "futureLane": "data/runtime"
+    },
+    {
+      "path": "/radio-html/data/visual-qa.json",
+      "role": "Visual QA target and screenshot status manifest",
+      "futureLane": "data/qa"
+    },
+    {
+      "path": "/radio-html/data/tauri-readiness.json",
+      "role": "Tauri ship/no-ship readiness manifest",
+      "futureLane": "data/release"
+    },
+    {
+      "path": "/radio-html/data/production-freeze.json",
+      "role": "Draft freeze contract manifest",
+      "futureLane": "data/release"
+    },
+    {
+      "path": "/radio-html/Radio_Vaigyaaniq_Full_App.html",
+      "role": "Standalone full app shell",
+      "futureLane": "app/full-app"
+    },
+    {
+      "path": "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html",
+      "role": "Absorbed UX dashboard prototype",
+      "futureLane": "imports/html-archive"
+    },
+    {
+      "path": "/radio-html/Radio_Vaigyaaniq_App_Prototype.html",
+      "role": "Original mobile/app prototype",
+      "futureLane": "imports/html-archive"
+    },
+    {
+      "path": "/radio-html/Radio_Vaigyaaniq_Maataa.html",
+      "role": "Maataa radio prototype surface",
+      "futureLane": "imports/html-archive"
+    },
+    {
+      "path": "/radio-html/structure/index.html",
+      "role": "Future structure map",
+      "futureLane": "structure"
+    },
+    {
+      "path": "/radio-html/routes/index.html",
+      "role": "Route catalog for app, API, generated, and static routes",
+      "futureLane": "docs/route-map"
+    },
+    {
+      "path": "/radio-html/routes/html-vs-real-route-matrix.html",
+      "role": "HTML artifact vs real route matrix",
+      "futureLane": "docs/route-map"
+    },
+    {
+      "path": "/radio-html/surfaces/index.html",
+      "role": "Standalone surface index",
+      "futureLane": "surfaces/index"
+    },
+    {
+      "path": "/radio-html/surfaces/landing.html",
+      "role": "Landing command surface",
+      "futureLane": "surfaces/landing"
+    },
+    {
+      "path": "/radio-html/surfaces/image-landing.html",
+      "role": "Image-led landing surface",
+      "futureLane": "surfaces/landing"
+    },
+    {
+      "path": "/radio-html/surfaces/runtime.html",
+      "role": "Live runtime surface",
+      "futureLane": "surfaces/runtime"
+    },
+    {
+      "path": "/radio-html/surfaces/runtimes-workflows.html",
+      "role": "Runtime and workflow board",
+      "futureLane": "workflows/overview"
+    },
+    {
+      "path": "/radio-html/surfaces/runtime-data.html",
+      "role": "Runtime data board",
+      "futureLane": "surfaces/runtime"
+    },
+    {
+      "path": "/radio-html/surfaces/audio-import.html",
+      "role": "Audio import lane",
+      "futureLane": "surfaces/audio"
+    },
+    {
+      "path": "/radio-html/surfaces/visual-qa.html",
+      "role": "Visual QA board",
+      "futureLane": "surfaces/qa"
+    },
+    {
+      "path": "/radio-html/surfaces/tauri-readiness.html",
+      "role": "Tauri readiness board",
+      "futureLane": "surfaces/release"
+    },
+    {
+      "path": "/radio-html/surfaces/production-freeze.html",
+      "role": "Production freeze board",
+      "futureLane": "surfaces/release"
+    },
+    {
+      "path": "/radio-html/surfaces/ascii-wireframes.html",
+      "role": "Full application ASCII wireframes",
+      "futureLane": "docs/wireframes"
+    },
+    {
+      "path": "/radio-html/surfaces/visualizer.html",
+      "role": "3D visualizer surface",
+      "futureLane": "surfaces/visualizer"
+    },
+    {
+      "path": "/radio-html/surfaces/lyrics.html",
+      "role": "Synced lyrics scribe surface",
+      "futureLane": "surfaces/lyrics"
+    },
+    {
+      "path": "/radio-html/surfaces/tts.html",
+      "role": "Persona TTS Samaya surface",
+      "futureLane": "surfaces/tts"
+    },
+    {
+      "path": "/radio-html/surfaces/social-gift.html",
+      "role": "Social actions and gift intent surface",
+      "futureLane": "surfaces/social"
+    },
+    {
+      "path": "/radio-html/surfaces/storyboard.html",
+      "role": "Storyboard coverage surface",
+      "futureLane": "docs/storyboards"
+    },
+    {
+      "path": "/radio-html/surfaces/evidence-export.html",
+      "role": "Evidence and export boundary surface",
+      "futureLane": "surfaces/evidence"
+    },
+    {
+      "path": "/radio-html/surfaces/scaffold.html",
+      "role": "Implementation scaffold surface",
+      "futureLane": "docs/release"
+    },
+    {
+      "path": "/radio-html/data/rights-evidence.json",
+      "role": "Rights Evidence manifest",
+      "futureLane": "data/release"
+    },
+    {
+      "path": "/radio-html/data/gift-payment-evidence.json",
+      "role": "Gift Payment Evidence manifest",
+      "futureLane": "data/release"
+    },
+    {
+      "path": "/radio-html/data/installer-evidence.json",
+      "role": "Installer Evidence manifest",
+      "futureLane": "data/release"
+    },
+    {
+      "path": "/radio-html/data/release-review.json",
+      "role": "Release Review manifest",
+      "futureLane": "data/release"
+    },
+    {
+      "path": "/radio-html/surfaces/rights-evidence.html",
+      "role": "Rights Evidence surface",
+      "futureLane": "surfaces/evidence"
+    },
+    {
+      "path": "/radio-html/surfaces/gift-payment-evidence.html",
+      "role": "Gift Payment Evidence surface",
+      "futureLane": "surfaces/evidence"
+    },
+    {
+      "path": "/radio-html/surfaces/installer-evidence.html",
+      "role": "Installer Evidence surface",
+      "futureLane": "surfaces/evidence"
+    },
+    {
+      "path": "/radio-html/surfaces/release-review.html",
+      "role": "Release Review surface",
+      "futureLane": "surfaces/evidence"
+    },
+    {
+      "path": "/radio-html/surfaces/no-ship-dashboard.html",
+      "role": "No-Ship Dashboard surface",
+      "futureLane": "surfaces/release"
+    }
   ],
   "futureRoots": [
-    { "path": "/radio-html/app", "purpose": "Complete app shells and standalone frames", "migration": "future" },
-    { "path": "/radio-html/surfaces", "purpose": "Individual user-facing pages grouped by runtime area", "migration": "existing root, future subfolders" },
-    { "path": "/radio-html/runtimes", "purpose": "Reusable audio, TTS, Three.js, lyrics, social, and intake engines", "migration": "future" },
-    { "path": "/radio-html/workflows", "purpose": "Operator task flows and event sequences", "migration": "future" },
-    { "path": "/radio-html/data", "purpose": "Normalized station, track, lyric, storyboard, evidence, and schema data", "migration": "future" },
-    { "path": "/radio-html/assets/images", "purpose": "Generated and curated image assets", "migration": "future split" },
-    { "path": "/radio-html/assets/covers", "purpose": "Track and station covers", "migration": "future" },
-    { "path": "/radio-html/assets/audio", "purpose": "Audio references with provenance", "migration": "future" },
-    { "path": "/radio-html/assets/shaders", "purpose": "Three.js shader sources", "migration": "future" },
-    { "path": "/radio-html/assets/vendor", "purpose": "Pinned browser vendor libraries", "migration": "existing" },
-    { "path": "/radio-html/imports", "purpose": "Raw incoming HTML, JSON, CSV, Markdown, and HKD documents", "migration": "future" },
-    { "path": "/radio-html/exports", "purpose": "Generated HKD, LRC, JSON, and WebM draft artifacts", "migration": "future" },
-    { "path": "/radio-html/docs", "purpose": "Wireframes, storyboards, QA, release, and evidence notes", "migration": "future" },
-    { "path": "/radio-html/routes", "purpose": "Browser-openable route inventory and route catalog manifest", "migration": "existing root" },
-    { "path": "/radio-html/structure", "purpose": "Architecture maps and manifests", "migration": "existing root" }
+    {
+      "path": "/radio-html/app",
+      "purpose": "Complete app shells and standalone frames",
+      "migration": "future"
+    },
+    {
+      "path": "/radio-html/surfaces",
+      "purpose": "Individual user-facing pages grouped by runtime area",
+      "migration": "existing root, future subfolders"
+    },
+    {
+      "path": "/radio-html/runtimes",
+      "purpose": "Reusable audio, TTS, Three.js, lyrics, social, and intake engines",
+      "migration": "future"
+    },
+    {
+      "path": "/radio-html/workflows",
+      "purpose": "Operator task flows and event sequences",
+      "migration": "future"
+    },
+    {
+      "path": "/radio-html/data",
+      "purpose": "Normalized station, track, lyric, storyboard, evidence, and schema data",
+      "migration": "future"
+    },
+    {
+      "path": "/radio-html/assets/images",
+      "purpose": "Generated and curated image assets",
+      "migration": "future split"
+    },
+    {
+      "path": "/radio-html/assets/covers",
+      "purpose": "Track and station covers",
+      "migration": "future"
+    },
+    {
+      "path": "/radio-html/assets/audio",
+      "purpose": "Audio references with provenance",
+      "migration": "future"
+    },
+    {
+      "path": "/radio-html/assets/shaders",
+      "purpose": "Three.js shader sources",
+      "migration": "future"
+    },
+    {
+      "path": "/radio-html/assets/vendor",
+      "purpose": "Pinned browser vendor libraries",
+      "migration": "existing"
+    },
+    {
+      "path": "/radio-html/imports",
+      "purpose": "Raw incoming HTML, JSON, CSV, Markdown, and HKD documents",
+      "migration": "future"
+    },
+    {
+      "path": "/radio-html/exports",
+      "purpose": "Generated HKD, LRC, JSON, and WebM draft artifacts",
+      "migration": "future"
+    },
+    {
+      "path": "/radio-html/docs",
+      "purpose": "Wireframes, storyboards, QA, release, and evidence notes",
+      "migration": "future"
+    },
+    {
+      "path": "/radio-html/routes",
+      "purpose": "Browser-openable route inventory and route catalog manifest",
+      "migration": "existing root"
+    },
+    {
+      "path": "/radio-html/structure",
+      "purpose": "Architecture maps and manifests",
+      "migration": "existing root"
+    }
   ],
   "migrationPhases": [
     "Keep current files and add structure manifest.",
@@ -108,10 +357,22 @@
   "tauriShipPath": {
     "verificationState": "draft",
     "currentEvidence": [
-      { "path": "/apps/web", "status": "active Next.js app" },
-      { "path": "/apps/web/public/radio-html", "status": "browser-openable Radio archive" },
-      { "path": "/_radio_index/tauri_app/src-tauri", "status": "legacy/reference Tauri scaffold" },
-      { "path": "/apps/desktop", "status": "NULL / not implemented" }
+      {
+        "path": "/apps/web",
+        "status": "active Next.js app"
+      },
+      {
+        "path": "/apps/web/public/radio-html",
+        "status": "browser-openable Radio archive"
+      },
+      {
+        "path": "/_radio_index/tauri_app/src-tauri",
+        "status": "legacy/reference Tauri scaffold"
+      },
+      {
+        "path": "/apps/desktop",
+        "status": "NULL / not implemented"
+      }
     ],
     "targetRoots": [
       "/apps/desktop/package.json",

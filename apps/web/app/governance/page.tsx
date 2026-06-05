@@ -34,11 +34,30 @@ export default function GovernanceEvidenceCenterPage() {
   });
   const tauriReadiness = readJson("radio-html/data/tauri-readiness.json", {
     shipDecision: "NO_SHIP",
-    counts: { draftReady: 0, blocked: 0 }
+    counts: { draftReady: 0, blocked: 0 },
+    noShipDashboard: null as Record<string, boolean | string> | null,
+    evidenceLanes: [] as { key: string; label: string; path: string; status: string }[]
   });
   const productionFreeze = readJson("radio-html/data/production-freeze.json", {
     freezeState: "NULL",
     productionReady: false
+  });
+  const rightsEvidence = readJson("radio-html/data/rights-evidence.json", {
+    counts: { records: 0, releaseAllowed: 0, rightsNull: 0, unreviewed: 0, blocked: 0 },
+    requirements: [] as string[],
+    requiredEvidence: [] as string[]
+  });
+  const giftPaymentEvidence = readJson("radio-html/data/gift-payment-evidence.json", {
+    counts: { giftIntents: 0, checkoutSessions: 0, paymentReceipts: 0, fulfilledGifts: 0, blocked: 0 },
+    requiredEvidence: [] as string[]
+  });
+  const installerEvidence = readJson("radio-html/data/installer-evidence.json", {
+    counts: { artifactSlots: 0, signedArtifacts: 0, nullArtifacts: 0, blocked: 0 },
+    requiredEvidence: [] as string[]
+  });
+  const releaseReview = readJson("radio-html/data/release-review.json", {
+    counts: { reviewItems: 0, unreviewed: 0, verified: 0, rejected: 0, blocked: 0 },
+    reviewerRequirements: [] as string[]
   });
   const allAssertionsPass = Object.values(customerFrontQa.assertions ?? {}).every(Boolean);
   const releaseGates = governanceReleaseGates.map((gate) => {
@@ -55,12 +74,64 @@ export default function GovernanceEvidenceCenterPage() {
     "Asset records": assetEvidence.counts.records,
     "Release allowed": assetEvidence.counts.releaseAllowed,
     "Unreviewed assets": assetEvidence.counts.unreviewed,
+    "Rights blocked": rightsEvidence.counts.blocked,
+    "Gift/payment blocked": giftPaymentEvidence.counts.blocked,
+    "Installer blocked": installerEvidence.counts.blocked,
+    "Release review blocked": releaseReview.counts.blocked,
     "Customer modules": customerFrontQa.counts.modules,
     "Customer failed links": customerFrontQa.counts.failedLinks,
     "Visual QA pass": visualQa.counts.pass,
     "Visual QA blocked": visualQa.counts.blocked,
     "Tauri blocked": tauriReadiness.counts.blocked,
     "Production ready": productionFreeze.productionReady
+  };
+  const evidenceLanes = [
+    {
+      title: "Rights Evidence Lane",
+      href: "/api/governance?view=rights-evidence",
+      evidence: "/radio-html/data/rights-evidence.json",
+      status: rightsEvidence.counts.blocked > 0 ? "blocked" : "draft-ready",
+      body: "Release remains blocked until every asset has license, rightsStatus, reviewer, reviewedAt, and audit evidence.",
+      counts: rightsEvidence.counts,
+      required: rightsEvidence.requiredEvidence ?? rightsEvidence.requirements ?? []
+    },
+    {
+      title: "Gift Payment Evidence Lane",
+      href: "/api/governance?view=gift-payment",
+      evidence: "/radio-html/data/gift-payment-evidence.json",
+      status: giftPaymentEvidence.counts.blocked > 0 ? "blocked" : "draft-ready",
+      body: "Gift, checkout, receipt, and fulfillment stay NULL until a real provider and payment evidence are attached.",
+      counts: giftPaymentEvidence.counts,
+      required: giftPaymentEvidence.requiredEvidence
+    },
+    {
+      title: "Installer Evidence Lane",
+      href: "/api/governance?view=installer-evidence",
+      evidence: "/radio-html/data/installer-evidence.json",
+      status: installerEvidence.counts.blocked > 0 ? "blocked" : "draft-ready",
+      body: "Desktop distribution stays NO_SHIP until signed artifacts and platform verification are present.",
+      counts: installerEvidence.counts,
+      required: installerEvidence.requiredEvidence
+    },
+    {
+      title: "Release Review Workflow",
+      href: "/api/governance?view=release-review",
+      evidence: "/radio-html/data/release-review.json",
+      status: releaseReview.counts.blocked > 0 ? "blocked" : "draft-ready",
+      body: "Human release approval is blocked until reviewer, reviewedAt, citation, reason, and audit records exist.",
+      counts: releaseReview.counts,
+      required: releaseReview.reviewerRequirements
+    }
+  ];
+  const noShipDashboard = tauriReadiness.noShipDashboard ?? {
+    productionReady: false,
+    playableAudio: false,
+    verifiedRights: false,
+    signedInstaller: false,
+    paymentReceipt: false,
+    releaseReview: false,
+    externalTelemetry: false,
+    decision: "NO_SHIP"
   };
 
   return (
@@ -113,6 +184,60 @@ export default function GovernanceEvidenceCenterPage() {
               <strong>{gate.label}</strong>
               <p>{gate.blocker ?? gate.evidence ?? "NULL"}</p>
             </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="governance-section" id="evidence-lanes">
+        <div className="reference-feed-head">
+          <div>
+            <p className="section-kicker">Evidence Lanes</p>
+            <h2>Rights, gifts, installer, and review gates</h2>
+            <p>Each lane is a persistence scope with its own JSON frame and API view. Blocked counts are not hidden.</p>
+          </div>
+          <a href="/api/governance">Governance API</a>
+        </div>
+        <div className="governance-lane-grid">
+          {evidenceLanes.map((lane) => (
+            <article className={lane.status === "blocked" ? "governance-lane-card blocked" : "governance-lane-card"} key={lane.title}>
+              <span>{lane.status}</span>
+              <h3>{lane.title}</h3>
+              <p>{lane.body}</p>
+              <div className="governance-lane-counts">
+                {Object.entries(lane.counts).map(([label, value]) => (
+                  <small key={label}><b>{String(value ?? "NULL")}</b> {label}</small>
+                ))}
+              </div>
+              <small>{lane.required.length ? lane.required.join(" · ") : "Required evidence: NULL"}</small>
+              <div className="governance-lane-actions">
+                <a href={lane.href}>Open API</a>
+                <a href={lane.evidence}>Open JSON</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="governance-section" id="no-ship-dashboard">
+        <div className="reference-feed-head">
+          <div>
+            <p className="section-kicker">No-Ship Dashboard</p>
+            <h2>Fail-closed release posture</h2>
+            <p>Tauri V2 aggregates ship blockers without promoting any unverifiable production claim.</p>
+          </div>
+          <a href="/api/governance?view=no-ship">No-Ship API</a>
+        </div>
+        <div className="no-ship-grid">
+          {Object.entries(noShipDashboard).map(([label, value]) => (
+            <article className={value === true ? "ready" : "blocked"} key={label}>
+              <span>{label}</span>
+              <b>{String(value)}</b>
+            </article>
+          ))}
+        </div>
+        <div className="governance-link-grid">
+          {(tauriReadiness.evidenceLanes ?? []).map((lane) => (
+            <a href={lane.path} key={lane.key}>{lane.label} · {lane.status}</a>
           ))}
         </div>
       </section>
@@ -200,6 +325,10 @@ export default function GovernanceEvidenceCenterPage() {
           <a href="/radio-html/data/visual-qa.json">Visual QA JSON</a>
           <a href="/radio-html/data/tauri-readiness.json">Tauri Readiness JSON</a>
           <a href="/radio-html/data/production-freeze.json">Production Freeze JSON</a>
+          <a href="/radio-html/data/rights-evidence.json">Rights Evidence JSON</a>
+          <a href="/radio-html/data/gift-payment-evidence.json">Gift Payment Evidence JSON</a>
+          <a href="/radio-html/data/installer-evidence.json">Installer Evidence JSON</a>
+          <a href="/radio-html/data/release-review.json">Release Review JSON</a>
         </div>
       </section>
     </main>

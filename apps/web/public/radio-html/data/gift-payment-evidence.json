@@ -1,0 +1,60 @@
+{
+  "id": "radio-vaigyaaniq-gift-payment-evidence",
+  "title": "Radio Vaigyaaniq Gift Payment Evidence Lane",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "notes": [
+      "Data frames describe local runtime behavior only.",
+      "No audio, rights, payment, production readiness, or external telemetry claim is introduced.",
+      "Evidence upgrades require source, creator, artifact checksum, rights, reviewer, and reviewedAt."
+    ]
+  },
+  "counts": {
+    "giftIntents": 0,
+    "checkoutSessions": 0,
+    "paymentReceipts": 0,
+    "fulfilledGifts": 0,
+    "blocked": 4
+  },
+  "states": [
+    {
+      "key": "gift-intent",
+      "label": "Gift intent",
+      "status": "draft",
+      "evidence": "local UI intent only"
+    },
+    {
+      "key": "checkout-session",
+      "label": "Checkout session",
+      "status": "blocked",
+      "evidence": null
+    },
+    {
+      "key": "payment-receipt",
+      "label": "Payment receipt",
+      "status": "blocked",
+      "evidence": null
+    },
+    {
+      "key": "delivery-proof",
+      "label": "Delivery proof",
+      "status": "blocked",
+      "evidence": null
+    }
+  ],
+  "requiredEvidence": [
+    "payerId",
+    "recipientId",
+    "checkoutProvider",
+    "checkoutSessionId",
+    "paymentReceiptId",
+    "amount",
+    "currency",
+    "deliveredAt",
+    "AuditLog.created"
+  ],
+  "note": "Gift button remains local intent only. No payment, checkout, receipt, wallet, or delivery claim is made."
+}
