@@ -52,6 +52,35 @@ export async function GET(request: NextRequest) {
     counts: { reviewItems: 0, unreviewed: 0, verified: 0, rejected: 0, blocked: 0 },
     workflow: []
   });
+  const milestoneCompletion = readJson("radio-html/data/milestone-completion.json", {
+    counts: { milestones: 0, implementedDraft: 0, evidenceBlocked: 0, productionReady: 0 },
+    milestones: []
+  });
+  const rightsWorkbench = readJson("radio-html/data/rights-review-workbench.json", {
+    counts: { assets: 0, queued: 0, missingLicense: 0, releaseAllowed: 0, blocked: 0 },
+    reviewQueue: []
+  });
+  const playbackGate = readJson("radio-html/data/playback-gate.json", {
+    counts: { imports: 0, playable: 0, blocked: 0, nullEvidence: 0 },
+    records: []
+  });
+  const paymentProofLane = readJson("radio-html/data/payment-proof-lane.json", {
+    counts: { giftIntents: 0, checkoutSessions: 0, paymentReceipts: 0, fulfilledGifts: 0, webhookEvents: 0, blocked: 0 },
+    records: []
+  });
+  const installerPipeline = readJson("radio-html/data/installer-pipeline.json", {
+    counts: { platformTargets: 0, artifactSlots: 0, signedArtifacts: 0, nullArtifacts: 0, blocked: 0 },
+    commands: [],
+    records: []
+  });
+  const releaseOrchestration = readJson("radio-html/data/release-orchestration.json", {
+    counts: { configuredCommands: 0, optionalBrowserChecks: 0, lastRunFailures: 0, productionReady: 0, blockedEvidenceLanes: 0 },
+    steps: []
+  });
+  const desktopAlphaBundle = readJson("radio-html/data/desktop-alpha-bundle.json", {
+    counts: { includedSurfaces: 0, includedDataFrames: 0, signedInstallers: 0, productionReady: 0, blockers: 0 },
+    records: []
+  });
   const visualQa = readJson("radio-html/data/visual-qa.json", {
     counts: { targets: 0, pass: 0, blocked: 0 }
   });
@@ -100,6 +129,12 @@ export async function GET(request: NextRequest) {
       giftPaymentBlocked: giftPaymentEvidence.counts.blocked,
       installerBlocked: installerEvidence.counts.blocked,
       releaseReviewBlocked: releaseReview.counts.blocked,
+      milestonesImplemented: milestoneCompletion.counts.implementedDraft,
+      milestoneEvidenceBlocked: milestoneCompletion.counts.evidenceBlocked,
+      playbackPlayable: playbackGate.counts.playable,
+      playbackBlocked: playbackGate.counts.blocked,
+      paymentReceipts: paymentProofLane.counts.paymentReceipts,
+      installerPipelineBlocked: installerPipeline.counts.blocked,
       customerFrontFailedLinks: customerFrontQa.counts.failedLinks,
       visualQaPass: visualQa.counts.pass,
       visualQaBlocked: visualQa.counts.blocked,
@@ -111,7 +146,14 @@ export async function GET(request: NextRequest) {
       rightsEvidence,
       giftPaymentEvidence,
       installerEvidence,
-      releaseReview
+      releaseReview,
+      milestoneCompletion,
+      rightsWorkbench,
+      playbackGate,
+      paymentProofLane,
+      installerPipeline,
+      releaseOrchestration,
+      desktopAlphaBundle
     },
     noShipDashboard: tauriReadiness.noShipDashboard ?? {
       productionReady: false,
@@ -132,10 +174,24 @@ export async function GET(request: NextRequest) {
       rightsEvidence: "/radio-html/data/rights-evidence.json",
       giftPaymentEvidence: "/radio-html/data/gift-payment-evidence.json",
       installerEvidence: "/radio-html/data/installer-evidence.json",
-      releaseReview: "/radio-html/data/release-review.json"
+      releaseReview: "/radio-html/data/release-review.json",
+      milestoneCompletion: "/radio-html/data/milestone-completion.json",
+      rightsWorkbench: "/radio-html/data/rights-review-workbench.json",
+      playbackGate: "/radio-html/data/playback-gate.json",
+      paymentProofLane: "/radio-html/data/payment-proof-lane.json",
+      installerPipeline: "/radio-html/data/installer-pipeline.json",
+      releaseOrchestration: "/radio-html/data/release-orchestration.json",
+      desktopAlphaBundle: "/radio-html/data/desktop-alpha-bundle.json"
     }
   };
 
+  if (view === "milestones") return Response.json({ phkd: governancePhkd, milestoneCompletion });
+  if (view === "rights-workbench") return Response.json({ phkd: governancePhkd, rightsWorkbench });
+  if (view === "playback-gate") return Response.json({ phkd: governancePhkd, playbackGate });
+  if (view === "payment-proof") return Response.json({ phkd: governancePhkd, paymentProofLane });
+  if (view === "installer-pipeline") return Response.json({ phkd: governancePhkd, installerPipeline });
+  if (view === "release-orchestration") return Response.json({ phkd: governancePhkd, releaseOrchestration });
+  if (view === "desktop-alpha") return Response.json({ phkd: governancePhkd, desktopAlphaBundle });
   if (view === "rights-evidence") return Response.json({ phkd: governancePhkd, rightsEvidence });
   if (view === "gift-payment") return Response.json({ phkd: governancePhkd, giftPaymentEvidence });
   if (view === "installer-evidence") return Response.json({ phkd: governancePhkd, installerEvidence });
@@ -152,6 +208,10 @@ export async function GET(request: NextRequest) {
         giftPaymentBlocked: giftPaymentEvidence.counts.blocked,
         installerBlocked: installerEvidence.counts.blocked,
         releaseReviewBlocked: releaseReview.counts.blocked,
+        milestoneEvidenceBlocked: milestoneCompletion.counts.evidenceBlocked,
+        playbackBlocked: playbackGate.counts.blocked,
+        paymentProofBlocked: paymentProofLane.counts.blocked,
+        installerPipelineBlocked: installerPipeline.counts.blocked,
         failedLinks: customerFrontQa.counts.failedLinks,
         blockedVisualQa: visualQa.counts.blocked
       },

@@ -1,0 +1,36 @@
+{
+  "id": "radio-vaigyaaniq-playback-gate",
+  "title": "Radio Vaigyaaniq Playable Audio Import Gate",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "Milestone records describe local implementation and evidence gates only. They do not verify rights, payment settlement, installer signing, release approval, external telemetry, or production readiness."
+  },
+  "counts": {
+    "imports": 0,
+    "playable": 0,
+    "blocked": 1,
+    "nullEvidence": 1,
+    "stationSlots": 4
+  },
+  "gateRules": [
+    "audio source must exist",
+    "sha256 checksum must exist",
+    "rightsStatus must be verified",
+    "releaseAllowed must be true",
+    "AuditLog.verified must exist"
+  ],
+  "records": [
+    {
+      "key": "audio-placeholder",
+      "label": "No verified imported audio",
+      "canPlay": false,
+      "status": "blocked",
+      "blocker": "audio import manifest has no verified records"
+    }
+  ]
+}

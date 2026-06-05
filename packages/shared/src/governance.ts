@@ -81,6 +81,62 @@ export const governanceViews: GovernanceView[] = [
     route: "/governance#policy-matrix",
     api: "/api/governance?view=policy-matrix",
     status: "implemented-draft"
+  },
+  {
+    key: "milestone-completion",
+    title: "Milestone Completion",
+    purpose: "Track remaining release milestones as draft gates with blocked external proof.",
+    route: "/governance#milestone-completion",
+    api: "/api/radio-release",
+    status: "implemented-draft"
+  },
+  {
+    key: "rights-workbench",
+    title: "Rights Workbench",
+    purpose: "Queue asset rights review without marking unreviewed assets releaseAllowed.",
+    route: "/radio-html/surfaces/rights-review.html",
+    api: "/api/radio-release?view=rights-workbench",
+    status: "implemented-draft"
+  },
+  {
+    key: "playback-gate",
+    title: "Playback Gate",
+    purpose: "Block audio playback until import records and rights evidence are verifiable.",
+    route: "/radio-html/surfaces/playback-gate.html",
+    api: "/api/radio-release?view=playback-gate",
+    status: "implemented-draft"
+  },
+  {
+    key: "payment-proof",
+    title: "Payment Proof",
+    purpose: "Keep gifts and payments blocked until receipts and provider evidence exist.",
+    route: "/radio-html/surfaces/payment-proof.html",
+    api: "/api/radio-release?view=payment-proof",
+    status: "implemented-draft"
+  },
+  {
+    key: "installer-pipeline",
+    title: "Installer Pipeline",
+    purpose: "List desktop package lanes while signed installers remain NULL.",
+    route: "/radio-html/surfaces/installer-pipeline.html",
+    api: "/api/radio-release?view=installer-pipeline",
+    status: "implemented-draft"
+  },
+  {
+    key: "release-orchestration",
+    title: "Release Orchestration",
+    purpose: "Expose the evidence-first release check command and blocked production posture.",
+    route: "/radio-html/surfaces/release-orchestration.html",
+    api: "/api/radio-release?view=release-orchestration",
+    status: "implemented-draft"
+  },
+  {
+    key: "desktop-alpha",
+    title: "Desktop Alpha",
+    purpose: "Inventory the draft desktop alpha bundle without signing or production claims.",
+    route: "/radio-html/surfaces/desktop-alpha.html",
+    api: "/api/radio-release?view=desktop-alpha",
+    status: "implemented-draft"
   }
 ];
 
@@ -277,6 +333,66 @@ export const governanceDraftThumbnails: GovernanceDraftThumbnail[] = [
     image: "/radio-html/qa/screenshots/audio-import.png",
     href: "/radio-html/surfaces/audio-import.html",
     evidence: "/radio-html/data/audio-import-manifest.json",
+    status: "blocked",
+    verificationState: "draft"
+  },
+  {
+    key: "rights-review",
+    title: "Rights Review",
+    summary: "Draft rights workbench for queued asset review. Release claims remain blocked.",
+    image: "/radio-html/qa/screenshots/rights-review.png",
+    href: "/radio-html/surfaces/rights-review.html",
+    evidence: "/radio-html/data/rights-review-workbench.json",
+    status: "blocked",
+    verificationState: "draft"
+  },
+  {
+    key: "playback-gate",
+    title: "Playback Gate",
+    summary: "Draft playback proof gate. Playable audio remains zero until import evidence exists.",
+    image: "/radio-html/qa/screenshots/playback-gate.png",
+    href: "/radio-html/surfaces/playback-gate.html",
+    evidence: "/radio-html/data/playback-gate.json",
+    status: "blocked",
+    verificationState: "draft"
+  },
+  {
+    key: "payment-proof",
+    title: "Payment Proof",
+    summary: "Draft payment proof lane. Receipts and webhooks remain NULL.",
+    image: "/radio-html/qa/screenshots/payment-proof.png",
+    href: "/radio-html/surfaces/payment-proof.html",
+    evidence: "/radio-html/data/payment-proof-lane.json",
+    status: "blocked",
+    verificationState: "draft"
+  },
+  {
+    key: "installer-pipeline",
+    title: "Installer Pipeline",
+    summary: "Draft installer pipeline. Signed artifacts remain NULL.",
+    image: "/radio-html/qa/screenshots/installer-pipeline.png",
+    href: "/radio-html/surfaces/installer-pipeline.html",
+    evidence: "/radio-html/data/installer-pipeline.json",
+    status: "blocked",
+    verificationState: "draft"
+  },
+  {
+    key: "release-orchestration",
+    title: "Release Orchestration",
+    summary: "Draft orchestration lane for release checks with productionReady false.",
+    image: "/radio-html/qa/screenshots/release-orchestration.png",
+    href: "/radio-html/surfaces/release-orchestration.html",
+    evidence: "/radio-html/data/release-orchestration.json",
+    status: "blocked",
+    verificationState: "draft"
+  },
+  {
+    key: "desktop-alpha",
+    title: "Desktop Alpha",
+    summary: "Draft desktop bundle inventory. Signing and shipment remain blocked.",
+    image: "/radio-html/qa/screenshots/desktop-alpha.png",
+    href: "/radio-html/surfaces/desktop-alpha.html",
+    evidence: "/radio-html/data/desktop-alpha-bundle.json",
     status: "blocked",
     verificationState: "draft"
   }

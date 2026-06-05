@@ -250,6 +250,12 @@
             ["Installer Evidence", "/radio-html/surfaces/installer-evidence.html", "served-static", "/apps/desktop/public/radio-html/surfaces/installer-evidence.html", "apps/web/public/radio-html/data/installer-evidence.json", "implemented-draft"],
             ["Release Review", "/radio-html/surfaces/release-review.html", "served-static", "/apps/desktop/public/radio-html/surfaces/release-review.html", "apps/web/public/radio-html/data/release-review.json", "implemented-draft"],
             ["No-Ship Dashboard", "/radio-html/surfaces/no-ship-dashboard.html", "served-static", "/apps/desktop/public/radio-html/surfaces/no-ship-dashboard.html", "apps/web/public/radio-html/data/tauri-readiness.json", "implemented-draft"],
+            ["Rights Review Workbench", "/radio-html/surfaces/rights-review.html", "served-static", "/apps/desktop/public/radio-html/surfaces/rights-review.html", "apps/web/public/radio-html/data/rights-review-workbench.json", "implemented-draft"],
+            ["Playback Gate", "/radio-html/surfaces/playback-gate.html", "served-static", "/apps/desktop/public/radio-html/surfaces/playback-gate.html", "apps/web/public/radio-html/data/playback-gate.json", "implemented-draft"],
+            ["Payment Proof", "/radio-html/surfaces/payment-proof.html", "served-static", "/apps/desktop/public/radio-html/surfaces/payment-proof.html", "apps/web/public/radio-html/data/payment-proof-lane.json", "implemented-draft"],
+            ["Installer Pipeline", "/radio-html/surfaces/installer-pipeline.html", "served-static", "/apps/desktop/public/radio-html/surfaces/installer-pipeline.html", "apps/web/public/radio-html/data/installer-pipeline.json", "implemented-draft"],
+            ["Release Orchestration", "/radio-html/surfaces/release-orchestration.html", "served-static", "/apps/desktop/public/radio-html/surfaces/release-orchestration.html", "apps/web/public/radio-html/data/release-orchestration.json", "implemented-draft"],
+            ["Desktop Alpha", "/radio-html/surfaces/desktop-alpha.html", "served-static", "/apps/desktop/public/radio-html/surfaces/desktop-alpha.html", "apps/web/public/radio-html/data/desktop-alpha-bundle.json", "implemented-draft"],
             ["Visual QA", "/radio-html/surfaces/visual-qa.html", "served-static", "/apps/desktop/public/radio-html/surfaces/visual-qa.html", "apps/web/public/radio-html/data/visual-qa.json", "implemented-draft"],
             ["Tauri Readiness", "/radio-html/surfaces/tauri-readiness.html", "served-static", "/apps/desktop/public/radio-html/surfaces/tauri-readiness.html", "apps/web/public/radio-html/data/tauri-readiness.json", "implemented-draft"],
             ["Production Freeze", "/radio-html/surfaces/production-freeze.html", "served-static", "/apps/desktop/public/radio-html/surfaces/production-freeze.html", "apps/web/public/radio-html/data/production-freeze.json", "implemented-draft"],
@@ -282,6 +288,13 @@
             ["Gift Payment Evidence Data", "/radio-html/data/gift-payment-evidence.json", "served-static-json", "/apps/desktop/public/radio-html/data/gift-payment-evidence.json", "apps/web/public/radio-html/data/gift-payment-evidence.json", "implemented-draft"],
             ["Installer Evidence Data", "/radio-html/data/installer-evidence.json", "served-static-json", "/apps/desktop/public/radio-html/data/installer-evidence.json", "apps/web/public/radio-html/data/installer-evidence.json", "implemented-draft"],
             ["Release Review Data", "/radio-html/data/release-review.json", "served-static-json", "/apps/desktop/public/radio-html/data/release-review.json", "apps/web/public/radio-html/data/release-review.json", "implemented-draft"],
+            ["Rights Review Workbench Data", "/radio-html/data/rights-review-workbench.json", "served-static-json", "/apps/desktop/public/radio-html/data/rights-review-workbench.json", "apps/web/public/radio-html/data/rights-review-workbench.json", "implemented-draft"],
+            ["Playback Gate Data", "/radio-html/data/playback-gate.json", "served-static-json", "/apps/desktop/public/radio-html/data/playback-gate.json", "apps/web/public/radio-html/data/playback-gate.json", "implemented-draft"],
+            ["Payment Proof Data", "/radio-html/data/payment-proof-lane.json", "served-static-json", "/apps/desktop/public/radio-html/data/payment-proof-lane.json", "apps/web/public/radio-html/data/payment-proof-lane.json", "implemented-draft"],
+            ["Installer Pipeline Data", "/radio-html/data/installer-pipeline.json", "served-static-json", "/apps/desktop/public/radio-html/data/installer-pipeline.json", "apps/web/public/radio-html/data/installer-pipeline.json", "implemented-draft"],
+            ["Release Orchestration Data", "/radio-html/data/release-orchestration.json", "served-static-json", "/apps/desktop/public/radio-html/data/release-orchestration.json", "apps/web/public/radio-html/data/release-orchestration.json", "implemented-draft"],
+            ["Desktop Alpha Bundle Data", "/radio-html/data/desktop-alpha-bundle.json", "served-static-json", "/apps/desktop/public/radio-html/data/desktop-alpha-bundle.json", "apps/web/public/radio-html/data/desktop-alpha-bundle.json", "implemented-draft"],
+            ["Milestone Completion Data", "/radio-html/data/milestone-completion.json", "served-static-json", "/apps/desktop/public/radio-html/data/milestone-completion.json", "apps/web/public/radio-html/data/milestone-completion.json", "implemented-draft"],
             ["Full App Scaffold Manifest", "/radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json", "served-static-json", "/apps/desktop/public/radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json", "apps/web/public/radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json", "implemented-draft"],
             ["Tauri Shipping Prompt", "/radio-html/Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md", "served-static-md", "/apps/desktop/public/radio-html/Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md", "apps/web/public/radio-html/Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md", "implemented-draft"]
           ]
@@ -294,7 +307,8 @@
             ["Ayodhya AI", "NULL", "/ayodhya", "NULL", "apps/web/app/ayodhya/page.tsx", "route-only"],
             ["Lipi Explorer", "NULL", "/lipi", "NULL", "apps/web/app/lipi/page.tsx", "route-only"],
             ["Universal Dictionary", "NULL", "/dictionary", "NULL", "apps/web/app/dictionary/page.tsx", "route-only"],
-            ["Radio Export API", "NULL", "/api/export", "NULL", "apps/web/app/api/export/route.ts", "api-route"]
+            ["Radio Export API", "NULL", "/api/export", "NULL", "apps/web/app/api/export/route.ts", "api-route"],
+            ["Radio Release API", "NULL", "/api/radio-release", "NULL", "apps/web/app/api/radio-release/route.ts", "api-route"]
           ]
         },
         {

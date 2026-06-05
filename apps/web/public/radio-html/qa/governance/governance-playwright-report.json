@@ -1,6 +1,6 @@
 {
   "id": "governance-playwright-evidence",
-  "generatedAt": "2026-06-05T03:35:57.292Z",
+  "generatedAt": "2026-06-05T10:50:31.359Z",
   "target": "http://127.0.0.1:3000/governance",
   "verificationState": "draft-playwright-evidence",
   "phkd": {
@@ -20,6 +20,7 @@
       "release-gates",
       "evidence-lanes",
       "no-ship-dashboard",
+      "milestone-completion",
       "policy-matrix",
       "verification-queue",
       "draft-thumbnails",
@@ -40,6 +41,15 @@
       "Installer Evidence Lane",
       "Release Review Workflow"
     ],
+    "milestoneTitles": [
+      "Rights Evidence Closure",
+      "Playable Audio Import Gate",
+      "Gift Payment Proof Lane",
+      "Tauri Installer Pipeline",
+      "Release Review Board",
+      "One-Command Evidence Orchestration",
+      "Desktop Alpha Bundle"
+    ],
     "noShipLabels": [
       "productionReady",
       "playableAudio",
@@ -50,7 +60,7 @@
       "externalTelemetry",
       "decision"
     ],
-    "imageCount": 10,
+    "imageCount": 16,
     "brokenImages": [],
     "linkHrefs": [
       "/dashboard",
@@ -75,6 +85,13 @@
       "/api/governance?view=verification-queue",
       "/api/audit/merged",
       "/api/governance?view=policy-matrix",
+      "/api/radio-release",
+      "/api/radio-release?view=rights-workbench",
+      "/api/radio-release?view=playback-gate",
+      "/api/radio-release?view=payment-proof",
+      "/api/radio-release?view=installer-pipeline",
+      "/api/radio-release?view=release-orchestration",
+      "/api/radio-release?view=desktop-alpha",
       "/radio-html/surfaces/tauri-readiness.html",
       "/api/governance",
       "/api/governance?view=rights-evidence",
@@ -91,6 +108,27 @@
       "/radio-html/data/installer-evidence.json",
       "/radio-html/data/release-review.json",
       "/governance",
+      "/radio-html/data/rights-review-workbench.json",
+      "/radio-html/data/playback-gate.json",
+      "/radio-html/data/payment-proof-lane.json",
+      "/radio-html/data/installer-pipeline.json",
+      "/radio-html/data/release-orchestration.json",
+      "/radio-html/data/desktop-alpha-bundle.json",
+      "/api/radio-release",
+      "/radio-html/data/rights-review-workbench.json",
+      "/api/radio-release?view=rights-workbench",
+      "/radio-html/data/playback-gate.json",
+      "/api/radio-release?view=playback-gate",
+      "/radio-html/data/payment-proof-lane.json",
+      "/api/radio-release?view=payment-proof",
+      "/radio-html/data/installer-pipeline.json",
+      "/api/radio-release?view=installer-pipeline",
+      "/radio-html/data/release-review.json",
+      "/api/radio-release?view=release-review",
+      "/radio-html/data/release-orchestration.json",
+      "/api/radio-release?view=release-orchestration",
+      "/radio-html/data/desktop-alpha-bundle.json",
+      "/api/radio-release?view=desktop-alpha",
       "/api/governance?view=policy-matrix",
       "/api/governance?view=verification-queue",
       "/api/governance",
@@ -112,6 +150,18 @@
       "/radio-html/data/production-freeze.json",
       "/radio-html/surfaces/audio-import.html",
       "/radio-html/data/audio-import-manifest.json",
+      "/radio-html/surfaces/rights-review.html",
+      "/radio-html/data/rights-review-workbench.json",
+      "/radio-html/surfaces/playback-gate.html",
+      "/radio-html/data/playback-gate.json",
+      "/radio-html/surfaces/payment-proof.html",
+      "/radio-html/data/payment-proof-lane.json",
+      "/radio-html/surfaces/installer-pipeline.html",
+      "/radio-html/data/installer-pipeline.json",
+      "/radio-html/surfaces/release-orchestration.html",
+      "/radio-html/data/release-orchestration.json",
+      "/radio-html/surfaces/desktop-alpha.html",
+      "/radio-html/data/desktop-alpha-bundle.json",
       "/radio-html/qa/customer-front/radio-customer-front-playwright-report.json",
       "/radio-html/qa/customer-front/radio-customer-desktop.png",
       "/radio-html/qa/customer-front/radio-customer-mobile.png",
@@ -122,9 +172,16 @@
       "/radio-html/data/rights-evidence.json",
       "/radio-html/data/gift-payment-evidence.json",
       "/radio-html/data/installer-evidence.json",
-      "/radio-html/data/release-review.json"
+      "/radio-html/data/release-review.json",
+      "/radio-html/data/milestone-completion.json",
+      "/radio-html/data/rights-review-workbench.json",
+      "/radio-html/data/playback-gate.json",
+      "/radio-html/data/payment-proof-lane.json",
+      "/radio-html/data/installer-pipeline.json",
+      "/radio-html/data/release-orchestration.json",
+      "/radio-html/data/desktop-alpha-bundle.json"
     ],
-    "text": "Dashboard\nUniverses\nLineage\nDictionary\nLipi\nRadio\nRadio Runtime\nRadio Frame\nGovernance\nAyodhya AI\nHKD3D\nSprints\nWireframes\nScopes\nAdmin\n\nGOVERNANCE UNIVERSE\n\nEvidence Center\n\nAudit, verification, merge, policy, release, and Tauri gates in one fail-closed surface. Unknown values stay NULL; blocked ship claims remain blocked.\n\nGovernance API\nAudit API\nUniverse Page\nSHIP DECISION\nNO_SHIP\nproductionReady: false\nIMPLEMENTED-DRAFT\nAudit Log\n\nReview created, updated, deleted, merged, cited, and verified actions.\n\nOpen API\nIMPLEMENTED-DRAFT\nVerification Queue\n\nSurface unreviewed records and block verification without citation, reviewer, and reviewedAt evidence.\n\nOpen API\nIMPLEMENTED-DRAFT\nMerge Ledger\n\nTrack merge decisions and require an explicit reason plus audit record.\n\nOpen API\nIMPLEMENTED-DRAFT\nPolicy Matrix\n\nExpose PHKD gates and show blocked production claims before release.\n\nOpen API\n\nRELEASE GATE DASHBOARD\n\ndraft-freeze · productionReady false\nTauri Readiness\nDRAFT-READY\nCustomer front Playwright evidence\n\n/radio-html/qa/customer-front/radio-customer-front-playwright-report.json\n\nDRAFT-READY\nVisual QA board\n\n/radio-html/data/visual-qa.json\n\nDRAFT-READY\nAsset checksum evidence\n\n/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json\n\nBLOCKED\nPlayable audio rights\n\nrights evidence NULL\n\nBLOCKED\nGift and payment receipt\n\ncheckout/payment evidence NULL\n\nBLOCKED\nSigned Tauri installer\n\nsigned installer evidence NULL\n\nBLOCKED\nHuman release review\n\nreviewer and reviewedAt NULL\n\nEVIDENCE LANES\n\nRights, gifts, installer, and review gates\n\nEach lane is a persistence scope with its own JSON frame and API view. Blocked counts are not hidden.\n\nGovernance API\nblocked\nRights Evidence Lane\n\nRelease remains blocked until every asset has license, rightsStatus, reviewer, reviewedAt, and audit evidence.\n\n19\nrecords\n0\nreleaseAllowed\n5\nrightsNull\n19\nunreviewed\n0\nverifiedRights\n19\nblocked\nsource · creator · license · rightsStatus · checksum · reviewer · reviewedAt · AuditLog.verified\nOpen API\nOpen JSON\nblocked\nGift Payment Evidence Lane\n\nGift, checkout, receipt, and fulfillment stay NULL until a real provider and payment evidence are attached.\n\n0\ngiftIntents\n0\ncheckoutSessions\n0\npaymentReceipts\n0\nfulfilledGifts\n4\nblocked\npayerId · recipientId · checkoutProvider · checkoutSessionId · paymentReceiptId · amount · currency · deliveredAt · AuditLog.created\nOpen API\nOpen JSON\nblocked\nInstaller Evidence Lane\n\nDesktop distribution stays NO_SHIP until signed artifacts and platform verification are present.\n\n6\nartifactSlots\n0\nsignedArtifacts\n0\nunsignedArtifacts\n6\nnullArtifacts\n6\nblocked\nartifactPath · sha256 · buildCommand · signingIdentity · signatureVerification · notarizationTicket when platform requires it · AuditLog.verified\nOpen API\nOpen JSON\nblocked\nRelease Review Workflow\n\nHuman release approval is blocked until reviewer, reviewedAt, citation, reason, and audit records exist.\n\n23\nreviewItems\n19\nunreviewed\n0\nverified\n0\nrejected\n4\nblocked\nreviewer · reviewedAt · citation · reason · AuditLog.verified\nOpen API\nOpen JSON\n\nNO-SHIP DASHBOARD\n\nFail-closed release posture\n\nTauri V2 aggregates ship blockers without promoting any unverifiable production claim.\n\nNo-Ship API\nproductionReady\nfalse\nplayableAudio\nfalse\nverifiedRights\nfalse\nsignedInstaller\nfalse\npaymentReceipt\nfalse\nreleaseReview\nfalse\nexternalTelemetry\nfalse\ndecision\nNO_SHIP\nRights Evidence Lane · blocked\nGift Payment Evidence Lane · blocked\nInstaller Evidence Lane · blocked\nRelease Review Workflow · blocked\nGovernance Evidence Center · draft-ready\n\nPOLICY MATRIX\n\nPHKD enforcement gates\nPolicy API\nBLOCKLineage Claim Citation Required\n\nteacher_of, student_of, influenced, inspired, authored, translated, belongs_to, discovered, continued, preserved, collaborated_with, and founded claims fail closed without citation.\n\ncitation · sourceCitation · verificationStatus\nBLOCKVerification Review Required\n\nVerified actions require citation, reviewer, reviewedAt, and an audit record.\n\ncitation · reviewer · reviewedAt · AuditLog\nBLOCKMerge Reason Required\n\nMerge decisions require before, after, reason, and an AuditLog entry.\n\nbefore · after · reason · AuditLog\nBLOCKAsset Release Rights Required\n\nAssets cannot be releaseAllowed until license, rightsStatus, reviewer, and reviewedAt are supplied.\n\nlicense · rightsStatus · reviewer · reviewedAt\nBLOCKTauri No-Ship Until Signed\n\nTauri shipment remains NO_SHIP until installer signing, rights, payment, and release review evidence exist.\n\nsignedInstaller · audioRights · paymentReceipt · releaseReview\n\nVERIFICATION QUEUE\n\nReviewer coverage and blocked claims\nQueue API\nASSET RECORDS\n19\nRELEASE ALLOWED\n0\nUNREVIEWED ASSETS\n19\nRIGHTS BLOCKED\n19\nGIFT/PAYMENT BLOCKED\n4\nINSTALLER BLOCKED\n6\nRELEASE REVIEW BLOCKED\n4\nCUSTOMER MODULES\n13\nCUSTOMER FAILED LINKS\n0\nVISUAL QA PASS\n14\nVISUAL QA BLOCKED\n0\nTAURI BLOCKED\n4\nPRODUCTION READY\nfalse\n\nDRAFT THUMBNAILS\n\nEvidence previews for draft and blocked surfaces\n\nThese thumbnails are visual pointers to draft evidence only. They do not make production, rights, payment, installer, or release claims.\n\nThumbnail API\ndraft-ready\nCustomer Front Desktop\n\nDesktop Playwright capture for the customer-facing Radio front.\n\nDRAFT-PLAYWRIGHT-EVIDENCE\nEvidence\ndraft-ready\nCustomer Front Mobile\n\nMobile Playwright capture used for overflow and broken-image checks.\n\nDRAFT-PLAYWRIGHT-EVIDENCE\nEvidence\ndraft-ready\nGovernance Evidence Center\n\nDesktop Playwright capture for governance lanes, no-ship state, and release gates.\n\nDRAFT-PLAYWRIGHT-EVIDENCE\nEvidence\ndraft\nRuntime Surface\n\nDraft runtime surface screenshot from the visual QA board.\n\nDRAFT\nEvidence\ndraft\nAsset Evidence\n\nDraft asset evidence table with checksums, review state, and release gates.\n\nDRAFT\nEvidence\ndraft\nVisual QA Board\n\nDraft QA surface listing screenshot capture status for all Radio HTML surfaces.\n\nDRAFT\nEvidence\nblocked\nTauri Readiness\n\nDraft desktop ship-gate surface. Decision remains NO_SHIP.\n\nDRAFT\nEvidence\nblocked\nProduction Freeze\n\nDraft freeze surface preserving blocked production claims.\n\nDRAFT\nEvidence\nblocked\nAudio Import\n\nDraft audio-import lane. Playable audio remains blocked until rights evidence exists.\n\nDRAFT\nEvidence\n\nEVIDENCE LINKS\n\nDraft evidence trail\n\nGovernance records describe local runtime evidence only. They do not verify rights, payments, installer signing, external telemetry, lineage claims, or production readiness.\n\nCustomer Playwright Report\nDesktop Screenshot\nMobile Screenshot\nAsset Evidence\nVisual QA JSON\nTauri Readiness JSON\nProduction Freeze JSON\nRights Evidence JSON\nGift Payment Evidence JSON\nInstaller Evidence JSON\nRelease Review JSON"
+    "text": "Dashboard\nUniverses\nLineage\nDictionary\nLipi\nRadio\nRadio Runtime\nRadio Frame\nGovernance\nAyodhya AI\nHKD3D\nSprints\nWireframes\nScopes\nAdmin\n\nGOVERNANCE UNIVERSE\n\nEvidence Center\n\nAudit, verification, merge, policy, release, and Tauri gates in one fail-closed surface. Unknown values stay NULL; blocked ship claims remain blocked.\n\nGovernance API\nAudit API\nUniverse Page\nSHIP DECISION\nNO_SHIP\nproductionReady: false\nIMPLEMENTED-DRAFT\nAudit Log\n\nReview created, updated, deleted, merged, cited, and verified actions.\n\nOpen API\nIMPLEMENTED-DRAFT\nVerification Queue\n\nSurface unreviewed records and block verification without citation, reviewer, and reviewedAt evidence.\n\nOpen API\nIMPLEMENTED-DRAFT\nMerge Ledger\n\nTrack merge decisions and require an explicit reason plus audit record.\n\nOpen API\nIMPLEMENTED-DRAFT\nPolicy Matrix\n\nExpose PHKD gates and show blocked production claims before release.\n\nOpen API\nIMPLEMENTED-DRAFT\nMilestone Completion\n\nTrack remaining release milestones as draft gates with blocked external proof.\n\nOpen API\nIMPLEMENTED-DRAFT\nRights Workbench\n\nQueue asset rights review without marking unreviewed assets releaseAllowed.\n\nOpen API\nIMPLEMENTED-DRAFT\nPlayback Gate\n\nBlock audio playback until import records and rights evidence are verifiable.\n\nOpen API\nIMPLEMENTED-DRAFT\nPayment Proof\n\nKeep gifts and payments blocked until receipts and provider evidence exist.\n\nOpen API\nIMPLEMENTED-DRAFT\nInstaller Pipeline\n\nList desktop package lanes while signed installers remain NULL.\n\nOpen API\nIMPLEMENTED-DRAFT\nRelease Orchestration\n\nExpose the evidence-first release check command and blocked production posture.\n\nOpen API\nIMPLEMENTED-DRAFT\nDesktop Alpha\n\nInventory the draft desktop alpha bundle without signing or production claims.\n\nOpen API\n\nRELEASE GATE DASHBOARD\n\ndraft-freeze · productionReady false\nTauri Readiness\nDRAFT-READY\nCustomer front Playwright evidence\n\n/radio-html/qa/customer-front/radio-customer-front-playwright-report.json\n\nDRAFT-READY\nVisual QA board\n\n/radio-html/data/visual-qa.json\n\nDRAFT-READY\nAsset checksum evidence\n\n/radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json\n\nBLOCKED\nPlayable audio rights\n\nrights evidence NULL\n\nBLOCKED\nGift and payment receipt\n\ncheckout/payment evidence NULL\n\nBLOCKED\nSigned Tauri installer\n\nsigned installer evidence NULL\n\nBLOCKED\nHuman release review\n\nreviewer and reviewedAt NULL\n\nEVIDENCE LANES\n\nRights, gifts, installer, and review gates\n\nEach lane is a persistence scope with its own JSON frame and API view. Blocked counts are not hidden.\n\nGovernance API\nblocked\nRights Evidence Lane\n\nRelease remains blocked until every asset has license, rightsStatus, reviewer, reviewedAt, and audit evidence.\n\n19\nrecords\n0\nreleaseAllowed\n5\nrightsNull\n19\nunreviewed\n0\nverifiedRights\n19\nblocked\nsource · creator · license · rightsStatus · checksum · reviewer · reviewedAt · AuditLog.verified\nOpen API\nOpen JSON\nblocked\nGift Payment Evidence Lane\n\nGift, checkout, receipt, and fulfillment stay NULL until a real provider and payment evidence are attached.\n\n0\ngiftIntents\n0\ncheckoutSessions\n0\npaymentReceipts\n0\nfulfilledGifts\n4\nblocked\npayerId · recipientId · checkoutProvider · checkoutSessionId · paymentReceiptId · amount · currency · deliveredAt · AuditLog.created\nOpen API\nOpen JSON\nblocked\nInstaller Evidence Lane\n\nDesktop distribution stays NO_SHIP until signed artifacts and platform verification are present.\n\n6\nartifactSlots\n0\nsignedArtifacts\n0\nunsignedArtifacts\n6\nnullArtifacts\n6\nblocked\nartifactPath · sha256 · buildCommand · signingIdentity · signatureVerification · notarizationTicket when platform requires it · AuditLog.verified\nOpen API\nOpen JSON\nblocked\nRelease Review Workflow\n\nHuman release approval is blocked until reviewer, reviewedAt, citation, reason, and audit records exist.\n\n23\nreviewItems\n19\nunreviewed\n0\nverified\n0\nrejected\n4\nblocked\nreviewer · reviewedAt · citation · reason · AuditLog.verified\nOpen API\nOpen JSON\n\nNO-SHIP DASHBOARD\n\nFail-closed release posture\n\nTauri V2 aggregates ship blockers without promoting any unverifiable production claim.\n\nNo-Ship API\nproductionReady\nfalse\nplayableAudio\nfalse\nverifiedRights\nfalse\nsignedInstaller\nfalse\npaymentReceipt\nfalse\nreleaseReview\nfalse\nexternalTelemetry\nfalse\ndecision\nNO_SHIP\nRights Evidence Lane · blocked\nGift Payment Evidence Lane · blocked\nInstaller Evidence Lane · blocked\nRelease Review Workflow · blocked\nGovernance Evidence Center · draft-ready\nRights Review Workbench · blocked\nPlayable Audio Gate · blocked\nPayment Proof Lane · blocked\nInstaller Pipeline · blocked\nRelease Orchestration · implemented-draft\nDesktop Alpha Bundle · implemented-draft\n\nMILESTONE COMPLETION\n\n7/7 implemented as draft gates · NO_SHIP\n\nAll remaining milestones now have data frames, HTML surfaces, and API views. External proof is still required before any release claim changes.\n\nRelease API\nimplemented-draft\nRights Evidence Closure\n\nreal rights proof and reviewer evidence still required\n\nOpen Evidence\nOpen API\nimplemented-draft\nPlayable Audio Import Gate\n\nno verified playable audio records\n\nOpen Evidence\nOpen API\nimplemented-draft\nGift Payment Proof Lane\n\ncheckout provider and receipt evidence NULL\n\nOpen Evidence\nOpen API\nimplemented-draft\nTauri Installer Pipeline\n\nsigned installer evidence NULL\n\nOpen Evidence\nOpen API\nimplemented-draft\nRelease Review Board\n\nhuman approval evidence NULL\n\nOpen Evidence\nOpen API\nimplemented-draft\nOne-Command Evidence Orchestration\n\nbrowser checks require local server\n\nOpen Evidence\nOpen API\nimplemented-draft\nDesktop Alpha Bundle\n\nalpha is NO_SHIP until rights/payment/signing/review close\n\nOpen Evidence\nOpen API\n\nPOLICY MATRIX\n\nPHKD enforcement gates\nPolicy API\nBLOCKLineage Claim Citation Required\n\nteacher_of, student_of, influenced, inspired, authored, translated, belongs_to, discovered, continued, preserved, collaborated_with, and founded claims fail closed without citation.\n\ncitation · sourceCitation · verificationStatus\nBLOCKVerification Review Required\n\nVerified actions require citation, reviewer, reviewedAt, and an audit record.\n\ncitation · reviewer · reviewedAt · AuditLog\nBLOCKMerge Reason Required\n\nMerge decisions require before, after, reason, and an AuditLog entry.\n\nbefore · after · reason · AuditLog\nBLOCKAsset Release Rights Required\n\nAssets cannot be releaseAllowed until license, rightsStatus, reviewer, and reviewedAt are supplied.\n\nlicense · rightsStatus · reviewer · reviewedAt\nBLOCKTauri No-Ship Until Signed\n\nTauri shipment remains NO_SHIP until installer signing, rights, payment, and release review evidence exist.\n\nsignedInstaller · audioRights · paymentReceipt · releaseReview\n\nVERIFICATION QUEUE\n\nReviewer coverage and blocked claims\nQueue API\nASSET RECORDS\n19\nRELEASE ALLOWED\n0\nUNREVIEWED ASSETS\n19\nRIGHTS BLOCKED\n19\nGIFT/PAYMENT BLOCKED\n4\nINSTALLER BLOCKED\n6\nRELEASE REVIEW BLOCKED\n4\nMILESTONES\n7\nMILESTONE DRAFTS\n7\nEVIDENCE BLOCKED\n6\nPLAYABLE AUDIO\n0\nPAYMENT RECEIPTS\n0\nPIPELINE SIGNED\n0\nCUSTOMER MODULES\n13\nCUSTOMER FAILED LINKS\n0\nVISUAL QA PASS\n25\nVISUAL QA BLOCKED\n0\nTAURI BLOCKED\n8\nPRODUCTION READY\nfalse\n\nDRAFT THUMBNAILS\n\nEvidence previews for draft and blocked surfaces\n\nThese thumbnails are visual pointers to draft evidence only. They do not make production, rights, payment, installer, or release claims.\n\nThumbnail API\ndraft-ready\nCustomer Front Desktop\n\nDesktop Playwright capture for the customer-facing Radio front.\n\nDRAFT-PLAYWRIGHT-EVIDENCE\nEvidence\ndraft-ready\nCustomer Front Mobile\n\nMobile Playwright capture used for overflow and broken-image checks.\n\nDRAFT-PLAYWRIGHT-EVIDENCE\nEvidence\ndraft-ready\nGovernance Evidence Center\n\nDesktop Playwright capture for governance lanes, no-ship state, and release gates.\n\nDRAFT-PLAYWRIGHT-EVIDENCE\nEvidence\ndraft\nRuntime Surface\n\nDraft runtime surface screenshot from the visual QA board.\n\nDRAFT\nEvidence\ndraft\nAsset Evidence\n\nDraft asset evidence table with checksums, review state, and release gates.\n\nDRAFT\nEvidence\ndraft\nVisual QA Board\n\nDraft QA surface listing screenshot capture status for all Radio HTML surfaces.\n\nDRAFT\nEvidence\nblocked\nTauri Readiness\n\nDraft desktop ship-gate surface. Decision remains NO_SHIP.\n\nDRAFT\nEvidence\nblocked\nProduction Freeze\n\nDraft freeze surface preserving blocked production claims.\n\nDRAFT\nEvidence\nblocked\nAudio Import\n\nDraft audio-import lane. Playable audio remains blocked until rights evidence exists.\n\nDRAFT\nEvidence\nblocked\nRights Review\n\nDraft rights workbench for queued asset review. Release claims remain blocked.\n\nDRAFT\nEvidence\nblocked\nPlayback Gate\n\nDraft playback proof gate. Playable audio remains zero until import evidence exists.\n\nDRAFT\nEvidence\nblocked\nPayment Proof\n\nDraft payment proof lane. Receipts and webhooks remain NULL.\n\nDRAFT\nEvidence\nblocked\nInstaller Pipeline\n\nDraft installer pipeline. Signed artifacts remain NULL.\n\nDRAFT\nEvidence\nblocked\nRelease Orchestration\n\nDraft orchestration lane for release checks with productionReady false.\n\nDRAFT\nEvidence\nblocked\nDesktop Alpha\n\nDraft desktop bundle inventory. Signing and shipment remain blocked.\n\nDRAFT\nEvidence\n\nEVIDENCE LINKS\n\nDraft evidence trail\n\nGovernance records describe local runtime evidence only. They do not verify rights, payments, installer signing, external telemetry, lineage claims, or production readiness.\n\nCustomer Playwright Report\nDesktop Screenshot\nMobile Screenshot\nAsset Evidence\nVisual QA JSON\nTauri Readiness JSON\nProduction Freeze JSON\nRights Evidence JSON\nGift Payment Evidence JSON\nInstaller Evidence JSON\nRelease Review JSON\nMilestone Completion JSON\nRights Workbench JSON\nPlayback Gate JSON\nPayment Proof JSON\nInstaller Pipeline JSON\nRelease Orchestration JSON\nDesktop Alpha JSON"
   },
   "mobile": {
     "title": "Governance Evidence Center | Vaishviq Knowledge Runtime",
@@ -132,13 +189,83 @@
     "scrollWidth": 390,
     "clientWidth": 390,
     "hasHorizontalOverflow": false,
-    "imageCount": 10,
+    "imageCount": 16,
     "brokenImages": [],
     "textSample": "Dashboard\nUniverses\nLineage\nDictionary\nLipi\nRadio\nRadio Runtime\nRadio Frame\nGovernance\nAyodhya AI\nHKD3D\nSprints\nWireframes\nScopes\nAdmin\n\nGOVERNANCE UNIVERSE\n\nEvidence Center\n\nAudit, verification, merge, policy, release, and Tauri gates in one fail-closed surface. Unknown values stay NULL; blocked ship claims remain blocked.\n\nGovernance API\nAudit API\nUniverse Page\nSHIP DECISION\nNO_SHIP\nproductionReady: false\nIMPLEMENTED-DRAFT\nAudit Log\n\nReview created, updated, deleted, merged, cited, and verified actions.\n\nOpen API\nIMPLEMENTED-DRAFT\nVerification Queue\n\nSurface unreviewed records and block verification without citation, reviewer, and reviewedAt evidence.\n\nOpen API\nIMPLEMENTED-DRAFT\nMerge Ledger\n\nTrack merge decisions and require an explicit reason plus audit record.\n\nOpen API\nIMPLEMENTED-DR"
   },
   "linkChecks": [
     {
       "href": "/api/governance",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/api/radio-release",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/api/radio-release?view=rights-workbench",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/api/radio-release?view=playback-gate",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/api/radio-release?view=payment-proof",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/api/radio-release?view=installer-pipeline",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/api/radio-release?view=release-orchestration",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/api/radio-release?view=desktop-alpha",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/api/governance?view=milestones",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/api/governance?view=rights-workbench",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/api/governance?view=playback-gate",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/api/governance?view=payment-proof",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/api/governance?view=installer-pipeline",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/api/governance?view=release-orchestration",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/api/governance?view=desktop-alpha",
       "status": 200,
       "ok": true
     },
@@ -188,6 +315,41 @@
       "ok": true
     },
     {
+      "href": "/radio-html/data/milestone-completion.json",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio-html/data/rights-review-workbench.json",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio-html/data/playback-gate.json",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio-html/data/payment-proof-lane.json",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio-html/data/installer-pipeline.json",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio-html/data/release-orchestration.json",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio-html/data/desktop-alpha-bundle.json",
+      "status": 200,
+      "ok": true
+    },
+    {
       "href": "/radio-html/data/tauri-readiness.json",
       "status": 200,
       "ok": true
@@ -208,7 +370,23 @@
     },
     {
       "type": "log",
-      "text": "[Fast Refresh] done in 285ms"
+      "text": "[Fast Refresh] done in 944ms"
+    },
+    {
+      "type": "log",
+      "text": "[Fast Refresh] rebuilding"
+    },
+    {
+      "type": "log",
+      "text": "[Fast Refresh] done in 268ms"
+    },
+    {
+      "type": "info",
+      "text": "%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"
+    },
+    {
+      "type": "log",
+      "text": "[HMR] connected"
     }
   ],
   "assertions": {
@@ -216,7 +394,10 @@
     "releaseGatesPresent": true,
     "evidenceLanesPresent": true,
     "noShipDashboardPresent": true,
+    "milestoneCompletionPresent": true,
     "laneCoverage": true,
+    "milestoneCoverage": true,
+    "releaseApiVisible": true,
     "noShipVisible": true,
     "blockedPostureVisible": true,
     "noBrokenDesktopImages": true,
@@ -225,14 +406,15 @@
     "criticalLinksOk": true
   },
   "counts": {
-    "sections": 7,
+    "sections": 8,
     "releaseGates": 7,
     "evidenceLanes": 4,
+    "milestoneCards": 7,
     "noShipItems": 8,
-    "imagesDesktop": 10,
+    "imagesDesktop": 16,
     "brokenDesktopImages": 0,
     "brokenMobileImages": 0,
-    "links": 11,
+    "links": 32,
     "failedLinks": 0
   }
 }

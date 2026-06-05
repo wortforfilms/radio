@@ -265,6 +265,71 @@
       "path": "/radio-html/surfaces/no-ship-dashboard.html",
       "role": "No-Ship Dashboard surface",
       "futureLane": "surfaces/release"
+    },
+    {
+      "path": "/radio-html/data/rights-review-workbench.json",
+      "role": "rights-review-workbench manifest",
+      "futureLane": "data/release"
+    },
+    {
+      "path": "/radio-html/data/playback-gate.json",
+      "role": "playback-gate manifest",
+      "futureLane": "data/release"
+    },
+    {
+      "path": "/radio-html/data/payment-proof-lane.json",
+      "role": "payment-proof-lane manifest",
+      "futureLane": "data/release"
+    },
+    {
+      "path": "/radio-html/data/installer-pipeline.json",
+      "role": "installer-pipeline manifest",
+      "futureLane": "data/release"
+    },
+    {
+      "path": "/radio-html/data/release-orchestration.json",
+      "role": "release-orchestration manifest",
+      "futureLane": "data/release"
+    },
+    {
+      "path": "/radio-html/data/desktop-alpha-bundle.json",
+      "role": "desktop-alpha-bundle manifest",
+      "futureLane": "data/release"
+    },
+    {
+      "path": "/radio-html/data/milestone-completion.json",
+      "role": "milestone-completion manifest",
+      "futureLane": "data/release"
+    },
+    {
+      "path": "/radio-html/surfaces/rights-review.html",
+      "role": "Rights Review Workbench surface",
+      "futureLane": "surfaces/release"
+    },
+    {
+      "path": "/radio-html/surfaces/playback-gate.html",
+      "role": "Playback Gate surface",
+      "futureLane": "surfaces/release"
+    },
+    {
+      "path": "/radio-html/surfaces/payment-proof.html",
+      "role": "Payment Proof surface",
+      "futureLane": "surfaces/release"
+    },
+    {
+      "path": "/radio-html/surfaces/installer-pipeline.html",
+      "role": "Installer Pipeline surface",
+      "futureLane": "surfaces/release"
+    },
+    {
+      "path": "/radio-html/surfaces/release-orchestration.html",
+      "role": "Release Orchestration surface",
+      "futureLane": "surfaces/release"
+    },
+    {
+      "path": "/radio-html/surfaces/desktop-alpha.html",
+      "role": "Desktop Alpha Bundle surface",
+      "futureLane": "surfaces/release"
     }
   ],
   "futureRoots": [

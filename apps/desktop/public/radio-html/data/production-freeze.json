@@ -64,6 +64,41 @@
       "key": "release-review",
       "path": "/radio-html/data/release-review.json",
       "state": "blocked-draft"
+    },
+    {
+      "key": "rights-review-workbench",
+      "path": "/radio-html/data/rights-review-workbench.json",
+      "state": "blocked-draft"
+    },
+    {
+      "key": "playback-gate",
+      "path": "/radio-html/data/playback-gate.json",
+      "state": "blocked-draft"
+    },
+    {
+      "key": "payment-proof-lane",
+      "path": "/radio-html/data/payment-proof-lane.json",
+      "state": "blocked-draft"
+    },
+    {
+      "key": "installer-pipeline",
+      "path": "/radio-html/data/installer-pipeline.json",
+      "state": "blocked-draft"
+    },
+    {
+      "key": "release-orchestration",
+      "path": "/radio-html/data/release-orchestration.json",
+      "state": "blocked-draft"
+    },
+    {
+      "key": "desktop-alpha-bundle",
+      "path": "/radio-html/data/desktop-alpha-bundle.json",
+      "state": "blocked-draft"
+    },
+    {
+      "key": "milestone-completion",
+      "path": "/radio-html/data/milestone-completion.json",
+      "state": "blocked-draft"
     }
   ],
   "blockedProductionClaims": [
@@ -72,6 +107,7 @@
     "verifiedRights",
     "signedInstaller",
     "paymentReceipt",
-    "externalTelemetry"
+    "externalTelemetry",
+    "releaseReview"
   ]
 }

@@ -1,0 +1,304 @@
+{
+  "id": "radio-vaigyaaniq-rights-review-workbench",
+  "title": "Radio Vaigyaaniq Rights Review Workbench",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "Milestone records describe local implementation and evidence gates only. They do not verify rights, payment settlement, installer signing, release approval, external telemetry, or production readiness."
+  },
+  "counts": {
+    "assets": 19,
+    "queued": 19,
+    "missingLicense": 5,
+    "releaseAllowed": 0,
+    "blocked": 19
+  },
+  "requiredFields": [
+    "source",
+    "creator",
+    "license",
+    "rightsStatus",
+    "citation",
+    "reviewer",
+    "reviewedAt",
+    "AuditLog.verified"
+  ],
+  "reviewQueue": [
+    {
+      "key": "radio-vaigyaaniq-landing-hero-png",
+      "path": "/radio-html/assets/radio-vaigyaaniq-landing-hero.png",
+      "status": "blocked",
+      "reviewState": "unreviewed",
+      "blocker": "releaseAllowed=false until rights and reviewer evidence are complete",
+      "missing": [
+        "creator",
+        "externalSource",
+        "license",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "auditApi": "/api/audit/verified"
+    },
+    {
+      "key": "radio-vaigyaaniq-divine-hero-png",
+      "path": "/radio-html/assets/radio-vaigyaaniq-divine-hero.png",
+      "status": "blocked",
+      "reviewState": "unreviewed",
+      "blocker": "releaseAllowed=false until rights and reviewer evidence are complete",
+      "missing": [
+        "creator",
+        "externalSource",
+        "license",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "auditApi": "/api/audit/verified"
+    },
+    {
+      "key": "images-radio-vaigyaaniq-runtime-hero-svg",
+      "path": "/radio-html/assets/images/radio-vaigyaaniq-runtime-hero.svg",
+      "status": "blocked",
+      "reviewState": "unreviewed",
+      "blocker": "releaseAllowed=false until rights and reviewer evidence are complete",
+      "missing": [
+        "externalSource",
+        "license",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "auditApi": "/api/audit/verified"
+    },
+    {
+      "key": "images-radio-vaigyaaniq-samaya-panel-svg",
+      "path": "/radio-html/assets/images/radio-vaigyaaniq-samaya-panel.svg",
+      "status": "blocked",
+      "reviewState": "unreviewed",
+      "blocker": "releaseAllowed=false until rights and reviewer evidence are complete",
+      "missing": [
+        "externalSource",
+        "license",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "auditApi": "/api/audit/verified"
+    },
+    {
+      "key": "covers-mahamatya-svg",
+      "path": "/radio-html/assets/covers/mahamatya.svg",
+      "status": "blocked",
+      "reviewState": "unreviewed",
+      "blocker": "releaseAllowed=false until rights and reviewer evidence are complete",
+      "missing": [
+        "externalSource",
+        "license",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "auditApi": "/api/audit/verified"
+    },
+    {
+      "key": "covers-gokul-svg",
+      "path": "/radio-html/assets/covers/gokul.svg",
+      "status": "blocked",
+      "reviewState": "unreviewed",
+      "blocker": "releaseAllowed=false until rights and reviewer evidence are complete",
+      "missing": [
+        "externalSource",
+        "license",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "auditApi": "/api/audit/verified"
+    },
+    {
+      "key": "covers-kaal-chakra-svg",
+      "path": "/radio-html/assets/covers/kaal-chakra.svg",
+      "status": "blocked",
+      "reviewState": "unreviewed",
+      "blocker": "releaseAllowed=false until rights and reviewer evidence are complete",
+      "missing": [
+        "externalSource",
+        "license",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "auditApi": "/api/audit/verified"
+    },
+    {
+      "key": "covers-swarnim-sale-svg",
+      "path": "/radio-html/assets/covers/swarnim-sale.svg",
+      "status": "blocked",
+      "reviewState": "unreviewed",
+      "blocker": "releaseAllowed=false until rights and reviewer evidence are complete",
+      "missing": [
+        "externalSource",
+        "license",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "auditApi": "/api/audit/verified"
+    },
+    {
+      "key": "icons-like-svg",
+      "path": "/radio-html/assets/icons/like.svg",
+      "status": "blocked",
+      "reviewState": "unreviewed",
+      "blocker": "releaseAllowed=false until rights and reviewer evidence are complete",
+      "missing": [
+        "externalSource",
+        "license",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "auditApi": "/api/audit/verified"
+    },
+    {
+      "key": "icons-save-svg",
+      "path": "/radio-html/assets/icons/save.svg",
+      "status": "blocked",
+      "reviewState": "unreviewed",
+      "blocker": "releaseAllowed=false until rights and reviewer evidence are complete",
+      "missing": [
+        "externalSource",
+        "license",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "auditApi": "/api/audit/verified"
+    },
+    {
+      "key": "icons-gift-svg",
+      "path": "/radio-html/assets/icons/gift.svg",
+      "status": "blocked",
+      "reviewState": "unreviewed",
+      "blocker": "releaseAllowed=false until rights and reviewer evidence are complete",
+      "missing": [
+        "externalSource",
+        "license",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "auditApi": "/api/audit/verified"
+    },
+    {
+      "key": "icons-share-svg",
+      "path": "/radio-html/assets/icons/share.svg",
+      "status": "blocked",
+      "reviewState": "unreviewed",
+      "blocker": "releaseAllowed=false until rights and reviewer evidence are complete",
+      "missing": [
+        "externalSource",
+        "license",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "auditApi": "/api/audit/verified"
+    },
+    {
+      "key": "icons-tts-svg",
+      "path": "/radio-html/assets/icons/tts.svg",
+      "status": "blocked",
+      "reviewState": "unreviewed",
+      "blocker": "releaseAllowed=false until rights and reviewer evidence are complete",
+      "missing": [
+        "externalSource",
+        "license",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "auditApi": "/api/audit/verified"
+    },
+    {
+      "key": "icons-mic-svg",
+      "path": "/radio-html/assets/icons/mic.svg",
+      "status": "blocked",
+      "reviewState": "unreviewed",
+      "blocker": "releaseAllowed=false until rights and reviewer evidence are complete",
+      "missing": [
+        "externalSource",
+        "license",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "auditApi": "/api/audit/verified"
+    },
+    {
+      "key": "shaders-radio-spectrum-frag",
+      "path": "/radio-html/assets/shaders/radio-spectrum.frag",
+      "status": "blocked",
+      "reviewState": "unreviewed",
+      "blocker": "releaseAllowed=false until rights and reviewer evidence are complete",
+      "missing": [
+        "externalSource",
+        "license",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "auditApi": "/api/audit/verified"
+    },
+    {
+      "key": "shaders-radio-yantra-vert",
+      "path": "/radio-html/assets/shaders/radio-yantra.vert",
+      "status": "blocked",
+      "reviewState": "unreviewed",
+      "blocker": "releaseAllowed=false until rights and reviewer evidence are complete",
+      "missing": [
+        "externalSource",
+        "license",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "auditApi": "/api/audit/verified"
+    },
+    {
+      "key": "audio-phkd-audio-placeholder-json",
+      "path": "/radio-html/assets/audio/PHKD_AUDIO_PLACEHOLDER.json",
+      "status": "blocked",
+      "reviewState": "unreviewed",
+      "blocker": "releaseAllowed=false until rights and reviewer evidence are complete",
+      "missing": [
+        "playableAudio",
+        "creator",
+        "externalSource",
+        "license",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "auditApi": "/api/audit/verified"
+    },
+    {
+      "key": "vendor-three-min-js",
+      "path": "/radio-html/assets/vendor/three.min.js",
+      "status": "blocked",
+      "reviewState": "unreviewed",
+      "blocker": "releaseAllowed=false until rights and reviewer evidence are complete",
+      "missing": [
+        "creator",
+        "externalSource",
+        "license",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "auditApi": "/api/audit/verified"
+    },
+    {
+      "key": "vendor-three-module-min-js",
+      "path": "/radio-html/assets/vendor/three.module.min.js",
+      "status": "blocked",
+      "reviewState": "unreviewed",
+      "blocker": "releaseAllowed=false until rights and reviewer evidence are complete",
+      "missing": [
+        "creator",
+        "externalSource",
+        "license",
+        "reviewer",
+        "reviewedAt"
+      ],
+      "auditApi": "/api/audit/verified"
+    }
+  ]
+}

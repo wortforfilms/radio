@@ -25,14 +25,14 @@
   },
   "counts": {
     "nextAppPages": 18,
-    "apiRoutes": 19,
+    "apiRoutes": 20,
     "ayodhyaGenerated": 15,
     "lipiGenerated": 11,
     "hkd3dGenerated": 18,
     "persistenceScopesGenerated": 42,
     "universesGenerated": 22,
-    "radioStaticArtifacts": 52,
-    "totalRecords": 197
+    "radioStaticArtifacts": 65,
+    "totalRecords": 211
   },
   "catalogHtml": "/radio-html/routes/index.html",
   "matrixHtml": "/radio-html/routes/html-vs-real-route-matrix.html",
@@ -82,7 +82,8 @@
         "/api/texts",
         "/api/timeline",
         "/api/universal-dictionary",
-        "/radio-html/suno_backup/[...assetPath]"
+        "/radio-html/suno_backup/[...assetPath]",
+        "/api/radio-release"
       ]
     },
     {
@@ -272,7 +273,20 @@
         "/radio-html/data/rights-evidence.json",
         "/radio-html/data/gift-payment-evidence.json",
         "/radio-html/data/installer-evidence.json",
-        "/radio-html/data/release-review.json"
+        "/radio-html/data/release-review.json",
+        "/radio-html/surfaces/rights-review.html",
+        "/radio-html/surfaces/playback-gate.html",
+        "/radio-html/surfaces/payment-proof.html",
+        "/radio-html/surfaces/installer-pipeline.html",
+        "/radio-html/surfaces/release-orchestration.html",
+        "/radio-html/surfaces/desktop-alpha.html",
+        "/radio-html/data/rights-review-workbench.json",
+        "/radio-html/data/playback-gate.json",
+        "/radio-html/data/payment-proof-lane.json",
+        "/radio-html/data/installer-pipeline.json",
+        "/radio-html/data/release-orchestration.json",
+        "/radio-html/data/desktop-alpha-bundle.json",
+        "/radio-html/data/milestone-completion.json"
       ]
     }
   ]

@@ -59,6 +59,19 @@ export default function GovernanceEvidenceCenterPage() {
     counts: { reviewItems: 0, unreviewed: 0, verified: 0, rejected: 0, blocked: 0 },
     reviewerRequirements: [] as string[]
   });
+  const milestoneCompletion = readJson("radio-html/data/milestone-completion.json", {
+    counts: { milestones: 0, implementedDraft: 0, evidenceBlocked: 0, productionReady: 0, shipDecision: "NO_SHIP" },
+    milestones: [] as { key: string; label: string; status: string; evidence: string; blocker: string | null }[]
+  });
+  const playbackGate = readJson("radio-html/data/playback-gate.json", {
+    counts: { imports: 0, playable: 0, blocked: 0, nullEvidence: 0 }
+  });
+  const paymentProofLane = readJson("radio-html/data/payment-proof-lane.json", {
+    counts: { paymentReceipts: 0, webhookEvents: 0, blocked: 0 }
+  });
+  const installerPipeline = readJson("radio-html/data/installer-pipeline.json", {
+    counts: { signedArtifacts: 0, blocked: 0 }
+  });
   const allAssertionsPass = Object.values(customerFrontQa.assertions ?? {}).every(Boolean);
   const releaseGates = governanceReleaseGates.map((gate) => {
     if (gate.key === "customer-front-playwright") {
@@ -78,6 +91,12 @@ export default function GovernanceEvidenceCenterPage() {
     "Gift/payment blocked": giftPaymentEvidence.counts.blocked,
     "Installer blocked": installerEvidence.counts.blocked,
     "Release review blocked": releaseReview.counts.blocked,
+    "Milestones": milestoneCompletion.counts.milestones,
+    "Milestone drafts": milestoneCompletion.counts.implementedDraft,
+    "Evidence blocked": milestoneCompletion.counts.evidenceBlocked,
+    "Playable audio": playbackGate.counts.playable,
+    "Payment receipts": paymentProofLane.counts.paymentReceipts,
+    "Pipeline signed": installerPipeline.counts.signedArtifacts,
     "Customer modules": customerFrontQa.counts.modules,
     "Customer failed links": customerFrontQa.counts.failedLinks,
     "Visual QA pass": visualQa.counts.pass,
@@ -242,6 +261,30 @@ export default function GovernanceEvidenceCenterPage() {
         </div>
       </section>
 
+      <section className="governance-section" id="milestone-completion">
+        <div className="reference-feed-head">
+          <div>
+            <p className="section-kicker">Milestone Completion</p>
+            <h2>{milestoneCompletion.counts.implementedDraft}/{milestoneCompletion.counts.milestones} implemented as draft gates · {milestoneCompletion.counts.shipDecision}</h2>
+            <p>All remaining milestones now have data frames, HTML surfaces, and API views. External proof is still required before any release claim changes.</p>
+          </div>
+          <a href="/api/radio-release">Release API</a>
+        </div>
+        <div className="governance-lane-grid">
+          {milestoneCompletion.milestones.map((milestone) => (
+            <article className={milestone.blocker ? "governance-lane-card blocked" : "governance-lane-card"} key={milestone.key}>
+              <span>{milestone.status}</span>
+              <h3>{milestone.label}</h3>
+              <p>{milestone.blocker ?? "No blocker recorded."}</p>
+              <div className="governance-lane-actions">
+                <a href={milestone.evidence}>Open Evidence</a>
+                <a href={`/api/radio-release?view=${milestone.key.includes("rights") ? "rights-workbench" : milestone.key.includes("playable") ? "playback-gate" : milestone.key.includes("gift") ? "payment-proof" : milestone.key.includes("tauri") ? "installer-pipeline" : milestone.key.includes("orchestration") ? "release-orchestration" : milestone.key.includes("desktop") ? "desktop-alpha" : "release-review"}`}>Open API</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="governance-section" id="policy-matrix">
         <div className="reference-feed-head">
           <div>
@@ -329,6 +372,13 @@ export default function GovernanceEvidenceCenterPage() {
           <a href="/radio-html/data/gift-payment-evidence.json">Gift Payment Evidence JSON</a>
           <a href="/radio-html/data/installer-evidence.json">Installer Evidence JSON</a>
           <a href="/radio-html/data/release-review.json">Release Review JSON</a>
+          <a href="/radio-html/data/milestone-completion.json">Milestone Completion JSON</a>
+          <a href="/radio-html/data/rights-review-workbench.json">Rights Workbench JSON</a>
+          <a href="/radio-html/data/playback-gate.json">Playback Gate JSON</a>
+          <a href="/radio-html/data/payment-proof-lane.json">Payment Proof JSON</a>
+          <a href="/radio-html/data/installer-pipeline.json">Installer Pipeline JSON</a>
+          <a href="/radio-html/data/release-orchestration.json">Release Orchestration JSON</a>
+          <a href="/radio-html/data/desktop-alpha-bundle.json">Desktop Alpha JSON</a>
         </div>
       </section>
     </main>

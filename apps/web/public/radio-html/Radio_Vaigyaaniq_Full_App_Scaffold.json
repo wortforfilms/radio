@@ -273,6 +273,71 @@
       "path": "/radio-html/surfaces/no-ship-dashboard.html",
       "surface": "No-Ship Dashboard HTML surface",
       "status": "implemented"
+    },
+    {
+      "path": "/radio-html/data/rights-review-workbench.json",
+      "surface": "rights-review-workbench data frame",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/data/playback-gate.json",
+      "surface": "playback-gate data frame",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/data/payment-proof-lane.json",
+      "surface": "payment-proof-lane data frame",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/data/installer-pipeline.json",
+      "surface": "installer-pipeline data frame",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/data/release-orchestration.json",
+      "surface": "release-orchestration data frame",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/data/desktop-alpha-bundle.json",
+      "surface": "desktop-alpha-bundle data frame",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/data/milestone-completion.json",
+      "surface": "milestone-completion data frame",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/rights-review.html",
+      "surface": "Rights Review Workbench HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/playback-gate.html",
+      "surface": "Playback Gate HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/payment-proof.html",
+      "surface": "Payment Proof HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/installer-pipeline.html",
+      "surface": "Installer Pipeline HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/release-orchestration.html",
+      "surface": "Release Orchestration HTML surface",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/desktop-alpha.html",
+      "surface": "Desktop Alpha Bundle HTML surface",
+      "status": "implemented"
     }
   ],
   "components": [

@@ -1,0 +1,71 @@
+{
+  "id": "radio-vaigyaaniq-next-milestone-completion",
+  "title": "Radio Vaigyaaniq Next Milestone Completion",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "Milestone records describe local implementation and evidence gates only. They do not verify rights, payment settlement, installer signing, release approval, external telemetry, or production readiness."
+  },
+  "counts": {
+    "milestones": 7,
+    "implementedDraft": 7,
+    "evidenceBlocked": 6,
+    "productionReady": 0,
+    "shipDecision": "NO_SHIP"
+  },
+  "milestones": [
+    {
+      "key": "rights-evidence-closure",
+      "label": "Rights Evidence Closure",
+      "status": "implemented-draft",
+      "evidence": "/radio-html/data/rights-review-workbench.json",
+      "blocker": "real rights proof and reviewer evidence still required"
+    },
+    {
+      "key": "playable-audio-import-gate",
+      "label": "Playable Audio Import Gate",
+      "status": "implemented-draft",
+      "evidence": "/radio-html/data/playback-gate.json",
+      "blocker": "no verified playable audio records"
+    },
+    {
+      "key": "gift-payment-proof-lane",
+      "label": "Gift Payment Proof Lane",
+      "status": "implemented-draft",
+      "evidence": "/radio-html/data/payment-proof-lane.json",
+      "blocker": "checkout provider and receipt evidence NULL"
+    },
+    {
+      "key": "tauri-installer-pipeline",
+      "label": "Tauri Installer Pipeline",
+      "status": "implemented-draft",
+      "evidence": "/radio-html/data/installer-pipeline.json",
+      "blocker": "signed installer evidence NULL"
+    },
+    {
+      "key": "release-review-board",
+      "label": "Release Review Board",
+      "status": "implemented-draft",
+      "evidence": "/radio-html/data/release-review.json",
+      "blocker": "human approval evidence NULL"
+    },
+    {
+      "key": "one-command-evidence-orchestration",
+      "label": "One-Command Evidence Orchestration",
+      "status": "implemented-draft",
+      "evidence": "/radio-html/data/release-orchestration.json",
+      "blocker": "browser checks require local server"
+    },
+    {
+      "key": "desktop-alpha-bundle",
+      "label": "Desktop Alpha Bundle",
+      "status": "implemented-draft",
+      "evidence": "/radio-html/data/desktop-alpha-bundle.json",
+      "blocker": "alpha is NO_SHIP until rights/payment/signing/review close"
+    }
+  ]
+}

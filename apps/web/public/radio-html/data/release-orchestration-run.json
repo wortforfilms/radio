@@ -1,0 +1,61 @@
+{
+  "id": "radio-vaigyaaniq-release-evidence-orchestration-run",
+  "generatedAt": "2026-06-05T10:53:16.891Z",
+  "verificationState": "draft-verified-local",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "This report verifies local commands only. It does not verify rights, payment settlement, installer signing, release approval, external telemetry, or production readiness."
+  },
+  "counts": {
+    "steps": 4,
+    "pass": 4,
+    "fail": 0,
+    "browserChecks": 2
+  },
+  "browserUrl": "http://127.0.0.1:3000",
+  "steps": [
+    {
+      "key": "core-data",
+      "command": "/Users/vesahe/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/product-factory/complete-radio-milestones.mjs",
+      "status": "pass",
+      "exitCode": 0,
+      "startedAt": "2026-06-05T10:53:16.257Z",
+      "finishedAt": "2026-06-05T10:53:16.625Z",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "key": "next-milestones",
+      "command": "/Users/vesahe/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/product-factory/complete-radio-next-milestones.mjs",
+      "status": "pass",
+      "exitCode": 0,
+      "startedAt": "2026-06-05T10:53:16.625Z",
+      "finishedAt": "2026-06-05T10:53:16.877Z",
+      "stdout": "{\n  \"generatedAt\": \"2026-06-05\",\n  \"surfaces\": 6,\n  \"dataFrames\": 7,\n  \"visualQa\": {\n    \"targets\": 25,\n    \"capturedScreenshots\": 25,\n    \"pass\": 25,\n    \"blocked\": 0\n  },\n  \"tauri\": {\n    \"draftReady\": 5,\n    \"blocked\": 8\n  },\n  \"shipDecision\": \"NO_SHIP\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "key": "governance-playwright-existing",
+      "command": "read apps/web/public/radio-html/qa/governance/governance-playwright-report.json",
+      "status": "pass",
+      "exitCode": 0,
+      "startedAt": "2026-06-05T10:53:16.878Z",
+      "finishedAt": "2026-06-05T10:53:16.891Z",
+      "stdout": "{\n  \"evidencePath\": \"apps/web/public/radio-html/qa/governance/governance-playwright-report.json\",\n  \"counts\": {\n    \"sections\": 8,\n    \"releaseGates\": 7,\n    \"evidenceLanes\": 4,\n    \"milestoneCards\": 7,\n    \"noShipItems\": 8,\n    \"imagesDesktop\": 16,\n    \"brokenDesktopImages\": 0,\n    \"brokenMobileImages\": 0,\n    \"links\": 32,\n    \"failedLinks\": 0\n  },\n  \"verificationState\": \"draft-playwright-evidence\"\n}",
+      "stderr": ""
+    },
+    {
+      "key": "visual-qa-playwright-existing",
+      "command": "read apps/web/public/radio-html/data/visual-qa.json",
+      "status": "pass",
+      "exitCode": 0,
+      "startedAt": "2026-06-05T10:53:16.891Z",
+      "finishedAt": "2026-06-05T10:53:16.891Z",
+      "stdout": "{\n  \"evidencePath\": \"apps/web/public/radio-html/data/visual-qa.json\",\n  \"counts\": {\n    \"targets\": 25,\n    \"capturedScreenshots\": 25,\n    \"pass\": 25,\n    \"blocked\": 0\n  },\n  \"verificationState\": \"draft\"\n}",
+      "stderr": ""
+    }
+  ]
+}

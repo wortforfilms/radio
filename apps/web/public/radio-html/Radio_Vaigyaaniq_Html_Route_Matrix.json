@@ -14,7 +14,7 @@
     ]
   },
   "counts": {
-    "matrixRows": 54,
+    "matrixRows": 68,
     "groups": 6
   },
   "matrixHtml": "/radio-html/routes/html-vs-real-route-matrix.html",
@@ -275,6 +275,54 @@
           "desktopCopy": "/apps/desktop/public/radio-html/surfaces/no-ship-dashboard.html",
           "source": "apps/web/public/radio-html/data/tauri-readiness.json",
           "status": "implemented-draft"
+        },
+        {
+          "surface": "Rights Review Workbench",
+          "staticHtml": "/radio-html/surfaces/rights-review.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/rights-review.html",
+          "source": "apps/web/public/radio-html/data/rights-review-workbench.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Playback Gate",
+          "staticHtml": "/radio-html/surfaces/playback-gate.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/playback-gate.html",
+          "source": "apps/web/public/radio-html/data/playback-gate.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Payment Proof",
+          "staticHtml": "/radio-html/surfaces/payment-proof.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/payment-proof.html",
+          "source": "apps/web/public/radio-html/data/payment-proof-lane.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Installer Pipeline",
+          "staticHtml": "/radio-html/surfaces/installer-pipeline.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/installer-pipeline.html",
+          "source": "apps/web/public/radio-html/data/installer-pipeline.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Release Orchestration",
+          "staticHtml": "/radio-html/surfaces/release-orchestration.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/release-orchestration.html",
+          "source": "apps/web/public/radio-html/data/release-orchestration.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Desktop Alpha Bundle",
+          "staticHtml": "/radio-html/surfaces/desktop-alpha.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/desktop-alpha.html",
+          "source": "apps/web/public/radio-html/data/desktop-alpha-bundle.json",
+          "state": "implemented-draft"
         }
       ]
     },
@@ -425,6 +473,62 @@
           "desktopCopy": "/apps/desktop/public/radio-html/data/release-review.json",
           "source": "apps/web/public/radio-html/data/release-review.json",
           "status": "implemented-draft"
+        },
+        {
+          "surface": "Rights Review Workbench Data",
+          "staticHtml": "/radio-html/data/rights-review-workbench.json",
+          "realRoute": "served-static-json",
+          "desktopCopy": "/apps/desktop/public/radio-html/data/rights-review-workbench.json",
+          "source": "apps/web/public/radio-html/data/rights-review-workbench.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Playback Gate Data",
+          "staticHtml": "/radio-html/data/playback-gate.json",
+          "realRoute": "served-static-json",
+          "desktopCopy": "/apps/desktop/public/radio-html/data/playback-gate.json",
+          "source": "apps/web/public/radio-html/data/playback-gate.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Payment Proof Data",
+          "staticHtml": "/radio-html/data/payment-proof-lane.json",
+          "realRoute": "served-static-json",
+          "desktopCopy": "/apps/desktop/public/radio-html/data/payment-proof-lane.json",
+          "source": "apps/web/public/radio-html/data/payment-proof-lane.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Installer Pipeline Data",
+          "staticHtml": "/radio-html/data/installer-pipeline.json",
+          "realRoute": "served-static-json",
+          "desktopCopy": "/apps/desktop/public/radio-html/data/installer-pipeline.json",
+          "source": "apps/web/public/radio-html/data/installer-pipeline.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Release Orchestration Data",
+          "staticHtml": "/radio-html/data/release-orchestration.json",
+          "realRoute": "served-static-json",
+          "desktopCopy": "/apps/desktop/public/radio-html/data/release-orchestration.json",
+          "source": "apps/web/public/radio-html/data/release-orchestration.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Desktop Alpha Bundle Data",
+          "staticHtml": "/radio-html/data/desktop-alpha-bundle.json",
+          "realRoute": "served-static-json",
+          "desktopCopy": "/apps/desktop/public/radio-html/data/desktop-alpha-bundle.json",
+          "source": "apps/web/public/radio-html/data/desktop-alpha-bundle.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Milestone Completion Data",
+          "staticHtml": "/radio-html/data/milestone-completion.json",
+          "realRoute": "served-static-json",
+          "desktopCopy": "/apps/desktop/public/radio-html/data/milestone-completion.json",
+          "source": "apps/web/public/radio-html/data/milestone-completion.json",
+          "state": "implemented-draft"
         }
       ]
     },
@@ -470,6 +574,14 @@
           "realRoute": "/api/export",
           "desktopCopy": "NULL",
           "source": "apps/web/app/api/export/route.ts",
+          "state": "api-route"
+        },
+        {
+          "surface": "Radio Release API",
+          "staticHtml": "NULL",
+          "realRoute": "/api/radio-release",
+          "desktopCopy": "NULL",
+          "source": "apps/web/app/api/radio-release/route.ts",
           "state": "api-route"
         }
       ]

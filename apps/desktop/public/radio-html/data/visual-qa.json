@@ -13,9 +13,9 @@
     ]
   },
   "counts": {
-    "targets": 19,
-    "capturedScreenshots": 19,
-    "pass": 19,
+    "targets": 25,
+    "capturedScreenshots": 25,
+    "pass": 25,
     "blocked": 0
   },
   "targets": [
@@ -183,6 +183,72 @@
       "mobileStatus": "pass",
       "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/no-ship-dashboard.html",
       "slug": "no-ship-dashboard"
+    },
+    {
+      "title": "Rights Review",
+      "path": "/radio-html/surfaces/rights-review.html",
+      "screenshot": "/radio-html/qa/screenshots/rights-review.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pass",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/rights-review.html",
+      "slug": "rights-review"
+    },
+    {
+      "title": "Playback Gate",
+      "path": "/radio-html/surfaces/playback-gate.html",
+      "screenshot": "/radio-html/qa/screenshots/playback-gate.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pass",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/playback-gate.html",
+      "slug": "playback-gate"
+    },
+    {
+      "title": "Payment Proof",
+      "path": "/radio-html/surfaces/payment-proof.html",
+      "screenshot": "/radio-html/qa/screenshots/payment-proof.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pass",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/payment-proof.html",
+      "slug": "payment-proof"
+    },
+    {
+      "title": "Installer Pipeline",
+      "path": "/radio-html/surfaces/installer-pipeline.html",
+      "screenshot": "/radio-html/qa/screenshots/installer-pipeline.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pass",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/installer-pipeline.html",
+      "slug": "installer-pipeline"
+    },
+    {
+      "title": "Release Orchestration",
+      "path": "/radio-html/surfaces/release-orchestration.html",
+      "screenshot": "/radio-html/qa/screenshots/release-orchestration.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pass",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/release-orchestration.html",
+      "slug": "release-orchestration"
+    },
+    {
+      "title": "Desktop Alpha",
+      "path": "/radio-html/surfaces/desktop-alpha.html",
+      "screenshot": "/radio-html/qa/screenshots/desktop-alpha.png",
+      "renderStatus": "pass",
+      "linkStatus": "pass",
+      "imageStatus": "pass",
+      "mobileStatus": "pass",
+      "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/desktop-alpha.html",
+      "slug": "desktop-alpha"
     },
     {
       "title": "Visual QA",

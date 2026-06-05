@@ -55,6 +55,42 @@
       "label": "Governance Evidence Center",
       "path": "/governance",
       "status": "draft-ready"
+    },
+    {
+      "key": "rights-workbench",
+      "label": "Rights Review Workbench",
+      "path": "/radio-html/data/rights-review-workbench.json",
+      "status": "blocked"
+    },
+    {
+      "key": "playback-gate",
+      "label": "Playable Audio Gate",
+      "path": "/radio-html/data/playback-gate.json",
+      "status": "blocked"
+    },
+    {
+      "key": "payment-proof",
+      "label": "Payment Proof Lane",
+      "path": "/radio-html/data/payment-proof-lane.json",
+      "status": "blocked"
+    },
+    {
+      "key": "installer-pipeline",
+      "label": "Installer Pipeline",
+      "path": "/radio-html/data/installer-pipeline.json",
+      "status": "blocked"
+    },
+    {
+      "key": "release-orchestration",
+      "label": "Release Orchestration",
+      "path": "/radio-html/data/release-orchestration.json",
+      "status": "implemented-draft"
+    },
+    {
+      "key": "desktop-alpha",
+      "label": "Desktop Alpha Bundle",
+      "path": "/radio-html/data/desktop-alpha-bundle.json",
+      "status": "implemented-draft"
     }
   ],
   "platformMatrix": [
@@ -193,10 +229,46 @@
       "label": "Human release review",
       "status": "blocked",
       "evidence": "/radio-html/data/release-review.json"
+    },
+    {
+      "key": "rights-workbench",
+      "label": "Rights Review Workbench",
+      "status": "blocked",
+      "evidence": "/radio-html/data/rights-review-workbench.json"
+    },
+    {
+      "key": "playback-gate",
+      "label": "Playable Audio Gate",
+      "status": "blocked",
+      "evidence": "/radio-html/data/playback-gate.json"
+    },
+    {
+      "key": "payment-proof",
+      "label": "Payment Proof Lane",
+      "status": "blocked",
+      "evidence": "/radio-html/data/payment-proof-lane.json"
+    },
+    {
+      "key": "installer-pipeline",
+      "label": "Installer Pipeline",
+      "status": "blocked",
+      "evidence": "/radio-html/data/installer-pipeline.json"
+    },
+    {
+      "key": "release-orchestration",
+      "label": "Release Orchestration",
+      "status": "draft-ready",
+      "evidence": "/radio-html/data/release-orchestration.json"
+    },
+    {
+      "key": "desktop-alpha",
+      "label": "Desktop Alpha Bundle",
+      "status": "draft-ready",
+      "evidence": "/radio-html/data/desktop-alpha-bundle.json"
     }
   ],
   "counts": {
-    "draftReady": 3,
-    "blocked": 4
+    "draftReady": 5,
+    "blocked": 8
   }
 }

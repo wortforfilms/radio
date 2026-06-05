@@ -1,0 +1,53 @@
+{
+  "id": "radio-vaigyaaniq-release-orchestration",
+  "title": "Radio Vaigyaaniq One-Command Evidence Orchestration",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "Milestone records describe local implementation and evidence gates only. They do not verify rights, payment settlement, installer signing, release approval, external telemetry, or production readiness."
+  },
+  "counts": {
+    "configuredCommands": 5,
+    "optionalBrowserChecks": 2,
+    "lastRunFailures": 0,
+    "productionReady": 0,
+    "blockedEvidenceLanes": 4
+  },
+  "command": "npm run radio:release:check",
+  "steps": [
+    {
+      "key": "core-data",
+      "command": "node scripts/product-factory/complete-radio-milestones.mjs",
+      "status": "configured",
+      "description": "Refreshes core Radio evidence frames."
+    },
+    {
+      "key": "next-milestones",
+      "command": "node scripts/product-factory/complete-radio-next-milestones.mjs",
+      "status": "configured",
+      "description": "Refreshes milestone evidence frames."
+    },
+    {
+      "key": "tests",
+      "command": "npm test",
+      "status": "configured",
+      "description": "Runs Vitest."
+    },
+    {
+      "key": "build",
+      "command": "npm run build",
+      "status": "configured",
+      "description": "Runs Next production build."
+    },
+    {
+      "key": "browser-evidence",
+      "command": "RADIO_RELEASE_BROWSER_URL=http://127.0.0.1:3000 npm run radio:release:check",
+      "status": "optional",
+      "description": "Runs governance and Visual QA Playwright checks when a local server is available."
+    }
+  ]
+}

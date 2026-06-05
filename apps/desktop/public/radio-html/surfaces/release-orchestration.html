@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - Release Orchestration</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav><a href="./index.html">Index</a><a href="./tauri-readiness.html">Tauri</a><a href="./release-orchestration.html">Orchestrate</a><a href="/governance#milestone-completion">Governance</a></nav>
+      <span>PHKD</span>
+    </aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">One-Command Evidence Orchestration</p>
+          <h1>One Command, Fail Closed</h1>
+          <p>The release-check command refreshes local evidence, runs tests, and builds. Browser evidence runs when a local server URL is supplied.</p>
+          <div class="surface-actions"><a href="../data/release-orchestration.json">Data JSON</a><a href="/api/governance?view=release-orchestration">API View</a><a href="./no-ship-dashboard.html">No-Ship Dashboard</a></div>
+        </div>
+        <div class="status-chip"><span>Command</span><b id="primaryMetric">NULL</b><small>configured</small></div>
+      </section>
+      <section class="surface-grid three" id="metrics"></section>
+      <section class="surface-card"><span class="surface-label">Orchestration Steps</span><h2>Milestone Records</h2><section class="runtime-lane" id="recordList"></section></section>
+    </section>
+  </main>
+  <script>
+    const valueText = (value) => value === null || value === undefined ? "NULL" : String(value);
+    const countKeys = ["configuredCommands","optionalBrowserChecks","lastRunFailures","productionReady","blockedEvidenceLanes"];
+    fetch("../data/release-orchestration.json").then((response) => response.json()).then((data) => {
+      document.getElementById("primaryMetric").textContent = valueText(data.command);
+      document.getElementById("metrics").innerHTML = countKeys.map((key) => `
+        <article class="surface-card"><span class="surface-label">${key}</span><b>${valueText(data.counts?.[key])}</b></article>
+      `).join("");
+      const records = data["steps"] || [];
+      document.getElementById("recordList").innerHTML = records.length ? records.map((item) => {
+        if ("command" === "command") return `<article class="runtime-row"><span>${item.key}</span><div><b>${item.command || item.label}</b><p>${item.description || item.evidence || item.blocker || "NULL"}</p></div><small class="surface-state-pill">${item.status}</small></article>`;
+        if ("command" === "artifact") return `<article class="runtime-row"><span>${item.key}</span><div><b>${item.label}</b><p>artifact ${valueText(item.artifact)} · signature ${valueText(item.signature)} · ${item.blocker || "NULL"}</p></div><small class="surface-state-pill">${item.status}</small></article>`;
+        return `<article class="runtime-row"><span>${item.key || item.scope || item.id}</span><div><b>${item.label || item.path || item.title}</b><p>${item.blocker || item.description || item.evidence || item.nextAction || "NULL"}</p></div><small class="surface-state-pill">${item.status || item.reviewState || item.state}</small></article>`;
+      }).join("") : '<article class="runtime-row"><span>NULL</span><div><b>No records</b><p>No verified external records are available.</p></div><small class="surface-state-pill">blocked</small></article>';
+    });
+  </script>
+</body>
+</html>

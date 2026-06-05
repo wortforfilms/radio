@@ -1,0 +1,54 @@
+{
+  "id": "radio-vaigyaaniq-payment-proof-lane",
+  "title": "Radio Vaigyaaniq Gift Payment Proof Lane",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "Milestone records describe local implementation and evidence gates only. They do not verify rights, payment settlement, installer signing, release approval, external telemetry, or production readiness."
+  },
+  "counts": {
+    "giftIntents": 0,
+    "checkoutSessions": 0,
+    "paymentReceipts": 0,
+    "fulfilledGifts": 0,
+    "webhookEvents": 0,
+    "blocked": 4
+  },
+  "webhookVerifier": {
+    "provider": null,
+    "endpoint": "/api/radio-release?view=payment-proof",
+    "signatureHeader": null,
+    "status": "blocked",
+    "blocker": "checkout provider, signing secret, and receipt evidence are NULL"
+  },
+  "records": [
+    {
+      "key": "gift-intent",
+      "label": "Gift intent",
+      "status": "draft",
+      "evidence": "local UI intent only"
+    },
+    {
+      "key": "checkout-session",
+      "label": "Checkout session",
+      "status": "blocked",
+      "evidence": null
+    },
+    {
+      "key": "payment-receipt",
+      "label": "Payment receipt",
+      "status": "blocked",
+      "evidence": null
+    },
+    {
+      "key": "delivery-proof",
+      "label": "Delivery proof",
+      "status": "blocked",
+      "evidence": null
+    }
+  ]
+}

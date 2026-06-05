@@ -13,8 +13,8 @@
     ]
   },
   "counts": {
-    "webHtml": 34,
-    "desktopHtml": 34
+    "webHtml": 40,
+    "desktopHtml": 40
   },
   "servedIndex": "/radio-html/all-html.html",
   "groups": [
@@ -203,6 +203,36 @@
           "title": "No-Ship Dashboard",
           "path": "/radio-html/surfaces/no-ship-dashboard.html",
           "desktopPath": "/apps/desktop/public/radio-html/surfaces/no-ship-dashboard.html"
+        },
+        {
+          "title": "Rights Review Workbench",
+          "path": "/radio-html/surfaces/rights-review.html",
+          "desktopPath": "/apps/desktop/public/radio-html/surfaces/rights-review.html"
+        },
+        {
+          "title": "Playback Gate",
+          "path": "/radio-html/surfaces/playback-gate.html",
+          "desktopPath": "/apps/desktop/public/radio-html/surfaces/playback-gate.html"
+        },
+        {
+          "title": "Payment Proof",
+          "path": "/radio-html/surfaces/payment-proof.html",
+          "desktopPath": "/apps/desktop/public/radio-html/surfaces/payment-proof.html"
+        },
+        {
+          "title": "Installer Pipeline",
+          "path": "/radio-html/surfaces/installer-pipeline.html",
+          "desktopPath": "/apps/desktop/public/radio-html/surfaces/installer-pipeline.html"
+        },
+        {
+          "title": "Release Orchestration",
+          "path": "/radio-html/surfaces/release-orchestration.html",
+          "desktopPath": "/apps/desktop/public/radio-html/surfaces/release-orchestration.html"
+        },
+        {
+          "title": "Desktop Alpha Bundle",
+          "path": "/radio-html/surfaces/desktop-alpha.html",
+          "desktopPath": "/apps/desktop/public/radio-html/surfaces/desktop-alpha.html"
         }
       ]
     }

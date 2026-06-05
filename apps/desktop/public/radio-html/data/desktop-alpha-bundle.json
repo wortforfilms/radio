@@ -1,0 +1,73 @@
+{
+  "id": "radio-vaigyaaniq-desktop-alpha-bundle",
+  "title": "Radio Vaigyaaniq Desktop Alpha Bundle",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft-alpha",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "Milestone records describe local implementation and evidence gates only. They do not verify rights, payment settlement, installer signing, release approval, external telemetry, or production readiness."
+  },
+  "counts": {
+    "includedSurfaces": 25,
+    "includedDataFrames": 17,
+    "signedInstallers": 0,
+    "productionReady": 0,
+    "blockers": 4
+  },
+  "alphaState": "local-alpha-no-ship",
+  "launchModes": [
+    {
+      "key": "web-dev",
+      "label": "Next local dev",
+      "status": "configured",
+      "evidence": "npm run dev -- --webpack -H 127.0.0.1 -p 3000"
+    },
+    {
+      "key": "static-html",
+      "label": "Browser-openable static HTML",
+      "status": "configured",
+      "evidence": "/radio-html/surfaces/index.html"
+    },
+    {
+      "key": "tauri-installer",
+      "label": "Signed Tauri installer",
+      "status": "blocked",
+      "evidence": "/radio-html/data/installer-evidence.json"
+    }
+  ],
+  "records": [
+    {
+      "key": "no-ship-labels",
+      "label": "Visible NO_SHIP labels",
+      "status": "configured",
+      "blocker": null
+    },
+    {
+      "key": "rights",
+      "label": "Verified rights",
+      "status": "blocked",
+      "blocker": "rights evidence NULL/unreviewed"
+    },
+    {
+      "key": "payment",
+      "label": "Payment receipts",
+      "status": "blocked",
+      "blocker": "checkout/payment evidence NULL"
+    },
+    {
+      "key": "installer",
+      "label": "Signed installer",
+      "status": "blocked",
+      "blocker": "signed installer evidence NULL"
+    },
+    {
+      "key": "release-review",
+      "label": "Human release approval",
+      "status": "blocked",
+      "blocker": "reviewer/reviewedAt NULL"
+    }
+  ]
+}
