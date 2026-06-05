@@ -4436,6 +4436,201 @@ button {
   font-weight: 720;
 }
 
+.governance-shell {
+  min-height: calc(100vh - 54px);
+  background: #f6f7f5;
+  color: #202521;
+}
+
+.governance-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
+  gap: 24px;
+  align-items: end;
+  min-height: 460px;
+  overflow: hidden;
+  padding: 56px 28px 34px;
+  color: white;
+}
+
+.governance-hero::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(23, 18, 21, 0.88), rgba(23, 18, 21, 0.48) 64%, rgba(23, 18, 21, 0.2)),
+    linear-gradient(0deg, rgba(23, 18, 21, 0.72), rgba(23, 18, 21, 0.1));
+}
+
+.governance-hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.governance-hero > div,
+.governance-hero aside {
+  position: relative;
+  z-index: 1;
+}
+
+.governance-hero h1 {
+  max-width: 860px;
+  margin: 0;
+  font-size: clamp(44px, 7vw, 88px);
+  line-height: 0.95;
+}
+
+.governance-hero p:not(.eyebrow) {
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.governance-hero aside {
+  display: grid;
+  gap: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 18px;
+  backdrop-filter: blur(12px);
+}
+
+.governance-hero aside span,
+.governance-card span,
+.governance-gate-list span,
+.governance-policy-table span,
+.governance-metrics span {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.governance-hero aside span {
+  color: #f2c4cd;
+}
+
+.governance-hero aside b {
+  font-size: 34px;
+  line-height: 1;
+}
+
+.governance-grid,
+.governance-section {
+  margin: 24px 28px 0;
+}
+
+.governance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+}
+
+.governance-card,
+.governance-section,
+.governance-gate-list article,
+.governance-policy-table article,
+.governance-metrics article,
+.governance-link-grid a {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+}
+
+.governance-card {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+}
+
+.governance-card h2,
+.governance-section h2 {
+  margin: 0;
+}
+
+.governance-card p,
+.governance-section p,
+.governance-gate-list p,
+.governance-policy-table p,
+.governance-policy-table small {
+  color: var(--muted);
+}
+
+.governance-card a,
+.governance-section .reference-feed-head > a,
+.governance-link-grid a {
+  width: fit-content;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px 10px;
+  color: var(--accent);
+  font-weight: 760;
+}
+
+.governance-section {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+}
+
+.governance-gate-list,
+.governance-policy-table,
+.governance-metrics,
+.governance-link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.governance-gate-list article,
+.governance-policy-table article,
+.governance-metrics article {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+}
+
+.governance-gate-list article {
+  border-left: 4px solid #1e6b54;
+}
+
+.governance-gate-list article.blocked {
+  border-left-color: #b84d62;
+}
+
+.governance-gate-list article.blocked span {
+  color: #b84d62;
+}
+
+.governance-policy-table article {
+  grid-template-columns: minmax(180px, 0.5fr) minmax(0, 1fr);
+}
+
+.governance-policy-table small {
+  grid-column: 1 / -1;
+  font-size: 12px;
+  font-weight: 720;
+}
+
+.governance-metrics article b {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.governance-link-grid a {
+  display: grid;
+  width: auto;
+  min-height: 52px;
+  align-items: center;
+}
+
 .soundtrack-panel {
   display: grid;
   gap: 8px;
@@ -5039,4 +5234,30 @@ button {
     border-radius: 22px;
   }
 
+}
+
+@media (max-width: 760px) {
+  .governance-hero,
+  .governance-policy-table article {
+    grid-template-columns: 1fr;
+  }
+
+  .governance-hero {
+    min-height: 420px;
+    padding: 38px 16px 24px;
+  }
+
+  .governance-hero h1 {
+    font-size: 44px;
+  }
+
+  .governance-grid,
+  .governance-section {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+
+  .governance-section {
+    padding: 14px;
+  }
 }

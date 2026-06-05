@@ -1,0 +1,278 @@
+{
+  "id": "radio-customer-front-playwright-evidence",
+  "generatedAt": "2026-06-05T00:37:48.013Z",
+  "target": "http://127.0.0.1:3000/radio",
+  "verificationState": "draft-playwright-evidence",
+  "phkd": {
+    "rule": "fail_closed",
+    "productionReady": false,
+    "note": "Playwright evidence confirms local customer-front render only; it does not verify audio rights, payment, external telemetry, or release readiness. Unknown values remain NULL."
+  },
+  "screenshots": {
+    "desktop": "/radio-html/qa/customer-front/radio-customer-desktop.png",
+    "mobile": "/radio-html/qa/customer-front/radio-customer-mobile.png"
+  },
+  "desktop": {
+    "title": "Radio Vaigyaaniq",
+    "h1": "Broadcast Command Surface",
+    "heroHeading": "Discover the Science, Tune into the Future.",
+    "navLabels": [
+      "Live",
+      "Frame",
+      "Storyboard",
+      "Prototype",
+      "Ayodhya",
+      "Evidence"
+    ],
+    "moduleTitles": [
+      "3D Visualizer",
+      "Synced Lyrics",
+      "Persona TTS",
+      "Gift Loop",
+      "Storyboard",
+      "Full App HTML",
+      "All HTML Surfaces",
+      "Runtimes + Workflows",
+      "ASCII Wireframes",
+      "Future Structure",
+      "Scaffold JSON",
+      "HKD Export",
+      "HTML Archive"
+    ],
+    "workflowSteps": [
+      "Tune",
+      "Announce",
+      "Visualize",
+      "Scribe",
+      "Package",
+      "Export"
+    ],
+    "evidenceCards": [
+      "Audio source",
+      "Gift action",
+      "Lyrics sync",
+      "Generated media"
+    ],
+    "imageCount": 1,
+    "brokenImages": [],
+    "linkHrefs": [
+      "/dashboard",
+      "/universes",
+      "/lineage",
+      "/dictionary",
+      "/lipi",
+      "/radio",
+      "/radio/runtime",
+      "/radio/frame",
+      "/ayodhya",
+      "/hkd3d",
+      "/sprints",
+      "/wireframes",
+      "/scopes",
+      "/admin",
+      "/radio/runtime",
+      "/radio/frame",
+      "/radio/storyboard",
+      "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html",
+      "/projects/new",
+      "/scopes/media-universe",
+      "/radio/runtime",
+      "/radio/frame",
+      "/scopes/media-universe",
+      "/radio/runtime#radioVisualizer",
+      "/radio/runtime#radioLyricsScribe",
+      "/radio/runtime#radioSamaya",
+      "/radio/runtime",
+      "/radio/storyboard",
+      "/radio-html/Radio_Vaigyaaniq_Full_App.html",
+      "/radio-html/surfaces/index.html",
+      "/radio-html/surfaces/runtimes-workflows.html",
+      "/radio-html/surfaces/ascii-wireframes.html",
+      "/radio-html/structure/index.html",
+      "/radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json",
+      "/api/export?format=hkd&scope=media-universe",
+      "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html",
+      "/scopes/media-universe"
+    ],
+    "hasPhkd": true,
+    "hasNoFabricationGuard": true,
+    "textSample": "Dashboard\nUniverses\nLineage\nDictionary\nLipi\nRadio\nRadio Runtime\nRadio Frame\nAyodhya AI\nHKD3D\nSprints\nWireframes\nScopes\nAdmin\nRV\nLIVE\nFRAME\nSTORYBOARD\nPROTOTYPE\nAYODHYA\nEVIDENCE\nPHKD\n\nRADIO VAIGYAANIQ\n\nBroadcast Command Surface\nLOCAL\nDRAFT\nverification state\n102.5 MHZ\nDiscover the Science, Tune into the Future.\n\nLive listening, cinematic audio visualization, persona announcements, synchronized lyric scribing, and provenance-first media workflows in one operator layout.\n\nOpen Live Runtime\nThree Frame\nNOW ROUTED\nRadio Runtime\nVisualizer · TTS · Lyrics · Gift intent\nQUANTUM RESONANCE TUNER\nLIVE DRAFT\nHEMANT SAMWAT SAMAYA\nMuhurat · Utsav · Divas\n\nAnnouncement and vishaya vaachan are computed as local draft states until evidence is attached.\n\nFAIL CLOSED\nNo fabricated audio, citations, checkout, or verification claims.\nOpen Media Scope\n\nRUNTIME MODULES\n\nModules arranged for repeated operation.\n\nThe redesigned layout keeps the app's important surfaces one click away: runtime, absorbed Three.j"
+  },
+  "mobile": {
+    "title": "Radio Vaigyaaniq",
+    "width": 390,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "hasHorizontalOverflow": false,
+    "imageCount": 1,
+    "brokenImages": [],
+    "textSample": "Dashboard\nUniverses\nLineage\nDictionary\nLipi\nRadio\nRadio Runtime\nRadio Frame\nAyodhya AI\nHKD3D\nSprints\nWireframes\nScopes\nAdmin\nRV\nLIVE\nFRAME\nSTORYBOARD\nPROTOTYPE\nAYODHYA\nEVIDENCE\nPHKD\n\nRADIO VAIGYAANIQ\n\nBroadcast Command Surface\nLOCAL\nDRAFT\nverification state\n102.5 MHZ\nDiscover the Science, Tune into the Future.\n\nLive listening, cinematic audio visualization, persona announcements, synchronized lyric scribing, and provenance-first media workflows in one operator layout.\n\nOpen Live Runtime\nThree Frame\nNOW ROUTED\nRadio Runtime\nVisualizer · TTS · Lyrics · Gift intent\nQUANTUM RESONANCE TUNER\nLIVE DR"
+  },
+  "linkChecks": [
+    {
+      "href": "/dashboard",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/universes",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/lineage",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/dictionary",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/lipi",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio/runtime",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio/frame",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/ayodhya",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/hkd3d",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/sprints",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/wireframes",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/scopes",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/admin",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio/storyboard",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/projects/new",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/scopes/media-universe",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio/runtime#radioVisualizer",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio/runtime#radioLyricsScribe",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio/runtime#radioSamaya",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio-html/Radio_Vaigyaaniq_Full_App.html",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio-html/surfaces/index.html",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio-html/surfaces/runtimes-workflows.html",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio-html/surfaces/ascii-wireframes.html",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio-html/structure/index.html",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/api/export?format=hkd&scope=media-universe",
+      "status": 200,
+      "ok": true
+    }
+  ],
+  "logs": [],
+  "assertions": {
+    "routeLoaded": true,
+    "h1Present": true,
+    "heroPresent": true,
+    "navComplete": true,
+    "modulesComplete": true,
+    "workflowCount": true,
+    "evidenceCardCount": true,
+    "noBrokenDesktopImages": true,
+    "noBrokenMobileImages": true,
+    "noMobileHorizontalOverflow": true,
+    "phkdGuardVisible": true,
+    "internalLinksOk": true
+  },
+  "counts": {
+    "modules": 13,
+    "workflows": 6,
+    "evidenceCards": 4,
+    "imagesDesktop": 1,
+    "brokenDesktopImages": 0,
+    "brokenMobileImages": 0,
+    "links": 28,
+    "failedLinks": 0
+  }
+}

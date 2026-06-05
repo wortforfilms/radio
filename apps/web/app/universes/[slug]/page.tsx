@@ -37,6 +37,7 @@ export default async function UniverseLandingPage({ params }: PageProps) {
           <p>{universe.focus}</p>
           <div className="hero-actions">
             <a href={universe.primaryPath}>Open Runtime Surface</a>
+            {universe.slug === "governance-universe" ? <a href="/governance">Evidence Center</a> : null}
             <a href="/universes">All Universes</a>
           </div>
           {universe.soundtrack ? (
