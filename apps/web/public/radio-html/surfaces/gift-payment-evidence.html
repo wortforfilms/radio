@@ -19,11 +19,12 @@
           <p class="eyebrow">Gift Payment Evidence Lane</p>
           <h1>Gift Intent Without Receipt</h1>
           <p>Gift UI can collect local intent, but payment, receipt, fulfillment, refunds, and provider settlement are NULL until real evidence exists.</p>
-          <div class="surface-actions"><a href="../data/gift-payment-evidence.json">Gift Payment JSON</a><a href="./social-gift.html">Social Gift Surface</a><a href="/api/governance?view=gift-payment">Gift API</a></div>
+          <div class="surface-actions"><a href="../data/gift-payment-evidence.json">Gift Payment JSON</a><a href="./payment-proof-report.html">Proof Report</a><a href="./social-gift.html">Social Gift Surface</a><a href="/api/governance?view=gift-payment">Gift API</a></div>
         </div>
         <div class="status-chip"><span>Fulfilled Gifts</span><b id="fulfilledGifts">0</b><small>payment receipt evidence</small></div>
       </section>
       <section class="surface-grid three" id="giftMetrics"></section>
+      <section class="surface-card"><span class="surface-label">Proof Gate</span><h2>Checkout + Receipt Evidence</h2><section class="runtime-lane" id="proofGate"></section></section>
       <section class="surface-card"><span class="surface-label">Required Evidence</span><h2>Payment Proof Fields</h2><div class="chip-row" id="giftRequired"></div></section>
       <section class="surface-card"><span class="surface-label">Checkout States</span><h2>Blocked Flow</h2><section class="runtime-lane" id="giftStates"></section></section>
     </section>
@@ -34,6 +35,9 @@
       document.getElementById("giftMetrics").innerHTML = Object.entries(data.counts).map(([label, value]) => `
         <article class="surface-card"><span class="surface-label">${label}</span><b>${value}</b></article>
       `).join("");
+      document.getElementById("proofGate").innerHTML = data.proofGate ? `
+        <article class="runtime-row"><span>${data.proofGate.status}</span><div><b>${data.proofGate.name}</b><p>${data.proofGate.detail}</p></div><small class="surface-state-pill">${data.verificationState}</small></article>
+      ` : "";
       document.getElementById("giftRequired").innerHTML = data.requiredEvidence.map((field) => `<span class="surface-state-pill">${field}</span>`).join("");
       document.getElementById("giftStates").innerHTML = data.states.map((state) => `
         <article class="runtime-row"><span>${state.key}</span><div><b>${state.label}</b><p>${state.blocker}</p></div><small class="surface-state-pill">${state.status}</small></article>

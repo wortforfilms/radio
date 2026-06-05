@@ -1,0 +1,9 @@
+services:
+  api:
+    image: hdfc-upi-parser:blocked
+    environment:
+      ENV: production
+      PRODUCTION_READY: "false"
+    deploy:
+      replicas: 0
+

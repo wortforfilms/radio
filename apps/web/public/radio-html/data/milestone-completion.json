@@ -17,7 +17,9 @@
     "productionReady": 0,
     "shipDecision": "NO_SHIP",
     "rightsClosureClosed": 0,
-    "rightsClosureBlocked": 19
+    "rightsClosureBlocked": 19,
+    "paymentProofReceipts": 0,
+    "paymentProofBlocked": 5
   },
   "milestones": [
     {
@@ -38,8 +40,8 @@
       "key": "gift-payment-proof-lane",
       "label": "Gift Payment Proof Lane",
       "status": "implemented-draft",
-      "evidence": "/radio-html/data/payment-proof-lane.json",
-      "blocker": "checkout provider and receipt evidence NULL"
+      "evidence": "/radio-html/data/payment-proof-report.json",
+      "blocker": "Gift/payment proof blocked: 5 state(s) lack complete proof."
     },
     {
       "key": "tauri-installer-pipeline",

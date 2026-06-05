@@ -1,0 +1,9 @@
+name: HDFC Parser CD
+on:
+  workflow_dispatch:
+jobs:
+  blocked:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "CD blocked until production evidence exists" && exit 1
+

@@ -1,0 +1,8 @@
+[
+  {
+    "subject": "HDFC Bank Account Alert: Credit of Rs. 500.00",
+    "body": "Your account XXXXXX1234 has been credited with Rs. 500.00 on 27-05-2026 at 14:30:25.\nUTR: HDFC26052714302512345\nFrom VPA: customer@okhdfcbank\nRemarks: Payment for Order ORD123456",
+    "verification_status": "candidate_only"
+  }
+]
+

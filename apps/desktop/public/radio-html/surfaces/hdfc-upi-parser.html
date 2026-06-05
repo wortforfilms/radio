@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - HDFC UPI Parser</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav>
+        <a href="./index.html">Index</a>
+        <a href="./payment-proof-report.html">Proof</a>
+        <a href="./gift-payment-evidence.html">Gift</a>
+        <a href="./no-ship-dashboard.html">No-Ship</a>
+      </nav>
+      <span>PHKD</span>
+    </aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">Gift / Payment Proof Lane</p>
+          <h1>HDFC UPI Parser</h1>
+          <p>Email parsing is candidate evidence only. Settlement, receipts, webhook signatures, fulfillment, and audit proof remain separate gates.</p>
+          <div class="surface-actions">
+            <a href="../data/hdfc-upi-parser-scaffold.json">Scaffold JSON</a>
+            <a href="../data/payment-proof-report.json">Proof Report</a>
+            <a href="./payment-proof.html">Payment Proof</a>
+          </div>
+        </div>
+        <div class="status-chip">
+          <span>State</span>
+          <b id="parserState">DRAFT</b>
+          <small id="parserDecision">NO_SHIP</small>
+        </div>
+      </section>
+
+      <section class="surface-grid three" id="parserMetrics"></section>
+
+      <section class="surface-card">
+        <span class="surface-label">Entrypoints</span>
+        <h2>Parser Pack</h2>
+        <section class="runtime-lane" id="entrypoints"></section>
+      </section>
+
+      <section class="surface-card">
+        <span class="surface-label">Required External Evidence</span>
+        <h2>Blocked Until Real Proof Arrives</h2>
+        <div class="chip-row" id="requiredEvidence"></div>
+      </section>
+
+      <section class="surface-card">
+        <span class="surface-label">Folder Structure</span>
+        <h2>Scaffold Coverage</h2>
+        <section class="runtime-lane" id="folderStructure"></section>
+      </section>
+    </section>
+  </main>
+  <script>
+    const valueText = (value) => value === null || value === undefined || value === "" ? "NULL" : String(value);
+    fetch("../data/hdfc-upi-parser-scaffold.json").then((response) => response.json()).then((data) => {
+      document.getElementById("parserState").textContent = data.verificationState || "draft";
+      document.getElementById("parserDecision").textContent = data.shipDecision || "NO_SHIP";
+      document.getElementById("parserMetrics").innerHTML = [
+        ["Package Files", data.counts?.packageFiles, "Scaffolded files in the integration pack."],
+        ["Core Modules", data.counts?.implementedCoreModules, "Parser, matcher, limiter, ML blocker."],
+        ["Tests", data.counts?.tests, "Local parser and fail-closed smoke coverage."],
+        ["Receipts", data.counts?.verifiedReceipts, "Verified payment receipts."],
+        ["Webhooks", data.counts?.verifiedWebhooks, "Verified provider webhook events."],
+        ["Blocked", data.counts?.blocked, "Proof states still blocked."]
+      ].map(([label, value, body]) => `<article class="surface-card"><span class="surface-label">${label}</span><b>${valueText(value)}</b><p>${body}</p></article>`).join("");
+
+      document.getElementById("entrypoints").innerHTML = (data.entrypoints || []).map((item) => `
+        <article class="runtime-row">
+          <span>${item.status}</span>
+          <div><b>${item.kind}</b><p>${item.path}</p></div>
+          <small class="surface-state-pill">${item.status}</small>
+        </article>
+      `).join("");
+
+      document.getElementById("requiredEvidence").innerHTML = (data.requiredExternalEvidence || []).map((item) => `<span class="surface-state-pill">${item}</span>`).join("");
+
+      document.getElementById("folderStructure").innerHTML = (data.folderStructure || []).map((item) => `
+        <article class="runtime-row">
+          <span>file</span>
+          <div><b>${item}</b><p>Scaffold path; live proof status remains NULL unless verified elsewhere.</p></div>
+          <small class="surface-state-pill">draft</small>
+        </article>
+      `).join("");
+    });
+  </script>
+</body>
+</html>
+

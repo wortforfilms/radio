@@ -1,0 +1,16 @@
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.api
+    environment:
+      ENV: draft
+      DATABASE_URL: sqlite:////app/data/hdfc_upi_parser.db
+    ports:
+      - "8000:8000"
+    volumes:
+      - hdfc_data:/app/data
+
+volumes:
+  hdfc_data:
+

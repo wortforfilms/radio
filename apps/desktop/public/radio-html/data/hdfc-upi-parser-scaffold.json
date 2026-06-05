@@ -1,0 +1,123 @@
+{
+  "id": "hdfc-upi-parser-scaffold",
+  "title": "HDFC UPI Parser Scaffold",
+  "generatedAt": "2026-06-05",
+  "scope": "Gift / Payment Proof Lane",
+  "path": "integrations/hdfc-upi-parser",
+  "verificationState": "draft-parser-candidate-only",
+  "shipDecision": "NO_SHIP",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "The HDFC UPI parser can produce candidate payment records from email text. It does not verify settlement, provider receipt, webhook signature, delivery proof, or audit records."
+  },
+  "counts": {
+    "packageFiles": 83,
+    "implementedCoreModules": 4,
+    "implementedModelContracts": 6,
+    "implementedServiceContracts": 6,
+    "tests": 7,
+    "verifiedReceipts": 0,
+    "verifiedWebhooks": 0,
+    "fulfilledGifts": 0,
+    "blocked": 5
+  },
+  "entrypoints": [
+    {
+      "kind": "python-package",
+      "path": "integrations/hdfc-upi-parser/hdfc_upi_parser/__init__.py",
+      "status": "draft"
+    },
+    {
+      "kind": "parser",
+      "path": "integrations/hdfc-upi-parser/hdfc_upi_parser/core/email_parser.py",
+      "status": "candidate-only"
+    },
+    {
+      "kind": "matcher",
+      "path": "integrations/hdfc-upi-parser/hdfc_upi_parser/core/payment_matcher.py",
+      "status": "candidate-only"
+    },
+    {
+      "kind": "cli",
+      "path": "integrations/hdfc-upi-parser/hdfc_upi_parser/cli/main.py",
+      "status": "draft"
+    },
+    {
+      "kind": "tests",
+      "path": "integrations/hdfc-upi-parser/tests",
+      "status": "local-smoke"
+    }
+  ],
+  "requiredExternalEvidence": [
+    "real bank mailbox credentials",
+    "approved parser sample corpus",
+    "provider checkout session",
+    "provider payment receipt",
+    "webhook signature header",
+    "webhook signature verification",
+    "delivery or fulfillment proof",
+    "AuditLog.created",
+    "reviewer",
+    "reviewedAt"
+  ],
+  "blockedClaims": [
+    "production-ready bank integration",
+    "verified HDFC settlement",
+    "verified UPI receipt",
+    "live IMAP polling",
+    "paid order mutation",
+    "gift fulfillment"
+  ],
+  "folderStructure": [
+    ".github/workflows/ci.yml",
+    ".github/workflows/cd.yml",
+    ".github/workflows/test.yml",
+    ".github/dependabot.yml",
+    "hdfc_upi_parser/core/email_parser.py",
+    "hdfc_upi_parser/core/payment_matcher.py",
+    "hdfc_upi_parser/core/rate_limiter.py",
+    "hdfc_upi_parser/core/ml_matcher.py",
+    "hdfc_upi_parser/services/async_poller.py",
+    "hdfc_upi_parser/services/sync_poller.py",
+    "hdfc_upi_parser/services/webhook_notifier.py",
+    "hdfc_upi_parser/services/order_service.py",
+    "hdfc_upi_parser/services/notification_service.py",
+    "hdfc_upi_parser/services/health_check.py",
+    "hdfc_upi_parser/models/base.py",
+    "hdfc_upi_parser/models/order.py",
+    "hdfc_upi_parser/models/transaction.py",
+    "hdfc_upi_parser/models/payment_log.py",
+    "hdfc_upi_parser/models/account.py",
+    "hdfc_upi_parser/models/webhook_delivery.py",
+    "hdfc_upi_parser/api/app.py",
+    "hdfc_upi_parser/api/routes.py",
+    "hdfc_upi_parser/api/websocket.py",
+    "hdfc_upi_parser/api/admin.py",
+    "hdfc_upi_parser/api/middleware.py",
+    "hdfc_upi_parser/utils/config.py",
+    "hdfc_upi_parser/utils/logger.py",
+    "hdfc_upi_parser/utils/validators.py",
+    "hdfc_upi_parser/utils/cache.py",
+    "hdfc_upi_parser/utils/metrics.py",
+    "hdfc_upi_parser/utils/circuit_breaker.py",
+    "hdfc_upi_parser/utils/crypto.py",
+    "hdfc_upi_parser/utils/db_utils.py",
+    "hdfc_upi_parser/utils/helpers.py",
+    "hdfc_upi_parser/workers/celery_app.py",
+    "hdfc_upi_parser/workers/tasks.py",
+    "hdfc_upi_parser/workers/scheduler.py",
+    "hdfc_upi_parser/cli/main.py",
+    "hdfc_upi_parser/cli/commands.py",
+    "hdfc_upi_parser/templates",
+    "hdfc_upi_parser/static",
+    "hdfc_upi_parser/migrations",
+    "tests",
+    "docker",
+    "scripts",
+    "docs"
+  ]
+}
+

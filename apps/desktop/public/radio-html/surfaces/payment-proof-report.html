@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - Payment Proof Report</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav>
+        <a href="./index.html">Index</a>
+        <a href="./gift-payment-evidence.html">Gift</a>
+        <a href="./payment-proof.html">Proof</a>
+        <a href="./social-gift.html">Social</a>
+        <a href="./production-freeze.html">Freeze</a>
+      </nav>
+      <span>PHKD</span>
+    </aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">Gift / Payment Proof Lane</p>
+          <h1>Checkout, Receipt, Webhook, Fulfillment</h1>
+          <p>Payment proof remains blocked until imported JSON/CSV evidence verifies checkout session, receipt, webhook signature, delivery proof, and audit creation.</p>
+          <div class="surface-actions">
+            <a href="../data/payment-proof-report.json">Proof JSON</a>
+            <a href="../data/gift-payment-evidence.json">Gift JSON</a>
+            <a href="./hdfc-upi-parser.html">HDFC UPI Parser</a>
+            <a href="./no-ship-dashboard.html">No-Ship</a>
+          </div>
+        </div>
+        <div class="status-chip">
+          <span>Gate</span>
+          <b id="paymentGate">BLOCKED</b>
+          <small id="paymentState">proof NULL</small>
+        </div>
+      </section>
+
+      <section class="surface-grid three" id="paymentMetrics"></section>
+
+      <section class="surface-card">
+        <span class="surface-label">Import Contract</span>
+        <h2>JSON/CSV Provider Proof</h2>
+        <section class="runtime-lane" id="importContract"></section>
+      </section>
+
+      <section class="surface-card">
+        <span class="surface-label">Required Evidence</span>
+        <h2>Payment Proof Fields</h2>
+        <div class="chip-row" id="requiredEvidence"></div>
+      </section>
+
+      <section class="surface-card">
+        <span class="surface-label">Parser Integrations</span>
+        <h2>Candidate Sources</h2>
+        <section class="runtime-lane" id="parserIntegrations"></section>
+      </section>
+
+      <section class="surface-card">
+        <span class="surface-label">Payment States</span>
+        <h2>Blocked Flow</h2>
+        <section class="runtime-lane" id="paymentStates"></section>
+      </section>
+    </section>
+  </main>
+  <script>
+    const valueText = (value) => value === null || value === undefined || value === "" ? "NULL" : Array.isArray(value) ? value.join(", ") : String(value);
+    fetch("../data/payment-proof-report.json").then((response) => response.json()).then((data) => {
+      document.getElementById("paymentGate").textContent = data.gate?.status || "blocked";
+      document.getElementById("paymentState").textContent = data.verificationState || "proof NULL";
+      document.getElementById("paymentMetrics").innerHTML = [
+        ["Imported Proofs", data.summary?.importedProofs, "JSON/CSV rows loaded."],
+        ["Checkout Sessions", data.summary?.checkoutSessions, "Verified checkout sessions."],
+        ["Payment Receipts", data.summary?.paymentReceipts, "Verified receipts."],
+        ["Webhook Events", data.summary?.webhookEvents, "Verified provider webhooks."],
+        ["Fulfilled Gifts", data.summary?.fulfilledGifts, "Verified gift delivery."],
+        ["Blocked States", data.summary?.blockedStates, "Missing payment proof states."]
+      ].map(([label, value, body]) => `<article class="surface-card"><span class="surface-label">${label}</span><b>${valueText(value)}</b><p>${body}</p></article>`).join("");
+
+      document.getElementById("importContract").innerHTML = [
+        ["env", data.import?.env],
+        ["path", data.import?.path],
+        ["status", data.import?.status],
+        ["accepted", data.import?.acceptedFormats],
+        ["error", data.import?.error]
+      ].map(([label, value]) => `
+        <article class="runtime-row">
+          <span>${label}</span>
+          <div><b>${valueText(value)}</b><p>Payment proof remains NULL until a real provider export is attached.</p></div>
+          <small class="surface-state-pill">${data.import?.status || "not-run"}</small>
+        </article>
+      `).join("");
+
+      document.getElementById("requiredEvidence").innerHTML = (data.requiredEvidence || []).map((field) => `<span class="surface-state-pill">${field}</span>`).join("");
+
+      document.getElementById("parserIntegrations").innerHTML = (data.parserIntegrations || []).map((item) => `
+        <article class="runtime-row">
+          <span>${item.status}</span>
+          <div><b>${item.title}</b><p>${item.path} · ${item.note}</p></div>
+          <small class="surface-state-pill">${item.verificationState}</small>
+        </article>
+      `).join("");
+
+      document.getElementById("paymentStates").innerHTML = (data.states || []).map((state) => `
+        <article class="runtime-row">
+          <span>${state.status}</span>
+          <div><b>${state.label}</b><p>${state.blocker || "verified"} · missing ${valueText(state.missing)}</p></div>
+          <small class="surface-state-pill">${state.proofAttached ? "proof-attached" : "proof-null"}</small>
+        </article>
+      `).join("");
+    });
+  </script>
+</body>
+</html>

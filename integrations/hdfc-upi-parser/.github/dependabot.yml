@@ -1,0 +1,7 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/integrations/hdfc-upi-parser"
+    schedule:
+      interval: "weekly"
+

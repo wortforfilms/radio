@@ -2,7 +2,7 @@
   "id": "radio-vaigyaaniq-gift-payment-evidence",
   "title": "Radio Vaigyaaniq Gift Payment Evidence Lane",
   "generatedAt": "2026-06-05",
-  "verificationState": "draft",
+  "verificationState": "draft-payment-proof-blocked",
   "phkd": {
     "rule": "fail_closed",
     "unknownValues": "NULL",
@@ -17,32 +17,44 @@
     "checkoutSessions": 0,
     "paymentReceipts": 0,
     "fulfilledGifts": 0,
-    "blocked": 4
+    "webhookEvents": 0,
+    "blocked": 5
   },
   "states": [
     {
       "key": "gift-intent",
       "label": "Gift intent",
       "status": "draft",
-      "evidence": "local UI intent only"
+      "evidence": null,
+      "blocker": "missing payerId, recipientId, amount, currency, intentCreatedAt"
     },
     {
       "key": "checkout-session",
       "label": "Checkout session",
       "status": "blocked",
-      "evidence": null
+      "evidence": null,
+      "blocker": "missing checkoutProvider, checkoutSessionId, payerId, amount, currency, checkoutStatus"
     },
     {
       "key": "payment-receipt",
       "label": "Payment receipt",
       "status": "blocked",
-      "evidence": null
+      "evidence": null,
+      "blocker": "missing paymentReceiptId, checkoutProvider, amount, currency, paidAt, settlementStatus"
+    },
+    {
+      "key": "webhook-event",
+      "label": "Webhook event",
+      "status": "blocked",
+      "evidence": null,
+      "blocker": "missing providerEventId, signatureHeader, webhookVerified, receivedAt"
     },
     {
       "key": "delivery-proof",
       "label": "Delivery proof",
       "status": "blocked",
-      "evidence": null
+      "evidence": null,
+      "blocker": "missing recipientId, paymentReceiptId, deliveredAt, fulfillmentId, AuditLog.created"
     }
   ],
   "requiredEvidence": [
@@ -53,8 +65,25 @@
     "paymentReceiptId",
     "amount",
     "currency",
+    "webhook signature verification",
     "deliveredAt",
     "AuditLog.created"
   ],
-  "note": "Gift button remains local intent only. No payment, checkout, receipt, wallet, or delivery claim is made."
+  "note": "Gift button remains local intent only until payment proof report passes.",
+  "proofGate": {
+    "name": "Gift / Payment Proof",
+    "status": "blocked",
+    "detail": "Gift/payment proof blocked: 5 state(s) lack complete proof."
+  },
+  "proofReport": "/radio-html/data/payment-proof-report.json",
+  "parserIntegrations": [
+    {
+      "id": "hdfc-upi-parser-scaffold",
+      "title": "HDFC UPI Parser Scaffold",
+      "path": "integrations/hdfc-upi-parser",
+      "status": "candidate-only",
+      "verificationState": "draft-parser-candidate-only",
+      "note": "Email parser candidates do not satisfy checkout, receipt, webhook, fulfillment, or audit proof."
+    }
+  ]
 }

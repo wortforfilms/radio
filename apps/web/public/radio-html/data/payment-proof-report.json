@@ -1,0 +1,314 @@
+{
+  "id": "radio-vaigyaaniq-payment-proof-report",
+  "title": "Radio Vaigyaaniq Gift / Payment Proof Report",
+  "generatedAt": "2026-06-05",
+  "verificationState": "blocked-payment-proof-null",
+  "shipDecision": "NO_SHIP",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "Payment proof requires checkout session, receipt, webhook signature verification, fulfillment proof, and audit evidence. No payment or fulfillment claim is made without imported proof."
+  },
+  "import": {
+    "path": null,
+    "status": "not-run",
+    "records": 0,
+    "error": null,
+    "acceptedFormats": [
+      "json",
+      "csv"
+    ],
+    "env": "EVIDENCE_PAYMENT_IMPORT"
+  },
+  "requiredEvidence": [
+    "payerId",
+    "recipientId",
+    "checkoutProvider",
+    "checkoutSessionId",
+    "paymentReceiptId",
+    "amount",
+    "currency",
+    "webhook signature verification",
+    "deliveredAt",
+    "AuditLog.created"
+  ],
+  "parserIntegrations": [
+    {
+      "id": "hdfc-upi-parser-scaffold",
+      "title": "HDFC UPI Parser Scaffold",
+      "path": "integrations/hdfc-upi-parser",
+      "status": "candidate-only",
+      "verificationState": "draft-parser-candidate-only",
+      "note": "Email parser candidates do not satisfy checkout, receipt, webhook, fulfillment, or audit proof."
+    }
+  ],
+  "summary": {
+    "importedProofs": 0,
+    "giftIntents": 0,
+    "checkoutSessions": 0,
+    "paymentReceipts": 0,
+    "webhookEvents": 0,
+    "fulfilledGifts": 0,
+    "verifiedStates": 0,
+    "blockedStates": 5,
+    "missingPayerId": 2,
+    "missingRecipientId": 2,
+    "missingCheckoutSession": 1,
+    "missingPaymentReceipt": 2,
+    "missingWebhookSignature": 1,
+    "missingDeliveryProof": 1,
+    "auditUnverified": 2
+  },
+  "gate": {
+    "name": "Gift / Payment Proof",
+    "status": "blocked",
+    "detail": "Gift/payment proof blocked: 5 state(s) lack complete proof."
+  },
+  "states": [
+    {
+      "key": "gift-intent",
+      "label": "Gift intent",
+      "status": "draft",
+      "proofAttached": false,
+      "checks": [
+        {
+          "key": "payerId",
+          "label": "payerId",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "recipientId",
+          "label": "recipientId",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "amount",
+          "label": "amount",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "currency",
+          "label": "currency",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "intentCreatedAt",
+          "label": "intentCreatedAt",
+          "status": "blocked",
+          "evidence": null
+        }
+      ],
+      "missing": [
+        "payerId",
+        "recipientId",
+        "amount",
+        "currency",
+        "intentCreatedAt"
+      ],
+      "blocker": "missing payerId, recipientId, amount, currency, intentCreatedAt",
+      "evidence": null
+    },
+    {
+      "key": "checkout-session",
+      "label": "Checkout session",
+      "status": "blocked",
+      "proofAttached": false,
+      "checks": [
+        {
+          "key": "checkoutProvider",
+          "label": "checkoutProvider",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "checkoutSessionId",
+          "label": "checkoutSessionId",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "payerId",
+          "label": "payerId",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "amount",
+          "label": "amount",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "currency",
+          "label": "currency",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "checkoutStatus",
+          "label": "checkoutStatus",
+          "status": "blocked",
+          "evidence": null
+        }
+      ],
+      "missing": [
+        "checkoutProvider",
+        "checkoutSessionId",
+        "payerId",
+        "amount",
+        "currency",
+        "checkoutStatus"
+      ],
+      "blocker": "missing checkoutProvider, checkoutSessionId, payerId, amount, currency, checkoutStatus",
+      "evidence": null
+    },
+    {
+      "key": "payment-receipt",
+      "label": "Payment receipt",
+      "status": "blocked",
+      "proofAttached": false,
+      "checks": [
+        {
+          "key": "paymentReceiptId",
+          "label": "paymentReceiptId",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "checkoutProvider",
+          "label": "checkoutProvider",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "amount",
+          "label": "amount",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "currency",
+          "label": "currency",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "paidAt",
+          "label": "paidAt",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "settlementStatus",
+          "label": "settlementStatus",
+          "status": "blocked",
+          "evidence": null
+        }
+      ],
+      "missing": [
+        "paymentReceiptId",
+        "checkoutProvider",
+        "amount",
+        "currency",
+        "paidAt",
+        "settlementStatus"
+      ],
+      "blocker": "missing paymentReceiptId, checkoutProvider, amount, currency, paidAt, settlementStatus",
+      "evidence": null
+    },
+    {
+      "key": "webhook-event",
+      "label": "Webhook event",
+      "status": "blocked",
+      "proofAttached": false,
+      "checks": [
+        {
+          "key": "providerEventId",
+          "label": "providerEventId",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "signatureHeader",
+          "label": "signatureHeader",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "webhookVerified",
+          "label": "webhookVerified",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "receivedAt",
+          "label": "receivedAt",
+          "status": "blocked",
+          "evidence": null
+        }
+      ],
+      "missing": [
+        "providerEventId",
+        "signatureHeader",
+        "webhookVerified",
+        "receivedAt"
+      ],
+      "blocker": "missing providerEventId, signatureHeader, webhookVerified, receivedAt",
+      "evidence": null
+    },
+    {
+      "key": "delivery-proof",
+      "label": "Delivery proof",
+      "status": "blocked",
+      "proofAttached": false,
+      "checks": [
+        {
+          "key": "recipientId",
+          "label": "recipientId",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "paymentReceiptId",
+          "label": "paymentReceiptId",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "deliveredAt",
+          "label": "deliveredAt",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "fulfillmentId",
+          "label": "fulfillmentId",
+          "status": "blocked",
+          "evidence": null
+        },
+        {
+          "key": "AuditLog.created",
+          "label": "AuditLog.created",
+          "status": "blocked",
+          "evidence": null
+        }
+      ],
+      "missing": [
+        "recipientId",
+        "paymentReceiptId",
+        "deliveredAt",
+        "fulfillmentId",
+        "AuditLog.created"
+      ],
+      "blocker": "missing recipientId, paymentReceiptId, deliveredAt, fulfillmentId, AuditLog.created",
+      "evidence": null
+    }
+  ],
+  "rawProofs": []
+}
