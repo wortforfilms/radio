@@ -12,6 +12,7 @@
     "prisma:seed": "tsx prisma/seed.ts",
     "radio:milestones": "node scripts/product-factory/complete-radio-next-milestones.mjs",
     "radio:hdfc:test": "PYTHONPATH=integrations/hdfc-upi-parser python3 -m unittest discover -s integrations/hdfc-upi-parser/tests",
+    "radio:proof:milestones": "node scripts/product-factory/complete-radio-proof-milestones.mjs",
     "radio:payment:proof": "node scripts/product-factory/verify-radio-payment-proof.mjs",
     "radio:rights:closure": "node scripts/product-factory/verify-radio-rights-closure.mjs",
     "radio:release:check": "node scripts/product-factory/radio-release-evidence-orchestrator.mjs",

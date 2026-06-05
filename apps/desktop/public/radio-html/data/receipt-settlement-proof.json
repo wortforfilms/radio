@@ -1,0 +1,58 @@
+{
+  "id": "radio-receipt-settlement-proof",
+  "title": "Receipt + Settlement Proof Gate",
+  "generatedAt": "2026-06-05",
+  "verificationState": "blocked-receipt-proof-null",
+  "shipDecision": "NO_SHIP",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "Receipt proof requires provider-issued receipt/capture evidence and settlement status. Bank email parse or UI gift intent is insufficient."
+  },
+  "counts": {
+    "receiptRecords": 0,
+    "settlementRecords": 0,
+    "reconciledUtrs": 0,
+    "verifiedReceipts": 0,
+    "blocked": 5
+  },
+  "statusMapping": [
+    {
+      "providerStatus": "paid",
+      "normalizedStatus": "paid",
+      "accepted": true
+    },
+    {
+      "providerStatus": "captured",
+      "normalizedStatus": "paid",
+      "accepted": true
+    },
+    {
+      "providerStatus": "settled",
+      "normalizedStatus": "settled",
+      "accepted": true
+    },
+    {
+      "providerStatus": "succeeded",
+      "normalizedStatus": "paid",
+      "accepted": true
+    },
+    {
+      "providerStatus": "created/open/pending/failed/refunded",
+      "normalizedStatus": "blocked",
+      "accepted": false
+    }
+  ],
+  "requiredEvidence": [
+    "paymentReceiptId",
+    "checkoutProvider",
+    "amount",
+    "currency",
+    "paidAt",
+    "settlementStatus",
+    "providerDashboardCitation",
+    "AuditLog.created"
+  ]
+}

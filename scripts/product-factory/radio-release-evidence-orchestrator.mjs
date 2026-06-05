@@ -14,6 +14,7 @@ function runStep(key, command, args, options = {}) {
   const result = spawnSync(command, args, {
     stdio: "pipe",
     encoding: "utf8",
+    cwd: options.cwd ? path.resolve(options.cwd) : undefined,
     env: { ...process.env, ...options.env }
   });
   const finishedAt = new Date().toISOString();
@@ -63,7 +64,14 @@ function readEvidenceStep(key, evidencePath, validate) {
 
 const steps = [
   runStep("core-data", nodeBin, ["scripts/product-factory/complete-radio-milestones.mjs"]),
-  runStep("next-milestones", nodeBin, ["scripts/product-factory/complete-radio-next-milestones.mjs"])
+  runStep("next-milestones", nodeBin, ["scripts/product-factory/complete-radio-next-milestones.mjs"]),
+  runStep("desktop-signing", "npm", ["run", "evidence:signing"], { cwd: "apps/desktop" }),
+  runStep("sync-gui-evidence", nodeBin, ["scripts/product-factory/sync-radio-gui-smoke-evidence.mjs"]),
+  runStep("sync-signing-evidence", nodeBin, ["scripts/product-factory/sync-radio-signing-evidence.mjs"]),
+  runStep("proof-milestones", nodeBin, ["scripts/product-factory/complete-radio-proof-milestones.mjs"]),
+  runStep("payment-proof", nodeBin, ["scripts/product-factory/verify-radio-payment-proof.mjs"]),
+  runStep("rights-closure", nodeBin, ["scripts/product-factory/verify-radio-rights-closure.mjs"]),
+  runStep("hdfc-parser-tests", "npm", ["run", "radio:hdfc:test"])
 ];
 
 if (runVerify) {

@@ -11,11 +11,11 @@
     "note": "Milestone records describe local implementation and evidence gates only. They do not verify rights, payment settlement, installer signing, release approval, external telemetry, or production readiness."
   },
   "counts": {
-    "configuredCommands": 5,
+    "configuredCommands": 12,
     "optionalBrowserChecks": 2,
-    "lastRunFailures": 0,
+    "externalProofCreated": 0,
     "productionReady": 0,
-    "blockedEvidenceLanes": 4
+    "blockedEvidenceLanes": 6
   },
   "command": "npm run radio:release:check",
   "steps": [
@@ -23,31 +23,73 @@
       "key": "core-data",
       "command": "node scripts/product-factory/complete-radio-milestones.mjs",
       "status": "configured",
-      "description": "Refreshes core Radio evidence frames."
+      "description": "Configured local evidence refresh step."
     },
     {
       "key": "next-milestones",
       "command": "node scripts/product-factory/complete-radio-next-milestones.mjs",
       "status": "configured",
-      "description": "Refreshes milestone evidence frames."
+      "description": "Configured local evidence refresh step."
+    },
+    {
+      "key": "desktop-signing",
+      "command": "cd apps/desktop && npm run evidence:signing",
+      "status": "configured",
+      "description": "Configured local evidence refresh step."
+    },
+    {
+      "key": "sync-gui-evidence",
+      "command": "node scripts/product-factory/sync-radio-gui-smoke-evidence.mjs",
+      "status": "configured",
+      "description": "Configured local evidence refresh step."
+    },
+    {
+      "key": "sync-signing-evidence",
+      "command": "node scripts/product-factory/sync-radio-signing-evidence.mjs",
+      "status": "configured",
+      "description": "Configured local evidence refresh step."
+    },
+    {
+      "key": "proof-milestones",
+      "command": "node scripts/product-factory/complete-radio-proof-milestones.mjs",
+      "status": "configured",
+      "description": "Configured local evidence refresh step."
+    },
+    {
+      "key": "payment-proof",
+      "command": "node scripts/product-factory/verify-radio-payment-proof.mjs",
+      "status": "configured",
+      "description": "Configured local evidence refresh step."
+    },
+    {
+      "key": "rights-closure",
+      "command": "node scripts/product-factory/verify-radio-rights-closure.mjs",
+      "status": "configured",
+      "description": "Configured local evidence refresh step."
+    },
+    {
+      "key": "hdfc-parser-tests",
+      "command": "npm run radio:hdfc:test",
+      "status": "configured",
+      "description": "Configured local evidence refresh step."
     },
     {
       "key": "tests",
       "command": "npm test",
       "status": "configured",
-      "description": "Runs Vitest."
+      "description": "Configured local evidence refresh step."
     },
     {
       "key": "build",
       "command": "npm run build",
       "status": "configured",
-      "description": "Runs Next production build."
+      "description": "Configured local evidence refresh step."
     },
     {
       "key": "browser-evidence",
       "command": "RADIO_RELEASE_BROWSER_URL=http://127.0.0.1:3000 npm run radio:release:check",
       "status": "optional",
-      "description": "Runs governance and Visual QA Playwright checks when a local server is available."
+      "description": "Optional browser checks when a local server is available."
     }
   ]
 }

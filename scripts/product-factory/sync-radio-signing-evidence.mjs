@@ -24,6 +24,15 @@ const statusCounts = (items) => {
   }
   return counts;
 };
+const upsertByKey = (items, nextItem) => {
+  const list = items || [];
+  const index = list.findIndex((item) => item.key === nextItem.key);
+  if (index >= 0) {
+    list[index] = { ...list[index], ...nextItem };
+    return list;
+  }
+  return [...list, nextItem];
+};
 
 const signing = readJson(path.join(evidenceRoot, "signing-notarization-report.json"), {
   verification_state: "blocked-signing-notarization-proof-null",
@@ -153,9 +162,18 @@ for (const root of [webRoot, desktopRoot]) {
     ...(pipeline.counts || {}),
     signedArtifacts: isSigned ? 1 : 0,
     notarizedArtifacts: isSigned ? 1 : 0,
-    signingBlockedChecks: signingData.counts.blockedChecks
+    signingBlockedChecks: signingData.counts.blockedChecks,
+    localUnsignedArtifacts: macArtifact && !isSigned ? 1 : 0,
+    nullArtifacts: macArtifact ? 5 : 6,
+    blocked: isSigned ? 5 : 6
   };
   pipeline.commands = pipeline.commands || [];
+  pipeline.commands = upsertByKey(pipeline.commands, {
+    key: "tauri-build",
+    command: "cd apps/desktop && npm run evidence",
+    status: macArtifact ? "pass-local-app" : "blocked",
+    description: "Builds unsigned local macOS .app and records bundle hash; signing and GUI proof remain blocked/not-run."
+  });
   const command = {
     key: "signing-notarization-evidence",
     command: "cd apps/desktop && npm run evidence:signing && npm run evidence",
@@ -165,6 +183,15 @@ for (const root of [webRoot, desktopRoot]) {
   const index = pipeline.commands.findIndex((item) => item.key === command.key);
   if (index >= 0) pipeline.commands[index] = command;
   else pipeline.commands.push(command);
+  pipeline.records = upsertByKey(pipeline.records || [], {
+    key: "macos-app",
+    platform: "macOS",
+    format: "app",
+    path: macArtifact,
+    checksum: macChecksum,
+    signingEvidence: signingEvidencePath,
+    status: isSigned ? "signed-notarized-verified" : (macArtifact ? "draft-ready-unsigned" : "blocked")
+  });
   writeJson(pipelinePath, pipeline);
 }
 
@@ -194,9 +221,25 @@ for (const root of [webRoot, desktopRoot]) {
   if (existing >= 0) checklist[existing] = checklistItem;
   else checklist.push(checklistItem);
   readiness.checklist = checklist;
+  readiness.checklist = [
+    {
+      key: "tauri-app-bundle",
+      label: "Local macOS .app bundle",
+      status: macArtifact ? "draft-ready" : "blocked",
+      evidence: "/apps/desktop/evidence/bundle-report.json"
+    },
+    {
+      key: "bundle-hash",
+      label: "Bundle hash recorded",
+      status: macChecksum ? "draft-ready" : "blocked",
+      evidence: "/apps/desktop/evidence/bundle-report.json"
+    }
+  ].reduce((items, item) => upsertByKey(items, item), readiness.checklist);
   readiness.platformMatrix = (readiness.platformMatrix || []).map((platform) => platform.platform === "macOS"
     ? {
         ...platform,
+        key: "macos",
+        label: "macOS local app bundle",
         signed: isSigned,
         notarized: isSigned,
         artifact: macArtifact,
@@ -229,6 +272,35 @@ for (const root of [webRoot, desktopRoot]) {
     releaseBlockerSummary: qa?.release_blocker_summary ?? readiness.localDesktopEvidence?.releaseBlockerSummary ?? null
   };
   writeJson(readinessPath, readiness);
+}
+
+for (const root of [webRoot, desktopRoot]) {
+  const alphaPath = path.join(root, "data", "desktop-alpha-bundle.json");
+  const alpha = readJson(alphaPath, null);
+  if (!alpha) continue;
+  alpha.generatedAt = today;
+  alpha.verificationState = macArtifact
+    ? "draft-local-app-built-open-proof-null"
+    : (alpha.verificationState ?? "draft-alpha");
+  alpha.counts = {
+    ...(alpha.counts || {}),
+    signedInstallers: isSigned ? 1 : 0,
+    localUnsignedArtifacts: macArtifact && !isSigned ? 1 : 0,
+    productionReady: 0
+  };
+  alpha.launchModes = upsertByKey(alpha.launchModes || [], {
+    key: "tauri-app",
+    label: isSigned ? "Signed local app artifact" : "Unsigned local macOS .app",
+    status: isSigned ? "signed-notarized-verified" : (macArtifact ? "draft-ready-unsigned" : "blocked"),
+    evidence: "/apps/desktop/evidence/bundle-report.json"
+  });
+  alpha.records = upsertByKey(alpha.records || [], {
+    key: "local-macos-app",
+    label: macArtifact ? "Unsigned local macOS .app built" : "Local macOS .app artifact",
+    status: isSigned ? "signed-notarized-verified" : (macArtifact ? "draft-ready-unsigned" : "blocked"),
+    blocker: isSigned ? null : (macArtifact ? "signing/notarization and manual open evidence still NULL" : "bundle artifact missing")
+  });
+  writeJson(alphaPath, alpha);
 }
 
 console.log(JSON.stringify({

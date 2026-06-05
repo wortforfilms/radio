@@ -15,12 +15,12 @@
     "artifactSlots": 6,
     "signedArtifacts": 0,
     "nullArtifacts": 5,
-    "blocked": 5,
-    "localUnsignedArtifacts": 1,
-    "appOpenProof": 0,
+    "blocked": 6,
     "guiSmokeProof": 0,
+    "appOpenProof": 0,
     "notarizedArtifacts": 0,
-    "signingBlockedChecks": 6
+    "signingBlockedChecks": 6,
+    "localUnsignedArtifacts": 1
   },
   "commands": [
     {
@@ -60,8 +60,8 @@
       "platform": "macOS",
       "format": "app",
       "path": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-      "checksum": "41eeec852a44ec86299911ae90561576eb1c874badee9fcc23148d15c3c324e4",
-      "signingEvidence": null,
+      "checksum": "c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11",
+      "signingEvidence": "/radio-html/data/signing-notarization-evidence.json",
       "status": "draft-ready-unsigned"
     },
     {

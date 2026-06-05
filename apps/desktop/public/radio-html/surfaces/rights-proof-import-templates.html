@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Surface - Rights Proof Import Templates</title>
+  <link rel="stylesheet" href="./surface-kit.css">
+</head>
+<body>
+  <main class="surface-shell">
+    <aside class="surface-rail">
+      <div class="surface-mark">RV</div>
+      <nav>
+        <a href="./index.html">Index</a>
+        <a href="./payment-proof-report.html">Pay</a>
+        <a href="./rights-closure.html">Rights</a>
+        <a href="./release-orchestration.html">Ship</a>
+      </nav>
+      <span>PHKD</span>
+    </aside>
+    <section class="surface-main">
+      <section class="surface-hero">
+        <div>
+          <p class="eyebrow">Rights Gate</p>
+          <h1>Rights Proof Import Templates</h1>
+          <p id="surfaceNote">Loading fail-closed evidence lane...</p>
+          <div class="surface-actions">
+            <a href="../data/rights-proof-import-templates.json">Data JSON</a>
+            <a href="./no-ship-dashboard.html">No-Ship</a>
+          </div>
+        </div>
+        <div class="status-chip">
+          <span>State</span>
+          <b id="surfaceState">BLOCKED</b>
+          <small id="surfaceShip">NO_SHIP</small>
+        </div>
+      </section>
+      <section class="surface-grid three" id="metrics"></section>
+      <section class="surface-card">
+        <span class="surface-label">Evidence Details</span>
+        <h2>Records</h2>
+        <section class="runtime-lane" id="records"></section>
+      </section>
+    </section>
+  </main>
+  <script>
+    const valueText = (value) => value === null || value === undefined || value === "" ? "NULL" : Array.isArray(value) ? value.join(", ") : typeof value === "object" ? JSON.stringify(value) : String(value);
+    const row = (label, body, status = "blocked") => `<article class="runtime-row"><span>${status}</span><div><b>${label}</b><p>${body}</p></div><small class="surface-state-pill">${status}</small></article>`;
+    fetch("../data/rights-proof-import-templates.json").then((response) => response.json()).then((data) => {
+      document.getElementById("surfaceState").textContent = data.verificationState || "blocked";
+      document.getElementById("surfaceShip").textContent = data.shipDecision || "NO_SHIP";
+      document.getElementById("surfaceNote").textContent = data.phkd?.note || "Unknown values remain NULL.";
+      document.getElementById("metrics").innerHTML = Object.entries(data.counts || {}).map(([key, value]) => `<article class="surface-card"><span class="surface-label">${key}</span><b>${valueText(value)}</b><p>Local evidence counter.</p></article>`).join("");
+      const records = data.templates || data.requiredEvidence || data.mapping || data.lanes || data.slots || data.steps || data.blockedClaims || [];
+      document.getElementById("records").innerHTML = records.map((item) => {
+        if (Array.isArray(item)) return row(item[0], item.slice(1).map(valueText).join(" · "), "mapping");
+        if (typeof item === "string") return row(item, "Required evidence is currently NULL.", "required");
+        return row(item.label || item.key || item.title || "record", valueText(item.fields || item.required || item.command || item.blocker || item.status || item), item.status || "draft");
+      }).join("");
+    });
+  </script>
+</body>
+</html>

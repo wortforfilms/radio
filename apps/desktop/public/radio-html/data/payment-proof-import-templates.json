@@ -1,0 +1,296 @@
+{
+  "id": "radio-payment-proof-import-templates",
+  "title": "Radio Vaigyaaniq Payment Proof Import Templates",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft-templates-no-proof",
+  "shipDecision": "NO_SHIP",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "Templates define accepted JSON/CSV proof shape only. They do not create receipt, webhook, fulfillment, or audit proof."
+  },
+  "importEnv": "EVIDENCE_PAYMENT_IMPORT",
+  "acceptedFormats": [
+    "json",
+    "csv"
+  ],
+  "csvHeader": "kind,payerId,recipientId,checkoutProvider,checkoutSessionId,paymentReceiptId,amount,currency,paidAt,settlementStatus,providerEventId,signatureHeader,webhookVerified,receivedAt,deliveredAt,fulfillmentId,AuditLog.created",
+  "counts": {
+    "templates": 5,
+    "requiredFields": 26,
+    "exampleRowsWithValues": 0,
+    "blocked": 5
+  },
+  "templates": [
+    {
+      "key": "gift-intent",
+      "label": "Gift Intent",
+      "fields": [
+        {
+          "key": "payerId",
+          "required": true,
+          "value": null,
+          "aliases": [
+            "payer_id",
+            "fromUserId"
+          ],
+          "description": "Internal payer/user id."
+        },
+        {
+          "key": "recipientId",
+          "required": true,
+          "value": null,
+          "aliases": [
+            "recipient_id",
+            "toUserId"
+          ],
+          "description": "Internal recipient/user id."
+        },
+        {
+          "key": "amount",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "Positive numeric gift amount."
+        },
+        {
+          "key": "currency",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "ISO currency code, expected INR for UPI lanes."
+        },
+        {
+          "key": "intentCreatedAt",
+          "required": true,
+          "value": null,
+          "aliases": [
+            "createdAt"
+          ],
+          "description": "Timestamp when gift intent was created."
+        }
+      ],
+      "jsonObject": {
+        "payerId": null,
+        "recipientId": null,
+        "amount": null,
+        "currency": null,
+        "intentCreatedAt": null
+      },
+      "status": "template-only"
+    },
+    {
+      "key": "checkout-session",
+      "label": "Checkout Session",
+      "fields": [
+        {
+          "key": "checkoutProvider",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "Provider name, such as Razorpay/Stripe/UPI provider."
+        },
+        {
+          "key": "checkoutSessionId",
+          "required": true,
+          "value": null,
+          "aliases": [
+            "sessionId"
+          ],
+          "description": "Provider checkout/session id."
+        },
+        {
+          "key": "payerId",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "Internal payer/user id."
+        },
+        {
+          "key": "amount",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "Positive numeric checkout amount."
+        },
+        {
+          "key": "currency",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "ISO currency code."
+        },
+        {
+          "key": "checkoutStatus",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "Provider checkout status: open, complete, paid, or succeeded."
+        }
+      ],
+      "jsonObject": {
+        "checkoutProvider": null,
+        "checkoutSessionId": null,
+        "payerId": null,
+        "amount": null,
+        "currency": null,
+        "checkoutStatus": null
+      },
+      "status": "template-only"
+    },
+    {
+      "key": "payment-receipt",
+      "label": "Payment Receipt",
+      "fields": [
+        {
+          "key": "paymentReceiptId",
+          "required": true,
+          "value": null,
+          "aliases": [
+            "receiptId",
+            "transactionId"
+          ],
+          "description": "Provider payment, receipt, capture, or transaction id."
+        },
+        {
+          "key": "checkoutProvider",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "Provider that issued the receipt."
+        },
+        {
+          "key": "amount",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "Receipt amount."
+        },
+        {
+          "key": "currency",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "Receipt currency."
+        },
+        {
+          "key": "paidAt",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "Provider paid/captured timestamp."
+        },
+        {
+          "key": "settlementStatus",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "Paid, captured, settled, or succeeded status."
+        }
+      ],
+      "jsonObject": {
+        "paymentReceiptId": null,
+        "checkoutProvider": null,
+        "amount": null,
+        "currency": null,
+        "paidAt": null,
+        "settlementStatus": null
+      },
+      "status": "template-only"
+    },
+    {
+      "key": "webhook-event",
+      "label": "Webhook Event",
+      "fields": [
+        {
+          "key": "providerEventId",
+          "required": true,
+          "value": null,
+          "aliases": [
+            "eventId"
+          ],
+          "description": "Provider webhook event id."
+        },
+        {
+          "key": "signatureHeader",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "Raw provider signature header."
+        },
+        {
+          "key": "webhookVerified",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "Boolean result of local signature verification."
+        },
+        {
+          "key": "receivedAt",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "Webhook receipt timestamp."
+        }
+      ],
+      "jsonObject": {
+        "providerEventId": null,
+        "signatureHeader": null,
+        "webhookVerified": null,
+        "receivedAt": null
+      },
+      "status": "template-only"
+    },
+    {
+      "key": "delivery-proof",
+      "label": "Delivery Proof",
+      "fields": [
+        {
+          "key": "recipientId",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "Internal gift recipient/user id."
+        },
+        {
+          "key": "paymentReceiptId",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "Receipt id linked to this fulfillment."
+        },
+        {
+          "key": "deliveredAt",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "Timestamp when gift was delivered/fulfilled."
+        },
+        {
+          "key": "fulfillmentId",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "Internal fulfillment id."
+        },
+        {
+          "key": "AuditLog.created",
+          "required": true,
+          "value": null,
+          "aliases": [],
+          "description": "Boolean audit record creation evidence."
+        }
+      ],
+      "jsonObject": {
+        "recipientId": null,
+        "paymentReceiptId": null,
+        "deliveredAt": null,
+        "fulfillmentId": null,
+        "AuditLog.created": null
+      },
+      "status": "template-only"
+    }
+  ]
+}

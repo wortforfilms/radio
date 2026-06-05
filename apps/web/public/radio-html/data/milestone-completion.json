@@ -16,10 +16,10 @@
     "evidenceBlocked": 6,
     "productionReady": 0,
     "shipDecision": "NO_SHIP",
-    "rightsClosureClosed": 0,
-    "rightsClosureBlocked": 19,
     "paymentProofReceipts": 0,
-    "paymentProofBlocked": 5
+    "paymentProofBlocked": 5,
+    "rightsClosureClosed": 0,
+    "rightsClosureBlocked": 19
   },
   "milestones": [
     {

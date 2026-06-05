@@ -14,11 +14,11 @@
     "note": "The HDFC UPI parser can produce candidate payment records from email text. It does not verify settlement, provider receipt, webhook signature, delivery proof, or audit records."
   },
   "counts": {
-    "packageFiles": 83,
+    "packageFiles": 107,
     "implementedCoreModules": 4,
     "implementedModelContracts": 6,
-    "implementedServiceContracts": 6,
-    "tests": 7,
+    "implementedServiceContracts": 7,
+    "tests": 12,
     "verifiedReceipts": 0,
     "verifiedWebhooks": 0,
     "fulfilledGifts": 0,
@@ -49,6 +49,11 @@
       "kind": "tests",
       "path": "integrations/hdfc-upi-parser/tests",
       "status": "local-smoke"
+    },
+    {
+      "kind": "proof-adapter",
+      "path": "integrations/hdfc-upi-parser/hdfc_upi_parser/services/proof_adapter.py",
+      "status": "candidate-only"
     }
   ],
   "requiredExternalEvidence": [
@@ -120,4 +125,3 @@
     "docs"
   ]
 }
-

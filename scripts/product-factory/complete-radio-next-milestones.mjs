@@ -59,7 +59,8 @@ function copyToDesktop(relativePath) {
   fs.copyFileSync(source, target);
 }
 
-function surfaceHtml({ title, eyebrow, headline, body, jsonPath, apiPath, primaryMetric, countKeys, listTitle, listKey, listMap = "default" }) {
+function surfaceHtml({ title, eyebrow, headline, body, jsonPath, apiPath, primaryMetric, countKeys, listTitle, listKey, listMap = "default", extraActions = [] }) {
+  const extraActionHtml = extraActions.map((action) => `<a href="${action.href}">${action.label}</a>`).join("");
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -81,7 +82,7 @@ function surfaceHtml({ title, eyebrow, headline, body, jsonPath, apiPath, primar
           <p class="eyebrow">${eyebrow}</p>
           <h1>${headline}</h1>
           <p>${body}</p>
-          <div class="surface-actions"><a href="${jsonPath}">Data JSON</a><a href="${apiPath}">API View</a><a href="./no-ship-dashboard.html">No-Ship Dashboard</a></div>
+          <div class="surface-actions"><a href="${jsonPath}">Data JSON</a>${extraActionHtml}<a href="${apiPath}">API View</a><a href="./no-ship-dashboard.html">No-Ship Dashboard</a></div>
         </div>
         <div class="status-chip"><span>${primaryMetric.label}</span><b id="primaryMetric">NULL</b><small>${primaryMetric.note}</small></div>
       </section>
@@ -119,6 +120,7 @@ const releaseReview = readJson(path.join(root, "data/release-review.json"), { co
 const tauriReadiness = readJson(path.join(root, "data/tauri-readiness.json"), { evidenceLanes: [], noShipDashboard: {}, checklist: [] });
 const productionFreeze = readJson(path.join(root, "data/production-freeze.json"), { frozenDrafts: [], blockedProductionClaims: [] });
 const visualQa = readJson(path.join(root, "data/visual-qa.json"), { counts: {}, targets: [] });
+const previousDesktopAlpha = readJson(path.join(root, "data/desktop-alpha-bundle.json"), null);
 
 const rightsReviewWorkbench = {
   id: "radio-vaigyaaniq-rights-review-workbench",
@@ -242,28 +244,36 @@ const desktopAlphaBundle = {
   id: "radio-vaigyaaniq-desktop-alpha-bundle",
   title: "Radio Vaigyaaniq Desktop Alpha Bundle",
   generatedAt: today,
-  verificationState: "draft-alpha",
+  verificationState: previousDesktopAlpha?.verificationState ?? "draft-alpha",
   phkd: dataPhkd,
   counts: {
     includedSurfaces: milestoneSurfaces.length + 19,
     includedDataFrames: milestoneDataRows.length + 10,
     signedInstallers: 0,
     productionReady: 0,
-    blockers: 4
+    blockers: 4,
+    ...(previousDesktopAlpha?.counts?.localUnsignedArtifacts !== undefined
+      ? { localUnsignedArtifacts: previousDesktopAlpha.counts.localUnsignedArtifacts }
+      : {}),
+    ...(previousDesktopAlpha?.counts?.appOpenProof !== undefined
+      ? { appOpenProof: previousDesktopAlpha.counts.appOpenProof }
+      : {})
   },
   alphaState: "local-alpha-no-ship",
-  launchModes: [
+  launchModes: uniqueBy([
+    ...(previousDesktopAlpha?.launchModes ?? []),
     { key: "web-dev", label: "Next local dev", status: "configured", evidence: "npm run dev -- --webpack -H 127.0.0.1 -p 3000" },
     { key: "static-html", label: "Browser-openable static HTML", status: "configured", evidence: "/radio-html/surfaces/index.html" },
     { key: "tauri-installer", label: "Signed Tauri installer", status: "blocked", evidence: "/radio-html/data/installer-evidence.json" }
-  ],
-  records: [
+  ], (item) => item.key),
+  records: uniqueBy([
+    ...(previousDesktopAlpha?.records ?? []),
     { key: "no-ship-labels", label: "Visible NO_SHIP labels", status: "configured", blocker: null },
     { key: "rights", label: "Verified rights", status: "blocked", blocker: "rights evidence NULL/unreviewed" },
     { key: "payment", label: "Payment receipts", status: "blocked", blocker: "checkout/payment evidence NULL" },
     { key: "installer", label: "Signed installer", status: "blocked", blocker: "signed installer evidence NULL" },
     { key: "release-review", label: "Human release approval", status: "blocked", blocker: "reviewer/reviewedAt NULL" }
-  ]
+  ], (item) => item.key)
 };
 
 const milestoneCompletion = {
@@ -343,7 +353,8 @@ const surfaceSpecs = [
     primaryMetric: { label: "Receipts", value: "data.counts?.paymentReceipts", note: "verified payments" },
     countKeys: ["giftIntents", "checkoutSessions", "paymentReceipts", "fulfilledGifts", "webhookEvents", "blocked"],
     listTitle: "Payment States",
-    listKey: "records"
+    listKey: "records",
+    extraActions: [{ href: "./payment-proof-report.html", label: "Proof Report" }]
   },
   {
     file: "surfaces/installer-pipeline.html",

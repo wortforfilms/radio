@@ -1,0 +1,77 @@
+{
+  "id": "hdfc-upi-parser-proof-adapter",
+  "title": "HDFC UPI Parser Evidence Adapter",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft-candidate-adapter",
+  "shipDecision": "NO_SHIP",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "Parsed HDFC/UPI email rows are candidate reconciliation records only. They cannot satisfy payment receipt or settlement gates."
+  },
+  "sourcePackage": "integrations/hdfc-upi-parser",
+  "adapterEntrypoint": "integrations/hdfc-upi-parser/hdfc_upi_parser/services/proof_adapter.py",
+  "counts": {
+    "adapters": 1,
+    "candidateRowsImported": 0,
+    "verifiedReceipts": 0,
+    "verifiedWebhooks": 0,
+    "fulfilledGifts": 0,
+    "blocked": 4
+  },
+  "mapping": [
+    [
+      "amount",
+      "amount",
+      "candidate amount only"
+    ],
+    [
+      "utr",
+      "utr",
+      "bank reference, not settlement proof by itself"
+    ],
+    [
+      "vpa",
+      "payerVpa",
+      "candidate sender VPA"
+    ],
+    [
+      "sender_name",
+      "senderName",
+      "candidate sender display name"
+    ],
+    [
+      "transaction_date",
+      "transactionDate",
+      "candidate email timestamp"
+    ],
+    [
+      "extracted_order_id",
+      "extractedOrderId",
+      "candidate reconciliation hint"
+    ],
+    [
+      "paymentReceiptId",
+      null,
+      "NULL until provider receipt exists"
+    ],
+    [
+      "signatureHeader",
+      null,
+      "NULL until provider webhook exists"
+    ],
+    [
+      "AuditLog.created",
+      false,
+      "false until audit evidence exists"
+    ]
+  ],
+  "blockedClaims": [
+    "verified settlement",
+    "verified receipt",
+    "verified webhook",
+    "paid order mutation"
+  ]
+}

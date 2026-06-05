@@ -24,6 +24,15 @@ const statusCounts = (items) => {
   }
   return counts;
 };
+const upsertByKey = (items, nextItem) => {
+  const list = items || [];
+  const index = list.findIndex((item) => item.key === nextItem.key);
+  if (index >= 0) {
+    list[index] = { ...list[index], ...nextItem };
+    return list;
+  }
+  return [...list, nextItem];
+};
 
 const gui = readJson(path.join(desktopEvidence, "gui-smoke-report.json"), {
   verification_state: "blocked-gui-proof-null",
@@ -115,14 +124,26 @@ for (const root of [webRoot, desktopRoot]) {
   if (laneIndex >= 0) readiness.evidenceLanes[laneIndex] = guiLane;
   else readiness.evidenceLanes.push(guiLane);
 
-  readiness.checklist = (readiness.checklist || []).map((item) => item.key === "gui-smoke"
-    ? {
-        ...item,
-        label: "GUI smoke screenshot/reviewer proof",
-        status: gui.gate?.status ?? "blocked",
-        evidence: "/apps/desktop/evidence/gui-smoke-report.json"
-      }
-    : item);
+  readiness.checklist = [
+    {
+      key: "gui-smoke",
+      label: "GUI smoke screenshot/reviewer proof",
+      status: gui.gate?.status ?? "blocked",
+      evidence: "/apps/desktop/evidence/gui-smoke-report.json"
+    },
+    {
+      key: "installer-open",
+      label: "Installer/app opens successfully",
+      status: appOpen?.gate?.status ?? "not-run",
+      evidence: "/apps/desktop/evidence/app-open-report.json"
+    },
+    {
+      key: "app-bundle-structure",
+      label: "App bundle structure",
+      status: appOpen?.app?.bundle_structure_ok ? "draft-ready" : "blocked",
+      evidence: "/apps/desktop/evidence/app-open-report.json"
+    }
+  ].reduce((items, item) => upsertByKey(items, item), readiness.checklist || []);
   readiness.counts = statusCounts(readiness.checklist || []);
   readiness.localDesktopEvidence = {
     ...(readiness.localDesktopEvidence || {}),
@@ -130,10 +151,13 @@ for (const root of [webRoot, desktopRoot]) {
     guiSmokeGate: gui.gate,
     qaReport: "/apps/desktop/evidence/qa-report.json",
     bundleReport: "/apps/desktop/evidence/bundle-report.json",
+    tauriBuildReport: "/apps/desktop/evidence/tauri-build-report.json",
     appOpenReport: "/apps/desktop/evidence/app-open-report.json",
+    verdict: qa?.verdict ?? readiness.localDesktopEvidence?.verdict ?? "draft",
     shipDecision: qa?.ship_decision ?? readiness.localDesktopEvidence?.shipDecision ?? "NO_SHIP",
     summary: qa?.summary ?? readiness.localDesktopEvidence?.summary ?? null,
     releaseBlockerSummary: qa?.release_blocker_summary ?? readiness.localDesktopEvidence?.releaseBlockerSummary ?? null,
+    appOpenGate: appOpen?.gate ?? readiness.localDesktopEvidence?.appOpenGate ?? null,
     bundle: bundle?.installer ?? readiness.localDesktopEvidence?.bundle ?? null
   };
   writeJson(readinessPath, readiness);
@@ -163,6 +187,24 @@ for (const root of [webRoot, desktopRoot]) {
   if (index >= 0) pipeline.commands[index] = command;
   else pipeline.commands.push(command);
   writeJson(pipelinePath, pipeline);
+}
+
+for (const root of [webRoot, desktopRoot]) {
+  const alphaPath = path.join(root, "data", "desktop-alpha-bundle.json");
+  const alpha = readJson(alphaPath, null);
+  if (!alpha) continue;
+  alpha.generatedAt = today;
+  alpha.counts = {
+    ...(alpha.counts || {}),
+    appOpenProof: appOpen?.gate?.status === "pass" ? 1 : 0
+  };
+  alpha.records = upsertByKey(alpha.records || [], {
+    key: "app-open-structure",
+    label: "App bundle structure verified",
+    status: appOpen?.app?.bundle_structure_ok ? "draft-ready" : (appOpen?.gate?.status ?? "not-run"),
+    blocker: appOpen?.gate?.status === "pass" ? null : "GUI screenshot/log proof still NULL"
+  });
+  writeJson(alphaPath, alpha);
 }
 
 console.log(JSON.stringify({

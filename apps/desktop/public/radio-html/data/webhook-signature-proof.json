@@ -1,0 +1,38 @@
+{
+  "id": "radio-webhook-signature-proof",
+  "title": "Webhook Signature Proof Lane",
+  "generatedAt": "2026-06-05",
+  "verificationState": "blocked-webhook-proof-null",
+  "shipDecision": "NO_SHIP",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "Webhook proof requires provider event id, raw payload hash, signature header, secret reference, verification result, receivedAt, and audit evidence."
+  },
+  "counts": {
+    "configuredProviders": 0,
+    "webhookEvents": 0,
+    "verifiedSignatures": 0,
+    "auditRecords": 0,
+    "blocked": 6
+  },
+  "requiredEvidence": [
+    "checkoutProvider",
+    "providerEventId",
+    "payloadSha256",
+    "signatureHeader",
+    "signingSecretRef",
+    "webhookVerified",
+    "receivedAt",
+    "AuditLog.created"
+  ],
+  "verifierContract": {
+    "algorithm": "HMAC-SHA256 or provider documented verifier",
+    "payloadMutationAllowed": false,
+    "secretValueStoredInRepo": false,
+    "status": "blocked",
+    "blocker": "provider signing secret and webhook payload evidence are NULL"
+  }
+}

@@ -283,18 +283,6 @@
       "evidence": "/radio-html/data/desktop-alpha-bundle.json"
     },
     {
-      "key": "tauri-app-bundle",
-      "label": "Local macOS .app bundle",
-      "status": "draft-ready",
-      "evidence": "/apps/desktop/evidence/bundle-report.json"
-    },
-    {
-      "key": "bundle-hash",
-      "label": "Bundle hash recorded",
-      "status": "draft-ready",
-      "evidence": "/apps/desktop/evidence/bundle-report.json"
-    },
-    {
       "key": "gui-smoke",
       "label": "GUI smoke screenshot/reviewer proof",
       "status": "blocked",
@@ -317,6 +305,18 @@
       "label": "Signing and notarization proof",
       "status": "blocked",
       "evidence": "/apps/desktop/evidence/signing-notarization-report.json"
+    },
+    {
+      "key": "tauri-app-bundle",
+      "label": "Local macOS .app bundle",
+      "status": "draft-ready",
+      "evidence": "/apps/desktop/evidence/bundle-report.json"
+    },
+    {
+      "key": "bundle-hash",
+      "label": "Bundle hash recorded",
+      "status": "draft-ready",
+      "evidence": "/apps/desktop/evidence/bundle-report.json"
     }
   ],
   "counts": {
@@ -325,6 +325,12 @@
     "notRun": 1
   },
   "localDesktopEvidence": {
+    "guiSmokeReport": "/apps/desktop/evidence/gui-smoke-report.json",
+    "guiSmokeGate": {
+      "name": "GUI smoke proof",
+      "status": "blocked",
+      "detail": "GUI smoke proof incomplete: manual-screenshot, reviewer, first-paint, navigation, no-crash, no-ship-visible, audio-gate-visible, error-review."
+    },
     "qaReport": "/apps/desktop/evidence/qa-report.json",
     "bundleReport": "/apps/desktop/evidence/bundle-report.json",
     "tauriBuildReport": "/apps/desktop/evidence/tauri-build-report.json",
@@ -347,12 +353,6 @@
       "name": "installer opens successfully",
       "status": "not-run",
       "detail": "App bundle structure is valid, but GUI open proof is NULL."
-    },
-    "guiSmokeReport": "/apps/desktop/evidence/gui-smoke-report.json",
-    "guiSmokeGate": {
-      "name": "GUI smoke proof",
-      "status": "blocked",
-      "detail": "GUI smoke proof incomplete: manual-screenshot, reviewer, first-paint, navigation, no-crash, no-ship-visible, audio-gate-visible, error-review."
     },
     "bundle": {
       "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",

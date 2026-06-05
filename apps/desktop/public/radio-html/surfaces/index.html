@@ -21,6 +21,9 @@
         <a href="./rights-closure.html">Close</a>
         <a href="./payment-proof-report.html">Pay</a>
         <a href="./hdfc-upi-parser.html">UPI</a>
+        <a href="./payment-proof-import-templates.html">Proof</a>
+        <a href="./webhook-signature-proof.html">Hook</a>
+        <a href="./receipt-settlement-proof.html">Receipt</a>
         <a href="./playback-gate.html">Play</a>
         <a href="./installer-evidence.html">Install</a>
         <a href="./signing-notarization-evidence.html">Sign</a>
@@ -50,7 +53,7 @@
         </div>
         <div class="status-chip">
           <span>Coverage</span>
-          <b>34</b>
+          <b>42</b>
           <small>surfaces + milestone lanes</small>
         </div>
       </section>
@@ -66,6 +69,14 @@
         <a class="surface-tile" href="./gift-payment-evidence.html"><span class="surface-label">Evidence Lane</span><b>Gift Payment Evidence</b><p>Gift intent, checkout, receipt, fulfillment, refund, and provider proof boundaries.</p></a>
         <a class="surface-tile" href="./payment-proof-report.html"><span class="surface-label">Evidence Lane</span><b>Payment Proof Report</b><p>Provider proof import, checkout session, payment receipt, webhook signature, and fulfillment gate.</p></a>
         <a class="surface-tile" href="./hdfc-upi-parser.html"><span class="surface-label">Integration Lane</span><b>HDFC UPI Parser</b><p>Candidate-only email parser scaffold for HDFC/UPI proof intake.</p></a>
+        <a class="surface-tile" href="./payment-proof-import-templates.html"><span class="surface-label">Template Lane</span><b>Payment Proof Import Templates</b><p>JSON/CSV template contract for gift intent, checkout, receipt, webhook, and delivery proof.</p></a>
+        <a class="surface-tile" href="./hdfc-upi-parser-adapter.html"><span class="surface-label">Adapter Lane</span><b>HDFC Parser Evidence Adapter</b><p>Candidate email parse to proof-import row mapping without receipt claims.</p></a>
+        <a class="surface-tile" href="./webhook-signature-proof.html"><span class="surface-label">Proof Lane</span><b>Webhook Signature Proof</b><p>Provider event id, payload hash, signature header, verifier, and audit requirements.</p></a>
+        <a class="surface-tile" href="./receipt-settlement-proof.html"><span class="surface-label">Proof Lane</span><b>Receipt + Settlement Proof</b><p>Provider receipt, settlement status, paidAt, dashboard citation, and audit gate.</p></a>
+        <a class="surface-tile" href="./rights-proof-import-templates.html"><span class="surface-label">Template Lane</span><b>Rights Proof Import Templates</b><p>Source, creator, license, citation, reviewer, reviewedAt, and releaseAllowed templates.</p></a>
+        <a class="surface-tile" href="./release-review-board.html"><span class="surface-label">Review Lane</span><b>Release Review Board</b><p>Reviewer assignment queues for rights, payment, installer, and release approval.</p></a>
+        <a class="surface-tile" href="./installer-signing-proof.html"><span class="surface-label">Proof Lane</span><b>Installer Signing Proof</b><p>Artifact signing, notarization, Gatekeeper, reviewer, and audit evidence slots.</p></a>
+        <a class="surface-tile" href="./evidence-refresh-command.html"><span class="surface-label">Command Lane</span><b>Evidence Refresh Command</b><p>Expanded one-command local evidence refresh sequence and blocked external proof posture.</p></a>
         <a class="surface-tile" href="./installer-evidence.html"><span class="surface-label">Evidence Lane</span><b>Installer Evidence</b><p>Mac, Windows, Linux, artifact slots, signing, notarization, and checksum gates.</p></a>
         <a class="surface-tile" href="./signing-notarization-evidence.html"><span class="surface-label">Evidence Lane</span><b>Signing + Notarization</b><p>Codesign, Gatekeeper, stapler, Developer ID, ad-hoc, and reviewer evidence.</p></a>
         <a class="surface-tile" href="./gui-smoke-evidence.html"><span class="surface-label">Evidence Lane</span><b>GUI Smoke Evidence</b><p>Desktop screenshot, reviewer, no-crash, navigation, NO_SHIP, and playback-gate proof requirements.</p></a>

@@ -1,0 +1,101 @@
+{
+  "id": "radio-installer-signing-proof",
+  "title": "Installer Signing Evidence Slots",
+  "generatedAt": "2026-06-05",
+  "verificationState": "blocked-signing-proof-null",
+  "shipDecision": "NO_SHIP",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "Signing slots describe required evidence. They do not sign, notarize, upload, or distribute installers."
+  },
+  "counts": {
+    "artifactSlots": 6,
+    "signedArtifacts": 0,
+    "notarizedArtifacts": 0,
+    "signingBlockedChecks": 6,
+    "blocked": 6
+  },
+  "requiredEvidence": [
+    "artifactPath",
+    "sha256",
+    "buildCommand",
+    "signingIdentity",
+    "signatureVerification",
+    "notarizationTicket",
+    "Gatekeeper assessment when macOS",
+    "reviewer",
+    "reviewedAt",
+    "AuditLog.verified"
+  ],
+  "slots": [
+    {
+      "key": "macos-app",
+      "platform": "macOS",
+      "format": "app",
+      "artifactPath": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
+      "sha256": "c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11",
+      "signingIdentity": null,
+      "signatureVerification": null,
+      "notarizationTicket": null,
+      "status": "blocked-unsigned-local-artifact"
+    },
+    {
+      "key": "macos-dmg",
+      "platform": "macOS",
+      "format": "dmg",
+      "artifactPath": null,
+      "sha256": null,
+      "signingIdentity": null,
+      "signatureVerification": null,
+      "notarizationTicket": null,
+      "status": "blocked"
+    },
+    {
+      "key": "windows-msi",
+      "platform": "Windows",
+      "format": "msi",
+      "artifactPath": null,
+      "sha256": null,
+      "signingIdentity": null,
+      "signatureVerification": null,
+      "notarizationTicket": null,
+      "status": "blocked"
+    },
+    {
+      "key": "windows-exe",
+      "platform": "Windows",
+      "format": "exe",
+      "artifactPath": null,
+      "sha256": null,
+      "signingIdentity": null,
+      "signatureVerification": null,
+      "notarizationTicket": null,
+      "status": "blocked"
+    },
+    {
+      "key": "linux-appimage",
+      "platform": "Linux",
+      "format": "AppImage",
+      "artifactPath": null,
+      "sha256": null,
+      "signingIdentity": null,
+      "signatureVerification": null,
+      "notarizationTicket": null,
+      "status": "blocked"
+    },
+    {
+      "key": "linux-deb",
+      "platform": "Linux",
+      "format": "deb",
+      "artifactPath": null,
+      "sha256": null,
+      "signingIdentity": null,
+      "signatureVerification": null,
+      "notarizationTicket": null,
+      "status": "blocked"
+    }
+  ]
+}

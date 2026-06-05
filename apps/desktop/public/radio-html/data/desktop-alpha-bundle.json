@@ -34,6 +34,12 @@
       "evidence": "/radio-html/surfaces/index.html"
     },
     {
+      "key": "tauri-installer",
+      "label": "Signed Tauri installer",
+      "status": "blocked",
+      "evidence": "/radio-html/data/installer-evidence.json"
+    },
+    {
       "key": "tauri-app",
       "label": "Unsigned local macOS .app",
       "status": "draft-ready-unsigned",
@@ -41,18 +47,6 @@
     }
   ],
   "records": [
-    {
-      "key": "local-macos-app",
-      "label": "Unsigned local macOS .app built",
-      "status": "draft-ready-unsigned",
-      "blocker": "signing/notarization and manual open evidence still NULL"
-    },
-    {
-      "key": "app-open-structure",
-      "label": "App bundle structure verified",
-      "status": "draft-ready",
-      "blocker": "GUI screenshot/log proof still NULL"
-    },
     {
       "key": "no-ship-labels",
       "label": "Visible NO_SHIP labels",
@@ -82,6 +76,18 @@
       "label": "Human release approval",
       "status": "blocked",
       "blocker": "reviewer/reviewedAt NULL"
+    },
+    {
+      "key": "app-open-structure",
+      "label": "App bundle structure verified",
+      "status": "draft-ready",
+      "blocker": "GUI screenshot/log proof still NULL"
+    },
+    {
+      "key": "local-macos-app",
+      "label": "Unsigned local macOS .app built",
+      "status": "draft-ready-unsigned",
+      "blocker": "signing/notarization and manual open evidence still NULL"
     }
   ]
 }

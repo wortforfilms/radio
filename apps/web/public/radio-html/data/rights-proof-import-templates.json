@@ -1,0 +1,62 @@
+{
+  "id": "radio-rights-proof-import-templates",
+  "title": "Rights Proof Import Templates",
+  "generatedAt": "2026-06-05",
+  "verificationState": "draft-rights-templates-no-proof",
+  "shipDecision": "NO_SHIP",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "Templates do not close rights. Each asset still needs source, creator, license, citation, reviewer, reviewedAt, and audit verification."
+  },
+  "importEnv": "EVIDENCE_RIGHTS_IMPORT",
+  "acceptedFormats": [
+    "json",
+    "csv"
+  ],
+  "csvHeader": "id,path,source,creator,license,rightsStatus,citation,reviewer,reviewedAt,auditVerified,releaseAllowed,checksum",
+  "counts": {
+    "templates": 4,
+    "rightsRecords": 19,
+    "closed": 0,
+    "blocked": 19
+  },
+  "templates": [
+    {
+      "key": "asset-rights-proof",
+      "required": [
+        "id",
+        "path",
+        "source",
+        "creator",
+        "license",
+        "rightsStatus",
+        "citation"
+      ]
+    },
+    {
+      "key": "review-proof",
+      "required": [
+        "reviewer",
+        "reviewedAt",
+        "reason"
+      ]
+    },
+    {
+      "key": "audit-proof",
+      "required": [
+        "auditVerified",
+        "AuditLog.verified"
+      ]
+    },
+    {
+      "key": "release-allowance",
+      "required": [
+        "releaseAllowed",
+        "checksum"
+      ]
+    }
+  ]
+}
