@@ -1,7 +1,7 @@
 {
   "id": "radio-vaigyaaniq-installer-evidence",
   "title": "Radio Vaigyaaniq Installer Evidence Lane",
-  "generatedAt": "2026-06-05",
+  "generatedAt": "2026-06-06",
   "verificationState": "draft-local-app-built-signing-proof-blocked",
   "phkd": {
     "rule": "fail_closed",

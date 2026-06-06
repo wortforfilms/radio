@@ -27,7 +27,7 @@
     "signedArtifacts": 0,
     "notarizedArtifacts": 0,
     "releaseReviewsVerified": 0,
-    "guiSmokeScreenshots": 0,
+    "guiSmokeScreenshots": 1,
     "customerFrontFailedLinks": 0,
     "visualQaBlocked": 0,
     "remainingPacketRowsPrepared": 34,
@@ -111,9 +111,9 @@
       "blocker": "Manual GUI screenshot, reviewer, no-crash, and visible no-ship proof are incomplete.",
       "observed": {
         "checks": 9,
-        "passedChecks": 1,
-        "blockedChecks": 8,
-        "screenshots": 0,
+        "passedChecks": 5,
+        "blockedChecks": 4,
+        "screenshots": 1,
         "reviewers": 0,
         "appOpenProof": 0
       },
@@ -172,10 +172,13 @@
       "apiView": "playback-gate",
       "blocker": "Playable audio remains blocked until imported audio and rights evidence are verified.",
       "observed": {
-        "imports": 0,
+        "imports": 105,
+        "localAudioFiles": 105,
+        "sourceRows": 105,
+        "checksumPresent": 105,
         "playable": 0,
-        "blocked": 1,
-        "nullEvidence": 1,
+        "blocked": 105,
+        "nullEvidence": 105,
         "stationSlots": 4,
         "rightsClosed": 0,
         "rightsBlocked": 19,
@@ -460,7 +463,7 @@
     {
       "key": "tauri-readiness",
       "path": "/radio-html/data/tauri-readiness.json",
-      "verificationState": "draft-local-app-built-signing-proof-blocked"
+      "verificationState": "draft-local-app-built-gui-proof-null"
     },
     {
       "key": "release-orchestration-run",

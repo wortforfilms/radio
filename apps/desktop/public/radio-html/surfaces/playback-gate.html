@@ -18,7 +18,7 @@
         <div>
           <p class="eyebrow">Playable Audio Import Gate</p>
           <h1>Playback Requires Verified Rights</h1>
-          <p>Runtime playback is wired to a canPlay gate. With no verified imported audio, playback remains blocked and NULL-safe.</p>
+          <p>Runtime playback is wired to a canPlay gate. Local audio candidates can be indexed with checksums, but playback remains blocked until rights, review, audit, and release allowance evidence are verified.</p>
           <div class="surface-actions"><a href="../data/playback-gate.json">Data JSON</a><a href="/api/governance?view=playback-gate">API View</a><a href="./no-ship-dashboard.html">No-Ship Dashboard</a></div>
         </div>
         <div class="status-chip"><span>Playable</span><b id="primaryMetric">NULL</b><small>verified tracks</small></div>
@@ -29,7 +29,7 @@
   </main>
   <script>
     const valueText = (value) => value === null || value === undefined ? "NULL" : String(value);
-    const countKeys = ["imports","playable","blocked","nullEvidence","stationSlots"];
+    const countKeys = ["imports","localAudioFiles","checksumPresent","playable","blocked","rightsClosed","rightsBlocked","releaseAllowed"];
     fetch("../data/playback-gate.json").then((response) => response.json()).then((data) => {
       document.getElementById("primaryMetric").textContent = valueText(data.counts?.playable);
       document.getElementById("metrics").innerHTML = countKeys.map((key) => `

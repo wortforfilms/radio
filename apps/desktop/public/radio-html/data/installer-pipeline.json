@@ -1,8 +1,8 @@
 {
   "id": "radio-vaigyaaniq-installer-pipeline",
   "title": "Radio Vaigyaaniq Tauri Installer Pipeline",
-  "generatedAt": "2026-06-05",
-  "verificationState": "draft-local-app-built-signing-proof-blocked",
+  "generatedAt": "2026-06-06",
+  "verificationState": "draft-local-app-built-gui-proof-null",
   "phkd": {
     "rule": "fail_closed",
     "unknownValues": "NULL",

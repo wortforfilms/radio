@@ -1,8 +1,8 @@
 {
   "report": "signing-notarization-report",
-  "generated_at": "2026-06-05T13:21:01.751Z",
-  "source_commit": "639c2f72255dc558bc0e9ed41ec48d141ddc4670",
-  "source_commit_short": "639c2f7",
+  "generated_at": "2026-06-06T12:26:36.324Z",
+  "source_commit": "04fa534420c1913640a99ffc3be269640cce133b",
+  "source_commit_short": "04fa534",
   "verification_state": "blocked-signing-notarization-proof-null",
   "phkd": {
     "rule": "fail_closed",
@@ -72,7 +72,7 @@
       "command": "xcrun stapler validate /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
       "exitCode": 66,
       "status": "blocked",
-      "stdout": "File /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app does not exist. Error Domain=NSCocoaErrorDomain Code=256 \"The file “Radio Vaigyaaniq” couldn’t be opened.\" UserInfo={NSURL=file:///var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio%20Vaigyaaniq.app/, NSFilePath=/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app, NSUnderlyingError=0x151911740 {Error Domain=NSOSStatusErrorDomain Code=-10813 \"kLSDataUnavailableErr: E.g. no kind string\"}}",
+      "stdout": "File /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app does not exist. Error Domain=NSCocoaErrorDomain Code=256 \"The file “Radio Vaigyaaniq” couldn’t be opened.\" UserInfo={NSURL=file:///var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio%20Vaigyaaniq.app/, NSFilePath=/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app, NSUnderlyingError=0x12b0205f0 {Error Domain=NSOSStatusErrorDomain Code=-10813 \"kLSDataUnavailableErr: E.g. no kind string\"}}",
       "stderr": null,
       "error": null
     }

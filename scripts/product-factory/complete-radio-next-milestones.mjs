@@ -334,11 +334,11 @@ const surfaceSpecs = [
     title: "Playback Gate",
     eyebrow: "Playable Audio Import Gate",
     headline: "Playback Requires Verified Rights",
-    body: "Runtime playback is wired to a canPlay gate. With no verified imported audio, playback remains blocked and NULL-safe.",
+    body: "Runtime playback is wired to a canPlay gate. Local audio candidates can be indexed with checksums, but playback remains blocked until rights, review, audit, and release allowance evidence are verified.",
     jsonPath: "../data/playback-gate.json",
     apiPath: "/api/governance?view=playback-gate",
     primaryMetric: { label: "Playable", value: "data.counts?.playable", note: "verified tracks" },
-    countKeys: ["imports", "playable", "blocked", "nullEvidence", "stationSlots"],
+    countKeys: ["imports", "localAudioFiles", "checksumPresent", "playable", "blocked", "rightsClosed", "rightsBlocked", "releaseAllowed"],
     listTitle: "Playback Records",
     listKey: "records"
   },

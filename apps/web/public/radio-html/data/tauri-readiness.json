@@ -1,9 +1,9 @@
 {
   "id": "radio-vaigyaaniq-tauri-readiness",
   "title": "Radio Vaigyaaniq Tauri Shipping Readiness",
-  "generatedAt": "2026-06-05",
+  "generatedAt": "2026-06-06",
   "version": "2.0.0",
-  "verificationState": "draft-local-app-built-signing-proof-blocked",
+  "verificationState": "draft-local-app-built-gui-proof-null",
   "phkd": {
     "rule": "fail_closed",
     "unknownValues": "NULL",
@@ -329,7 +329,7 @@
     "guiSmokeGate": {
       "name": "GUI smoke proof",
       "status": "blocked",
-      "detail": "GUI smoke proof incomplete: manual-screenshot, reviewer, first-paint, navigation, no-crash, no-ship-visible, audio-gate-visible, error-review."
+      "detail": "GUI smoke proof incomplete: reviewer, navigation, no-ship-visible, error-review."
     },
     "qaReport": "/apps/desktop/evidence/qa-report.json",
     "bundleReport": "/apps/desktop/evidence/bundle-report.json",

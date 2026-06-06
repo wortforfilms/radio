@@ -65,6 +65,7 @@ function readEvidenceStep(key, evidencePath, validate) {
 const steps = [
   runStep("core-data", nodeBin, ["scripts/product-factory/complete-radio-milestones.mjs"]),
   runStep("next-milestones", nodeBin, ["scripts/product-factory/complete-radio-next-milestones.mjs"]),
+  runStep("playback-gate", nodeBin, ["scripts/product-factory/prepare-radio-playback-gate.mjs"]),
   runStep("desktop-signing", "npm", ["run", "evidence:signing"], { cwd: "apps/desktop" }),
   runStep("sync-gui-evidence", nodeBin, ["scripts/product-factory/sync-radio-gui-smoke-evidence.mjs"]),
   runStep("sync-signing-evidence", nodeBin, ["scripts/product-factory/sync-radio-signing-evidence.mjs"]),

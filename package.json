@@ -14,6 +14,7 @@
     "radio:hdfc:test": "PYTHONPATH=integrations/hdfc-upi-parser python3 -m unittest discover -s integrations/hdfc-upi-parser/tests",
     "radio:proof:milestones": "node scripts/product-factory/complete-radio-proof-milestones.mjs",
     "radio:payment:proof": "node scripts/product-factory/verify-radio-payment-proof.mjs",
+    "radio:playback:gate": "node scripts/product-factory/prepare-radio-playback-gate.mjs",
     "radio:rights:packet": "node scripts/product-factory/prepare-radio-rights-closure-packet.mjs",
     "radio:rights:closure": "node scripts/product-factory/verify-radio-rights-closure.mjs",
     "radio:remaining:packets": "node scripts/product-factory/prepare-radio-remaining-proof-packets.mjs",
