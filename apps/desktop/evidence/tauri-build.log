@@ -14,12 +14,12 @@ computing gzip size...
 dist/index.html                  0.41 kB │ gzip:  0.31 kB
 dist/assets/core-DhEqZVGG.js     2.44 kB │ gzip:  0.98 kB
 dist/assets/index-BXdGHRgV.js  146.15 kB │ gzip: 47.48 kB
-✓ built in 3.87s
+✓ built in 3.80s
 
         Info Looking up installed tauri packages to check mismatched versions...
      Running beforeBuildCommand `npm run fe:build`
    Compiling radio-vaigyaaniq-desktop v0.1.0 (/Volumes/LaCie/pprm/for_radio/apps/desktop/src-tauri)
-    Finished `release` profile [optimized] target(s) in 30.78s
+    Finished `release` profile [optimized] target(s) in 28.80s
        Built application at: /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/radio-vaigyaaniq-desktop
     Bundling Radio Vaigyaaniq.app (/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app)
     Finished 1 bundle at:

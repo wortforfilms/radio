@@ -1,7 +1,7 @@
 {
   "report": "qa-report",
-  "generated_at": "2026-06-24T19:14:41.456Z",
-  "source_commit": "970a3d1e4068392afa8f51a521d843fe9ae3e671",
+  "generated_at": "2026-06-24T19:20:21.313Z",
+  "source_commit": "f85a4946c3e3f66b0d0602ccafea5afe6f8bab4e",
   "branch": "master",
   "evidence_host": {
     "os": "darwin",
@@ -20,7 +20,7 @@
     {
       "gate": "npm test",
       "status": "pass",
-      "detail": "      Tests  46 passed (46) |    Start at  00:44:57 |    Duration  620ms (transform 676ms, setup 0ms, import 991ms, tests 240ms, environment 1ms)"
+      "detail": "      Tests  46 passed (46) |    Start at  00:50:35 |    Duration  708ms (transform 802ms, setup 0ms, import 1.21s, tests 256ms, environment 1ms)"
     },
     {
       "gate": "npm run build",
@@ -45,7 +45,7 @@
     {
       "gate": "bundle hash recorded",
       "status": "pass",
-      "detail": "1 artifact(s) sha256-hashed (primary 52058968dc6f…)"
+      "detail": "1 artifact(s) sha256-hashed (primary 9cc0f713f050…)"
     },
     {
       "gate": "platform metadata recorded",
@@ -55,7 +55,7 @@
     {
       "gate": "source commit recorded",
       "status": "pass",
-      "detail": "970a3d1"
+      "detail": "f85a494"
     },
     {
       "gate": "installer opens successfully",

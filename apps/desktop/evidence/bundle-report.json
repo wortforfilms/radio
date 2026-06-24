@@ -1,29 +1,29 @@
 {
   "report": "bundle-report",
-  "generated_at": "2026-06-24T19:14:41.456Z",
-  "source_commit": "970a3d1e4068392afa8f51a521d843fe9ae3e671",
+  "generated_at": "2026-06-24T19:20:21.313Z",
+  "source_commit": "f85a4946c3e3f66b0d0602ccafea5afe6f8bab4e",
   "bundle_dir": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle",
   "bundle_platform": "darwin-arm64",
   "build_command": "npm run build",
   "tauri_bundles": "app",
   "build_invoked": true,
   "build_status": "pass",
-  "build_log_tail": "dist/assets/core-DhEqZVGG.js     2.44 kB │ gzip:  0.98 kB\ndist/assets/index-BXdGHRgV.js  146.15 kB │ gzip: 47.48 kB\n✓ built in 3.87s\n\n        Info Looking up installed tauri packages to check mismatched versions...\n     Running beforeBuildCommand `npm run fe:build`\n   Compiling radio-vaigyaaniq-desktop v0.1.0 (/Volumes/LaCie/pprm/for_radio/apps/desktop/src-tauri)\n    Finished `release` profile [optimized] target(s) in 30.78s\n       Built application at: /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/radio-vaigyaaniq-desktop\n    Bundling Radio Vaigyaaniq.app (/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app)\n    Finished 1 bundle at:\n        /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
+  "build_log_tail": "dist/assets/core-DhEqZVGG.js     2.44 kB │ gzip:  0.98 kB\ndist/assets/index-BXdGHRgV.js  146.15 kB │ gzip: 47.48 kB\n✓ built in 3.80s\n\n        Info Looking up installed tauri packages to check mismatched versions...\n     Running beforeBuildCommand `npm run fe:build`\n   Compiling radio-vaigyaaniq-desktop v0.1.0 (/Volumes/LaCie/pprm/for_radio/apps/desktop/src-tauri)\n    Finished `release` profile [optimized] target(s) in 28.80s\n       Built application at: /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/radio-vaigyaaniq-desktop\n    Bundling Radio Vaigyaaniq.app (/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app)\n    Finished 1 bundle at:\n        /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
   "artifacts": [
     {
       "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
       "type": "app",
       "bytes": 21966265,
-      "sha256": "52058968dc6ff295a0ce46895a42306513f0c026c8e5c5b21adb99cc75439e4a",
+      "sha256": "9cc0f713f050418e18163fbdaf46aaa19b3c44e6bd3b23c55bb675f7b828c00d",
       "note": "directory bundle (.app); sha256 is a deterministic manifest hash of relative file paths and file hashes"
     }
   ],
   "installer": {
     "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
     "bytes": 21966265,
-    "sha256": "52058968dc6ff295a0ce46895a42306513f0c026c8e5c5b21adb99cc75439e4a"
+    "sha256": "9cc0f713f050418e18163fbdaf46aaa19b3c44e6bd3b23c55bb675f7b828c00d"
   },
-  "bundle_hash": "52058968dc6ff295a0ce46895a42306513f0c026c8e5c5b21adb99cc75439e4a",
+  "bundle_hash": "9cc0f713f050418e18163fbdaf46aaa19b3c44e6bd3b23c55bb675f7b828c00d",
   "status": "built",
   "reason": null,
   "asset_provenance": [

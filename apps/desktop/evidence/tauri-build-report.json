@@ -1,8 +1,8 @@
 {
   "report": "tauri-build-report",
-  "generated_at": "2026-06-24T19:14:41.456Z",
-  "source_commit": "970a3d1e4068392afa8f51a521d843fe9ae3e671",
-  "source_commit_short": "970a3d1",
+  "generated_at": "2026-06-24T19:20:21.313Z",
+  "source_commit": "f85a4946c3e3f66b0d0602ccafea5afe6f8bab4e",
+  "source_commit_short": "f85a494",
   "branch": "master",
   "evidence_host": {
     "os": "darwin",
