@@ -1,12 +1,12 @@
 {
   "report": "qa-report",
-  "generated_at": "2026-06-05T13:18:19.087Z",
-  "source_commit": "639c2f72255dc558bc0e9ed41ec48d141ddc4670",
+  "generated_at": "2026-06-24T19:14:41.456Z",
+  "source_commit": "970a3d1e4068392afa8f51a521d843fe9ae3e671",
   "branch": "master",
   "evidence_host": {
     "os": "darwin",
     "arch": "arm64",
-    "appleDoubleRemoved": 4,
+    "appleDoubleRemoved": 197,
     "cargoTargetDir": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target",
     "node": "v22.22.3",
     "npm": "10.9.8",
@@ -20,7 +20,7 @@
     {
       "gate": "npm test",
       "status": "pass",
-      "detail": "      Tests  35 passed (35) |    Start at  18:48:35 |    Duration  1.54s (transform 2.07s, setup 0ms, import 2.73s, tests 112ms, environment 1ms)"
+      "detail": "      Tests  46 passed (46) |    Start at  00:44:57 |    Duration  620ms (transform 676ms, setup 0ms, import 991ms, tests 240ms, environment 1ms)"
     },
     {
       "gate": "npm run build",
@@ -45,7 +45,7 @@
     {
       "gate": "bundle hash recorded",
       "status": "pass",
-      "detail": "5 artifact(s) sha256-hashed (primary c3856014f55d…)"
+      "detail": "1 artifact(s) sha256-hashed (primary 52058968dc6f…)"
     },
     {
       "gate": "platform metadata recorded",
@@ -55,7 +55,7 @@
     {
       "gate": "source commit recorded",
       "status": "pass",
-      "detail": "639c2f7"
+      "detail": "970a3d1"
     },
     {
       "gate": "installer opens successfully",
@@ -82,12 +82,12 @@
     {
       "gate": "gift/payment proof",
       "status": "blocked",
-      "detail": "paymentReceipts=0 blocked=4"
+      "detail": "paymentReceipts=0 blocked=5"
     },
     {
       "gate": "human release review",
       "status": "blocked",
-      "detail": "verified=0 blocked=4"
+      "detail": "verified=0 blocked=23"
     }
   ],
   "summary": {

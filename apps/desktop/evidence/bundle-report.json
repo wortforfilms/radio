@@ -1,53 +1,29 @@
 {
   "report": "bundle-report",
-  "generated_at": "2026-06-05T13:18:19.087Z",
-  "source_commit": "639c2f72255dc558bc0e9ed41ec48d141ddc4670",
+  "generated_at": "2026-06-24T19:14:41.456Z",
+  "source_commit": "970a3d1e4068392afa8f51a521d843fe9ae3e671",
   "bundle_dir": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle",
   "bundle_platform": "darwin-arm64",
   "build_command": "npm run build",
   "tauri_bundles": "app",
   "build_invoked": true,
   "build_status": "pass",
-  "build_log_tail": "✓ built in 3.82s\n\n        Info Looking up installed tauri packages to check mismatched versions...\n     Running beforeBuildCommand `npm run fe:build`\n\u001b[33m[PLUGIN_TIMINGS] \u001b[0mYour build spent significant time in plugin `vite:prepare-out-dir`. See https://rolldown.rs/options/checks#plugintimings for more details.\n\n   Compiling radio-vaigyaaniq-desktop v0.1.0 (/Volumes/LaCie/pprm/for_radio/apps/desktop/src-tauri)\n    Finished `release` profile [optimized] target(s) in 37.58s\n       Built application at: /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/radio-vaigyaaniq-desktop\n    Bundling Radio Vaigyaaniq.app (/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app)\n    Finished 1 bundle at:\n        /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
+  "build_log_tail": "dist/assets/core-DhEqZVGG.js     2.44 kB │ gzip:  0.98 kB\ndist/assets/index-BXdGHRgV.js  146.15 kB │ gzip: 47.48 kB\n✓ built in 3.87s\n\n        Info Looking up installed tauri packages to check mismatched versions...\n     Running beforeBuildCommand `npm run fe:build`\n   Compiling radio-vaigyaaniq-desktop v0.1.0 (/Volumes/LaCie/pprm/for_radio/apps/desktop/src-tauri)\n    Finished `release` profile [optimized] target(s) in 30.78s\n       Built application at: /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/radio-vaigyaaniq-desktop\n    Bundling Radio Vaigyaaniq.app (/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app)\n    Finished 1 bundle at:\n        /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
   "artifacts": [
-    {
-      "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/dmg/Radio Vaigyaaniq.icns",
-      "type": "support",
-      "bytes": 221048,
-      "sha256": "e5b2f8fc45ff53aec156aadf35199258c979eb00689038163e3107f2e2c37520"
-    },
-    {
-      "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/dmg/bundle_dmg.sh",
-      "type": "support",
-      "bytes": 19300,
-      "sha256": "3b21448e5eef9b7c4f6bd8593e6c5f577ee5c64db2a237a4908e63fb6d81a89e"
-    },
     {
       "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
       "type": "app",
-      "bytes": 21211612,
-      "sha256": "c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11",
+      "bytes": 21966265,
+      "sha256": "52058968dc6ff295a0ce46895a42306513f0c026c8e5c5b21adb99cc75439e4a",
       "note": "directory bundle (.app); sha256 is a deterministic manifest hash of relative file paths and file hashes"
-    },
-    {
-      "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/share/create-dmg/support/eula-resources-template.xml",
-      "type": "support",
-      "bytes": 2376,
-      "sha256": "7d61d948ba7f118306d61107fead78f04e3338585e2ec729abb65d5d2e21012d"
-    },
-    {
-      "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/share/create-dmg/support/template.applescript",
-      "type": "support",
-      "bytes": 1828,
-      "sha256": "13727c7930c50be639a1eb191e893f1ebc72c270268d4611391b41410a3e862a"
     }
   ],
   "installer": {
     "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-    "bytes": 21211612,
-    "sha256": "c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11"
+    "bytes": 21966265,
+    "sha256": "52058968dc6ff295a0ce46895a42306513f0c026c8e5c5b21adb99cc75439e4a"
   },
-  "bundle_hash": "c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11",
+  "bundle_hash": "52058968dc6ff295a0ce46895a42306513f0c026c8e5c5b21adb99cc75439e4a",
   "status": "built",
   "reason": null,
   "asset_provenance": [
@@ -58,8 +34,8 @@
     },
     {
       "file": "radio-html/Radio_Vaigyaaniq_All_Html_Links.json",
-      "sha256": "80df309c93aaa3153181ed3a9169ae5091f6ca225aed7c2702d214bedf0bb1c5",
-      "bytes": 9082
+      "sha256": "ece32144375aa89636a4cc776b9972f8cc64bbcfc792c8693cb3147f662ddab2",
+      "bytes": 9290
     },
     {
       "file": "radio-html/Radio_Vaigyaaniq_App_Prototype.html",
@@ -78,18 +54,18 @@
     },
     {
       "file": "radio-html/Radio_Vaigyaaniq_Full_App_Scaffold.json",
-      "sha256": "b2e2b0f7744d3edaa037c44558f791553bb6fd6e672ec6fc1d8a48437ed78317",
-      "bytes": 30771
+      "sha256": "cb7482cce0517fa176a62a71fedb0f3c40078f2c10823bd8dec56ab321c8ca6f",
+      "bytes": 31240
     },
     {
       "file": "radio-html/Radio_Vaigyaaniq_Future_Structure.json",
-      "sha256": "c20fad92b5ca26d9c606ca345af4118764438aa2fb74f70afc4f128af248ca33",
-      "bytes": 15487
+      "sha256": "558030ba1b58a062480d4c45065748a5683c68bbb53fcc0cfcfa84f64674c7fb",
+      "bytes": 15957
     },
     {
       "file": "radio-html/Radio_Vaigyaaniq_Html_Route_Matrix.json",
-      "sha256": "9e432b78bb35cb71f05cc7bcf32bfa3000b2fefdb369d68bad4d151c34adab16",
-      "bytes": 26272
+      "sha256": "fa028a41ff956277881ecf5772b69f8dc4cf392878fe629e47f83f9a91a8849f",
+      "bytes": 27466
     },
     {
       "file": "radio-html/Radio_Vaigyaaniq_Maataa.html",
@@ -98,8 +74,8 @@
     },
     {
       "file": "radio-html/Radio_Vaigyaaniq_Route_Catalog.json",
-      "sha256": "57726fa4663584364e78f6d387b91b8087e6b81a3c3f6b73baab5c2155df6636",
-      "bytes": 9958
+      "sha256": "7137b2ad7c69c13ca9bfbdd370a8a28e7926003926f9e6d01b948fb966b9b500",
+      "bytes": 10123
     },
     {
       "file": "radio-html/Radio_Vaigyaaniq_Tauri_Shipping_Claude_Prompt.md",
@@ -110,6 +86,11 @@
       "file": "radio-html/Radio_Vaigyaaniq_UX_Dashboard.html",
       "sha256": "46732aa77678c52582e671a8b1617bc2d2cf89c5e5cb0bbd2d0064e45fd1a1cb",
       "bytes": 82397
+    },
+    {
+      "file": "radio-html/Track_Onboarding.html",
+      "sha256": "56292ead0b3b7bd11f61153627e083dc72113ee56609bb8507c14f4963423cf5",
+      "bytes": 15880
     },
     {
       "file": "radio-html/all-html.html",

@@ -1,8 +1,8 @@
 {
   "report": "gui-smoke-report",
-  "generated_at": "2026-06-06T09:02:33.290Z",
-  "source_commit": "04fa534420c1913640a99ffc3be269640cce133b",
-  "source_commit_short": "04fa534",
+  "generated_at": "2026-06-24T19:16:56.104Z",
+  "source_commit": "970a3d1e4068392afa8f51a521d843fe9ae3e671",
+  "source_commit_short": "970a3d1",
   "verification_state": "blocked-gui-proof-null",
   "phkd": {
     "rule": "fail_closed",
@@ -13,19 +13,19 @@
   "app": {
     "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
     "artifact_path": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-    "bundle_hash": "c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11",
+    "bundle_hash": "52058968dc6ff295a0ce46895a42306513f0c026c8e5c5b21adb99cc75439e4a",
     "bundle_structure_ok": true,
     "open_attempt": null
   },
   "manual_evidence": {
-    "route": "radio-html/surfaces/index.html",
-    "screenshot": "apps/desktop/evidence/screenshots/gui-smoke-tauri-window.png",
-    "screenshot_path": "/Volumes/LaCie/pprm/for_radio/apps/desktop/evidence/screenshots/gui-smoke-tauri-window.png",
-    "screenshot_exists": true,
-    "screenshot_sha256": "417190d992aeab427861047f6bd893a362da16493bc427ee054a47b820af65c0",
+    "route": "radio-html/surfaces/landing.html",
+    "screenshot": null,
+    "screenshot_path": null,
+    "screenshot_exists": false,
+    "screenshot_sha256": null,
     "reviewer": null,
     "reviewed_at": null,
-    "notes": "Tauri window visible with Radio Vaigyaaniq shell, surface content, PHKD rail, and media library NULL playback boundary. NO_SHIP label and human reviewer proof not visible/provided, so gate remains blocked."
+    "notes": null
   },
   "checks": [
     {
@@ -38,9 +38,9 @@
     {
       "key": "manual-screenshot",
       "label": "Desktop GUI screenshot attached",
-      "status": "pass",
-      "evidence": "/Volumes/LaCie/pprm/for_radio/apps/desktop/evidence/screenshots/gui-smoke-tauri-window.png",
-      "blocker": null
+      "status": "blocked",
+      "evidence": null,
+      "blocker": "EVIDENCE_GUI_SMOKE_SCREENSHOT missing or file does not exist"
     },
     {
       "key": "reviewer",
@@ -52,37 +52,37 @@
     {
       "key": "first-paint",
       "label": "First paint visible",
-      "status": "pass",
-      "evidence": "radio-html/surfaces/index.html",
-      "blocker": null
+      "status": "blocked",
+      "evidence": "radio-html/surfaces/landing.html",
+      "blocker": "EVIDENCE_GUI_SMOKE_FIRST_PAINT must be true"
     },
     {
       "key": "navigation",
       "label": "Primary navigation responds",
       "status": "blocked",
-      "evidence": "radio-html/surfaces/index.html",
+      "evidence": "radio-html/surfaces/landing.html",
       "blocker": "EVIDENCE_GUI_SMOKE_NAVIGATION must be true"
     },
     {
       "key": "no-crash",
       "label": "No crash or blank screen observed",
-      "status": "pass",
-      "evidence": "radio-html/surfaces/index.html",
-      "blocker": null
+      "status": "blocked",
+      "evidence": "radio-html/surfaces/landing.html",
+      "blocker": "EVIDENCE_GUI_SMOKE_NO_CRASH must be true"
     },
     {
       "key": "no-ship-visible",
       "label": "NO_SHIP state visible",
       "status": "blocked",
-      "evidence": "radio-html/surfaces/index.html",
+      "evidence": "radio-html/surfaces/landing.html",
       "blocker": "EVIDENCE_GUI_SMOKE_NO_SHIP must be true"
     },
     {
       "key": "audio-gate-visible",
       "label": "Audio rights/playback gate visible",
-      "status": "pass",
-      "evidence": "radio-html/surfaces/index.html",
-      "blocker": null
+      "status": "blocked",
+      "evidence": "radio-html/surfaces/landing.html",
+      "blocker": "EVIDENCE_GUI_SMOKE_AUDIO_GATE must be true"
     },
     {
       "key": "error-review",
@@ -93,13 +93,13 @@
     }
   ],
   "summary": {
-    "pass": 5,
-    "blocked": 4,
+    "pass": 1,
+    "blocked": 8,
     "total": 9
   },
   "gate": {
     "name": "GUI smoke proof",
     "status": "blocked",
-    "detail": "GUI smoke proof incomplete: reviewer, navigation, no-ship-visible, error-review."
+    "detail": "GUI smoke proof incomplete: manual-screenshot, reviewer, first-paint, navigation, no-crash, no-ship-visible, audio-gate-visible, error-review."
   }
 }

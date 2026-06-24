@@ -1,13 +1,13 @@
 {
   "report": "tauri-build-report",
-  "generated_at": "2026-06-05T13:18:19.087Z",
-  "source_commit": "639c2f72255dc558bc0e9ed41ec48d141ddc4670",
-  "source_commit_short": "639c2f7",
+  "generated_at": "2026-06-24T19:14:41.456Z",
+  "source_commit": "970a3d1e4068392afa8f51a521d843fe9ae3e671",
+  "source_commit_short": "970a3d1",
   "branch": "master",
   "evidence_host": {
     "os": "darwin",
     "arch": "arm64",
-    "appleDoubleRemoved": 4,
+    "appleDoubleRemoved": 197,
     "cargoTargetDir": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target",
     "node": "v22.22.3",
     "npm": "10.9.8",
@@ -49,12 +49,12 @@
     {
       "gate": "gift/payment proof",
       "status": "blocked",
-      "detail": "paymentReceipts=0 blocked=4"
+      "detail": "paymentReceipts=0 blocked=5"
     },
     {
       "gate": "human release review",
       "status": "blocked",
-      "detail": "verified=0 blocked=4"
+      "detail": "verified=0 blocked=23"
     }
   ],
   "ship_decision": "NO_SHIP",
