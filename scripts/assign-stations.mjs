@@ -54,11 +54,10 @@ const KW = [
   [/प्यार|इश्क़|विरह|याद|पिया|सजन|ghazal|virah|pyaar|yaad/i, "Love & Virah"],
 ];
 const themeLang = {
-  "Sanatan & Vedic": "Sanskrit", "Classical & Raag": "Hindi", "Bhakti & Katha": "Hindi",
+  "Sanatan & Vedic": "Hindi", "Classical & Raag": "Hindi", "Bhakti & Katha": "Hindi",
   "Rap & Fusion": "Hindi", "Naagin & Mystic": "Hindi", "Haryanvi Folk": "Haryanvi",
   "Desh / Patriotic": "Hindi", "Love & Virah": "Hindi", "Other / Misc": "Hindi",
 };
-const isLatin = (s) => /^[\x00-\x7F\s]+$/.test((s || "").replace(/[^A-Za-z\s]/g, "") || "x") && /[A-Za-z]/.test(s || "");
 
 function themeOf(t) {
   const c = creditTheme.get(t.sunoId);
@@ -68,9 +67,12 @@ function themeOf(t) {
   return "Other / Misc";
 }
 function langOf(t, theme) {
-  // Word-level Sanskrit markers only (avoid matching bare न/म in common Hindi words).
-  if (/ॐ|नमः|स्वाहा|शान्ति|ब्रह्माय|पुरोहितं|namah|swaha|agnim|hiranya|purohitam/i.test(t.title || "")) return "Sanskrit";
-  if (isLatin(t.title) && theme !== "Haryanvi Folk") return "English";
+  const styles = (t.styles || "").toLowerCase();
+  // English is reserved for tracks whose style/genre explicitly says so.
+  if (/english/.test(styles)) return "English";
+  // Word-level Sanskrit markers (chants/mantras), Devanagari or romanized.
+  if (/ॐ|नमः|स्वाहा|शान्ति|ब्रह्माय|पुरोहितं|namah|swaha|agnim|hiranya|purohitam|shanti|gayatri/i.test(t.title || "")) return "Sanskrit";
+  // Romanized titles count as the station's native language (not English).
   return themeLang[theme] || "Hindi";
 }
 

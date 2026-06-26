@@ -66,7 +66,7 @@ const $=id=>document.getElementById(id);
 
 // client-side fallback theme map (mirrors scripts/assign-stations.mjs) if station-tracks.json absent
 const KW=[[/सनातन|ॐ|ब्रह्म|sanatan|chant|naad|hiranya/i,"Sanatan & Vedic"],[/राग|सरोद|yaman|classical/i,"Classical & Raag"],[/कबीर|राम|भजन|कथा|माता|हनुमान|bhakti|kabir/i,"Bhakti & Katha"],[/rap|fusion|trance|बावल|verse/i,"Rap & Fusion"],[/नागिन|naagin/i,"Naagin & Mystic"],[/हरियाण|छोरी|लुगाई|जाट|chhori|lugai/i,"Haryanvi Folk"],[/देश|तिरंगा|फौजी|desh|fauji/i,"Desh / Patriotic"],[/प्यार|विरह|याद|पिया|virah|pyaar/i,"Love & Virah"]];
-const themeLang={"Sanatan & Vedic":"Sanskrit","Classical & Raag":"Hindi","Bhakti & Katha":"Hindi","Rap & Fusion":"Hindi","Naagin & Mystic":"Hindi","Haryanvi Folk":"Haryanvi","Desh / Patriotic":"Hindi","Love & Virah":"Hindi","Other / Misc":"Hindi"};
+const themeLang={"Sanatan & Vedic":"Hindi","Classical & Raag":"Hindi","Bhakti & Katha":"Hindi","Rap & Fusion":"Hindi","Naagin & Mystic":"Hindi","Haryanvi Folk":"Haryanvi","Desh / Patriotic":"Hindi","Love & Virah":"Hindi","Other / Misc":"Hindi"};
 function fallbackBuild(catalog){
   const map=DOC.themeToStation||{}; const by={}; const counts={};
   for(const s of DOC.stations) by[s.slug]=[];
