@@ -1,0 +1,179 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Minimal user for the standalone app (commerce only).
+model User {
+  id                String        @id @default(cuid())
+  email             String?       @unique
+  name              String?
+  displayName       String?
+  country           String?
+  preferredCurrency String        @default("INR")
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+  purchases         Purchase[]
+  entitlements      Entitlement[]
+  cart              Cart?
+  wallets           Wallet[]
+  walletTxns        WalletTransaction[]
+  settings          UserSettings?
+}
+
+model Album {
+  id               String        @id @default(cuid())
+  slug             String        @unique
+  title            String
+  label            String?
+  catalogNumber    String?
+  trackCount       Int           @default(0)
+  freeTracks       Int           @default(2)
+  priceInrOverride Int?
+  priceUsdOverride Int?
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+  tracks           RadioTrack[]
+  purchases        Purchase[]
+  entitlements     Entitlement[]
+
+  @@index([slug])
+}
+
+model RadioTrack {
+  id             String        @id @default(cuid())
+  sunoId         String?       @unique
+  sourcePlatform String        @default("Suno")
+  title          String
+  albumId        String?
+  album          Album?        @relation(fields: [albumId], references: [id], onDelete: SetNull)
+  trackNumber    Int?
+  priceInr       Int           @default(2900)
+  priceUsd       Int           @default(99)
+  previewSeconds Int           @default(45)
+  published      Boolean       @default(false)
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+  purchases      Purchase[]
+  entitlements   Entitlement[]
+
+  @@index([albumId])
+  @@index([published])
+}
+
+model Purchase {
+  id                String       @id @default(cuid())
+  userId            String
+  user              User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  productType       String
+  trackId           String?
+  track             RadioTrack?  @relation(fields: [trackId], references: [id], onDelete: SetNull)
+  albumId           String?
+  album             Album?       @relation(fields: [albumId], references: [id], onDelete: SetNull)
+  amountMinor       Int
+  currency          String
+  status            String       @default("created")
+  provider          String       @default("razorpay")
+  providerOrderId   String?
+  providerPaymentId String?
+  receiptId         String?      @unique
+  createdAt         DateTime     @default(now())
+  paidAt            DateTime?
+  refundedAt        DateTime?
+  entitlement       Entitlement?
+
+  @@index([userId])
+  @@index([status])
+}
+
+model Entitlement {
+  id         String      @id @default(cuid())
+  userId     String
+  user       User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  scope      String
+  trackId    String?
+  track      RadioTrack? @relation(fields: [trackId], references: [id], onDelete: SetNull)
+  albumId    String?
+  album      Album?      @relation(fields: [albumId], references: [id], onDelete: SetNull)
+  purchaseId String?     @unique
+  purchase   Purchase?   @relation(fields: [purchaseId], references: [id], onDelete: SetNull)
+  active     Boolean     @default(true)
+  grantedAt  DateTime    @default(now())
+  revokedAt  DateTime?
+
+  @@unique([userId, scope, trackId, albumId])
+  @@index([userId])
+}
+
+model Cart {
+  id        String     @id @default(cuid())
+  userId    String     @unique
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  currency  String     @default("INR")
+  items     CartItem[]
+  updatedAt DateTime   @updatedAt
+  createdAt DateTime   @default(now())
+}
+
+model CartItem {
+  id          String   @id @default(cuid())
+  cartId      String
+  cart        Cart     @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  productType String
+  trackId     String?
+  albumId     String?
+  amountMinor Int
+  currency    String
+  addedAt     DateTime @default(now())
+
+  @@unique([cartId, productType, trackId, albumId])
+}
+
+model Wallet {
+  id        String              @id @default(cuid())
+  userId    String
+  user      User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  currency  String
+  balance   Int                 @default(0)
+  updatedAt DateTime            @updatedAt
+  createdAt DateTime            @default(now())
+  txns      WalletTransaction[]
+
+  @@unique([userId, currency])
+}
+
+model WalletTransaction {
+  id           String   @id @default(cuid())
+  walletId     String
+  wallet       Wallet   @relation(fields: [walletId], references: [id], onDelete: Cascade)
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  kind         String
+  amountMinor  Int
+  currency     String
+  balanceAfter Int
+  reference    String?
+  createdAt    DateTime @default(now())
+
+  @@index([walletId])
+}
+
+model UserSettings {
+  id                 String   @id @default(cuid())
+  userId             String   @unique
+  user               User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  language           String   @default("hi")
+  preferredCurrency  String   @default("INR")
+  audioQuality       String   @default("standard")
+  autoplay           Boolean  @default(true)
+  theme              String   @default("dark")
+  emailNotifications Boolean  @default(true)
+  pushNotifications  Boolean  @default(false)
+  marketingOptIn     Boolean  @default(false)
+  updatedAt          DateTime @updatedAt
+  createdAt          DateTime @default(now())
+}

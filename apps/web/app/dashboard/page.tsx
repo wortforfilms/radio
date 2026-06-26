@@ -1,5 +1,6 @@
 import { getObservatoryMetrics } from "@runtime/metrics";
 import { prisma } from "@runtime/db";
+import { deviceRuntimeDashboardCard } from "@shared/device-runtime";
 import { universeRegistry } from "@shared/universes";
 import { persistenceScopes } from "@shared/persistence-scopes";
 
@@ -23,6 +24,7 @@ export default async function DashboardPage() {
     ["HKD Banners", "/hkd-banners"],
     ["Sprint Matrix", "/sprints"],
     ["Wireframes", "/wireframes"],
+    [deviceRuntimeDashboardCard.title, deviceRuntimeDashboardCard.href],
     ["Universes", "/universes"],
     ["Persistence Scopes", "/scopes"],
     ["Admin", "/admin"],
@@ -75,6 +77,29 @@ export default async function DashboardPage() {
             {quickActions.map(([label, href]) => (
               <a href={href} key={href}>{label}</a>
             ))}
+          </div>
+        </section>
+
+        <section className="dashboard-section">
+          <div className="reference-feed-head">
+            <div>
+              <p className="section-kicker">Sovereign Device Runtime</p>
+              <h2>{deviceRuntimeDashboardCard.title}</h2>
+            </div>
+            <a href={deviceRuntimeDashboardCard.href}>Open Device Runtime</a>
+          </div>
+          <div className="governance-lane-grid">
+            <article className="governance-lane-card">
+              <span>{deviceRuntimeDashboardCard.status}</span>
+              <h3>{deviceRuntimeDashboardCard.title}</h3>
+              <p>{deviceRuntimeDashboardCard.summary}</p>
+              <small>{deviceRuntimeDashboardCard.evidence}</small>
+              <div className="governance-lane-actions">
+                <a href="/device/runtime">Runtime</a>
+                <a href="/device/topology">Topology</a>
+                <a href="/device/evidence">Evidence</a>
+              </div>
+            </article>
           </div>
         </section>
 

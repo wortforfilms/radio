@@ -1,0 +1,12 @@
+node_modules/
+.next/
+.turbo/
+.env
+.env.*
+!.env.example
+*.db
+*.db-journal
+
+# synced static surfaces + promoted media (large; sync at build time)
+public/radio-html/assets/audio/*.mp3
+public/radio-html/assets/covers/*.jpeg

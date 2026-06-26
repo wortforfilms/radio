@@ -456,6 +456,16 @@ model User {
   updatedAt   DateTime        @updatedAt
   edges       KnowledgeEdge[]
   auditLogs   AuditLog[]
+  purchases    Purchase[]
+  entitlements Entitlement[]
+  // account
+  displayName       String?
+  country           String?          // ISO-2, e.g. "IN"
+  preferredCurrency String          @default("INR") // "INR" | "USD"
+  cart              Cart?
+  wallets           Wallet[]
+  walletTxns        WalletTransaction[]
+  settings          UserSettings?
 }
 
 model AuditLog {
@@ -475,4 +485,210 @@ model AuditLog {
   @@index([entityType, entityId])
   @@index([createdAt])
   @@index([userId])
+}
+
+// ============================================================================
+// Radio Vaigyaaniq — Commerce layer (preview / pro / album / purchase records)
+// Money is stored in MINOR units (INR paise, USD cents) as Int — Razorpay-style.
+// Strings are used in place of enums (SQLite has no native enum support).
+//   productType / scope : "track" | "album" | "all_access"
+//   Purchase.status     : "created" | "paid" | "failed" | "refunded"
+//   currency            : "INR" | "USD"
+// Defaults: single track ₹29 / $0.99. Album price is computed cheaper-than-N
+// (charged for trackCount - freeTracks singles) unless an override is set.
+// ============================================================================
+
+model Album {
+  id            String       @id @default(cuid())
+  slug          String       @unique
+  title         String
+  label         String?      // "P.H.K.D." | "Magic Mushrooms" | ...
+  catalogNumber String?      // e.g. VSH-F001
+  trackCount    Int          @default(0)
+  freeTracks    Int          @default(2)   // album = (trackCount - freeTracks) singles
+  priceInrOverride Int?      // null => computed from tracks
+  priceUsdOverride Int?
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+  tracks        RadioTrack[]
+  purchases     Purchase[]
+  entitlements  Entitlement[]
+
+  @@index([slug])
+  @@index([label])
+}
+
+model RadioTrack {
+  id             String       @id @default(cuid())
+  sunoId         String?      @unique   // source id when from Suno; null for other sources
+  sourcePlatform String       @default("Suno")
+  title          String
+  albumId        String?
+  album          Album?       @relation(fields: [albumId], references: [id], onDelete: SetNull)
+  trackNumber    Int?
+  priceInr       Int          @default(2900) // ₹29.00 in paise
+  priceUsd       Int          @default(99)   // $0.99 in cents
+  previewSeconds Int          @default(45)
+  theme          String?      // catalogue theme → maps to a station
+  language       String?      // "Hindi" | "Haryanvi" | "Sanskrit" | "Braj" | "English" | ...
+  published      Boolean      @default(false) // mirrors rights-verified canPlay
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  purchases      Purchase[]
+  entitlements   Entitlement[]
+
+  @@index([albumId])
+  @@index([published])
+}
+
+model Purchase {
+  id                String       @id @default(cuid())
+  userId            String
+  user              User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  productType       String       // "track" | "album" | "all_access"
+  trackId           String?
+  track             RadioTrack?  @relation(fields: [trackId], references: [id], onDelete: SetNull)
+  albumId           String?
+  album             Album?       @relation(fields: [albumId], references: [id], onDelete: SetNull)
+  amountMinor       Int          // charged amount in minor units
+  currency          String       // "INR" | "USD"
+  status            String       @default("created")
+  provider          String       @default("razorpay")
+  providerOrderId   String?
+  providerPaymentId String?
+  receiptId         String?      @unique
+  createdAt         DateTime     @default(now())
+  paidAt            DateTime?
+  refundedAt        DateTime?
+  entitlement       Entitlement?
+
+  @@index([userId])
+  @@index([status])
+  @@index([productType])
+}
+
+model Entitlement {
+  id          String      @id @default(cuid())
+  userId      String
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  scope       String      // "track" | "album" | "all_access"
+  trackId     String?
+  track       RadioTrack? @relation(fields: [trackId], references: [id], onDelete: SetNull)
+  albumId     String?
+  album       Album?      @relation(fields: [albumId], references: [id], onDelete: SetNull)
+  purchaseId  String?     @unique
+  purchase    Purchase?   @relation(fields: [purchaseId], references: [id], onDelete: SetNull)
+  active      Boolean     @default(true)
+  grantedAt   DateTime    @default(now())
+  revokedAt   DateTime?
+
+  @@unique([userId, scope, trackId, albumId])
+  @@index([userId])
+  @@index([scope])
+}
+
+// ============================================================================
+// Radio Vaigyaaniq — Account layer (cart / wallet / settings)
+// Money in MINOR units. Wallet balance is per-currency (one Wallet row per
+// currency per user). CartItem.productType / WalletTransaction.kind are strings.
+//   CartItem.productType : "track" | "album" | "all_access"
+//   WalletTransaction.kind: "topup" | "debit" | "refund" | "credit" | "adjustment"
+// ============================================================================
+
+model Cart {
+  id        String     @id @default(cuid())
+  userId    String     @unique
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  currency  String     @default("INR")
+  items     CartItem[]
+  updatedAt DateTime   @updatedAt
+  createdAt DateTime   @default(now())
+}
+
+model CartItem {
+  id          String   @id @default(cuid())
+  cartId      String
+  cart        Cart     @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  productType String   // "track" | "album" | "all_access"
+  trackId     String?
+  albumId     String?
+  // priced at add-time for display; re-validated at checkout
+  amountMinor Int
+  currency    String
+  addedAt     DateTime @default(now())
+
+  @@unique([cartId, productType, trackId, albumId])
+  @@index([cartId])
+}
+
+model Wallet {
+  id        String              @id @default(cuid())
+  userId    String
+  user      User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  currency  String              // "INR" | "USD"
+  balance   Int                 @default(0) // minor units; never negative
+  updatedAt DateTime            @updatedAt
+  createdAt DateTime            @default(now())
+  txns      WalletTransaction[]
+
+  @@unique([userId, currency])
+  @@index([userId])
+}
+
+model WalletTransaction {
+  id            String   @id @default(cuid())
+  walletId      String
+  wallet        Wallet   @relation(fields: [walletId], references: [id], onDelete: Cascade)
+  userId        String
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  kind          String   // "topup" | "debit" | "refund" | "credit" | "adjustment"
+  amountMinor   Int      // positive credit / negative debit
+  currency      String
+  balanceAfter  Int
+  reference     String?  // purchaseId, providerPaymentId, note
+  createdAt     DateTime @default(now())
+
+  @@index([walletId])
+  @@index([userId])
+  @@index([kind])
+}
+
+model UserSettings {
+  id                String   @id @default(cuid())
+  userId            String   @unique
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  language          String   @default("hi")   // "hi" | "en"
+  preferredCurrency String   @default("INR")
+  audioQuality      String   @default("standard") // "preview" | "standard" | "high"
+  autoplay          Boolean  @default(true)
+  theme             String   @default("dark")  // "dark" | "light"
+  emailNotifications Boolean @default(true)
+  pushNotifications  Boolean @default(false)
+  marketingOptIn     Boolean @default(false)
+  updatedAt         DateTime @updatedAt
+  createdAt         DateTime @default(now())
+}
+
+// ============================================================================
+// Radio Vaigyaaniq — Stations (multi-station / multi-language broadcast layer)
+// A station's tracks = RadioTrack where theme is in `themes` (CSV). Languages CSV.
+// Per-language variants are expressed in data/stations.json (UI), not as rows.
+// ============================================================================
+
+model Station {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  name      String
+  tagline   String?
+  themes    String   // CSV of catalogue themes mapped to this station
+  languages String   // CSV content languages, e.g. "Sanskrit,Hindi"
+  accent    String?  // hex color
+  coverPath String?
+  sortOrder Int      @default(0)
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([slug])
+  @@index([active])
 }

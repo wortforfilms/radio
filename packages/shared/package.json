@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "exports": {
+    "./commerce": "./src/commerce.ts",
     "./persistence-scopes": "./src/persistence-scopes.ts",
     "./phkd": "./src/phkd.ts",
     "./reference-corpus": "./src/reference-corpus.ts",

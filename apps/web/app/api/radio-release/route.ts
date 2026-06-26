@@ -23,6 +23,8 @@ const DATASETS = {
   "release-review-packet": "radio-html/data/release-review-packet.json",
   "remaining-proof-packets": "radio-html/data/remaining-proof-packets.json",
   "customer-release": "radio-html/data/customer-release-milestone.json",
+  "device-runtime": "radio-html/data/device-runtime-evidence.json",
+  "product-surface-matrix": "radio-html/data/product-surface-matrix.json",
   "hdfc-upi-parser-adapter": "radio-html/data/hdfc-upi-parser-adapter.json",
   "evidence-refresh-command": "radio-html/data/evidence-refresh-command.json",
   "installer-signing-proof": "radio-html/data/installer-signing-proof.json",

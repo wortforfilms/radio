@@ -1,0 +1,29 @@
+{
+  "name": "radio-vaigyaaniq-standalone",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Radio Vaigyaaniq — standalone app extracted from the Vaishviq monorepo (Phase 6).",
+  "scripts": {
+    "dev": "next dev",
+    "dev:clean": "rm -rf .next .turbo node_modules/.cache && next dev",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "assets:sync": "node scripts/sync-assets.mjs"
+  },
+  "dependencies": {
+    "next": "16.2.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@prisma/client": "^5.22.0"
+  },
+  "devDependencies": {
+    "prisma": "^5.22.0",
+    "typescript": "^5.6.3",
+    "@types/node": "^22.7.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1"
+  }
+}
