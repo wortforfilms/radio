@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radio Vaigyaaniq — Pricing & Checkout</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b27;--panel2:#1d2433;--line:#2b3446;--ink:#e8edf6;
+    --muted:#9aa6bd;--navy:#5b8def;--gold:#f0b429;--good:#2ea043;--bad:#e5534b;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,Segoe UI,Arial,sans-serif}
+  header{padding:18px 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;
+    background:linear-gradient(90deg,#11161f,#161b27)}
+  .mark{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--navy),var(--gold));
+    display:flex;align-items:center;justify-content:center;font-weight:800;color:#0d1117}
+  header h1{font-size:18px;margin:0}header small{color:var(--muted)}
+  .cur{margin-left:auto;display:flex;gap:6px}
+  .cur button{background:var(--panel2);color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:7px 12px;font-weight:700;cursor:pointer}
+  .cur button.on{background:var(--navy);color:#06101f;border-color:var(--navy)}
+  .wrap{display:grid;grid-template-columns:1fr 400px;gap:18px;padding:20px 24px;max-width:1320px;margin:0 auto}
+  @media(max-width:980px){.wrap{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:18px}
+  .card h2{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin:0 0 12px}
+  .pass{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,#1a2336,#221a10);
+    border:1px solid var(--line);border-radius:12px;padding:14px}
+  .pass .big{font-size:22px;font-weight:800}
+  .album{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:14px;background:var(--panel2)}
+  .album .top{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+  .album .title{font-weight:700;font-size:15px}
+  .lbl{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px}
+  .lbl.mush{background:#3a2b13;color:var(--gold);border:1px solid #5a4318}
+  .lbl.phkd{background:#16263f;color:var(--navy);border:1px solid #244066}
+  .price{display:flex;align-items:baseline;gap:8px;margin:4px 0 8px}
+  .price .now{font-size:20px;font-weight:800}
+  .price .was{color:var(--muted);text-decoration:line-through;font-size:13px}
+  .price .off{color:var(--good);font-weight:700;font-size:12px;background:#13261a;border:1px solid #235;padding:1px 7px;border-radius:999px}
+  .trk{display:flex;align-items:center;gap:10px;padding:7px 0;border-top:1px solid var(--line);font-size:13px}
+  .trk .n{color:var(--muted);width:18px;text-align:right}
+  .trk .nm{flex:1}
+  .badge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:999px}
+  .b-full{background:#13261a;color:#7ee2a0;border:1px solid #235}
+  .b-prev{background:#1b2740;color:#8fb3ff;border:1px solid #2c4470}
+  .b-lock{background:#2a1719;color:#ff9b94;border:1px solid #5a2a2a}
+  button.buy{background:var(--navy);color:#06101f;border:0;border-radius:7px;padding:6px 11px;font-weight:700;cursor:pointer;font-size:12px}
+  button.buy:hover{filter:brightness(1.08)}
+  button.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  button.owned{background:#13261a;color:#7ee2a0;border:1px solid #235;cursor:default}
+  .side{position:sticky;top:18px;align-self:start}
+  table{width:100%;border-collapse:collapse;font-size:12px}
+  th,td{text-align:left;padding:7px 6px;border-bottom:1px solid var(--line)}
+  th{color:var(--muted);font-weight:600}
+  .st{font-weight:700}.st.paid{color:var(--good)}.st.refunded{color:var(--muted)}
+  .muted{color:var(--muted)}.tot{font-weight:800;font-size:16px}
+  .hint{color:var(--muted);font-size:12px;margin-top:8px}
+  code{background:var(--panel2);padding:1px 6px;border-radius:5px;color:#cfe1ff}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">RV</div>
+  <div><h1>Radio Vaigyaaniq — Pricing &amp; Checkout</h1>
+    <small>Preview free · Pro unlock per track or album · All-access pass · purchase ledger. Mock for the Razorpay flow.</small></div>
+  <div class="cur">
+    <button id="curINR" class="on" onclick="setCur('INR')">₹ INR</button>
+    <button id="curUSD" onclick="setCur('USD')">$ USD</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="main">
+    <div class="card">
+      <h2>All-access pass (Pro)</h2>
+      <div class="pass">
+        <div style="flex:1">
+          <div class="big" id="passPrice">₹299.00</div>
+          <div class="muted">Unlocks every published track in the catalogue. One-time, perpetual.</div>
+        </div>
+        <button class="buy" id="passBtn" onclick="buyAllAccess()">Get Pro</button>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Albums &amp; tracks</h2>
+      <div id="albums"></div>
+      <div class="hint">Album price uses <b>cheaper-than-N-singles</b>: charged for (tracks − 2) singles. Preview = free snippet; locked = not yet rights-verified (<code>published:false</code>).</div>
+    </div>
+  </div>
+
+  <div class="side">
+    <div class="card">
+      <h2>Your access</h2>
+      <div id="access" class="muted">Preview only — no purchases yet.</div>
+    </div>
+    <div class="card">
+      <h2>Purchase records</h2>
+      <table id="ledger"><thead><tr><th>When</th><th>Item</th><th>Amount</th><th>Status</th><th></th></tr></thead><tbody></tbody></table>
+      <div style="display:flex;justify-content:space-between;margin-top:10px">
+        <span class="muted">Total paid</span><span class="tot" id="total">—</span>
+      </div>
+      <div class="hint">Each purchase mints a mock receipt (<code>rcpt_…</code>) like a Razorpay payment. Refund revokes the entitlement.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ---- pricing (mirrors packages/shared/src/commerce.ts) ----
+const SINGLE={INR:2900,USD:99}, ALL_ACCESS={INR:29900,USD:999}, FREE=2;
+const fmt=(m,c)=> (c==="INR"?"₹":"$")+(m/100).toFixed(2);
+const trackPrice=(t,c)=> (c==="INR"? (t.priceInr??SINGLE.INR):(t.priceUsd??SINGLE.USD));
+const albumPrice=(al,c)=> Math.max(1,al.tracks.length-FREE)*SINGLE[c];
+const albumFull=(al,c)=> al.tracks.length*SINGLE[c];
+const savings=(al,c)=>{const f=albumFull(al,c),p=albumPrice(al,c);const s=Math.max(0,f-p);return{f,p,s,pct:f?Math.round(s/f*100):0};};
+
+// ---- sample catalogue ----
+const albums=[
+  {id:"a1",slug:"sanatan-cosmos-1",title:"Sanatan Cosmos (Pt. 1)",label:"P.H.K.D.",tracks:[
+    {id:"t1",nm:"अनंत सनातन (Anant Sanatan)",published:true},
+    {id:"t2",nm:"सन्दर्भ की परिभाषा (Sandarbh Ki Paribhasha)",published:true},
+    {id:"t3",nm:"ॐ नाद ब्रह्माय नमः (Om Naad Brahmaaya Namah)",published:true},
+    {id:"t4",nm:"अग्निमीळे पुरोहितं (Agnimile Purohitam)",published:true},
+    {id:"t5",nm:"कॉस्मिक चैंट (Cosmic Chant)",published:true},
+    {id:"t6",nm:"दिव्य शंखनाद (Divya Shankhnaad)",published:true}]},
+  {id:"a2",slug:"haryanvi-maati-1",title:"Haryanvi Maati (Pt. 1)",label:"Magic Mushrooms",tracks:[
+    {id:"u1",nm:"अगड़म बगड़म (Agdam Bagdam)",published:true},
+    {id:"u2",nm:"जोगी बंजारा (Jogi Banjara)",published:true},
+    {id:"u3",nm:"न्यू चाले छोरी (Nyu Chaale Chhori)",published:true},
+    {id:"u4",nm:"हर हर हरयाणा (Har Har Haryana)",published:true},
+    {id:"u5",nm:"जागो रे जागो (Jaago Re Jaago)",published:false},
+    {id:"u6",nm:"आज की बात सुनो रे (Aaj Ki Baat Suno Re)",published:true}]}
+];
+albums.forEach(a=>a.tracks.forEach(t=>t.albumId=a.id));
+
+let cur="INR";
+let entitlements=[]; // {scope,trackId,albumId}
+let purchases=[];     // {ts,label,amount,currency,status,receipt,ent}
+
+const hasAccess=(t)=>entitlements.some(e=>e.active!==false&&(
+  e.scope==="all_access" || (e.scope==="album"&&e.albumId===t.albumId) || (e.scope==="track"&&e.trackId===t.id)));
+const state=(t)=> hasAccess(t)?"full":(t.published?"preview":"locked");
+const ownsAlbum=(a)=>entitlements.some(e=>e.active!==false&&(e.scope==="all_access"||(e.scope==="album"&&e.albumId===a.id)));
+const hasPro=()=>entitlements.some(e=>e.active!==false&&e.scope==="all_access");
+
+function receipt(){return "rcpt_"+Math.random().toString(36).slice(2,10);}
+function record(label,minor,ent){
+  purchases.unshift({ts:new Date().toLocaleTimeString(),label,amount:minor,currency:cur,status:"paid",receipt:receipt(),ent});
+}
+function buyTrack(t){ if(hasAccess(t))return; const e={scope:"track",trackId:t.id,active:true}; entitlements.push(e);
+  record("Track · "+t.nm.replace(/\s*\(.*/,''),trackPrice(t,cur),e); render(); }
+function buyAlbum(a){ if(ownsAlbum(a))return; const e={scope:"album",albumId:a.id,active:true}; entitlements.push(e);
+  record("Album · "+a.title,albumPrice(a,cur),e); render(); }
+function buyAllAccess(){ if(hasPro())return; const e={scope:"all_access",active:true}; entitlements.push(e);
+  record("All-access pass (Pro)",ALL_ACCESS[cur],e); render(); }
+function refund(i){ const p=purchases[i]; if(p.status!=="paid")return; p.status="refunded";
+  if(p.ent)p.ent.active=false; render(); }
+function setCur(c){ cur=c; document.getElementById('curINR').className=c==="INR"?"on":"";
+  document.getElementById('curUSD').className=c==="USD"?"on":""; render(); }
+
+function render(){
+  document.getElementById('passPrice').textContent=fmt(ALL_ACCESS[cur],cur);
+  const pb=document.getElementById('passBtn'); pb.textContent=hasPro()?"✓ Pro active":"Get Pro";
+  pb.className=hasPro()?"buy owned":"buy";
+  // albums
+  document.getElementById('albums').innerHTML=albums.map(a=>{
+    const sv=savings(a,cur); const owned=ownsAlbum(a);
+    const rows=a.tracks.map((t,i)=>{
+      const s=state(t); const badge=s==="full"?'<span class="badge b-full">FULL</span>':s==="preview"?'<span class="badge b-prev">PREVIEW</span>':'<span class="badge b-lock">LOCKED</span>';
+      const act = s==="full"?'<button class="buy owned">✓ Owned</button>'
+        : s==="locked"?'<span class="muted" style="font-size:11px">not for sale yet</span>'
+        : '<button class="buy" onclick="buyTrack(findTrack(\''+t.id+'\'))">'+fmt(trackPrice(t,cur),cur)+'</button>';
+      return '<div class="trk"><span class="n">'+(i+1)+'</span><span class="nm">'+t.nm+'</span>'+badge+act+'</div>';
+    }).join('');
+    return '<div class="album"><div class="top"><span class="title">'+a.title+'</span>'+
+      '<span class="lbl '+(a.label==="Magic Mushrooms"?"mush":"phkd")+'">'+a.label+'</span></div>'+
+      '<div class="price"><span class="now">'+fmt(sv.p,cur)+'</span><span class="was">'+fmt(sv.f,cur)+'</span>'+
+      '<span class="off">−'+sv.pct+'%</span>'+
+      (owned?'<button class="buy owned" style="margin-left:auto">✓ Album owned</button>':'<button class="buy" style="margin-left:auto" onclick="buyAlbum(findAlbum(\''+a.id+'\'))">Buy album</button>')+'</div>'+
+      rows+'</div>';
+  }).join('');
+  // access summary
+  const fullCount=albums.flatMap(a=>a.tracks).filter(t=>state(t)==="full").length;
+  document.getElementById('access').innerHTML = hasPro()
+    ? '<b style="color:#7ee2a0">Pro — all-access.</b> Every published track unlocked.'
+    : (entitlements.length? 'Unlocked <b>'+fullCount+'</b> track(s) via '+entitlements.filter(e=>e.active!==false).length+' purchase(s).'
+        : 'Preview only — no purchases yet.');
+  // ledger
+  const tb=document.querySelector('#ledger tbody');
+  tb.innerHTML = purchases.length? purchases.map((p,i)=>
+    '<tr><td class="muted">'+p.ts+'</td><td>'+p.label+'<br><span class="muted" style="font-size:10px">'+p.receipt+'</span></td>'+
+    '<td>'+fmt(p.amount,p.currency)+'</td><td class="st '+p.status+'">'+p.status+'</td>'+
+    '<td>'+(p.status==="paid"?'<button class="buy ghost" style="font-size:10px;padding:3px 7px" onclick="refund('+i+')">refund</button>':'')+'</td></tr>'
+  ).join('') : '<tr><td colspan="5" class="muted">No purchases yet — buy a track, album, or the Pro pass.</td></tr>';
+  const paid=purchases.filter(p=>p.status==="paid").reduce((s,p)=>s+p.amount,0);
+  document.getElementById('total').textContent=fmt(paid,cur);
+}
+const findTrack=(id)=>albums.flatMap(a=>a.tracks).find(t=>t.id===id);
+const findAlbum=(id)=>albums.find(a=>a.id===id);
+render();
+</script>
+</body>
+</html>

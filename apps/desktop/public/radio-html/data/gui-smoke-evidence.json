@@ -1,7 +1,7 @@
 {
   "id": "radio-vaigyaaniq-gui-smoke-evidence",
   "title": "Radio Vaigyaaniq GUI Smoke Evidence",
-  "generatedAt": "2026-06-06",
+  "generatedAt": "2026-06-25",
   "verificationState": "blocked-gui-proof-null",
   "shipDecision": "NO_SHIP",
   "phkd": {
@@ -13,33 +13,33 @@
   },
   "counts": {
     "checks": 9,
-    "passedChecks": 5,
-    "blockedChecks": 4,
-    "screenshots": 1,
+    "passedChecks": 1,
+    "blockedChecks": 8,
+    "screenshots": 0,
     "reviewers": 0,
     "appOpenProof": 0
   },
   "gate": {
     "name": "GUI smoke proof",
     "status": "blocked",
-    "detail": "GUI smoke proof incomplete: reviewer, navigation, no-ship-visible, error-review."
+    "detail": "GUI smoke proof incomplete: manual-screenshot, reviewer, first-paint, navigation, no-crash, no-ship-visible, audio-gate-visible, error-review."
   },
   "app": {
     "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
     "artifact_path": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-    "bundle_hash": "c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11",
+    "bundle_hash": "9cc0f713f050418e18163fbdaf46aaa19b3c44e6bd3b23c55bb675f7b828c00d",
     "bundle_structure_ok": true,
     "open_attempt": null
   },
   "manualEvidence": {
-    "route": "radio-html/surfaces/index.html",
-    "screenshot": "apps/desktop/evidence/screenshots/gui-smoke-tauri-window.png",
-    "screenshot_path": "/Volumes/LaCie/pprm/for_radio/apps/desktop/evidence/screenshots/gui-smoke-tauri-window.png",
-    "screenshot_exists": true,
-    "screenshot_sha256": "417190d992aeab427861047f6bd893a362da16493bc427ee054a47b820af65c0",
+    "route": "radio-html/surfaces/landing.html",
+    "screenshot": null,
+    "screenshot_path": null,
+    "screenshot_exists": false,
+    "screenshot_sha256": null,
     "reviewer": null,
     "reviewed_at": null,
-    "notes": "Tauri window visible with Radio Vaigyaaniq shell, surface content, PHKD rail, and media library NULL playback boundary. NO_SHIP label and human reviewer proof not visible/provided, so gate remains blocked."
+    "notes": null
   },
   "checks": [
     {
@@ -52,9 +52,9 @@
     {
       "key": "manual-screenshot",
       "label": "Desktop GUI screenshot attached",
-      "status": "pass",
-      "evidence": "/Volumes/LaCie/pprm/for_radio/apps/desktop/evidence/screenshots/gui-smoke-tauri-window.png",
-      "blocker": null
+      "status": "blocked",
+      "evidence": null,
+      "blocker": "EVIDENCE_GUI_SMOKE_SCREENSHOT missing or file does not exist"
     },
     {
       "key": "reviewer",
@@ -66,37 +66,37 @@
     {
       "key": "first-paint",
       "label": "First paint visible",
-      "status": "pass",
-      "evidence": "radio-html/surfaces/index.html",
-      "blocker": null
+      "status": "blocked",
+      "evidence": "radio-html/surfaces/landing.html",
+      "blocker": "EVIDENCE_GUI_SMOKE_FIRST_PAINT must be true"
     },
     {
       "key": "navigation",
       "label": "Primary navigation responds",
       "status": "blocked",
-      "evidence": "radio-html/surfaces/index.html",
+      "evidence": "radio-html/surfaces/landing.html",
       "blocker": "EVIDENCE_GUI_SMOKE_NAVIGATION must be true"
     },
     {
       "key": "no-crash",
       "label": "No crash or blank screen observed",
-      "status": "pass",
-      "evidence": "radio-html/surfaces/index.html",
-      "blocker": null
+      "status": "blocked",
+      "evidence": "radio-html/surfaces/landing.html",
+      "blocker": "EVIDENCE_GUI_SMOKE_NO_CRASH must be true"
     },
     {
       "key": "no-ship-visible",
       "label": "NO_SHIP state visible",
       "status": "blocked",
-      "evidence": "radio-html/surfaces/index.html",
+      "evidence": "radio-html/surfaces/landing.html",
       "blocker": "EVIDENCE_GUI_SMOKE_NO_SHIP must be true"
     },
     {
       "key": "audio-gate-visible",
       "label": "Audio rights/playback gate visible",
-      "status": "pass",
-      "evidence": "radio-html/surfaces/index.html",
-      "blocker": null
+      "status": "blocked",
+      "evidence": "radio-html/surfaces/landing.html",
+      "blocker": "EVIDENCE_GUI_SMOKE_AUDIO_GATE must be true"
     },
     {
       "key": "error-review",

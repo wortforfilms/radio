@@ -3,7 +3,7 @@ import path from "node:path";
 
 const root = path.resolve("apps/web/public/radio-html");
 const desktopRoot = path.resolve("apps/desktop/public/radio-html");
-const today = "2026-06-05";
+const today = new Date().toISOString().slice(0, 10);
 
 const dataPhkd = {
   rule: "fail_closed",
@@ -19,7 +19,8 @@ const milestoneSurfaces = [
   ["Payment Proof", "/radio-html/surfaces/payment-proof.html", "/apps/desktop/public/radio-html/surfaces/payment-proof.html", "apps/web/public/radio-html/data/payment-proof-lane.json"],
   ["Installer Pipeline", "/radio-html/surfaces/installer-pipeline.html", "/apps/desktop/public/radio-html/surfaces/installer-pipeline.html", "apps/web/public/radio-html/data/installer-pipeline.json"],
   ["Release Orchestration", "/radio-html/surfaces/release-orchestration.html", "/apps/desktop/public/radio-html/surfaces/release-orchestration.html", "apps/web/public/radio-html/data/release-orchestration.json"],
-  ["Desktop Alpha Bundle", "/radio-html/surfaces/desktop-alpha.html", "/apps/desktop/public/radio-html/surfaces/desktop-alpha.html", "apps/web/public/radio-html/data/desktop-alpha-bundle.json"]
+  ["Desktop Alpha Bundle", "/radio-html/surfaces/desktop-alpha.html", "/apps/desktop/public/radio-html/surfaces/desktop-alpha.html", "apps/web/public/radio-html/data/desktop-alpha-bundle.json"],
+  ["Device Runtime", "/radio-html/surfaces/device-runtime.html", "/apps/desktop/public/radio-html/surfaces/device-runtime.html", "apps/web/public/radio-html/data/device-runtime-evidence.json"]
 ];
 
 const milestoneDataRows = [
@@ -29,6 +30,8 @@ const milestoneDataRows = [
   ["Installer Pipeline Data", "/radio-html/data/installer-pipeline.json", "served-static-json", "/apps/desktop/public/radio-html/data/installer-pipeline.json", "apps/web/public/radio-html/data/installer-pipeline.json", "implemented-draft"],
   ["Release Orchestration Data", "/radio-html/data/release-orchestration.json", "served-static-json", "/apps/desktop/public/radio-html/data/release-orchestration.json", "apps/web/public/radio-html/data/release-orchestration.json", "implemented-draft"],
   ["Desktop Alpha Bundle Data", "/radio-html/data/desktop-alpha-bundle.json", "served-static-json", "/apps/desktop/public/radio-html/data/desktop-alpha-bundle.json", "apps/web/public/radio-html/data/desktop-alpha-bundle.json", "implemented-draft"],
+  ["Device Runtime Evidence Data", "/radio-html/data/device-runtime-evidence.json", "served-static-json", "/apps/desktop/public/radio-html/data/device-runtime-evidence.json", "apps/web/public/radio-html/data/device-runtime-evidence.json", "implemented-draft"],
+  ["Product Surface Matrix Data", "/radio-html/data/product-surface-matrix.json", "served-static-json", "/apps/desktop/public/radio-html/data/product-surface-matrix.json", "apps/web/public/radio-html/data/product-surface-matrix.json", "implemented-draft"],
   ["Milestone Completion Data", "/radio-html/data/milestone-completion.json", "served-static-json", "/apps/desktop/public/radio-html/data/milestone-completion.json", "apps/web/public/radio-html/data/milestone-completion.json", "implemented-draft"]
 ];
 
@@ -121,6 +124,7 @@ const tauriReadiness = readJson(path.join(root, "data/tauri-readiness.json"), { 
 const productionFreeze = readJson(path.join(root, "data/production-freeze.json"), { frozenDrafts: [], blockedProductionClaims: [] });
 const visualQa = readJson(path.join(root, "data/visual-qa.json"), { counts: {}, targets: [] });
 const previousDesktopAlpha = readJson(path.join(root, "data/desktop-alpha-bundle.json"), null);
+const previousProductSurfaceMatrix = readJson(path.join(root, "data/product-surface-matrix.json"), { entries: [] });
 
 const rightsReviewWorkbench = {
   id: "radio-vaigyaaniq-rights-review-workbench",
@@ -276,6 +280,116 @@ const desktopAlphaBundle = {
   ], (item) => item.key)
 };
 
+const deviceRuntimeEvidence = {
+  id: "radio-vaigyaaniq-device-runtime-evidence",
+  title: "Radio Vaigyaaniq Device Runtime Evidence",
+  generatedAt: today,
+  verificationState: "blocked-device-proof-null",
+  phkd: {
+    ...dataPhkd,
+    note: "Device Runtime records local capability surfaces only. Hardware proof, OS permissions, sensor readings, pairing, signing, and reviewer evidence remain NULL until imported."
+  },
+  counts: {
+    routes: 4,
+    topologyNodes: 7,
+    topologyEdges: 6,
+    evidenceArtifacts: 2,
+    blockedCapabilities: 6,
+    releaseAllowed: 0,
+    productionReady: 0
+  },
+  routes: [
+    { key: "device-overview", label: "Device Runtime", path: "/device", status: "implemented-draft" },
+    { key: "device-runtime-console", label: "Device Runtime Console", path: "/device/runtime", status: "implemented-draft" },
+    { key: "device-topology", label: "Device Topology", path: "/device/topology", status: "implemented-draft" },
+    { key: "device-evidence", label: "Device Evidence", path: "/device/evidence", status: "blocked" }
+  ],
+  topology: {
+    nodes: [
+      { id: "sovereign-dashboard", label: "Sovereign Dashboard", type: "surface", status: "implemented-draft", route: "/dashboard", evidence: "/radio-html/data/product-surface-matrix.json" },
+      { id: "device-runtime", label: "Device Runtime", type: "runtime", status: "implemented-draft", route: "/device", evidence: "/radio-html/data/device-runtime-evidence.json" },
+      { id: "browser-device", label: "Browser Device APIs", type: "device", status: "blocked", route: "/device/runtime", evidence: "/radio-html/data/device-runtime-evidence.json" },
+      { id: "desktop-device", label: "Desktop Device Shell", type: "device", status: "blocked", route: "/radio-html/surfaces/tauri-readiness.html", evidence: "/radio-html/data/tauri-readiness.json" },
+      { id: "radio-runtime", label: "Radio Runtime", type: "runtime", status: "implemented-draft", route: "/radio/runtime", evidence: "/radio-html/data/radio-runtime-data.json" },
+      { id: "device-evidence-registry", label: "Device Evidence Registry", type: "evidence", status: "blocked", route: "/device/evidence", evidence: "/radio-html/data/device-runtime-evidence.json" },
+      { id: "governance-evidence-center", label: "Governance Evidence Center", type: "governance", status: "implemented-draft", route: "/governance", evidence: "/radio-html/data/customer-release-milestone.json" }
+    ],
+    edges: [
+      { from: "sovereign-dashboard", to: "device-runtime", relation: "renders", status: "implemented-draft" },
+      { from: "device-runtime", to: "browser-device", relation: "observes", status: "blocked" },
+      { from: "device-runtime", to: "desktop-device", relation: "observes", status: "blocked" },
+      { from: "radio-runtime", to: "device-runtime", relation: "feeds", status: "implemented-draft" },
+      { from: "device-runtime", to: "device-evidence-registry", relation: "exports", status: "blocked" },
+      { from: "device-evidence-registry", to: "governance-evidence-center", relation: "blocks", status: "blocked" }
+    ]
+  },
+  artifacts: [
+    {
+      key: "device-runtime-evidence",
+      title: "Device Runtime Evidence Artifact",
+      path: "/radio-html/data/device-runtime-evidence.json",
+      status: "blocked",
+      verificationState: "blocked-device-proof-null",
+      requiredEvidence: ["deviceId", "capabilityProbe", "permissionGrant", "hardwareRun", "telemetryHash", "reviewer", "reviewedAt", "AuditLog.verified"]
+    },
+    {
+      key: "product-surface-matrix",
+      title: "Product Surface Matrix",
+      path: "/radio-html/data/product-surface-matrix.json",
+      status: "implemented-draft",
+      verificationState: "draft-product-surface-matrix",
+      requiredEvidence: ["route", "api", "runtime", "evidenceArtifact"]
+    }
+  ],
+  capabilityLanes: [
+    { key: "audio-input", label: "Audio input", status: "blocked", blocker: "microphone permission and capture hash evidence NULL" },
+    { key: "audio-output", label: "Audio output", status: "blocked", blocker: "speaker routing and playback proof NULL" },
+    { key: "display-capture", label: "Display capture", status: "blocked", blocker: "screen capture permission evidence NULL" },
+    { key: "desktop-shell", label: "Desktop shell", status: "blocked", blocker: "signed desktop bridge proof NULL" },
+    { key: "sensor-bridge", label: "Sensor bridge", status: "blocked", blocker: "MIDI, serial, bluetooth, gamepad, and HID proof NULL" },
+    { key: "telemetry-export", label: "Telemetry export", status: "blocked", blocker: "reviewed telemetry hash evidence NULL" }
+  ]
+};
+
+const productSurfaceMatrix = {
+  id: "radio-vaigyaaniq-product-surface-matrix",
+  title: "Radio Vaigyaaniq Product Surface Matrix",
+  generatedAt: today,
+  verificationState: "draft-product-surface-matrix",
+  phkd: dataPhkd,
+  counts: {
+    entries: 2,
+    deviceRuntimeEntries: 2,
+    releaseAllowed: 0,
+    productionReady: 0
+  },
+  entries: uniqueBy([
+    ...(previousProductSurfaceMatrix.entries ?? []),
+    {
+      product: "Radio Vaigyaaniq",
+      surface: "Device Runtime",
+      route: "/device",
+      api: "/api/device",
+      runtime: "DeviceRuntime",
+      evidence: "/radio-html/data/device-runtime-evidence.json",
+      status: "implemented-draft",
+      releaseAllowed: false
+    },
+    {
+      product: "Radio Vaigyaaniq",
+      surface: "Device Topology",
+      route: "/device/topology",
+      api: "/api/device?view=topology",
+      runtime: "DeviceRuntime",
+      evidence: "/radio-html/data/product-surface-matrix.json",
+      status: "implemented-draft",
+      releaseAllowed: false
+    }
+  ], (item) => `${item.product}:${item.surface}:${item.route}`)
+};
+productSurfaceMatrix.counts.entries = productSurfaceMatrix.entries.length;
+productSurfaceMatrix.counts.deviceRuntimeEntries = productSurfaceMatrix.entries.filter((entry) => entry.runtime === "DeviceRuntime").length;
+
 const milestoneCompletion = {
   id: "radio-vaigyaaniq-next-milestone-completion",
   title: "Radio Vaigyaaniq Next Milestone Completion",
@@ -283,9 +397,9 @@ const milestoneCompletion = {
   verificationState: "draft",
   phkd: dataPhkd,
   counts: {
-    milestones: 7,
-    implementedDraft: 7,
-    evidenceBlocked: 6,
+    milestones: 8,
+    implementedDraft: 8,
+    evidenceBlocked: 7,
     productionReady: 0,
     shipDecision: "NO_SHIP"
   },
@@ -296,9 +410,13 @@ const milestoneCompletion = {
     { key: "tauri-installer-pipeline", label: "Tauri Installer Pipeline", status: "implemented-draft", evidence: "/radio-html/data/installer-pipeline.json", blocker: "signed installer evidence NULL" },
     { key: "release-review-board", label: "Release Review Board", status: "implemented-draft", evidence: "/radio-html/data/release-review.json", blocker: "human approval evidence NULL" },
     { key: "one-command-evidence-orchestration", label: "One-Command Evidence Orchestration", status: "implemented-draft", evidence: "/radio-html/data/release-orchestration.json", blocker: "browser checks require local server" },
-    { key: "desktop-alpha-bundle", label: "Desktop Alpha Bundle", status: "implemented-draft", evidence: "/radio-html/data/desktop-alpha-bundle.json", blocker: "alpha is NO_SHIP until rights/payment/signing/review close" }
+    { key: "desktop-alpha-bundle", label: "Desktop Alpha Bundle", status: "implemented-draft", evidence: "/radio-html/data/desktop-alpha-bundle.json", blocker: "alpha is NO_SHIP until rights/payment/signing/review close" },
+    { key: "device-runtime", label: "Device Runtime", status: "implemented-draft", evidence: "/radio-html/data/device-runtime-evidence.json", blocker: "device hardware proof, permission evidence, telemetry hash, and reviewer evidence still NULL" }
   ]
 };
+milestoneCompletion.counts.milestones = milestoneCompletion.milestones.length;
+milestoneCompletion.counts.implementedDraft = milestoneCompletion.milestones.filter((item) => item.status === "implemented-draft").length;
+milestoneCompletion.counts.evidenceBlocked = milestoneCompletion.milestones.filter((item) => item.blocker).length;
 
 const writes = [
   ["data/rights-review-workbench.json", rightsReviewWorkbench],
@@ -307,6 +425,8 @@ const writes = [
   ["data/installer-pipeline.json", installerPipeline],
   ["data/release-orchestration.json", releaseOrchestration],
   ["data/desktop-alpha-bundle.json", desktopAlphaBundle],
+  ["data/device-runtime-evidence.json", deviceRuntimeEvidence],
+  ["data/product-surface-matrix.json", productSurfaceMatrix],
   ["data/milestone-completion.json", milestoneCompletion]
 ];
 
@@ -396,6 +516,20 @@ const surfaceSpecs = [
     countKeys: ["includedSurfaces", "includedDataFrames", "signedInstallers", "productionReady", "blockers"],
     listTitle: "Alpha Records",
     listKey: "records"
+  },
+  {
+    file: "surfaces/device-runtime.html",
+    title: "Device Runtime",
+    eyebrow: "Device Runtime Evidence",
+    headline: "Device Surfaces, Proof Blocked",
+    body: "Browser and desktop device capability lanes are routed, surfaced, and registered. Hardware telemetry, OS permission, and reviewer evidence remain NULL until imported.",
+    jsonPath: "../data/device-runtime-evidence.json",
+    apiPath: "/api/device",
+    primaryMetric: { label: "Topology Nodes", value: "data.counts?.topologyNodes", note: "device graph" },
+    countKeys: ["routes", "topologyNodes", "topologyEdges", "evidenceArtifacts", "blockedCapabilities", "releaseAllowed"],
+    listTitle: "Device Routes",
+    listKey: "routes",
+    extraActions: [{ href: "/device", label: "React Route" }, { href: "../data/product-surface-matrix.json", label: "Product Matrix" }]
   }
 ];
 
@@ -411,7 +545,8 @@ const nextEvidenceLanes = [
   { key: "payment-proof", label: "Payment Proof Lane", path: "/radio-html/data/payment-proof-lane.json", status: "blocked" },
   { key: "installer-pipeline", label: "Installer Pipeline", path: "/radio-html/data/installer-pipeline.json", status: "blocked" },
   { key: "release-orchestration", label: "Release Orchestration", path: "/radio-html/data/release-orchestration.json", status: "implemented-draft" },
-  { key: "desktop-alpha", label: "Desktop Alpha Bundle", path: "/radio-html/data/desktop-alpha-bundle.json", status: "implemented-draft" }
+  { key: "desktop-alpha", label: "Desktop Alpha Bundle", path: "/radio-html/data/desktop-alpha-bundle.json", status: "implemented-draft" },
+  { key: "device-runtime", label: "Device Runtime", path: "/radio-html/data/device-runtime-evidence.json", status: "blocked" }
 ];
 tauriReadiness.evidenceLanes = uniqueBy([...(tauriReadiness.evidenceLanes ?? []), ...nextEvidenceLanes], (item) => item.key);
 tauriReadiness.checklist = uniqueBy([...(tauriReadiness.checklist ?? []), ...nextEvidenceLanes.map((lane) => ({

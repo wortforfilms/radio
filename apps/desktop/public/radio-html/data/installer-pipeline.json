@@ -1,8 +1,8 @@
 {
   "id": "radio-vaigyaaniq-installer-pipeline",
   "title": "Radio Vaigyaaniq Tauri Installer Pipeline",
-  "generatedAt": "2026-06-06",
-  "verificationState": "draft-local-app-built-gui-proof-null",
+  "generatedAt": "2026-06-25",
+  "verificationState": "draft-local-app-built-signing-proof-blocked",
   "phkd": {
     "rule": "fail_closed",
     "unknownValues": "NULL",
@@ -60,7 +60,7 @@
       "platform": "macOS",
       "format": "app",
       "path": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-      "checksum": "c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11",
+      "checksum": "9cc0f713f050418e18163fbdaf46aaa19b3c44e6bd3b23c55bb675f7b828c00d",
       "signingEvidence": "/radio-html/data/signing-notarization-evidence.json",
       "status": "draft-ready-unsigned"
     },

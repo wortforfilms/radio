@@ -1,5 +1,5 @@
 key,platform,format,artifactPath,sha256,buildCommand,signingIdentity,signatureVerification,notarizationTicket,gatekeeperAssessment,reviewer,reviewedAt,auditVerified,releaseAllowed,reason
-macos-app,macOS,app,../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app,c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11,,,,,,,,false,false,
+macos-app,macOS,app,../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app,9cc0f713f050418e18163fbdaf46aaa19b3c44e6bd3b23c55bb675f7b828c00d,,,,,,,,false,false,
 macos-dmg,macOS,dmg,,,,,,,,,,false,false,
 windows-msi,Windows,msi,,,,,,,,,,false,false,
 windows-exe,Windows,exe,,,,,,,,,,false,false,

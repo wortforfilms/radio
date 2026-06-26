@@ -1,0 +1,73 @@
+{
+  "id": "radio-vaigyaaniq-stations",
+  "brand": "Radio Vaigyaaniq",
+  "generatedAt": "2026-06-25",
+  "uiLanguages": ["hi", "en"],
+  "languageModel": "content-tags + UI-localize + per-language variants",
+  "themeToStation": {
+    "Sanatan & Vedic": "sanaatana-vaigyaniq",
+    "Classical & Raag": "sanaatana-vaigyaniq",
+    "Bhakti & Katha": "kabir-clubbing",
+    "Rap & Fusion": "kabir-clubbing",
+    "Naagin & Mystic": "kabir-clubbing",
+    "Haryanvi Folk": "ameerpur",
+    "Desh / Patriotic": "ameerpur",
+    "Love & Virah": "ameerpur",
+    "Other / Misc": "gurukul"
+  },
+  "stations": [
+    {
+      "slug": "sanaatana-vaigyaniq",
+      "name": "Sanaatana Vaigyaniq",
+      "tagline": "The science of the eternal — chants, cosmos, Vedic frequency.",
+      "themes": ["Sanatan & Vedic", "Classical & Raag"],
+      "languages": ["Sanskrit", "Hindi"],
+      "accent": "#f0b429",
+      "sortOrder": 1,
+      "variants": [
+        { "slug": "sanaatana-vaigyaniq-sa", "language": "Sanskrit" },
+        { "slug": "sanaatana-vaigyaniq-hi", "language": "Hindi" }
+      ]
+    },
+    {
+      "slug": "kabir-clubbing",
+      "name": "Kabir Clubbing",
+      "tagline": "Mystic verse meets the dancefloor — Bhakti, fusion, beat.",
+      "themes": ["Bhakti & Katha", "Rap & Fusion", "Naagin & Mystic"],
+      "languages": ["Hindi", "Braj"],
+      "accent": "#5b8def",
+      "sortOrder": 2,
+      "variants": [
+        { "slug": "kabir-clubbing-hi", "language": "Hindi" },
+        { "slug": "kabir-clubbing-braj", "language": "Braj" }
+      ]
+    },
+    {
+      "slug": "ameerpur",
+      "name": "Ameerpur",
+      "tagline": "Haryanvi maati — street, folk, full desi.",
+      "themes": ["Haryanvi Folk", "Desh / Patriotic", "Love & Virah"],
+      "languages": ["Haryanvi", "Hindi"],
+      "accent": "#2ea043",
+      "sortOrder": 3,
+      "variants": [
+        { "slug": "ameerpur-hr", "language": "Haryanvi" },
+        { "slug": "ameerpur-hi", "language": "Hindi" }
+      ]
+    },
+    {
+      "slug": "gurukul",
+      "name": "Gurukul",
+      "tagline": "Learn by listening — shlokas, stories, spoken word, kids.",
+      "themes": ["Other / Misc"],
+      "languages": ["Sanskrit", "Hindi", "English"],
+      "accent": "#a06bd6",
+      "sortOrder": 4,
+      "variants": [
+        { "slug": "gurukul-sa", "language": "Sanskrit" },
+        { "slug": "gurukul-hi", "language": "Hindi" },
+        { "slug": "gurukul-en", "language": "English" }
+      ]
+    }
+  ]
+}

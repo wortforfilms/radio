@@ -17,3 +17,11 @@ apps/web/.next/
 /*.mp3
 _non_suno/
 _radio_index/
+
+# Promoted catalogue media — copied into the served layer by `npm run radio:promote`
+# from _radio_index/suno_backup. Large (~12GB per mirror) and regenerable; not source.
+# Keeps the source cover SVGs and PHKD_AUDIO_PLACEHOLDER.json tracked.
+apps/web/public/radio-html/assets/audio/*.mp3
+apps/web/public/radio-html/assets/covers/*.jpeg
+apps/desktop/public/radio-html/assets/audio/*.mp3
+apps/desktop/public/radio-html/assets/covers/*.jpeg

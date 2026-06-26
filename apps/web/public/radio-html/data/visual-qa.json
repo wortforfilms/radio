@@ -13,7 +13,7 @@
     ]
   },
   "counts": {
-    "targets": 25,
+    "targets": 26,
     "capturedScreenshots": 25,
     "pass": 25,
     "blocked": 0
@@ -293,6 +293,17 @@
       "mobileStatus": "pending-mobile-sweep",
       "notes": "Captured 2026-06-05 at http://127.0.0.1:3000/radio-html/surfaces/runtime-data.html",
       "slug": "runtime-data"
+    },
+    {
+      "title": "Device Runtime",
+      "path": "/radio-html/surfaces/device-runtime.html",
+      "screenshot": null,
+      "renderStatus": "pending",
+      "linkStatus": "pending",
+      "imageStatus": "pending",
+      "mobileStatus": "pending",
+      "notes": "Pending browser screenshot capture.",
+      "slug": "device-runtime"
     }
   ]
 }

@@ -13,8 +13,8 @@
     ]
   },
   "counts": {
-    "webHtml": 40,
-    "desktopHtml": 40
+    "webHtml": 41,
+    "desktopHtml": 41
   },
   "servedIndex": "/radio-html/all-html.html",
   "groups": [
@@ -233,6 +233,11 @@
           "title": "Desktop Alpha Bundle",
           "path": "/radio-html/surfaces/desktop-alpha.html",
           "desktopPath": "/apps/desktop/public/radio-html/surfaces/desktop-alpha.html"
+        },
+        {
+          "title": "Device Runtime",
+          "path": "/radio-html/surfaces/device-runtime.html",
+          "desktopPath": "/apps/desktop/public/radio-html/surfaces/device-runtime.html"
         }
       ]
     }

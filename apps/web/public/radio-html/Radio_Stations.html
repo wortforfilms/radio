@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radio Vaigyaaniq — Stations</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b27;--panel2:#1d2433;--line:#2b3446;--ink:#e8edf6;--muted:#9aa6bd;--navy:#5b8def;--gold:#f0b429;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,Segoe UI,Arial,sans-serif}
+  header{position:sticky;top:0;z-index:5;padding:14px 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;background:linear-gradient(90deg,#11161f,#161b27)}
+  .mark{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,var(--navy),var(--gold));display:flex;align-items:center;justify-content:center;font-weight:800;color:#0d1117}
+  header h1{font-size:17px;margin:0}header small{color:var(--muted)}
+  .back{margin-left:auto;background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:7px 13px;font-weight:700;cursor:pointer}
+  .wrap{max-width:1200px;margin:0 auto;padding:20px 24px 56px}
+  /* lineup */
+  .stations{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+  .st{position:relative;border:1px solid var(--line);border-radius:16px;padding:20px;cursor:pointer;overflow:hidden;background:var(--panel);transition:transform .12s,border-color .15s}
+  .st:hover{transform:translateY(-2px)}
+  .st .glow{position:absolute;inset:0;opacity:.18;background:radial-gradient(circle at 80% 10%,var(--ac),transparent 55%)}
+  .st .live{position:absolute;top:14px;right:14px;font-size:10px;font-weight:800;color:#0d1117;background:var(--ac);padding:2px 8px;border-radius:999px}
+  .st h2{margin:2px 0 6px;font-size:22px}
+  .st .tag{color:var(--muted);font-size:13px;min-height:38px}
+  .st .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+  .chip{font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:var(--panel2);border:1px solid var(--line);color:var(--muted)}
+  .st .n{margin-top:12px;font-weight:800;font-size:13px}
+  /* station view */
+  .hero{position:relative;border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:18px;overflow:hidden;background:var(--panel)}
+  .hero .glow{position:absolute;inset:0;opacity:.2;background:radial-gradient(circle at 85% 0%,var(--ac),transparent 55%)}
+  .hero h2{margin:0;font-size:30px}.hero p{color:var(--muted);margin:6px 0 0;max-width:640px}
+  .filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .lang{font-size:12px;font-weight:700;padding:6px 12px;border-radius:999px;background:var(--panel2);border:1px solid var(--line);color:var(--ink);cursor:pointer}
+  .lang.on{background:var(--ac);color:#0d1117;border-color:var(--ac)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:13px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:11px;overflow:hidden;transition:transform .1s,border-color .15s}
+  .card:hover{transform:translateY(-2px);border-color:var(--ac)}
+  .art{position:relative;aspect-ratio:1/1;background:linear-gradient(135deg,#1a2336,#221a10);display:block}
+  .art img{width:100%;height:100%;object-fit:cover;display:block}
+  .art .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:28px;color:#46506a}
+  .lc{position:absolute;left:7px;bottom:7px;font-size:9px;font-weight:800;padding:2px 7px;border-radius:999px;background:rgba(13,17,23,.72);border:1px solid var(--line)}
+  .meta{padding:8px 10px}.meta .t{font-size:12px;font-weight:600;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:30px}
+  .hidden{display:none}.loading{color:var(--muted);padding:40px;text-align:center}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">RV</div>
+  <div><h1>Radio Vaigyaaniq — Stations</h1><small id="sub">Tune a frequency</small></div>
+  <button class="back hidden" id="back" onclick="showLineup()">← All stations</button>
+</header>
+<div class="wrap">
+  <div id="lineup" class="stations"></div>
+  <div id="stationView" class="hidden">
+    <div class="hero"><div class="glow"></div>
+      <h2 id="svName"></h2><p id="svTag"></p>
+      <div class="filters" id="svLangs"></div>
+    </div>
+    <div class="grid" id="svGrid"></div>
+    <div id="svEmpty" class="loading hidden">No tracks for this language yet.</div>
+  </div>
+  <div id="status" class="loading">Loading stations…</div>
+</div>
+<script>
+let DOC=null, TRACKS={bySlug:{},counts:{}}, current=null, lang="All";
+const $=id=>document.getElementById(id);
+
+// client-side fallback theme map (mirrors scripts/assign-stations.mjs) if station-tracks.json absent
+const KW=[[/सनातन|ॐ|ब्रह्म|sanatan|chant|naad|hiranya/i,"Sanatan & Vedic"],[/राग|सरोद|yaman|classical/i,"Classical & Raag"],[/कबीर|राम|भजन|कथा|माता|हनुमान|bhakti|kabir/i,"Bhakti & Katha"],[/rap|fusion|trance|बावल|verse/i,"Rap & Fusion"],[/नागिन|naagin/i,"Naagin & Mystic"],[/हरियाण|छोरी|लुगाई|जाट|chhori|lugai/i,"Haryanvi Folk"],[/देश|तिरंगा|फौजी|desh|fauji/i,"Desh / Patriotic"],[/प्यार|विरह|याद|पिया|virah|pyaar/i,"Love & Virah"]];
+const themeLang={"Sanatan & Vedic":"Sanskrit","Classical & Raag":"Hindi","Bhakti & Katha":"Hindi","Rap & Fusion":"Hindi","Naagin & Mystic":"Hindi","Haryanvi Folk":"Haryanvi","Desh / Patriotic":"Hindi","Love & Virah":"Hindi","Other / Misc":"Hindi"};
+function fallbackBuild(catalog){
+  const map=DOC.themeToStation||{}; const by={}; const counts={};
+  for(const s of DOC.stations) by[s.slug]=[];
+  for(const t of (catalog.tracks||[])){
+    let th="Other / Misc"; for(const[re,x]of KW){if(re.test(`${t.title||""} ${t.styles||""}`)){th=x;break;}}
+    const slug=map[th]||"gurukul";
+    let language=themeLang[th]||"Hindi";
+    if(/ॐ|नमः|namah|hiranya/i.test(t.title||""))language="Sanskrit";
+    (by[slug]=by[slug]||[]).push({sunoId:t.sunoId,title:t.title||"(untitled)",theme:th,language,cover:t.coverPublicPath||(t.sunoId?`/radio-html/assets/covers/${t.sunoId}.jpeg`:null),publicPath:t.publicPath||null,canPlay:t.canPlay===true});
+    counts[slug]=(counts[slug]||0)+1;
+  }
+  return {bySlug:by,counts};
+}
+
+function lineup(){
+  $('lineup').innerHTML=DOC.stations.map(s=>{
+    const n=(TRACKS.counts[s.slug]||0);
+    return `<div class="st" style="--ac:${s.accent}" onclick="openStation('${s.slug}')">
+      <div class="glow"></div><span class="live">LIVE</span>
+      <h2>${s.name}</h2><div class="tag">${s.tagline||""}</div>
+      <div class="chips">${(s.languages||[]).map(l=>`<span class="chip">${l}</span>`).join("")}</div>
+      <div class="n" style="color:${s.accent}">${n.toLocaleString()} tracks</div></div>`;
+  }).join("");
+}
+function showLineup(){current=null;$('stationView').classList.add('hidden');$('lineup').classList.remove('hidden');$('back').classList.add('hidden');$('sub').textContent="Tune a frequency";}
+function openStation(slug){
+  current=DOC.stations.find(s=>s.slug===slug); lang="All";
+  $('lineup').classList.add('hidden');$('stationView').classList.remove('hidden');$('back').classList.remove('hidden');
+  document.documentElement.style.setProperty('--ac',current.accent);
+  $('stationView').style.setProperty('--ac',current.accent);
+  $('sub').textContent=current.name; $('svName').textContent=current.name; $('svTag').textContent=current.tagline||"";
+  const langs=["All",...(current.languages||[])];
+  $('svLangs').innerHTML=langs.map(l=>`<span class="lang ${l==='All'?'on':''}" data-l="${l}" onclick="setLang('${l}')">${l}</span>`).join("");
+  renderStation();
+}
+function setLang(l){lang=l;[...$('svLangs').children].forEach(c=>c.className='lang'+(c.dataset.l===l?' on':''));renderStation();}
+function renderStation(){
+  let list=(TRACKS.bySlug[current.slug]||[]);
+  if(lang!=="All")list=list.filter(t=>t.language===lang);
+  $('svEmpty').classList.toggle('hidden',list.length>0);
+  $('svGrid').innerHTML=list.map(t=>{
+    const badge=t.canPlay?'<span class="lc" style="color:#7ee2a0;border-color:#235">PREVIEW</span>':'<span class="lc">LOCKED</span>';
+    return `<div class="card"><a class="art" ${t.publicPath?`href="${t.publicPath}" target="_blank"`:""}>
+      <div class="ph">${(t.title.trim()[0]||"♪")}</div>
+      ${t.cover?`<img loading="lazy" src="${t.cover}" onload="this.previousElementSibling.style.display='none'" onerror="this.remove()">`:""}
+      <span class="lc" style="left:auto;right:7px">${t.language}</span>${badge}</a>
+      <div class="meta"><div class="t">${t.title}</div></div></div>`;
+  }).join("");
+}
+
+// Station definitions are inlined so the lineup renders even from a double-clicked file://.
+// (Mirror of data/stations.json — keep in sync.)
+DOC = {
+  themeToStation: {"Sanatan & Vedic":"sanaatana-vaigyaniq","Classical & Raag":"sanaatana-vaigyaniq","Bhakti & Katha":"kabir-clubbing","Rap & Fusion":"kabir-clubbing","Naagin & Mystic":"kabir-clubbing","Haryanvi Folk":"ameerpur","Desh / Patriotic":"ameerpur","Love & Virah":"ameerpur","Other / Misc":"gurukul"},
+  stations: [
+    {slug:"sanaatana-vaigyaniq",name:"Sanaatana Vaigyaniq",tagline:"The science of the eternal — chants, cosmos, Vedic frequency.",themes:["Sanatan & Vedic","Classical & Raag"],languages:["Sanskrit","Hindi"],accent:"#f0b429"},
+    {slug:"kabir-clubbing",name:"Kabir Clubbing",tagline:"Mystic verse meets the dancefloor — Bhakti, fusion, beat.",themes:["Bhakti & Katha","Rap & Fusion","Naagin & Mystic"],languages:["Hindi","Braj"],accent:"#5b8def"},
+    {slug:"ameerpur",name:"Ameerpur",tagline:"Haryanvi maati — street, folk, full desi.",themes:["Haryanvi Folk","Desh / Patriotic","Love & Virah"],languages:["Haryanvi","Hindi"],accent:"#2ea043"},
+    {slug:"gurukul",name:"Gurukul",tagline:"Learn by listening — shlokas, stories, spoken word, kids.",themes:["Other / Misc"],languages:["Sanskrit","Hindi","English"],accent:"#a06bd6"}
+  ]
+};
+
+function init(){
+  $('status').style.display="none";
+  lineup();  // renders immediately from inlined DOC (counts fill once track data loads)
+  fetch("data/station-tracks.json").then(r=>r.ok?r.json():Promise.reject()).then(st=>{ TRACKS=st; lineup(); if(current)openStation(current.slug); })
+    .catch(()=> fetch("data/suno-library-catalog.json").then(r=>r.ok?r.json():Promise.reject()).then(cat=>{ TRACKS=fallbackBuild(cat); lineup(); if(current)openStation(current.slug); })
+      .catch(()=>{ $('status').style.display="block"; $('status').className="loading";
+        $('status').textContent="Lineup shown. To load track lists + covers, open this via the app: npm run dev → http://localhost:3000/radio-html/Radio_Stations.html"; }));
+}
+init();
+</script>
+</body>
+</html>

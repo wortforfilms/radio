@@ -96,6 +96,16 @@
       "state": "blocked-draft"
     },
     {
+      "key": "device-runtime-evidence",
+      "path": "/radio-html/data/device-runtime-evidence.json",
+      "state": "blocked-draft"
+    },
+    {
+      "key": "product-surface-matrix",
+      "path": "/radio-html/data/product-surface-matrix.json",
+      "state": "blocked-draft"
+    },
+    {
       "key": "milestone-completion",
       "path": "/radio-html/data/milestone-completion.json",
       "state": "blocked-draft"

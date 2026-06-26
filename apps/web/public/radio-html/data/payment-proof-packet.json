@@ -1,7 +1,7 @@
 {
   "id": "radio-payment-proof-packet",
   "title": "Radio Vaigyaaniq Payment Proof Packet",
-  "generatedAt": "2026-06-06",
+  "generatedAt": "2026-06-25",
   "verificationState": "draft-payment-proof-packet-no-proof",
   "shipDecision": "NO_SHIP",
   "phkd": {

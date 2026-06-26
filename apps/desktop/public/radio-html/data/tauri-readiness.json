@@ -1,9 +1,9 @@
 {
   "id": "radio-vaigyaaniq-tauri-readiness",
   "title": "Radio Vaigyaaniq Tauri Shipping Readiness",
-  "generatedAt": "2026-06-06",
+  "generatedAt": "2026-06-25",
   "version": "2.0.0",
-  "verificationState": "draft-local-app-built-gui-proof-null",
+  "verificationState": "draft-local-app-built-signing-proof-blocked",
   "phkd": {
     "rule": "fail_closed",
     "unknownValues": "NULL",
@@ -93,6 +93,12 @@
       "status": "implemented-draft"
     },
     {
+      "key": "device-runtime",
+      "label": "Device Runtime",
+      "path": "/radio-html/data/device-runtime-evidence.json",
+      "status": "blocked"
+    },
+    {
       "key": "gui-smoke-evidence",
       "label": "GUI Smoke Evidence Lane",
       "path": "/radio-html/data/gui-smoke-evidence.json",
@@ -115,7 +121,7 @@
       "signed": false,
       "notarized": false,
       "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-      "checksum": "c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11",
+      "checksum": "9cc0f713f050418e18163fbdaf46aaa19b3c44e6bd3b23c55bb675f7b828c00d",
       "status": "draft-ready-unsigned",
       "key": "macos",
       "label": "macOS local app bundle",
@@ -153,7 +159,7 @@
       "platform": "macOS",
       "format": "app",
       "path": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-      "checksum": "c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11",
+      "checksum": "9cc0f713f050418e18163fbdaf46aaa19b3c44e6bd3b23c55bb675f7b828c00d",
       "signingEvidence": "/radio-html/data/signing-notarization-evidence.json",
       "status": "draft-ready-unsigned"
     },
@@ -283,6 +289,12 @@
       "evidence": "/radio-html/data/desktop-alpha-bundle.json"
     },
     {
+      "key": "device-runtime",
+      "label": "Device Runtime",
+      "status": "blocked",
+      "evidence": "/radio-html/data/device-runtime-evidence.json"
+    },
+    {
       "key": "gui-smoke",
       "label": "GUI smoke screenshot/reviewer proof",
       "status": "blocked",
@@ -321,7 +333,7 @@
   ],
   "counts": {
     "draftReady": 8,
-    "blocked": 10,
+    "blocked": 11,
     "notRun": 1
   },
   "localDesktopEvidence": {
@@ -329,7 +341,7 @@
     "guiSmokeGate": {
       "name": "GUI smoke proof",
       "status": "blocked",
-      "detail": "GUI smoke proof incomplete: reviewer, navigation, no-ship-visible, error-review."
+      "detail": "GUI smoke proof incomplete: manual-screenshot, reviewer, first-paint, navigation, no-crash, no-ship-visible, audio-gate-visible, error-review."
     },
     "qaReport": "/apps/desktop/evidence/qa-report.json",
     "bundleReport": "/apps/desktop/evidence/bundle-report.json",
@@ -356,8 +368,8 @@
     },
     "bundle": {
       "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-      "bytes": 21211612,
-      "sha256": "c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11"
+      "bytes": 21966265,
+      "sha256": "9cc0f713f050418e18163fbdaf46aaa19b3c44e6bd3b23c55bb675f7b828c00d"
     },
     "signingNotarizationReport": "/apps/desktop/evidence/signing-notarization-report.json",
     "signingGate": {

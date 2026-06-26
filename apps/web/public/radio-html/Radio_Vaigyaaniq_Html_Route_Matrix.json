@@ -14,7 +14,7 @@
     ]
   },
   "counts": {
-    "matrixRows": 68,
+    "matrixRows": 71,
     "groups": 6
   },
   "matrixHtml": "/radio-html/routes/html-vs-real-route-matrix.html",
@@ -323,6 +323,14 @@
           "desktopCopy": "/apps/desktop/public/radio-html/surfaces/desktop-alpha.html",
           "source": "apps/web/public/radio-html/data/desktop-alpha-bundle.json",
           "state": "implemented-draft"
+        },
+        {
+          "surface": "Device Runtime",
+          "staticHtml": "/radio-html/surfaces/device-runtime.html",
+          "realRoute": "served-static",
+          "desktopCopy": "/apps/desktop/public/radio-html/surfaces/device-runtime.html",
+          "source": "apps/web/public/radio-html/data/device-runtime-evidence.json",
+          "state": "implemented-draft"
         }
       ]
     },
@@ -528,6 +536,22 @@
           "realRoute": "served-static-json",
           "desktopCopy": "/apps/desktop/public/radio-html/data/milestone-completion.json",
           "source": "apps/web/public/radio-html/data/milestone-completion.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Device Runtime Evidence Data",
+          "staticHtml": "/radio-html/data/device-runtime-evidence.json",
+          "realRoute": "served-static-json",
+          "desktopCopy": "/apps/desktop/public/radio-html/data/device-runtime-evidence.json",
+          "source": "apps/web/public/radio-html/data/device-runtime-evidence.json",
+          "state": "implemented-draft"
+        },
+        {
+          "surface": "Product Surface Matrix Data",
+          "staticHtml": "/radio-html/data/product-surface-matrix.json",
+          "realRoute": "served-static-json",
+          "desktopCopy": "/apps/desktop/public/radio-html/data/product-surface-matrix.json",
+          "source": "apps/web/public/radio-html/data/product-surface-matrix.json",
           "state": "implemented-draft"
         }
       ]

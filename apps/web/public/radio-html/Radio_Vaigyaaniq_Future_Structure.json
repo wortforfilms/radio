@@ -330,6 +330,21 @@
       "path": "/radio-html/surfaces/desktop-alpha.html",
       "role": "Desktop Alpha Bundle surface",
       "futureLane": "surfaces/release"
+    },
+    {
+      "path": "/radio-html/data/device-runtime-evidence.json",
+      "role": "device-runtime-evidence manifest",
+      "futureLane": "data/release"
+    },
+    {
+      "path": "/radio-html/data/product-surface-matrix.json",
+      "role": "product-surface-matrix manifest",
+      "futureLane": "data/release"
+    },
+    {
+      "path": "/radio-html/surfaces/device-runtime.html",
+      "role": "Device Runtime surface",
+      "futureLane": "surfaces/release"
     }
   ],
   "futureRoots": [

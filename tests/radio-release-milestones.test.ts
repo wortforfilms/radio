@@ -13,12 +13,12 @@ describe("radio release milestone frames", () => {
   it("keeps milestone completion fail-closed", () => {
     const milestones = readJson<{
       counts: { milestones: number; implementedDraft: number; evidenceBlocked: number; productionReady: number; shipDecision: string };
-      milestones: { status: string; blocker: string | null }[];
+      milestones: { key: string; status: string; blocker: string | null }[];
     }>("milestone-completion.json");
 
     expect(milestones.counts).toMatchObject({
-      milestones: 8,
-      implementedDraft: 8,
+      milestones: 9,
+      implementedDraft: 9,
       productionReady: 0,
       shipDecision: "NO_SHIP"
     });
@@ -26,6 +26,7 @@ describe("radio release milestone frames", () => {
     expect(milestones.milestones.every((milestone) => milestone.status === "implemented-draft")).toBe(true);
     expect(milestones.milestones.some((milestone) => milestone.blocker)).toBe(true);
     expect(milestones.milestones.map((milestone) => milestone.key)).toContain("customer-release-milestone");
+    expect(milestones.milestones.map((milestone) => milestone.key)).toContain("device-runtime");
   });
 
   it("blocks playback, payment, installer, and alpha release claims without evidence", () => {

@@ -7,12 +7,20 @@ export default function RadioPage() {
     ["Live", "/radio/runtime"],
     ["Frame", "/radio/frame"],
     ["Storyboard", "/radio/storyboard"],
+    ["Stations", "/radio-html/Radio_Stations.html"],
+    ["Onboard", "/radio-html/Track_Onboarding.html"],
     ["Prototype", "/radio-html/Radio_Vaigyaaniq_UX_Dashboard.html"],
     ["Ayodhya", "/projects/new"],
     ["Evidence", "/scopes/media-universe"]
   ];
 
   const modules = [
+    ["Stations", "Tune the multi-station, multi-language lineup — Sanaatana Vaigyaniq, Kabir Clubbing, Ameerpur, Gurukul — each auto-filled from the catalogue by theme, with per-language channels.", "/radio-html/Radio_Stations.html", "STN"],
+    ["Track Onboarding", "Onboard a Suno clip end-to-end: asset intake, metadata & credits (label rule, hkfaduio, VESAHE), rights closure, and station assignment — emits a manifest record with a fail-closed canPlay gate.", "/radio-html/Track_Onboarding.html", "ONB"],
+    ["Pricing & Checkout", "Preview free, Pro unlock per track or album (cheaper-than-N bundle), all-access pass, multi-currency (₹/$), and a purchase-record ledger. Mock for the Razorpay flow.", "/radio-html/Radio_Pricing_Checkout.html", "PAY"],
+    ["Account & Wallet", "User account, cart, per-currency wallet with top-ups and ledger, and settings (language, audio quality, notifications). In-memory mock for the user surfaces.", "/radio-html/Radio_Account.html", "ACCT"],
+    ["Catalogue", "Cover-art gallery of the full indexed library (1,186 tracks) with live search, preview badges, and links to the promoted audio.", "/radio-html/Radio_Catalogue.html", "CAT"],
+    ["Completion Status", "Project completion matrix mapped to the release roadmap (Phases 0–7): built %, release readiness, per-area status, and the four gates that flip NO_SHIP → SHIP.", "/radio-html/Radio_Completion_Status.html", "STAT"],
     ["3D Visualizer", "Mic, files, cinematic shader scenes, lighting, shadows, particles, and WebM capture.", "/radio/runtime#radioVisualizer", "VIZ"],
     ["Synced Lyrics", "Draft LRC timing, Hindi lines, transcript import, HKD lyric evidence export.", "/radio/runtime#radioLyricsScribe", "LRC"],
     ["Persona TTS", "Maataa, Rishi, Samaya, and Vigyaaniq browser voices for announcements.", "/radio/runtime#radioSamaya", "TTS"],

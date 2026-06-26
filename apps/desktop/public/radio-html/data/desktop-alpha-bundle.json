@@ -1,7 +1,7 @@
 {
   "id": "radio-vaigyaaniq-desktop-alpha-bundle",
   "title": "Radio Vaigyaaniq Desktop Alpha Bundle",
-  "generatedAt": "2026-06-06",
+  "generatedAt": "2026-06-25",
   "verificationState": "draft-local-app-built-open-proof-null",
   "phkd": {
     "rule": "fail_closed",
@@ -11,8 +11,8 @@
     "note": "Milestone records describe local implementation and evidence gates only. They do not verify rights, payment settlement, installer signing, release approval, external telemetry, or production readiness."
   },
   "counts": {
-    "includedSurfaces": 25,
-    "includedDataFrames": 17,
+    "includedSurfaces": 26,
+    "includedDataFrames": 19,
     "signedInstallers": 0,
     "productionReady": 0,
     "blockers": 4,

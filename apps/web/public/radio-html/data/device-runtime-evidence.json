@@ -1,0 +1,216 @@
+{
+  "id": "radio-vaigyaaniq-device-runtime-evidence",
+  "title": "Radio Vaigyaaniq Device Runtime Evidence",
+  "generatedAt": "2026-06-25",
+  "verificationState": "blocked-device-proof-null",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "Device Runtime records local capability surfaces only. Hardware proof, OS permissions, sensor readings, pairing, signing, and reviewer evidence remain NULL until imported."
+  },
+  "counts": {
+    "routes": 4,
+    "topologyNodes": 7,
+    "topologyEdges": 6,
+    "evidenceArtifacts": 2,
+    "blockedCapabilities": 6,
+    "releaseAllowed": 0,
+    "productionReady": 0
+  },
+  "routes": [
+    {
+      "key": "device-overview",
+      "label": "Device Runtime",
+      "path": "/device",
+      "status": "implemented-draft"
+    },
+    {
+      "key": "device-runtime-console",
+      "label": "Device Runtime Console",
+      "path": "/device/runtime",
+      "status": "implemented-draft"
+    },
+    {
+      "key": "device-topology",
+      "label": "Device Topology",
+      "path": "/device/topology",
+      "status": "implemented-draft"
+    },
+    {
+      "key": "device-evidence",
+      "label": "Device Evidence",
+      "path": "/device/evidence",
+      "status": "blocked"
+    }
+  ],
+  "topology": {
+    "nodes": [
+      {
+        "id": "sovereign-dashboard",
+        "label": "Sovereign Dashboard",
+        "type": "surface",
+        "status": "implemented-draft",
+        "route": "/dashboard",
+        "evidence": "/radio-html/data/product-surface-matrix.json"
+      },
+      {
+        "id": "device-runtime",
+        "label": "Device Runtime",
+        "type": "runtime",
+        "status": "implemented-draft",
+        "route": "/device",
+        "evidence": "/radio-html/data/device-runtime-evidence.json"
+      },
+      {
+        "id": "browser-device",
+        "label": "Browser Device APIs",
+        "type": "device",
+        "status": "blocked",
+        "route": "/device/runtime",
+        "evidence": "/radio-html/data/device-runtime-evidence.json"
+      },
+      {
+        "id": "desktop-device",
+        "label": "Desktop Device Shell",
+        "type": "device",
+        "status": "blocked",
+        "route": "/radio-html/surfaces/tauri-readiness.html",
+        "evidence": "/radio-html/data/tauri-readiness.json"
+      },
+      {
+        "id": "radio-runtime",
+        "label": "Radio Runtime",
+        "type": "runtime",
+        "status": "implemented-draft",
+        "route": "/radio/runtime",
+        "evidence": "/radio-html/data/radio-runtime-data.json"
+      },
+      {
+        "id": "device-evidence-registry",
+        "label": "Device Evidence Registry",
+        "type": "evidence",
+        "status": "blocked",
+        "route": "/device/evidence",
+        "evidence": "/radio-html/data/device-runtime-evidence.json"
+      },
+      {
+        "id": "governance-evidence-center",
+        "label": "Governance Evidence Center",
+        "type": "governance",
+        "status": "implemented-draft",
+        "route": "/governance",
+        "evidence": "/radio-html/data/customer-release-milestone.json"
+      }
+    ],
+    "edges": [
+      {
+        "from": "sovereign-dashboard",
+        "to": "device-runtime",
+        "relation": "renders",
+        "status": "implemented-draft"
+      },
+      {
+        "from": "device-runtime",
+        "to": "browser-device",
+        "relation": "observes",
+        "status": "blocked"
+      },
+      {
+        "from": "device-runtime",
+        "to": "desktop-device",
+        "relation": "observes",
+        "status": "blocked"
+      },
+      {
+        "from": "radio-runtime",
+        "to": "device-runtime",
+        "relation": "feeds",
+        "status": "implemented-draft"
+      },
+      {
+        "from": "device-runtime",
+        "to": "device-evidence-registry",
+        "relation": "exports",
+        "status": "blocked"
+      },
+      {
+        "from": "device-evidence-registry",
+        "to": "governance-evidence-center",
+        "relation": "blocks",
+        "status": "blocked"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "key": "device-runtime-evidence",
+      "title": "Device Runtime Evidence Artifact",
+      "path": "/radio-html/data/device-runtime-evidence.json",
+      "status": "blocked",
+      "verificationState": "blocked-device-proof-null",
+      "requiredEvidence": [
+        "deviceId",
+        "capabilityProbe",
+        "permissionGrant",
+        "hardwareRun",
+        "telemetryHash",
+        "reviewer",
+        "reviewedAt",
+        "AuditLog.verified"
+      ]
+    },
+    {
+      "key": "product-surface-matrix",
+      "title": "Product Surface Matrix",
+      "path": "/radio-html/data/product-surface-matrix.json",
+      "status": "implemented-draft",
+      "verificationState": "draft-product-surface-matrix",
+      "requiredEvidence": [
+        "route",
+        "api",
+        "runtime",
+        "evidenceArtifact"
+      ]
+    }
+  ],
+  "capabilityLanes": [
+    {
+      "key": "audio-input",
+      "label": "Audio input",
+      "status": "blocked",
+      "blocker": "microphone permission and capture hash evidence NULL"
+    },
+    {
+      "key": "audio-output",
+      "label": "Audio output",
+      "status": "blocked",
+      "blocker": "speaker routing and playback proof NULL"
+    },
+    {
+      "key": "display-capture",
+      "label": "Display capture",
+      "status": "blocked",
+      "blocker": "screen capture permission evidence NULL"
+    },
+    {
+      "key": "desktop-shell",
+      "label": "Desktop shell",
+      "status": "blocked",
+      "blocker": "signed desktop bridge proof NULL"
+    },
+    {
+      "key": "sensor-bridge",
+      "label": "Sensor bridge",
+      "status": "blocked",
+      "blocker": "MIDI, serial, bluetooth, gamepad, and HID proof NULL"
+    },
+    {
+      "key": "telemetry-export",
+      "label": "Telemetry export",
+      "status": "blocked",
+      "blocker": "reviewed telemetry hash evidence NULL"
+    }
+  ]
+}

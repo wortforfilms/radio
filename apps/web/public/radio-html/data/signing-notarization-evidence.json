@@ -1,7 +1,7 @@
 {
   "id": "radio-vaigyaaniq-signing-notarization-evidence",
   "title": "Radio Vaigyaaniq Signing + Notarization Evidence",
-  "generatedAt": "2026-06-06",
+  "generatedAt": "2026-06-25",
   "verificationState": "blocked-signing-notarization-proof-null",
   "shipDecision": "NO_SHIP",
   "phkd": {
@@ -28,7 +28,7 @@
   "artifact": {
     "path": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
     "exists": true,
-    "bundle_hash": "c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11",
+    "bundle_hash": "9cc0f713f050418e18163fbdaf46aaa19b3c44e6bd3b23c55bb675f7b828c00d",
     "platform": "darwin",
     "isMacApp": true
   },
@@ -110,7 +110,7 @@
       "exitCode": 0,
       "status": "pass",
       "stdout": null,
-      "stderr": "Executable=/private/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app/Contents/MacOS/radio-vaigyaaniq-desktop\nIdentifier=radio_vaigyaaniq_desktop-02bb025d4351277b\nFormat=app bundle with Mach-O thin (arm64)\nCodeDirectory v=20400 size=162856 flags=0x20002(adhoc,linker-signed) hashes=5085+0 location=embedded\nVersionPlatform=1\nVersionMin=720896\nVersionSDK=918528\nHash type=sha256 size=32\nCandidateCDHash sha256=75082d14436cf9fe524356c2aeb2cd187966c6e1\nCandidateCDHashFull sha256=75082d14436cf9fe524356c2aeb2cd187966c6e17d3469e14416c562362c4bd1\nHash choices=sha256\nCMSDigest=75082d14436cf9fe524356c2aeb2cd187966c6e17d3469e14416c562362c4bd1\nCMSDigestType=2\nExecutable Segment base=0\nExecutable Segment limit=20643840\nExecutable Segment flags=0x1\nPage size=4096\nCDHash=75082d14436cf9fe524356c2aeb2cd187966c6e1\nSignature=adhoc\nInfo.plist=not bound\nTeamIdentifier=not set\nSealed Resources=none\nInternal requirements=none",
+      "stderr": "Executable=/private/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app/Contents/MacOS/radio-vaigyaaniq-desktop\nIdentifier=radio_vaigyaaniq_desktop-02bb025d4351277b\nFormat=app bundle with Mach-O thin (arm64)\nCodeDirectory v=20400 size=168104 flags=0x20002(adhoc,linker-signed) hashes=5249+0 location=embedded\nVersionPlatform=1\nVersionMin=720896\nVersionSDK=918528\nHash type=sha256 size=32\nCandidateCDHash sha256=a73a6e5db9d91d4c9026bb131d9d853068f09ff1\nCandidateCDHashFull sha256=a73a6e5db9d91d4c9026bb131d9d853068f09ff1fda5c8fc602a0c53ac1f7d06\nHash choices=sha256\nCMSDigest=a73a6e5db9d91d4c9026bb131d9d853068f09ff1fda5c8fc602a0c53ac1f7d06\nCMSDigestType=2\nExecutable Segment base=0\nExecutable Segment limit=21299200\nExecutable Segment flags=0x1\nPage size=4096\nCDHash=a73a6e5db9d91d4c9026bb131d9d853068f09ff1\nSignature=adhoc\nInfo.plist=not bound\nTeamIdentifier=not set\nSealed Resources=none\nInternal requirements=none",
       "error": null
     },
     {
@@ -128,15 +128,15 @@
       "exitCode": 1,
       "status": "blocked",
       "stdout": null,
-      "stderr": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app: internal error in Code Signing subsystem",
+      "stderr": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app: code has no resources but signature indicates they must be present",
       "error": null
     },
     {
       "key": "notarization-stapler-validate",
       "command": "xcrun stapler validate /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-      "exitCode": 66,
+      "exitCode": 65,
       "status": "blocked",
-      "stdout": "File /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app does not exist. Error Domain=NSCocoaErrorDomain Code=256 \"The file “Radio Vaigyaaniq” couldn’t be opened.\" UserInfo={NSURL=file:///var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio%20Vaigyaaniq.app/, NSFilePath=/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app, NSUnderlyingError=0x12b0205f0 {Error Domain=NSOSStatusErrorDomain Code=-10813 \"kLSDataUnavailableErr: E.g. no kind string\"}}",
+      "stdout": "Processing: /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app\nRadio Vaigyaaniq.app does not have a ticket stapled to it.",
       "stderr": null,
       "error": null
     }

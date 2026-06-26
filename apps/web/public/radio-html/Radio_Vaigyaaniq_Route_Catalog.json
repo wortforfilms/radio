@@ -31,8 +31,8 @@
     "hkd3dGenerated": 18,
     "persistenceScopesGenerated": 42,
     "universesGenerated": 22,
-    "radioStaticArtifacts": 65,
-    "totalRecords": 211
+    "radioStaticArtifacts": 68,
+    "totalRecords": 214
   },
   "catalogHtml": "/radio-html/routes/index.html",
   "matrixHtml": "/radio-html/routes/html-vs-real-route-matrix.html",
@@ -286,7 +286,10 @@
         "/radio-html/data/installer-pipeline.json",
         "/radio-html/data/release-orchestration.json",
         "/radio-html/data/desktop-alpha-bundle.json",
-        "/radio-html/data/milestone-completion.json"
+        "/radio-html/data/milestone-completion.json",
+        "/radio-html/surfaces/device-runtime.html",
+        "/radio-html/data/device-runtime-evidence.json",
+        "/radio-html/data/product-surface-matrix.json"
       ]
     }
   ]

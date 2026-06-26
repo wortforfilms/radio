@@ -5,6 +5,7 @@
   "description": "Persistent Vaishviq Pitra and Guru Maataa Universal Knowledge Lineage Explorer runtime.",
   "scripts": {
     "dev": "next dev apps/web",
+    "dev:clean": "rm -rf apps/web/.next .next .turbo apps/web/.turbo node_modules/.cache && next dev apps/web",
     "build": "next build apps/web",
     "typecheck": "tsc --noEmit",
     "prisma:generate": "prisma generate",
@@ -17,6 +18,10 @@
     "radio:playback:gate": "node scripts/product-factory/prepare-radio-playback-gate.mjs",
     "radio:rights:packet": "node scripts/product-factory/prepare-radio-rights-closure-packet.mjs",
     "radio:rights:closure": "node scripts/product-factory/verify-radio-rights-closure.mjs",
+    "radio:promote": "node scripts/promote-verified-tracks.mjs",
+    "radio:rights:proof": "node scripts/prepare-radio-asset-rights-proof.mjs",
+    "radio:verified:list": "node scripts/prepare-radio-track-verified-list.mjs",
+    "radio:stations": "node scripts/assign-stations.mjs",
     "radio:remaining:packets": "node scripts/product-factory/prepare-radio-remaining-proof-packets.mjs",
     "radio:release:review": "node scripts/product-factory/verify-radio-release-review.mjs",
     "radio:customer:release": "node scripts/product-factory/prepare-radio-customer-release-milestone.mjs",

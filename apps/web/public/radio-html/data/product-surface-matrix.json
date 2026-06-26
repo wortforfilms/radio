@@ -1,0 +1,41 @@
+{
+  "id": "radio-vaigyaaniq-product-surface-matrix",
+  "title": "Radio Vaigyaaniq Product Surface Matrix",
+  "generatedAt": "2026-06-25",
+  "verificationState": "draft-product-surface-matrix",
+  "phkd": {
+    "rule": "fail_closed",
+    "unknownValues": "NULL",
+    "productionReady": false,
+    "releaseAllowed": false,
+    "note": "Milestone records describe local implementation and evidence gates only. They do not verify rights, payment settlement, installer signing, release approval, external telemetry, or production readiness."
+  },
+  "counts": {
+    "entries": 2,
+    "deviceRuntimeEntries": 2,
+    "releaseAllowed": 0,
+    "productionReady": 0
+  },
+  "entries": [
+    {
+      "product": "Radio Vaigyaaniq",
+      "surface": "Device Runtime",
+      "route": "/device",
+      "api": "/api/device",
+      "runtime": "DeviceRuntime",
+      "evidence": "/radio-html/data/device-runtime-evidence.json",
+      "status": "implemented-draft",
+      "releaseAllowed": false
+    },
+    {
+      "product": "Radio Vaigyaaniq",
+      "surface": "Device Topology",
+      "route": "/device/topology",
+      "api": "/api/device?view=topology",
+      "runtime": "DeviceRuntime",
+      "evidence": "/radio-html/data/product-surface-matrix.json",
+      "status": "implemented-draft",
+      "releaseAllowed": false
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "id": "radio-vaigyaaniq-rights-evidence",
   "title": "Radio Vaigyaaniq Rights Evidence Lane",
-  "generatedAt": "2026-06-06",
+  "generatedAt": "2026-06-25",
   "verificationState": "draft-rights-closure-blocked",
   "phkd": {
     "rule": "fail_closed",

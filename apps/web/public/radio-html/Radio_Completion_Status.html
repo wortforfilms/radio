@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radio Vaigyaaniq — Completion Status</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b27;--panel2:#1d2433;--line:#2b3446;--ink:#e8edf6;
+    --muted:#9aa6bd;--navy:#5b8def;--gold:#f0b429;--good:#2ea043;--warn:#d29922;--bad:#e5534b;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,Segoe UI,Arial,sans-serif}
+  header{padding:18px 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;background:linear-gradient(90deg,#11161f,#161b27)}
+  .mark{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--navy),var(--gold));display:flex;align-items:center;justify-content:center;font-weight:800;color:#0d1117}
+  header h1{font-size:18px;margin:0}header small{color:var(--muted)}
+  .ship{margin-left:auto;font-weight:800;padding:8px 16px;border-radius:10px;background:#2a1719;color:#ff9b94;border:1px solid #5a2a2a}
+  .wrap{max-width:1080px;margin:0 auto;padding:20px 24px}
+  .gauges{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:20px}
+  @media(max-width:760px){.gauges{grid-template-columns:1fr}}
+  .g{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center}
+  .g .big{font-size:40px;font-weight:800;line-height:1}
+  .g .lbl{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.07em;margin-top:6px}
+  .ring{--p:0;width:120px;height:120px;border-radius:50%;margin:0 auto 8px;
+    background:conic-gradient(var(--c) calc(var(--p)*1%), #232b3b 0);display:flex;align-items:center;justify-content:center}
+  .ring .in{width:92px;height:92px;border-radius:50%;background:var(--panel);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:18px}
+  .card h2{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin:0 0 12px}
+  table{width:100%;border-collapse:collapse}
+  th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);font-size:13px;vertical-align:middle}
+  th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+  .ph{color:var(--muted);font-size:11px}
+  .bar{height:8px;border-radius:6px;background:#232b3b;overflow:hidden;min-width:90px}
+  .bar i{display:block;height:100%;border-radius:6px}
+  .pct{font-weight:700;width:42px;display:inline-block}
+  .pill{font-size:10px;font-weight:700;padding:2px 8px;border-radius:999px;white-space:nowrap}
+  .s-done{background:#13261a;color:#7ee2a0;border:1px solid #235}
+  .s-prog{background:#2a2410;color:#ecc94b;border:1px solid #5a4a18}
+  .s-block{background:#2a1719;color:#ff9b94;border:1px solid #5a2a2a}
+  .s-na{background:#1b2233;color:#9aa6bd;border:1px solid #2b3446}
+  .muted{color:var(--muted)}
+  .gates{display:flex;gap:10px;flex-wrap:wrap}
+  .gate{flex:1;min-width:200px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px}
+  .gate b{display:block;color:#ff9b94}
+  .foot{color:var(--muted);font-size:12px;margin-top:6px}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">RV</div>
+  <div><h1>Radio Vaigyaaniq — Completion Status</h1><small>Snapshot · 2026-06-25 · mapped to the Release Roadmap (Phases 0–7)</small></div>
+  <div class="ship">SHIP DECISION: NO_SHIP</div>
+</header>
+
+<div class="wrap">
+  <div class="gauges">
+    <div class="g"><div class="ring" style="--p:84;--c:var(--navy)"><div class="in">84%</div></div><div class="lbl">Product built</div></div>
+    <div class="g"><div class="ring" style="--p:24;--c:var(--warn)"><div class="in">24%</div></div><div class="lbl">Release readiness</div></div>
+    <div class="g"><div class="big" style="margin-top:18px">5<span style="font-size:20px;color:var(--muted)"> / 15</span></div><div class="lbl">Areas fully done</div>
+      <div class="muted" style="font-size:12px;margin-top:8px">5 in progress · 5 blocked / not started</div></div>
+  </div>
+
+  <div class="card">
+    <h2>Completion matrix</h2>
+    <table>
+      <thead><tr><th>Area</th><th>Phase</th><th>Progress</th><th>Status</th><th>Blocker / next</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div class="foot">% reflects this session's verified state. "Built" = engineering complete; readiness stays low because release gates need real-world evidence.</div>
+  </div>
+
+  <div class="card">
+    <h2>What gates 100% (only these flip NO_SHIP → SHIP)</h2>
+    <div class="gates">
+      <div class="gate"><b>Rights / ownership</b><span class="muted">Sign declarations + agreements; reviewer verifies → rightsStatus.</span></div>
+      <div class="gate"><b>A real settled payment</b><span class="muted">Razorpay order→webhook→receipt; radio:payment:proof &gt; 0.</span></div>
+      <div class="gate"><b>Signing certificate</b><span class="muted">Apple Developer ID / Windows cert → notarized bundle.</span></div>
+      <div class="gate"><b>Human release review</b><span class="muted">Named reviewer sign-off + rollback owner.</span></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const C={done:"var(--good)",prog:"var(--warn)",block:"var(--bad)",na:"var(--muted)"};
+const P={done:"s-done",prog:"s-prog",block:"s-block",na:"s-na"};
+const L={done:"Done",prog:"In progress",block:"Blocked",na:"Not started"};
+const rows=[
+ ["Build stabilization","Phase 0",100,"done","Clean boot via npm run dev:clean; no DEGRADED/overlay in source"],
+ ["Catalogue + audio intake","Phase 1",100,"done","1,186 clips downloaded + indexed"],
+ ["Cover art","Phase 1",99,"done","1,182 / 1,186 (4 covers 403'd)"],
+ ["Labels & credits","Phase 1",100,"done","All 1,186 — hkfaduio / VESAHE / label rule"],
+ ["Track onboarding","Phase 1",100,"done","Tool + SOP + checklist, source-agnostic, wired"],
+ ["Audio → public promotion","Phase 1–2",70,"prog","Promote + verified-list generators wired; awaits reviewer sign-off"],
+ ["Rights closure","Phase 2",80,"prog","Proof generators + verifier wired; one reviewer command from closing"],
+ ["Commerce data + logic","Phase 3",90,"done","Models + logic + mocks, unit-tested; not migrated"],
+ ["Account / cart / wallet / settings","Phase 3",85,"done","Models + logic + mock; backend wiring pending"],
+ ["Payments (Razorpay)","Phase 3",55,"prog","Order + signature-verified webhook built; awaits keys + 1 real txn"],
+ ["Landing pages / images","Phase 5",90,"done","11/11 image refs present (draft verification)"],
+ ["Tauri packaging + signing","Phase 4",55,"prog","Icon source + signing config + entitlements done; awaits your cert"],
+ ["QA + release review","Phase 5",45,"prog","Reviewer Hemant + 20/23 approvals recorded; awaits payment + signed installer"],
+ ["Standalone extraction","Phase 6",70,"prog","Standalone app scaffolded at apps/radio; npm install to boot"],
+ ["Go-live","Phase 7",0,"block","Gated on rights + payment + signing + review"],
+];
+document.getElementById('rows').innerHTML=rows.map(r=>{
+ const [area,ph,pct,st,note]=r;
+ return '<tr><td><b>'+area+'</b></td><td class="ph">'+ph+'</td>'+
+   '<td><div style="display:flex;align-items:center;gap:8px"><span class="pct">'+pct+'%</span>'+
+   '<div class="bar"><i style="width:'+pct+'%;background:'+C[st]+'"></i></div></div></td>'+
+   '<td><span class="pill '+P[st]+'">'+L[st]+'</span></td>'+
+   '<td class="muted">'+note+'</td></tr>';
+}).join('');
+</script>
+</body>
+</html>

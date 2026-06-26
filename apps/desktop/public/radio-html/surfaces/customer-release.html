@@ -41,8 +41,8 @@
       </section>
       <section class="surface-grid four">
         <article class="surface-card"><span class="surface-label">Gates</span><b>10</b><p>Customer release checks.</p></article>
-        <article class="surface-card"><span class="surface-label">Blocked</span><b>7</b><p>Must close before customer release.</p></article>
-        <article class="surface-card"><span class="surface-label">Draft Pass</span><b>3</b><p>Local-only evidence passes.</p></article>
+        <article class="surface-card"><span class="surface-label">Blocked</span><b>8</b><p>Must close before customer release.</p></article>
+        <article class="surface-card"><span class="surface-label">Draft Pass</span><b>2</b><p>Local-only evidence passes.</p></article>
         <article class="surface-card"><span class="surface-label">Release Allowed</span><b>0</b><p>Fail-closed external allowance.</p></article>
       </section>
       <section class="surface-card">
@@ -59,10 +59,10 @@
           <a href="/radio-html/qa/customer-front/radio-customer-front-playwright-report.json">Evidence</a>
         </article>
         <article class="runtime-row">
-          <span>draft-pass</span>
+          <span>blocked</span>
           <div>
             <b>Visual QA Board</b>
-            <p>Gate has local draft evidence. It does not override PHKD release blockers.</p>
+            <p>Visual QA screenshots or target pass counts are incomplete.</p>
             <small>capturedScreenshots · passEqualsTargets · blockedEqualsZero</small>
           </div>
           <a href="/radio-html/data/visual-qa.json">Evidence</a>
@@ -142,6 +142,12 @@
       </section>
       <section class="surface-grid three">
 
+        <article class="surface-card blocked">
+          <span class="surface-label">visual-qa</span>
+          <h2>Visual QA Board</h2>
+          <p>Visual QA screenshots or target pass counts are incomplete.</p>
+          <a href="/radio-html/data/visual-qa.json">Open proof frame</a>
+        </article>
         <article class="surface-card blocked">
           <span class="surface-label">gui-smoke</span>
           <h2>Desktop GUI Smoke</h2>

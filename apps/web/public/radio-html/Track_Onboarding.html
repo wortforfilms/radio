@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radio Vaigyaaniq — Track Onboarding</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b27; --panel2:#1d2433; --line:#2b3446;
+    --ink:#e8edf6; --muted:#9aa6bd; --navy:#5b8def; --gold:#f0b429;
+    --good:#2ea043; --bad:#e5534b; --warn:#d29922;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,Segoe UI,Arial,sans-serif}
+  header{padding:18px 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;
+    background:linear-gradient(90deg,#11161f,#161b27)}
+  .mark{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--navy),var(--gold));
+    display:flex;align-items:center;justify-content:center;font-weight:800;color:#0d1117}
+  header h1{font-size:18px;margin:0}
+  header small{color:var(--muted)}
+  .wrap{display:grid;grid-template-columns:1fr 420px;gap:18px;padding:20px 24px;max-width:1320px;margin:0 auto}
+  @media(max-width:980px){.wrap{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:18px}
+  .card h2{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin:0 0 14px}
+  .step{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;
+    background:var(--panel2);border:1px solid var(--line);font-size:12px;margin-right:8px;color:var(--navy)}
+  label.f{display:block;margin:10px 0 4px;font-size:12px;color:var(--muted)}
+  input,select,textarea{width:100%;background:var(--panel2);border:1px solid var(--line);color:var(--ink);
+    border-radius:8px;padding:9px 10px;font:inherit}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .derived{background:var(--panel2);border:1px dashed var(--line);border-radius:8px;padding:6px 10px;color:var(--ink);font-size:13px}
+  .pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11px;font-weight:700}
+  .pill.mush{background:#3a2b13;color:var(--gold);border:1px solid #5a4318}
+  .pill.phkd{background:#16263f;color:var(--navy);border:1px solid #244066}
+  .check{display:flex;align-items:flex-start;gap:9px;padding:8px 0;border-bottom:1px solid var(--line)}
+  .check:last-child{border-bottom:0}
+  .check input{width:18px;height:18px;margin-top:2px;accent-color:var(--good)}
+  .check .t{font-size:13px}
+  .check .t small{color:var(--muted);display:block}
+  .side{position:sticky;top:18px;align-self:start}
+  .gate{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:10px;font-weight:700;margin-bottom:14px}
+  .gate.no{background:#2a1719;color:#ff9b94;border:1px solid #5a2a2a}
+  .gate.yes{background:#13261a;color:#7ee2a0;border:1px solid #235}
+  .dot{width:10px;height:10px;border-radius:50%}
+  .dot.no{background:var(--bad)} .dot.yes{background:var(--good)}
+  pre{background:#0b0f16;border:1px solid var(--line);border-radius:10px;padding:12px;overflow:auto;
+    font:12px/1.5 ui-monospace,Menlo,Consolas,monospace;color:#cfe1ff;max-height:360px}
+  .btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+  button{background:var(--navy);color:#06101f;border:0;border-radius:8px;padding:9px 14px;font-weight:700;cursor:pointer}
+  button.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  button:hover{filter:brightness(1.08)}
+  .hint{color:var(--muted);font-size:12px;margin-top:8px}
+  code{background:var(--panel2);padding:1px 6px;border-radius:5px;color:#cfe1ff}
+  .miss{color:var(--bad)}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">RV</div>
+  <div>
+    <h1>Radio Vaigyaaniq — Track Onboarding</h1>
+    <small>Any source — Suno, human recording, or another platform → release-ready. Fail-closed: <b>canPlay</b> stays false until every gate is verified.</small>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="main">
+    <!-- 1. ASSET INTAKE -->
+    <div class="card">
+      <h2><span class="step">1</span>Asset intake</h2>
+      <div class="row3">
+        <div><label class="f">Source platform</label>
+          <select id="platform" onchange="render()">
+            <option>Suno (AI)</option>
+            <option>Human recording</option>
+            <option>Other platform</option>
+            <option>Local file / upload</option>
+          </select></div>
+        <div><label class="f">Track ID / slug</label><input id="trackId" oninput="render()" placeholder="unique id for filenames"></div>
+        <div><label class="f">Source reference</label><input id="sourceRef" oninput="render()" placeholder="URL, platform ID, session, filename"></div>
+      </div>
+      <div class="row">
+        <div><label class="f">Title</label><input id="title" oninput="render()" placeholder="Hindi / display title"></div>
+        <div><label class="f">Transliteration</label><input id="translit" oninput="render()"></div>
+      </div>
+      <div class="row3">
+        <div><label class="f">Duration (sec)</label><input id="duration" type="number" oninput="render()"></div>
+        <div><label class="f">Release date</label><input id="releaseDate" type="date" oninput="render()"></div>
+        <div><label class="f">SHA-256 checksum</label><input id="checksum" oninput="render()" placeholder="of the audio file"></div>
+      </div>
+      <div class="row3">
+        <div><label class="f">Audio present</label><select id="hasAudio" onchange="render()"><option value="false">No</option><option value="true">Yes</option></select></div>
+        <div><label class="f">Cover present</label><select id="hasCover" onchange="render()"><option value="false">No</option><option value="true">Yes</option></select></div>
+        <div><label class="f">Lyrics present</label><select id="hasLyrics" onchange="render()"><option value="false">No</option><option value="true">Yes</option></select></div>
+      </div>
+      <div class="hint" id="intakeHint"></div>
+    </div>
+
+    <!-- 2. METADATA & CREDITS -->
+    <div class="card">
+      <h2><span class="step">2</span>Metadata &amp; credits</h2>
+      <div class="row">
+        <div>
+          <label class="f">Lyricist</label>
+          <select id="lyricist" onchange="render()">
+            <option>P.H.K.D.</option>
+            <option>Advocate Dev Lohan</option>
+            <option>Amir24</option>
+          </select>
+        </div>
+        <div>
+          <label class="f">Label (auto from lyricist)</label>
+          <div class="derived" id="labelOut">—</div>
+        </div>
+      </div>
+      <div class="row3">
+        <div><label class="f">Music by</label><div class="derived">hkfaduio</div></div>
+        <div><label class="f">Performer / Artist</label><div class="derived">P.H.K.D.</div></div>
+        <div><label class="f">Producer</label><div class="derived" title="VESAHE Film Solutions Private Limited">VESAHE Film Solutions Pvt Ltd</div></div>
+      </div>
+      <div class="row3">
+        <div><label class="f">Show / Theme</label>
+          <select id="show" onchange="render()">
+            <option>Sanatan &amp; Vedic</option><option>Bhakti &amp; Katha</option><option>Haryanvi Folk</option>
+            <option>Desh / Patriotic</option><option>Rap &amp; Fusion</option><option>Love &amp; Virah</option>
+            <option>Naagin &amp; Mystic</option><option>Classical &amp; Raag</option><option>Other / Misc</option>
+          </select>
+        </div>
+        <div><label class="f">Genre</label><input id="genre" oninput="render()" placeholder="Spiritual, Indian Folk…"></div>
+        <div><label class="f">Styles / tags</label><input id="styles" oninput="render()" placeholder="folk fusion"></div>
+      </div>
+    </div>
+
+    <!-- 3. RIGHTS CLOSURE -->
+    <div class="card">
+      <h2><span class="step">3</span>Rights closure</h2>
+      <div class="check"><input type="checkbox" id="r_decl" onchange="render()"><div class="t">Self-declaration signed<small>Declarant attests original authorship/ownership (see Rights Declarations pack)</small></div></div>
+      <div class="check"><input type="checkbox" id="r_agree" onchange="render()"><div class="t">Live agreement executed<small>Lyrics / music / performer / label agreement on file for this track</small></div></div>
+      <div class="check"><input type="checkbox" id="r_audit" onchange="render()"><div class="t">Audit verified<small>Source + checksum + provenance reconciled</small></div></div>
+      <div class="row">
+        <div><label class="f">License terms</label><input id="license" oninput="render()" placeholder="Suno commercial-use; assigned to VESAHE"></div>
+        <div><label class="f">Citation / source</label><input id="citation" oninput="render()" placeholder="Own Suno creation; Split Sheet ref"></div>
+      </div>
+      <div class="row">
+        <div><label class="f">Reviewer (named)</label><input id="reviewer" oninput="render()" placeholder="Release reviewer name"></div>
+        <div><label class="f">Reviewed at</label><input id="reviewedAt" type="date" oninput="render()"></div>
+      </div>
+      <div class="check" style="margin-top:6px"><input type="checkbox" id="r_release" onchange="render()"><div class="t">Release allowed<small>Reviewer sign-off recorded; ok to publish</small></div></div>
+    </div>
+
+    <!-- 4. STATION & PLAYLIST -->
+    <div class="card">
+      <h2><span class="step">4</span>Station &amp; playlist</h2>
+      <div class="row">
+        <div><label class="f">Playlist / station</label>
+          <select id="playlist" onchange="render()">
+            <option>01_Sanatan_Cosmos</option><option>02_Bhakti_&amp;_Pauranik_Katha</option>
+            <option>03_Haryanvi_Maati</option><option>04_Desh_&amp;_Tiranga</option>
+            <option>05_Virah_&amp;_Pyaar</option><option>06_Naagin_&amp;_Rahasya</option>
+            <option>07_Namak_Ret_aur_Dharti</option><option>08_Raag_&amp;_Shastriya</option>
+            <option>09_Reference_&amp;_Source_Material</option><option>10_Intros_Loops_&amp;_Sketches</option>
+          </select>
+        </div>
+        <div><label class="f">Track # in release</label><input id="trackNo" type="number" oninput="render()" placeholder="1"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIDE: output -->
+  <div class="side">
+    <div class="card">
+      <h2>Release gate</h2>
+      <div id="gate" class="gate no"><span class="dot no"></span><span id="gateText">canPlay: false</span></div>
+      <div id="missing" class="hint"></div>
+    </div>
+    <div class="card">
+      <h2>Manifest import record</h2>
+      <pre id="out">{ }</pre>
+      <div class="btns">
+        <button onclick="copyJson()">Copy JSON</button>
+        <button class="ghost" onclick="downloadJson()">Download .json</button>
+        <button class="ghost" onclick="resetForm()">Reset</button>
+      </div>
+      <div class="hint">Append to <code>apps/*/public/radio-html/data/audio-import-manifest.json</code> → <code>imports[]</code>, or feed the rights fields into <code>npm run radio:rights:closure</code>.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const PRODUCER="VESAHE Film Solutions Private Limited";
+const $=id=>document.getElementById(id);
+const val=id=>$(id).value.trim();
+const chk=id=>$(id).checked;
+function labelFor(lyr){return lyr==="Advocate Dev Lohan"?"Magic Mushrooms":"P.H.K.D.";}
+function isSunoPlatform(p){return p.indexOf("Suno")===0;}
+function pkgFor(p){return isSunoPlatform(p)?"_radio_index/suno_backup":"_radio_index/imports";}
+function intakeHint(p,id){
+  if(isSunoPlatform(p)) return 'Suno path: add the ID to <code>suno-catalog.json</code> and run <code>node scripts/suno-sync.mjs</code> — fetches audio/cover/lyrics and prints the checksum.';
+  return 'Place the audio at <code>'+pkgFor(p)+'/audio/'+(id||'&lt;track-id&gt;')+'.mp3</code> (cover/lyrics alongside), then record its hash: <code>shasum -a 256 &lt;file&gt;</code>.';
+}
+
+function build(){
+  const platform=val('platform');
+  const id=val('trackId');
+  const lyr=val('lyricist');
+  const label=labelFor(lyr);
+  const hasAudio=val('hasAudio')==='true';
+  const checksum=val('checksum');
+  const base=id?pkgFor(platform):null;
+  const rightsVerified=chk('r_decl')&&chk('r_agree')&&chk('r_audit')&&!!val('license')&&!!val('citation');
+  const reviewed=!!val('reviewer')&&!!val('reviewedAt');
+  const releaseAllowed=chk('r_release')&&reviewed;
+  const canPlay=hasAudio&&!!checksum&&rightsVerified&&reviewed&&releaseAllowed;
+  const rightsStatus=releaseAllowed&&rightsVerified?"verified":(rightsVerified||chk('r_decl')?"draft":"blocked");
+  const missing=[];
+  if(!id)missing.push("track id");
+  if(!hasAudio)missing.push("audio file");
+  if(!checksum)missing.push("checksum");
+  if(!rightsVerified)missing.push("rights (declaration+agreement+audit+license+citation)");
+  if(!reviewed)missing.push("reviewer sign-off");
+  if(!releaseAllowed)missing.push("release allowed");
+  const rec={
+    id:id?("trk-"+id):null, trackId:id||null,
+    sourcePlatform:platform, sourceRef:val('sourceRef')||null,
+    sunoId:isSunoPlatform(platform)?(id||null):null,
+    title:val('title')||null, releaseTitle:val('title')||null, transliteration:val('translit')||null,
+    artist:"P.H.K.D.", performer:"P.H.K.D.", lyricist:lyr, musicBy:"hkfaduio", producer:PRODUCER,
+    label, language:null, genre:val('genre')||null, styles:val('styles')||null, show:val('show'),
+    releaseDate:val('releaseDate')||null, durationSeconds:val('duration')?Number(val('duration')):null,
+    trackNumber:val('trackNo')?Number(val('trackNo')):null, playlist:val('playlist'),
+    sourcePackage:base, source:id?base+"/audio/"+id+".mp3":null,
+    coverPath:id?base+"/covers/"+id+".jpeg":null, lyricsPath:id?base+"/lyrics/"+id+".txt":null,
+    publicPath:null, checksum:checksum||null,
+    rightsStatus, license:val('license')||null, citation:val('citation')||null,
+    reviewer:val('reviewer')||null, reviewedAt:val('reviewedAt')||null,
+    auditVerified:chk('r_audit'), releaseAllowed, canPlay,
+    status: canPlay?"release-ready":"onboarding",
+    verificationState: canPlay?"verified":(rightsStatus==="blocked"?"blocked-rights-null":"draft-rights-partial"),
+    missing: missing.length?missing:null,
+    blocker: canPlay?null:(missing[0]||null)
+  };
+  return {rec,canPlay,missing,label};
+}
+function render(){
+  $('intakeHint').innerHTML = intakeHint(val('platform'), val('trackId'));
+  const {rec,canPlay,missing,label}=build();
+  $('labelOut').innerHTML = '<span class="pill '+(label==="Magic Mushrooms"?"mush":"phkd")+'">'+label+'</span>';
+  const g=$('gate'), gt=$('gateText'), dot=g.querySelector('.dot');
+  if(canPlay){g.className="gate yes";dot.className="dot yes";gt.textContent="canPlay: true — release-ready";}
+  else{g.className="gate no";dot.className="dot no";gt.textContent="canPlay: false";}
+  $('missing').innerHTML = canPlay ? "All gates verified." :
+    ("Blocked on: "+missing.map(m=>'<span class="miss">'+m+'</span>').join(", "));
+  $('out').textContent=JSON.stringify(rec,null,2);
+}
+function copyJson(){navigator.clipboard.writeText($('out').textContent).then(()=>flash('Copied'));}
+function downloadJson(){
+  const {rec}=build(); const id=rec.trackId||"track";
+  const b=new Blob([JSON.stringify(rec,null,2)],{type:"application/json"});
+  const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download="onboard_"+id+".json";a.click();
+}
+function flash(t){const b=event.target;const o=b.textContent;b.textContent=t;setTimeout(()=>b.textContent=o,1200);}
+function resetForm(){document.querySelectorAll('input').forEach(i=>{if(i.type==='checkbox')i.checked=false;else i.value='';});
+  $('hasAudio').value='false';$('hasCover').value='false';$('hasLyrics').value='false';render();}
+render();
+</script>
+</body>
+</html>

@@ -338,6 +338,21 @@
       "path": "/radio-html/surfaces/desktop-alpha.html",
       "surface": "Desktop Alpha Bundle HTML surface",
       "status": "implemented"
+    },
+    {
+      "path": "/radio-html/data/device-runtime-evidence.json",
+      "surface": "device-runtime-evidence data frame",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/data/product-surface-matrix.json",
+      "surface": "product-surface-matrix data frame",
+      "status": "implemented"
+    },
+    {
+      "path": "/radio-html/surfaces/device-runtime.html",
+      "surface": "Device Runtime HTML surface",
+      "status": "implemented"
     }
   ],
   "components": [

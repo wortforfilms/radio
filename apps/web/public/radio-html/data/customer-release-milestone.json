@@ -1,7 +1,7 @@
 {
   "id": "radio-customer-release-milestone",
   "title": "Radio Vaigyaaniq Customer Release Milestone",
-  "generatedAt": "2026-06-06",
+  "generatedAt": "2026-06-25",
   "verificationState": "blocked-customer-release-proof-null",
   "shipDecision": "NO_SHIP",
   "phkd": {
@@ -13,9 +13,9 @@
   },
   "counts": {
     "gates": 10,
-    "draftPass": 3,
+    "draftPass": 2,
     "verified": 0,
-    "blocked": 7,
+    "blocked": 8,
     "customerReleaseReady": 0,
     "productionReady": 0,
     "releaseAllowed": 0,
@@ -27,7 +27,7 @@
     "signedArtifacts": 0,
     "notarizedArtifacts": 0,
     "releaseReviewsVerified": 0,
-    "guiSmokeScreenshots": 1,
+    "guiSmokeScreenshots": 0,
     "customerFrontFailedLinks": 0,
     "visualQaBlocked": 0,
     "remainingPacketRowsPrepared": 34,
@@ -65,12 +65,12 @@
       "key": "visual-qa",
       "label": "Visual QA Board",
       "category": "local-ui",
-      "status": "draft-pass",
+      "status": "blocked",
       "evidence": "/radio-html/data/visual-qa.json",
       "apiView": null,
-      "blocker": null,
+      "blocker": "Visual QA screenshots or target pass counts are incomplete.",
       "observed": {
-        "targets": 25,
+        "targets": 26,
         "capturedScreenshots": 25,
         "pass": 25,
         "blocked": 0
@@ -90,8 +90,8 @@
       "apiView": "release-orchestration",
       "blocker": null,
       "observed": {
-        "steps": 15,
-        "pass": 15,
+        "steps": 16,
+        "pass": 16,
         "fail": 0,
         "browserChecks": 0
       },
@@ -111,9 +111,9 @@
       "blocker": "Manual GUI screenshot, reviewer, no-crash, and visible no-ship proof are incomplete.",
       "observed": {
         "checks": 9,
-        "passedChecks": 5,
-        "blockedChecks": 4,
-        "screenshots": 1,
+        "passedChecks": 1,
+        "blockedChecks": 8,
+        "screenshots": 0,
         "reviewers": 0,
         "appOpenProof": 0
       },
@@ -295,7 +295,7 @@
       "blocker": "Tauri readiness remains NO_SHIP while blocked evidence lanes exist.",
       "observed": {
         "draftReady": 8,
-        "blocked": 10,
+        "blocked": 11,
         "notRun": 1
       },
       "requiredEvidence": [
@@ -309,6 +309,17 @@
     }
   ],
   "blockers": [
+    {
+      "key": "visual-qa",
+      "label": "Visual QA Board",
+      "evidence": "/radio-html/data/visual-qa.json",
+      "blocker": "Visual QA screenshots or target pass counts are incomplete.",
+      "requiredEvidence": [
+        "capturedScreenshots",
+        "passEqualsTargets",
+        "blockedEqualsZero"
+      ]
+    },
     {
       "key": "gui-smoke",
       "label": "Desktop GUI Smoke",
@@ -463,7 +474,7 @@
     {
       "key": "tauri-readiness",
       "path": "/radio-html/data/tauri-readiness.json",
-      "verificationState": "draft-local-app-built-gui-proof-null"
+      "verificationState": "draft-local-app-built-signing-proof-blocked"
     },
     {
       "key": "release-orchestration-run",

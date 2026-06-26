@@ -1,7 +1,7 @@
 {
   "id": "radio-installer-signing-proof",
   "title": "Installer Signing Evidence Slots",
-  "generatedAt": "2026-06-05",
+  "generatedAt": "2026-06-25",
   "verificationState": "blocked-signing-proof-null",
   "shipDecision": "NO_SHIP",
   "phkd": {
@@ -36,7 +36,7 @@
       "platform": "macOS",
       "format": "app",
       "artifactPath": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-      "sha256": "c3856014f55db1b80290281c1120d34cac9d4e0b9b7b364da9c9e54073e59e11",
+      "sha256": "9cc0f713f050418e18163fbdaf46aaa19b3c44e6bd3b23c55bb675f7b828c00d",
       "signingIdentity": null,
       "signatureVerification": null,
       "notarizationTicket": null,

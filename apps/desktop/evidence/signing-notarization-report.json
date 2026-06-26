@@ -1,8 +1,8 @@
 {
   "report": "signing-notarization-report",
-  "generated_at": "2026-06-24T19:22:29.916Z",
-  "source_commit": "f85a4946c3e3f66b0d0602ccafea5afe6f8bab4e",
-  "source_commit_short": "f85a494",
+  "generated_at": "2026-06-25T14:06:24.728Z",
+  "source_commit": "60e4c5955dfb253785a930b649c719b68e2457e1",
+  "source_commit_short": "60e4c59",
   "verification_state": "blocked-signing-notarization-proof-null",
   "phkd": {
     "rule": "fail_closed",
@@ -64,15 +64,15 @@
       "exitCode": 1,
       "status": "blocked",
       "stdout": null,
-      "stderr": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app: internal error in Code Signing subsystem",
+      "stderr": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app: code has no resources but signature indicates they must be present",
       "error": null
     },
     {
       "key": "notarization-stapler-validate",
       "command": "xcrun stapler validate /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-      "exitCode": 66,
+      "exitCode": 65,
       "status": "blocked",
-      "stdout": "File /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app does not exist. Error Domain=NSCocoaErrorDomain Code=256 \"The file “Radio Vaigyaaniq” couldn’t be opened.\" UserInfo={NSURL=file:///var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio%20Vaigyaaniq.app/, NSFilePath=/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app, NSUnderlyingError=0x124f0d490 {Error Domain=NSOSStatusErrorDomain Code=-10813 \"kLSDataUnavailableErr: E.g. no kind string\"}}",
+      "stdout": "Processing: /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app\nRadio Vaigyaaniq.app does not have a ticket stapled to it.",
       "stderr": null,
       "error": null
     }

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radio Vaigyaaniq — Catalogue</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b27;--panel2:#1d2433;--line:#2b3446;--ink:#e8edf6;
+    --muted:#9aa6bd;--navy:#5b8def;--gold:#f0b429;--good:#2ea043;--bad:#e5534b;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,Segoe UI,Arial,sans-serif}
+  header{position:sticky;top:0;z-index:5;padding:14px 24px;border-bottom:1px solid var(--line);
+    display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:linear-gradient(90deg,#11161f,#161b27)}
+  .mark{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,var(--navy),var(--gold));
+    display:flex;align-items:center;justify-content:center;font-weight:800;color:#0d1117}
+  header h1{font-size:17px;margin:0}header small{color:var(--muted)}
+  .tools{margin-left:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  #q{background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:8px 12px;width:220px;font:inherit}
+  #q:focus{outline:none;border-color:var(--navy)}
+  .seg{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .seg button{background:var(--panel2);color:var(--muted);border:0;padding:8px 12px;font-weight:700;cursor:pointer}
+  .seg button.on{background:var(--navy);color:#06101f}
+  .count{color:var(--muted);font-size:12px;white-space:nowrap}
+  .wrap{padding:16px 24px 56px;max-width:1320px;margin:0 auto}
+  /* grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .1s,border-color .15s}
+  .card:hover{transform:translateY(-2px);border-color:var(--navy)}
+  .art{position:relative;aspect-ratio:1/1;background:linear-gradient(135deg,#1a2336,#221a10);display:block}
+  .art img{width:100%;height:100%;object-fit:cover;display:block}
+  .art .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:30px;color:#46506a}
+  .badge{position:absolute;left:7px;bottom:7px;font-size:9px;font-weight:800;padding:2px 7px;border-radius:999px;background:rgba(13,17,23,.72);border:1px solid var(--line)}
+  .badge.play{color:#7ee2a0;border-color:#235}
+  .meta{padding:8px 10px}
+  .meta .t{font-size:12.5px;font-weight:600;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:31px}
+  .meta .s{color:var(--muted);font-size:10.5px;margin-top:3px}
+  /* table */
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  thead th{position:sticky;top:67px;background:#11161f;color:var(--muted);text-align:left;font-size:11px;
+    text-transform:uppercase;letter-spacing:.05em;padding:9px 10px;border-bottom:1px solid var(--line);cursor:pointer;white-space:nowrap}
+  thead th:hover{color:var(--ink)}
+  tbody td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
+  tbody tr:hover{background:var(--panel)}
+  td.n{color:var(--muted);width:48px;text-align:right}
+  td.thumb{width:46px}
+  td.thumb img{width:38px;height:38px;border-radius:6px;object-fit:cover;display:block;background:var(--panel2)}
+  td.title{font-weight:600}
+  .pill{font-size:10px;font-weight:800;padding:2px 8px;border-radius:999px}
+  .pill.play{background:#13261a;color:#7ee2a0;border:1px solid #235}
+  .pill.lock{background:#2a1719;color:#ff9b94;border:1px solid #5a2a2a}
+  td.id{color:var(--muted);font:11px ui-monospace,Menlo,monospace}
+  a.lnk{color:var(--navy)}
+  .empty,.loading{color:var(--muted);padding:40px;text-align:center}
+  .hidden{display:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">RV</div>
+  <div><h1>Radio Vaigyaaniq — Catalogue</h1><small>Full indexed library · live</small></div>
+  <div class="tools">
+    <input id="q" placeholder="Search title…" oninput="render()">
+    <div class="seg">
+      <button id="bGrid" class="on" onclick="setView('grid')">Grid</button>
+      <button id="bTable" onclick="setView('table')">Table</button>
+    </div>
+    <span class="count" id="count">loading…</span>
+  </div>
+</header>
+<div class="wrap">
+  <div id="grid" class="grid"></div>
+  <div id="tableWrap" class="hidden">
+    <table>
+      <thead><tr>
+        <th onclick="sortBy('idx')">#</th>
+        <th></th>
+        <th onclick="sortBy('title')">Title</th>
+        <th onclick="sortBy('styles')">Styles</th>
+        <th onclick="sortBy('createdAt')">Date</th>
+        <th onclick="sortBy('duration')">Dur</th>
+        <th onclick="sortBy('canPlay')">Status</th>
+        <th onclick="sortBy('sunoId')">Suno ID</th>
+      </tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+  <div id="status" class="loading">Loading catalogue…</div>
+</div>
+<script>
+let TRACKS = [], view = "grid", sortKey = "idx", sortDir = 1;
+const $ = id => document.getElementById(id);
+
+function coverOf(t){ return t.coverPublicPath || (t.sunoId ? `/radio-html/assets/covers/${t.sunoId}.jpeg` : ""); }
+
+function filtered(){
+  const q = ($('q').value || "").trim().toLowerCase();
+  let list = q ? TRACKS.filter(t => (t.title||"").toLowerCase().includes(q) || (t.styles||"").toLowerCase().includes(q) || (t.sunoId||"").includes(q)) : TRACKS.slice();
+  list.sort((a,b)=>{
+    let x=a[sortKey], y=b[sortKey];
+    if(sortKey==="canPlay"){x=x?1:0;y=y?1:0;}
+    if(typeof x==="string"){x=(x||"").toLowerCase();y=(y||"").toLowerCase();}
+    return x<y?-sortDir:x>y?sortDir:0;
+  });
+  return list;
+}
+
+function gridCard(t){
+  const cover=coverOf(t), title=t.title||"(untitled)";
+  const sub=[t.createdAt,t.duration].filter(Boolean).join(" · ");
+  const badge=t.canPlay?'<span class="badge play">PREVIEW</span>':'<span class="badge">LOCKED</span>';
+  return `<div class="card"><a class="art" ${t.publicPath?`href="${t.publicPath}" target="_blank"`:""}>
+    <div class="ph">${(title.trim()[0]||"♪")}</div>
+    ${cover?`<img loading="lazy" src="${cover}" onload="this.previousElementSibling.style.display='none'" onerror="this.remove()">`:""}
+    ${badge}</a><div class="meta"><div class="t">${title}</div><div class="s">${sub||"&nbsp;"}</div></div></div>`;
+}
+
+function row(t){
+  const cover=coverOf(t);
+  const st=t.canPlay?'<span class="pill play">PREVIEW</span>':'<span class="pill lock">LOCKED</span>';
+  return `<tr>
+    <td class="n">${t.idx}</td>
+    <td class="thumb">${cover?`<img loading="lazy" src="${cover}" onerror="this.style.visibility='hidden'">`:""}</td>
+    <td class="title">${t.publicPath?`<a class="lnk" href="${t.publicPath}" target="_blank">${t.title||"(untitled)"}</a>`:(t.title||"(untitled)")}</td>
+    <td>${t.styles||""}</td>
+    <td>${t.createdAt||""}</td>
+    <td>${t.duration||""}</td>
+    <td>${st}</td>
+    <td class="id">${t.sunoId||""}</td>
+  </tr>`;
+}
+
+function render(){
+  const list=filtered();
+  $('count').textContent=`${list.length.toLocaleString()} of ${TRACKS.length.toLocaleString()} tracks`;
+  $('status').style.display=list.length?"none":"block";
+  if(view==="grid"){
+    $('grid').classList.remove('hidden'); $('tableWrap').classList.add('hidden');
+    $('grid').innerHTML=list.map(gridCard).join("");
+  }else{
+    $('grid').classList.add('hidden'); $('tableWrap').classList.remove('hidden');
+    $('tbody').innerHTML=list.map(row).join("");
+  }
+}
+function setView(v){view=v;$('bGrid').className=v==="grid"?"on":"";$('bTable').className=v==="table"?"on":"";render();}
+function sortBy(k){ if(sortKey===k) sortDir=-sortDir; else {sortKey=k;sortDir=1;} render(); }
+
+fetch("data/suno-library-catalog.json").then(r=>r.json()).then(d=>{
+  TRACKS=(d.tracks||[]).map((t,i)=>({...t,idx:i+1}));
+  render();
+}).catch(()=>{ $('status').textContent="Could not load data/suno-library-catalog.json — run the radio app so the data path resolves."; });
+</script>
+</body>
+</html>

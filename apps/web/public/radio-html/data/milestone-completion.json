@@ -1,7 +1,7 @@
 {
   "id": "radio-vaigyaaniq-next-milestone-completion",
   "title": "Radio Vaigyaaniq Next Milestone Completion",
-  "generatedAt": "2026-06-06",
+  "generatedAt": "2026-06-25",
   "verificationState": "draft",
   "phkd": {
     "rule": "fail_closed",
@@ -11,9 +11,9 @@
     "note": "Milestone records describe local implementation and evidence gates only. They do not verify rights, payment settlement, installer signing, release approval, external telemetry, or production readiness."
   },
   "counts": {
-    "milestones": 8,
-    "implementedDraft": 8,
-    "evidenceBlocked": 8,
+    "milestones": 9,
+    "implementedDraft": 9,
+    "evidenceBlocked": 9,
     "productionReady": 0,
     "shipDecision": "NO_SHIP",
     "paymentProofReceipts": 0,
@@ -23,7 +23,7 @@
     "releaseReviewVerified": 0,
     "releaseReviewBlocked": 23,
     "customerReleaseReady": 0,
-    "customerReleaseBlocked": 7
+    "customerReleaseBlocked": 8
   },
   "milestones": [
     {
@@ -76,11 +76,18 @@
       "blocker": "alpha is NO_SHIP until rights/payment/signing/review close"
     },
     {
+      "key": "device-runtime",
+      "label": "Device Runtime",
+      "status": "implemented-draft",
+      "evidence": "/radio-html/data/device-runtime-evidence.json",
+      "blocker": "device hardware proof, permission evidence, telemetry hash, and reviewer evidence still NULL"
+    },
+    {
       "key": "customer-release-milestone",
       "label": "Customer Release Milestone",
       "status": "implemented-draft",
       "evidence": "/radio-html/data/customer-release-milestone.json",
-      "blocker": "Customer release blocked: 7 gate(s) lack complete proof."
+      "blocker": "Customer release blocked: 8 gate(s) lack complete proof."
     }
   ]
 }
