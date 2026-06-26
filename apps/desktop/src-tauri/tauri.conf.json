@@ -40,6 +40,15 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ],
+    "macOS": {
+      "hardenedRuntime": true,
+      "entitlements": "entitlements.plist",
+      "minimumSystemVersion": "10.13"
+    },
+    "windows": {
+      "digestAlgorithm": "sha256",
+      "timestampUrl": "http://timestamp.digicert.com"
+    },
     "category": "Music",
     "shortDescription": "Radio Vaigyaaniq desktop",
     "longDescription": "Radio Vaigyaaniq desktop shell — opens the Radio archive entrypoints. Draft scaffold; media library and release readiness are NOT bundled or verified."

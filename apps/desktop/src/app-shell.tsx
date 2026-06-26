@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { bundleMetadata, archiveEntrypoints, inTauri, RADIO_ENTRYPOINTS } from "./radio-bridge";
+import { bundleMetadata, catalogEntrypoints, inTauri, RADIO_ENTRYPOINTS, type CatalogGroup } from "./radio-bridge";
 
 const C = {
   bg: "#05060f", panel: "#101124", line: "rgba(255,255,255,.12)",
@@ -9,14 +9,16 @@ const C = {
 export function AppShell() {
   const [meta, setMeta] = useState<Record<string, unknown> | null>(null);
   const [entry, setEntry] = useState<string>(RADIO_ENTRYPOINTS["App Prototype"]);
-  const [entries, setEntries] = useState<Record<string, string>>(RADIO_ENTRYPOINTS);
+  const [catalogGroups, setCatalogGroups] = useState<CatalogGroup[]>([]);
+  const catalogCount = catalogGroups.reduce((total, group) => total + group.entries.length, 0);
 
   useEffect(() => {
     bundleMetadata().then(setMeta).catch(() => setMeta(null));
-    archiveEntrypoints().then((list) => {
-      // keep labelled map; list is for provenance/validation
-      void list;
-      setEntries(RADIO_ENTRYPOINTS);
+    catalogEntrypoints().then((groups) => {
+      setCatalogGroups(groups);
+      if (groups.every((group) => group.entries.every((catalogEntry) => catalogEntry.url !== entry))) {
+        setEntry(groups[0]?.entries[0]?.url ?? RADIO_ENTRYPOINTS["App Prototype"]);
+      }
     });
   }, []);
 
@@ -28,8 +30,15 @@ export function AppShell() {
         </strong>
         <select value={entry} onChange={(e) => setEntry(e.target.value)}
           style={{ marginLeft: "auto", background: "#0c0d1e", color: C.text, border: `1px solid ${C.line}`, borderRadius: 8, padding: "6px 10px" }}>
-          {Object.entries(entries).map(([label, url]) => (
-            <option key={url} value={url}>{label}</option>
+          {(catalogGroups.length ? catalogGroups : [{
+            label: "Primary Archive",
+            entries: Object.entries(RADIO_ENTRYPOINTS).map(([label, url]) => ({ label, url, group: "Primary Archive" }))
+          }]).map((group) => (
+            <optgroup key={group.label} label={group.label}>
+              {group.entries.map((catalogEntry) => (
+                <option key={catalogEntry.url} value={catalogEntry.url}>{catalogEntry.label}</option>
+              ))}
+            </optgroup>
           ))}
         </select>
       </header>
@@ -43,6 +52,7 @@ export function AppShell() {
         <span>version: {(meta?.version as string) ?? "NULL"}</span>
         <span>platform: {(meta?.platform as string) ?? "NULL"}</span>
         <span>build_hash: {(meta?.build_hash as string) ?? "NULL"}</span>
+        <span>catalog: {catalogCount || Object.keys(RADIO_ENTRYPOINTS).length} entries</span>
         <span style={{ marginLeft: "auto", color: C.violet }}>
           media library: NULL — large audio/cover assets are not bundled; configure a local library path before claiming playback.
         </span>
