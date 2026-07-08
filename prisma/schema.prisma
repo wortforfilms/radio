@@ -369,10 +369,64 @@ model MediaAsset {
   createdAt          DateTime           @default(now())
   updatedAt          DateTime           @updatedAt
   node               KnowledgeNode?     @relation(fields: [nodeId], references: [id], onDelete: SetNull)
+  mediaObjects       MediaObject[]
 
   @@index([title])
   @@index([mediaType])
   @@index([checksum])
+}
+
+model StorageProvider {
+  id                 String        @id @default(cuid())
+  slug               String        @unique
+  name               String
+  kind               String        // "local_fs" | "s3" | "r2" | "gcs" | "azure_blob" | "ipfs"
+  rootUri            String        // file:///..., s3://bucket/prefix, r2://bucket/prefix, etc.
+  publicBaseUri      String?
+  region             String?
+  isPrimary          Boolean       @default(false)
+  failClosed         Boolean       @default(true)
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String        @default("UNVERIFIED")
+  createdAt          DateTime      @default(now())
+  updatedAt          DateTime      @updatedAt
+  mediaObjects       MediaObject[]
+
+  @@index([kind])
+  @@index([isPrimary])
+  @@index([verificationStatus])
+}
+
+model MediaObject {
+  id                 String                @id @default(cuid())
+  providerId         String
+  mediaAssetId       String?
+  objectKey          String
+  storageUri         String
+  publicUri          String?
+  mediaKind          String                // "audio" | "cover" | "video" | "image" | "model" | "document" | "waveform"
+  mimeType           String?
+  byteSize           Int?
+  checksumSha256     String?
+  durationSeconds    Int?
+  rightsStatus       String                @default("UNKNOWN")
+  evidenceUri        String?
+  provenanceNote     String?
+  sourceCitation     String?
+  verificationStatus String                @default("UNVERIFIED")
+  createdAt          DateTime              @default(now())
+  updatedAt          DateTime              @updatedAt
+  provider           StorageProvider       @relation(fields: [providerId], references: [id], onDelete: Restrict)
+  mediaAsset         MediaAsset?           @relation(fields: [mediaAssetId], references: [id], onDelete: SetNull)
+  radioTrackLinks    RadioTrackMediaLink[]
+
+  @@unique([providerId, objectKey])
+  @@index([mediaAssetId])
+  @@index([mediaKind])
+  @@index([checksumSha256])
+  @@index([rightsStatus])
+  @@index([verificationStatus])
 }
 
 model ResearchPaper {
@@ -531,14 +585,58 @@ model RadioTrack {
   previewSeconds Int          @default(45)
   theme          String?      // catalogue theme → maps to a station
   language       String?      // "Hindi" | "Haryanvi" | "Sanskrit" | "Braj" | "English" | ...
+  styles         String?
+  lyricsText     String?
+  lyricsBody     String?
+  lyricsPath     String?
+  metadataJson   String?
+  catalogSource  String?
+  sourceCreatedAt DateTime?
+  durationSeconds Int?
+  durationLabel  String?
+  sourceModel    String?
+  playCount      Int?
+  instrumental   Boolean?
+  sourceAudioPath String?
+  sourceCoverPath String?
+  sourceChecksum String?
+  sourceBytes    Int?
+  publicPath     String?
+  coverPublicPath String?
+  canPlay        Boolean      @default(false)
+  rightsStatus   String      @default("UNKNOWN")
+  verificationState String   @default("SOURCE_CATALOG")
   published      Boolean      @default(false) // mirrors rights-verified canPlay
   createdAt      DateTime     @default(now())
   updatedAt      DateTime     @updatedAt
   purchases      Purchase[]
   entitlements   Entitlement[]
+  mediaLinks     RadioTrackMediaLink[]
 
   @@index([albumId])
   @@index([published])
+  @@index([styles])
+  @@index([sourceCreatedAt])
+  @@index([canPlay])
+  @@index([rightsStatus])
+  @@index([verificationState])
+}
+
+model RadioTrackMediaLink {
+  id            String      @id @default(cuid())
+  radioTrackId  String
+  mediaObjectId String
+  role          String      // "audio" | "preview" | "cover" | "lyrics" | "waveform" | "stems"
+  isPrimary     Boolean     @default(false)
+  createdAt     DateTime    @default(now())
+  radioTrack    RadioTrack  @relation(fields: [radioTrackId], references: [id], onDelete: Cascade)
+  mediaObject   MediaObject @relation(fields: [mediaObjectId], references: [id], onDelete: Cascade)
+
+  @@unique([radioTrackId, mediaObjectId, role])
+  @@index([radioTrackId])
+  @@index([mediaObjectId])
+  @@index([role])
+  @@index([isPrimary])
 }
 
 model Purchase {
