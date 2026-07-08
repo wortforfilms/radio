@@ -1,7 +1,7 @@
 {
   "id": "hdfc-upi-parser-proof-adapter",
   "title": "HDFC UPI Parser Evidence Adapter",
-  "generatedAt": "2026-06-25",
+  "generatedAt": "2026-07-08",
   "verificationState": "draft-candidate-adapter",
   "shipDecision": "NO_SHIP",
   "phkd": {

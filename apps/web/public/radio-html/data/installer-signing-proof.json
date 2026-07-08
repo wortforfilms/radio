@@ -1,7 +1,7 @@
 {
   "id": "radio-installer-signing-proof",
   "title": "Installer Signing Evidence Slots",
-  "generatedAt": "2026-06-25",
+  "generatedAt": "2026-07-08",
   "verificationState": "blocked-signing-proof-null",
   "shipDecision": "NO_SHIP",
   "phkd": {
@@ -15,7 +15,7 @@
     "artifactSlots": 6,
     "signedArtifacts": 0,
     "notarizedArtifacts": 0,
-    "signingBlockedChecks": 6,
+    "signingBlockedChecks": 8,
     "blocked": 6
   },
   "requiredEvidence": [

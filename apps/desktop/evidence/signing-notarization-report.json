@@ -1,8 +1,8 @@
 {
   "report": "signing-notarization-report",
-  "generated_at": "2026-06-25T14:06:24.728Z",
-  "source_commit": "60e4c5955dfb253785a930b649c719b68e2457e1",
-  "source_commit_short": "60e4c59",
+  "generated_at": "2026-07-08T17:40:55.378Z",
+  "source_commit": "979bc16c38d761328705ee316f087856abeef564",
+  "source_commit_short": "979bc16",
   "verification_state": "blocked-signing-notarization-proof-null",
   "phkd": {
     "rule": "fail_closed",
@@ -12,85 +12,48 @@
   },
   "artifact": {
     "path": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-    "exists": true,
+    "exists": false,
     "bundle_hash": "9cc0f713f050418e18163fbdaf46aaa19b3c44e6bd3b23c55bb675f7b828c00d",
-    "platform": "darwin",
-    "isMacApp": true
+    "platform": "linux",
+    "isMacApp": false
   },
   "tools": {
-    "codesign": "/usr/bin/codesign",
-    "spctl": "/usr/sbin/spctl",
-    "xcrun": "/usr/bin/xcrun"
+    "codesign": null,
+    "spctl": null,
+    "xcrun": null
   },
   "signature": {
-    "identifier": "radio_vaigyaaniq_desktop-02bb025d4351277b",
-    "signature": "adhoc",
-    "teamIdentifier": "not set",
+    "identifier": null,
+    "signature": null,
+    "teamIdentifier": null,
     "authorities": [],
     "developerIdApplication": false,
-    "adhoc": true,
+    "adhoc": false,
     "manualIdentity": null
   },
   "notarization": {
-    "staplerStatus": "blocked",
+    "staplerStatus": "not-run",
     "manualTicket": null
   },
   "manual_evidence": {
     "reviewer": null,
     "reviewed_at": null
   },
-  "commands": [
-    {
-      "key": "codesign-display",
-      "command": "codesign -dv --verbose=4 /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-      "exitCode": 0,
-      "status": "pass",
-      "stdout": null,
-      "stderr": "Executable=/private/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app/Contents/MacOS/radio-vaigyaaniq-desktop\nIdentifier=radio_vaigyaaniq_desktop-02bb025d4351277b\nFormat=app bundle with Mach-O thin (arm64)\nCodeDirectory v=20400 size=168104 flags=0x20002(adhoc,linker-signed) hashes=5249+0 location=embedded\nVersionPlatform=1\nVersionMin=720896\nVersionSDK=918528\nHash type=sha256 size=32\nCandidateCDHash sha256=a73a6e5db9d91d4c9026bb131d9d853068f09ff1\nCandidateCDHashFull sha256=a73a6e5db9d91d4c9026bb131d9d853068f09ff1fda5c8fc602a0c53ac1f7d06\nHash choices=sha256\nCMSDigest=a73a6e5db9d91d4c9026bb131d9d853068f09ff1fda5c8fc602a0c53ac1f7d06\nCMSDigestType=2\nExecutable Segment base=0\nExecutable Segment limit=21299200\nExecutable Segment flags=0x1\nPage size=4096\nCDHash=a73a6e5db9d91d4c9026bb131d9d853068f09ff1\nSignature=adhoc\nInfo.plist=not bound\nTeamIdentifier=not set\nSealed Resources=none\nInternal requirements=none",
-      "error": null
-    },
-    {
-      "key": "codesign-verify",
-      "command": "codesign --verify --deep --strict --verbose=4 /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-      "exitCode": 1,
-      "status": "blocked",
-      "stdout": null,
-      "stderr": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app: code has no resources but signature indicates they must be present",
-      "error": null
-    },
-    {
-      "key": "gatekeeper-assess",
-      "command": "spctl --assess --type execute --verbose=4 /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-      "exitCode": 1,
-      "status": "blocked",
-      "stdout": null,
-      "stderr": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app: code has no resources but signature indicates they must be present",
-      "error": null
-    },
-    {
-      "key": "notarization-stapler-validate",
-      "command": "xcrun stapler validate /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-      "exitCode": 65,
-      "status": "blocked",
-      "stdout": "Processing: /var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app\nRadio Vaigyaaniq.app does not have a ticket stapled to it.",
-      "stderr": null,
-      "error": null
-    }
-  ],
+  "commands": [],
   "checks": [
     {
       "key": "artifact",
       "label": "macOS .app artifact exists",
-      "status": "pass",
+      "status": "blocked",
       "evidence": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-      "blocker": null
+      "blocker": "bundle artifact missing"
     },
     {
       "key": "codesign-tool",
       "label": "codesign tool available",
-      "status": "pass",
-      "evidence": "/usr/bin/codesign",
-      "blocker": null
+      "status": "blocked",
+      "evidence": null,
+      "blocker": "codesign unavailable"
     },
     {
       "key": "codesign-verify",
@@ -110,7 +73,7 @@
       "key": "not-adhoc",
       "label": "Signature is not ad-hoc",
       "status": "blocked",
-      "evidence": "adhoc",
+      "evidence": null,
       "blocker": "signature is ad-hoc or NULL"
     },
     {
@@ -136,13 +99,13 @@
     }
   ],
   "summary": {
-    "pass": 2,
-    "blocked": 6,
+    "pass": 0,
+    "blocked": 8,
     "total": 8
   },
   "gate": {
     "name": "installer signing evidence",
     "status": "blocked",
-    "detail": "Signing/notarization proof incomplete: codesign-verify, developer-id, not-adhoc, gatekeeper, notarization, reviewer."
+    "detail": "Signing/notarization proof incomplete: artifact, codesign-tool, codesign-verify, developer-id, not-adhoc, gatekeeper, notarization, reviewer."
   }
 }

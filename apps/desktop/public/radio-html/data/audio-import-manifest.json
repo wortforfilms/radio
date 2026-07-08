@@ -1,7 +1,7 @@
 {
   "id": "radio-vaigyaaniq-audio-import-manifest",
   "title": "Radio Vaigyaaniq Audio Import Manifest",
-  "generatedAt": "2026-06-25T14:06:15.953Z",
+  "generatedAt": "2026-07-08T17:40:49.394Z",
   "verificationState": "blocked-local-audio-indexed-rights-null",
   "phkd": {
     "rule": "fail_closed",

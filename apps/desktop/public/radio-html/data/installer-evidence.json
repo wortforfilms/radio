@@ -1,7 +1,7 @@
 {
   "id": "radio-vaigyaaniq-installer-evidence",
   "title": "Radio Vaigyaaniq Installer Evidence Lane",
-  "generatedAt": "2026-06-25",
+  "generatedAt": "2026-07-08",
   "verificationState": "draft-local-app-built-signing-proof-blocked",
   "phkd": {
     "rule": "fail_closed",
@@ -19,7 +19,7 @@
     "nullArtifacts": 5,
     "blocked": 6,
     "signingChecks": 8,
-    "signingBlockedChecks": 6,
+    "signingBlockedChecks": 8,
     "notarizedArtifacts": 0
   },
   "platformMatrix": [
@@ -35,7 +35,7 @@
       "notarized": false,
       "artifact": "../../../../../../var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
       "checksum": "9cc0f713f050418e18163fbdaf46aaa19b3c44e6bd3b23c55bb675f7b828c00d",
-      "signature": "adhoc",
+      "signature": null,
       "notarization": null,
       "signingEvidence": "/radio-html/data/signing-notarization-evidence.json",
       "status": "draft-ready-unsigned"
@@ -136,16 +136,16 @@
     {
       "key": "artifact",
       "label": "macOS .app artifact exists",
-      "status": "pass",
+      "status": "blocked",
       "evidence": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
-      "blocker": null
+      "blocker": "bundle artifact missing"
     },
     {
       "key": "codesign-tool",
       "label": "codesign tool available",
-      "status": "pass",
-      "evidence": "/usr/bin/codesign",
-      "blocker": null
+      "status": "blocked",
+      "evidence": null,
+      "blocker": "codesign unavailable"
     },
     {
       "key": "codesign-verify",
@@ -165,7 +165,7 @@
       "key": "not-adhoc",
       "label": "Signature is not ad-hoc",
       "status": "blocked",
-      "evidence": "adhoc",
+      "evidence": null,
       "blocker": "signature is ad-hoc or NULL"
     },
     {
@@ -193,6 +193,6 @@
   "signingGate": {
     "name": "installer signing evidence",
     "status": "blocked",
-    "detail": "Signing/notarization proof incomplete: codesign-verify, developer-id, not-adhoc, gatekeeper, notarization, reviewer."
+    "detail": "Signing/notarization proof incomplete: artifact, codesign-tool, codesign-verify, developer-id, not-adhoc, gatekeeper, notarization, reviewer."
   }
 }

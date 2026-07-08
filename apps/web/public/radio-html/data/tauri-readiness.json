@@ -1,7 +1,7 @@
 {
   "id": "radio-vaigyaaniq-tauri-readiness",
   "title": "Radio Vaigyaaniq Tauri Shipping Readiness",
-  "generatedAt": "2026-06-25",
+  "generatedAt": "2026-07-08",
   "version": "2.0.0",
   "verificationState": "draft-local-app-built-signing-proof-blocked",
   "phkd": {
@@ -125,7 +125,7 @@
       "status": "draft-ready-unsigned",
       "key": "macos",
       "label": "macOS local app bundle",
-      "signature": "adhoc",
+      "signature": null,
       "notarization": null
     },
     {
@@ -375,7 +375,7 @@
     "signingGate": {
       "name": "installer signing evidence",
       "status": "blocked",
-      "detail": "Signing/notarization proof incomplete: codesign-verify, developer-id, not-adhoc, gatekeeper, notarization, reviewer."
+      "detail": "Signing/notarization proof incomplete: artifact, codesign-tool, codesign-verify, developer-id, not-adhoc, gatekeeper, notarization, reviewer."
     }
   }
 }

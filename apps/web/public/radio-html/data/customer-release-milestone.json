@@ -1,7 +1,7 @@
 {
   "id": "radio-customer-release-milestone",
   "title": "Radio Vaigyaaniq Customer Release Milestone",
-  "generatedAt": "2026-06-25",
+  "generatedAt": "2026-07-08",
   "verificationState": "blocked-customer-release-proof-null",
   "shipDecision": "NO_SHIP",
   "phkd": {
@@ -236,12 +236,12 @@
       "blocker": "Signed artifact, notarization, Developer ID, Gatekeeper, and reviewer evidence are incomplete.",
       "observed": {
         "checks": 8,
-        "passedChecks": 2,
-        "blockedChecks": 6,
+        "passedChecks": 0,
+        "blockedChecks": 8,
         "signedArtifacts": 0,
         "notarizedArtifacts": 0,
         "developerIdIdentities": 0,
-        "adhocSignatures": 1
+        "adhocSignatures": 0
       },
       "requiredEvidence": [
         "signedArtifact",

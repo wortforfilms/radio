@@ -8,17 +8,14 @@
 </head>
 <body>
   <main class="surface-shell">
-    <aside class="surface-rail"><div class="surface-mark">RV</div><nav><a href="./index.html">Index</a><a href="./runtime.html">Runtime</a><a href="./tts.html">TTS</a><a href="./evidence-export.html">Export</a></nav><span>PHKD</span></aside>
+    <aside class="surface-rail"><div class="surface-mark">RV</div><nav><a href="./index.html">Index</a><a href="./runtime.html">Runtime</a><a href="./tts.html">TTS</a><a href="../lyrics-prompter.html">Prompter</a></nav><span>PHKD</span></aside>
     <section class="surface-main">
       <section class="surface-hero">
-        <div><p class="eyebrow">Synced Lyrics Scribe</p><h1>Draft Cue Surface</h1><p>Line marking, cue review, and LRC/HKD export posture for current track lyrics.</p></div>
-        <div class="status-chip"><span>Status</span><b>DRAFT</b><small>verified timing NULL</small></div>
+        <div><p class="eyebrow">Synced Lyrics Scribe</p><h1>Lyrics Prompter Data Lane</h1><p>Sanitized lyric/style extraction, estimated cue spreads, LRC/HKD preview, and source provenance for catalog tracks.</p></div>
+        <div class="status-chip"><span>Status</span><b>LOCAL</b><small>verified timing NULL</small></div>
       </section>
-      <audio controls preload="metadata"></audio>
-      <div class="progress"><i></i></div>
-      <textarea id="lyricDraft">कोई बताओ इन रेखाओं को</textarea>
-      <div class="surface-controls"><button class="primary" id="markLine">Mark Line @ Playhead</button><a class="download" download="radio-draft.lrc" href="#">Export LRC</a><a class="download" download="radio-draft.hkd.json" href="#">Export HKD</a></div>
-      <article class="surface-card" id="lyricList"><span class="surface-label">Cue List</span><p>No verified cues yet. Draft line ready.</p></article>
+      <article class="surface-card"><span class="surface-label">Prompter</span><p>Open the generated prompter for searchable catalog lyrics and estimated cue timing.</p><div class="surface-controls"><a class="download" href="../lyrics-prompter.html">Open Lyrics Prompter</a><a class="download" href="../lyrics-book.html">Open Lyrics Book</a><a class="download" href="../unique-tracks-with-versions.html">Open Versions</a><a class="download" href="../data/lyrics-prompter-data.json">Data JSON</a><a class="download" href="../data/lyrics-prompter-index.tsv">Index TSV</a></div></article>
+      <article class="surface-card"><span class="surface-label">PHKD Guard</span><p>No human-verified sync is claimed. Missing lyrics stay NULL and manual unmatched lyric files are kept unlinked.</p></article>
     </section>
   </main>
   <script src="./surface-kit.js"></script>

@@ -1,7 +1,7 @@
 {
   "id": "radio-receipt-settlement-proof",
   "title": "Receipt + Settlement Proof Gate",
-  "generatedAt": "2026-06-25",
+  "generatedAt": "2026-07-08",
   "verificationState": "blocked-receipt-proof-null",
   "shipDecision": "NO_SHIP",
   "phkd": {

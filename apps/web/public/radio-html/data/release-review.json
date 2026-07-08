@@ -1,7 +1,7 @@
 {
   "id": "radio-vaigyaaniq-release-review",
   "title": "Radio Vaigyaaniq Release Review Workflow",
-  "generatedAt": "2026-06-25",
+  "generatedAt": "2026-07-08",
   "verificationState": "draft-release-review-blocked",
   "phkd": {
     "rule": "fail_closed",

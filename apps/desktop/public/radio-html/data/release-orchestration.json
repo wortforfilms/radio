@@ -1,7 +1,7 @@
 {
   "id": "radio-vaigyaaniq-release-orchestration",
   "title": "Radio Vaigyaaniq One-Command Evidence Orchestration",
-  "generatedAt": "2026-06-25",
+  "generatedAt": "2026-07-08",
   "verificationState": "draft",
   "phkd": {
     "rule": "fail_closed",

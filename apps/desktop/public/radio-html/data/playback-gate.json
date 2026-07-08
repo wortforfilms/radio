@@ -1,7 +1,7 @@
 {
   "id": "radio-vaigyaaniq-playback-gate",
   "title": "Radio Vaigyaaniq Playable Audio Import Gate",
-  "generatedAt": "2026-06-25",
+  "generatedAt": "2026-07-08",
   "verificationState": "draft-rights-closure-blocked",
   "phkd": {
     "rule": "fail_closed",
