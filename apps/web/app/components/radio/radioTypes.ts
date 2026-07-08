@@ -8,6 +8,60 @@ export type RadioTrack = {
   theme?: string;
 };
 
+// --- Content library (scripts/build-radio-content.mjs → data/radio-content.json) ---
+
+export type LyricsStatus = "sanitized" | "sanitized-redacted" | "placeholder-instrumental";
+
+/** Version label: earliest generation of a title is "original", later takes are "take-N". */
+export type TrackVersion = "original" | `take-${number}`;
+
+export type RadioContentTrack = {
+  id: string; // stable catalogue UUID (globally unique)
+  slug: string; // unique URL-friendly slug from the stylised title
+  title: string;
+  stylizedTitle: string; // "<title> (take-N) — <artist> · <station>"
+  artist: string;
+  version: TrackVersion;
+  versionGroup: string;
+  versionIndex: number;
+  versionCount: number;
+  stationSlug: string | null;
+  language: string | null;
+  theme: string | null;
+  styles: string[];
+  lyricsStatus: LyricsStatus;
+  flaggedTermCount: number;
+  /** Display-layer redactions (cue index → sanitised text). Raw lyrics untouched. */
+  redactions?: Array<{ cue: number; text: string }>;
+  rawLyricsRef: string | null; // audit trail to the untouched source lyric file
+  lrcPath: string | null; // draft time-synced LRC (timing unverified)
+  placeholder: string | null; // poetic placeholder for instrumental tracks
+  /** Editorial draft derived from metadata — never an artist statement. */
+  storyline: string;
+  storylineProvenance: "derived-from-metadata-template";
+  timingVerified: false;
+};
+
+export type RadioContentLibrary = {
+  id: string;
+  generatedAt: string;
+  status: string;
+  verificationState: string;
+  counts: {
+    tracks: number;
+    withLyrics: number;
+    flaggedTracks: number;
+    redactedCues: number;
+    placeholders: number;
+    lrcFiles: number;
+    versionGroups: number;
+    multiVersionTracks: number;
+    storylines: number;
+  };
+  artistDefault: string;
+  tracks: RadioContentTrack[];
+};
+
 export type RadioStation = {
   name: string;
   count: number;

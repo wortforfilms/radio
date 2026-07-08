@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Vaigyaaniq Admin Panel</title>
+  <style>
+    :root{color-scheme:dark;--bg:#070812;--panel:#121624;--line:rgba(255,255,255,.12);--text:#f7f4ea;--muted:#aba6c8;--gold:#dfb15b;--cyan:#00f5d4;--orange:#ff6b35;--bad:#ff7272}
+    *{box-sizing:border-box}body{margin:0;background:#070812;color:var(--text);font:14px/1.5 Inter,ui-sans-serif,system-ui}
+    header{position:sticky;top:0;z-index:5;background:rgba(7,8,18,.92);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+    .bar,.wrap{width:min(1240px,calc(100vw - 24px));margin:auto}.bar{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:13px 0;flex-wrap:wrap}
+    h1{font-family:Georgia,serif;font-size:24px;margin:0}h2{margin:0 0 10px}p{color:var(--muted)}
+    .pill,.btn,button{border:1px solid var(--line);border-radius:999px;padding:8px 12px;background:rgba(255,255,255,.05);color:var(--text);font:inherit;cursor:pointer}
+    .btn:hover{border-color:var(--orange)}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.tabs .btn.active{border-color:var(--cyan);color:var(--cyan)}
+    .wrap{padding:0 0 40px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:14px}
+    .guard{border-left:3px solid var(--bad);background:rgba(255,114,114,.07);color:#ffd6d6;border-radius:10px;padding:10px 12px;margin:12px 0}
+    input,select,textarea{background:#0b0f1c;border:1px solid var(--line);border-radius:9px;color:var(--text);padding:9px 11px;font:inherit;width:100%}
+    textarea{min-height:80px;resize:vertical}
+    .grid{display:grid;gap:10px}.g2{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+    table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;border-bottom:1px solid var(--line);padding:7px 8px}th{color:var(--muted);font-weight:600}
+    .ok{color:var(--cyan)}.warn{color:var(--gold)}.bad{color:var(--bad)}
+    .status{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--muted);white-space:pre-wrap;max-height:180px;overflow:auto;border-top:1px solid var(--line);margin-top:10px;padding-top:8px}
+    @media(max-width:700px){table{font-size:11px}th,td{padding:5px}}
+  </style>
+</head>
+<body>
+  <header><div class="bar">
+    <div><h1>Radio Admin Panel</h1><p>Stations · Programs · Tracks · Ads · Rights Proofs · Offline Cache</p></div>
+    <div id="authBox" style="display:flex;gap:8px;align-items:center">
+      <input id="password" type="password" placeholder="ADMIN_PASSWORD" style="width:190px">
+      <button class="btn" id="loginBtn">Login</button>
+      <span id="authState" class="warn">locked</span>
+    </div>
+  </div></header>
+  <main class="wrap">
+    <p class="guard">PHKD fail-closed: every edit is a draft overlay in <code>admin-data.json</code>. A track can publish <b>only</b> after a rights proof is uploaded <b>and</b> verified by the rights-closure lane. Ads never release without verified trafficking evidence. Apply drafts with <code>npm run radio:engine:manifest</code>.</p>
+    <nav class="tabs" id="tabs"></nav>
+    <section class="panel" id="view"></section>
+    <div class="status" id="log">Not logged in.</div>
+  </main>
+  <script>
+  (function () {
+    "use strict";
+    const API = new URL(location.href).searchParams.get("api") || "http://localhost:4000";
+    let token = sessionStorage.getItem("rv.adminToken") || null;
+    let state = null;
+    let tab = "tracks";
+    const TABS = ["stations", "programs", "tracks", "ads", "rights", "cache"];
+    const $ = (id) => document.getElementById(id);
+    const esc = (v) => String(v ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+    const log = (m) => { $("log").textContent = `[${new Date().toLocaleTimeString()}] ${m}\n${$("log").textContent}`.slice(0, 4000); };
+
+    async function api(pathName, body) {
+      const response = await fetch(`${API}${pathName}`, {
+        method: body ? "POST" : "GET",
+        headers: { "content-type": "application/json", ...(token ? { authorization: `Bearer ${token}` } : {}) },
+        body: body ? JSON.stringify(body) : undefined
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(data.error || data.message || `HTTP ${response.status}`);
+      return data;
+    }
+
+    $("loginBtn").addEventListener("click", async () => {
+      try {
+        const data = await api("/admin/login", { password: $("password").value });
+        token = data.token;
+        sessionStorage.setItem("rv.adminToken", token);
+        $("authState").textContent = "unlocked";
+        $("authState").className = "ok";
+        log("Logged in.");
+        await refresh();
+      } catch (error) { log(`Login failed: ${error.message}`); }
+    });
+
+    async function refresh() {
+      state = await api("/admin/state").catch((error) => { log(error.message); return null; });
+      render();
+    }
+
+    function renderTabs() {
+      $("tabs").innerHTML = TABS.map((t) => `<button class="btn ${t === tab ? "active" : ""}" data-tab="${t}">${t}</button>`).join("");
+      $("tabs").querySelectorAll("[data-tab]").forEach((b) => b.addEventListener("click", () => { tab = b.dataset.tab; render(); }));
+    }
+
+    function formRow(fields, values = {}) {
+      return `<div class="grid g2">${fields.map((f) =>
+        f.type === "textarea"
+          ? `<label style="grid-column:1/-1">${esc(f.label)}<textarea data-f="${f.key}">${esc(values[f.key] ?? "")}</textarea></label>`
+          : `<label>${esc(f.label)}<input data-f="${f.key}" type="${f.type || "text"}" value="${esc(values[f.key] ?? "")}"></label>`
+      ).join("")}</div>`;
+    }
+
+    function readForm(root) {
+      const out = {};
+      root.querySelectorAll("[data-f]").forEach((el) => {
+        let v = el.value;
+        if (v === "") return;
+        if (el.type === "number") v = Number(v);
+        if (v === "true") v = true;
+        if (v === "false") v = false;
+        out[el.dataset.f] = v;
+      });
+      return out;
+    }
+
+    const FIELDS = {
+      stations: [{ key: "slug", label: "slug (required)" }, { key: "name", label: "name" }, { key: "description", label: "description" }, { key: "cover", label: "cover path" }],
+      programs: [{ key: "id", label: "program id (required)" }, { key: "stationSlug", label: "station slug" }, { key: "title", label: "title" }, { key: "startTime", label: "startTime (ISO, draft)" }, { key: "endTime", label: "endTime (ISO, draft)" }, { key: "isLive", label: "isLive (true/false)" }],
+      tracks: [{ key: "id", label: "track id (required)" }, { key: "title", label: "title" }, { key: "artist", label: "artist" }, { key: "priceInr", label: "priceInr (minor)", type: "number" }, { key: "priceUsd", label: "priceUsd (minor)", type: "number" }, { key: "previewSeconds", label: "previewSeconds", type: "number" }, { key: "freeTier", label: "freeTier (true/false)" }, { key: "published", label: "published intent (true — needs verified proof)" }, { key: "storyline", label: "storyline override", type: "textarea" }, { key: "lyricsNote", label: "lyrics note", type: "textarea" }],
+      ads: [{ key: "id", label: "ad id (required)" }, { key: "name", label: "name" }, { key: "durationSeconds", label: "durationSeconds", type: "number" }, { key: "weight", label: "rotation weight", type: "number" }, { key: "startDate", label: "startDate (ISO)" }, { key: "endDate", label: "endDate (ISO)" }]
+    };
+
+    function overlayTable(map, idField) {
+      const rows = Object.entries(map || {});
+      if (!rows.length) return "<p>No overrides yet.</p>";
+      return `<table><tr><th>${idField}</th><th>fields</th><th></th></tr>${rows.map(([id, entry]) =>
+        `<tr><td>${esc(id)}</td><td>${esc(Object.keys(entry).filter((k) => k !== "updatedAt").join(", "))}</td>
+        <td><button class="btn" data-del="${esc(id)}">delete</button></td></tr>`).join("")}</table>`;
+    }
+
+    async function render() {
+      renderTabs();
+      const view = $("view");
+      if (!state) { view.innerHTML = "<p>Login to load admin state.</p>"; return; }
+
+      if (tab === "rights") {
+        const proofs = state.rightsProofs || [];
+        view.innerHTML = `<h2>Rights Proofs (${proofs.length}, verified ${state.counts.verifiedProofs})</h2>
+          <div class="grid g2">
+            <label>track id<input id="proofTrack"></label>
+            <label>note<input id="proofNote"></label>
+            <label>document (PDF/image)<input id="proofFile" type="file" accept="application/pdf,image/*"></label>
+          </div>
+          <p><button class="btn" id="proofUpload">Upload proof</button> <span class="warn">verification happens only via npm run radio:rights:closure</span></p>
+          ${proofs.length ? `<table><tr><th>id</th><th>track</th><th>sha256</th><th>verified</th></tr>${proofs.map((p) =>
+            `<tr><td>${esc(p.id)}</td><td>${esc(p.trackId)}</td><td>${esc(String(p.sha256).slice(0, 14))}…</td>
+            <td class="${p.verified ? "ok" : "bad"}">${p.verified ? "verified" : "unverified"}</td></tr>`).join("")}</table>` : "<p>No proofs uploaded.</p>"}`;
+        $("proofUpload").addEventListener("click", async () => {
+          const file = $("proofFile").files[0];
+          if (!file || !$("proofTrack").value) { log("track id + file required"); return; }
+          const dataBase64 = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(String(reader.result).split(",")[1]);
+            reader.readAsDataURL(file);
+          });
+          try {
+            const out = await api("/admin/rights-proof", { trackId: $("proofTrack").value, filename: file.name, mimeType: file.type, dataBase64, note: $("proofNote").value });
+            log(out.phkd); await refresh();
+          } catch (error) { log(error.message); }
+        });
+        return;
+      }
+
+      if (tab === "cache") {
+        view.innerHTML = "<h2>Offline Cache</h2><p>Loading…</p>";
+        try {
+          const cache = await api("/admin/cache-status");
+          view.innerHTML = `<h2>Offline Cache</h2>
+            <p>Generated ${esc(cache.generatedAt)} · requested ${cache.counts.requestedEntries} · local ${cache.counts.localExisting} · missing <span class="${cache.counts.missing ? "bad" : "ok"}">${cache.counts.missing}</span></p>
+            <p>byPolicy: ${esc(JSON.stringify(cache.counts.byPolicy))}</p>
+            <p><button class="btn" id="resyncBtn">Trigger re-sync</button></p>
+            <table><tr><th>title</th><th>policy</th><th>status</th></tr>${(cache.sample || []).map((e) =>
+              `<tr><td>${esc(e.title)}</td><td>${esc(e.policy)}</td><td>${esc(e.status)}</td></tr>`).join("")}</table>`;
+          $("resyncBtn").addEventListener("click", async () => {
+            log("Re-sync running…");
+            try { const out = await api("/admin/resync", {}); log(out.output.join("\n")); } catch (error) { log(error.message); }
+          });
+        } catch (error) { view.innerHTML = `<p class="bad">${esc(error.message)}</p>`; }
+        return;
+      }
+
+      const key = tab; // stations | programs | tracks | ads
+      const fields = FIELDS[key];
+      const singular = key.slice(0, -1);
+      const existing = key === "ads" ? null : state[key];
+      view.innerHTML = `<h2>${key[0].toUpperCase()}${key.slice(1)} ${key === "ads" ? `(${(state.ads || []).length})` : `overrides (${Object.keys(existing || {}).length})`}</h2>
+        <div id="form">${formRow(fields)}</div>
+        ${key === "ads" ? '<label>audio file<input id="adAudio" type="file" accept="audio/*"></label>' : ""}
+        <p><button class="btn" id="saveBtn">Save (upsert draft)</button></p>
+        <div id="list">${key === "ads"
+          ? ((state.ads || []).length ? `<table><tr><th>id</th><th>name</th><th>release</th><th></th></tr>${state.ads.map((ad) =>
+              `<tr><td>${esc(ad.id)}</td><td>${esc(ad.name)}</td><td class="bad">${esc(ad.verificationState)}</td><td><button class="btn" data-del="${esc(ad.id)}">delete</button></td></tr>`).join("")}</table>` : "<p>No ads.</p>")
+          : overlayTable(existing, fields[0].key)}</div>`;
+
+      $("saveBtn").addEventListener("click", async () => {
+        const entry = readForm($("form"));
+        if (!entry[fields[0].key]) { log(`${fields[0].key} required`); return; }
+        if (key === "ads") {
+          const file = $("adAudio").files[0];
+          if (file) {
+            entry.filename = file.name;
+            entry.audioBase64 = await new Promise((resolve) => {
+              const reader = new FileReader();
+              reader.onload = () => resolve(String(reader.result).split(",")[1]);
+              reader.readAsDataURL(file);
+            });
+          }
+        }
+        try {
+          const out = await api(`/admin/${key}`, { op: "upsert", [singular]: entry, entry });
+          log(out.note || `${singular} saved.`); await refresh();
+        } catch (error) { log(error.message); }
+      });
+      view.querySelectorAll("[data-del]").forEach((b) => b.addEventListener("click", async () => {
+        try {
+          await api(`/admin/${key}`, { op: "delete", [singular]: { [fields[0].key]: b.dataset.del }, entry: { [fields[0].key]: b.dataset.del } });
+          log(`${singular} ${b.dataset.del} deleted.`); await refresh();
+        } catch (error) { log(error.message); }
+      }));
+    }
+
+    renderTabs();
+    if (token) { $("authState").textContent = "token cached"; refresh(); }
+    else $("view").innerHTML = "<p>Login with the backend ADMIN_PASSWORD to begin.</p>";
+  })();
+  </script>
+</body>
+</html>
