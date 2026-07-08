@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radio Vaigyaaniq Online Offline Engine</title>
+  <style>
+    :root{color-scheme:dark;--bg:#070812;--panel:#121624;--panel2:#191f32;--line:rgba(255,255,255,.12);--text:#f7f4ea;--muted:#aba6c8;--gold:#dfb15b;--cyan:#00f5d4;--orange:#ff6b35;--bad:#ff7272}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0%,rgba(0,245,212,.12),transparent 34%),radial-gradient(circle at 10% 10%,rgba(255,107,53,.16),transparent 32%),#070812;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,sans-serif}
+    header{position:sticky;top:0;z-index:5;background:rgba(7,8,18,.9);border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}
+    .bar,.wrap{width:min(1280px,calc(100vw - 28px));margin:auto}.bar{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:15px 0}
+    h1{font-family:Georgia,serif;font-size:clamp(25px,4vw,48px);margin:0}h2,h3{margin:0 0 10px}p{color:var(--muted);line-height:1.55}.pill,.btn{border:1px solid var(--line);border-radius:999px;padding:9px 12px;background:rgba(255,255,255,.05);color:var(--text);text-decoration:none;font-size:12px;cursor:pointer}.btn:hover,.pill:hover{border-color:var(--orange)}
+    .wrap{padding:22px 0 40px}.hero{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr);gap:16px}.panel{background:linear-gradient(180deg,rgba(25,31,50,.9),rgba(12,15,26,.9));border:1px solid var(--line);border-radius:18px;padding:18px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:12px}.stat b{display:block;color:var(--gold);font-size:24px}
+    .engine{display:grid;grid-template-columns:330px minmax(0,1fr) 300px;gap:14px;margin-top:16px}.list{display:grid;gap:10px}.station,.program{border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:14px;padding:12px;cursor:pointer}.station.active,.program.active{border-color:var(--cyan);background:rgba(0,245,212,.07)}.station b,.program b{display:block}.station small,.program small,.muted{color:var(--muted)}
+    .player{display:grid;grid-template-columns:126px minmax(0,1fr);gap:14px;align-items:center}.cover{width:126px;aspect-ratio:1;border-radius:14px;object-fit:cover;background:#0a0d17;border:1px solid var(--line)}audio{width:100%;margin-top:12px}.controls{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}.status{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--muted);white-space:pre-wrap}
+    .blocked{color:var(--bad);border-color:rgba(255,114,114,.35)}.ok{color:var(--cyan);border-color:rgba(0,245,212,.35)}
+    .badge{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 8px;font-size:10px;letter-spacing:.4px}
+    .badge-free{color:var(--cyan);border-color:rgba(0,245,212,.4)}.badge-owned{color:var(--gold);border-color:rgba(223,177,91,.45)}
+    .badge-preview{color:var(--orange);border-color:rgba(255,107,53,.4)}.badge-locked{color:var(--bad);border-color:rgba(255,114,114,.4)}
+    #netStatus{font-size:11px}#netStatus.offline{color:var(--bad);border-color:rgba(255,114,114,.5)}
+    .widget{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:12px;margin-bottom:12px}.widget h3{font-size:13px;margin-bottom:6px}.widget b{color:var(--gold)}.widget small{display:block;color:var(--muted);margin-top:4px}
+    select.btn{appearance:none;background:var(--panel2)}
+    .catalog-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}.catalog-head input{flex:1;max-width:420px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;color:var(--text);padding:10px 12px}
+    .cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;max-height:520px;overflow:auto}
+    .cat-item{border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:12px;padding:8px;cursor:pointer;display:grid;gap:6px;text-align:left;color:var(--text)}
+    .cat-item img{width:100%;aspect-ratio:1;border-radius:8px;object-fit:cover;background:#0a0d17}.cat-item .cat-title{font-size:12px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .lyrics{max-height:180px;overflow:auto;margin-top:14px;border-top:1px solid var(--line);padding-top:10px}.lyric-line{margin:4px 0;color:var(--muted);font-size:13px}.lyric-line.active{color:var(--cyan)}
+    .modal{position:fixed;inset:0;z-index:40;display:grid;place-items:center;background:rgba(4,6,12,.72);backdrop-filter:blur(6px)}.modal[hidden]{display:none}
+    .modal-card{width:min(620px,calc(100vw - 32px));max-height:76vh;overflow:auto;background:linear-gradient(180deg,rgba(25,31,50,.98),rgba(12,15,26,.98));border:1px solid var(--line);border-radius:18px;padding:20px}
+    .modal-card h3{margin:0 0 4px}.modal-card .provenance{font-size:11px;color:var(--muted);border-top:1px solid var(--line);margin-top:14px;padding-top:10px}
+    .now-tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:8px}select.btn{appearance:none;background:var(--panel2)}
+    @media(max-width:1050px){.hero,.engine{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.bar{display:block}.bar nav{margin-top:12px}.player{grid-template-columns:88px minmax(0,1fr)}.cover{width:88px}.cat-grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}}
+    @media(max-width:520px){.controls{gap:6px}.btn{padding:7px 9px;font-size:11px}.cat-grid{grid-template-columns:repeat(2,1fr)}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <div>
+        <h1>Online / Offline Radio Engine</h1>
+        <p>Rights-aware playback, previews &amp; checkout, wallet, offline cache, persona TTS, ad gate, and weather gate.</p>
+      </div>
+      <nav>
+        <span class="pill" id="netStatus">ONLINE</span>
+        <a class="pill" href="./standalone-radio.html">Standalone Radio</a>
+        <a class="pill" href="./data/radio-engine-manifest.json">Manifest JSON</a>
+        <a class="pill" href="./data/radio-engine-manifest.tsv">TSV</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <div class="panel">
+        <h2>Engine Status</h2>
+        <p>Generated 2026-07-08T20:39:58.870Z. Live streams, verified ads, weather provider, and commercial rights are not asserted until evidence exists. Free tracks play full; paid tracks preview for 45s until purchased.</p>
+        <div class="controls"><span class="btn ok">local fallback ready</span><span class="btn ok">previews + checkout wired</span><span class="btn blocked">live streams NULL</span><span class="btn blocked">ads blocked</span><span class="btn blocked">weather provider NULL</span><span class="btn blocked">rights not closed</span></div>
+      </div>
+      <div class="panel stats">
+        <div class="stat"><small>Stations</small><b>7</b></div><div class="stat"><small>Programs</small><b>1186</b></div><div class="stat"><small>Free Tracks</small><b>14</b></div><div class="stat"><small>Offline Songs</small><b>1186</b></div><div class="stat"><small>Ads</small><b>0</b></div><div class="stat"><small>Live Streams</small><b>NULL</b></div>
+      </div>
+    </section>
+    <section class="engine">
+      <aside class="panel">
+        <h2>Stations</h2>
+        <div id="stationList" class="list"></div>
+      </aside>
+      <section class="panel">
+        <h2>Now Playing</h2>
+        <div class="player">
+          <img id="nowCover" class="cover" alt="">
+          <div>
+            <h3 id="nowTitle">Select a station</h3>
+            <p id="nowMeta">Local manifest loading...</p>
+            <div id="nowAccess"></div>
+            <div class="now-tools">
+              <button class="btn" id="storyToggle" style="display:none">Story</button>
+              <select class="btn" id="versionSelect" style="display:none" aria-label="Track version"></select>
+            </div>
+            <audio id="radioAudio" controls preload="metadata"></audio>
+            <div class="controls">
+              <button class="btn" id="playFirst">Play First</button>
+              <button class="btn" id="playLive">Live Stream</button>
+              <button class="btn" id="nextProgram">Next</button>
+              <button class="btn" id="buyCurrent" style="display:none">Buy Track</button>
+              <button class="btn" id="giftCurrent">Gift</button>
+              <button class="btn" id="cacheStation">Cache Station</button>
+              <button class="btn" id="announceWeather">Weather TTS</button>
+              <button class="btn" id="playAd">Ad Gate</button>
+            </div>
+          </div>
+        </div>
+        <div id="lyricsPanel" class="lyrics"></div>
+        <h3 style="margin-top:18px">Program Sequence</h3>
+        <div id="scheduleList" class="list"></div>
+      </section>
+      <aside class="panel">
+        <div class="widget">
+          <h3>Wallet</h3>
+          <div id="walletBox"><b>₹0.00</b> · <b>$0.00</b><small>entitlements: 0</small></div>
+          <div class="controls"><button class="btn" id="walletTopUp">Top up</button></div>
+        </div>
+        <div class="widget">
+          <h3>Announcer Persona</h3>
+          <select class="btn" id="personaSelect"></select>
+        </div>
+        <div class="widget">
+          <h3>Weather</h3>
+          <div id="weatherBox" class="muted">Weather blocked: provider NULL.</div>
+        </div>
+        <h2>Runtime Log</h2>
+        <div id="engineStatus" class="status">Booting...</div>
+      </aside>
+    </section>
+    <section class="panel" style="margin-top:16px">
+      <div class="catalog-head">
+        <h2 style="margin:0">Catalogue (1186 tracks)</h2>
+        <input id="catalogSearch" type="search" placeholder="Search title, tag, station...">
+        <span class="pill" id="catalogCount"></span>
+      </div>
+      <div id="catalogGrid" class="cat-grid"></div>
+    </section>
+  </main>
+  <div class="modal" id="storyModal" hidden role="dialog" aria-modal="true" aria-labelledby="storyTitle">
+    <div class="modal-card">
+      <h3 id="storyTitle"></h3>
+      <p class="muted" id="storyMeta"></p>
+      <div id="storyBody"></div>
+      <p class="provenance">Editorial draft derived from catalogue metadata (station, theme, styles, lyrics). Not an artist statement; lyric timing unverified.</p>
+      <div class="controls"><button class="btn" id="storyClose">Close</button></div>
+    </div>
+  </div>
+  <script src="./assets/js/radio-engine.js"></script>
+  <script>
+    const radioEngineApi = new URL(location.href).searchParams.get("api") || window.RADIO_ENGINE_API || null;
+    window.RadioVaigyaaniqEngine.boot({
+      manifestUrl: "./data/radio-engine-manifest.json",
+      apiBase: radioEngineApi
+    });
+  </script>
+</body>
+</html>

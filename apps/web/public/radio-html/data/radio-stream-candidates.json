@@ -1,0 +1,52 @@
+{
+  "id": "radio-vaigyaaniq-public-stream-candidates",
+  "generatedAt": "2026-07-09T00:00:00.000Z",
+  "status": "operator-test-candidates",
+  "enabledByDefault": false,
+  "source": {
+    "provider": "SomaFM",
+    "listenPage": "https://somafm.com/listen/",
+    "note": "Official SomaFM public listen page provides playlist links for listener-supported internet radio channels."
+  },
+  "phkd": {
+    "commercialRightsVerified": false,
+    "rebroadcastRightsVerified": false,
+    "liveStreamAvailabilityVerifiedByRuntime": false,
+    "unknownValues": "NULL",
+    "note": "Candidates are for local operator playback testing only. They must not be treated as Radio Vaigyaaniq-owned, licensed, or production broadcast streams."
+  },
+  "candidates": [
+    {
+      "stationSlug": "electronic-fusion",
+      "name": "SomaFM Groove Salad",
+      "streamUrl": "https://ice2.somafm.com/groovesalad-128-mp3",
+      "playlistUrl": "https://somafm.com/m3u/groovesalad256.m3u",
+      "sourcePage": "https://somafm.com/groovesalad/",
+      "status": "candidate-unverified-runtime"
+    },
+    {
+      "stationSlug": "cinematic-other",
+      "name": "SomaFM Drone Zone",
+      "streamUrl": "https://ice2.somafm.com/dronezone-128-mp3",
+      "playlistUrl": "https://somafm.com/m3u/dronezone256.m3u",
+      "sourcePage": "https://somafm.com/dronezone/",
+      "status": "candidate-unverified-runtime"
+    },
+    {
+      "stationSlug": "classical-raga",
+      "name": "SomaFM Deep Space One",
+      "streamUrl": "https://ice2.somafm.com/deepspaceone-128-mp3",
+      "playlistUrl": "https://somafm.com/m3u/deepspaceone128.m3u",
+      "sourcePage": "https://somafm.com/deepspaceone/",
+      "status": "candidate-unverified-runtime"
+    },
+    {
+      "stationSlug": "sufi-qawwali",
+      "name": "SomaFM Space Station Soma",
+      "streamUrl": "https://ice2.somafm.com/spacestation-128-mp3",
+      "playlistUrl": "https://somafm.com/m3u/spacestation130.m3u",
+      "sourcePage": "https://somafm.com/spacestation/",
+      "status": "candidate-unverified-runtime"
+    }
+  ]
+}

@@ -11,6 +11,15 @@ apps/web/.next/
 *.sqlite
 *.sqlite-journal
 
+# Local media and database separation. Keep bytes outside Git; DB stores
+# metadata/object URIs/checksums/evidence only.
+media/
+storage/media/
+storage/db/
+storage/tmp/
+*.sqlite-shm
+*.sqlite-wal
+
 ._*
 .DS_Store
 
@@ -25,3 +34,8 @@ apps/web/public/radio-html/assets/audio/*.mp3
 apps/web/public/radio-html/assets/covers/*.jpeg
 apps/desktop/public/radio-html/assets/audio/*.mp3
 apps/desktop/public/radio-html/assets/covers/*.jpeg
+
+# Radio backend runtime artifacts (drafts/evidence written by the admin lane)
+apps/radio-backend/admin-data.json
+apps/radio-backend/sync-events.jsonl
+apps/radio-backend/uploads/

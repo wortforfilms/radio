@@ -1,0 +1,68 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Station {
+  id                String    @id
+  slug              String    @unique
+  name              String
+  description       String?
+  streamUrl         String?
+  streamStatus      String    @default("NULL_UNVERIFIED")
+  fallbackUrl       String?
+  cover             String?
+  liveStreamVerified Boolean  @default(false)
+  rightsVerified    Boolean   @default(false)
+  programs          Program[]
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+}
+
+model Program {
+  id                         String   @id
+  stationId                  String
+  station                    Station  @relation(fields: [stationId], references: [id], onDelete: Cascade)
+  trackId                    String?
+  title                      String
+  description                String?
+  startTime                  DateTime?
+  endTime                    DateTime?
+  estimatedStartOffsetSeconds Int?
+  durationSeconds            Int?
+  audioUrl                   String?
+  coverUrl                   String?
+  isLive                     Boolean  @default(false)
+  sequenceIndex              Int
+  scheduleVerificationState  String   @default("sequence-only-startTime-null")
+  rightsStatus               String?
+  releaseAllowed             Boolean  @default(false)
+  createdAt                  DateTime @default(now())
+  updatedAt                  DateTime @updatedAt
+
+  @@index([stationId, sequenceIndex])
+}
+
+model Ad {
+  id             String    @id
+  name           String
+  audioUrl       String?
+  durationSeconds Int?
+  weight         Int       @default(1)
+  startDate      DateTime?
+  endDate        DateTime?
+  rightsStatus   String?
+  releaseAllowed Boolean   @default(false)
+  verificationState String  @default("blocked-no-verified-ad-inventory")
+}
+
+model WeatherCache {
+  city      String   @id
+  provider  String?
+  data      Json?
+  updatedAt DateTime @default(now())
+}
