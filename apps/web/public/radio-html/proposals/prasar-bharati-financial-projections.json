@@ -1,0 +1,184 @@
+{
+  "id": "radio-vaigyaaniq-prasar-bharati-financial-projections",
+  "generatedAt": "2026-07-02",
+  "currency": "INR lakh",
+  "status": "planning-scenario-not-rate-card",
+  "releaseRule": "Revenue remains 0 until rights, playback, editorial, commercial, content sourcing, and written release approvals close.",
+  "pilotBudget": {
+    "period": "90 days",
+    "excluded": [
+      "taxes",
+      "GST",
+      "statutory deductions",
+      "travel",
+      "studio rental",
+      "Prasar Bharati internal costs",
+      "archive licensing"
+    ],
+    "lines": [
+      {
+        "label": "Editorial research and fact-checking",
+        "estimate": 4.5,
+        "basis": "10-15 pilot scripts, review notes, public-service framing"
+      },
+      {
+        "label": "Audio production and post-production",
+        "estimate": 5.25,
+        "basis": "Voice, music edit, mix/master, format delivery for 5-10 cleared samples"
+      },
+      {
+        "label": "Engineering and evidence dashboard",
+        "estimate": 6,
+        "basis": "Metadata, evidence registry, private demo, export pack"
+      },
+      {
+        "label": "Rights, legal, and admin review",
+        "estimate": 3.5,
+        "basis": "Creator records, consent, source verification, licensing review"
+      },
+      {
+        "label": "Transcripts, captions, accessibility",
+        "estimate": 1.5,
+        "basis": "Language tags, transcript cleanup, summaries"
+      },
+      {
+        "label": "Hosting, storage, QA, demo packaging",
+        "estimate": 1.25,
+        "basis": "Controlled demo hosting and QA only"
+      },
+      {
+        "label": "Contingency, 10 percent",
+        "estimate": 2.2,
+        "basis": "Risk buffer"
+      }
+    ],
+    "total": 24.2
+  },
+  "scenarioProjection": [
+    {
+      "scenario": "Conservative",
+      "year": 1,
+      "revenue": 36,
+      "operatingCost": 32,
+      "contribution": 4,
+      "notes": "Limited public-service sponsorship/co-production only"
+    },
+    {
+      "scenario": "Conservative",
+      "year": 2,
+      "revenue": 72,
+      "operatingCost": 55,
+      "contribution": 17,
+      "notes": "Regional expansion with strict rights scope"
+    },
+    {
+      "scenario": "Conservative",
+      "year": 3,
+      "revenue": 120,
+      "operatingCost": 82,
+      "contribution": 38,
+      "notes": "Repeatable series model, still modest distribution"
+    },
+    {
+      "scenario": "Base",
+      "year": 1,
+      "revenue": 72,
+      "operatingCost": 46,
+      "contribution": 26,
+      "notes": "8 approved sponsor/co-production slots/month equivalent"
+    },
+    {
+      "scenario": "Base",
+      "year": 2,
+      "revenue": 156,
+      "operatingCost": 90,
+      "contribution": 66,
+      "notes": "3-4 series packages plus training/tooling"
+    },
+    {
+      "scenario": "Base",
+      "year": 3,
+      "revenue": 300,
+      "operatingCost": 156,
+      "contribution": 144,
+      "notes": "Multi-station digital programming and evidence workflow services"
+    },
+    {
+      "scenario": "Upside",
+      "year": 1,
+      "revenue": 120,
+      "operatingCost": 62,
+      "contribution": 58,
+      "notes": "Strong pilot conversion and multiple approved content packs"
+    },
+    {
+      "scenario": "Upside",
+      "year": 2,
+      "revenue": 300,
+      "operatingCost": 145,
+      "contribution": 155,
+      "notes": "Multi-language rollout and repeat sponsorship/commissioning"
+    },
+    {
+      "scenario": "Upside",
+      "year": 3,
+      "revenue": 600,
+      "operatingCost": 280,
+      "contribution": 320,
+      "notes": "Scaled public digital catalog with approved commercial model"
+    }
+  ],
+  "unitEconomics": [
+    {
+      "component": "Script, research, editorial review",
+      "low": 0.08,
+      "high": 0.18,
+      "unit": "per 5-12 minute capsule"
+    },
+    {
+      "component": "Voice/performance and direction",
+      "low": 0.05,
+      "high": 0.2,
+      "unit": "per 5-12 minute capsule"
+    },
+    {
+      "component": "Audio edit, mix, mastering",
+      "low": 0.07,
+      "high": 0.25,
+      "unit": "per 5-12 minute capsule"
+    },
+    {
+      "component": "Rights/admin/accessibility",
+      "low": 0.04,
+      "high": 0.12,
+      "unit": "per 5-12 minute capsule"
+    }
+  ],
+  "financialGateControls": [
+    {
+      "gate": "Rights missing",
+      "rule": "Revenue must remain 0 for that asset"
+    },
+    {
+      "gate": "Commercial approval missing",
+      "rule": "Sponsorship/ad revenue must remain 0"
+    },
+    {
+      "gate": "Editorial review missing",
+      "rule": "Public distribution must remain blocked"
+    },
+    {
+      "gate": "Prasar Bharati rate/terms missing",
+      "rule": "Use NULL, not assumed rates"
+    },
+    {
+      "gate": "AI tool commercial license missing",
+      "rule": "Exclude the asset from monetized packs"
+    }
+  ],
+  "officialReferences": [
+    "https://prasarbharati.gov.in/advertisements-on-dd/",
+    "https://prasarbharati.gov.in/code-for-commercial-advertising/",
+    "https://prasarbharati.gov.in/content-sourcing-policy/"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "radio-track-db-import",
+  "generatedAt": "2026-06-26T23:19:54.020Z",
+  "catalog": "apps/web/public/radio-html/data/suno-library-catalog.json",
+  "databaseUrl": "file:./dev.db",
+  "providerSlug": "radio-suno-backup",
+  "counts": {
+    "catalogTracks": 1186,
+    "upsertedTracks": 1186,
+    "stylesPresent": 1082,
+    "lyricsTextPresent": 1186,
+    "lyricsBodyPresent": 0,
+    "audioObjects": 1186,
+    "coverObjects": 1182,
+    "mediaLinks": 2368,
+    "nullSunoId": 0
+  },
+  "phkd": {
+    "rule": "Source catalog metadata is preserved; unknown lyric bodies remain NULL; binary media stays outside SQLite.",
+    "verificationState": "SOURCE_CATALOG",
+    "fabricatedClaims": false
+  }
+}

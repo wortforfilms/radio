@@ -1,0 +1,1651 @@
+{
+  "id": "radio-vaigyaaniq-song-meta-tags",
+  "generatedAt": "2026-07-07T10:28:22.122Z",
+  "source": {
+    "catalog": "/radio-html/data/suno-library-catalog.json",
+    "runtime": "/radio-html/data/radio-runtime-data.json",
+    "stationTracks": "/radio-html/data/station-tracks.json"
+  },
+  "counts": {
+    "catalogTracks": 1186,
+    "sourceStyleTags": 377,
+    "canonicalThemeTags": 9,
+    "runtimeCollectionTags": 7,
+    "languageTags": 4,
+    "stationRows": 1186
+  },
+  "notes": [
+    "sourceStyleTags are exact source style/prompt strings and may include long prompt fragments.",
+    "canonicalThemeTags are cleaner station assignment classes from station-tracks.json.",
+    "languageTags are inferred by the station assignment runtime.",
+    "Unknown or blank values are represented as NULL."
+  ],
+  "canonicalThemeTags": [
+    {
+      "tag": "Sanatan & Vedic",
+      "count": 348
+    },
+    {
+      "tag": "Other / Misc",
+      "count": 271
+    },
+    {
+      "tag": "Rap & Fusion",
+      "count": 213
+    },
+    {
+      "tag": "Bhakti & Katha",
+      "count": 112
+    },
+    {
+      "tag": "Haryanvi Folk",
+      "count": 105
+    },
+    {
+      "tag": "Classical & Raag",
+      "count": 64
+    },
+    {
+      "tag": "Desh / Patriotic",
+      "count": 29
+    },
+    {
+      "tag": "Love & Virah",
+      "count": 27
+    },
+    {
+      "tag": "Naagin & Mystic",
+      "count": 17
+    }
+  ],
+  "runtimeCollectionTags": [
+    {
+      "tag": "Sufi & Qawwali",
+      "count": 53
+    },
+    {
+      "tag": "Sanatan & Devotional",
+      "count": 241
+    },
+    {
+      "tag": "Hip-Hop & Rap",
+      "count": 78
+    },
+    {
+      "tag": "Folk & Regional",
+      "count": 83
+    },
+    {
+      "tag": "Classical & Raga",
+      "count": 21
+    },
+    {
+      "tag": "Electronic & Fusion",
+      "count": 5
+    },
+    {
+      "tag": "Cinematic & Other",
+      "count": 91
+    }
+  ],
+  "languageTags": [
+    {
+      "tag": "English",
+      "count": 511
+    },
+    {
+      "tag": "Hindi",
+      "count": 378
+    },
+    {
+      "tag": "Sanskrit",
+      "count": 192
+    },
+    {
+      "tag": "Haryanvi",
+      "count": 105
+    }
+  ],
+  "metaFlagTags": {
+    "sourcePlatform": [
+      {
+        "tag": "Suno",
+        "count": 1186
+      }
+    ],
+    "sourceModel": [
+      {
+        "tag": "NULL",
+        "count": 1186
+      }
+    ],
+    "canPlay": [
+      {
+        "tag": "true",
+        "count": 1186
+      }
+    ],
+    "instrumental": [
+      {
+        "tag": "false",
+        "count": 1186
+      }
+    ],
+    "createdYear": [
+      {
+        "tag": "2026",
+        "count": 1186
+      }
+    ]
+  },
+  "sourceStyleTags": [
+    {
+      "tag": "Sanatan & Vedic",
+      "count": 207
+    },
+    {
+      "tag": "NULL",
+      "count": 104
+    },
+    {
+      "tag": "Bhakti & Katha",
+      "count": 92
+    },
+    {
+      "tag": "Haryanvi Folk",
+      "count": 74
+    },
+    {
+      "tag": "Rap & Fusion",
+      "count": 41
+    },
+    {
+      "tag": "Desh / Patriotic",
+      "count": 29
+    },
+    {
+      "tag": "Other / Misc",
+      "count": 22
+    },
+    {
+      "tag": "Love & Virah",
+      "count": 13
+    },
+    {
+      "tag": "Afro-Phonk Fusion, Vedic Chanting, Modern Indian Folk, Neon-Sufi, Syncopated Dje",
+      "count": 9
+    },
+    {
+      "tag": "Genre:  Vedic Cosmic Rap  Nautanki folk + Hip-hop  Cinematic mythological rap  I",
+      "count": 9
+    },
+    {
+      "tag": "Hard Philosophical Rap — “नियमों का हऊआ”  दार्शनिक, व्यंग्यात्मक और तीखा clear m",
+      "count": 9
+    },
+    {
+      "tag": "Funky folk duet with earthy groove and sensual playful chemistry between lovers",
+      "count": 6
+    },
+    {
+      "tag": "[Style: Indian classical, Raga Todi, slow 70 BPM, female devotional, acoustic, b",
+      "count": 5
+    },
+    {
+      "tag": "Aggressive Indian hard rap, underground hip hop, dark spiritual theme, heavy 808",
+      "count": 5
+    },
+    {
+      "tag": "Dark Drift Phonk, Afrobeat percussion, Cyber-Sufi, Cinematic Space Atmosphere, H",
+      "count": 5
+    },
+    {
+      "tag": "Divine Vedic hip-hop rap with Sanskrit chanting, deep 808 bass, damaru percussio",
+      "count": 5
+    },
+    {
+      "tag": "soul devotional with live folk",
+      "count": 5
+    },
+    {
+      "tag": "\"Indian Classical Bandish, Hindustani Vocal, Ragam-Tanam-Pallavi style, Acapella",
+      "count": 4
+    },
+    {
+      "tag": "[Style: Sufi Qawwali, Male vocal solo and ensemble, No instruments, Only human v",
+      "count": 4
+    },
+    {
+      "tag": "aghories sitting with german sages... adwait sitting sings his heart out in ange",
+      "count": 4
+    },
+    {
+      "tag": "Cinematic Hip-Hop, Dark Drill, 140 BPM, Deep Sub-bass, Atmospheric Wind SFX Intr",
+      "count": 4
+    },
+    {
+      "tag": "dark erotic hip hop, hyper rap, horrorcore, trap metal, 150 BPM, distorted 808s,",
+      "count": 4
+    },
+    {
+      "tag": "haryanvi super energy hip hop rap",
+      "count": 4
+    },
+    {
+      "tag": "hyper rap",
+      "count": 4
+    },
+    {
+      "tag": "Indian classical, Raga Darbari Kanhada, slow alap intro, deep dark mood, tanpura",
+      "count": 4
+    },
+    {
+      "tag": "Male  vocal, hyperpop / hyperrap, high energy, fast tempo 160 BPM, aggressive 80",
+      "count": 4
+    },
+    {
+      "tag": "Playful energetic Indian electronic folk-pop, 112 BPM, bouncy tech-folk drums, c",
+      "count": 4
+    },
+    {
+      "tag": "style  qawwali with heavy taan  murki  toda  hindustani classical ornamentation",
+      "count": 4
+    },
+    {
+      "tag": "Style/Genre: Afro-house meets Sexy Drill meets Indian Bhajan, 110 BPM, heavy log",
+      "count": 4
+    },
+    {
+      "tag": "super fun funky rap with dog souls..  a bitch being  requested by dog. howls, do",
+      "count": 4
+    },
+    {
+      "tag": "trance hip-hop haryanvi flavour",
+      "count": 4
+    },
+    {
+      "tag": "[Artist: P.H.K.D. (Pure Honest Kabir Driven) Genre: Spiritual Phonk / Cinematic",
+      "count": 3
+    },
+    {
+      "tag": "[Genre: Devotional Folk Rock, Bhajan, Energetic Chant, Rajasthani Folk] [Tempo:",
+      "count": 3
+    },
+    {
+      "tag": "[Genre: Haryanvi folk, Rajasthani folk, Afghan rubab, dambura, dhol, bakhshi sty",
+      "count": 3
+    },
+    {
+      "tag": "[Style: Indian devotional bhajan, Hindustani classical, Raga Khamaj, Taal Keherw",
+      "count": 3
+    },
+    {
+      "tag": "Bilingual indie ballad in E minor, 68 BPM. Intimate, healing, unresolved. Intro:",
+      "count": 3
+    },
+    {
+      "tag": "Cinematic Vedic Psy-Trap, 145 BPM, Heavy pulsating 808 Sub-bass, Fast-paced Trib",
+      "count": 3
+    },
+    {
+      "tag": "Dark Drift Phonk, Heavy Distorted 808 Bass, Cowbell Melody, Fast Afro-Phonk Perc",
+      "count": 3
+    },
+    {
+      "tag": "Epic divine hip-hop, heavy cinematic bass, conch shell intro, Vedic choir textur",
+      "count": 3
+    },
+    {
+      "tag": "Epic Indian patriotic cinematic war anthem about a brave soldier and a mother’s",
+      "count": 3
+    },
+    {
+      "tag": "Epic multilingual scientific rap mixing Latin chant, Siddham script mantra, Sans",
+      "count": 3
+    },
+    {
+      "tag": "Epic Vedic rap, Rigvedic chanting intro, powerful hip-hop trap beat, Indian clas",
+      "count": 3
+    },
+    {
+      "tag": "folk fusion",
+      "count": 3
+    },
+    {
+      "tag": "Funky folk duet about lovers discovering cosmic love and body-mind harmony. Use",
+      "count": 3
+    },
+    {
+      "tag": "Genre: Mystical Sanskrit Philosophy Song  Style: Indian classical + cinematic am",
+      "count": 3
+    },
+    {
+      "tag": "Global cinematic spoken word, deep Indian philosophical poetry, fusion of world",
+      "count": 3
+    },
+    {
+      "tag": "Haryanvi Ragni-Trap Fusion, Psytrance, 432Hz Tuning, Cinematic Vedic Bass, Aggre",
+      "count": 3
+    },
+    {
+      "tag": "Haryanvi-Bagri Folk Fusion, Psychedelic Trance, Khamak-driven rhythmic vibration",
+      "count": 3
+    },
+    {
+      "tag": "Indian EDM bhajan fusion. Tempo: 110 BPM. Style: devotional electronic + festiva",
+      "count": 3
+    },
+    {
+      "tag": "kids rap",
+      "count": 3
+    },
+    {
+      "tag": "Lullaby, Indian Folk, Soft Female or Male Vocals, Harmonium, Gentle Tabla, Bansu",
+      "count": 3
+    },
+    {
+      "tag": "Naagin & Mystic",
+      "count": 3
+    },
+    {
+      "tag": "Raw street temple qawwali, Raga Todi, live at Nidhivan Vrindavan, thousands of g",
+      "count": 3
+    },
+    {
+      "tag": "start with hyperfun funk hiphop adwait and bhairav on bike maya and Pop, Latin P",
+      "count": 3
+    },
+    {
+      "tag": "style  slow sufi ghazal  indian classical  hindustani  minimal  ambient  no perc",
+      "count": 3
+    },
+    {
+      "tag": "Style: Haryanvi Folk Ragni, Jogi Spiritual Anthem, Human Voice Driven, Minimal",
+      "count": 3
+    },
+    {
+      "tag": "Style: Lo-fi Hip Hop, Chillhop, Indian folk sample, 75 BPM, soft male vocals, v",
+      "count": 3
+    },
+    {
+      "tag": "The Drill Beat: गाने के बीच में जब 'ड्रिल भी लेगे' आए, तो संगीत में एक मशीनी धात",
+      "count": 3
+    },
+    {
+      "tag": "सिनेमैटिक ड्रामा कैरेक्टर्स लार्जर देन लाइफ न्यूरल चक्रा अवेकनिंग the science वै",
+      "count": 3
+    },
+    {
+      "tag": "॥ लोक-संगीत का 'बंडल' विश्लेषण ॥शैली (Folk Style)मुख्य तत्व (Element)प्रभाव (Eff",
+      "count": 2
+    },
+    {
+      "tag": "\"Agori Folk-Rock, Cinematic Shiva Tandav, Tribal Fusion, High-energy Dhak and Da",
+      "count": 2
+    },
+    {
+      "tag": "\"High energy Haryanvi folk song, 120 BPM, heavy traditional dhol, stadium crowd",
+      "count": 2
+    },
+    {
+      "tag": "\"solo phakkad and whistle only no equipments\"",
+      "count": 2
+    },
+    {
+      "tag": "[Genre: Cinematic Horror × Rajasthani Folk × Dark Disco × Haryanvi Vampire Weste",
+      "count": 2
+    },
+    {
+      "tag": "[Genre: Desi Hip Hop, Boom Bap, Slow to Mid Tempo Rap] [BPM: 85-95] [Vocal Style",
+      "count": 2
+    },
+    {
+      "tag": "[Genre: Psytrance, Funky House, Hyperpop, Indian Fusion, 145 BPM, Male Vocals, H",
+      "count": 2
+    },
+    {
+      "tag": "[Genre: Qawwali × Hip-Hop Fusion, Indian Devotional Folk, Comedy, Urban Desi, Ma",
+      "count": 2
+    },
+    {
+      "tag": "[style: Afro-house meets Sexy Drill meets Indian Bhajan, 110 BPM, log drums, con",
+      "count": 2
+    },
+    {
+      "tag": "[Style: Cyberpunk + Hyper Rap + Neural Lo-fi + Raw Kabir + Time Travel Vibe + Da",
+      "count": 2
+    },
+    {
+      "tag": "[Style: Hindustani Classical + Folk + Bollywood Sad + Acoustic Guitar + Tabla +",
+      "count": 2
+    },
+    {
+      "tag": "[Style: Indian Folk + Rajasthani Mand + Tribal + Ambient + Devotional + Cinemati",
+      "count": 2
+    },
+    {
+      "tag": "[Style: Rajasthani Folk Fusion, Mand, Ghoomar, Devotional]  [Concept] Gangaur so",
+      "count": 2
+    },
+    {
+      "tag": "[Style: Rajasthani Folk, Mand, Village Women Chorus, Festive, Simple]  [Tempo: 9",
+      "count": 2
+    },
+    {
+      "tag": "[Style: World's saddest folk singing, extremely melancholic, cry voice, male rur",
+      "count": 2
+    },
+    {
+      "tag": "[Title: Shakti Jaag Ri – Manushya Chetna Jagriti]  [Style: Indian devotional, Ve",
+      "count": 2
+    },
+    {
+      "tag": "[Title] खोकन और पराई नाव — Cosmic Stadium Anthem  [Style] Baul Folk  + Trap Beat",
+      "count": 2
+    },
+    {
+      "tag": "[Title] खोकन और पराई नाव — Cosmic Stadium Anthem  [Style] Baul Folk + Stadium An",
+      "count": 2
+    },
+    {
+      "tag": "100-voice Vedic choir  Trap + orchestral beat  Ancient instruments (lyre, mridan",
+      "count": 2
+    },
+    {
+      "tag": "1980s lo-fi field recording, live at Nidhivan temple courtyard, Raga Todi, Raw B",
+      "count": 2
+    },
+    {
+      "tag": "A dark and atmospheric Hindi indie-folk track with a haunting, cinematic quality",
+      "count": 2
+    },
+    {
+      "tag": "Aggressive Haryanvi Hyperrap fused with powerful Sufi Qawwali claps, high-impact",
+      "count": 2
+    },
+    {
+      "tag": "aghories with been, khamak, damru, naad... shiv gaNa aghore. rudra veeNa.  only",
+      "count": 2
+    },
+    {
+      "tag": "Bollywood Romantic Duet Emotional Ghazal Pop Soft Acoustic Love Song",
+      "count": 2
+    },
+    {
+      "tag": "Cinematic Global Fusion, Haryanvi Folk-Opera, Raag Shivranjani & Marwa base, 60",
+      "count": 2
+    },
+    {
+      "tag": "Cinematic Vedic Neural-Raaga Fusion, 432Hz Sacred Tuning. Devine Tribal-Rock, Ag",
+      "count": 2
+    },
+    {
+      "tag": "Cinematic Vedic-Blues Fusion, Aggressive Haryanvi Folk-Rock, Deep Guttural Aghor",
+      "count": 2
+    },
+    {
+      "tag": "Cinematic Vedic-Trap, Heavy 808 Bass, 140 BPM, Aggressive Haryanvi Ragni Rap flo",
+      "count": 2
+    },
+    {
+      "tag": "create a bollywood patriotic blockbuster song about a brave indian soldier and a",
+      "count": 2
+    },
+    {
+      "tag": "create a cinematic bollywoodstyle patriotic song from the perspective of a proud",
+      "count": 2
+    },
+    {
+      "tag": "Cyber-Sufi Afro-Phonk, Heavy Distorted 808 Bass, Cowbell Phonk Melody, Fast Sync",
+      "count": 2
+    },
+    {
+      "tag": "Dark Cinematic Urdu Drill, Emotional Atmospheric Intro, 140 BPM, Heavy Sliding 8",
+      "count": 2
+    },
+    {
+      "tag": "Desi haryanvi SuperFun superstar nagin।। 1000 snake charmers.. 1000 pungi.. 1 so",
+      "count": 2
+    },
+    {
+      "tag": "Drill, Urdu/Hindi poetry, Ghazal elements, slow melodic hook, heavy 808 bass, em",
+      "count": 2
+    },
+    {
+      "tag": "Epic cinematic hip-hop track called “Cosmic Egg Civilization Rap”. Tempo around",
+      "count": 2
+    },
+    {
+      "tag": "Epic Indian cinematic anthem, Baahubali style chorus, deep war drums, powerful m",
+      "count": 2
+    },
+    {
+      "tag": "Epic philosophical Indian rap with Sanskrit chanting intro, deep trap beat, dama",
+      "count": 2
+    },
+    {
+      "tag": "Epic stadium anthem devotional song, male chorus with crowd chants, powerful dru",
+      "count": 2
+    },
+    {
+      "tag": "Fast rap version (200 BPM) 🔥 Divine battle rap of gods and human",
+      "count": 2
+    },
+    {
+      "tag": "Funky हरियाणवी folk duet about lovers discovering cosmic love and body-mind harm",
+      "count": 2
+    },
+    {
+      "tag": "Funky हरियाणवी folk रगनी duet",
+      "count": 2
+    },
+    {
+      "tag": "Genre: Haryanvi Folk Ragni  Theme: Betrayal and emotional virah of a woman whose",
+      "count": 2
+    },
+    {
+      "tag": "Genre: Philosophical Sufi Rap Fusion Tempo: 90 BPM Scale: D minor Mood: Deep, in",
+      "count": 2
+    },
+    {
+      "tag": "global fun haryanvi-superstar..  1000 girls 1 boy",
+      "count": 2
+    },
+    {
+      "tag": "Haryanvi Accent , Style: Haryanvi Folk Fusion, Patriotic Rock, Powerful Male Voc",
+      "count": 2
+    },
+    {
+      "tag": "Haryanvi Folk Pop, Trap, Energetic, Raw, Male Vocals, Dholak, Harmonium",
+      "count": 2
+    },
+    {
+      "tag": "Haryanvi folk ragni, Sufi qawwali, cinematic anthem, Vedic chant, epic choir, sp",
+      "count": 2
+    },
+    {
+      "tag": "Haryanvi ragni folk song with trap rap flow but only traditional instruments. Us",
+      "count": 2
+    },
+    {
+      "tag": "haryanvi ragni super funk",
+      "count": 2
+    },
+    {
+      "tag": "Haunting Haryanvi Folk Fusion, Raag Shivranjani base, Pathos, Melancholic, Ether",
+      "count": 2
+    },
+    {
+      "tag": "High-energy Cyberpunk Phonk fused with Aggressive Indian Drill, crushing distort",
+      "count": 2
+    },
+    {
+      "tag": "Hindustani classical raga Bilawal, male heroic vocal, dhol shehnai, war drums, 7",
+      "count": 2
+    },
+    {
+      "tag": "Hindustani classical, Bollywood ballad, Raga Yaman, 75 BPM, sitar, tabla, harmon",
+      "count": 2
+    },
+    {
+      "tag": "Hip।hop superstar nagin।। 1000 snake charmers.. 1000 pungi.. 1 soulfull pungi br",
+      "count": 2
+    },
+    {
+      "tag": "Hyper Rap, Punjabi Trap, 170 BPM, male rapid-fire vocals, chaotic fun, meme ener",
+      "count": 2
+    },
+    {
+      "tag": "hyper rap.. greek.. thrill.. conspiracy.. anger.. hope",
+      "count": 2
+    },
+    {
+      "tag": "impact , realization , revolt",
+      "count": 2
+    },
+    {
+      "tag": "Indian folk fusion, bansuri flute, meditative drone,  cyberpunk eastern, raw kab",
+      "count": 2
+    },
+    {
+      "tag": "Indian Psychedelic Folk, Memphis Phonk, hypnotic Ektara loops, train rhythmic ch",
+      "count": 2
+    },
+    {
+      "tag": "lets create environment as a village where a husband is singing to his wife. hip",
+      "count": 2
+    },
+    {
+      "tag": "neural",
+      "count": 2
+    },
+    {
+      "tag": "neural radio program for students",
+      "count": 2
+    },
+    {
+      "tag": "pain hyper",
+      "count": 2
+    },
+    {
+      "tag": "Punjabi folk fusion ballad in E (Punjabi folk scale: E F# G# B C#). 70 BPM Dhama",
+      "count": 2
+    },
+    {
+      "tag": "Soprano textures, Indian classical, Raga Darbari Kanhada, slow alap intro, deep",
+      "count": 2
+    },
+    {
+      "tag": "Style: Egyptian lullaby + cinematic awakening anthem + Sufi-orchestral folk Mood",
+      "count": 2
+    },
+    {
+      "tag": "Style: French folk + Enlightenment anthem + divine call  Instrumentation: French",
+      "count": 2
+    },
+    {
+      "tag": "Style: Haryanvi Folk Ragni, Jogi Spiritual Anthem, Human Voice Driven, Minimal F",
+      "count": 2
+    },
+    {
+      "tag": "Style: Haryanvi Folk-Drill x Industrial Qawwali Fusion. Atmosphere: A high-stake",
+      "count": 2
+    },
+    {
+      "tag": "Style: real radio, sanaatana telecast",
+      "count": 2
+    },
+    {
+      "tag": "Style: Vedic chant + Sufi qawwali fusion Tempo: 90 BPM gradually rising to 105 B",
+      "count": 2
+    },
+    {
+      "tag": "Style/Genre: Haryanvi Folk-Drill, Industrial Qawwali Fusion, Cinematic Dark Synt",
+      "count": 2
+    },
+    {
+      "tag": "super fun funky rap mix hyper fun",
+      "count": 2
+    },
+    {
+      "tag": "super funky  revolutionary  Verse 1 (Rap)  Hook / Crowd chant  Verse 2 (Rap)  Br",
+      "count": 2
+    },
+    {
+      "tag": "Tempo: 92–96 BPM Trap + Ethnic Drums  Instruments: Rudra veena, damru, French ho",
+      "count": 2
+    },
+    {
+      "tag": "The Pungi Effect: पुंगी की आवाज़ को 'Eco' और 'Reverb' के साथ इस्तेमाल करें ताकि",
+      "count": 2
+    },
+    {
+      "tag": "use snake charmers orchestra. aghor rock",
+      "count": 2
+    },
+    {
+      "tag": "Vedic mantra rap, deep Indian spiritual hip-hop, male powerful voice with Sanskr",
+      "count": 2
+    },
+    {
+      "tag": "warm analog saturation, plate reverb on vocals, close-mic vocal position, tabla",
+      "count": 2
+    },
+    {
+      "tag": "अद्वैत अद्वैत द्वैत द वैत त   द्वैतत तत तत तत तट  त्री कट ट्री कट कट  त्रिकट रिक",
+      "count": 2
+    },
+    {
+      "tag": "आत्मा जगराना जागो जागो जागो हेमंत राणा जी महाराज मेरे तुम दीक्षित प्यारे  बेटे ह",
+      "count": 2
+    },
+    {
+      "tag": "गाँव की सुपर मस्ती",
+      "count": 2
+    },
+    {
+      "tag": "छोटे rhythmic lines  बार-बार action hooks  बच्चों का choir response  clear moral",
+      "count": 2
+    },
+    {
+      "tag": "बीटबॉक्स + इरोटिक साउंड्स + हाइपर रैप BPM: 130 से शुरू (धीमा, घुटता हुआ) → बीच म",
+      "count": 2
+    },
+    {
+      "tag": "वैदिक तंत्र हेमंत तत्व",
+      "count": 2
+    },
+    {
+      "tag": "सुपर फंकी",
+      "count": 2
+    },
+    {
+      "tag": "सुरीले भैरव कुकुर्  के रूप में लाली कुतिया रूप में सुपर फंकी। Neuro-Tantra Folk",
+      "count": 2
+    },
+    {
+      "tag": "स्थायी (Chorus): \"शक्ति जाग री\" — यह चेतना के सामूहिक उत्थान का आह्वान है।  लय (",
+      "count": 2
+    },
+    {
+      "tag": ".  🎵 KA KAA RAHASYA (क का रहस्य) [मृदंगम –  – सारंगी संग ] Add sargam notation (",
+      "count": 1
+    },
+    {
+      "tag": ".  🎵 KA KAA RAHASYA (क का रहस्य) A Narrator-Style Neural Mystical Ballad Directi",
+      "count": 1
+    },
+    {
+      "tag": "॥ स्वर्भानु: AI म्यूजिक प्रोम्प्ट्स (The Coding Guide) ॥ १. महा-एन्थम प्रोम्प्ट",
+      "count": 1
+    },
+    {
+      "tag": "॥ स्वर्भानु: देसी AI प्रोम्प्ट्स (The Folk Edition) ॥ १. हरियाणवी रागनी-रॉक (तर्",
+      "count": 1
+    },
+    {
+      "tag": "\"100% Acoustic Ritual Folk, Neural Trance, No Electronic Instruments. Raw and hy",
+      "count": 1
+    },
+    {
+      "tag": "\"A cinematic, emotional scene in a rustic Indian village. A brave mother with a",
+      "count": 1
+    },
+    {
+      "tag": "\"A dark, gothic Cinematic Opera fusion. Dramatic Orchestral score with soaring v",
+      "count": 1
+    },
+    {
+      "tag": "\"A haunting and minimalist 'Phakkad' soundscape. The core rhythm is a deep, reso",
+      "count": 1
+    },
+    {
+      "tag": "\"A haunting, cinematic Avant-Garde Folk-Fusion based on Raag Todi. 100% Human-ge",
+      "count": 1
+    },
+    {
+      "tag": "\"A high-octane Psytrance and Haryanvi Folk Fusion anthem. Tempo: 145 BPM. Vocals",
+      "count": 1
+    },
+    {
+      "tag": "\"A raw, minimalist, and hauntingly soulful PHKD (Folk-HipHop-Kabir) fusion. The",
+      "count": 1
+    },
+    {
+      "tag": "\"A soulful and cinematic Global-Folk fusion farewell song based on Raag Pilu. >",
+      "count": 1
+    },
+    {
+      "tag": "\"Acapella Qawwali, Indian Folk Fusion, Vocal Percussion, Beatboxing, Human whist",
+      "count": 1
+    },
+    {
+      "tag": "\"Acapella, Aggressive Beatboxing, Vocal Bass, Whistling, Dark Indian Folk Fusion",
+      "count": 1
+    },
+    {
+      "tag": "\"Epic Cinematic-Carnatic Fusion. Hybrid of Ancient Mesopotamian Lyre and heavy S",
+      "count": 1
+    },
+    {
+      "tag": "\"Grand Republic Day Brass Band, Heavy Snare Drum Rolls, Triumphant Trumpets, Orc",
+      "count": 1
+    },
+    {
+      "tag": "\"Hyper-Rap, Acapella, Ancient Throat Singing, Fast Human Beatboxing, Experiment",
+      "count": 1
+    },
+    {
+      "tag": "[Add metallic bell sounds rhythmic] Use strong percussion (dhol + war drums) Fem",
+      "count": 1
+    },
+    {
+      "tag": "[Artist: P.H.K.D. (Pure Honest Kabir Driven) Genre: Trans UX, use ambience sound",
+      "count": 1
+    },
+    {
+      "tag": "[Cinematic World-Fusion, Deep Spiritual Qawwali vocals mixed with High-Impact UK",
+      "count": 1
+    },
+    {
+      "tag": "[Cinematic World-Fusion, Deep Spiritual Qawwali Vocals, 142 BPM, UK Drill influe",
+      "count": 1
+    },
+    {
+      "tag": "[Genre: Acoustic Hindustani classical folk fusion, jagarana night vigil, father-",
+      "count": 1
+    },
+    {
+      "tag": "[Genre: Afrobeat, Afro-fusion, Indian folk fusion, spiritual, philosophical, tal",
+      "count": 1
+    },
+    {
+      "tag": "[Genre: Afrobeat, Afro-fusion, Nigerian folk, Indian folk fusion, talking drum,",
+      "count": 1
+    },
+    {
+      "tag": "[Genre: Afrobeat, Chinese folk fusion, Erhu, Guzheng, talking drum, deep bass, s",
+      "count": 1
+    },
+    {
+      "tag": "[Genre: Afrobeat, Chinese folk, Erhu, Guzheng, Telugu folk, Tamil folk, Bangla f",
+      "count": 1
+    },
+    {
+      "tag": "[Genre: Afrobeat, Indian folk fusion, Telugu folk, Tamil folk, Bangla folk, Erhu",
+      "count": 1
+    },
+    {
+      "tag": "[Genre: Cyberpunk, Industrial Hip-Hop, Hindi Protest Rap, Dark Synthwave] [BPM:",
+      "count": 1
+    },
+    {
+      "tag": "[Genre: Hindustani classical meets dark ambient trance, Bhairavi raga, slow burn",
+      "count": 1
+    },
+    {
+      "tag": "[Genre: HyperRa, Boom Bap, Cyberpunk, High Tempo Rap] [BPM: 120-140] [Vocal Styl",
+      "count": 1
+    },
+    {
+      "tag": "[Genre: Hyperrap, Haryanvi folk, Afghan dambura, rubab, dhol, bakhshi style, fas",
+      "count": 1
+    },
+    {
+      "tag": "[Genre: Psytrance, Funky House, Hyperpop, Indian Fusion, 145 BPM, Male Vocals,",
+      "count": 1
+    },
+    {
+      "tag": "[Genre: Rajasthani Folk Horror × Disco × Dark Electronic] [BPM: 128, Key: D mino",
+      "count": 1
+    },
+    {
+      "tag": "[Genre: Viral Funk, Hindi Dance Pop, Ghetto Funk, Bollywood Bass, TikTok Ready,",
+      "count": 1
+    },
+    {
+      "tag": "[Genre: Viral Funk, Hindi Disco, Ghetto Funk, Bollywood Bass, TikTok Dance Chall",
+      "count": 1
+    },
+    {
+      "tag": "[Genre: World fusion, Afrobeat, Chinese Erhu, Telugu Nadhaswaram, Tamil Thavil,",
+      "count": 1
+    },
+    {
+      "tag": "[Intro: Atmospheric Flute and Cosmic Pads] [Verse: Soulful Indian Male Vocals, D",
+      "count": 1
+    },
+    {
+      "tag": "[Intro] – Spoken word / wind sound (Ghazal mood)  [DROP] – Heavy 808 + drill per",
+      "count": 1
+    },
+    {
+      "tag": "[Style of Music: Global Sovereign Calibration] Hyper-dynamic K-12 educational fu",
+      "count": 1
+    },
+    {
+      "tag": "[style: devotional drill, Indian bhajan meets Sexy Drill, 60 BPM, harmonium + he",
+      "count": 1
+    },
+    {
+      "tag": "[Style: Hybrid Sufi composition — alternating between solo spoken-word Nazm and",
+      "count": 1
+    },
+    {
+      "tag": "[Style: Indian classical fusion, dark devotional, sufi rock, slow tempo, male vo",
+      "count": 1
+    },
+    {
+      "tag": "[style: Indian folk bhajan meets West Coast G-Funk hip-hop, slow tempo, harmoniu",
+      "count": 1
+    },
+    {
+      "tag": "[Style: Nautanki-Swang-Qawwali hybrid audio drama. Single male vocalist performi",
+      "count": 1
+    },
+    {
+      "tag": "[Style: Opera + Hyper-rap + Trap Metal + Cinematic Orchestra, aggressive male te",
+      "count": 1
+    },
+    {
+      "tag": "[Style: Qawwali with heavy taan, murki, toda, Hindustani classical ornamentation",
+      "count": 1
+    },
+    {
+      "tag": "[Style: Rajasthani Folk + Bhakti Rap + Ambient Cinematic]  [Tempo: 88 BPM] [Scal",
+      "count": 1
+    },
+    {
+      "tag": "[Style: Slow emotional ghazal, Sufi, male voice, crying tone, melancholic, acous",
+      "count": 1
+    },
+    {
+      "tag": "[Style: Sufi devotional, slow meditative recitation, no rhythm, no beat, only de",
+      "count": 1
+    },
+    {
+      "tag": "[Style: Sufi Qawwali mixed with modern Beatbox, Acoustic, Spiritual, Mystical, S",
+      "count": 1
+    },
+    {
+      "tag": "[Style: Sufi, Acoustic Lullaby, Indian Folk, Soft Male Vocals, Harmonium, Tabla,",
+      "count": 1
+    },
+    {
+      "tag": "[Style: Three-voice dialogue Qawwali. Characters: Raskhan (Braj, mischievous, su",
+      "count": 1
+    },
+    {
+      "tag": "[Style: Traditional Qawwali sung in Braj Bhasha dialect, Sufi devotional tone, m",
+      "count": 1
+    },
+    {
+      "tag": "[Style: Traditional Qawwali, male lead vocal with 3-voice male chorus, harmonium",
+      "count": 1
+    },
+    {
+      "tag": "[Style: Traditional Sufi Qawwali, Hindustani classical, Raga Todi, slow harmoniu",
+      "count": 1
+    },
+    {
+      "tag": "[Title] खोकन और पराई नाव — Cosmic Rigveda Folk Rap  [Style] Rigvedic Chant + Ben",
+      "count": 1
+    },
+    {
+      "tag": "🎤 haryanvi ragni suparfun vs vedant chanting",
+      "count": 1
+    },
+    {
+      "tag": "🎤 QUANTUM ANTHEM (HUMAN SOUND VERSION)",
+      "count": 1
+    },
+    {
+      "tag": "🎤 QUANTUM ANTHEM (HUMAN SOUND VERSION) (90 BPM | Body Percussion + Breath + Voic",
+      "count": 1
+    },
+    {
+      "tag": "🎬 🎭 FULL STAGE SETUP (LIVE PERFORMANCE) 🌌 Stage Zones Left (🔥 DWAIT ZONE): Orang",
+      "count": 1
+    },
+    {
+      "tag": "🎵 Song: Ka Kaa Rahasya (The Secret of 'Ka') Style: Neural Narrative mystical bal",
+      "count": 1
+    },
+    {
+      "tag": "🎵 गीत (Lyrics): उल्टी चाल चल पड़े शिव राग: भैरवी (सुबह का राग, करुण रस से भरपूर)",
+      "count": 1
+    },
+    {
+      "tag": "145 BPM, Heavy Psytrance and Haryanvi Folk Fusion, Gritty Haryanvi Female Vocals",
+      "count": 1
+    },
+    {
+      "tag": "3 female",
+      "count": 1
+    },
+    {
+      "tag": "a war cry of a child to bhaarat maa tera Pop, Indie Pop men tera naketa shaitaan",
+      "count": 1
+    },
+    {
+      "tag": "Acoustic Neural Trans fused with Raw Crisp Drill Beats, emotional Sufi-Drill voc",
+      "count": 1
+    },
+    {
+      "tag": "Acoustic Ritual Trance. 140 BPM. NO ELECTRONICS. Raw human claps, sharp metallic",
+      "count": 1
+    },
+    {
+      "tag": "Aggressive cinematic Vedic folk-hop epic, 115 BPM, intense traditional Chalisa r",
+      "count": 1
+    },
+    {
+      "tag": "Aggressive Haryanvi Hyperrap fused with powerful Sufi Qawwali claps, crushing di",
+      "count": 1
+    },
+    {
+      "tag": "Aggressive Indian philosophical hip-hop rap. Deep male voice with powerful deliv",
+      "count": 1
+    },
+    {
+      "tag": "ancient instruments.. folk raw celebrations.. ancient sounds of joy",
+      "count": 1
+    },
+    {
+      "tag": "Atmospheric Afro-Zen x Deep Minimalism. 110 BPM.  Texture: आवाज़ों के बजाय 'Space",
+      "count": 1
+    },
+    {
+      "tag": "Atmospheric Aghori Chants, Tribal Trance, Haryanvi Folk-Blues Fusion. Starts wit",
+      "count": 1
+    },
+    {
+      "tag": "Bilingual indie ballad in E minor, 68 BPM. 432 Hz tanpura drone throughout (121.",
+      "count": 1
+    },
+    {
+      "tag": "Binaural cinematic spoken word, dual voices (female energetic left, male calm ri",
+      "count": 1
+    },
+    {
+      "tag": "Braj folk mixed with funky pop. Bollywood dance style. Fast tempo 115 BPM. Male",
+      "count": 1
+    },
+    {
+      "tag": "breathless rap",
+      "count": 1
+    },
+    {
+      "tag": "Chinese folk melody + Sufi Qawwali + philosophical hip-hop rap fusion. Male powe",
+      "count": 1
+    },
+    {
+      "tag": "Cinematic Afro-Drill x Vedic Industrial. 110 BPM. Vocal: Deep, commanding barito",
+      "count": 1
+    },
+    {
+      "tag": "Cinematic Dark Vedic-Trap, 90 BPM Hypnotic Shamanic Pulse, Multi-vocal arrangeme",
+      "count": 1
+    },
+    {
+      "tag": "Cinematic Modern Ghazal, Dark Ambient, Ethereal Baritone Male Vocals, Deep Cello",
+      "count": 1
+    },
+    {
+      "tag": "Cinematic Neural-Raaga Fusion, 432Hz Sacred Tuning. Industrial Tribal-Rock, Aggr",
+      "count": 1
+    },
+    {
+      "tag": "Cinematic qawwali, Raga Todi, thousands of gopis + Radha solo, 60-120 BPM, femal",
+      "count": 1
+    },
+    {
+      "tag": "Cinematic Vedic Neural-Raaga Fusion, 432Hz Sacred Tuning. Industrial Tribal-Rock",
+      "count": 1
+    },
+    {
+      "tag": "Cinematic Vedic Trap, Massive 808 Bass, 140 BPM, Deep Atmospheric Reverb, Ancien",
+      "count": 1
+    },
+    {
+      "tag": "Cinematic Vedic-Blues Fusion, Aggressive ग्लोबल   Folk, Deep Guttural Aghori Cha",
+      "count": 1
+    },
+    {
+      "tag": "Cinematic Vedic-Blues Fusion, Aggressive भोजपुरी  Folk-Rock, Deep Guttural Aghor",
+      "count": 1
+    },
+    {
+      "tag": "Cinematic World-Sufi Fusion, Avant-garde Qawwali, Mournful Armenian Duduk Intro,",
+      "count": 1
+    },
+    {
+      "tag": "Classical & Raag",
+      "count": 1
+    },
+    {
+      "tag": "Cosmic Earth Anthem.  Genre: Indian folk + cinematic orchestral + Vedic chant +",
+      "count": 1
+    },
+    {
+      "tag": "create a cinematic bollywoodstyle patriotic anthem sung from the perspective of",
+      "count": 1
+    },
+    {
+      "tag": "create a haryanvi bollywood patriotic blockbuster song about a brave indian sold",
+      "count": 1
+    },
+    {
+      "tag": "Create a mystical Aghor Nagini trance track with pungi (snake-charmer flute), kh",
+      "count": 1
+    },
+    {
+      "tag": "cyberpunk+hyper rap + classical + narrator=divine awakening",
+      "count": 1
+    },
+    {
+      "tag": "dada potaa poti  gang fun.. use kids voices of various ages.. cute catchy..",
+      "count": 1
+    },
+    {
+      "tag": "Dark Aggressive Cinematic Phonk, heavy brass orchestration, ancient Indian war d",
+      "count": 1
+    },
+    {
+      "tag": "Dark cinematic Indian folk trap song with female vocals.  Theme: A powerful Hary",
+      "count": 1
+    },
+    {
+      "tag": "dark cinematic vedic rap deep bass slow trap drums haunting flute throat singing",
+      "count": 1
+    },
+    {
+      "tag": "dark erotic hip hop, hyper rap, horrorcore, trap metal, 150-180 BPM, distorted 8",
+      "count": 1
+    },
+    {
+      "tag": "dark hindustani bhajan meets ambient trance  d bhairavi  72 to 108 bpm  male gri",
+      "count": 1
+    },
+    {
+      "tag": "Deep cinematic spoken word, Indian classical fusion, ambient drone, slow heartbe",
+      "count": 1
+    },
+    {
+      "tag": "Desi haryanvi SuperFun superstar nagin. 1 soulfull pungi bridge. 1 one stringed",
+      "count": 1
+    },
+    {
+      "tag": "dj banger, full on masti, dj, dance, लहर, full on drum beats, with full on trum",
+      "count": 1
+    },
+    {
+      "tag": "Epic Bollywood film score, grand orchestral, Raag Bilawal based, male power voca",
+      "count": 1
+    },
+    {
+      "tag": "Epic Bollywood patriotic ballad, heroic male vocals, orchestral with dhol and sh",
+      "count": 1
+    },
+    {
+      "tag": "Epic cosmic knowledge rap with Sanskrit mantra chanting, Siddham script visuals,",
+      "count": 1
+    },
+    {
+      "tag": "Epic Earth Mother Anthem.  Style: Indian folk + cinematic orchestral + stadium c",
+      "count": 1
+    },
+    {
+      "tag": "Epic Haryanvi stadium anthem, folk + rap fusion, powerful male chorus, nagada dr",
+      "count": 1
+    },
+    {
+      "tag": "Epic Hindustani classical war anthem, Raag Bilawal, male heroic vocal with deep",
+      "count": 1
+    },
+    {
+      "tag": "Epic multilingual scientific rap mixing Latin chant, Sanskrit mantra, Hindi and",
+      "count": 1
+    },
+    {
+      "tag": "Epic spiritual hip-hop + Indian classical fusion, deep bass, tanpura drone, conc",
+      "count": 1
+    },
+    {
+      "tag": "epic spiritual world fusion song, powerful male qawwali singer, cinematic produc",
+      "count": 1
+    },
+    {
+      "tag": "Epic Upanishadic rap about Dhruva from Bhagavata Purana. Deep cinematic bass, ba",
+      "count": 1
+    },
+    {
+      "tag": "Epic Vedic Hip-Hop stadium anthem, powerful Hindi rap, deep cinematic bass, trap",
+      "count": 1
+    },
+    {
+      "tag": "Epic Vedic rap, Rigvedic chant intro, deep trap beat, mridangam and shankh accen",
+      "count": 1
+    },
+    {
+      "tag": "Experimental Avant-Garde Soundscape meets Indian Nautanki Street Theater. NO MUS",
+      "count": 1
+    },
+    {
+      "tag": "Fast-paced hyper-articulated phonetic staccato trap-folk, 115 BPM, rapid rhythmi",
+      "count": 1
+    },
+    {
+      "tag": "Female vocal, hyperpop / hyperrap, high energy, fast tempo 160 BPM, aggressive 8",
+      "count": 1
+    },
+    {
+      "tag": "Female vocal, Punjabi pop meets Bollywood, upbeat and celebratory yet emotional,",
+      "count": 1
+    },
+    {
+      "tag": "folk dravidian authenticity",
+      "count": 1
+    },
+    {
+      "tag": "full funky",
+      "count": 1
+    },
+    {
+      "tag": "full on masti, dj, dance, dj banger,, full on drum beats, with full on trumpet",
+      "count": 1
+    },
+    {
+      "tag": "FULL PROMPT – DO NOT EDIT  Title: Same Story / हर बार की कहानी  Genre: Bilingual",
+      "count": 1
+    },
+    {
+      "tag": "full सुपर  funky",
+      "count": 1
+    },
+    {
+      "tag": "Funky हरियाणवी folk रगनी duet  super funky",
+      "count": 1
+    },
+    {
+      "tag": "Genre: Fast-Paced Trap / Melodic Rap Neural Futurism Tempo: 150 BPM (High Energy",
+      "count": 1
+    },
+    {
+      "tag": "Genre: Haryanvi Pop, Desi Hip Hop, Upbeat Dance, Male & Female vocals (Duo), ene",
+      "count": 1
+    },
+    {
+      "tag": "Genre: Haryanvi Pop, Desi Hip Hop, Upbeat Dance, Male announcer & Female vocals",
+      "count": 1
+    },
+    {
+      "tag": "Genre: Haryanvi Pop, Desi Hip Hop, Upbeat Dance, Only Male announcer & Only Fema",
+      "count": 1
+    },
+    {
+      "tag": "Genre: Haryanvi Ragni Folk, Dangal style Tempo: 75 BPM  Instruments: Dholak, han",
+      "count": 1
+    },
+    {
+      "tag": "Genre: Indic-Sufi-Lusophone-Blues Virah Raga Tempo: 70 BPM slow emotional  Vocal",
+      "count": 1
+    },
+    {
+      "tag": "Genre: Punjabi Folk Pop / Bhangra Pop / Energetic Party Song BPM: 120-130 Mood:",
+      "count": 1
+    },
+    {
+      "tag": "Genre: Vedic-Ambient, Cinematic Folk, Cyber-Tribal, Ethno-Industrial.  Mood: Sac",
+      "count": 1
+    },
+    {
+      "tag": "Genre: World music / emotional instrumental  Mood: Deep longing, universal femal",
+      "count": 1
+    },
+    {
+      "tag": "Genre: World music / emotional instrumental  Mood: Deep longing, universal virah",
+      "count": 1
+    },
+    {
+      "tag": "Genre/Style: Braj Sankirtan, Dhrupad-folk fusion, Raw Devotional, Indian Temple",
+      "count": 1
+    },
+    {
+      "tag": "hard death rock  vedic sanskrit",
+      "count": 1
+    },
+    {
+      "tag": "Hard Divine Hip-Hop with Sufi spiritual undertone. Hindi rap, deep powerful male",
+      "count": 1
+    },
+    {
+      "tag": "Hard divine hip-hop, philosophical rap, deep Indian spiritual vibe, male powerfu",
+      "count": 1
+    },
+    {
+      "tag": "Hard philosophical divine hip-hop, Indian spiritual rap, deep male voice, mystic",
+      "count": 1
+    },
+    {
+      "tag": "hard philosophical rap indian spiritual hiphop deep male voice aggressive delive",
+      "count": 1
+    },
+    {
+      "tag": "Haryanvi Accent , Style: Haryanvi Ragani   Vibe: शुरू में भावुक (Emotional) और ध",
+      "count": 1
+    },
+    {
+      "tag": "Haryanvi Folk + Indian Classical + Hyper-Rap Fusion. Suno v4. Dynamic genre swit",
+      "count": 1
+    },
+    {
+      "tag": "Haryanvi Folk + Rajasthani Folk + Indian Classical + Hyper-Rap Fusion. Suno v4.",
+      "count": 1
+    },
+    {
+      "tag": "Haryanvi folk fusion song with emotional rural storytelling. Male raw voice with",
+      "count": 1
+    },
+    {
+      "tag": "haryanvi quebradita fusion Banda, Regional Mexican, Technobanda bright staccato",
+      "count": 1
+    },
+    {
+      "tag": "Haryanvi ragni folk song with  only मिनिमल traditional instruments. Use matka ,",
+      "count": 1
+    },
+    {
+      "tag": "haryanvi ragni fusion male",
+      "count": 1
+    },
+    {
+      "tag": "Haryanvi Ragni Rock, Aggressive Male Folk Vocals, Heavy Sarangi, Industrial Drum",
+      "count": 1
+    },
+    {
+      "tag": "haryanvi super energy  rap",
+      "count": 1
+    },
+    {
+      "tag": "haryanvi tamil folk trance",
+      "count": 1
+    },
+    {
+      "tag": "Haryanvi-Trap... राग पीलू की धुन को मुख्य हुक में रख सकते हैं और 'रैप' वाले हिस्",
+      "count": 1
+    },
+    {
+      "tag": "Haunting Female Vocals, Soprano textures, Cinematic Urdu Drill, 140 BPM, Melodic",
+      "count": 1
+    },
+    {
+      "tag": "Heavy cinematic Vedic metal-phonk epic, 115 to 142 BPM, roaring traditional dhol",
+      "count": 1
+    },
+    {
+      "tag": "Heavy Industrial Drop, Vedic chanting trap mix, fast-paced aggressive rap cadenc",
+      "count": 1
+    },
+    {
+      "tag": "High-energy Cyberpunk Phonk fused with Aggressive Indian Folk, punchy industrial",
+      "count": 1
+    },
+    {
+      "tag": "High-energy Cyberpunk Phonk, traditional Indian folk accents, punchy aggressive",
+      "count": 1
+    },
+    {
+      "tag": "High-energy Haryanvi Trap-Folk Fusion, Heavy 808 Bass, Cinematic Sound Design, T",
+      "count": 1
+    },
+    {
+      "tag": "hyper rap + classical + narrator=divine awakening",
+      "count": 1
+    },
+    {
+      "tag": "Hyper-aggressive cinematic Vedic folk-hop epic, 115 BPM, rapid-fire phonetic sta",
+      "count": 1
+    },
+    {
+      "tag": "Indian devotional folk song, female chorus with male lead, emotional and uplifti",
+      "count": 1
+    },
+    {
+      "tag": "Indian hip hop fusion, boom bap beat, tabla percussion, tanpura drone, cinematic",
+      "count": 1
+    },
+    {
+      "tag": "Indian philosophical hip-hop with spiritual undertones. Deep reflective male voi",
+      "count": 1
+    },
+    {
+      "tag": "Indian spiritual hip hop anthem, boom bap drums with dhol and khartal, sitar mel",
+      "count": 1
+    },
+    {
+      "tag": "Industrial Afro-Drill with a \"Boss-Level\" Cinematic Intro. 110 BPM. Vibe: Defian",
+      "count": 1
+    },
+    {
+      "tag": "Intro: Whisper + slow breath + distant “हाय…”  Beat Start: Heartbeat (dhak dhak)",
+      "count": 1
+    },
+    {
+      "tag": "maataa gangaur aashirwaad",
+      "count": 1
+    },
+    {
+      "tag": "Meditative Sufi Qawwali, 432Hz deep drone, Cinematic Ambient, Ethereal Armenian",
+      "count": 1
+    },
+    {
+      "tag": "Modern Sufi Qawwali, divine male vocals, slow emotional tempo, harmonium, soft t",
+      "count": 1
+    },
+    {
+      "tag": "Neo-Vedic Phonk meets Afro-Drill. 110 BPM.  Instrumentation: > * Intro (0:00-0:0",
+      "count": 1
+    },
+    {
+      "tag": "Neuro-Tantra Devotional Trance Start: whisper + tanpura (no beat) Gradually add",
+      "count": 1
+    },
+    {
+      "tag": "Opera + Punjabi folk fusion ballad. Key: E minor (operatic) over E Punjabi folk",
+      "count": 1
+    },
+    {
+      "tag": "Playful energetic Indian classical folk-pop, 112 BPM, bouncy tech-folk sarangi,",
+      "count": 1
+    },
+    {
+      "tag": "Psychedelic Haryanvi Folk-Trance, 140 BPM, Piercing Ethnic Been (Snake Charmer F",
+      "count": 1
+    },
+    {
+      "tag": "Qawwali, traditional Pakistani/Indian Sufi devotional music, slow to fast build",
+      "count": 1
+    },
+    {
+      "tag": "Raga Todi qawwali, 70 to 110 BPM, female devotional voice, bansuri, harmonium, t",
+      "count": 1
+    },
+    {
+      "tag": "rajisthaani group of snake charmers with been controlling karna pishaachini. neu",
+      "count": 1
+    },
+    {
+      "tag": "Raw Aggressive Indian Drill Phonk, heavy distorted 808 bass, crisp metallic perc",
+      "count": 1
+    },
+    {
+      "tag": "Raw Aggressive Indian Drill Phonk, heavy distorted 808 sub-bass, crisp metallic",
+      "count": 1
+    },
+    {
+      "tag": "Raw horror folk. Haryanvi male vocal - broken, crying, manic. Female vampire voc",
+      "count": 1
+    },
+    {
+      "tag": "Revolutionary Hindi rap mixed with Sufi folk. Male deep voice, intense delivery.",
+      "count": 1
+    },
+    {
+      "tag": "Soulful Haryanvi folk, 100 BPM, male lead vocalist, breathy female backing vocal",
+      "count": 1
+    },
+    {
+      "tag": "Style Descriptor: > Epic Ancient-Futuristic Fusion, Haryanvi Ragni meets Dravidi",
+      "count": 1
+    },
+    {
+      "tag": "style desi hip hop rajasthani folk fusion heavy bass fast beat male aggressive v",
+      "count": 1
+    },
+    {
+      "tag": "Style: Cyberpunk Hip Hop, Hyper-rap, Industrial Trap, 160 BPM, D# minor  Vocal:",
+      "count": 1
+    },
+    {
+      "tag": "Style: Dark Ambient Trance, Binaural beats background, Deep male vocals,  Sanskr",
+      "count": 1
+    },
+    {
+      "tag": "Style: Desi Trap, Indian Hip Hop, Dark Trap, 140 BPM, male autotuned rap, heavy",
+      "count": 1
+    },
+    {
+      "tag": "Style: Hard Philosophical Rap / Divine Hip-Hop Tempo: 95 BPM Key: D minor Mood:",
+      "count": 1
+    },
+    {
+      "tag": "Style: Haryanvi Folk Ragni, Jogi Spiritual Crow Anthem, Human Voice Driven, Fig",
+      "count": 1
+    },
+    {
+      "tag": "Style: Haryanvi Ragni + Hip-Hop Rap (Climax Section)   Tempo: 95 BPM   Energy: H",
+      "count": 1
+    },
+    {
+      "tag": "Style: Indian Devotional Bhakti, Raag Yaman, slow tempo (60–65 BPM), cinematic s",
+      "count": 1
+    },
+    {
+      "tag": "Style: radio sanaatana telecast",
+      "count": 1
+    },
+    {
+      "tag": "Style: Raga Bhairavi, Raga Yaman, Raga Malkauns, Sufi fusion, Rajasthani folk,",
+      "count": 1
+    },
+    {
+      "tag": "Style: world fusion, spiritual awakening, slow sufi ghazal, cinematic ambient, n",
+      "count": 1
+    },
+    {
+      "tag": "Sufi Qawwali, Nirguni Bhajan, Raga Todi, Harmonium, Tabla Keherva, Male Passiona",
+      "count": 1
+    },
+    {
+      "tag": "Sufi, Indian Folk, Acoustic Lullaby, Soft Male Vocals, Harmonium, Tabla, Sitar,",
+      "count": 1
+    },
+    {
+      "tag": "Tempo: 95 BPM Cosmic Hip-Hop  Instruments:  temple bells  mridangam  ancient lyr",
+      "count": 1
+    },
+    {
+      "tag": "title mne meऋ भारत माँ  swatantra yantra folk ballad  genre  style haryanvi folk",
+      "count": 1
+    },
+    {
+      "tag": "title Pop, Indie Pop tapasya  upanishadic epic rap  prompt  cinematic spiritual",
+      "count": 1
+    },
+    {
+      "tag": "TITLE: **“NAAD BRAHM: 31 RAAG NEURAL JOGI ALBUM”**  STYLE: Indian Folk (Haryanvi",
+      "count": 1
+    },
+    {
+      "tag": "Title: The Birth of Speech  Genre: Vedic cinematic epic, spiritual world music",
+      "count": 1
+    },
+    {
+      "tag": "TITLE: Triveni Naad – Inner Jogi Duet  [STYLE: Indian Folk Jogi Ragni + Gurbani",
+      "count": 1
+    },
+    {
+      "tag": "trance hip-hop haryanvi flavour use train whistle and station ambiances. unique",
+      "count": 1
+    },
+    {
+      "tag": "Upanishadic Epic Rap, cinematic Vedic hip-hop, deep bass, powerful taiko drums,",
+      "count": 1
+    },
+    {
+      "tag": "Vedantic cosmic Indian folk theatre song, female mystical lead voice, male drama",
+      "count": 1
+    },
+    {
+      "tag": "Vedic Industrial Rock, Nu-Metal, Indian Raga Hansadhwani on Bansuri flute, Cinem",
+      "count": 1
+    },
+    {
+      "tag": "voice  ओवर",
+      "count": 1
+    },
+    {
+      "tag": "World music fusion, cinematic spiritual folk, Indian classical meets Celtic and",
+      "count": 1
+    },
+    {
+      "tag": "ye ek maa ke shbd hai bhai shab apne bete ke liye jiska beta balidan hua hai des",
+      "count": 1
+    },
+    {
+      "tag": "Zen-Drill x Afro-Phonk. 110 BPM. Soundscape: शुरुआत एक बहुत ही शांत 'Tibetan Bow",
+      "count": 1
+    },
+    {
+      "tag": "अद्वैत अद्वैत द्वैत द वैत त  द्वैतत तत तत तत तट त्री कट ट्री कट कट त्रिकट रिकट र",
+      "count": 1
+    },
+    {
+      "tag": "आप सुन रहे हैं रेडियो सनातन वैज्ञानिक",
+      "count": 1
+    },
+    {
+      "tag": "इस गाने की शुरुआत शांत श्लोक से करें, फिर अचानक \"महादेव तेरी सरकार\" पर एक रॉक-स्",
+      "count": 1
+    },
+    {
+      "tag": "इस रचना के लिए 'राग भैरवी' और 'राग जोगिया' का मिश्रण सबसे सटीक है, जिसमें 'राग व",
+      "count": 1
+    },
+    {
+      "tag": "गीत का शीर्षक: धूमिल अक्स शैली: कॉन्शियस हिप-हॉप (Conscious Hip-Hop) बीट: भारी 8",
+      "count": 1
+    },
+    {
+      "tag": "गीत का शीर्षक: बंद आँखों का प्रत्यक्ष [style: Indian folk, bhajan, slow-medium",
+      "count": 1
+    },
+    {
+      "tag": "डीजे सुपर फंकी. fun   ,,,",
+      "count": 1
+    },
+    {
+      "tag": "ताल और नाद: वाद्यों (संगीत यंत्रों) से ताल लगाने को कहना उस 'नाद' को पैदा करने क",
+      "count": 1
+    },
+    {
+      "tag": "धरती का नून DHARTI KA NOON — Full Adlib & Reverb Annotated Score BPM / Tempo 72",
+      "count": 1
+    },
+    {
+      "tag": "ध्वनि का स्तर: इसे 8D साउंड में अनुभव करें, जहाँ 'राग माता' के सुर आपके चारों ओर",
+      "count": 1
+    },
+    {
+      "tag": "फंक",
+      "count": 1
+    },
+    {
+      "tag": "मलंगों का ग्रुप एक भविष्य के ट्रेन स्टेशन पर ट्रेन स्टेशन उद्गोषण  Style: Haryan",
+      "count": 1
+    },
+    {
+      "tag": "मुखड़ा हर अंतरे के बाद दोहराओ  भीड़ से बुलवाओ: “दुनिया में ते खो देगा तन्ने…”  न",
+      "count": 1
+    },
+    {
+      "tag": "वाद्य:  ढोलक – मुख्य ताल  नगाड़ा – मुखड़े पर जोर  सारंगी – भावपूर्ण हिस्से  बीन",
+      "count": 1
+    },
+    {
+      "tag": "वैदिक रॉक",
+      "count": 1
+    },
+    {
+      "tag": "वोकल्स (Vocals): रागिनी में गायक की आवाज़ बहुत ऊँची (High Pitch) और कड़क होती है।",
+      "count": 1
+    },
+    {
+      "tag": "शीर्षक: १०० साल (हिस्स्स... टोरी) Style: Dark Experimental Folk-Trap. Descriptio",
+      "count": 1
+    },
+    {
+      "tag": "सुपर फंकी फुल नौटंकी",
+      "count": 1
+    },
+    {
+      "tag": "सुपर फ़न फंकी कुतिया कुक्कुर रैप अंदर तक फ़न। हास्य और ज्ञान का भाव। गंभीर बात व",
+      "count": 1
+    },
+    {
+      "tag": "हैवी base male। १ मिनट",
+      "count": 1
+    }
+  ]
+}

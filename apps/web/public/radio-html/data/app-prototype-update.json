@@ -1,0 +1,30 @@
+{
+  "id": "radio-vaigyaaniq-app-prototype-update",
+  "title": "Radio Vaigyaaniq App Prototype Update",
+  "updatedAt": "2026-07-08",
+  "status": "local_prototype_updated",
+  "html": "Radio_Vaigyaaniq_App_Prototype.html",
+  "desktopMirror": "../../../../../apps/desktop/public/radio-html/Radio_Vaigyaaniq_App_Prototype.html",
+  "addedSurfaces": [
+    "standalone-radio-responsive.html",
+    "standalone-radio-aspect-pack.html",
+    "standalone-radio.html",
+    "admin-kanban.html",
+    "lyrics-prompter.html",
+    "install.html"
+  ],
+  "catalogStatus": {
+    "embeddedPrototypeSongs": 482,
+    "embeddedPrototypeShows": 9,
+    "standaloneCatalogClips": 1186,
+    "candidateAlbums": 20,
+    "stations": 4,
+    "tracksWithSanitizedLyrics": 1158
+  },
+  "phkd": {
+    "productionReady": false,
+    "verificationState": "local_prototype_update",
+    "releaseAllowed": false,
+    "evidence": "Prototype now links to the responsive UI extraction, aspect-ratio image pack, standalone radio, admin kanban, lyrics prompter, and install-gate surfaces. This does not prove public release, app-store readiness, signing, rights closure, or payment readiness."
+  }
+}

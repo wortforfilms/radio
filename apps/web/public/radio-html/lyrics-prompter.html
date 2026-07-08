@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radio Vaigyaaniq Lyrics Prompter</title>
+  <style>
+    :root{color-scheme:dark;--bg:#070a0f;--panel:#101720;--panel2:#151f2b;--ink:#eef4f8;--muted:#94a3b8;--line:rgba(255,255,255,.12);--accent:#ff8a3d;--cyan:#63e6d5;--gold:#f0c36c;--danger:#ff7676}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0%,rgba(255,138,61,.16),transparent 30rem),linear-gradient(180deg,#070a0f,#091018 48%,#05070a);color:var(--ink);font:14px/1.45 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}.shell{width:min(1480px,calc(100vw - 28px));margin:auto;padding:18px 0 32px}.topbar{position:sticky;top:0;z-index:20;background:rgba(7,10,15,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.topbar-inner{width:min(1480px,calc(100vw - 28px));margin:auto;display:flex;align-items:center;gap:14px;padding:12px 0}.mark{width:42px;height:42px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--cyan));color:#071014;font-weight:950}.brand h1{font-size:18px;margin:0}.brand small{color:var(--muted)}.actions{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}.pill{border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--ink);border-radius:999px;padding:8px 11px;font-weight:800;text-decoration:none;cursor:pointer}.pill.primary{background:var(--accent);border-color:var(--accent);color:#111}.hero{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:end;border-bottom:1px solid var(--line);padding:28px 0 22px}.eyebrow{color:var(--gold);letter-spacing:.16em;text-transform:uppercase;font-size:12px;font-weight:950}.hero h2{font-size:clamp(2rem,5vw,5rem);line-height:.95;margin:9px 0 10px}.hero p{color:#cbd5df;max-width:850px;font-size:1.05rem}.guard{border-left:3px solid var(--danger);background:rgba(255,118,118,.08);color:#ffd4d4;border-radius:8px;padding:11px 13px;max-width:700px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;min-width:330px}.stat{border:1px solid var(--line);border-radius:8px;padding:10px;background:rgba(255,255,255,.04)}.stat span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em}.stat b{font-size:24px}.layout{display:grid;grid-template-columns:320px minmax(0,1fr) 340px;gap:16px;margin-top:18px}.panel{background:linear-gradient(180deg,rgba(16,23,32,.94),rgba(11,16,23,.96));border:1px solid var(--line);border-radius:8px;overflow:hidden}.panel-head{padding:14px;border-bottom:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:10px;align-items:center}.panel-head h3{margin:0;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}.panel-body{padding:12px}.search{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:#0b1119;color:#fff;margin-bottom:10px}.select{width:100%;background:#0b1119;color:#fff;border:1px solid var(--line);border-radius:8px;padding:10px;margin-bottom:10px}.track-list{max-height:72vh;overflow:auto;padding-right:4px}.track{width:100%;text-align:left;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--ink);border-radius:8px;padding:10px;margin-bottom:8px;cursor:pointer}.track.active{border-color:var(--accent);background:rgba(255,138,61,.1)}.track b{display:block}.track span{display:block;color:var(--muted);font-size:12px}.stage{min-height:590px;display:grid;grid-template-rows:auto 1fr auto}.now{display:grid;grid-template-columns:96px 1fr;gap:14px}.now img{width:96px;height:96px;object-fit:cover;border-radius:8px;background:#151f2b}.now h2{margin:0;font-size:24px}.meta{color:var(--muted);font-size:13px}.style-box{border:1px solid var(--line);border-radius:8px;padding:10px;margin-top:10px;background:rgba(255,255,255,.035);color:#d8e2ea}.prompter{margin:16px 0;max-height:520px;overflow:auto;scroll-behavior:smooth;padding-right:8px}.cue{border:1px solid var(--line);border-radius:8px;margin-bottom:8px;padding:12px 12px 12px 14px;background:rgba(255,255,255,.04);display:grid;grid-template-columns:80px 1fr;gap:12px;transition:.18s}.cue.active{border-color:var(--cyan);background:rgba(99,230,213,.12);box-shadow:0 0 0 1px rgba(99,230,213,.15)}.cue-time{font-variant-numeric:tabular-nums;color:var(--cyan);font-size:12px}.cue-kind{display:block;color:var(--muted);font-size:10px;letter-spacing:.08em;text-transform:uppercase}.cue-line{font-size:clamp(1.05rem,1.9vw,1.85rem);line-height:1.28}.empty{color:var(--muted);text-align:center;padding:28px}.transport{border-top:1px solid var(--line);padding-top:12px}.transport audio{width:100%;display:block;margin-bottom:10px}.timeline{position:relative;height:12px;border:1px solid var(--line);border-radius:999px;background:#101721;overflow:hidden}.timeline i{position:absolute;top:0;bottom:0;background:var(--accent);opacity:.35}.inspector dl{display:grid;grid-template-columns:110px 1fr;gap:8px;margin:0}.inspector dt{color:var(--muted)}.inspector dd{margin:0;word-break:break-word}.export-box textarea{width:100%;min-height:190px;background:#0b1119;color:#dfeaf2;border:1px solid var(--line);border-radius:8px;padding:10px;resize:vertical}@media(max-width:1150px){.layout{grid-template-columns:1fr}.track-list{max-height:380px}.hero{grid-template-columns:1fr}.stats{min-width:0}}@media(max-width:640px){.shell,.topbar-inner{width:min(100vw - 18px,1480px)}.topbar-inner{align-items:flex-start}.actions{display:none}.now{grid-template-columns:72px 1fr}.now img{width:72px;height:72px}.cue{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="topbar-inner"><div class="mark">RV</div><div class="brand"><h1>Lyrics Prompter</h1><small>Sanitized catalog lyrics with estimated spread cues</small></div><nav class="actions"><a class="pill" href="./standalone-radio.html">Standalone Radio</a><a class="pill" href="./data/lyrics-prompter-data.json">Data JSON</a><a class="pill" href="./data/lyrics-prompter-index.tsv">TSV</a><a class="pill" href="./lyrics-prompter-sync.html">Sync Check</a></nav></div></header>
+  <main class="shell">
+    <section class="hero"><div><span class="eyebrow">Fail-closed lyric timing</span><h2>Prompter from real source files</h2><p>Lyrics and styles are extracted from local catalog/source files only. Cue timings are generated as estimated spreads for review and export.</p><p class="guard">PHKD: no human-verified sync is claimed. Missing lyrics stay NULL; unmatched manual lyrics remain unlinked.</p></div><div class="stats"><article class="stat"><span>Tracks</span><b>1,186</b></article><article class="stat"><span>Lyrics</span><b>1,158</b></article><article class="stat"><span>Cues</span><b>58,656</b></article></div></section>
+    <section class="layout">
+      <aside class="panel"><div class="panel-head"><h3>Catalog</h3><small id="listCount">0</small></div><div class="panel-body"><input class="search" id="search" placeholder="Search title, style, station..."><select class="select" id="recordKind"><option value="catalog">Catalog tracks</option><option value="manual">Manual unmatched</option><option value="all">All records</option></select><select class="select" id="lyricsFilter"><option value="with">With lyrics</option><option value="all">All</option><option value="without">Lyrics NULL</option></select><button class="pill" id="loadLocalData" type="button">Load local JSON</button><input id="fileImport" type="file" accept="application/json" hidden><div class="track-list" id="trackList"></div></div></aside>
+      <section class="panel stage"><div class="panel-body"><div class="now"><img id="cover" src="assets/images/radio-vaigyaaniq-runtime-hero.svg" alt=""><div><h2 id="title">Select a record</h2><div class="meta" id="meta">Timing verified: false</div><div class="style-box" id="style">Style NULL</div></div></div><div class="prompter" id="prompter"></div></div><div class="panel-body transport"><audio id="audio" controls preload="metadata"></audio><div class="timeline" id="timeline"></div></div></section>
+      <aside class="panel inspector"><div class="panel-head"><h3>Evidence</h3><button class="pill" id="copyLrc">Copy LRC</button></div><div class="panel-body"><dl id="details"></dl></div><div class="panel-head"><h3>Export Preview</h3><button class="pill" id="copyJson">Copy HKD</button></div><div class="panel-body export-box"><textarea id="exportBox" readonly></textarea></div></aside>
+    </section>
+  </main>
+  <script id="prompter-bootstrap" type="application/json">{"generatedAt":"2026-07-07T19:47:21.070Z","counts":{"catalogTracks":1186,"linkedTracks":1186,"tracksWithSanitizedLyrics":1158,"tracksWithoutSanitizedLyrics":28,"tracksWithStyles":1134,"cueCount":58656,"manualRecords":133,"manualCueCount":7111,"parsedSourceFiles":2481,"sunoBackupFiles":2348,"manualSourceFiles":133,"unmatchedSourceFiles":133,"timingBasis":{"ffprobe-duration":1158,"NULL":28,"estimated-no-audio-duration":133}},"verificationState":"timing-unverified"}</script>
+  <script>
+    const BOOTSTRAP = JSON.parse(document.getElementById('prompter-bootstrap').textContent);
+    let DATA = null;
+    let allRecords = [];
+    const $ = (id) => document.getElementById(id);
+    const audio = $('audio');
+    const state = { selectedId: null, search: '', kind: 'catalog', lyrics: 'with' };
+    const normalize = (value) => String(value || '').toLowerCase();
+    const current = () => allRecords.find((record) => record.id === state.selectedId) || filteredRecords()[0];
+    async function boot() {
+      try {
+        const response = await fetch('./data/lyrics-prompter-data.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error('DATA_FETCH_FAILED_' + response.status);
+        DATA = await response.json();
+        allRecords = [...DATA.tracks.map((record) => ({ ...record, kind: 'catalog' })), ...DATA.manualRecords.map((record) => ({ ...record, kind: 'manual' }))];
+        renderList();
+        selectRecord(current()?.id);
+      } catch (error) {
+        $('listCount').textContent = '0';
+        $('trackList').innerHTML = '<div class="empty">Prompter data could not be loaded automatically. Serve this file over localhost/Tauri, or use Load local JSON and choose data/lyrics-prompter-data.json.</div>';
+        $('title').textContent = 'Prompter data unavailable';
+        $('meta').textContent = String(error && error.message ? error.message : error);
+        $('prompter').innerHTML = '<div class="empty">No cues loaded.</div>';
+      }
+    }
+    function filteredRecords() {
+      const term = normalize(state.search);
+      return allRecords.filter((record) => {
+        if (state.kind !== 'all' && record.kind !== state.kind) return false;
+        if (state.lyrics === 'with' && !record.lyricsSanitizedPresent) return false;
+        if (state.lyrics === 'without' && record.lyricsSanitizedPresent) return false;
+        if (term && !normalize([record.title, record.styleSanitized, record.station, record.theme, record.language, record.id].join(' ')).includes(term)) return false;
+        return true;
+      });
+    }
+    function renderList() {
+      const records = filteredRecords();
+      $('listCount').textContent = records.length.toLocaleString();
+      $('trackList').innerHTML = records.slice(0, 420).map((record) => '<button class="track ' + (record.id === state.selectedId ? 'active' : '') + '" data-id="' + record.id + '"><b>' + escapeHtml(record.title) + '</b><span>' + record.promptLineCount + ' cues · ' + (record.styleSanitized || 'style NULL') + '</span></button>').join('') || '<div class="empty">No matching records.</div>';
+      document.querySelectorAll('[data-id]').forEach((button) => button.addEventListener('click', () => selectRecord(button.dataset.id)));
+    }
+    function selectRecord(id) {
+      state.selectedId = id;
+      const record = current();
+      if (!record) return;
+      $('cover').src = record.cover || 'assets/images/radio-vaigyaaniq-runtime-hero.svg';
+      $('title').textContent = record.title;
+      $('meta').textContent = [record.station || record.kind, record.theme || 'theme NULL', record.language || 'language NULL', 'timing verified false'].join(' · ');
+      $('style').textContent = record.styleSanitized || 'Style NULL';
+      audio.src = record.audio || '';
+      audio.hidden = !record.audio;
+      renderCues(record);
+      renderTimeline(record);
+      renderDetails(record);
+      renderExport(record);
+      renderList();
+    }
+    function renderCues(record) {
+      $('prompter').innerHTML = record.cues.length ? record.cues.map((cue) => '<article class="cue" id="cue-' + cue.index + '" data-start="' + cue.startSeconds + '" data-end="' + cue.endSeconds + '"><div><span class="cue-time">' + cue.start + '</span><span class="cue-kind">' + cue.kind + '</span></div><div class="cue-line">' + escapeHtml(cue.text) + '</div></article>').join('') : '<div class="empty">Lyrics NULL for this record.</div>';
+    }
+    function renderTimeline(record) {
+      const duration = record.durationSeconds || 0;
+      $('timeline').innerHTML = record.cues.map((cue) => {
+        const left = duration ? (cue.startSeconds / duration) * 100 : 0;
+        const width = duration ? Math.max(.35, ((cue.endSeconds - cue.startSeconds) / duration) * 100) : 0;
+        return '<i style="left:' + left + '%;width:' + width + '%"></i>';
+      }).join('');
+    }
+    function renderDetails(record) {
+      const source = record.primaryLyricsSource || (record.sourceFiles && record.sourceFiles[0]) || 'NULL';
+      $('details').innerHTML = [
+        ['ID', record.id],
+        ['Status', record.status],
+        ['Source', source],
+        ['Lines', record.promptLineCount],
+        ['Lyric lines', record.lyricLineCount],
+        ['Duration', record.durationSeconds == null ? 'NULL' : record.durationSeconds + 's'],
+        ['Timing basis', record.timingBasis],
+        ['Verified', String(record.timingVerified)]
+      ].map(([k, v]) => '<dt>' + k + '</dt><dd>' + escapeHtml(v) + '</dd>').join('');
+    }
+    function renderExport(record) {
+      $('exportBox').value = JSON.stringify({ id: record.id, title: record.title, timingVerified: false, timingBasis: record.timingBasis, cues: record.cues }, null, 2);
+    }
+    function exportLrc(record) {
+      return record.cues.map((cue) => '[' + cue.start.replace('.', '.') + ']' + cue.text).join('\n') + '\n';
+    }
+    function escapeHtml(value) {
+      return String(value ?? '').replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[char]));
+    }
+    audio.addEventListener('timeupdate', () => {
+      const time = audio.currentTime || 0;
+      let active = null;
+      document.querySelectorAll('.cue').forEach((node) => {
+        const on = time >= Number(node.dataset.start) && time < Number(node.dataset.end);
+        node.classList.toggle('active', on);
+        if (on) active = node;
+      });
+      if (active) active.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    });
+    $('search').addEventListener('input', (event) => { state.search = event.target.value; renderList(); });
+    $('recordKind').addEventListener('change', (event) => { state.kind = event.target.value; state.selectedId = null; renderList(); selectRecord(current()?.id); });
+    $('lyricsFilter').addEventListener('change', (event) => { state.lyrics = event.target.value; state.selectedId = null; renderList(); selectRecord(current()?.id); });
+    $('loadLocalData').addEventListener('click', () => $('fileImport').click());
+    $('fileImport').addEventListener('change', async (event) => {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      DATA = JSON.parse(await file.text());
+      allRecords = [...DATA.tracks.map((record) => ({ ...record, kind: 'catalog' })), ...DATA.manualRecords.map((record) => ({ ...record, kind: 'manual' }))];
+      state.selectedId = null;
+      renderList();
+      selectRecord(current()?.id);
+    });
+    $('copyLrc').addEventListener('click', () => navigator.clipboard?.writeText(exportLrc(current())));
+    $('copyJson').addEventListener('click', () => navigator.clipboard?.writeText($('exportBox').value));
+    boot();
+  </script>
+</body>
+</html>

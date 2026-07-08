@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radio Admin Kanban</title>
+  <style>
+    :root{color-scheme:dark;--bg:#070a0f;--panel:#101720;--ink:#eef4f8;--muted:#94a3b8;--line:rgba(255,255,255,.12);--accent:#ff8a3d;--cyan:#63e6d5;--gold:#f0c36c;--danger:#ff7676;--ok:#8be29d}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 18% 0%,rgba(255,138,61,.16),transparent 32rem),linear-gradient(180deg,#070a0f,#091018 48%,#05070a);color:var(--ink);font:14px/1.45 Inter,ui-sans-serif,system-ui}button,input,select{font:inherit}.top{position:sticky;top:0;z-index:20;background:rgba(7,10,15,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.top-inner{width:min(1500px,calc(100vw - 28px));margin:auto;display:flex;align-items:center;gap:12px;padding:12px 0}.mark{width:42px;height:42px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--cyan));color:#071014;font-weight:950}.brand h1{margin:0;font-size:19px}.brand small{color:var(--muted)}.actions{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}.pill{border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--ink);border-radius:999px;padding:8px 11px;font-weight:800;text-decoration:none;cursor:pointer}.shell{width:min(1500px,calc(100vw - 28px));margin:auto;padding:18px 0 32px}.toolbar{display:grid;grid-template-columns:180px minmax(220px,1fr) 160px auto auto;gap:10px;align-items:center;margin-bottom:14px}.search,.select{padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:#0b1119;color:#fff}.guard{border-left:3px solid var(--danger);background:rgba(255,118,118,.08);color:#ffd4d4;border-radius:8px;padding:10px 12px;margin-bottom:14px}.board{display:flex;gap:12px;overflow:auto;padding-bottom:16px;min-height:72vh}.lane{flex:0 0 322px;background:linear-gradient(180deg,rgba(16,23,32,.94),rgba(11,16,23,.96));border:1px solid var(--line);border-radius:8px;display:flex;flex-direction:column;max-height:78vh}.lane.drag-over{border-color:var(--cyan);box-shadow:0 0 0 1px rgba(99,230,213,.25)}.lane-head{padding:12px;border-bottom:1px solid var(--line)}.lane-head b{display:block}.lane-head span{color:var(--muted);font-size:12px}.lane-body{padding:10px;overflow:auto;min-height:180px}.card{border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.045);padding:8px;margin-bottom:8px;display:grid;grid-template-columns:54px 1fr;gap:9px;cursor:grab}.card:active{cursor:grabbing}.card img{width:54px;height:54px;object-fit:cover;border-radius:6px;background:#151f2b}.card b{display:block;line-height:1.16}.card span{display:block;color:var(--muted);font-size:12px}.chips{display:flex;gap:5px;flex-wrap:wrap;margin-top:5px}.chip{font-size:10px;border:1px solid var(--line);border-radius:999px;padding:2px 5px;color:#dfe7ee}.dirty{color:var(--gold);font-weight:900}.empty{padding:18px;color:var(--muted);text-align:center}.drawer{position:fixed;right:14px;bottom:14px;width:min(520px,calc(100vw - 28px));max-height:60vh;overflow:auto;background:#0b1119;border:1px solid var(--line);border-radius:8px;padding:12px;box-shadow:0 22px 70px rgba(0,0,0,.4)}textarea{width:100%;min-height:180px;background:#070a0f;color:#dfeaf2;border:1px solid var(--line);border-radius:8px;padding:10px;resize:vertical}@media(max-width:900px){.toolbar{grid-template-columns:1fr}.actions{display:none}.lane{flex-basis:86vw}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="top-inner"><div class="mark">RV</div><div class="brand"><h1>Radio Admin Kanban</h1><small>Drag tracks across album, station, and label lanes</small></div><nav class="actions"><a class="pill" href="./standalone-radio.html">Standalone</a><a class="pill" href="./data/radio-admin-kanban.json">JSON</a><a class="pill" href="./data/radio-admin-kanban.tsv">TSV</a></nav></div></header>
+  <main class="shell">
+    <p class="guard">PHKD: local admin draft only. Drag/drop changes are kept in browser localStorage and exported as JSON; no database write or release claim is made.</p>
+    <section class="toolbar"><select class="select" id="boardMode"><option value="albums">Albums</option><option value="stations">Stations</option><option value="labels">Labels</option></select><input class="search" id="search" placeholder="Search title, style, language, station..."><select class="select" id="lyricsFilter"><option value="all">All lyrics states</option><option value="ready">Lyrics ready</option><option value="null">Lyrics NULL</option></select><button class="pill" id="resetBoard">Reset Board</button><button class="pill" id="exportBoard">Export JSON</button><button class="pill" id="loadLocalData" type="button">Load local JSON</button><input id="fileImport" type="file" accept="application/json" hidden></section>
+    <section class="board" id="board"></section>
+  </main>
+  <aside class="drawer" id="drawer" hidden><b>Assignment Export</b><p class="dirty" id="dirtyState">Draft changes local only.</p><textarea id="exportText" readonly></textarea></aside>
+  <script id="kanban-bootstrap" type="application/json">{"generatedAt":"2026-07-07T19:48:13.059Z","counts":{"tracks":1186,"albumLanes":21,"stationLanes":5,"labelLanes":11,"tracksWithLyrics":1158,"tracksWithoutLyrics":28,"styleNullTracks":104},"boards":{"albums":{"title":"Album Assignment","laneCount":21},"stations":{"title":"Station Assignment","laneCount":5},"labels":{"title":"Label Assignment","laneCount":11}}}</script>
+  <script>
+    const BOOTSTRAP = JSON.parse(document.getElementById('kanban-bootstrap').textContent);
+    let DATA = null;
+    let boards = null;
+    const $ = (id) => document.getElementById(id);
+    const state = { board: 'albums', search: '', lyrics: 'all', dirty: false };
+    const normalize = (value) => String(value || '').toLowerCase();
+    const trackMap = () => new Map((DATA?.tracks || []).map((track) => [track.id, track]));
+    async function boot() {
+      try {
+        const response = await fetch('./data/radio-admin-kanban.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error('DATA_FETCH_FAILED_' + response.status);
+        DATA = await response.json();
+        loadState();
+        render();
+      } catch (error) {
+        $('board').innerHTML = '<div class="empty">Kanban data could not be auto-loaded. Use Load local JSON and choose data/radio-admin-kanban.json.</div>';
+      }
+    }
+    function loadState() {
+      const saved = localStorage.getItem('radio-admin-kanban-v1');
+      boards = saved ? JSON.parse(saved) : JSON.parse(JSON.stringify(DATA.boards));
+    }
+    function saveState() {
+      localStorage.setItem('radio-admin-kanban-v1', JSON.stringify(boards));
+      state.dirty = true;
+    }
+    function filteredTrack(track) {
+      if (!track) return false;
+      if (state.lyrics === 'ready' && !track.lyricsReady) return false;
+      if (state.lyrics === 'null' && track.lyricsReady) return false;
+      const term = normalize(state.search);
+      if (term && !normalize([track.title, track.style, track.station, track.theme, track.language, track.labels?.join(' ')].join(' ')).includes(term)) return false;
+      return true;
+    }
+    function render() {
+      if (!boards) return;
+      const tracks = trackMap();
+      const board = boards[state.board];
+      $('board').innerHTML = board.lanes.map((lane) => {
+        const cards = lane.trackIds.map((id) => tracks.get(id)).filter(filteredTrack);
+        return '<article class="lane" data-lane="' + lane.id + '"><div class="lane-head"><b>' + escapeHtml(lane.title) + '</b><span>' + cards.length.toLocaleString() + ' visible · ' + escapeHtml(lane.status || 'local') + '</span></div><div class="lane-body">' + (cards.length ? cards.slice(0, 260).map(cardHtml).join('') : '<div class="empty">No visible tracks.</div>') + '</div></article>';
+      }).join('');
+      bindDrag();
+    }
+    function cardHtml(track) {
+      return '<div class="card" draggable="true" data-track="' + track.id + '"><img src="' + escapeHtml(track.cover || 'assets/images/radio-vaigyaaniq-runtime-hero.svg') + '" alt=""><div><b>' + escapeHtml(track.title) + '</b><span>' + escapeHtml(track.station + ' · ' + track.theme + ' · ' + track.language) + '</span><div class="chips"><i class="chip">' + (track.lyricsReady ? 'lyrics' : 'lyrics NULL') + '</i><i class="chip">' + escapeHtml(track.style === 'NULL' ? 'style NULL' : track.style.slice(0, 28)) + '</i></div></div></div>';
+    }
+    function bindDrag() {
+      document.querySelectorAll('.card').forEach((card) => {
+        card.addEventListener('dragstart', (event) => event.dataTransfer.setData('text/plain', card.dataset.track));
+      });
+      document.querySelectorAll('.lane').forEach((lane) => {
+        lane.addEventListener('dragover', (event) => { event.preventDefault(); lane.classList.add('drag-over'); });
+        lane.addEventListener('dragleave', () => lane.classList.remove('drag-over'));
+        lane.addEventListener('drop', (event) => {
+          event.preventDefault();
+          lane.classList.remove('drag-over');
+          moveTrack(event.dataTransfer.getData('text/plain'), lane.dataset.lane);
+        });
+      });
+    }
+    function moveTrack(trackId, targetLaneId) {
+      const board = boards[state.board];
+      for (const lane of board.lanes) lane.trackIds = lane.trackIds.filter((id) => id !== trackId);
+      const target = board.lanes.find((lane) => lane.id === targetLaneId);
+      if (target && !target.trackIds.includes(trackId)) target.trackIds.unshift(trackId);
+      saveState();
+      render();
+    }
+    function exportPayload() {
+      return { id: 'radio-admin-kanban-export', exportedAt: new Date().toISOString(), sourceGeneratedAt: DATA.generatedAt, board: state.board, phkd: DATA.phkd, boards };
+    }
+    function escapeHtml(value) {
+      return String(value ?? '').replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[char]));
+    }
+    $('boardMode').addEventListener('change', (event) => { state.board = event.target.value; render(); });
+    $('search').addEventListener('input', (event) => { state.search = event.target.value; render(); });
+    $('lyricsFilter').addEventListener('change', (event) => { state.lyrics = event.target.value; render(); });
+    $('resetBoard').addEventListener('click', () => { localStorage.removeItem('radio-admin-kanban-v1'); loadState(); state.dirty = false; render(); });
+    $('exportBoard').addEventListener('click', () => { $('drawer').hidden = false; $('exportText').value = JSON.stringify(exportPayload(), null, 2); });
+    $('loadLocalData').addEventListener('click', () => $('fileImport').click());
+    $('fileImport').addEventListener('change', async (event) => {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      DATA = JSON.parse(await file.text());
+      loadState();
+      render();
+    });
+    boot();
+  </script>
+</body>
+</html>

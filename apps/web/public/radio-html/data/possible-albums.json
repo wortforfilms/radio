@@ -1,0 +1,2716 @@
+{
+  "id": "radio-vaigyaaniq-possible-albums",
+  "generatedAt": "2026-07-07T18:29:43.673Z",
+  "status": "candidate-not-persisted",
+  "source": {
+    "catalog": "/radio-html/data/suno-library-catalog.json",
+    "stationTracks": "/radio-html/data/station-tracks.json",
+    "songMetaTags": "/radio-html/data/song-meta-tags.json"
+  },
+  "notes": [
+    "The Album table currently has 0 persisted rows.",
+    "These candidates are overlap-aware: one track can fit multiple possible albums.",
+    "Counts are derived from title, raw source styles, canonical theme, and inferred language.",
+    "Rights, release approval, and publication state are not implied.",
+    "Each candidate album has one unique existing cover image selected from matched tracks when available.",
+    "Cover paths are relative for file:// viewing and also work from /radio-html/ routes."
+  ],
+  "counts": {
+    "candidateAlbums": 20,
+    "catalogTracks": 1186,
+    "persistedAlbums": 0,
+    "uniqueCoverImages": 20
+  },
+  "candidateAlbums": [
+    {
+      "slug": "sanaatana-vedic-frequency",
+      "title": "Sanaatana Vedic Frequency",
+      "station": "sanaatana-vaigyaniq",
+      "description": "Vedic, Sanskrit, mantra, cosmic, and dharmic knowledge tracks.",
+      "patterns": [
+        "sanatan",
+        "vedic",
+        "sanskrit",
+        "mantra",
+        "shloka",
+        "upanishad",
+        "rigvedic",
+        "tantra",
+        "mahadev",
+        "shiva",
+        "bhairav",
+        "rudra",
+        "sanaatana"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 376,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "Sanatan & Vedic",
+          "count": 207
+        },
+        {
+          "tag": "NULL",
+          "count": 28
+        },
+        {
+          "tag": "Afro-Phonk Fusion, Vedic Chanting, Modern Indian Folk, Neon-Sufi, Syncopated Dje",
+          "count": 9
+        },
+        {
+          "tag": "Genre:  Vedic Cosmic Rap  Nautanki folk + Hip-hop  Cinematic mythological rap  I",
+          "count": 9
+        },
+        {
+          "tag": "Divine Vedic hip-hop rap with Sanskrit chanting, deep 808 bass, damaru percussio",
+          "count": 5
+        },
+        {
+          "tag": "[Genre: Devotional Folk Rock, Bhajan, Energetic Chant, Rajasthani Folk] [Tempo:",
+          "count": 3
+        },
+        {
+          "tag": "Cinematic Vedic Psy-Trap, 145 BPM, Heavy pulsating 808 Sub-bass, Fast-paced Trib",
+          "count": 3
+        },
+        {
+          "tag": "Epic divine hip-hop, heavy cinematic bass, conch shell intro, Vedic choir textur",
+          "count": 3
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "30e92ffe-423f-48cf-9e93-5fd9bb7113c1",
+          "title": "विज़ुअल: अंतरिक्ष में तैरते हुए ३३-डिजिट संख्या",
+          "sourceStyle": "Sanatan & Vedic",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "Sanskrit",
+          "coverImage": "assets/covers/30e92ffe-423f-48cf-9e93-5fd9bb7113c1.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/30e92ffe-423f-48cf-9e93-5fd9bb7113c1.jpeg"
+        },
+        {
+          "sunoId": "d5f6d9bc-5c76-48d6-859d-957ef84f79b3",
+          "title": "हनुमान-अनुमान छट",
+          "sourceStyle": "Heavy cinematic Vedic metal-phonk epic, 115 to 142 BPM, roaring traditional dhol",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "Sanskrit",
+          "coverImage": "assets/covers/d5f6d9bc-5c76-48d6-859d-957ef84f79b3.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/d5f6d9bc-5c76-48d6-859d-957ef84f79b3.jpeg"
+        },
+        {
+          "sunoId": "1bb556f0-a4fb-4994-9096-3ab4f66de0b8",
+          "title": "विज़ुअल: अंतरिक्ष में घूमते सूर्य और ग्रहों के ब",
+          "sourceStyle": "Sanatan & Vedic",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "Sanskrit",
+          "coverImage": "assets/covers/1bb556f0-a4fb-4994-9096-3ab4f66de0b8.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/1bb556f0-a4fb-4994-9096-3ab4f66de0b8.jpeg"
+        },
+        {
+          "sunoId": "ada89c81-d8fa-4ec0-9938-d9435397b7cd",
+          "title": "हा... हू... हौ... हन्... हनु... हनु... हनु... मा",
+          "sourceStyle": "Sanatan & Vedic",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "Sanskrit",
+          "coverImage": "assets/covers/ada89c81-d8fa-4ec0-9938-d9435397b7cd.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/ada89c81-d8fa-4ec0-9938-d9435397b7cd.jpeg"
+        },
+        {
+          "sunoId": "0691bbaf-1f16-453a-9c00-0eecd71d1e14",
+          "title": "३३-डिजिट नियॉन",
+          "sourceStyle": "Hyper-aggressive cinematic Vedic folk-hop epic, 115 BPM, rapid-fire phonetic sta",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "Sanskrit",
+          "coverImage": "assets/covers/0691bbaf-1f16-453a-9c00-0eecd71d1e14.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/0691bbaf-1f16-453a-9c00-0eecd71d1e14.jpeg"
+        },
+        {
+          "sunoId": "bcb08d50-076e-4408-ae04-389701191ee3",
+          "title": "Vocals : \"हा... हू... हौ... हन्... हनु... हनु...",
+          "sourceStyle": "Sanatan & Vedic",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "English",
+          "coverImage": "assets/covers/bcb08d50-076e-4408-ae04-389701191ee3.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/bcb08d50-076e-4408-ae04-389701191ee3.jpeg"
+        },
+        {
+          "sunoId": "31cd60d6-6b7d-4e15-9847-9c3866d60440",
+          "title": "जुग सहस्र जोजन पर भानू",
+          "sourceStyle": "Sanatan & Vedic",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "Sanskrit",
+          "coverImage": "assets/covers/31cd60d6-6b7d-4e15-9847-9c3866d60440.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/31cd60d6-6b7d-4e15-9847-9c3866d60440.jpeg"
+        },
+        {
+          "sunoId": "7333a108-d5a5-4cf4-9e36-6ce6aec10997",
+          "title": "Chhat-Chhat Sanaatana",
+          "sourceStyle": "NULL",
+          "canonicalTheme": "Other / Misc",
+          "language": "English",
+          "coverImage": "assets/covers/7333a108-d5a5-4cf4-9e36-6ce6aec10997.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/7333a108-d5a5-4cf4-9e36-6ce6aec10997.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/30e92ffe-423f-48cf-9e93-5fd9bb7113c1.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/30e92ffe-423f-48cf-9e93-5fd9bb7113c1.jpeg",
+      "coverTrack": {
+        "sunoId": "30e92ffe-423f-48cf-9e93-5fd9bb7113c1",
+        "title": "विज़ुअल: अंतरिक्ष में तैरते हुए ३३-डिजिट संख्या",
+        "sourceStyle": "Sanatan & Vedic"
+      }
+    },
+    {
+      "slug": "hip-hop-drill-rap",
+      "title": "Hip-Hop Drill Rap",
+      "station": "kabir-clubbing",
+      "description": "Rap, drill, trap, boom bap, 808, phonk, and high-energy spoken rhythm.",
+      "patterns": [
+        "rap",
+        "hip-hop",
+        "hip hop",
+        "trap",
+        "drill",
+        "boom bap",
+        "808",
+        "phonk",
+        "horrorcore"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 335,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "Rap & Fusion",
+          "count": 41
+        },
+        {
+          "tag": "Afro-Phonk Fusion, Vedic Chanting, Modern Indian Folk, Neon-Sufi, Syncopated Dje",
+          "count": 9
+        },
+        {
+          "tag": "Genre:  Vedic Cosmic Rap  Nautanki folk + Hip-hop  Cinematic mythological rap  I",
+          "count": 9
+        },
+        {
+          "tag": "Hard Philosophical Rap — “नियमों का हऊआ”  दार्शनिक, व्यंग्यात्मक और तीखा clear m",
+          "count": 9
+        },
+        {
+          "tag": "Aggressive Indian hard rap, underground hip hop, dark spiritual theme, heavy 808",
+          "count": 5
+        },
+        {
+          "tag": "Dark Drift Phonk, Afrobeat percussion, Cyber-Sufi, Cinematic Space Atmosphere, H",
+          "count": 5
+        },
+        {
+          "tag": "Divine Vedic hip-hop rap with Sanskrit chanting, deep 808 bass, damaru percussio",
+          "count": 5
+        },
+        {
+          "tag": "Cinematic Hip-Hop, Dark Drill, 140 BPM, Deep Sub-bass, Atmospheric Wind SFX Intr",
+          "count": 4
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "d5f6d9bc-5c76-48d6-859d-957ef84f79b3",
+          "title": "हनुमान-अनुमान छट",
+          "sourceStyle": "Heavy cinematic Vedic metal-phonk epic, 115 to 142 BPM, roaring traditional dhol",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "Sanskrit",
+          "coverImage": "assets/covers/d5f6d9bc-5c76-48d6-859d-957ef84f79b3.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/d5f6d9bc-5c76-48d6-859d-957ef84f79b3.jpeg"
+        },
+        {
+          "sunoId": "39c60af7-873d-464c-ab83-86a116aa3a19",
+          "title": "ह्-हनु अनुमान",
+          "sourceStyle": "Fast-paced hyper-articulated phonetic staccato trap-folk, 115 BPM, rapid rhythmi",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/39c60af7-873d-464c-ab83-86a116aa3a19.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/39c60af7-873d-464c-ab83-86a116aa3a19.jpeg"
+        },
+        {
+          "sunoId": "0691bbaf-1f16-453a-9c00-0eecd71d1e14",
+          "title": "३३-डिजिट नियॉन",
+          "sourceStyle": "Hyper-aggressive cinematic Vedic folk-hop epic, 115 BPM, rapid-fire phonetic sta",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "Sanskrit",
+          "coverImage": "assets/covers/0691bbaf-1f16-453a-9c00-0eecd71d1e14.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/0691bbaf-1f16-453a-9c00-0eecd71d1e14.jpeg"
+        },
+        {
+          "sunoId": "61a1c2e8-6e9b-4636-b976-9c0a3c82cc60",
+          "title": "राजधर्म चक्र",
+          "sourceStyle": "Heavy Industrial Drop, Vedic chanting trap mix, fast-paced aggressive rap cadenc",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "Sanskrit",
+          "coverImage": "assets/covers/61a1c2e8-6e9b-4636-b976-9c0a3c82cc60.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/61a1c2e8-6e9b-4636-b976-9c0a3c82cc60.jpeg"
+        },
+        {
+          "sunoId": "0551f9c5-85b2-43c5-a715-b29b3a10df0c",
+          "title": "कबीर निर्गुण",
+          "sourceStyle": "Acoustic Neural Trans fused with Raw Crisp Drill Beats, emotional Sufi-Drill voc",
+          "canonicalTheme": "Bhakti & Katha",
+          "language": "Hindi",
+          "coverImage": "assets/covers/0551f9c5-85b2-43c5-a715-b29b3a10df0c.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/0551f9c5-85b2-43c5-a715-b29b3a10df0c.jpeg"
+        },
+        {
+          "sunoId": "c7fabad5-bd6d-4a60-b985-ad0aae6819c3",
+          "title": "चणक्य चांदी",
+          "sourceStyle": "Aggressive Haryanvi Hyperrap fused with powerful Sufi Qawwali claps, crushing di",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/c7fabad5-bd6d-4a60-b985-ad0aae6819c3.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/c7fabad5-bd6d-4a60-b985-ad0aae6819c3.jpeg"
+        },
+        {
+          "sunoId": "f9f70b24-e62f-40a2-b42f-f3a0ba272777",
+          "title": "संप्रभुता का डंका",
+          "sourceStyle": "Dark Aggressive Cinematic Phonk, heavy brass orchestration, ancient Indian war d",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/f9f70b24-e62f-40a2-b42f-f3a0ba272777.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/f9f70b24-e62f-40a2-b42f-f3a0ba272777.jpeg"
+        },
+        {
+          "sunoId": "e1ec848b-c158-4366-ba75-bb0d12943801",
+          "title": "चाणक्य सिक्का",
+          "sourceStyle": "Aggressive Haryanvi Hyperrap fused with powerful Sufi Qawwali claps, high-impact",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/e1ec848b-c158-4366-ba75-bb0d12943801.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/e1ec848b-c158-4366-ba75-bb0d12943801.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/d5f6d9bc-5c76-48d6-859d-957ef84f79b3.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/d5f6d9bc-5c76-48d6-859d-957ef84f79b3.jpeg",
+      "coverTrack": {
+        "sunoId": "d5f6d9bc-5c76-48d6-859d-957ef84f79b3",
+        "title": "हनुमान-अनुमान छट",
+        "sourceStyle": "Heavy cinematic Vedic metal-phonk epic, 115 to 142 BPM, roaring traditional dhol"
+      }
+    },
+    {
+      "slug": "folk-fusion-lok-rang",
+      "title": "Folk Fusion Lok Rang",
+      "station": "ameerpur",
+      "description": "Indian regional folk, Rajasthani, Punjabi, Baul, Bhojpuri, Tamil, Telugu, Afghan, and fusion textures.",
+      "patterns": [
+        "folk",
+        "rajasthani",
+        "baul",
+        "bhangra",
+        "punjabi",
+        "bhojpuri",
+        "tamil",
+        "telugu",
+        "afghan",
+        "rubab",
+        "lok"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 276,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "Haryanvi Folk",
+          "count": 74
+        },
+        {
+          "tag": "Afro-Phonk Fusion, Vedic Chanting, Modern Indian Folk, Neon-Sufi, Syncopated Dje",
+          "count": 9
+        },
+        {
+          "tag": "Genre:  Vedic Cosmic Rap  Nautanki folk + Hip-hop  Cinematic mythological rap  I",
+          "count": 9
+        },
+        {
+          "tag": "Funky folk duet with earthy groove and sensual playful chemistry between lovers",
+          "count": 6
+        },
+        {
+          "tag": "soul devotional with live folk",
+          "count": 5
+        },
+        {
+          "tag": "Playful energetic Indian electronic folk-pop, 112 BPM, bouncy tech-folk drums, c",
+          "count": 4
+        },
+        {
+          "tag": "[Genre: Devotional Folk Rock, Bhajan, Energetic Chant, Rajasthani Folk] [Tempo:",
+          "count": 3
+        },
+        {
+          "tag": "[Genre: Haryanvi folk, Rajasthani folk, Afghan rubab, dambura, dhol, bakhshi sty",
+          "count": 3
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "39c60af7-873d-464c-ab83-86a116aa3a19",
+          "title": "ह्-हनु अनुमान",
+          "sourceStyle": "Fast-paced hyper-articulated phonetic staccato trap-folk, 115 BPM, rapid rhythmi",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/39c60af7-873d-464c-ab83-86a116aa3a19.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/39c60af7-873d-464c-ab83-86a116aa3a19.jpeg"
+        },
+        {
+          "sunoId": "0691bbaf-1f16-453a-9c00-0eecd71d1e14",
+          "title": "३३-डिजिट नियॉन",
+          "sourceStyle": "Hyper-aggressive cinematic Vedic folk-hop epic, 115 BPM, rapid-fire phonetic sta",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "Sanskrit",
+          "coverImage": "assets/covers/0691bbaf-1f16-453a-9c00-0eecd71d1e14.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/0691bbaf-1f16-453a-9c00-0eecd71d1e14.jpeg"
+        },
+        {
+          "sunoId": "1fe3b620-3a18-4632-b128-12c1b2245f47",
+          "title": "Hyper-dynamic Indian electronic folk-pop",
+          "sourceStyle": "Sanatan & Vedic",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "English",
+          "coverImage": "assets/covers/1fe3b620-3a18-4632-b128-12c1b2245f47.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/1fe3b620-3a18-4632-b128-12c1b2245f47.jpeg"
+        },
+        {
+          "sunoId": "83db2f7e-ae48-418d-9587-c807af8e24e3",
+          "title": "चक्र-इंजन शंखनाद",
+          "sourceStyle": "Aggressive cinematic Vedic folk-hop epic, 115 BPM, intense traditional Chalisa r",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "Sanskrit",
+          "coverImage": "assets/covers/83db2f7e-ae48-418d-9587-c807af8e24e3.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/83db2f7e-ae48-418d-9587-c807af8e24e3.jpeg"
+        },
+        {
+          "sunoId": "684a2e17-9992-459b-970a-279f3f506e59",
+          "title": "Kash Bachpan Phir",
+          "sourceStyle": "Braj folk mixed with funky pop. Bollywood dance style. Fast tempo 115 BPM. Male",
+          "canonicalTheme": "Other / Misc",
+          "language": "English",
+          "coverImage": "assets/covers/684a2e17-9992-459b-970a-279f3f506e59.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/684a2e17-9992-459b-970a-279f3f506e59.jpeg"
+        },
+        {
+          "sunoId": "2cde1a1a-4b66-4a74-ba16-bd13a1f93fd4",
+          "title": "छत की चादर",
+          "sourceStyle": "[Style: Hindustani Classical + Folk + Bollywood Sad + Acoustic Guitar + Tabla +",
+          "canonicalTheme": "Classical & Raag",
+          "language": "Hindi",
+          "coverImage": "assets/covers/2cde1a1a-4b66-4a74-ba16-bd13a1f93fd4.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/2cde1a1a-4b66-4a74-ba16-bd13a1f93fd4.jpeg"
+        },
+        {
+          "sunoId": "467d741a-c022-402a-b47d-0a2abb53f043",
+          "title": "छत वाला सितारों",
+          "sourceStyle": "[Style: Hindustani Classical + Folk + Bollywood Sad + Acoustic Guitar + Tabla +",
+          "canonicalTheme": "Classical & Raag",
+          "language": "Hindi",
+          "coverImage": "assets/covers/467d741a-c022-402a-b47d-0a2abb53f043.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/467d741a-c022-402a-b47d-0a2abb53f043.jpeg"
+        },
+        {
+          "sunoId": "c0a0b8a2-6b5b-4c50-a7d1-5bd85bd7e24d",
+          "title": "छुक-छुक गाड़ी",
+          "sourceStyle": "Playful energetic Indian classical folk-pop, 112 BPM, bouncy tech-folk sarangi,",
+          "canonicalTheme": "Classical & Raag",
+          "language": "Hindi",
+          "coverImage": "assets/covers/c0a0b8a2-6b5b-4c50-a7d1-5bd85bd7e24d.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/c0a0b8a2-6b5b-4c50-a7d1-5bd85bd7e24d.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/39c60af7-873d-464c-ab83-86a116aa3a19.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/39c60af7-873d-464c-ab83-86a116aa3a19.jpeg",
+      "coverTrack": {
+        "sunoId": "39c60af7-873d-464c-ab83-86a116aa3a19",
+        "title": "ह्-हनु अनुमान",
+        "sourceStyle": "Fast-paced hyper-articulated phonetic staccato trap-folk, 115 BPM, rapid rhythmi"
+      }
+    },
+    {
+      "slug": "haryanvi-maati-ragni",
+      "title": "Haryanvi Maati Ragni",
+      "station": "ameerpur",
+      "description": "Haryanvi, ragni, village, maati, dholak, and desi folk energy.",
+      "patterns": [
+        "haryanvi",
+        "ragni",
+        "ragani",
+        "desi",
+        "gaon",
+        "village",
+        "maati",
+        "dholak",
+        "dangal"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 181,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "Haryanvi Folk",
+          "count": 74
+        },
+        {
+          "tag": "haryanvi super energy hip hop rap",
+          "count": 4
+        },
+        {
+          "tag": "trance hip-hop haryanvi flavour",
+          "count": 4
+        },
+        {
+          "tag": "[Genre: Haryanvi folk, Rajasthani folk, Afghan rubab, dambura, dhol, bakhshi sty",
+          "count": 3
+        },
+        {
+          "tag": "Haryanvi Ragni-Trap Fusion, Psytrance, 432Hz Tuning, Cinematic Vedic Bass, Aggre",
+          "count": 3
+        },
+        {
+          "tag": "Haryanvi-Bagri Folk Fusion, Psychedelic Trance, Khamak-driven rhythmic vibration",
+          "count": 3
+        },
+        {
+          "tag": "Style: Haryanvi Folk Ragni, Jogi Spiritual Anthem, Human Voice Driven, Minimal",
+          "count": 3
+        },
+        {
+          "tag": "\"High energy Haryanvi folk song, 120 BPM, heavy traditional dhol, stadium crowd",
+          "count": 2
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "c7fabad5-bd6d-4a60-b985-ad0aae6819c3",
+          "title": "चणक्य चांदी",
+          "sourceStyle": "Aggressive Haryanvi Hyperrap fused with powerful Sufi Qawwali claps, crushing di",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/c7fabad5-bd6d-4a60-b985-ad0aae6819c3.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/c7fabad5-bd6d-4a60-b985-ad0aae6819c3.jpeg"
+        },
+        {
+          "sunoId": "fc641c78-b723-4744-a9f0-93ca40542e4f",
+          "title": "समाज की खोज का सुनो इतिहास",
+          "sourceStyle": "Haryanvi Folk",
+          "canonicalTheme": "Haryanvi Folk",
+          "language": "Haryanvi",
+          "coverImage": "assets/covers/fc641c78-b723-4744-a9f0-93ca40542e4f.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/fc641c78-b723-4744-a9f0-93ca40542e4f.jpeg"
+        },
+        {
+          "sunoId": "4573b54b-63f0-4dac-9e7a-4ba9ddf8acbc",
+          "title": "समाज की खोज का सुनो इतिहास",
+          "sourceStyle": "Haryanvi Folk",
+          "canonicalTheme": "Haryanvi Folk",
+          "language": "Haryanvi",
+          "coverImage": "assets/covers/4573b54b-63f0-4dac-9e7a-4ba9ddf8acbc.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/4573b54b-63f0-4dac-9e7a-4ba9ddf8acbc.jpeg"
+        },
+        {
+          "sunoId": "e1ec848b-c158-4366-ba75-bb0d12943801",
+          "title": "चाणक्य सिक्का",
+          "sourceStyle": "Aggressive Haryanvi Hyperrap fused with powerful Sufi Qawwali claps, high-impact",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/e1ec848b-c158-4366-ba75-bb0d12943801.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/e1ec848b-c158-4366-ba75-bb0d12943801.jpeg"
+        },
+        {
+          "sunoId": "eae4f2af-ad53-414e-b47b-70dcd331427a",
+          "title": "चांदी का सिक्का",
+          "sourceStyle": "Aggressive Haryanvi Hyperrap fused with powerful Sufi Qawwali claps, high-impact",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/eae4f2af-ad53-414e-b47b-70dcd331427a.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/eae4f2af-ad53-414e-b47b-70dcd331427a.jpeg"
+        },
+        {
+          "sunoId": "961c3ee7-95d5-4fc3-86be-9fc9344cb1b1",
+          "title": "चाणक्य की नीति गाओ",
+          "sourceStyle": "Haryanvi Folk",
+          "canonicalTheme": "Haryanvi Folk",
+          "language": "Haryanvi",
+          "coverImage": "assets/covers/961c3ee7-95d5-4fc3-86be-9fc9344cb1b1.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/961c3ee7-95d5-4fc3-86be-9fc9344cb1b1.jpeg"
+        },
+        {
+          "sunoId": "d60bbdd7-852b-4638-9bfc-de2be9c9f0e9",
+          "title": "Reversed Sitar Whisper",
+          "sourceStyle": "Style: Desi Trap, Indian Hip Hop, Dark Trap, 140 BPM, male autotuned rap, heavy",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "English",
+          "coverImage": "assets/covers/d60bbdd7-852b-4638-9bfc-de2be9c9f0e9.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/d60bbdd7-852b-4638-9bfc-de2be9c9f0e9.jpeg"
+        },
+        {
+          "sunoId": "cb8ff251-d3a7-4271-a3a0-33969db28cb0",
+          "title": "Paradesi Wobble",
+          "sourceStyle": "[Genre: Psytrance, Funky House, Hyperpop, Indian Fusion, 145 BPM, Male Vocals,",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "English",
+          "coverImage": "assets/covers/cb8ff251-d3a7-4271-a3a0-33969db28cb0.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/cb8ff251-d3a7-4271-a3a0-33969db28cb0.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/c7fabad5-bd6d-4a60-b985-ad0aae6819c3.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/c7fabad5-bd6d-4a60-b985-ad0aae6819c3.jpeg",
+      "coverTrack": {
+        "sunoId": "c7fabad5-bd6d-4a60-b985-ad0aae6819c3",
+        "title": "चणक्य चांदी",
+        "sourceStyle": "Aggressive Haryanvi Hyperrap fused with powerful Sufi Qawwali claps, crushing di"
+      }
+    },
+    {
+      "slug": "cinematic-cosmic-epics",
+      "title": "Cinematic Cosmic Epics",
+      "station": "gurukul",
+      "description": "Cinematic, epic, orchestral, cosmic, mythological, and anthem-scale tracks.",
+      "patterns": [
+        "cinematic",
+        "epic",
+        "orchestral",
+        "anthem",
+        "war drums",
+        "space",
+        "cosmic",
+        "mythological",
+        "trailer"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 165,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "Genre:  Vedic Cosmic Rap  Nautanki folk + Hip-hop  Cinematic mythological rap  I",
+          "count": 9
+        },
+        {
+          "tag": "Dark Drift Phonk, Afrobeat percussion, Cyber-Sufi, Cinematic Space Atmosphere, H",
+          "count": 5
+        },
+        {
+          "tag": "Cinematic Hip-Hop, Dark Drill, 140 BPM, Deep Sub-bass, Atmospheric Wind SFX Intr",
+          "count": 4
+        },
+        {
+          "tag": "[Artist: P.H.K.D. (Pure Honest Kabir Driven) Genre: Spiritual Phonk / Cinematic",
+          "count": 3
+        },
+        {
+          "tag": "Cinematic Vedic Psy-Trap, 145 BPM, Heavy pulsating 808 Sub-bass, Fast-paced Trib",
+          "count": 3
+        },
+        {
+          "tag": "Epic divine hip-hop, heavy cinematic bass, conch shell intro, Vedic choir textur",
+          "count": 3
+        },
+        {
+          "tag": "Epic Indian patriotic cinematic war anthem about a brave soldier and a mother’s",
+          "count": 3
+        },
+        {
+          "tag": "Epic multilingual scientific rap mixing Latin chant, Siddham script mantra, Sans",
+          "count": 3
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "d5f6d9bc-5c76-48d6-859d-957ef84f79b3",
+          "title": "हनुमान-अनुमान छट",
+          "sourceStyle": "Heavy cinematic Vedic metal-phonk epic, 115 to 142 BPM, roaring traditional dhol",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "Sanskrit",
+          "coverImage": "assets/covers/d5f6d9bc-5c76-48d6-859d-957ef84f79b3.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/d5f6d9bc-5c76-48d6-859d-957ef84f79b3.jpeg"
+        },
+        {
+          "sunoId": "0691bbaf-1f16-453a-9c00-0eecd71d1e14",
+          "title": "३३-डिजिट नियॉन",
+          "sourceStyle": "Hyper-aggressive cinematic Vedic folk-hop epic, 115 BPM, rapid-fire phonetic sta",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "Sanskrit",
+          "coverImage": "assets/covers/0691bbaf-1f16-453a-9c00-0eecd71d1e14.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/0691bbaf-1f16-453a-9c00-0eecd71d1e14.jpeg"
+        },
+        {
+          "sunoId": "83db2f7e-ae48-418d-9587-c807af8e24e3",
+          "title": "चक्र-इंजन शंखनाद",
+          "sourceStyle": "Aggressive cinematic Vedic folk-hop epic, 115 BPM, intense traditional Chalisa r",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "Sanskrit",
+          "coverImage": "assets/covers/83db2f7e-ae48-418d-9587-c807af8e24e3.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/83db2f7e-ae48-418d-9587-c807af8e24e3.jpeg"
+        },
+        {
+          "sunoId": "f9f70b24-e62f-40a2-b42f-f3a0ba272777",
+          "title": "संप्रभुता का डंका",
+          "sourceStyle": "Dark Aggressive Cinematic Phonk, heavy brass orchestration, ancient Indian war d",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/f9f70b24-e62f-40a2-b42f-f3a0ba272777.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/f9f70b24-e62f-40a2-b42f-f3a0ba272777.jpeg"
+        },
+        {
+          "sunoId": "989e203d-59cf-43b4-b450-bd5f5fdf28a6",
+          "title": "ख़्वाब-धागा आधा",
+          "sourceStyle": "[Cinematic World-Fusion, Deep Spiritual Qawwali Vocals, 142 BPM, UK Drill influe",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/989e203d-59cf-43b4-b450-bd5f5fdf28a6.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/989e203d-59cf-43b4-b450-bd5f5fdf28a6.jpeg"
+        },
+        {
+          "sunoId": "081d7d0e-d5f4-455e-9716-46f8bfcd192f",
+          "title": "साहब खोज जंग",
+          "sourceStyle": "[Cinematic World-Fusion, Deep Spiritual Qawwali vocals mixed with High-Impact UK",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/081d7d0e-d5f4-455e-9716-46f8bfcd192f.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/081d7d0e-d5f4-455e-9716-46f8bfcd192f.jpeg"
+        },
+        {
+          "sunoId": "bdf090e4-3d39-4d47-863b-7bd1757feb8d",
+          "title": "बंसीधर ताज",
+          "sourceStyle": "Cinematic qawwali, Raga Todi, thousands of gopis + Radha solo, 60-120 BPM, femal",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/bdf090e4-3d39-4d47-863b-7bd1757feb8d.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/bdf090e4-3d39-4d47-863b-7bd1757feb8d.jpeg"
+        },
+        {
+          "sunoId": "4cacd011-00d8-408e-97ef-d7bfb366b23e",
+          "title": "महाराणा क़फ़िया",
+          "sourceStyle": "Epic Hindustani classical war anthem, Raag Bilawal, male heroic vocal with deep",
+          "canonicalTheme": "Classical & Raag",
+          "language": "Hindi",
+          "coverImage": "assets/covers/4cacd011-00d8-408e-97ef-d7bfb366b23e.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/4cacd011-00d8-408e-97ef-d7bfb366b23e.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/0691bbaf-1f16-453a-9c00-0eecd71d1e14.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/0691bbaf-1f16-453a-9c00-0eecd71d1e14.jpeg",
+      "coverTrack": {
+        "sunoId": "0691bbaf-1f16-453a-9c00-0eecd71d1e14",
+        "title": "३३-डिजिट नियॉन",
+        "sourceStyle": "Hyper-aggressive cinematic Vedic folk-hop epic, 115 BPM, rapid-fire phonetic sta"
+      }
+    },
+    {
+      "slug": "bhakti-katha-devotional",
+      "title": "Bhakti Katha Devotional",
+      "station": "kabir-clubbing",
+      "description": "Bhakti, bhajan, katha, aarti, chalisa, and devotional storytelling.",
+      "patterns": [
+        "bhakti",
+        "bhajan",
+        "devotional",
+        "katha",
+        "chalisa",
+        "aarti",
+        "pranam",
+        "jagarana",
+        "krishna",
+        "radha",
+        "gangaur"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 161,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "Bhakti & Katha",
+          "count": 92
+        },
+        {
+          "tag": "[Style: Indian classical, Raga Todi, slow 70 BPM, female devotional, acoustic, b",
+          "count": 5
+        },
+        {
+          "tag": "soul devotional with live folk",
+          "count": 5
+        },
+        {
+          "tag": "Style/Genre: Afro-house meets Sexy Drill meets Indian Bhajan, 110 BPM, heavy log",
+          "count": 4
+        },
+        {
+          "tag": "[Artist: P.H.K.D. (Pure Honest Kabir Driven) Genre: Spiritual Phonk / Cinematic",
+          "count": 3
+        },
+        {
+          "tag": "[Genre: Devotional Folk Rock, Bhajan, Energetic Chant, Rajasthani Folk] [Tempo:",
+          "count": 3
+        },
+        {
+          "tag": "[Style: Indian devotional bhajan, Hindustani classical, Raga Khamaj, Taal Keherw",
+          "count": 3
+        },
+        {
+          "tag": "Indian EDM bhajan fusion. Tempo: 110 BPM. Style: devotional electronic + festiva",
+          "count": 3
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "86fe2a68-593c-4b20-a76a-d0f504f89943",
+          "title": "हट हट हट होनी तू हट",
+          "sourceStyle": "Bhakti & Katha",
+          "canonicalTheme": "Bhakti & Katha",
+          "language": "Hindi",
+          "coverImage": "assets/covers/86fe2a68-593c-4b20-a76a-d0f504f89943.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/86fe2a68-593c-4b20-a76a-d0f504f89943.jpeg"
+        },
+        {
+          "sunoId": "974ae0bf-c90c-47bb-803a-18160360bc54",
+          "title": "हट हट हट होनी तू हट",
+          "sourceStyle": "Bhakti & Katha",
+          "canonicalTheme": "Bhakti & Katha",
+          "language": "Hindi",
+          "coverImage": "assets/covers/974ae0bf-c90c-47bb-803a-18160360bc54.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/974ae0bf-c90c-47bb-803a-18160360bc54.jpeg"
+        },
+        {
+          "sunoId": "75291d2d-784d-46f7-8c5a-774e99eb3e3e",
+          "title": "सिंहिका पथ दियाये केतु भागे भटका भटक",
+          "sourceStyle": "Bhakti & Katha",
+          "canonicalTheme": "Bhakti & Katha",
+          "language": "Hindi",
+          "coverImage": "assets/covers/75291d2d-784d-46f7-8c5a-774e99eb3e3e.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/75291d2d-784d-46f7-8c5a-774e99eb3e3e.jpeg"
+        },
+        {
+          "sunoId": "4ddbdc9c-240c-4e5d-8b50-ee61576d136e",
+          "title": "हट हट हट होनी तू हट",
+          "sourceStyle": "Bhakti & Katha",
+          "canonicalTheme": "Bhakti & Katha",
+          "language": "Hindi",
+          "coverImage": "assets/covers/4ddbdc9c-240c-4e5d-8b50-ee61576d136e.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/4ddbdc9c-240c-4e5d-8b50-ee61576d136e.jpeg"
+        },
+        {
+          "sunoId": "a24721b3-51c9-48b8-997b-0aab5ae3f158",
+          "title": "Vocals : \"हा... हू... हौ... हन्... हनु... हनु...",
+          "sourceStyle": "Bhakti & Katha",
+          "canonicalTheme": "Bhakti & Katha",
+          "language": "English",
+          "coverImage": "assets/covers/a24721b3-51c9-48b8-997b-0aab5ae3f158.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/a24721b3-51c9-48b8-997b-0aab5ae3f158.jpeg"
+        },
+        {
+          "sunoId": "83db2f7e-ae48-418d-9587-c807af8e24e3",
+          "title": "चक्र-इंजन शंखनाद",
+          "sourceStyle": "Aggressive cinematic Vedic folk-hop epic, 115 BPM, intense traditional Chalisa r",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "Sanskrit",
+          "coverImage": "assets/covers/83db2f7e-ae48-418d-9587-c807af8e24e3.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/83db2f7e-ae48-418d-9587-c807af8e24e3.jpeg"
+        },
+        {
+          "sunoId": "ce81e083-36e5-4e52-9024-06159cb42409",
+          "title": "काश वो बचपन फिर से लौट आए",
+          "sourceStyle": "Bhakti & Katha",
+          "canonicalTheme": "Bhakti & Katha",
+          "language": "Hindi",
+          "coverImage": "assets/covers/ce81e083-36e5-4e52-9024-06159cb42409.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/ce81e083-36e5-4e52-9024-06159cb42409.jpeg"
+        },
+        {
+          "sunoId": "6d0a9964-c0d3-45cf-925a-c9fa28f97ba3",
+          "title": "काश वो बचपन फिर से लौट आए",
+          "sourceStyle": "Bhakti & Katha",
+          "canonicalTheme": "Bhakti & Katha",
+          "language": "Hindi",
+          "coverImage": "assets/covers/6d0a9964-c0d3-45cf-925a-c9fa28f97ba3.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/6d0a9964-c0d3-45cf-925a-c9fa28f97ba3.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/86fe2a68-593c-4b20-a76a-d0f504f89943.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/86fe2a68-593c-4b20-a76a-d0f504f89943.jpeg",
+      "coverTrack": {
+        "sunoId": "86fe2a68-593c-4b20-a76a-d0f504f89943",
+        "title": "हट हट हट होनी तू हट",
+        "sourceStyle": "Bhakti & Katha"
+      }
+    },
+    {
+      "slug": "electronic-phonk-trance",
+      "title": "Electronic Phonk Trance",
+      "station": "kabir-clubbing",
+      "description": "EDM, electronic, psytrance, trance, cyberpunk, synthwave, hyperpop, afro, and phonk.",
+      "patterns": [
+        "edm",
+        "electronic",
+        "psytrance",
+        "trance",
+        "afro",
+        "phonk",
+        "cyberpunk",
+        "hyperpop",
+        "synthwave"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 97,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "Afro-Phonk Fusion, Vedic Chanting, Modern Indian Folk, Neon-Sufi, Syncopated Dje",
+          "count": 9
+        },
+        {
+          "tag": "Dark Drift Phonk, Afrobeat percussion, Cyber-Sufi, Cinematic Space Atmosphere, H",
+          "count": 5
+        },
+        {
+          "tag": "Male  vocal, hyperpop / hyperrap, high energy, fast tempo 160 BPM, aggressive 80",
+          "count": 4
+        },
+        {
+          "tag": "Playful energetic Indian electronic folk-pop, 112 BPM, bouncy tech-folk drums, c",
+          "count": 4
+        },
+        {
+          "tag": "Style/Genre: Afro-house meets Sexy Drill meets Indian Bhajan, 110 BPM, heavy log",
+          "count": 4
+        },
+        {
+          "tag": "trance hip-hop haryanvi flavour",
+          "count": 4
+        },
+        {
+          "tag": "[Artist: P.H.K.D. (Pure Honest Kabir Driven) Genre: Spiritual Phonk / Cinematic",
+          "count": 3
+        },
+        {
+          "tag": "Dark Drift Phonk, Heavy Distorted 808 Bass, Cowbell Melody, Fast Afro-Phonk Perc",
+          "count": 3
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "d5f6d9bc-5c76-48d6-859d-957ef84f79b3",
+          "title": "हनुमान-अनुमान छट",
+          "sourceStyle": "Heavy cinematic Vedic metal-phonk epic, 115 to 142 BPM, roaring traditional dhol",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "Sanskrit",
+          "coverImage": "assets/covers/d5f6d9bc-5c76-48d6-859d-957ef84f79b3.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/d5f6d9bc-5c76-48d6-859d-957ef84f79b3.jpeg"
+        },
+        {
+          "sunoId": "1fe3b620-3a18-4632-b128-12c1b2245f47",
+          "title": "Hyper-dynamic Indian electronic folk-pop",
+          "sourceStyle": "Sanatan & Vedic",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "English",
+          "coverImage": "assets/covers/1fe3b620-3a18-4632-b128-12c1b2245f47.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/1fe3b620-3a18-4632-b128-12c1b2245f47.jpeg"
+        },
+        {
+          "sunoId": "8334c7f3-00ab-48e5-8e90-fae9c7898ec4",
+          "title": "छुक-छुक भाषा गाड़ी",
+          "sourceStyle": "Playful energetic Indian electronic folk-pop, 112 BPM, bouncy tech-folk drums, c",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/8334c7f3-00ab-48e5-8e90-fae9c7898ec4.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/8334c7f3-00ab-48e5-8e90-fae9c7898ec4.jpeg"
+        },
+        {
+          "sunoId": "130d4a7c-79cc-4c0e-827e-a011ef1e0689",
+          "title": "छुक-छुक भाषा गाड़ी",
+          "sourceStyle": "Playful energetic Indian electronic folk-pop, 112 BPM, bouncy tech-folk drums, c",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/130d4a7c-79cc-4c0e-827e-a011ef1e0689.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/130d4a7c-79cc-4c0e-827e-a011ef1e0689.jpeg"
+        },
+        {
+          "sunoId": "4de46a49-de10-4bc4-8e89-bded6e92e5e8",
+          "title": "छुक-छुक भाषा गाड़ी",
+          "sourceStyle": "Playful energetic Indian electronic folk-pop, 112 BPM, bouncy tech-folk drums, c",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/4de46a49-de10-4bc4-8e89-bded6e92e5e8.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/4de46a49-de10-4bc4-8e89-bded6e92e5e8.jpeg"
+        },
+        {
+          "sunoId": "d3047e94-747e-478b-84d0-ebcd931b6ebf",
+          "title": "छुक-छुक कोडिंग गाड़ी",
+          "sourceStyle": "Playful energetic Indian electronic folk-pop, 112 BPM, bouncy tech-folk drums, c",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/d3047e94-747e-478b-84d0-ebcd931b6ebf.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/d3047e94-747e-478b-84d0-ebcd931b6ebf.jpeg"
+        },
+        {
+          "sunoId": "f9f70b24-e62f-40a2-b42f-f3a0ba272777",
+          "title": "संप्रभुता का डंका",
+          "sourceStyle": "Dark Aggressive Cinematic Phonk, heavy brass orchestration, ancient Indian war d",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/f9f70b24-e62f-40a2-b42f-f3a0ba272777.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/f9f70b24-e62f-40a2-b42f-f3a0ba272777.jpeg"
+        },
+        {
+          "sunoId": "da33361a-8617-4815-b444-dd6d95f00bca",
+          "title": "डिजिटल गुरुकुल",
+          "sourceStyle": "High-energy Cyberpunk Phonk fused with Aggressive Indian Drill, crushing distort",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/da33361a-8617-4815-b444-dd6d95f00bca.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/da33361a-8617-4815-b444-dd6d95f00bca.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/1fe3b620-3a18-4632-b128-12c1b2245f47.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/1fe3b620-3a18-4632-b128-12c1b2245f47.jpeg",
+      "coverTrack": {
+        "sunoId": "1fe3b620-3a18-4632-b128-12c1b2245f47",
+        "title": "Hyper-dynamic Indian electronic folk-pop",
+        "sourceStyle": "Sanatan & Vedic"
+      }
+    },
+    {
+      "slug": "kabir-sufi-qawwali",
+      "title": "Kabir Sufi Qawwali",
+      "station": "kabir-clubbing",
+      "description": "Kabir, Sufi, qawwali, ghazal, nirgun, and mystic verse fusion.",
+      "patterns": [
+        "kabir",
+        "sufi",
+        "qawwali",
+        "ghazal",
+        "nirguni",
+        "raskhan",
+        "fakir"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 97,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "Afro-Phonk Fusion, Vedic Chanting, Modern Indian Folk, Neon-Sufi, Syncopated Dje",
+          "count": 9
+        },
+        {
+          "tag": "Dark Drift Phonk, Afrobeat percussion, Cyber-Sufi, Cinematic Space Atmosphere, H",
+          "count": 5
+        },
+        {
+          "tag": "[Style: Sufi Qawwali, Male vocal solo and ensemble, No instruments, Only human v",
+          "count": 4
+        },
+        {
+          "tag": "style  qawwali with heavy taan  murki  toda  hindustani classical ornamentation",
+          "count": 4
+        },
+        {
+          "tag": "[Artist: P.H.K.D. (Pure Honest Kabir Driven) Genre: Spiritual Phonk / Cinematic",
+          "count": 3
+        },
+        {
+          "tag": "Raw street temple qawwali, Raga Todi, live at Nidhivan Vrindavan, thousands of g",
+          "count": 3
+        },
+        {
+          "tag": "style  slow sufi ghazal  indian classical  hindustani  minimal  ambient  no perc",
+          "count": 3
+        },
+        {
+          "tag": "[Genre: Qawwali × Hip-Hop Fusion, Indian Devotional Folk, Comedy, Urban Desi, Ma",
+          "count": 2
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "0551f9c5-85b2-43c5-a715-b29b3a10df0c",
+          "title": "कबीर निर्गुण",
+          "sourceStyle": "Acoustic Neural Trans fused with Raw Crisp Drill Beats, emotional Sufi-Drill voc",
+          "canonicalTheme": "Bhakti & Katha",
+          "language": "Hindi",
+          "coverImage": "assets/covers/0551f9c5-85b2-43c5-a715-b29b3a10df0c.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/0551f9c5-85b2-43c5-a715-b29b3a10df0c.jpeg"
+        },
+        {
+          "sunoId": "c7fabad5-bd6d-4a60-b985-ad0aae6819c3",
+          "title": "चणक्य चांदी",
+          "sourceStyle": "Aggressive Haryanvi Hyperrap fused with powerful Sufi Qawwali claps, crushing di",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/c7fabad5-bd6d-4a60-b985-ad0aae6819c3.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/c7fabad5-bd6d-4a60-b985-ad0aae6819c3.jpeg"
+        },
+        {
+          "sunoId": "e1ec848b-c158-4366-ba75-bb0d12943801",
+          "title": "चाणक्य सिक्का",
+          "sourceStyle": "Aggressive Haryanvi Hyperrap fused with powerful Sufi Qawwali claps, high-impact",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/e1ec848b-c158-4366-ba75-bb0d12943801.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/e1ec848b-c158-4366-ba75-bb0d12943801.jpeg"
+        },
+        {
+          "sunoId": "eae4f2af-ad53-414e-b47b-70dcd331427a",
+          "title": "चांदी का सिक्का",
+          "sourceStyle": "Aggressive Haryanvi Hyperrap fused with powerful Sufi Qawwali claps, high-impact",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/eae4f2af-ad53-414e-b47b-70dcd331427a.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/eae4f2af-ad53-414e-b47b-70dcd331427a.jpeg"
+        },
+        {
+          "sunoId": "55b29326-16e4-4e61-84ab-ce7f6cd164df",
+          "title": "साती माटी-चोला",
+          "sourceStyle": "Style: Raga Bhairavi, Raga Yaman, Raga Malkauns, Sufi fusion, Rajasthani folk,",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/55b29326-16e4-4e61-84ab-ce7f6cd164df.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/55b29326-16e4-4e61-84ab-ce7f6cd164df.jpeg"
+        },
+        {
+          "sunoId": "989e203d-59cf-43b4-b450-bd5f5fdf28a6",
+          "title": "ख़्वाब-धागा आधा",
+          "sourceStyle": "[Cinematic World-Fusion, Deep Spiritual Qawwali Vocals, 142 BPM, UK Drill influe",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/989e203d-59cf-43b4-b450-bd5f5fdf28a6.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/989e203d-59cf-43b4-b450-bd5f5fdf28a6.jpeg"
+        },
+        {
+          "sunoId": "081d7d0e-d5f4-455e-9716-46f8bfcd192f",
+          "title": "साहब खोज जंग",
+          "sourceStyle": "[Cinematic World-Fusion, Deep Spiritual Qawwali vocals mixed with High-Impact UK",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/081d7d0e-d5f4-455e-9716-46f8bfcd192f.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/081d7d0e-d5f4-455e-9716-46f8bfcd192f.jpeg"
+        },
+        {
+          "sunoId": "d02ff9aa-08de-4c3c-894a-5d78bf3883f8",
+          "title": "जैठ की दुपहरी",
+          "sourceStyle": "[Style: Slow emotional ghazal, Sufi, male voice, crying tone, melancholic, acous",
+          "canonicalTheme": "Love & Virah",
+          "language": "Hindi",
+          "coverImage": "assets/covers/d02ff9aa-08de-4c3c-894a-5d78bf3883f8.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/d02ff9aa-08de-4c3c-894a-5d78bf3883f8.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/0551f9c5-85b2-43c5-a715-b29b3a10df0c.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/0551f9c5-85b2-43c5-a715-b29b3a10df0c.jpeg",
+      "coverTrack": {
+        "sunoId": "0551f9c5-85b2-43c5-a715-b29b3a10df0c",
+        "title": "कबीर निर्गुण",
+        "sourceStyle": "Acoustic Neural Trans fused with Raw Crisp Drill Beats, emotional Sufi-Drill voc"
+      }
+    },
+    {
+      "slug": "neural-ai-radio-lab",
+      "title": "Neural AI Radio Lab",
+      "station": "gurukul",
+      "description": "Neural, AI, quantum, scientific, script, coding, telecast, and experimental radio-lab concepts.",
+      "patterns": [
+        "neural",
+        "ai",
+        "quantum",
+        "scientific",
+        "siddham",
+        "code",
+        "coding",
+        "radio program",
+        "telecast"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 86,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "Sanatan & Vedic",
+          "count": 13
+        },
+        {
+          "tag": "aghories sitting with german sages... adwait sitting sings his heart out in ange",
+          "count": 4
+        },
+        {
+          "tag": "Epic multilingual scientific rap mixing Latin chant, Siddham script mantra, Sans",
+          "count": 3
+        },
+        {
+          "tag": "Haryanvi Ragni-Trap Fusion, Psytrance, 432Hz Tuning, Cinematic Vedic Bass, Aggre",
+          "count": 3
+        },
+        {
+          "tag": "start with hyperfun funk hiphop adwait and bhairav on bike maya and Pop, Latin P",
+          "count": 3
+        },
+        {
+          "tag": "[Style: Cyberpunk + Hyper Rap + Neural Lo-fi + Raw Kabir + Time Travel Vibe + Da",
+          "count": 2
+        },
+        {
+          "tag": "[Style: Indian Folk + Rajasthani Mand + Tribal + Ambient + Devotional + Cinemati",
+          "count": 2
+        },
+        {
+          "tag": "[Style: Rajasthani Folk Fusion, Mand, Ghoomar, Devotional]  [Concept] Gangaur so",
+          "count": 2
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "2cba3a04-39a7-4cb7-8c74-33800f3a25d7",
+          "title": "काली कलम",
+          "sourceStyle": ".  🎵 KA KAA RAHASYA (क का रहस्य) A Narrator-Style Neural Mystical Ballad Directi",
+          "canonicalTheme": "Naagin & Mystic",
+          "language": "Hindi",
+          "coverImage": "assets/covers/2cba3a04-39a7-4cb7-8c74-33800f3a25d7.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/2cba3a04-39a7-4cb7-8c74-33800f3a25d7.jpeg"
+        },
+        {
+          "sunoId": "3c08a390-57b0-4deb-b710-ffd81cd63cec",
+          "title": "Ka Kau Question",
+          "sourceStyle": "🎵 Song: Ka Kaa Rahasya (The Secret of 'Ka') Style: Neural Narrative mystical bal",
+          "canonicalTheme": "Naagin & Mystic",
+          "language": "English",
+          "coverImage": "assets/covers/3c08a390-57b0-4deb-b710-ffd81cd63cec.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/3c08a390-57b0-4deb-b710-ffd81cd63cec.jpeg"
+        },
+        {
+          "sunoId": "0551f9c5-85b2-43c5-a715-b29b3a10df0c",
+          "title": "कबीर निर्गुण",
+          "sourceStyle": "Acoustic Neural Trans fused with Raw Crisp Drill Beats, emotional Sufi-Drill voc",
+          "canonicalTheme": "Bhakti & Katha",
+          "language": "Hindi",
+          "coverImage": "assets/covers/0551f9c5-85b2-43c5-a715-b29b3a10df0c.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/0551f9c5-85b2-43c5-a715-b29b3a10df0c.jpeg"
+        },
+        {
+          "sunoId": "ccd4fdeb-6879-4797-ae1f-f37fe6330b64",
+          "title": "पिंगल-बाइनरी ट्राम",
+          "sourceStyle": "neural radio program for students",
+          "canonicalTheme": "Bhakti & Katha",
+          "language": "Hindi",
+          "coverImage": "assets/covers/ccd4fdeb-6879-4797-ae1f-f37fe6330b64.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/ccd4fdeb-6879-4797-ae1f-f37fe6330b64.jpeg"
+        },
+        {
+          "sunoId": "ac3bbd7c-13ce-4c58-8852-a3ba11cf9d62",
+          "title": "कोर लॉग्स लाइव",
+          "sourceStyle": "neural radio program for students",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/ac3bbd7c-13ce-4c58-8852-a3ba11cf9d62.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/ac3bbd7c-13ce-4c58-8852-a3ba11cf9d62.jpeg"
+        },
+        {
+          "sunoId": "9e69f682-8e35-49be-bd83-e64b31b91832",
+          "title": "डिजिटल गुरुकुल लॉग्स",
+          "sourceStyle": "Style: real radio, sanaatana telecast",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/9e69f682-8e35-49be-bd83-e64b31b91832.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/9e69f682-8e35-49be-bd83-e64b31b91832.jpeg"
+        },
+        {
+          "sunoId": "1fe24a9e-568a-49b0-ba5b-a24b30c0d106",
+          "title": "डिजिटल गुरुकुल लॉग्स",
+          "sourceStyle": "Style: real radio, sanaatana telecast",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/1fe24a9e-568a-49b0-ba5b-a24b30c0d106.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/1fe24a9e-568a-49b0-ba5b-a24b30c0d106.jpeg"
+        },
+        {
+          "sunoId": "161f3183-f997-4981-afda-e28650b9f92d",
+          "title": "डिजिटल गुरुकुल-कनेक्टर",
+          "sourceStyle": "Style: radio sanaatana telecast",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/161f3183-f997-4981-afda-e28650b9f92d.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/161f3183-f997-4981-afda-e28650b9f92d.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/2cba3a04-39a7-4cb7-8c74-33800f3a25d7.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/2cba3a04-39a7-4cb7-8c74-33800f3a25d7.jpeg",
+      "coverTrack": {
+        "sunoId": "2cba3a04-39a7-4cb7-8c74-33800f3a25d7",
+        "title": "काली कलम",
+        "sourceStyle": ".  🎵 KA KAA RAHASYA (क का रहस्य) A Narrator-Style Neural Mystical Ballad Directi"
+      }
+    },
+    {
+      "slug": "classical-raga-darbar",
+      "title": "Classical Raga Darbar",
+      "station": "sanaatana-vaigyaniq",
+      "description": "Hindustani classical, raga, raag, bandish, dhrupad, and tala-led works.",
+      "patterns": [
+        "raga",
+        "raag",
+        "classical",
+        "hindustani",
+        "bandish",
+        "dhrupad",
+        "todi",
+        "yaman",
+        "bhairavi",
+        "darbari",
+        "bilawal",
+        "malkauns",
+        "khamaj",
+        "alap"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 84,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "[Style: Indian classical, Raga Todi, slow 70 BPM, female devotional, acoustic, b",
+          "count": 5
+        },
+        {
+          "tag": "\"Indian Classical Bandish, Hindustani Vocal, Ragam-Tanam-Pallavi style, Acapella",
+          "count": 4
+        },
+        {
+          "tag": "Indian classical, Raga Darbari Kanhada, slow alap intro, deep dark mood, tanpura",
+          "count": 4
+        },
+        {
+          "tag": "style  qawwali with heavy taan  murki  toda  hindustani classical ornamentation",
+          "count": 4
+        },
+        {
+          "tag": "[Style: Indian devotional bhajan, Hindustani classical, Raga Khamaj, Taal Keherw",
+          "count": 3
+        },
+        {
+          "tag": "Genre: Mystical Sanskrit Philosophy Song  Style: Indian classical + cinematic am",
+          "count": 3
+        },
+        {
+          "tag": "Raw street temple qawwali, Raga Todi, live at Nidhivan Vrindavan, thousands of g",
+          "count": 3
+        },
+        {
+          "tag": "style  slow sufi ghazal  indian classical  hindustani  minimal  ambient  no perc",
+          "count": 3
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "2cde1a1a-4b66-4a74-ba16-bd13a1f93fd4",
+          "title": "छत की चादर",
+          "sourceStyle": "[Style: Hindustani Classical + Folk + Bollywood Sad + Acoustic Guitar + Tabla +",
+          "canonicalTheme": "Classical & Raag",
+          "language": "Hindi",
+          "coverImage": "assets/covers/2cde1a1a-4b66-4a74-ba16-bd13a1f93fd4.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/2cde1a1a-4b66-4a74-ba16-bd13a1f93fd4.jpeg"
+        },
+        {
+          "sunoId": "467d741a-c022-402a-b47d-0a2abb53f043",
+          "title": "छत वाला सितारों",
+          "sourceStyle": "[Style: Hindustani Classical + Folk + Bollywood Sad + Acoustic Guitar + Tabla +",
+          "canonicalTheme": "Classical & Raag",
+          "language": "Hindi",
+          "coverImage": "assets/covers/467d741a-c022-402a-b47d-0a2abb53f043.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/467d741a-c022-402a-b47d-0a2abb53f043.jpeg"
+        },
+        {
+          "sunoId": "c0a0b8a2-6b5b-4c50-a7d1-5bd85bd7e24d",
+          "title": "छुक-छुक गाड़ी",
+          "sourceStyle": "Playful energetic Indian classical folk-pop, 112 BPM, bouncy tech-folk sarangi,",
+          "canonicalTheme": "Classical & Raag",
+          "language": "Hindi",
+          "coverImage": "assets/covers/c0a0b8a2-6b5b-4c50-a7d1-5bd85bd7e24d.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/c0a0b8a2-6b5b-4c50-a7d1-5bd85bd7e24d.jpeg"
+        },
+        {
+          "sunoId": "55b29326-16e4-4e61-84ab-ce7f6cd164df",
+          "title": "साती माटी-चोला",
+          "sourceStyle": "Style: Raga Bhairavi, Raga Yaman, Raga Malkauns, Sufi fusion, Rajasthani folk,",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/55b29326-16e4-4e61-84ab-ce7f6cd164df.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/55b29326-16e4-4e61-84ab-ce7f6cd164df.jpeg"
+        },
+        {
+          "sunoId": "97f6c423-1e8d-4dec-92a5-a11b38363ee4",
+          "title": "माँ की ममता-8D",
+          "sourceStyle": "ध्वनि का स्तर: इसे 8D साउंड में अनुभव करें, जहाँ 'राग माता' के सुर आपके चारों ओर",
+          "canonicalTheme": "Classical & Raag",
+          "language": "English",
+          "coverImage": "assets/covers/97f6c423-1e8d-4dec-92a5-a11b38363ee4.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/97f6c423-1e8d-4dec-92a5-a11b38363ee4.jpeg"
+        },
+        {
+          "sunoId": "cf6d9e3e-ae51-435d-895a-c4d7f95ebf4d",
+          "title": "मिट्टी-तालि उछाल",
+          "sourceStyle": "1980s lo-fi field recording, live at Nidhivan temple courtyard, Raga Todi, Raw B",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/cf6d9e3e-ae51-435d-895a-c4d7f95ebf4d.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/cf6d9e3e-ae51-435d-895a-c4d7f95ebf4d.jpeg"
+        },
+        {
+          "sunoId": "a0c2cd04-1c26-49ec-b699-610ef0a62630",
+          "title": "बंसी की तान",
+          "sourceStyle": "1980s lo-fi field recording, live at Nidhivan temple courtyard, Raga Todi, Raw B",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/a0c2cd04-1c26-49ec-b699-610ef0a62630.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/a0c2cd04-1c26-49ec-b699-610ef0a62630.jpeg"
+        },
+        {
+          "sunoId": "bd82b09f-8f58-4b13-8ae8-b3c88ea71ee4",
+          "title": "बंसी तान बिरह",
+          "sourceStyle": "Raw street temple qawwali, Raga Todi, live at Nidhivan Vrindavan, thousands of g",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/bd82b09f-8f58-4b13-8ae8-b3c88ea71ee4.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/bd82b09f-8f58-4b13-8ae8-b3c88ea71ee4.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/2cde1a1a-4b66-4a74-ba16-bd13a1f93fd4.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/2cde1a1a-4b66-4a74-ba16-bd13a1f93fd4.jpeg",
+      "coverTrack": {
+        "sunoId": "2cde1a1a-4b66-4a74-ba16-bd13a1f93fd4",
+        "title": "छत की चादर",
+        "sourceStyle": "[Style: Hindustani Classical + Folk + Bollywood Sad + Acoustic Guitar + Tabla +"
+      }
+    },
+    {
+      "slug": "dark-experimental-soundscapes",
+      "title": "Dark Experimental Soundscapes",
+      "station": "gurukul",
+      "description": "Dark, gothic, haunting, experimental, avant-garde, ambient, drone, and horror-leaning works.",
+      "patterns": [
+        "dark",
+        "horror",
+        "gothic",
+        "experimental",
+        "avant-garde",
+        "ambient",
+        "drone",
+        "haunting"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 73,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "Aggressive Indian hard rap, underground hip hop, dark spiritual theme, heavy 808",
+          "count": 5
+        },
+        {
+          "tag": "Dark Drift Phonk, Afrobeat percussion, Cyber-Sufi, Cinematic Space Atmosphere, H",
+          "count": 5
+        },
+        {
+          "tag": "Cinematic Hip-Hop, Dark Drill, 140 BPM, Deep Sub-bass, Atmospheric Wind SFX Intr",
+          "count": 4
+        },
+        {
+          "tag": "dark erotic hip hop, hyper rap, horrorcore, trap metal, 150 BPM, distorted 808s,",
+          "count": 4
+        },
+        {
+          "tag": "Indian classical, Raga Darbari Kanhada, slow alap intro, deep dark mood, tanpura",
+          "count": 4
+        },
+        {
+          "tag": "Dark Drift Phonk, Heavy Distorted 808 Bass, Cowbell Melody, Fast Afro-Phonk Perc",
+          "count": 3
+        },
+        {
+          "tag": "style  slow sufi ghazal  indian classical  hindustani  minimal  ambient  no perc",
+          "count": 3
+        },
+        {
+          "tag": "[Genre: Cinematic Horror × Rajasthani Folk × Dark Disco × Haryanvi Vampire Weste",
+          "count": 2
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "f9f70b24-e62f-40a2-b42f-f3a0ba272777",
+          "title": "संप्रभुता का डंका",
+          "sourceStyle": "Dark Aggressive Cinematic Phonk, heavy brass orchestration, ancient Indian war d",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/f9f70b24-e62f-40a2-b42f-f3a0ba272777.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/f9f70b24-e62f-40a2-b42f-f3a0ba272777.jpeg"
+        },
+        {
+          "sunoId": "d60bbdd7-852b-4638-9bfc-de2be9c9f0e9",
+          "title": "Reversed Sitar Whisper",
+          "sourceStyle": "Style: Desi Trap, Indian Hip Hop, Dark Trap, 140 BPM, male autotuned rap, heavy",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "English",
+          "coverImage": "assets/covers/d60bbdd7-852b-4638-9bfc-de2be9c9f0e9.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/d60bbdd7-852b-4638-9bfc-de2be9c9f0e9.jpeg"
+        },
+        {
+          "sunoId": "091ab81d-180d-4521-8005-1d08377b3f14",
+          "title": "साँस का पहरा",
+          "sourceStyle": "Cinematic Modern Ghazal, Dark Ambient, Ethereal Baritone Male Vocals, Deep Cello",
+          "canonicalTheme": "Love & Virah",
+          "language": "Hindi",
+          "coverImage": "assets/covers/091ab81d-180d-4521-8005-1d08377b3f14.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/091ab81d-180d-4521-8005-1d08377b3f14.jpeg"
+        },
+        {
+          "sunoId": "4cccdb69-4cb8-41f3-91bc-bac82f3583af",
+          "title": "WhatsApp Image 2025-06-17 at 20.41.57 (Remastered)",
+          "sourceStyle": "A dark and atmospheric Hindi indie-folk track with a haunting, cinematic quality",
+          "canonicalTheme": "Other / Misc",
+          "language": "English",
+          "coverImage": "assets/covers/4cccdb69-4cb8-41f3-91bc-bac82f3583af.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/4cccdb69-4cb8-41f3-91bc-bac82f3583af.jpeg"
+        },
+        {
+          "sunoId": "809507be-5a63-49dc-8e0d-a16b87287cc8",
+          "title": "पिंकी नाच",
+          "sourceStyle": "Raw horror folk. Haryanvi male vocal - broken, crying, manic. Female vampire voc",
+          "canonicalTheme": "Haryanvi Folk",
+          "language": "Haryanvi",
+          "coverImage": "assets/covers/809507be-5a63-49dc-8e0d-a16b87287cc8.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/809507be-5a63-49dc-8e0d-a16b87287cc8.jpeg"
+        },
+        {
+          "sunoId": "67e8aee2-9b5a-47cc-88a6-741643a45909",
+          "title": "पिंकी थाली",
+          "sourceStyle": "[Genre: Cinematic Horror × Rajasthani Folk × Dark Disco × Haryanvi Vampire Weste",
+          "canonicalTheme": "Haryanvi Folk",
+          "language": "Haryanvi",
+          "coverImage": "assets/covers/67e8aee2-9b5a-47cc-88a6-741643a45909.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/67e8aee2-9b5a-47cc-88a6-741643a45909.jpeg"
+        },
+        {
+          "sunoId": "8f0c2cf6-a3ee-488c-a85c-95779c10cd5c",
+          "title": "पिंकी का थाली",
+          "sourceStyle": "[Genre: Cinematic Horror × Rajasthani Folk × Dark Disco × Haryanvi Vampire Weste",
+          "canonicalTheme": "Haryanvi Folk",
+          "language": "Haryanvi",
+          "coverImage": "assets/covers/8f0c2cf6-a3ee-488c-a85c-95779c10cd5c.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/8f0c2cf6-a3ee-488c-a85c-95779c10cd5c.jpeg"
+        },
+        {
+          "sunoId": "1b8e0980-f89e-41df-9a65-5a6eb313c777",
+          "title": "पिंकी की थाली",
+          "sourceStyle": "[Genre: Rajasthani Folk Horror × Disco × Dark Electronic] [BPM: 128, Key: D mino",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/1b8e0980-f89e-41df-9a65-5a6eb313c777.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/1b8e0980-f89e-41df-9a65-5a6eb313c777.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/f9f70b24-e62f-40a2-b42f-f3a0ba272777.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/f9f70b24-e62f-40a2-b42f-f3a0ba272777.jpeg",
+      "coverTrack": {
+        "sunoId": "f9f70b24-e62f-40a2-b42f-f3a0ba272777",
+        "title": "संप्रभुता का डंका",
+        "sourceStyle": "Dark Aggressive Cinematic Phonk, heavy brass orchestration, ancient Indian war d"
+      }
+    },
+    {
+      "slug": "love-virah-ghazal",
+      "title": "Love Virah Ghazal",
+      "station": "ameerpur",
+      "description": "Love, virah, longing, romantic ballad, melancholy, lullaby, and emotional ghazal works.",
+      "patterns": [
+        "love",
+        "virah",
+        "romantic",
+        "ballad",
+        "longing",
+        "melanchol",
+        "sad",
+        "lullaby"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 68,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "Love & Virah",
+          "count": 13
+        },
+        {
+          "tag": "Funky folk duet with earthy groove and sensual playful chemistry between lovers",
+          "count": 6
+        },
+        {
+          "tag": "Bilingual indie ballad in E minor, 68 BPM. Intimate, healing, unresolved. Intro:",
+          "count": 3
+        },
+        {
+          "tag": "Funky folk duet about lovers discovering cosmic love and body-mind harmony. Use",
+          "count": 3
+        },
+        {
+          "tag": "Lullaby, Indian Folk, Soft Female or Male Vocals, Harmonium, Gentle Tabla, Bansu",
+          "count": 3
+        },
+        {
+          "tag": "[Style: Hindustani Classical + Folk + Bollywood Sad + Acoustic Guitar + Tabla +",
+          "count": 2
+        },
+        {
+          "tag": "[Style: World's saddest folk singing, extremely melancholic, cry voice, male rur",
+          "count": 2
+        },
+        {
+          "tag": "Bollywood Romantic Duet Emotional Ghazal Pop Soft Acoustic Love Song",
+          "count": 2
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "2cde1a1a-4b66-4a74-ba16-bd13a1f93fd4",
+          "title": "छत की चादर",
+          "sourceStyle": "[Style: Hindustani Classical + Folk + Bollywood Sad + Acoustic Guitar + Tabla +",
+          "canonicalTheme": "Classical & Raag",
+          "language": "Hindi",
+          "coverImage": "assets/covers/2cde1a1a-4b66-4a74-ba16-bd13a1f93fd4.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/2cde1a1a-4b66-4a74-ba16-bd13a1f93fd4.jpeg"
+        },
+        {
+          "sunoId": "467d741a-c022-402a-b47d-0a2abb53f043",
+          "title": "छत वाला सितारों",
+          "sourceStyle": "[Style: Hindustani Classical + Folk + Bollywood Sad + Acoustic Guitar + Tabla +",
+          "canonicalTheme": "Classical & Raag",
+          "language": "Hindi",
+          "coverImage": "assets/covers/467d741a-c022-402a-b47d-0a2abb53f043.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/467d741a-c022-402a-b47d-0a2abb53f043.jpeg"
+        },
+        {
+          "sunoId": "2cba3a04-39a7-4cb7-8c74-33800f3a25d7",
+          "title": "काली कलम",
+          "sourceStyle": ".  🎵 KA KAA RAHASYA (क का रहस्य) A Narrator-Style Neural Mystical Ballad Directi",
+          "canonicalTheme": "Naagin & Mystic",
+          "language": "Hindi",
+          "coverImage": "assets/covers/2cba3a04-39a7-4cb7-8c74-33800f3a25d7.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/2cba3a04-39a7-4cb7-8c74-33800f3a25d7.jpeg"
+        },
+        {
+          "sunoId": "6c05306f-bf60-44fc-9a7c-cd6a8d07190d",
+          "title": "छुक-छुक चलती भाषा की गाड़ी",
+          "sourceStyle": "Love & Virah",
+          "canonicalTheme": "Love & Virah",
+          "language": "Hindi",
+          "coverImage": "assets/covers/6c05306f-bf60-44fc-9a7c-cd6a8d07190d.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/6c05306f-bf60-44fc-9a7c-cd6a8d07190d.jpeg"
+        },
+        {
+          "sunoId": "935837be-7dfb-4f7d-ae0c-36743a8de966",
+          "title": "छुक-छुक चलती भाषा की गाड़ी",
+          "sourceStyle": "Love & Virah",
+          "canonicalTheme": "Love & Virah",
+          "language": "Hindi",
+          "coverImage": "assets/covers/935837be-7dfb-4f7d-ae0c-36743a8de966.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/935837be-7dfb-4f7d-ae0c-36743a8de966.jpeg"
+        },
+        {
+          "sunoId": "e73bb277-81d9-40d3-94bc-f8f3f7893688",
+          "title": "O my darling",
+          "sourceStyle": "Love & Virah",
+          "canonicalTheme": "Love & Virah",
+          "language": "English",
+          "coverImage": "assets/covers/e73bb277-81d9-40d3-94bc-f8f3f7893688.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/e73bb277-81d9-40d3-94bc-f8f3f7893688.jpeg"
+        },
+        {
+          "sunoId": "8433a493-5a44-4032-8243-bc0263a6ba2f",
+          "title": "जमा उघाड़ी",
+          "sourceStyle": "[Style: World's saddest folk singing, extremely melancholic, cry voice, male rur",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/8433a493-5a44-4032-8243-bc0263a6ba2f.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/8433a493-5a44-4032-8243-bc0263a6ba2f.jpeg"
+        },
+        {
+          "sunoId": "27601dd5-f441-413d-bb6e-6efae567a7f7",
+          "title": "आँखें रातभर",
+          "sourceStyle": "[Style: World's saddest folk singing, extremely melancholic, cry voice, male rur",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/27601dd5-f441-413d-bb6e-6efae567a7f7.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/27601dd5-f441-413d-bb6e-6efae567a7f7.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/467d741a-c022-402a-b47d-0a2abb53f043.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/467d741a-c022-402a-b47d-0a2abb53f043.jpeg",
+      "coverTrack": {
+        "sunoId": "467d741a-c022-402a-b47d-0a2abb53f043",
+        "title": "छत वाला सितारों",
+        "sourceStyle": "[Style: Hindustani Classical + Folk + Bollywood Sad + Acoustic Guitar + Tabla +"
+      }
+    },
+    {
+      "slug": "dance-funk-dj-masti",
+      "title": "Dance Funk DJ Masti",
+      "station": "ameerpur",
+      "description": "Funk, funky, DJ, dance, party, banger, and masti-forward tracks.",
+      "patterns": [
+        "funk",
+        "funky",
+        "dj",
+        "dance",
+        "party",
+        "banger",
+        "masti"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 51,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "Afro-Phonk Fusion, Vedic Chanting, Modern Indian Folk, Neon-Sufi, Syncopated Dje",
+          "count": 9
+        },
+        {
+          "tag": "Funky folk duet with earthy groove and sensual playful chemistry between lovers",
+          "count": 6
+        },
+        {
+          "tag": "super fun funky rap with dog souls..  a bitch being  requested by dog. howls, do",
+          "count": 4
+        },
+        {
+          "tag": "Funky folk duet about lovers discovering cosmic love and body-mind harmony. Use",
+          "count": 3
+        },
+        {
+          "tag": "start with hyperfun funk hiphop adwait and bhairav on bike maya and Pop, Latin P",
+          "count": 3
+        },
+        {
+          "tag": "[Genre: Psytrance, Funky House, Hyperpop, Indian Fusion, 145 BPM, Male Vocals, H",
+          "count": 2
+        },
+        {
+          "tag": "Funky हरियाणवी folk duet about lovers discovering cosmic love and body-mind harm",
+          "count": 2
+        },
+        {
+          "tag": "Funky हरियाणवी folk रगनी duet",
+          "count": 2
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "684a2e17-9992-459b-970a-279f3f506e59",
+          "title": "Kash Bachpan Phir",
+          "sourceStyle": "Braj folk mixed with funky pop. Bollywood dance style. Fast tempo 115 BPM. Male",
+          "canonicalTheme": "Other / Misc",
+          "language": "English",
+          "coverImage": "assets/covers/684a2e17-9992-459b-970a-279f3f506e59.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/684a2e17-9992-459b-970a-279f3f506e59.jpeg"
+        },
+        {
+          "sunoId": "b1673a2d-91fa-478f-a3c3-79d253fd7444",
+          "title": "परदेसां धड़कन",
+          "sourceStyle": "[Genre: Psytrance, Funky House, Hyperpop, Indian Fusion, 145 BPM, Male Vocals, H",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/b1673a2d-91fa-478f-a3c3-79d253fd7444.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/b1673a2d-91fa-478f-a3c3-79d253fd7444.jpeg"
+        },
+        {
+          "sunoId": "60bb8f17-03b5-4159-ab31-2927d80a2629",
+          "title": "Distorted Sarangi Wobble",
+          "sourceStyle": "[Genre: Psytrance, Funky House, Hyperpop, Indian Fusion, 145 BPM, Male Vocals, H",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "English",
+          "coverImage": "assets/covers/60bb8f17-03b5-4159-ab31-2927d80a2629.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/60bb8f17-03b5-4159-ab31-2927d80a2629.jpeg"
+        },
+        {
+          "sunoId": "cb8ff251-d3a7-4271-a3a0-33969db28cb0",
+          "title": "Paradesi Wobble",
+          "sourceStyle": "[Genre: Psytrance, Funky House, Hyperpop, Indian Fusion, 145 BPM, Male Vocals,",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "English",
+          "coverImage": "assets/covers/cb8ff251-d3a7-4271-a3a0-33969db28cb0.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/cb8ff251-d3a7-4271-a3a0-33969db28cb0.jpeg"
+        },
+        {
+          "sunoId": "12134426-c294-4dd0-9375-9f507bb1140a",
+          "title": "इसी वाली बोटी",
+          "sourceStyle": "Genre: Punjabi Folk Pop / Bhangra Pop / Energetic Party Song BPM: 120-130 Mood:",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/12134426-c294-4dd0-9375-9f507bb1140a.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/12134426-c294-4dd0-9375-9f507bb1140a.jpeg"
+        },
+        {
+          "sunoId": "b56bd6df-5167-43b3-b0a6-cf5f42c72589",
+          "title": "मेट्रो दरवाज़े बंद x Animatrix लोडिंग (Mashup)",
+          "sourceStyle": "Afro-Phonk Fusion, Vedic Chanting, Modern Indian Folk, Neon-Sufi, Syncopated Dje",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "English",
+          "coverImage": "assets/covers/b56bd6df-5167-43b3-b0a6-cf5f42c72589.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/b56bd6df-5167-43b3-b0a6-cf5f42c72589.jpeg"
+        },
+        {
+          "sunoId": "d0569990-a19a-4e68-b82b-1db44b271e2a",
+          "title": "मेट्रो दरवाज़े बंद x Animatrix लोडिंग (Mashup)",
+          "sourceStyle": "Afro-Phonk Fusion, Vedic Chanting, Modern Indian Folk, Neon-Sufi, Syncopated Dje",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "English",
+          "coverImage": "assets/covers/d0569990-a19a-4e68-b82b-1db44b271e2a.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/d0569990-a19a-4e68-b82b-1db44b271e2a.jpeg"
+        },
+        {
+          "sunoId": "e48f5522-c4e9-43c9-8080-e6a097fa596c",
+          "title": "मेट्रो दरवाज़े बंद",
+          "sourceStyle": "Afro-Phonk Fusion, Vedic Chanting, Modern Indian Folk, Neon-Sufi, Syncopated Dje",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "Sanskrit",
+          "coverImage": "assets/covers/e48f5522-c4e9-43c9-8080-e6a097fa596c.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/e48f5522-c4e9-43c9-8080-e6a097fa596c.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/684a2e17-9992-459b-970a-279f3f506e59.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/684a2e17-9992-459b-970a-279f3f506e59.jpeg",
+      "coverTrack": {
+        "sunoId": "684a2e17-9992-459b-970a-279f3f506e59",
+        "title": "Kash Bachpan Phir",
+        "sourceStyle": "Braj folk mixed with funky pop. Bollywood dance style. Fast tempo 115 BPM. Male"
+      }
+    },
+    {
+      "slug": "desh-veer-patriotic",
+      "title": "Desh Veer Patriotic",
+      "station": "ameerpur",
+      "description": "Patriotic, soldier, republic, Bharat, swatantra, and sacrifice tracks.",
+      "patterns": [
+        "patriotic",
+        "soldier",
+        "desh",
+        "bharat",
+        "bhaarat",
+        "republic",
+        "swatantra",
+        "balidan",
+        "veer"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 47,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "Desh / Patriotic",
+          "count": 29
+        },
+        {
+          "tag": "Epic Indian patriotic cinematic war anthem about a brave soldier and a mother’s",
+          "count": 3
+        },
+        {
+          "tag": "create a bollywood patriotic blockbuster song about a brave indian soldier and a",
+          "count": 2
+        },
+        {
+          "tag": "create a cinematic bollywoodstyle patriotic song from the perspective of a proud",
+          "count": 2
+        },
+        {
+          "tag": "Haryanvi Accent , Style: Haryanvi Folk Fusion, Patriotic Rock, Powerful Male Voc",
+          "count": 2
+        },
+        {
+          "tag": "Rap & Fusion",
+          "count": 2
+        },
+        {
+          "tag": "\"Grand Republic Day Brass Band, Heavy Snare Drum Rolls, Triumphant Trumpets, Orc",
+          "count": 1
+        },
+        {
+          "tag": "a war cry of a child to bhaarat maa tera Pop, Indie Pop men tera naketa shaitaan",
+          "count": 1
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "5791e93b-a997-4765-b8d1-c0fcbb88c384",
+          "title": "धारानगरी का वो राजा",
+          "sourceStyle": "Desh / Patriotic",
+          "canonicalTheme": "Desh / Patriotic",
+          "language": "Hindi",
+          "coverImage": "assets/covers/5791e93b-a997-4765-b8d1-c0fcbb88c384.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/5791e93b-a997-4765-b8d1-c0fcbb88c384.jpeg"
+        },
+        {
+          "sunoId": "1c0f3567-660d-40a2-8672-943688dd3c89",
+          "title": "O meri bhaarat maataa",
+          "sourceStyle": "Rap & Fusion",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "English",
+          "coverImage": "assets/covers/1c0f3567-660d-40a2-8672-943688dd3c89.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/1c0f3567-660d-40a2-8672-943688dd3c89.jpeg"
+        },
+        {
+          "sunoId": "6145df1e-62b2-4fd3-a150-ebef60393608",
+          "title": "O meri bhaarat maataa",
+          "sourceStyle": "Rap & Fusion",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "English",
+          "coverImage": "assets/covers/6145df1e-62b2-4fd3-a150-ebef60393608.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/6145df1e-62b2-4fd3-a150-ebef60393608.jpeg"
+        },
+        {
+          "sunoId": "b39097fb-81be-40f8-bc18-46c757b2ce0c",
+          "title": "जिंदगी... तू जमा उघाड़ी है",
+          "sourceStyle": "Desh / Patriotic",
+          "canonicalTheme": "Desh / Patriotic",
+          "language": "Hindi",
+          "coverImage": "assets/covers/b39097fb-81be-40f8-bc18-46c757b2ce0c.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/b39097fb-81be-40f8-bc18-46c757b2ce0c.jpeg"
+        },
+        {
+          "sunoId": "c5f1d8b4-1e92-4d0f-9936-e632bd0922de",
+          "title": "म्यूअर क़िला-धुआं",
+          "sourceStyle": "Epic Bollywood patriotic ballad, heroic male vocals, orchestral with dhol and sh",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/c5f1d8b4-1e92-4d0f-9936-e632bd0922de.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/c5f1d8b4-1e92-4d0f-9936-e632bd0922de.jpeg"
+        },
+        {
+          "sunoId": "4df6f608-207a-494e-91e5-296847785ef2",
+          "title": "Giddhon ke sheher mein",
+          "sourceStyle": "Desh / Patriotic",
+          "canonicalTheme": "Desh / Patriotic",
+          "language": "English",
+          "coverImage": "assets/covers/4df6f608-207a-494e-91e5-296847785ef2.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/4df6f608-207a-494e-91e5-296847785ef2.jpeg"
+        },
+        {
+          "sunoId": "d6049185-a418-4c6a-a1d9-fcc801c751b9",
+          "title": "लाश हटाता",
+          "sourceStyle": "Desh / Patriotic",
+          "canonicalTheme": "Desh / Patriotic",
+          "language": "Hindi",
+          "coverImage": "assets/covers/d6049185-a418-4c6a-a1d9-fcc801c751b9.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/d6049185-a418-4c6a-a1d9-fcc801c751b9.jpeg"
+        },
+        {
+          "sunoId": "d16e0a51-7641-4ea2-9b3d-6c5316629611",
+          "title": "चार सौ बीस",
+          "sourceStyle": "Desh / Patriotic",
+          "canonicalTheme": "Desh / Patriotic",
+          "language": "Hindi",
+          "coverImage": "assets/covers/d16e0a51-7641-4ea2-9b3d-6c5316629611.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/d16e0a51-7641-4ea2-9b3d-6c5316629611.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/5791e93b-a997-4765-b8d1-c0fcbb88c384.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/5791e93b-a997-4765-b8d1-c0fcbb88c384.jpeg",
+      "coverTrack": {
+        "sunoId": "5791e93b-a997-4765-b8d1-c0fcbb88c384",
+        "title": "धारानगरी का वो राजा",
+        "sourceStyle": "Desh / Patriotic"
+      }
+    },
+    {
+      "slug": "world-fusion-global",
+      "title": "World Fusion Global",
+      "station": "gurukul",
+      "description": "Global, world fusion, Afrobeat, Chinese, Celtic, French, Egyptian, Latin, Armenian, and cross-civilizational textures.",
+      "patterns": [
+        "world",
+        "global",
+        "afrobeat",
+        "chinese",
+        "celtic",
+        "french",
+        "egyptian",
+        "latin",
+        "lusophone",
+        "armenian"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 47,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "Dark Drift Phonk, Afrobeat percussion, Cyber-Sufi, Cinematic Space Atmosphere, H",
+          "count": 5
+        },
+        {
+          "tag": "Epic multilingual scientific rap mixing Latin chant, Siddham script mantra, Sans",
+          "count": 3
+        },
+        {
+          "tag": "Global cinematic spoken word, deep Indian philosophical poetry, fusion of world",
+          "count": 3
+        },
+        {
+          "tag": "start with hyperfun funk hiphop adwait and bhairav on bike maya and Pop, Latin P",
+          "count": 3
+        },
+        {
+          "tag": "[Style: World's saddest folk singing, extremely melancholic, cry voice, male rur",
+          "count": 2
+        },
+        {
+          "tag": "Cinematic Global Fusion, Haryanvi Folk-Opera, Raag Shivranjani & Marwa base, 60",
+          "count": 2
+        },
+        {
+          "tag": "global fun haryanvi-superstar..  1000 girls 1 boy",
+          "count": 2
+        },
+        {
+          "tag": "Style: Egyptian lullaby + cinematic awakening anthem + Sufi-orchestral folk Mood",
+          "count": 2
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "5873f9a6-c7cc-475b-8560-a6200c367731",
+          "title": "हनु-मान् हनु",
+          "sourceStyle": "[Style of Music: Global Sovereign Calibration] Hyper-dynamic K-12 educational fu",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/5873f9a6-c7cc-475b-8560-a6200c367731.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/5873f9a6-c7cc-475b-8560-a6200c367731.jpeg"
+        },
+        {
+          "sunoId": "989e203d-59cf-43b4-b450-bd5f5fdf28a6",
+          "title": "ख़्वाब-धागा आधा",
+          "sourceStyle": "[Cinematic World-Fusion, Deep Spiritual Qawwali Vocals, 142 BPM, UK Drill influe",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/989e203d-59cf-43b4-b450-bd5f5fdf28a6.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/989e203d-59cf-43b4-b450-bd5f5fdf28a6.jpeg"
+        },
+        {
+          "sunoId": "081d7d0e-d5f4-455e-9716-46f8bfcd192f",
+          "title": "साहब खोज जंग",
+          "sourceStyle": "[Cinematic World-Fusion, Deep Spiritual Qawwali vocals mixed with High-Impact UK",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/081d7d0e-d5f4-455e-9716-46f8bfcd192f.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/081d7d0e-d5f4-455e-9716-46f8bfcd192f.jpeg"
+        },
+        {
+          "sunoId": "8433a493-5a44-4032-8243-bc0263a6ba2f",
+          "title": "जमा उघाड़ी",
+          "sourceStyle": "[Style: World's saddest folk singing, extremely melancholic, cry voice, male rur",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/8433a493-5a44-4032-8243-bc0263a6ba2f.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/8433a493-5a44-4032-8243-bc0263a6ba2f.jpeg"
+        },
+        {
+          "sunoId": "27601dd5-f441-413d-bb6e-6efae567a7f7",
+          "title": "आँखें रातभर",
+          "sourceStyle": "[Style: World's saddest folk singing, extremely melancholic, cry voice, male rur",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/27601dd5-f441-413d-bb6e-6efae567a7f7.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/27601dd5-f441-413d-bb6e-6efae567a7f7.jpeg"
+        },
+        {
+          "sunoId": "f4537e0d-1ee4-43aa-886c-096606a8877f",
+          "title": "Animatrix Loading (Remastered)",
+          "sourceStyle": "Dark Drift Phonk, Afrobeat percussion, Cyber-Sufi, Cinematic Space Atmosphere, H",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "English",
+          "coverImage": "assets/covers/f4537e0d-1ee4-43aa-886c-096606a8877f.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/f4537e0d-1ee4-43aa-886c-096606a8877f.jpeg"
+        },
+        {
+          "sunoId": "1b6225a2-fb64-49aa-94db-802efe864623",
+          "title": "Duduk Cello Oath",
+          "sourceStyle": "Cinematic World-Sufi Fusion, Avant-garde Qawwali, Mournful Armenian Duduk Intro,",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "English",
+          "coverImage": "assets/covers/1b6225a2-fb64-49aa-94db-802efe864623.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/1b6225a2-fb64-49aa-94db-802efe864623.jpeg"
+        },
+        {
+          "sunoId": "3e849ef6-8f9e-467f-b6cd-23ece1febccc",
+          "title": "Animatrix Loading",
+          "sourceStyle": "Dark Drift Phonk, Afrobeat percussion, Cyber-Sufi, Cinematic Space Atmosphere, H",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "English",
+          "coverImage": "assets/covers/3e849ef6-8f9e-467f-b6cd-23ece1febccc.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/3e849ef6-8f9e-467f-b6cd-23ece1febccc.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/5873f9a6-c7cc-475b-8560-a6200c367731.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/5873f9a6-c7cc-475b-8560-a6200c367731.jpeg",
+      "coverTrack": {
+        "sunoId": "5873f9a6-c7cc-475b-8560-a6200c367731",
+        "title": "हनु-मान् हनु",
+        "sourceStyle": "[Style of Music: Global Sovereign Calibration] Hyper-dynamic K-12 educational fu"
+      }
+    },
+    {
+      "slug": "naagin-mystic-aghor",
+      "title": "Naagin Mystic Aghor",
+      "station": "kabir-clubbing",
+      "description": "Naagin, pungi, been, aghor, tantra, snake-charmer, and mystic ritual sound worlds.",
+      "patterns": [
+        "naagin",
+        "nagin",
+        "snake",
+        "pungi",
+        "been",
+        "aghori",
+        "aghor",
+        "tantra",
+        "pishaachini"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 43,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "aghories sitting with german sages... adwait sitting sings his heart out in ange",
+          "count": 4
+        },
+        {
+          "tag": "Haryanvi-Bagri Folk Fusion, Psychedelic Trance, Khamak-driven rhythmic vibration",
+          "count": 3
+        },
+        {
+          "tag": "Naagin & Mystic",
+          "count": 3
+        },
+        {
+          "tag": "aghories with been, khamak, damru, naad... shiv gaNa aghore. rudra veeNa.  only",
+          "count": 2
+        },
+        {
+          "tag": "Cinematic Vedic-Blues Fusion, Aggressive Haryanvi Folk-Rock, Deep Guttural Aghor",
+          "count": 2
+        },
+        {
+          "tag": "Desi haryanvi SuperFun superstar nagin।। 1000 snake charmers.. 1000 pungi.. 1 so",
+          "count": 2
+        },
+        {
+          "tag": "Genre: Haryanvi Folk Ragni  Theme: Betrayal and emotional virah of a woman whose",
+          "count": 2
+        },
+        {
+          "tag": "Hip।hop superstar nagin।। 1000 snake charmers.. 1000 pungi.. 1 soulfull pungi br",
+          "count": 2
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "236a15f1-5e9d-4489-9d6a-28e76211f10f",
+          "title": "काली-कलम-का",
+          "sourceStyle": ".  🎵 KA KAA RAHASYA (क का रहस्य) [मृदंगम –  – सारंगी संग ] Add sargam notation (",
+          "canonicalTheme": "Naagin & Mystic",
+          "language": "Hindi",
+          "coverImage": "assets/covers/236a15f1-5e9d-4489-9d6a-28e76211f10f.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/236a15f1-5e9d-4489-9d6a-28e76211f10f.jpeg"
+        },
+        {
+          "sunoId": "2cba3a04-39a7-4cb7-8c74-33800f3a25d7",
+          "title": "काली कलम",
+          "sourceStyle": ".  🎵 KA KAA RAHASYA (क का रहस्य) A Narrator-Style Neural Mystical Ballad Directi",
+          "canonicalTheme": "Naagin & Mystic",
+          "language": "Hindi",
+          "coverImage": "assets/covers/2cba3a04-39a7-4cb7-8c74-33800f3a25d7.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/2cba3a04-39a7-4cb7-8c74-33800f3a25d7.jpeg"
+        },
+        {
+          "sunoId": "3c08a390-57b0-4deb-b710-ffd81cd63cec",
+          "title": "Ka Kau Question",
+          "sourceStyle": "🎵 Song: Ka Kaa Rahasya (The Secret of 'Ka') Style: Neural Narrative mystical bal",
+          "canonicalTheme": "Naagin & Mystic",
+          "language": "English",
+          "coverImage": "assets/covers/3c08a390-57b0-4deb-b710-ffd81cd63cec.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/3c08a390-57b0-4deb-b710-ffd81cd63cec.jpeg"
+        },
+        {
+          "sunoId": "1630fdc7-2ea0-4737-a448-84a9e3a68bc4",
+          "title": "(untitled)",
+          "sourceStyle": "Neuro-Tantra Devotional Trance Start: whisper + tanpura (no beat) Gradually add",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "English",
+          "coverImage": "assets/covers/1630fdc7-2ea0-4737-a448-84a9e3a68bc4.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/1630fdc7-2ea0-4737-a448-84a9e3a68bc4.jpeg"
+        },
+        {
+          "sunoId": "c2942834-cd11-4b45-8610-08a32d23be82",
+          "title": "(untitled)",
+          "sourceStyle": "aghories with been, khamak, damru, naad... shiv gaNa aghore. rudra veeNa.  only",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "English",
+          "coverImage": "assets/covers/c2942834-cd11-4b45-8610-08a32d23be82.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/c2942834-cd11-4b45-8610-08a32d23be82.jpeg"
+        },
+        {
+          "sunoId": "cef36d0f-7570-45ad-b4cd-9e9d1999be10",
+          "title": "(untitled)",
+          "sourceStyle": "aghories with been, khamak, damru, naad... shiv gaNa aghore. rudra veeNa.  only",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "English",
+          "coverImage": "assets/covers/cef36d0f-7570-45ad-b4cd-9e9d1999be10.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/cef36d0f-7570-45ad-b4cd-9e9d1999be10.jpeg"
+        },
+        {
+          "sunoId": "08b16e64-f600-411c-807f-6c943c14f56e",
+          "title": "kudru ki beti naagin",
+          "sourceStyle": "Genre: World music / emotional instrumental  Mood: Deep longing, universal femal",
+          "canonicalTheme": "Naagin & Mystic",
+          "language": "English",
+          "coverImage": "assets/covers/08b16e64-f600-411c-807f-6c943c14f56e.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/08b16e64-f600-411c-807f-6c943c14f56e.jpeg"
+        },
+        {
+          "sunoId": "dac36f36-1b07-4909-bd88-88bb40d18bc8",
+          "title": "kudru ki beti naagin",
+          "sourceStyle": "Genre: Haryanvi Folk Ragni  Theme: Betrayal and emotional virah of a woman whose",
+          "canonicalTheme": "Naagin & Mystic",
+          "language": "English",
+          "coverImage": "assets/covers/dac36f36-1b07-4909-bd88-88bb40d18bc8.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/dac36f36-1b07-4909-bd88-88bb40d18bc8.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/236a15f1-5e9d-4489-9d6a-28e76211f10f.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/236a15f1-5e9d-4489-9d6a-28e76211f10f.jpeg",
+      "coverTrack": {
+        "sunoId": "236a15f1-5e9d-4489-9d6a-28e76211f10f",
+        "title": "काली-कलम-का",
+        "sourceStyle": ".  🎵 KA KAA RAHASYA (क का रहस्य) [मृदंगम –  – सारंगी संग ] Add sargam notation ("
+      }
+    },
+    {
+      "slug": "jogi-malang-phakkad",
+      "title": "Jogi Malang Phakkad",
+      "station": "gurukul",
+      "description": "Jogi, malang, phakkad, jagarana, raw wandering-sage and folk-mystic songs.",
+      "patterns": [
+        "jogi",
+        "malang",
+        "phakkad",
+        "jagarana"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 25,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "Haryanvi Ragni-Trap Fusion, Psytrance, 432Hz Tuning, Cinematic Vedic Bass, Aggre",
+          "count": 3
+        },
+        {
+          "tag": "Style: Haryanvi Folk Ragni, Jogi Spiritual Anthem, Human Voice Driven, Minimal",
+          "count": 3
+        },
+        {
+          "tag": "\"solo phakkad and whistle only no equipments\"",
+          "count": 2
+        },
+        {
+          "tag": "[Style: Indian Folk + Rajasthani Mand + Tribal + Ambient + Devotional + Cinemati",
+          "count": 2
+        },
+        {
+          "tag": "[Style: Rajasthani Folk Fusion, Mand, Ghoomar, Devotional]  [Concept] Gangaur so",
+          "count": 2
+        },
+        {
+          "tag": "[Style: Rajasthani Folk, Mand, Village Women Chorus, Festive, Simple]  [Tempo: 9",
+          "count": 2
+        },
+        {
+          "tag": "Style: Haryanvi Folk Ragni, Jogi Spiritual Anthem, Human Voice Driven, Minimal F",
+          "count": 2
+        },
+        {
+          "tag": "\"A haunting and minimalist 'Phakkad' soundscape. The core rhythm is a deep, reso",
+          "count": 1
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "5edc6f4a-ebf7-4d22-b8e7-cd4bb333735f",
+          "title": "लाडो बसंती मेहमान",
+          "sourceStyle": "[Genre: Acoustic Hindustani classical folk fusion, jagarana night vigil, father-",
+          "canonicalTheme": "Classical & Raag",
+          "language": "Hindi",
+          "coverImage": "assets/covers/5edc6f4a-ebf7-4d22-b8e7-cd4bb333735f.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/5edc6f4a-ebf7-4d22-b8e7-cd4bb333735f.jpeg"
+        },
+        {
+          "sunoId": "c9e3d20d-1c8f-4301-8f48-b90bcad4dbbf",
+          "title": "(untitled)",
+          "sourceStyle": "\"solo phakkad and whistle only no equipments\"",
+          "canonicalTheme": "Other / Misc",
+          "language": "English",
+          "coverImage": "assets/covers/c9e3d20d-1c8f-4301-8f48-b90bcad4dbbf.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/c9e3d20d-1c8f-4301-8f48-b90bcad4dbbf.jpeg"
+        },
+        {
+          "sunoId": "52951995-1c96-40b6-ab48-93b43e9bd488",
+          "title": "(untitled)",
+          "sourceStyle": "\"solo phakkad and whistle only no equipments\"",
+          "canonicalTheme": "Other / Misc",
+          "language": "English",
+          "coverImage": "assets/covers/52951995-1c96-40b6-ab48-93b43e9bd488.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/52951995-1c96-40b6-ab48-93b43e9bd488.jpeg"
+        },
+        {
+          "sunoId": "31752ecb-d9f6-4d7f-8582-96ad901c2bff",
+          "title": "(untitled)",
+          "sourceStyle": "\"A haunting and minimalist 'Phakkad' soundscape. The core rhythm is a deep, reso",
+          "canonicalTheme": "Other / Misc",
+          "language": "English",
+          "coverImage": "assets/covers/31752ecb-d9f6-4d7f-8582-96ad901c2bff.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/31752ecb-d9f6-4d7f-8582-96ad901c2bff.jpeg"
+        },
+        {
+          "sunoId": "092cd586-b79b-465f-b06c-972aa38bd494",
+          "title": "neural jogi",
+          "sourceStyle": "Haryanvi Ragni-Trap Fusion, Psytrance, 432Hz Tuning, Cinematic Vedic Bass, Aggre",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "English",
+          "coverImage": "assets/covers/092cd586-b79b-465f-b06c-972aa38bd494.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/092cd586-b79b-465f-b06c-972aa38bd494.jpeg"
+        },
+        {
+          "sunoId": "c2ff4d29-bde8-449a-847e-9dcdc78e4a69",
+          "title": "neural jogi",
+          "sourceStyle": "Haryanvi Ragni-Trap Fusion, Psytrance, 432Hz Tuning, Cinematic Vedic Bass, Aggre",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "English",
+          "coverImage": "assets/covers/c2ff4d29-bde8-449a-847e-9dcdc78e4a69.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/c2ff4d29-bde8-449a-847e-9dcdc78e4a69.jpeg"
+        },
+        {
+          "sunoId": "ccb6b23a-62e2-44e4-b1f4-94283dd7bdfc",
+          "title": "neural jogi",
+          "sourceStyle": "Haryanvi Ragni-Trap Fusion, Psytrance, 432Hz Tuning, Cinematic Vedic Bass, Aggre",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "English",
+          "coverImage": "assets/covers/ccb6b23a-62e2-44e4-b1f4-94283dd7bdfc.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/ccb6b23a-62e2-44e4-b1f4-94283dd7bdfc.jpeg"
+        },
+        {
+          "sunoId": "9b907c3a-8874-4c5a-93bb-ba08f8477cdc",
+          "title": "neural jogi",
+          "sourceStyle": "maataa gangaur aashirwaad",
+          "canonicalTheme": "Other / Misc",
+          "language": "English",
+          "coverImage": "assets/covers/9b907c3a-8874-4c5a-93bb-ba08f8477cdc.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/9b907c3a-8874-4c5a-93bb-ba08f8477cdc.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/5edc6f4a-ebf7-4d22-b8e7-cd4bb333735f.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/5edc6f4a-ebf7-4d22-b8e7-cd4bb333735f.jpeg",
+      "coverTrack": {
+        "sunoId": "5edc6f4a-ebf7-4d22-b8e7-cd4bb333735f",
+        "title": "लाडो बसंती मेहमान",
+        "sourceStyle": "[Genre: Acoustic Hindustani classical folk fusion, jagarana night vigil, father-"
+      }
+    },
+    {
+      "slug": "acoustic-human-voice-lab",
+      "title": "Acoustic Human Voice Lab",
+      "station": "gurukul",
+      "description": "Acapella, human voice, beatboxing, whistling, no-instrument, and raw voice experiments.",
+      "patterns": [
+        "acapella",
+        "human voice",
+        "beatboxing",
+        "whistling",
+        "no instruments",
+        "only human",
+        "solo phakkad"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 19,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "\"Indian Classical Bandish, Hindustani Vocal, Ragam-Tanam-Pallavi style, Acapella",
+          "count": 4
+        },
+        {
+          "tag": "[Style: Sufi Qawwali, Male vocal solo and ensemble, No instruments, Only human v",
+          "count": 4
+        },
+        {
+          "tag": "Style: Haryanvi Folk Ragni, Jogi Spiritual Anthem, Human Voice Driven, Minimal",
+          "count": 3
+        },
+        {
+          "tag": "\"solo phakkad and whistle only no equipments\"",
+          "count": 2
+        },
+        {
+          "tag": "Style: Haryanvi Folk Ragni, Jogi Spiritual Anthem, Human Voice Driven, Minimal F",
+          "count": 2
+        },
+        {
+          "tag": "\"Acapella Qawwali, Indian Folk Fusion, Vocal Percussion, Beatboxing, Human whist",
+          "count": 1
+        },
+        {
+          "tag": "\"Acapella, Aggressive Beatboxing, Vocal Bass, Whistling, Dark Indian Folk Fusion",
+          "count": 1
+        },
+        {
+          "tag": "\"Hyper-Rap, Acapella, Ancient Throat Singing, Fast Human Beatboxing, Experiment",
+          "count": 1
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "2571d6ce-4581-46f0-979a-ad146a326d31",
+          "title": "Chirag-Hawa Saza",
+          "sourceStyle": "[Style: Sufi Qawwali, Male vocal solo and ensemble, No instruments, Only human v",
+          "canonicalTheme": "Other / Misc",
+          "language": "English",
+          "coverImage": "assets/covers/2571d6ce-4581-46f0-979a-ad146a326d31.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/2571d6ce-4581-46f0-979a-ad146a326d31.jpeg"
+        },
+        {
+          "sunoId": "e34d5702-04b2-4e44-8ee0-ba8fa513b3f9",
+          "title": "Khaki Naata",
+          "sourceStyle": "[Style: Sufi Qawwali, Male vocal solo and ensemble, No instruments, Only human v",
+          "canonicalTheme": "Other / Misc",
+          "language": "English",
+          "coverImage": "assets/covers/e34d5702-04b2-4e44-8ee0-ba8fa513b3f9.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/e34d5702-04b2-4e44-8ee0-ba8fa513b3f9.jpeg"
+        },
+        {
+          "sunoId": "eb83681b-2fdb-4f0f-b17b-e4d834c5e311",
+          "title": "تدبیرِ خاک",
+          "sourceStyle": "[Style: Sufi Qawwali, Male vocal solo and ensemble, No instruments, Only human v",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/eb83681b-2fdb-4f0f-b17b-e4d834c5e311.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/eb83681b-2fdb-4f0f-b17b-e4d834c5e311.jpeg"
+        },
+        {
+          "sunoId": "6cd28c91-198a-4d8b-bad2-26ebd34288a2",
+          "title": "Khaksar Diya",
+          "sourceStyle": "[Style: Sufi Qawwali, Male vocal solo and ensemble, No instruments, Only human v",
+          "canonicalTheme": "Other / Misc",
+          "language": "English",
+          "coverImage": "assets/covers/6cd28c91-198a-4d8b-bad2-26ebd34288a2.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/6cd28c91-198a-4d8b-bad2-26ebd34288a2.jpeg"
+        },
+        {
+          "sunoId": "91fa6d67-0722-4664-bf50-57a42d36afe0",
+          "title": "आवाज़ों की अदालत",
+          "sourceStyle": "\"Hyper-Rap, Acapella, Ancient Throat Singing, Fast Human Beatboxing, Experiment",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "Hindi",
+          "coverImage": "assets/covers/91fa6d67-0722-4664-bf50-57a42d36afe0.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/91fa6d67-0722-4664-bf50-57a42d36afe0.jpeg"
+        },
+        {
+          "sunoId": "59d3489b-c33c-4509-bbff-c4bfdb962cda",
+          "title": "पीएच कला-दीक्षित अदालत",
+          "sourceStyle": "\"Indian Classical Bandish, Hindustani Vocal, Ragam-Tanam-Pallavi style, Acapella",
+          "canonicalTheme": "Classical & Raag",
+          "language": "Hindi",
+          "coverImage": "assets/covers/59d3489b-c33c-4509-bbff-c4bfdb962cda.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/59d3489b-c33c-4509-bbff-c4bfdb962cda.jpeg"
+        },
+        {
+          "sunoId": "0fe62a75-f9ed-431e-9780-297f79a24721",
+          "title": "P.H.K.D. अदालत",
+          "sourceStyle": "\"Indian Classical Bandish, Hindustani Vocal, Ragam-Tanam-Pallavi style, Acapella",
+          "canonicalTheme": "Classical & Raag",
+          "language": "English",
+          "coverImage": "assets/covers/0fe62a75-f9ed-431e-9780-297f79a24721.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/0fe62a75-f9ed-431e-9780-297f79a24721.jpeg"
+        },
+        {
+          "sunoId": "d80e4b3a-e710-464d-b061-83ff02e2c7da",
+          "title": "पीएच कला-दीक्षित अदालत",
+          "sourceStyle": "\"Indian Classical Bandish, Hindustani Vocal, Ragam-Tanam-Pallavi style, Acapella",
+          "canonicalTheme": "Classical & Raag",
+          "language": "Hindi",
+          "coverImage": "assets/covers/d80e4b3a-e710-464d-b061-83ff02e2c7da.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/d80e4b3a-e710-464d-b061-83ff02e2c7da.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/2571d6ce-4581-46f0-979a-ad146a326d31.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/2571d6ce-4581-46f0-979a-ad146a326d31.jpeg",
+      "coverTrack": {
+        "sunoId": "2571d6ce-4581-46f0-979a-ad146a326d31",
+        "title": "Chirag-Hawa Saza",
+        "sourceStyle": "[Style: Sufi Qawwali, Male vocal solo and ensemble, No instruments, Only human v"
+      }
+    },
+    {
+      "slug": "maataa-shakti-feminine-divine",
+      "title": "Maataa Shakti Feminine Divine",
+      "station": "sanaatana-vaigyaniq",
+      "description": "Maataa, Shakti, Gangaur, Radha, feminine devotional and goddess-centered tracks.",
+      "patterns": [
+        "maataa",
+        "mata",
+        "shakti",
+        "gangaur",
+        "radha",
+        "female chorus",
+        "mother goddess"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 11,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "[Style: Rajasthani Folk Fusion, Mand, Ghoomar, Devotional]  [Concept] Gangaur so",
+          "count": 2
+        },
+        {
+          "tag": "[Title: Shakti Jaag Ri – Manushya Chetna Jagriti]  [Style: Indian devotional, Ve",
+          "count": 2
+        },
+        {
+          "tag": "Rap & Fusion",
+          "count": 2
+        },
+        {
+          "tag": "Bhakti & Katha",
+          "count": 1
+        },
+        {
+          "tag": "Cinematic qawwali, Raga Todi, thousands of gopis + Radha solo, 60-120 BPM, femal",
+          "count": 1
+        },
+        {
+          "tag": "Indian devotional folk song, female chorus with male lead, emotional and uplifti",
+          "count": 1
+        },
+        {
+          "tag": "maataa gangaur aashirwaad",
+          "count": 1
+        },
+        {
+          "tag": "Sanatan & Vedic",
+          "count": 1
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "1c0f3567-660d-40a2-8672-943688dd3c89",
+          "title": "O meri bhaarat maataa",
+          "sourceStyle": "Rap & Fusion",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "English",
+          "coverImage": "assets/covers/1c0f3567-660d-40a2-8672-943688dd3c89.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/1c0f3567-660d-40a2-8672-943688dd3c89.jpeg"
+        },
+        {
+          "sunoId": "6145df1e-62b2-4fd3-a150-ebef60393608",
+          "title": "O meri bhaarat maataa",
+          "sourceStyle": "Rap & Fusion",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "English",
+          "coverImage": "assets/covers/6145df1e-62b2-4fd3-a150-ebef60393608.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/6145df1e-62b2-4fd3-a150-ebef60393608.jpeg"
+        },
+        {
+          "sunoId": "bdf090e4-3d39-4d47-863b-7bd1757feb8d",
+          "title": "बंसीधर ताज",
+          "sourceStyle": "Cinematic qawwali, Raga Todi, thousands of gopis + Radha solo, 60-120 BPM, femal",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/bdf090e4-3d39-4d47-863b-7bd1757feb8d.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/bdf090e4-3d39-4d47-863b-7bd1757feb8d.jpeg"
+        },
+        {
+          "sunoId": "982a1594-b969-4c2d-9966-d617a47e4e2d",
+          "title": "(untitled)",
+          "sourceStyle": "[Title: Shakti Jaag Ri – Manushya Chetna Jagriti]  [Style: Indian devotional, Ve",
+          "canonicalTheme": "Other / Misc",
+          "language": "English",
+          "coverImage": "assets/covers/982a1594-b969-4c2d-9966-d617a47e4e2d.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/982a1594-b969-4c2d-9966-d617a47e4e2d.jpeg"
+        },
+        {
+          "sunoId": "6ae75b0d-c1cc-4641-b483-6b48a9747ac1",
+          "title": "(untitled)",
+          "sourceStyle": "[Title: Shakti Jaag Ri – Manushya Chetna Jagriti]  [Style: Indian devotional, Ve",
+          "canonicalTheme": "Other / Misc",
+          "language": "English",
+          "coverImage": "assets/covers/6ae75b0d-c1cc-4641-b483-6b48a9747ac1.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/6ae75b0d-c1cc-4641-b483-6b48a9747ac1.jpeg"
+        },
+        {
+          "sunoId": "7f4291cd-2f2a-4714-bc31-69d28eec6c38",
+          "title": "Shakti jaag ri",
+          "sourceStyle": "Sanatan & Vedic",
+          "canonicalTheme": "Sanatan & Vedic",
+          "language": "English",
+          "coverImage": "assets/covers/7f4291cd-2f2a-4714-bc31-69d28eec6c38.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/7f4291cd-2f2a-4714-bc31-69d28eec6c38.jpeg"
+        },
+        {
+          "sunoId": "9b907c3a-8874-4c5a-93bb-ba08f8477cdc",
+          "title": "neural jogi",
+          "sourceStyle": "maataa gangaur aashirwaad",
+          "canonicalTheme": "Other / Misc",
+          "language": "English",
+          "coverImage": "assets/covers/9b907c3a-8874-4c5a-93bb-ba08f8477cdc.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/9b907c3a-8874-4c5a-93bb-ba08f8477cdc.jpeg"
+        },
+        {
+          "sunoId": "43e46f35-5912-4f95-84b9-92edf0d0fb86",
+          "title": "neural jogi",
+          "sourceStyle": "[Style: Rajasthani Folk Fusion, Mand, Ghoomar, Devotional]  [Concept] Gangaur so",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "English",
+          "coverImage": "assets/covers/43e46f35-5912-4f95-84b9-92edf0d0fb86.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/43e46f35-5912-4f95-84b9-92edf0d0fb86.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/1c0f3567-660d-40a2-8672-943688dd3c89.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/1c0f3567-660d-40a2-8672-943688dd3c89.jpeg",
+      "coverTrack": {
+        "sunoId": "1c0f3567-660d-40a2-8672-943688dd3c89",
+        "title": "O meri bhaarat maataa",
+        "sourceStyle": "Rap & Fusion"
+      }
+    },
+    {
+      "slug": "kids-gurukul-learning",
+      "title": "Kids Gurukul Learning",
+      "station": "gurukul",
+      "description": "Children, students, K-12, moral hooks, classroom and learning-friendly audio.",
+      "patterns": [
+        "kids",
+        "children",
+        "student",
+        "students",
+        "k-12",
+        "educational",
+        "moral",
+        "choir response"
+      ],
+      "status": "candidate-not-persisted",
+      "trackCount": 10,
+      "matchingMode": "overlap-aware keyword match over title, source styles, canonical theme, language",
+      "topSourceStyleTags": [
+        {
+          "tag": "kids rap",
+          "count": 3
+        },
+        {
+          "tag": "neural radio program for students",
+          "count": 2
+        },
+        {
+          "tag": "छोटे rhythmic lines  बार-बार action hooks  बच्चों का choir response  clear moral",
+          "count": 2
+        },
+        {
+          "tag": "[Style of Music: Global Sovereign Calibration] Hyper-dynamic K-12 educational fu",
+          "count": 1
+        },
+        {
+          "tag": "dada potaa poti  gang fun.. use kids voices of various ages.. cute catchy..",
+          "count": 1
+        },
+        {
+          "tag": "Rap & Fusion",
+          "count": 1
+        }
+      ],
+      "sampleTracks": [
+        {
+          "sunoId": "5873f9a6-c7cc-475b-8560-a6200c367731",
+          "title": "हनु-मान् हनु",
+          "sourceStyle": "[Style of Music: Global Sovereign Calibration] Hyper-dynamic K-12 educational fu",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/5873f9a6-c7cc-475b-8560-a6200c367731.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/5873f9a6-c7cc-475b-8560-a6200c367731.jpeg"
+        },
+        {
+          "sunoId": "ccd4fdeb-6879-4797-ae1f-f37fe6330b64",
+          "title": "पिंगल-बाइनरी ट्राम",
+          "sourceStyle": "neural radio program for students",
+          "canonicalTheme": "Bhakti & Katha",
+          "language": "Hindi",
+          "coverImage": "assets/covers/ccd4fdeb-6879-4797-ae1f-f37fe6330b64.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/ccd4fdeb-6879-4797-ae1f-f37fe6330b64.jpeg"
+        },
+        {
+          "sunoId": "ac3bbd7c-13ce-4c58-8852-a3ba11cf9d62",
+          "title": "कोर लॉग्स लाइव",
+          "sourceStyle": "neural radio program for students",
+          "canonicalTheme": "Other / Misc",
+          "language": "Hindi",
+          "coverImage": "assets/covers/ac3bbd7c-13ce-4c58-8852-a3ba11cf9d62.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/ac3bbd7c-13ce-4c58-8852-a3ba11cf9d62.jpeg"
+        },
+        {
+          "sunoId": "0d363331-c315-4e90-8f78-300af99db0c0",
+          "title": "Degrees? Those are for the students",
+          "sourceStyle": "Rap & Fusion",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "English",
+          "coverImage": "assets/covers/0d363331-c315-4e90-8f78-300af99db0c0.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/0d363331-c315-4e90-8f78-300af99db0c0.jpeg"
+        },
+        {
+          "sunoId": "ef8c9b76-6af4-46b3-9c34-f9f7408dba40",
+          "title": "(untitled)",
+          "sourceStyle": "dada potaa poti  gang fun.. use kids voices of various ages.. cute catchy..",
+          "canonicalTheme": "Other / Misc",
+          "language": "English",
+          "coverImage": "assets/covers/ef8c9b76-6af4-46b3-9c34-f9f7408dba40.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/ef8c9b76-6af4-46b3-9c34-f9f7408dba40.jpeg"
+        },
+        {
+          "sunoId": "67c23492-7a85-457e-a73a-8686f0dd0aec",
+          "title": "(untitled)",
+          "sourceStyle": "छोटे rhythmic lines  बार-बार action hooks  बच्चों का choir response  clear moral",
+          "canonicalTheme": "Other / Misc",
+          "language": "English",
+          "coverImage": "assets/covers/67c23492-7a85-457e-a73a-8686f0dd0aec.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/67c23492-7a85-457e-a73a-8686f0dd0aec.jpeg"
+        },
+        {
+          "sunoId": "12c44280-e16c-405e-92e1-fb9989b71037",
+          "title": "(untitled)",
+          "sourceStyle": "छोटे rhythmic lines  बार-बार action hooks  बच्चों का choir response  clear moral",
+          "canonicalTheme": "Other / Misc",
+          "language": "English",
+          "coverImage": "assets/covers/12c44280-e16c-405e-92e1-fb9989b71037.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/12c44280-e16c-405e-92e1-fb9989b71037.jpeg"
+        },
+        {
+          "sunoId": "90e901c9-4ec2-40b0-af7f-1e81570ae502",
+          "title": "(untitled)",
+          "sourceStyle": "kids rap",
+          "canonicalTheme": "Rap & Fusion",
+          "language": "English",
+          "coverImage": "assets/covers/90e901c9-4ec2-40b0-af7f-1e81570ae502.jpeg",
+          "coverPublicPath": "/radio-html/assets/covers/90e901c9-4ec2-40b0-af7f-1e81570ae502.jpeg"
+        }
+      ],
+      "coverImage": "assets/covers/ccd4fdeb-6879-4797-ae1f-f37fe6330b64.jpeg",
+      "coverPublicPath": "/radio-html/assets/covers/ccd4fdeb-6879-4797-ae1f-f37fe6330b64.jpeg",
+      "coverTrack": {
+        "sunoId": "ccd4fdeb-6879-4797-ae1f-f37fe6330b64",
+        "title": "पिंगल-बाइनरी ट्राम",
+        "sourceStyle": "neural radio program for students"
+      }
+    }
+  ]
+}

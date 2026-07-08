@@ -1,0 +1,164 @@
+{
+  "id": "report-hygiene-sanitize",
+  "title": "Radio Vaigyaaniq Prototype Hygiene + Sanitization Report",
+  "generatedAt": "2026-07-08T00:28:42.506Z",
+  "status": "sanitized-display-with-raw-source-preserved",
+  "prototype": "Radio_Vaigyaaniq_App_Prototype.html",
+  "dataScope": {
+    "embeddedPrototypeSongs": 482,
+    "embeddedPrototypeClips": 1186,
+    "embeddedPrototypeShows": 9,
+    "scannedSongs": 482
+  },
+  "checks": {
+    "displaySanitizerPresent": true,
+    "localRefs": {
+      "checked": 8,
+      "missing": []
+    },
+    "staleClaims": [
+      {
+        "id": "verified-checkout-copy",
+        "present": false,
+        "phrase": "Razorpay · Device-trust verified · Entitlement synced"
+      },
+      {
+        "id": "public-live-copy",
+        "present": false,
+        "phrase": "Nine live channels"
+      },
+      {
+        "id": "on-air-copy",
+        "present": false,
+        "phrase": "tracks · on air"
+      },
+      {
+        "id": "profile-pro-copy",
+        "present": false,
+        "phrase": "hkfaduio · Pro"
+      },
+      {
+        "id": "released-copy",
+        "present": false,
+        "phrase": "<small> released</small>"
+      }
+    ],
+    "appleDoubleSidecars": {
+      "web": {
+        "count": 0,
+        "samples": []
+      },
+      "desktop": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "appleDoublePrunedBeforeReport": {
+      "web": 4,
+      "desktop": 4
+    }
+  },
+  "sanitization": {
+    "rawSourcePreserved": true,
+    "displayRedactionOnly": true,
+    "redactionRules": [
+      "hi-degrading-insult",
+      "hi-explicit-anatomy",
+      "en-adult-style-erotic",
+      "en-adult-style-sexual",
+      "en-adult-style-sex"
+    ],
+    "matchCounts": {
+      "hi-degrading-insult": 14,
+      "hi-explicit-anatomy": 4,
+      "en-adult-style-erotic": 1,
+      "en-adult-style-sexual": 0,
+      "en-adult-style-sex": 0
+    },
+    "flaggedTrackCount": 8,
+    "flaggedTrackSamples": [
+      {
+        "title": "सुन री कुतिये ध्यान से",
+        "show": "sanatan",
+        "theme": "Sanatan & Vedic",
+        "date": "2026-03-15",
+        "rules": [
+          "hi-degrading-insult",
+          "hi-explicit-anatomy"
+        ]
+      },
+      {
+        "title": "सुन री कुतिये ध्यान से",
+        "show": "sanatan",
+        "theme": "Sanatan & Vedic",
+        "date": "2026-03-15",
+        "rules": [
+          "hi-degrading-insult"
+        ]
+      },
+      {
+        "title": "सुन री कुतिये ध्यान से",
+        "show": "sanatan",
+        "theme": "Sanatan & Vedic",
+        "date": "2026-03-15",
+        "rules": [
+          "hi-degrading-insult"
+        ]
+      },
+      {
+        "title": "सुन री कुतिये ध्यान से",
+        "show": "sanatan",
+        "theme": "Sanatan & Vedic",
+        "date": "2026-03-14",
+        "rules": [
+          "hi-degrading-insult"
+        ]
+      },
+      {
+        "title": "ये काम बड़े ही काम का है",
+        "show": "sanatan",
+        "theme": "Sanatan & Vedic",
+        "date": "2026-03-14",
+        "rules": [
+          "hi-degrading-insult",
+          "hi-explicit-anatomy"
+        ]
+      },
+      {
+        "title": "आग बराबर दोनों की पर एक बहुत शरमाए",
+        "show": "rap",
+        "theme": "Rap & Fusion",
+        "date": "2026-04-15",
+        "rules": [
+          "en-adult-style-erotic"
+        ]
+      },
+      {
+        "title": "काम की कामना पुण्य",
+        "show": "other",
+        "theme": "Other / Misc",
+        "date": "2026-03-14",
+        "rules": [
+          "hi-degrading-insult",
+          "hi-explicit-anatomy"
+        ]
+      },
+      {
+        "title": "ये काम बड़े ही काम का है",
+        "show": "other",
+        "theme": "Other / Misc",
+        "date": "2026-03-14",
+        "rules": [
+          "hi-degrading-insult",
+          "hi-explicit-anatomy"
+        ]
+      }
+    ]
+  },
+  "phkd": {
+    "productionReady": false,
+    "releaseAllowed": false,
+    "verificationState": "hygiene_reported_display_sanitized",
+    "evidence": "Prototype display text is redacted through a rendering sanitizer; raw embedded source data is preserved for provenance. Stale verified/live checkout copy is checked fail-closed. AppleDouble sidecars are counted so cleanup can be verified."
+  }
+}

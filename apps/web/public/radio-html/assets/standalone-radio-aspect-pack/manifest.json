@@ -1,0 +1,67 @@
+{
+  "id": "standalone-radio-aspect-pack",
+  "title": "Standalone Radio UI Aspect Ratio Pack",
+  "createdDate": "2026-07-08",
+  "source": {
+    "tool": "image_gen",
+    "type": "generated_bitmap_pack",
+    "sourceImage": null,
+    "promptSummary": "Standalone Radio Vaigyaaniq UI concept pack across ultrawide, desktop, tablet, square, portrait, and mobile aspect ratios."
+  },
+  "phkd": {
+    "fabricatedLiveScreenshot": false,
+    "productionReady": false,
+    "verificationState": "generated_concept",
+    "evidence": "Generated bitmap assets only. These are not Playwright captures, shipped runtime screenshots, store assets, or download evidence."
+  },
+  "assets": [
+    {
+      "id": "standalone-radio-ui-21x9-ultrawide",
+      "label": "21:9 Ultrawide",
+      "file": "standalone-radio-ui-21x9-ultrawide.png",
+      "width": 1915,
+      "height": 821,
+      "intendedSurface": "hero_banner_ultrawide"
+    },
+    {
+      "id": "standalone-radio-ui-16x9-desktop",
+      "label": "16:9 Desktop",
+      "file": "standalone-radio-ui-16x9-desktop.png",
+      "width": 1672,
+      "height": 941,
+      "intendedSurface": "desktop_landing"
+    },
+    {
+      "id": "standalone-radio-ui-4x3-tablet",
+      "label": "4:3 Tablet",
+      "file": "standalone-radio-ui-4x3-tablet.png",
+      "width": 1448,
+      "height": 1086,
+      "intendedSurface": "tablet_preview"
+    },
+    {
+      "id": "standalone-radio-ui-1x1-square",
+      "label": "1:1 Square",
+      "file": "standalone-radio-ui-1x1-square.png",
+      "width": 1254,
+      "height": 1254,
+      "intendedSurface": "square_social_cover"
+    },
+    {
+      "id": "standalone-radio-ui-4x5-portrait",
+      "label": "4:5 Portrait",
+      "file": "standalone-radio-ui-4x5-portrait.png",
+      "width": 1003,
+      "height": 1568,
+      "intendedSurface": "portrait_poster"
+    },
+    {
+      "id": "standalone-radio-ui-9x16-mobile",
+      "label": "9:16 Mobile",
+      "file": "standalone-radio-ui-9x16-mobile.png",
+      "width": 941,
+      "height": 1672,
+      "intendedSurface": "mobile_story"
+    }
+  ]
+}

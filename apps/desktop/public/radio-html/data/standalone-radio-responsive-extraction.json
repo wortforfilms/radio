@@ -1,0 +1,72 @@
+{
+  "id": "standalone-radio-responsive-extraction",
+  "title": "Standalone Radio Responsive UI Extraction",
+  "generatedAt": "2026-07-08",
+  "status": "local-ui-extraction",
+  "sourceImages": [
+    "assets/standalone-radio-aspect-pack/standalone-radio-ui-21x9-ultrawide.png",
+    "assets/standalone-radio-aspect-pack/standalone-radio-ui-16x9-desktop.png",
+    "assets/standalone-radio-aspect-pack/standalone-radio-ui-4x3-tablet.png",
+    "assets/standalone-radio-aspect-pack/standalone-radio-ui-1x1-square.png",
+    "assets/standalone-radio-aspect-pack/standalone-radio-ui-4x5-portrait.png",
+    "assets/standalone-radio-aspect-pack/standalone-radio-ui-9x16-mobile.png"
+  ],
+  "output": {
+    "html": "standalone-radio-responsive.html",
+    "desktopMirror": "../../../../../apps/desktop/public/radio-html/standalone-radio-responsive.html"
+  },
+  "responsiveBreakpoints": [
+    {
+      "name": "ultrawide_desktop",
+      "query": "default / min-width 1500px",
+      "layout": "left rail, main content, sticky queue, bottom player"
+    },
+    {
+      "name": "desktop_tablet",
+      "query": "max-width 1220px",
+      "layout": "collapsed icon rail, full-width main, queue below"
+    },
+    {
+      "name": "mobile",
+      "query": "max-width 820px",
+      "layout": "single-column topbar, stacked modules, mobile player"
+    },
+    {
+      "name": "small_mobile",
+      "query": "max-width 480px",
+      "layout": "single-column cards and tighter hero"
+    }
+  ],
+  "catalogEvidence": {
+    "tracks": 1186,
+    "candidateAlbums": 20,
+    "stations": 4,
+    "tracksWithSanitizedLyrics": 1158,
+    "sources": [
+      "data/possible-albums.json",
+      "data/station-tracks.json",
+      "data/lyrics-prompter-data.json"
+    ]
+  },
+  "extractedComponents": [
+    "sidebar_navigation",
+    "top_search_bar",
+    "hero_now_playing",
+    "resonance_visualizer",
+    "metrics_strip",
+    "station_cards",
+    "album_cards",
+    "lyrics_scriber",
+    "queue_panel",
+    "bottom_transport"
+  ],
+  "phkd": {
+    "fabricatedLiveScreenshot": false,
+    "productionReady": false,
+    "verificationState": "local_ui_extraction",
+    "rightsReady": false,
+    "broadcastReady": false,
+    "appStoreReady": false,
+    "evidence": "Responsive HTML/CSS extracted from generated concept images and grounded in local catalogue JSON counts. It is not a live screenshot, public release proof, signing proof, store-listing proof, or rights-closure proof."
+  }
+}

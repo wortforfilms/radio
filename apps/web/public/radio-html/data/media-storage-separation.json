@@ -1,0 +1,137 @@
+{
+  "id": "radio-media-storage-separation",
+  "generatedAt": "2026-06-26T22:20:57.799Z",
+  "releaseAllowed": false,
+  "verificationState": "blocked-media-storage-separation",
+  "scope": {
+    "database": {
+      "stores": [
+        "metadata",
+        "indexes",
+        "rights evidence",
+        "audit logs",
+        "checksums",
+        "object URIs"
+      ],
+      "neverStores": [
+        "audio bytes",
+        "cover bytes",
+        "video bytes",
+        "model binaries"
+      ],
+      "models": [
+        "StorageProvider",
+        "MediaObject",
+        "RadioTrackMediaLink",
+        "MediaAsset",
+        "AuditLog"
+      ]
+    },
+    "mediaStorage": {
+      "stores": [
+        "audio",
+        "covers",
+        "video",
+        "generated images",
+        "waveform sidecars",
+        "3D binaries"
+      ],
+      "rootEnv": "RADIO_MEDIA_ROOT",
+      "publicBaseEnv": "RADIO_MEDIA_PUBLIC_BASE",
+      "providerEnv": "RADIO_MEDIA_PROVIDER",
+      "allowedProviders": [
+        "local_fs",
+        "s3",
+        "r2",
+        "gcs",
+        "azure_blob",
+        "ipfs"
+      ]
+    },
+    "git": {
+      "stores": [
+        "source code",
+        "schemas",
+        "small UI assets",
+        "evidence JSON",
+        "manifests"
+      ],
+      "neverStores": [
+        "raw catalogue imports",
+        "promoted audio mirrors",
+        "generated media libraries"
+      ]
+    }
+  },
+  "config": {
+    "databaseUrlEnv": "DATABASE_URL",
+    "databaseUrlConfigured": false,
+    "mediaRootEnv": "RADIO_MEDIA_ROOT",
+    "mediaRootConfigured": false,
+    "mediaRoot": null,
+    "mediaPublicBaseEnv": "RADIO_MEDIA_PUBLIC_BASE",
+    "mediaPublicBaseConfigured": false,
+    "providerEnv": "RADIO_MEDIA_PROVIDER",
+    "provider": "local_fs"
+  },
+  "ignoredMediaRoots": [
+    "_radio_index/",
+    "_non_suno/",
+    "media/",
+    "storage/media/",
+    "apps/web/public/radio-html/assets/audio/",
+    "apps/web/public/radio-html/assets/covers/",
+    "apps/desktop/public/radio-html/assets/audio/",
+    "apps/desktop/public/radio-html/assets/covers/"
+  ],
+  "trackedMedia": {
+    "total": 135,
+    "byKind": {
+      "qa-image": 61,
+      "image": 4,
+      "app-icon": 48,
+      "audio": 22
+    },
+    "byExtension": {
+      ".png": 113,
+      ".mp3": 22
+    },
+    "runtimeAudioCount": 22,
+    "promotedMirrorCount": 0,
+    "runtimeAudio": [
+      "apps/web/public/universe-soundtracks/ai-universe.mp3",
+      "apps/web/public/universe-soundtracks/civilization-universe.mp3",
+      "apps/web/public/universe-soundtracks/community-universe.mp3",
+      "apps/web/public/universe-soundtracks/education-universe.mp3",
+      "apps/web/public/universe-soundtracks/future-knowledge-universe.mp3",
+      "apps/web/public/universe-soundtracks/geography-universe.mp3",
+      "apps/web/public/universe-soundtracks/governance-universe.mp3",
+      "apps/web/public/universe-soundtracks/guru-maataa-universe.mp3",
+      "apps/web/public/universe-soundtracks/knowledge-graph-universe.mp3",
+      "apps/web/public/universe-soundtracks/knowledge-universe.mp3",
+      "apps/web/public/universe-soundtracks/media-universe.mp3",
+      "apps/web/public/universe-soundtracks/observatory-universe.mp3",
+      "apps/web/public/universe-soundtracks/parampara-universe.mp3",
+      "apps/web/public/universe-soundtracks/pitra-universe.mp3",
+      "apps/web/public/universe-soundtracks/research-universe.mp3",
+      "apps/web/public/universe-soundtracks/rishi-universe.mp3",
+      "apps/web/public/universe-soundtracks/rishika-universe.mp3",
+      "apps/web/public/universe-soundtracks/subject-universe.mp3",
+      "apps/web/public/universe-soundtracks/text-universe.mp3",
+      "apps/web/public/universe-soundtracks/timeline-universe.mp3",
+      "apps/web/public/universe-soundtracks/universal-command-center.mp3",
+      "apps/web/public/universe-soundtracks/universal-knowledge-lineage-explorer.mp3"
+    ],
+    "promotedMirrors": []
+  },
+  "blockers": [
+    "DATABASE_URL is not configured",
+    "RADIO_MEDIA_ROOT is not configured",
+    "22 tracked audio files remain in Git"
+  ],
+  "phkd": {
+    "rule": "Fail closed until media storage root, checksums, rights evidence, and verification state are explicit.",
+    "unknownValues": "NULL",
+    "fabricatedClaims": false
+  }
+}

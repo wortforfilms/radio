@@ -1,0 +1,18 @@
+{
+  "id": "standalone-radio-ui-mockup",
+  "title": "Standalone Radio UI Mockup",
+  "asset": "assets/standalone-radio-ui-mockup.png",
+  "createdDate": "2026-07-08",
+  "source": {
+    "tool": "image_gen",
+    "type": "generated_bitmap",
+    "sourceImage": null,
+    "promptSummary": "Cinematic standalone Radio Vaigyaaniq desktop UI mockup with dark cosmic dashboard, station grid, album cover area, queue panel, bottom audio player, Three.js style spectrum waves, saffron and cyan accents."
+  },
+  "phkd": {
+    "fabricatedLiveScreenshot": false,
+    "productionReady": false,
+    "verificationState": "generated_concept",
+    "evidence": "Generated bitmap asset only. Not a Playwright capture, not an app store artifact, and not proof of a shipped runtime."
+  }
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radio Vaigyaaniq - Standalone UI Aspect Pack</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #070b10;
+      --panel: #101821;
+      --line: rgba(255, 255, 255, 0.1);
+      --text: #f5f7fb;
+      --muted: #94a3b8;
+      --cyan: #00f5d4;
+      --saffron: #ff6b35;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(0, 245, 212, 0.12), transparent 26rem),
+        radial-gradient(circle at 78% 0%, rgba(255, 107, 53, 0.14), transparent 24rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: min(1500px, calc(100vw - 40px));
+      margin: 0 auto;
+      padding: 36px 0 52px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 26px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 58px);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 12px 0 0;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      border: 1px solid rgba(0, 245, 212, 0.28);
+      border-radius: 999px;
+      padding: 0 14px;
+      background: rgba(0, 245, 212, 0.08);
+      color: var(--cyan);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(16, 24, 33, 0.72);
+      box-shadow: 0 22px 80px rgba(0, 0, 0, 0.24);
+    }
+
+    .card.wide {
+      grid-column: 1 / -1;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .meta strong {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #020508;
+    }
+
+    .phkd {
+      margin-top: 24px;
+      border: 1px solid rgba(255, 107, 53, 0.24);
+      border-radius: 8px;
+      padding: 16px;
+      background: rgba(255, 107, 53, 0.07);
+      color: #f7c6b4;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        width: min(100vw - 24px, 720px);
+        padding-top: 24px;
+      }
+
+      header,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .badge {
+        width: fit-content;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <div class="badge">Generated Concept Pack</div>
+        <h1>Standalone Radio UI Images</h1>
+        <p>Aspect-ratio variants for Radio Vaigyaaniq surfaces: ultrawide hero, desktop landing, tablet preview, square cover, portrait poster, and mobile story/app preview.</p>
+      </div>
+      <a class="badge" href="./assets/standalone-radio-aspect-pack/manifest.json">Manifest JSON</a>
+    </header>
+
+    <section class="grid" aria-label="Standalone radio aspect ratio images">
+      <article class="card wide">
+        <div class="meta"><strong>21:9 Ultrawide</strong><span>1915 x 821</span></div>
+        <img src="./assets/standalone-radio-aspect-pack/standalone-radio-ui-21x9-ultrawide.png" alt="Standalone Radio Vaigyaaniq ultrawide UI mockup">
+      </article>
+
+      <article class="card wide">
+        <div class="meta"><strong>16:9 Desktop</strong><span>1672 x 941</span></div>
+        <img src="./assets/standalone-radio-aspect-pack/standalone-radio-ui-16x9-desktop.png" alt="Standalone Radio Vaigyaaniq desktop UI mockup">
+      </article>
+
+      <article class="card">
+        <div class="meta"><strong>4:3 Tablet</strong><span>1448 x 1086</span></div>
+        <img src="./assets/standalone-radio-aspect-pack/standalone-radio-ui-4x3-tablet.png" alt="Standalone Radio Vaigyaaniq tablet UI mockup">
+      </article>
+
+      <article class="card">
+        <div class="meta"><strong>1:1 Square</strong><span>1254 x 1254</span></div>
+        <img src="./assets/standalone-radio-aspect-pack/standalone-radio-ui-1x1-square.png" alt="Standalone Radio Vaigyaaniq square UI mockup">
+      </article>
+
+      <article class="card">
+        <div class="meta"><strong>4:5 Portrait</strong><span>1003 x 1568</span></div>
+        <img src="./assets/standalone-radio-aspect-pack/standalone-radio-ui-4x5-portrait.png" alt="Standalone Radio Vaigyaaniq portrait UI mockup">
+      </article>
+
+      <article class="card">
+        <div class="meta"><strong>9:16 Mobile</strong><span>941 x 1672</span></div>
+        <img src="./assets/standalone-radio-aspect-pack/standalone-radio-ui-9x16-mobile.png" alt="Standalone Radio Vaigyaaniq mobile UI mockup">
+      </article>
+    </section>
+
+    <section class="phkd">
+      PHKD: These are generated bitmap concept assets. They are not live Playwright screenshots, shipping evidence, store-listing evidence, or proof of production runtime behavior.
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radio Vaigyaaniq Full Tree Detail</title>
+  <style>
+    :root{color-scheme:dark;--bg:#070a0f;--panel:#101720;--ink:#eef4f8;--muted:#94a3b8;--line:rgba(255,255,255,.12);--accent:#ff8a3d;--cyan:#63e6d5;--gold:#f0c36c;--danger:#ff7676}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 18% 0%,rgba(255,138,61,.17),transparent 32rem),linear-gradient(180deg,#070a0f,#091018 48%,#05070a);color:var(--ink);font:14px/1.45 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}.shell{width:min(1500px,calc(100vw - 28px));margin:auto;padding:18px 0 36px}.topbar{position:sticky;top:0;z-index:20;background:rgba(7,10,15,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.topbar-inner{width:min(1500px,calc(100vw - 28px));margin:auto;display:flex;align-items:center;gap:14px;padding:12px 0}.mark{width:42px;height:42px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--cyan));color:#071014;font-weight:950}.brand h1{font-size:18px;margin:0}.brand small{color:var(--muted)}.actions{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}.pill{border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--ink);border-radius:999px;padding:8px 11px;font-weight:800;text-decoration:none;cursor:pointer}.hero{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:end;border-bottom:1px solid var(--line);padding:28px 0 22px}.eyebrow{color:var(--gold);letter-spacing:.16em;text-transform:uppercase;font-size:12px;font-weight:950}.hero h2{font-size:clamp(2rem,5vw,5rem);line-height:.95;margin:9px 0 10px}.hero p{color:#cbd5df;max-width:880px;font-size:1.05rem}.guard{border-left:3px solid var(--danger);background:rgba(255,118,118,.08);color:#ffd4d4;border-radius:8px;padding:11px 13px;max-width:820px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;min-width:430px}.stat{border:1px solid var(--line);border-radius:8px;padding:10px;background:rgba(255,255,255,.04)}.stat span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em}.stat b{font-size:24px}.grid{display:grid;grid-template-columns:330px minmax(0,1fr);gap:16px;margin-top:18px}.panel{background:linear-gradient(180deg,rgba(16,23,32,.94),rgba(11,16,23,.96));border:1px solid var(--line);border-radius:8px;overflow:hidden}.panel-head{padding:14px;border-bottom:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:10px;align-items:center}.panel-head h3{margin:0;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}.panel-body{padding:12px}.search,.select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:#0b1119;color:#fff;margin-bottom:10px}.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}.card{border:1px solid var(--line);border-radius:8px;padding:12px;background:rgba(255,255,255,.04)}.card b{display:block;font-size:16px}.card span{display:block;color:var(--muted);font-size:12px}.tree-list{max-height:74vh;overflow:auto;padding-right:4px}.row{display:grid;grid-template-columns:minmax(0,1fr) 100px 118px 92px;gap:10px;align-items:center;border:1px solid var(--line);background:rgba(255,255,255,.035);border-radius:8px;padding:9px 10px;margin-bottom:7px}.path{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.path small{display:block;color:var(--muted);font-family:Inter,ui-sans-serif,system-ui}.tag{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:4px 7px;text-align:center;color:#d9e5ed}.route{color:var(--cyan);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.muted{color:var(--muted)}.details{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:16px}.list{display:flex;flex-wrap:wrap;gap:6px}.chip{border:1px solid var(--line);border-radius:999px;padding:5px 8px;color:#dfe7ee;background:rgba(255,255,255,.04);font-size:12px}@media(max-width:1050px){.grid,.hero{grid-template-columns:1fr}.stats{min-width:0}.row{grid-template-columns:1fr 80px}.row .tag:nth-of-type(2),.row .route{display:none}}@media(max-width:640px){.shell,.topbar-inner{width:min(100vw - 18px,1500px)}.actions{display:none}.stats{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="topbar-inner"><div class="mark">RV</div><div class="brand"><h1>Full Tree Detail</h1><small>Repository, Radio HTML, assets, data, routes, scripts, tests</small></div><nav class="actions"><a class="pill" href="./standalone-radio.html">Standalone Radio</a><a class="pill" href="./data/full-tree-detail.json">Data JSON</a><a class="pill" href="./data/full-tree-detail.tsv">TSV</a></nav></div></header>
+  <main class="shell">
+    <section class="hero"><div><span class="eyebrow">Filesystem-derived tree</span><h2>Full project map with detail</h2><p>Live tree generated from the local workspace. Search every included file, inspect sizes, routes, categories, and product purpose.</p><p class="guard">PHKD: no fake files or routes. AppleDouble sidecars and dependency/build caches are omitted from product counts.</p></div><div class="stats"><article class="stat"><span>Repo files</span><b>14,845</b></article><article class="stat"><span>Radio HTML</span><b>2,607</b></article><article class="stat"><span>Radio size</span><b>6.21 GB</b></article></div></section>
+    <section class="details"><article class="panel"><div class="panel-head"><h3>Top Level</h3></div><div class="panel-body summary" id="topLevel"></div></article><article class="panel"><div class="panel-head"><h3>Radio Types</h3></div><div class="panel-body"><div class="list" id="typeCounts"></div></div></article><article class="panel"><div class="panel-head"><h3>Radio Categories</h3></div><div class="panel-body"><div class="list" id="categoryCounts"></div></div></article></section>
+    <section class="grid">
+      <aside class="panel"><div class="panel-head"><h3>Filters</h3><small id="matchCount">0</small></div><div class="panel-body"><input class="search" id="search" placeholder="Search path, category, route, detail..."><select class="select" id="scope"><option value="radio">Radio HTML only</option><option value="repo">Full repository</option></select><select class="select" id="category"><option value="all">All categories</option></select><button class="pill" id="loadLocalData" type="button">Load local JSON</button><input id="fileImport" type="file" accept="application/json" hidden><p class="muted">File mode may block auto-load. Use Load local JSON and choose data/full-tree-detail.json.</p></div></aside>
+      <section class="panel"><div class="panel-head"><h3>Tree Rows</h3><small>full data in JSON/TSV</small></div><div class="panel-body"><div class="tree-list" id="treeList"></div></div></section>
+    </section>
+  </main>
+  <script id="tree-bootstrap" type="application/json">{"generatedAt":"2026-07-08T19:42:36.023Z","counts":{"repositoryFiles":14845,"repositoryDirectories":272,"radioHtmlFiles":2607,"desktopRadioHtmlFiles":2602,"omittedAppleDouble":72,"totalBytes":31786563981,"radioHtmlBytes":6662841494,"desktopRadioHtmlBytes":6662541683},"topLevel":[{"path":"_radio_index","fileCount":8804,"sizeBytes":17451233397,"size":"16.3 GB","categories":{"source-index":8804},"purpose":"Raw Radio source catalog, media, lyrics, backups, imports, playlists."},{"path":"apps","fileCount":5617,"sizeBytes":13466794511,"size":"12.5 GB","categories":{"app":300,"app-html":71,"audio":2375,"cover":2376,"icon":18,"image":6,"shader":6,"data":208,"qa-evidence":96,"route":6,"surface":153,"proposal":2},"purpose":"Web, desktop, Radio, and HKD3D application surfaces."},{"path":"root-files","fileCount":153,"sizeBytes":730646645,"size":"696.8 MB","categories":{"other":137,"document":13,"data":3},"purpose":"Workspace root file group."},{"path":"_non_suno","fileCount":20,"sizeBytes":129931942,"size":"123.9 MB","categories":{"other":20},"purpose":"Workspace root file group."},{"path":"prisma","fileCount":7,"sizeBytes":7041913,"size":"6.72 MB","categories":{"database":7},"purpose":"Database schema, migrations, seeds."},{"path":"scripts","fileCount":42,"sizeBytes":534610,"size":"522.1 KB","categories":{"script":42},"purpose":"Generators, importers, proof lanes, release checks."},{"path":"packages","fileCount":35,"sizeBytes":228977,"size":"223.6 KB","categories":{"package":35},"purpose":"Shared graph/search/runtime/package code."},{"path":"tests","fileCount":28,"sizeBytes":75442,"size":"73.7 KB","categories":{"test":28},"purpose":"Automated product and evidence contracts."},{"path":"integrations","fileCount":107,"sizeBytes":48285,"size":"47.2 KB","categories":{"integration":107},"purpose":"External adapter scaffolds such as HDFC UPI parser."},{"path":"proposals","fileCount":1,"sizeBytes":17870,"size":"17.5 KB","categories":{"proposal":1},"purpose":"Proposal and commercial artifacts."},{"path":"hkd3d","fileCount":20,"sizeBytes":8087,"size":"7.90 KB","categories":{"hkd3d":20},"purpose":"HKD3D asset/runtime scaffold."},{"path":"lipi","fileCount":11,"sizeBytes":2302,"size":"2.25 KB","categories":{"lipi":11},"purpose":"Lipi civilization/script knowledge assets."}],"radioTypeCounts":[{"extension":"mp3","count":1186},{"extension":"jpeg","count":1182},{"extension":"html","count":83},{"extension":"json","count":77},{"extension":"png","count":39},{"extension":"svg","count":12},{"extension":"tsv","count":12},{"extension":"csv","count":5},{"extension":"js","count":5},{"extension":"md","count":2},{"extension":"css","count":1},{"extension":"frag","count":1},{"extension":"sh","count":1},{"extension":"vert","count":1}],"radioCategoryCounts":[{"category":"audio","count":1187},{"category":"cover","count":1186},{"category":"data","count":81},{"category":"surface","count":51},{"category":"qa-evidence","count":32},{"category":"app-html","count":31},{"category":"app","count":25},{"category":"icon","count":6},{"category":"image","count":2},{"category":"proposal","count":2},{"category":"route","count":2},{"category":"shader","count":2}]}</script>
+  <script>
+    const BOOTSTRAP = JSON.parse(document.getElementById('tree-bootstrap').textContent);
+    let DATA = null;
+    const state = { scope: 'radio', category: 'all', search: '' };
+    const $ = (id) => document.getElementById(id);
+    const normalize = (value) => String(value || '').toLowerCase();
+    const escapeHtml = (value) => String(value ?? '').replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[char]));
+    function bootSummary() {
+      $('topLevel').innerHTML = BOOTSTRAP.topLevel.map((item) => '<article class="card"><b>' + escapeHtml(item.path) + '</b><span>' + item.fileCount.toLocaleString() + ' files · ' + item.size + '</span><span>' + escapeHtml(item.purpose) + '</span></article>').join('');
+      $('typeCounts').innerHTML = BOOTSTRAP.radioTypeCounts.map((item) => '<span class="chip">' + escapeHtml(item.extension) + ': ' + item.count.toLocaleString() + '</span>').join('');
+      $('categoryCounts').innerHTML = BOOTSTRAP.radioCategoryCounts.map((item) => '<span class="chip">' + escapeHtml(item.category) + ': ' + item.count.toLocaleString() + '</span>').join('');
+    }
+    async function bootData() {
+      try {
+        const response = await fetch('./data/full-tree-detail.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error('DATA_FETCH_FAILED_' + response.status);
+        DATA = await response.json();
+        hydrateFilters();
+        render();
+      } catch (error) {
+        $('treeList').innerHTML = '<div class="card">Tree data could not be auto-loaded. Use Load local JSON and choose data/full-tree-detail.json.</div>';
+      }
+    }
+    function hydrateFilters() {
+      const cats = [...new Set(DATA.repository.files.map((file) => file.category))].sort();
+      $('category').innerHTML = '<option value="all">All categories</option>' + cats.map((cat) => '<option>' + escapeHtml(cat) + '</option>').join('');
+    }
+    function filtered() {
+      if (!DATA) return [];
+      const rows = state.scope === 'repo' ? DATA.repository.files : DATA.radioHtml.files;
+      const term = normalize(state.search);
+      return rows.filter((file) => {
+        if (state.category !== 'all' && file.category !== state.category) return false;
+        if (term && !normalize([file.path, file.category, file.kind, file.route, file.detail, file.status].join(' ')).includes(term)) return false;
+        return true;
+      });
+    }
+    function render() {
+      const rows = filtered();
+      $('matchCount').textContent = rows.length.toLocaleString();
+      $('treeList').innerHTML = rows.map((file) => '<article class="row"><div class="path" title="' + escapeHtml(file.path) + '">' + indent(file.depth) + escapeHtml(file.path) + '<small>' + escapeHtml(file.detail) + '</small></div><span class="tag">' + escapeHtml(file.size) + '</span><span class="tag">' + escapeHtml(file.category) + '</span>' + (file.route ? '<a class="route" href="' + escapeHtml(file.route.replace(/^\/radio-html\//, './')) + '">' + escapeHtml(file.route) + '</a>' : '<span class="muted">NULL</span>') + '</article>').join('');
+    }
+    function indent(depth) {
+      return '&nbsp;'.repeat(Math.max(0, depth - 1) * 2);
+    }
+    $('search').addEventListener('input', (event) => { state.search = event.target.value; render(); });
+    $('scope').addEventListener('change', (event) => { state.scope = event.target.value; render(); });
+    $('category').addEventListener('change', (event) => { state.category = event.target.value; render(); });
+    $('loadLocalData').addEventListener('click', () => $('fileImport').click());
+    $('fileImport').addEventListener('change', async (event) => {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      DATA = JSON.parse(await file.text());
+      hydrateFilters();
+      render();
+    });
+    bootSummary();
+    bootData();
+  </script>
+</body>
+</html>

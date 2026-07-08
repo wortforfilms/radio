@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lyrics Prompter Sync Check</title>
+  <style>
+    :root{color-scheme:dark;--bg:#070a0f;--panel:#101720;--ink:#eef4f8;--muted:#94a3b8;--line:rgba(255,255,255,.12);--accent:#ff8a3d;--cyan:#63e6d5;--gold:#f0c36c;--danger:#ff7676;--ok:#8be29d}
+    *{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#070a0f,#091018 48%,#05070a);color:var(--ink);font:14px/1.45 Inter,ui-sans-serif,system-ui}.shell{width:min(1400px,calc(100vw - 28px));margin:auto;padding:20px 0 36px}.top{display:flex;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px}.mark{width:42px;height:42px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--cyan));color:#071014;font-weight:950}.top h1{margin:0;font-size:22px}.top small{color:var(--muted)}.actions{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}.pill{border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--ink);border-radius:999px;padding:8px 11px;font-weight:800;text-decoration:none}.hero{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:end;margin:24px 0}.hero h2{font-size:clamp(2rem,5vw,4.8rem);line-height:.95;margin:8px 0}.eyebrow{color:var(--gold);letter-spacing:.16em;text-transform:uppercase;font-size:12px;font-weight:950}.guard{border-left:3px solid var(--danger);background:rgba(255,118,118,.08);color:#ffd4d4;border-radius:8px;padding:11px 13px;max-width:760px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;min-width:420px}.stat,.card{border:1px solid var(--line);border-radius:8px;padding:12px;background:rgba(255,255,255,.04)}.stat span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em}.stat b{font-size:24px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}.ok{color:var(--ok)}.warn{color:var(--danger)}pre{white-space:pre-wrap;background:#0b1119;border:1px solid var(--line);border-radius:8px;padding:12px;max-height:360px;overflow:auto}@media(max-width:900px){.hero{grid-template-columns:1fr}.stats{min-width:0}.actions{margin-left:0}.top{align-items:flex-start;flex-wrap:wrap}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="top"><div class="mark">RV</div><div><h1>Lyrics Prompter Sync Check</h1><small>Structural sync validation, not human sync certification</small></div><nav class="actions"><a class="pill" href="./lyrics-prompter.html">Prompter</a><a class="pill" href="./data/lyrics-prompter-sync-check.json">JSON</a><a class="pill" href="./data/lyrics-prompter-sync-check.tsv">TSV</a></nav></header>
+    <section class="hero"><div><span class="eyebrow">Estimated spread validation</span><h2>STRUCTURAL_SYNC_PASS_ESTIMATED_ONLY</h2><p class="guard">PHKD: the prompter highlights cues by audio playhead and generated time ranges. This report validates structure only; human-verified lyric sync remains false.</p></div><div class="stats"><article class="stat"><span>Records</span><b>1,319</b></article><article class="stat"><span>Cues</span><b>65,767</b></article><article class="stat"><span>Critical</span><b>0</b></article></div></section>
+    <section class="grid">
+      <article class="card"><b class="ok">PASS</b><span>monotonicCueOrder</span></article><article class="card"><b class="ok">PASS</b><span>cueBoundsWithinDuration</span></article><article class="card"><b class="ok">PASS</b><span>cueTextPresent</span></article><article class="card"><b class="ok">PASS</b><span>noVerifiedTimingClaims</span></article><article class="card"><b class="ok">PASS</b><span>audioHighlightMechanismPresent</span></article>
+    </section>
+    <h2>Counts</h2>
+    <pre>{
+  "totalRecords": 1319,
+  "catalogTracks": 1186,
+  "manualRecords": 133,
+  "cueCount": 65767,
+  "recordsWithCues": 1291,
+  "recordsWithoutCues": 28,
+  "ffprobeDurationRecords": 1158,
+  "estimatedDurationRecords": 133,
+  "nullTimingRecords": 28,
+  "timingVerifiedClaims": 0,
+  "issues": 0,
+  "criticalIssues": 0,
+  "warningIssues": 0
+}</pre>
+    <script id="sync-bootstrap" type="application/json">{"generatedAt":"2026-07-07T19:48:13.059Z","verdict":"STRUCTURAL_SYNC_PASS_ESTIMATED_ONLY","counts":{"totalRecords":1319,"catalogTracks":1186,"manualRecords":133,"cueCount":65767,"recordsWithCues":1291,"recordsWithoutCues":28,"ffprobeDurationRecords":1158,"estimatedDurationRecords":133,"nullTimingRecords":28,"timingVerifiedClaims":0,"issues":0,"criticalIssues":0,"warningIssues":0},"checks":{"monotonicCueOrder":true,"cueBoundsWithinDuration":true,"cueTextPresent":true,"noVerifiedTimingClaims":true,"audioHighlightMechanismPresent":true}}</script>
+  </main>
+</body>
+</html>
