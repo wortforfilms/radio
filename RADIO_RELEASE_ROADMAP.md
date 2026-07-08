@@ -86,3 +86,19 @@ Everything else — catalog, audio wiring, payment code, build pipeline, QA auto
 ## Rough timeline
 ~9–14 focused days end-to-end (less if web-only and/or a curated track subset for v1).
 Critical path: **Phase 0 → 2 (rights) → 3 (payments) → 5 (review) → 7**. Phases 4 and 6 can run in parallel.
+
+
+
+// proxy,firewall,dns
+// title
+// description
+// version
+// landing{hero,features,usps,setvices,pricing,call to action}
+// forms
+// pages
+// dashboards
+// widgets
+// table/model/json_seed
+// reports/
+// tests/
+// support
