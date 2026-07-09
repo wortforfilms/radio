@@ -1,0 +1,2173 @@
+{
+  "id": "radio-vaigyaaniq-route-registry",
+  "generatedAt": "2026-07-09T17:07:38.432Z",
+  "phkd": {
+    "failClosed": true,
+    "note": "Statuses are evidence-backed: built/partial cite concrete repo artifacts; planned routes render placeholders and never fabricate content, schedules, or claims."
+  },
+  "counts": {
+    "sections": 20,
+    "routes": 195,
+    "built": 5,
+    "partial": 47,
+    "planned": 143,
+    "dynamic": 8
+  },
+  "sections": [
+    {
+      "name": "Public Website",
+      "emoji": "🌐"
+    },
+    {
+      "name": "Radio",
+      "emoji": "📻"
+    },
+    {
+      "name": "Podcast",
+      "emoji": "🎙"
+    },
+    {
+      "name": "Research Hub",
+      "emoji": "🔬"
+    },
+    {
+      "name": "Science Categories",
+      "emoji": "🛰"
+    },
+    {
+      "name": "Academy",
+      "emoji": "🎓"
+    },
+    {
+      "name": "Community",
+      "emoji": "👥"
+    },
+    {
+      "name": "Events",
+      "emoji": "📅"
+    },
+    {
+      "name": "News",
+      "emoji": "📰"
+    },
+    {
+      "name": "Media",
+      "emoji": "🎥"
+    },
+    {
+      "name": "AI",
+      "emoji": "🤖"
+    },
+    {
+      "name": "Search",
+      "emoji": "🔍"
+    },
+    {
+      "name": "User",
+      "emoji": "👤"
+    },
+    {
+      "name": "Premium",
+      "emoji": "💎"
+    },
+    {
+      "name": "Analytics",
+      "emoji": "📊"
+    },
+    {
+      "name": "Studio",
+      "emoji": "🎛"
+    },
+    {
+      "name": "Content Management",
+      "emoji": "🗂"
+    },
+    {
+      "name": "Administration",
+      "emoji": "⚙"
+    },
+    {
+      "name": "API",
+      "emoji": "🔌"
+    },
+    {
+      "name": "Ecosystem Integration",
+      "emoji": "🌐"
+    }
+  ],
+  "routes": [
+    {
+      "path": "/",
+      "section": "Public Website",
+      "emoji": "🌐",
+      "title": "Home",
+      "status": "built",
+      "implementedBy": [
+        "apps/radio/app/page.tsx"
+      ],
+      "description": "Standalone landing — surfaces, tools, payment API.",
+      "dynamic": false
+    },
+    {
+      "path": "/about",
+      "section": "Public Website",
+      "emoji": "🌐",
+      "title": "About",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/mission",
+      "section": "Public Website",
+      "emoji": "🌐",
+      "title": "Mission",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/vision",
+      "section": "Public Website",
+      "emoji": "🌐",
+      "title": "Vision",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/science-for-bharat",
+      "section": "Public Website",
+      "emoji": "🌐",
+      "title": "Science For Bharat",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/contact",
+      "section": "Public Website",
+      "emoji": "🌐",
+      "title": "Contact",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/partners",
+      "section": "Public Website",
+      "emoji": "🌐",
+      "title": "Partners",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/sponsors",
+      "section": "Public Website",
+      "emoji": "🌐",
+      "title": "Sponsors",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/careers",
+      "section": "Public Website",
+      "emoji": "🌐",
+      "title": "Careers",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/press",
+      "section": "Public Website",
+      "emoji": "🌐",
+      "title": "Press",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/privacy",
+      "section": "Public Website",
+      "emoji": "🌐",
+      "title": "Privacy",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/terms",
+      "section": "Public Website",
+      "emoji": "🌐",
+      "title": "Terms",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/accessibility",
+      "section": "Public Website",
+      "emoji": "🌐",
+      "title": "Accessibility",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/donate",
+      "section": "Public Website",
+      "emoji": "🌐",
+      "title": "Donate",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/radio",
+      "section": "Radio",
+      "emoji": "📻",
+      "title": "Radio",
+      "status": "built",
+      "implementedBy": [
+        "apps/web/app/radio/page.tsx",
+        "radio-html/online-offline-radio-engine.html"
+      ],
+      "description": "Broadcast command surface + online/offline engine over the 1,186-track catalogue.",
+      "dynamic": false
+    },
+    {
+      "path": "/radio/live",
+      "section": "Radio",
+      "emoji": "📻",
+      "title": "Live",
+      "status": "partial",
+      "implementedBy": [
+        "radio-html/online-offline-radio-engine.html"
+      ],
+      "description": "Local-fallback playback works; live stream URLs stay NULL until rights-verified.",
+      "dynamic": false
+    },
+    {
+      "path": "/radio/now-playing",
+      "section": "Radio",
+      "emoji": "📻",
+      "title": "Now Playing",
+      "status": "built",
+      "implementedBy": [
+        "radio-html/assets/js/radio-engine.js"
+      ],
+      "description": "Now-playing panel: stylised titles, access badges, synced lyrics, story modal.",
+      "dynamic": false
+    },
+    {
+      "path": "/radio/schedule",
+      "section": "Radio",
+      "emoji": "📻",
+      "title": "Schedule",
+      "status": "partial",
+      "implementedBy": [
+        "radio-html/data/radio-engine-manifest.json"
+      ],
+      "description": "Sequence-only program schedule; wall-clock startTime stays NULL (unverified).",
+      "dynamic": false
+    },
+    {
+      "path": "/radio/frequencies",
+      "section": "Radio",
+      "emoji": "📻",
+      "title": "Frequencies",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "No licensed frequency exists; fabricating one would break PHKD.",
+      "dynamic": false
+    },
+    {
+      "path": "/radio/shows",
+      "section": "Radio",
+      "emoji": "📻",
+      "title": "Shows",
+      "status": "partial",
+      "implementedBy": [
+        "radio-html/Radio_Stations.html"
+      ],
+      "description": "7 station lanes act as shows; dedicated show format not built.",
+      "dynamic": false
+    },
+    {
+      "path": "/radio/shows/:slug",
+      "section": "Radio",
+      "emoji": "📻",
+      "title": "Slug",
+      "status": "partial",
+      "implementedBy": [
+        "radio-html/Radio_Stations.html"
+      ],
+      "description": "Foundation exists — see implementedBy.",
+      "dynamic": true
+    },
+    {
+      "path": "/radio/rj/:slug",
+      "section": "Radio",
+      "emoji": "📻",
+      "title": "Slug",
+      "status": "partial",
+      "implementedBy": [
+        "radio-html/assets/js/radio-engine.js#TTS_PERSONAS"
+      ],
+      "description": "Four TTS personas (maataa, rishi, samaya, vigyaaniq); human RJ profiles not built.",
+      "dynamic": true
+    },
+    {
+      "path": "/radio/archive",
+      "section": "Radio",
+      "emoji": "📻",
+      "title": "Archive",
+      "status": "built",
+      "implementedBy": [
+        "radio-html/Radio_Catalogue.html",
+        "radio-html/data/radio-content.json"
+      ],
+      "description": "Full indexed catalogue with covers, versions, storylines.",
+      "dynamic": false
+    },
+    {
+      "path": "/radio/request",
+      "section": "Radio",
+      "emoji": "📻",
+      "title": "Request",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Request intake not built; gift-intent outbox is the nearest primitive.",
+      "dynamic": false
+    },
+    {
+      "path": "/radio/dedicate",
+      "section": "Radio",
+      "emoji": "📻",
+      "title": "Dedicate",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/radio/download",
+      "section": "Radio",
+      "emoji": "📻",
+      "title": "Download",
+      "status": "partial",
+      "implementedBy": [
+        "radio-html/data/offline-cache-manifest.json",
+        "apps/radio-backend/server.js#offline-bundle"
+      ],
+      "description": "Rights-aware offline bundles exist; user-facing download manager not built.",
+      "dynamic": false
+    },
+    {
+      "path": "/podcasts",
+      "section": "Podcast",
+      "emoji": "🎙",
+      "title": "Podcasts",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/podcasts/trending",
+      "section": "Podcast",
+      "emoji": "🎙",
+      "title": "Trending",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/podcasts/latest",
+      "section": "Podcast",
+      "emoji": "🎙",
+      "title": "Latest",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/podcasts/categories",
+      "section": "Podcast",
+      "emoji": "🎙",
+      "title": "Categories",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/podcasts/:slug",
+      "section": "Podcast",
+      "emoji": "🎙",
+      "title": "Slug",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": true
+    },
+    {
+      "path": "/podcasts/:slug/transcript",
+      "section": "Podcast",
+      "emoji": "🎙",
+      "title": "Transcript",
+      "status": "partial",
+      "implementedBy": [
+        "RADIO_JOCKEY_TRANSCRIPTS.md",
+        "radio-html/data/lyrics-prompter-data.json"
+      ],
+      "description": "Transcript tooling exists for tracks; podcast catalogue itself is NULL.",
+      "dynamic": true
+    },
+    {
+      "path": "/podcasts/:slug/chapters",
+      "section": "Podcast",
+      "emoji": "🎙",
+      "title": "Chapters",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": true
+    },
+    {
+      "path": "/podcasts/:slug/discussion",
+      "section": "Podcast",
+      "emoji": "🎙",
+      "title": "Discussion",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": true
+    },
+    {
+      "path": "/podcasts/bookmark",
+      "section": "Podcast",
+      "emoji": "🎙",
+      "title": "Bookmark",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/research",
+      "section": "Research Hub",
+      "emoji": "🔬",
+      "title": "Research",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/research/publications",
+      "section": "Research Hub",
+      "emoji": "🔬",
+      "title": "Publications",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/research/papers",
+      "section": "Research Hub",
+      "emoji": "🔬",
+      "title": "Papers",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/research/datasets",
+      "section": "Research Hub",
+      "emoji": "🔬",
+      "title": "Datasets",
+      "status": "partial",
+      "implementedBy": [
+        "apps/web/app/api/export"
+      ],
+      "description": "HKD/CSV/GraphML exports of the knowledge graph exist; dataset portal not built.",
+      "dynamic": false
+    },
+    {
+      "path": "/research/experiments",
+      "section": "Research Hub",
+      "emoji": "🔬",
+      "title": "Experiments",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/research/projects",
+      "section": "Research Hub",
+      "emoji": "🔬",
+      "title": "Projects",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/research/labs",
+      "section": "Research Hub",
+      "emoji": "🔬",
+      "title": "Labs",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/research/authors",
+      "section": "Research Hub",
+      "emoji": "🔬",
+      "title": "Authors",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/research/citations",
+      "section": "Research Hub",
+      "emoji": "🔬",
+      "title": "Citations",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/research/downloads",
+      "section": "Research Hub",
+      "emoji": "🔬",
+      "title": "Downloads",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/discover",
+      "section": "Science Categories",
+      "emoji": "🛰",
+      "title": "Discover",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/discover/space",
+      "section": "Science Categories",
+      "emoji": "🛰",
+      "title": "Space",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/discover/astronomy",
+      "section": "Science Categories",
+      "emoji": "🛰",
+      "title": "Astronomy",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/discover/physics",
+      "section": "Science Categories",
+      "emoji": "🛰",
+      "title": "Physics",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/discover/chemistry",
+      "section": "Science Categories",
+      "emoji": "🛰",
+      "title": "Chemistry",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/discover/biology",
+      "section": "Science Categories",
+      "emoji": "🛰",
+      "title": "Biology",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/discover/mathematics",
+      "section": "Science Categories",
+      "emoji": "🛰",
+      "title": "Mathematics",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/discover/medicine",
+      "section": "Science Categories",
+      "emoji": "🛰",
+      "title": "Medicine",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/discover/agriculture",
+      "section": "Science Categories",
+      "emoji": "🛰",
+      "title": "Agriculture",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/discover/environment",
+      "section": "Science Categories",
+      "emoji": "🛰",
+      "title": "Environment",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/discover/climate",
+      "section": "Science Categories",
+      "emoji": "🛰",
+      "title": "Climate",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/discover/robotics",
+      "section": "Science Categories",
+      "emoji": "🛰",
+      "title": "Robotics",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/discover/ai",
+      "section": "Science Categories",
+      "emoji": "🛰",
+      "title": "Ai",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/discover/history-of-science",
+      "section": "Science Categories",
+      "emoji": "🛰",
+      "title": "History Of Science",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/discover/sanskrit-science",
+      "section": "Science Categories",
+      "emoji": "🛰",
+      "title": "Sanskrit Science",
+      "status": "partial",
+      "implementedBy": [
+        "apps/web/app/api/sanskrit-dictionary",
+        "apps/web/app/dictionary"
+      ],
+      "description": "Sanskrit dictionary + reference corpus exist in the umbrella app.",
+      "dynamic": false
+    },
+    {
+      "path": "/discover/innovation",
+      "section": "Science Categories",
+      "emoji": "🛰",
+      "title": "Innovation",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/discover/startups",
+      "section": "Science Categories",
+      "emoji": "🛰",
+      "title": "Startups",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/discover/student",
+      "section": "Science Categories",
+      "emoji": "🛰",
+      "title": "Student",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/academy",
+      "section": "Academy",
+      "emoji": "🎓",
+      "title": "Academy",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/academy/courses",
+      "section": "Academy",
+      "emoji": "🎓",
+      "title": "Courses",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/academy/course/:slug",
+      "section": "Academy",
+      "emoji": "🎓",
+      "title": "Slug",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": true
+    },
+    {
+      "path": "/academy/lessons",
+      "section": "Academy",
+      "emoji": "🎓",
+      "title": "Lessons",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/academy/quizzes",
+      "section": "Academy",
+      "emoji": "🎓",
+      "title": "Quizzes",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/academy/tests",
+      "section": "Academy",
+      "emoji": "🎓",
+      "title": "Tests",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/academy/certificates",
+      "section": "Academy",
+      "emoji": "🎓",
+      "title": "Certificates",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/academy/my-learning",
+      "section": "Academy",
+      "emoji": "🎓",
+      "title": "My Learning",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/academy/leaderboard",
+      "section": "Academy",
+      "emoji": "🎓",
+      "title": "Leaderboard",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/community",
+      "section": "Community",
+      "emoji": "👥",
+      "title": "Community",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/community/discussions",
+      "section": "Community",
+      "emoji": "👥",
+      "title": "Discussions",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/community/questions",
+      "section": "Community",
+      "emoji": "👥",
+      "title": "Questions",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/community/polls",
+      "section": "Community",
+      "emoji": "👥",
+      "title": "Polls",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/community/events",
+      "section": "Community",
+      "emoji": "👥",
+      "title": "Events",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/community/clubs",
+      "section": "Community",
+      "emoji": "👥",
+      "title": "Clubs",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/community/challenges",
+      "section": "Community",
+      "emoji": "👥",
+      "title": "Challenges",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/community/leaderboard",
+      "section": "Community",
+      "emoji": "👥",
+      "title": "Leaderboard",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/community/profile/:username",
+      "section": "Community",
+      "emoji": "👥",
+      "title": "Username",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": true
+    },
+    {
+      "path": "/events",
+      "section": "Events",
+      "emoji": "📅",
+      "title": "Events",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/events/live",
+      "section": "Events",
+      "emoji": "📅",
+      "title": "Live",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/events/upcoming",
+      "section": "Events",
+      "emoji": "📅",
+      "title": "Upcoming",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/events/calendar",
+      "section": "Events",
+      "emoji": "📅",
+      "title": "Calendar",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/events/workshops",
+      "section": "Events",
+      "emoji": "📅",
+      "title": "Workshops",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/events/webinars",
+      "section": "Events",
+      "emoji": "📅",
+      "title": "Webinars",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/events/hackathons",
+      "section": "Events",
+      "emoji": "📅",
+      "title": "Hackathons",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/events/science-fairs",
+      "section": "Events",
+      "emoji": "📅",
+      "title": "Science Fairs",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/news",
+      "section": "News",
+      "emoji": "📰",
+      "title": "News",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/news/science",
+      "section": "News",
+      "emoji": "📰",
+      "title": "Science",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/news/space",
+      "section": "News",
+      "emoji": "📰",
+      "title": "Space",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/news/technology",
+      "section": "News",
+      "emoji": "📰",
+      "title": "Technology",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/news/agriculture",
+      "section": "News",
+      "emoji": "📰",
+      "title": "Agriculture",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/news/india",
+      "section": "News",
+      "emoji": "📰",
+      "title": "India",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/news/world",
+      "section": "News",
+      "emoji": "📰",
+      "title": "World",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/news/videos",
+      "section": "News",
+      "emoji": "📰",
+      "title": "Videos",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/videos",
+      "section": "Media",
+      "emoji": "🎥",
+      "title": "Videos",
+      "status": "partial",
+      "implementedBy": [
+        "radio-html surfaces (visualizer WebM capture)"
+      ],
+      "description": "Visualizer capture exists; video library not built.",
+      "dynamic": false
+    },
+    {
+      "path": "/shorts",
+      "section": "Media",
+      "emoji": "🎥",
+      "title": "Shorts",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/gallery",
+      "section": "Media",
+      "emoji": "🎥",
+      "title": "Gallery",
+      "status": "partial",
+      "implementedBy": [
+        "radio-html/Radio_Catalogue.html"
+      ],
+      "description": "Cover-art gallery exists for the catalogue.",
+      "dynamic": false
+    },
+    {
+      "path": "/infographics",
+      "section": "Media",
+      "emoji": "🎥",
+      "title": "Infographics",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/animations",
+      "section": "Media",
+      "emoji": "🎥",
+      "title": "Animations",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/livestreams",
+      "section": "Media",
+      "emoji": "🎥",
+      "title": "Livestreams",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/ai",
+      "section": "AI",
+      "emoji": "🤖",
+      "title": "Ai",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/ai/rj",
+      "section": "AI",
+      "emoji": "🤖",
+      "title": "Rj",
+      "status": "partial",
+      "implementedBy": [
+        "radio-html/assets/js/radio-engine.js#TTS_PERSONAS"
+      ],
+      "description": "Persona TTS announcements (Web Speech API); generative RJ not built.",
+      "dynamic": false
+    },
+    {
+      "path": "/ai/chat",
+      "section": "AI",
+      "emoji": "🤖",
+      "title": "Chat",
+      "status": "partial",
+      "implementedBy": [
+        "apps/web/app/api/assistant"
+      ],
+      "description": "Assistant API route exists in the umbrella app.",
+      "dynamic": false
+    },
+    {
+      "path": "/ai/translator",
+      "section": "AI",
+      "emoji": "🤖",
+      "title": "Translator",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/ai/summarizer",
+      "section": "AI",
+      "emoji": "🤖",
+      "title": "Summarizer",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/ai/transcript",
+      "section": "AI",
+      "emoji": "🤖",
+      "title": "Transcript",
+      "status": "partial",
+      "implementedBy": [
+        "radio-html/data/lyrics-prompter-data.json"
+      ],
+      "description": "Draft lyric/transcript cue data exists (timing unverified).",
+      "dynamic": false
+    },
+    {
+      "path": "/ai/recommendations",
+      "section": "AI",
+      "emoji": "🤖",
+      "title": "Recommendations",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/ai/search",
+      "section": "AI",
+      "emoji": "🤖",
+      "title": "Search",
+      "status": "partial",
+      "implementedBy": [
+        "apps/web/app/api/search"
+      ],
+      "description": "Knowledge search API exists; AI ranking not built.",
+      "dynamic": false
+    },
+    {
+      "path": "/search",
+      "section": "Search",
+      "emoji": "🔍",
+      "title": "Search",
+      "status": "partial",
+      "implementedBy": [
+        "apps/web/app/api/search",
+        "radio-engine catalog search"
+      ],
+      "description": "Catalogue + knowledge search exist; unified search page not built.",
+      "dynamic": false
+    },
+    {
+      "path": "/search/radio",
+      "section": "Search",
+      "emoji": "🔍",
+      "title": "Radio",
+      "status": "partial",
+      "implementedBy": [
+        "radio-engine catalog search"
+      ],
+      "description": "Foundation exists — see implementedBy.",
+      "dynamic": false
+    },
+    {
+      "path": "/search/podcasts",
+      "section": "Search",
+      "emoji": "🔍",
+      "title": "Podcasts",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/search/research",
+      "section": "Search",
+      "emoji": "🔍",
+      "title": "Research",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/search/news",
+      "section": "Search",
+      "emoji": "🔍",
+      "title": "News",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/search/people",
+      "section": "Search",
+      "emoji": "🔍",
+      "title": "People",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/login",
+      "section": "User",
+      "emoji": "👤",
+      "title": "Login",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/signup",
+      "section": "User",
+      "emoji": "👤",
+      "title": "Signup",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/forgot-password",
+      "section": "User",
+      "emoji": "👤",
+      "title": "Forgot Password",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/verify",
+      "section": "User",
+      "emoji": "👤",
+      "title": "Verify",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/profile",
+      "section": "User",
+      "emoji": "👤",
+      "title": "Profile",
+      "status": "partial",
+      "implementedBy": [
+        "prisma/schema.prisma#User"
+      ],
+      "description": "User/UserSettings models exist; profile UI not built.",
+      "dynamic": false
+    },
+    {
+      "path": "/profile/edit",
+      "section": "User",
+      "emoji": "👤",
+      "title": "Edit",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/bookmarks",
+      "section": "User",
+      "emoji": "👤",
+      "title": "Bookmarks",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/history",
+      "section": "User",
+      "emoji": "👤",
+      "title": "History",
+      "status": "partial",
+      "implementedBy": [
+        "radio-engine outbox (play events)"
+      ],
+      "description": "Play events queue offline and sync as evidence; history UI not built.",
+      "dynamic": false
+    },
+    {
+      "path": "/downloads",
+      "section": "User",
+      "emoji": "👤",
+      "title": "Downloads",
+      "status": "partial",
+      "implementedBy": [
+        "radio-html/data/offline-cache-manifest.json"
+      ],
+      "description": "Foundation exists — see implementedBy.",
+      "dynamic": false
+    },
+    {
+      "path": "/notifications",
+      "section": "User",
+      "emoji": "👤",
+      "title": "Notifications",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/settings",
+      "section": "User",
+      "emoji": "👤",
+      "title": "Settings",
+      "status": "partial",
+      "implementedBy": [
+        "packages/shared/src/commerce.ts#UserSettingsLike",
+        "radio-html/Radio_Account.html"
+      ],
+      "description": "Settings model + account surface mock exist.",
+      "dynamic": false
+    },
+    {
+      "path": "/premium",
+      "section": "Premium",
+      "emoji": "💎",
+      "title": "Premium",
+      "status": "partial",
+      "implementedBy": [
+        "radio-html/Radio_Pricing_Checkout.html",
+        "packages/shared/src/commerce.ts"
+      ],
+      "description": "₹29 track / ₹299 all-access model + checkout surface; live payments await Razorpay keys.",
+      "dynamic": false
+    },
+    {
+      "path": "/premium/plans",
+      "section": "Premium",
+      "emoji": "💎",
+      "title": "Plans",
+      "status": "partial",
+      "implementedBy": [
+        "packages/shared/src/commerce.ts"
+      ],
+      "description": "Foundation exists — see implementedBy.",
+      "dynamic": false
+    },
+    {
+      "path": "/premium/payment",
+      "section": "Premium",
+      "emoji": "💎",
+      "title": "Payment",
+      "status": "partial",
+      "implementedBy": [
+        "apps/radio/app/api/payments/order",
+        "apps/radio/app/api/payments/webhook"
+      ],
+      "description": "Server-priced Razorpay orders + HMAC-verified webhooks built; needs keys + one real txn.",
+      "dynamic": false
+    },
+    {
+      "path": "/premium/history",
+      "section": "Premium",
+      "emoji": "💎",
+      "title": "History",
+      "status": "partial",
+      "implementedBy": [
+        "prisma/schema.prisma#Purchase"
+      ],
+      "description": "Foundation exists — see implementedBy.",
+      "dynamic": false
+    },
+    {
+      "path": "/premium/library",
+      "section": "Premium",
+      "emoji": "💎",
+      "title": "Library",
+      "status": "partial",
+      "implementedBy": [
+        "prisma/schema.prisma#Entitlement"
+      ],
+      "description": "Foundation exists — see implementedBy.",
+      "dynamic": false
+    },
+    {
+      "path": "/analytics",
+      "section": "Analytics",
+      "emoji": "📊",
+      "title": "Analytics",
+      "status": "partial",
+      "implementedBy": [
+        "apps/web/app/api/analytics"
+      ],
+      "description": "Observatory metrics API exists; analytics UI not built.",
+      "dynamic": false
+    },
+    {
+      "path": "/analytics/listeners",
+      "section": "Analytics",
+      "emoji": "📊",
+      "title": "Listeners",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/analytics/live",
+      "section": "Analytics",
+      "emoji": "📊",
+      "title": "Live",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/analytics/streams",
+      "section": "Analytics",
+      "emoji": "📊",
+      "title": "Streams",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/analytics/content",
+      "section": "Analytics",
+      "emoji": "📊",
+      "title": "Content",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/analytics/geography",
+      "section": "Analytics",
+      "emoji": "📊",
+      "title": "Geography",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/analytics/revenue",
+      "section": "Analytics",
+      "emoji": "📊",
+      "title": "Revenue",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/studio",
+      "section": "Studio",
+      "emoji": "🎛",
+      "title": "Studio",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/studio/live",
+      "section": "Studio",
+      "emoji": "🎛",
+      "title": "Live",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/studio/record",
+      "section": "Studio",
+      "emoji": "🎛",
+      "title": "Record",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/studio/upload",
+      "section": "Studio",
+      "emoji": "🎛",
+      "title": "Upload",
+      "status": "partial",
+      "implementedBy": [
+        "RADIO_TRACK_ONBOARDING_SOP.md",
+        "radio-html/Track_Onboarding.html"
+      ],
+      "description": "Track onboarding SOP + surface exist (fail-closed canPlay).",
+      "dynamic": false
+    },
+    {
+      "path": "/studio/editor",
+      "section": "Studio",
+      "emoji": "🎛",
+      "title": "Editor",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/studio/script",
+      "section": "Studio",
+      "emoji": "🎛",
+      "title": "Script",
+      "status": "partial",
+      "implementedBy": [
+        "radio-html/lyrics-prompter.html"
+      ],
+      "description": "Lyrics prompter surface exists.",
+      "dynamic": false
+    },
+    {
+      "path": "/studio/caller",
+      "section": "Studio",
+      "emoji": "🎛",
+      "title": "Caller",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/studio/queue",
+      "section": "Studio",
+      "emoji": "🎛",
+      "title": "Queue",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/studio/automation",
+      "section": "Studio",
+      "emoji": "🎛",
+      "title": "Automation",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/studio/assets",
+      "section": "Studio",
+      "emoji": "🎛",
+      "title": "Assets",
+      "status": "partial",
+      "implementedBy": [
+        "radio-html/assets/Radio_Vaigyaaniq_Asset_Evidence.json"
+      ],
+      "description": "Foundation exists — see implementedBy.",
+      "dynamic": false
+    },
+    {
+      "path": "/cms",
+      "section": "Content Management",
+      "emoji": "🗂",
+      "title": "Cms",
+      "status": "partial",
+      "implementedBy": [
+        "radio-html/admin-panel.html",
+        "radio-html/admin-kanban.html"
+      ],
+      "description": "Admin panel (CRUD overlays, rights proofs) + kanban board exist.",
+      "dynamic": false
+    },
+    {
+      "path": "/cms/dashboard",
+      "section": "Content Management",
+      "emoji": "🗂",
+      "title": "Dashboard",
+      "status": "partial",
+      "implementedBy": [
+        "radio-html/admin-panel.html"
+      ],
+      "description": "Foundation exists — see implementedBy.",
+      "dynamic": false
+    },
+    {
+      "path": "/cms/articles",
+      "section": "Content Management",
+      "emoji": "🗂",
+      "title": "Articles",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/cms/shows",
+      "section": "Content Management",
+      "emoji": "🗂",
+      "title": "Shows",
+      "status": "partial",
+      "implementedBy": [
+        "apps/radio-backend/server.js#/admin/stations"
+      ],
+      "description": "Foundation exists — see implementedBy.",
+      "dynamic": false
+    },
+    {
+      "path": "/cms/podcasts",
+      "section": "Content Management",
+      "emoji": "🗂",
+      "title": "Podcasts",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/cms/research",
+      "section": "Content Management",
+      "emoji": "🗂",
+      "title": "Research",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/cms/media",
+      "section": "Content Management",
+      "emoji": "🗂",
+      "title": "Media",
+      "status": "partial",
+      "implementedBy": [
+        "scripts/media-storage-audit.mjs",
+        "RADIO_MEDIA_STORAGE.md"
+      ],
+      "description": "Foundation exists — see implementedBy.",
+      "dynamic": false
+    },
+    {
+      "path": "/cms/users",
+      "section": "Content Management",
+      "emoji": "🗂",
+      "title": "Users",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/cms/comments",
+      "section": "Content Management",
+      "emoji": "🗂",
+      "title": "Comments",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/cms/moderation",
+      "section": "Content Management",
+      "emoji": "🗂",
+      "title": "Moderation",
+      "status": "partial",
+      "implementedBy": [
+        "scripts/lib/radio-content-lib.mjs#sanitize"
+      ],
+      "description": "Lyric sanitisation pipeline exists; general moderation not built.",
+      "dynamic": false
+    },
+    {
+      "path": "/cms/workflows",
+      "section": "Content Management",
+      "emoji": "🗂",
+      "title": "Workflows",
+      "status": "partial",
+      "implementedBy": [
+        "RIGHTS_CLOSURE_RUNBOOK.md",
+        "PHASE_4_5_RUNBOOK.md"
+      ],
+      "description": "Foundation exists — see implementedBy.",
+      "dynamic": false
+    },
+    {
+      "path": "/cms/scheduler",
+      "section": "Content Management",
+      "emoji": "🗂",
+      "title": "Scheduler",
+      "status": "partial",
+      "implementedBy": [
+        "apps/radio-backend/server.js#/admin/programs"
+      ],
+      "description": "Program overlays (draft startTime) exist; scheduler UI not built.",
+      "dynamic": false
+    },
+    {
+      "path": "/admin",
+      "section": "Administration",
+      "emoji": "⚙",
+      "title": "Admin",
+      "status": "built",
+      "implementedBy": [
+        "radio-html/admin-panel.html",
+        "apps/radio-backend/server.js#/admin"
+      ],
+      "description": "Fail-closed admin lane: ADMIN_PASSWORD auth, CRUD overlays, rights proofs, cache status.",
+      "dynamic": false
+    },
+    {
+      "path": "/admin/users",
+      "section": "Administration",
+      "emoji": "⚙",
+      "title": "Users",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/admin/roles",
+      "section": "Administration",
+      "emoji": "⚙",
+      "title": "Roles",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/admin/permissions",
+      "section": "Administration",
+      "emoji": "⚙",
+      "title": "Permissions",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/admin/api",
+      "section": "Administration",
+      "emoji": "⚙",
+      "title": "Api",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/admin/settings",
+      "section": "Administration",
+      "emoji": "⚙",
+      "title": "Settings",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/admin/logs",
+      "section": "Administration",
+      "emoji": "⚙",
+      "title": "Logs",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/admin/audit",
+      "section": "Administration",
+      "emoji": "⚙",
+      "title": "Audit",
+      "status": "partial",
+      "implementedBy": [
+        "packages/runtime/src/audit.ts",
+        "apps/web/app/api/audit"
+      ],
+      "description": "AuditLog model + API exist.",
+      "dynamic": false
+    },
+    {
+      "path": "/admin/security",
+      "section": "Administration",
+      "emoji": "⚙",
+      "title": "Security",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/admin/storage",
+      "section": "Administration",
+      "emoji": "⚙",
+      "title": "Storage",
+      "status": "partial",
+      "implementedBy": [
+        "packages/runtime/src/storage.ts",
+        "RADIO_MEDIA_STORAGE.md"
+      ],
+      "description": "Foundation exists — see implementedBy.",
+      "dynamic": false
+    },
+    {
+      "path": "/admin/backups",
+      "section": "Administration",
+      "emoji": "⚙",
+      "title": "Backups",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/admin/integrations",
+      "section": "Administration",
+      "emoji": "⚙",
+      "title": "Integrations",
+      "status": "partial",
+      "implementedBy": [
+        "integrations/hdfc-upi-parser"
+      ],
+      "description": "Foundation exists — see implementedBy.",
+      "dynamic": false
+    },
+    {
+      "path": "/api/v1/auth",
+      "section": "API",
+      "emoji": "🔌",
+      "title": "Auth",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/api/v1/radio",
+      "section": "API",
+      "emoji": "🔌",
+      "title": "Radio",
+      "status": "partial",
+      "implementedBy": [
+        "apps/web/app/api/radio-release",
+        "apps/radio-backend/server.js#/api/stations"
+      ],
+      "description": "Stations/schedule/evidence endpoints exist (unversioned); /api/v1 alias planned.",
+      "dynamic": false
+    },
+    {
+      "path": "/api/v1/podcasts",
+      "section": "API",
+      "emoji": "🔌",
+      "title": "Podcasts",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/api/v1/research",
+      "section": "API",
+      "emoji": "🔌",
+      "title": "Research",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/api/v1/news",
+      "section": "API",
+      "emoji": "🔌",
+      "title": "News",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/api/v1/events",
+      "section": "API",
+      "emoji": "🔌",
+      "title": "Events",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/api/v1/community",
+      "section": "API",
+      "emoji": "🔌",
+      "title": "Community",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/api/v1/search",
+      "section": "API",
+      "emoji": "🔌",
+      "title": "Search",
+      "status": "partial",
+      "implementedBy": [
+        "apps/web/app/api/search"
+      ],
+      "description": "Foundation exists — see implementedBy.",
+      "dynamic": false
+    },
+    {
+      "path": "/api/v1/analytics",
+      "section": "API",
+      "emoji": "🔌",
+      "title": "Analytics",
+      "status": "partial",
+      "implementedBy": [
+        "apps/web/app/api/analytics"
+      ],
+      "description": "Foundation exists — see implementedBy.",
+      "dynamic": false
+    },
+    {
+      "path": "/api/v1/upload",
+      "section": "API",
+      "emoji": "🔌",
+      "title": "Upload",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/api/v1/notifications",
+      "section": "API",
+      "emoji": "🔌",
+      "title": "Notifications",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/api/v1/payments",
+      "section": "API",
+      "emoji": "🔌",
+      "title": "Payments",
+      "status": "partial",
+      "implementedBy": [
+        "apps/radio/app/api/payments/order",
+        "apps/radio/app/api/payments/webhook"
+      ],
+      "description": "Order + webhook live (unversioned); /api/v1 alias planned.",
+      "dynamic": false
+    },
+    {
+      "path": "/ecosystem",
+      "section": "Ecosystem Integration",
+      "emoji": "🌐",
+      "title": "Ecosystem",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/ecosystem/nlm",
+      "section": "Ecosystem Integration",
+      "emoji": "🌐",
+      "title": "Nlm",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/ecosystem/cic",
+      "section": "Ecosystem Integration",
+      "emoji": "🌐",
+      "title": "Cic",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/ecosystem/shree-kautilya",
+      "section": "Ecosystem Integration",
+      "emoji": "🌐",
+      "title": "Shree Kautilya",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/ecosystem/lipi",
+      "section": "Ecosystem Integration",
+      "emoji": "🌐",
+      "title": "Lipi",
+      "status": "partial",
+      "implementedBy": [
+        "apps/web/app/lipi",
+        "lipi/civilizations"
+      ],
+      "description": "Lipi civilizations module exists in the umbrella app.",
+      "dynamic": false
+    },
+    {
+      "path": "/ecosystem/maataa",
+      "section": "Ecosystem Integration",
+      "emoji": "🌐",
+      "title": "Maataa",
+      "status": "partial",
+      "implementedBy": [
+        "apps/web/app/api/guru-maataa"
+      ],
+      "description": "Foundation exists — see implementedBy.",
+      "dynamic": false
+    },
+    {
+      "path": "/ecosystem/corpus",
+      "section": "Ecosystem Integration",
+      "emoji": "🌐",
+      "title": "Corpus",
+      "status": "partial",
+      "implementedBy": [
+        "packages/shared/src/reference-corpus.ts"
+      ],
+      "description": "Foundation exists — see implementedBy.",
+      "dynamic": false
+    },
+    {
+      "path": "/ecosystem/apis",
+      "section": "Ecosystem Integration",
+      "emoji": "🌐",
+      "title": "Apis",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    },
+    {
+      "path": "/ecosystem/developers",
+      "section": "Ecosystem Integration",
+      "emoji": "🌐",
+      "title": "Developers",
+      "status": "planned",
+      "implementedBy": [],
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "dynamic": false
+    }
+  ]
+}

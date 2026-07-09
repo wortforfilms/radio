@@ -57,3 +57,28 @@ a { color: inherit; text-decoration: none; }
 
 h2.section { font-size: 12px; text-transform: uppercase; letter-spacing: .09em; color: var(--gold); margin: 28px 0 8px; }
 .foot { color: var(--muted); font-size: 12px; margin-top: 30px; border-top: 1px solid var(--line); padding-top: 14px; }
+
+/* --- Registry-driven ecosystem routes --- */
+.route-shell { max-width: 1080px; }
+.crumbs { display: flex; gap: 10px; align-items: center; font-size: 12px; color: var(--muted); margin-bottom: 18px; }
+.crumbs a { color: var(--gold); text-decoration: none; }
+.route-head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.route-head h1 { margin: 0; }
+.route-path { display: flex; gap: 8px; flex-wrap: wrap; }
+.route-path code, .panel code { background: rgba(255,255,255,.06); border: 1px solid var(--line); border-radius: 6px; padding: 2px 7px; font-size: 12px; }
+.route-desc { color: var(--muted); max-width: 70ch; }
+.panel { background: rgba(255,255,255,.03); border: 1px solid var(--line); border-radius: 14px; padding: 16px; margin: 14px 0; }
+.panel h2 { font-size: 14px; margin: 0 0 10px; }
+.panel.guard { border-left: 3px solid #ff7272; }
+.chip { font-size: 10px; letter-spacing: .06em; font-weight: 800; border: 1px solid var(--line); border-radius: 999px; padding: 3px 9px; }
+.chip-built { color: #00f5d4; border-color: rgba(0,245,212,.4); }
+.chip-partial { color: var(--gold); border-color: rgba(223,177,91,.45); }
+.chip-planned { color: var(--muted); }
+.route-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px; margin-top: 8px; }
+.route-card { display: grid; gap: 5px; border: 1px solid var(--line); border-radius: 12px; padding: 11px; text-decoration: none; color: inherit; background: rgba(255,255,255,.03); }
+.route-card b { font-size: 13px; }
+.route-card code { font-size: 11px; color: var(--muted); background: none; border: none; padding: 0; }
+.route-card .chip { justify-self: start; }
+details { margin: 10px 0; }
+details summary { cursor: pointer; font-weight: 700; padding: 6px 0; }
+.route-foot { color: var(--muted); font-size: 11.5px; margin-top: 26px; border-top: 1px solid var(--line); padding-top: 12px; }

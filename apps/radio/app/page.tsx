@@ -59,6 +59,25 @@ export default function RadioHome() {
           </div>
         </div>
 
+        <h2 className="section">Ecosystem</h2>
+        <div className="grid">
+          <a className="card" href="/ecosystem">
+            <div className="tag">MAP</div>
+            <h3>Full route map</h3>
+            <p>195 routes across 20 sections — radio, podcasts, research, academy, studio, CMS — each with an honest built / partial / planned status.</p>
+          </a>
+          <a className="card" href="/radio">
+            <div className="tag">📻</div>
+            <h3>Radio section</h3>
+            <p>Live engine, now playing, schedule, archive, offline downloads.</p>
+          </a>
+          <a className="card" href="/premium">
+            <div className="tag">💎</div>
+            <h3>Premium</h3>
+            <p>₹29 tracks, ₹299 all-access — server-priced, webhook-verified.</p>
+          </a>
+        </div>
+
         <p className="foot">
           Radio Vaigyaaniq · P.H.K.D. / VESAHE Film Solutions Private Limited. Run{" "}
           <code>npm run assets:sync</code> to populate <code>/radio-html</code> surfaces.
