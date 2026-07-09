@@ -46,3 +46,4 @@ apps/radio-backend/generated-content.jsonl
 apps/radio-backend/registry-proposals.jsonl
 apps/radio-backend/rights-ledger.jsonl
 apps/radio-backend/rights-notifications.jsonl
+build/

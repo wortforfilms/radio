@@ -48,6 +48,7 @@
     "radio:seed": "node scripts/seed-catalog.mjs",
     "radio:seed:dry": "node scripts/seed-catalog.mjs --dry-run",
     "radio:offline:sync": "node scripts/download-offline-assets.mjs",
+    "radio:build:uniques": "node scripts/build-uniques-bundle.mjs",
     "radio:backend:start": "node apps/radio-backend/server.js",
     "radio:backend:test-streams": "ENABLE_TEST_STREAMS=1 node apps/radio-backend/server.js",
     "radio:prototype:hygiene": "node scripts/report-radio-prototype-hygiene.mjs",
