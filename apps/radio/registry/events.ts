@@ -4,7 +4,7 @@
 // registry; statuses/evidence carried over verbatim (PHKD: evidence-backed).
 import type { RouteDefinition } from "./types.ts";
 
-export const routes: RouteDefinition[] = [
+export const routes: RouteDefinition[] =  [
   {
     "id": "events",
     "path": "/events",
@@ -72,7 +72,8 @@ export const routes: RouteDefinition[] = [
       "hub",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "event"
   },
   {
     "id": "events.live",
@@ -212,7 +213,8 @@ export const routes: RouteDefinition[] = [
       "upcoming",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "event"
   },
   {
     "id": "events.calendar",
@@ -352,7 +354,8 @@ export const routes: RouteDefinition[] = [
       "workshops",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "event"
   },
   {
     "id": "events.webinars",
@@ -422,7 +425,8 @@ export const routes: RouteDefinition[] = [
       "webinars",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "event"
   },
   {
     "id": "events.hackathons",
@@ -492,7 +496,8 @@ export const routes: RouteDefinition[] = [
       "hackathons",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "event"
   },
   {
     "id": "events.science-fairs",
@@ -563,6 +568,7 @@ export const routes: RouteDefinition[] = [
       "science-fairs",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "event"
   }
 ];

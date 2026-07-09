@@ -4,7 +4,7 @@
 // registry; statuses/evidence carried over verbatim (PHKD: evidence-backed).
 import type { RouteDefinition } from "./types.ts";
 
-export const routes: RouteDefinition[] = [
+export const routes: RouteDefinition[] =  [
   {
     "id": "academy",
     "path": "/academy",
@@ -142,7 +142,8 @@ export const routes: RouteDefinition[] = [
       "courses",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "course"
   },
   {
     "id": "academy.course",
@@ -213,7 +214,8 @@ export const routes: RouteDefinition[] = [
       "course",
       "planned"
     ],
-    "dynamic": true
+    "dynamic": true,
+    "contentType": "course"
   },
   {
     "id": "academy.lessons",
@@ -283,7 +285,8 @@ export const routes: RouteDefinition[] = [
       "lessons",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "course"
   },
   {
     "id": "academy.quizzes",
@@ -353,7 +356,8 @@ export const routes: RouteDefinition[] = [
       "quizzes",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "quiz"
   },
   {
     "id": "academy.tests",
@@ -423,7 +427,8 @@ export const routes: RouteDefinition[] = [
       "tests",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "quiz"
   },
   {
     "id": "academy.certificates",

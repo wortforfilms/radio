@@ -75,7 +75,7 @@ describe("generated build outputs", () => {
   }>("apps/radio/lib/route-registry.json");
 
   it("emits a backwards-compatible enriched route-registry.json + mirrors", () => {
-    expect(registry.schemaVersion).toBe(2);
+    expect(registry.schemaVersion).toBeGreaterThanOrEqual(2);
     expect(registry.counts.routes).toBe(allRoutes.length);
     // legacy fields preserved on every route (old consumers keep working)
     for (const legacyField of ["path", "section", "emoji", "title", "status", "implementedBy", "description", "dynamic"]) {

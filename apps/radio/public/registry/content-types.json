@@ -1,0 +1,477 @@
+{
+  "generatedAt": "2026-07-09T17:40:11.166Z",
+  "count": 10,
+  "contentTypes": [
+    {
+      "id": "radio-track",
+      "name": "Radio Track",
+      "description": "Catalogue track with commerce + rights lanes and content library enrichment.",
+      "status": "built",
+      "implementedBy": [
+        "prisma/schema.prisma#RadioTrack",
+        "apps/web/public/radio-html/data/radio-content.json"
+      ],
+      "workflow": "rights-closure",
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "stylizedTitle",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "slug",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "required": true,
+          "description": "original | take-N"
+        },
+        {
+          "name": "durationSeconds",
+          "type": "duration",
+          "required": false
+        },
+        {
+          "name": "audio",
+          "type": "asset",
+          "required": true
+        },
+        {
+          "name": "cover",
+          "type": "asset",
+          "required": false
+        },
+        {
+          "name": "priceInr",
+          "type": "money",
+          "required": false
+        },
+        {
+          "name": "priceUsd",
+          "type": "money",
+          "required": false
+        },
+        {
+          "name": "previewSeconds",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "published",
+          "type": "boolean",
+          "required": true,
+          "description": "Rights-closure owned — never set manually"
+        },
+        {
+          "name": "storyline",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "transcript",
+          "type": "reference",
+          "required": false,
+          "references": "transcript"
+        }
+      ]
+    },
+    {
+      "id": "transcript",
+      "name": "Transcript",
+      "description": "Time-cued lyric/speech transcript with sanitisation state (timing unverified).",
+      "status": "partial",
+      "implementedBy": [
+        "apps/web/public/radio-html/data/lyrics-prompter-data.json",
+        "apps/web/public/radio-html/assets/lrc"
+      ],
+      "workflow": "editorial",
+      "fields": [
+        {
+          "name": "trackId",
+          "type": "reference",
+          "required": true,
+          "references": "radio-track"
+        },
+        {
+          "name": "cues",
+          "type": "cue-list",
+          "required": true
+        },
+        {
+          "name": "language",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "timingVerified",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "name": "lyricsStatus",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "live-show",
+      "name": "Live Show",
+      "description": "Station lane / programmed sequence (wall-clock times NULL until verified).",
+      "status": "partial",
+      "implementedBy": [
+        "apps/web/public/radio-html/data/radio-engine-manifest.json#stations"
+      ],
+      "workflow": "editorial",
+      "fields": [
+        {
+          "name": "name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "slug",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "streamUrl",
+          "type": "url",
+          "required": false,
+          "description": "NULL until rights-verified"
+        },
+        {
+          "name": "programs",
+          "type": "reference",
+          "required": false,
+          "references": "radio-track"
+        }
+      ]
+    },
+    {
+      "id": "podcast",
+      "name": "Podcast",
+      "description": "Episode with chapters, transcript, and feed metadata.",
+      "status": "planned",
+      "implementedBy": [],
+      "workflow": "editorial",
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "slug",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "audio",
+          "type": "asset",
+          "required": true
+        },
+        {
+          "name": "durationSeconds",
+          "type": "duration",
+          "required": true
+        },
+        {
+          "name": "showNotes",
+          "type": "richtext",
+          "required": false
+        },
+        {
+          "name": "chapters",
+          "type": "cue-list",
+          "required": false
+        },
+        {
+          "name": "transcript",
+          "type": "reference",
+          "required": false,
+          "references": "transcript"
+        },
+        {
+          "name": "publishedAt",
+          "type": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "research-paper",
+      "name": "Research Paper",
+      "description": "Publication with authors, citations, and downloads.",
+      "status": "planned",
+      "implementedBy": [],
+      "workflow": "editorial",
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "abstract",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "authors",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "doi",
+          "type": "url",
+          "required": false
+        },
+        {
+          "name": "pdf",
+          "type": "asset",
+          "required": false
+        },
+        {
+          "name": "dataset",
+          "type": "reference",
+          "required": false,
+          "references": "dataset"
+        }
+      ]
+    },
+    {
+      "id": "dataset",
+      "name": "Dataset",
+      "description": "Downloadable dataset with provenance and licence.",
+      "status": "planned",
+      "implementedBy": [],
+      "workflow": "editorial",
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "licence",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "source",
+          "type": "url",
+          "required": true
+        },
+        {
+          "name": "file",
+          "type": "asset",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "article",
+      "name": "Article",
+      "description": "News/editorial long-form piece.",
+      "status": "planned",
+      "implementedBy": [],
+      "workflow": "editorial",
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "slug",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "body",
+          "type": "richtext",
+          "required": true
+        },
+        {
+          "name": "hero",
+          "type": "asset",
+          "required": false
+        },
+        {
+          "name": "publishedAt",
+          "type": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "event",
+      "name": "Event",
+      "description": "Workshop/webinar/hackathon/science-fair with schedule.",
+      "status": "planned",
+      "implementedBy": [],
+      "workflow": "editorial",
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "startsAt",
+          "type": "date",
+          "required": true
+        },
+        {
+          "name": "endsAt",
+          "type": "date",
+          "required": false
+        },
+        {
+          "name": "location",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "registrationUrl",
+          "type": "url",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "course",
+      "name": "Course",
+      "description": "Academy course with lessons and quizzes.",
+      "status": "planned",
+      "implementedBy": [],
+      "workflow": "editorial",
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "slug",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "lessons",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "quiz",
+          "type": "reference",
+          "required": false,
+          "references": "quiz"
+        }
+      ]
+    },
+    {
+      "id": "quiz",
+      "name": "Quiz",
+      "description": "Question set with scoring for Academy tests.",
+      "status": "planned",
+      "implementedBy": [],
+      "workflow": "editorial",
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "questions",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "passScore",
+          "type": "number",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "routesByContentType": {
+    "radio-track": [
+      "radio.now-playing",
+      "radio.archive",
+      "radio.download"
+    ],
+    "transcript": [
+      "podcasts.transcript",
+      "ai.transcript"
+    ],
+    "live-show": [
+      "radio.live",
+      "radio.schedule",
+      "radio.shows",
+      "radio.shows.detail"
+    ],
+    "podcast": [
+      "podcasts",
+      "podcasts.trending",
+      "podcasts.latest",
+      "podcasts.detail",
+      "podcasts.chapters"
+    ],
+    "research-paper": [
+      "research.publications",
+      "research.papers",
+      "research.citations"
+    ],
+    "dataset": [
+      "research.datasets",
+      "research.downloads"
+    ],
+    "article": [
+      "news",
+      "news.science",
+      "news.space",
+      "news.technology",
+      "news.agriculture",
+      "news.india",
+      "news.world"
+    ],
+    "event": [
+      "events",
+      "events.upcoming",
+      "events.workshops",
+      "events.webinars",
+      "events.hackathons",
+      "events.science-fairs"
+    ],
+    "course": [
+      "academy.courses",
+      "academy.course",
+      "academy.lessons"
+    ],
+    "quiz": [
+      "academy.quizzes",
+      "academy.tests"
+    ]
+  }
+}

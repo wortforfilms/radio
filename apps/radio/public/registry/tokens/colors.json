@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-07-09T17:40:11.166Z",
+  "colors": {
+    "bg": "#070812",
+    "panel": "#121624",
+    "panel-2": "#191f32",
+    "line": "rgba(255,255,255,.12)",
+    "text": "#f7f4ea",
+    "muted": "#aba6c8",
+    "gold": "#dfb15b",
+    "cyan": "#00f5d4",
+    "orange": "#ff6b35",
+    "danger": "#ff7272",
+    "ok": "#8be29d"
+  }
+}

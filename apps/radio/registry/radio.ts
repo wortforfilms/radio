@@ -4,7 +4,7 @@
 // registry; statuses/evidence carried over verbatim (PHKD: evidence-backed).
 import type { RouteDefinition } from "./types.ts";
 
-export const routes: RouteDefinition[] = [
+export const routes: RouteDefinition[] =  [
   {
     "id": "radio",
     "path": "/radio",
@@ -187,7 +187,8 @@ export const routes: RouteDefinition[] = [
       "playback",
       "partial"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "live-show"
   },
   {
     "id": "radio.now-playing",
@@ -267,7 +268,8 @@ export const routes: RouteDefinition[] = [
       "playback",
       "built"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "radio-track"
   },
   {
     "id": "radio.schedule",
@@ -349,7 +351,8 @@ export const routes: RouteDefinition[] = [
       "programming",
       "partial"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "live-show"
   },
   {
     "id": "radio.frequencies",
@@ -494,7 +497,8 @@ export const routes: RouteDefinition[] = [
       "programming",
       "partial"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "live-show"
   },
   {
     "id": "radio.shows.detail",
@@ -571,7 +575,8 @@ export const routes: RouteDefinition[] = [
       "programming",
       "partial"
     ],
-    "dynamic": true
+    "dynamic": true,
+    "contentType": "live-show"
   },
   {
     "id": "radio.rj",
@@ -729,7 +734,8 @@ export const routes: RouteDefinition[] = [
       "library",
       "built"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "radio-track"
   },
   {
     "id": "radio.request",
@@ -961,6 +967,7 @@ export const routes: RouteDefinition[] = [
       "library",
       "partial"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "radio-track"
   }
 ];

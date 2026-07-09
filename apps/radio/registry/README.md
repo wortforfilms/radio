@@ -10,12 +10,32 @@ are all **generated** from it — no subsystem maintains duplicate configuration
 
 ```
 registry/
-  types.ts        strong types (no `any`): RouteDefinition, SEO, Evidence, …
-  index.ts        combines modules, computes children, O(1) maps, validation
+  types.ts          strong types (no `any`): RouteDefinition, SEO, Evidence, …
+  index.ts          combines + validates everything; O(1) maps; computed children
   public.ts radio.ts podcasts.ts research.ts discover.ts academy.ts
   community.ts events.ts news.ts media.ts ai.ts search.ts user.ts
   premium.ts analytics.ts studio.ts cms.ts admin.ts api.ts ecosystem.ts
+  components.ts     UI component registry (evidence-backed statuses)
+  layouts.ts        layout → region → component trees
+  tokens.ts         design tokens (extracted from existing surfaces)
+  content-types.ts  content schemas (routes reference these via contentType)
+  workflows.ts      editorial lifecycle + PHKD rights-closure lane
+  apps.ts           multi-app workspace (Radio, NLM, CIC, Lipi, Corpus, …)
 ```
+
+## Plugin pipeline (schemaVersion 3)
+
+`npm run radio:registry` runs `scripts/build-registry-platform.mjs`, which
+validates the manifest and executes plugins from `scripts/registry-plugins/`:
+core (enriched JSON + mirrors + `registry.schema.json`), navigation, search,
+permissions, platform (platform map + `ui-manifest.<platform>.json` for
+web/mobile/desktop/tv/car/watch), api (`api-map.json`, honest `openapi.json`,
+typed client `lib/sdk.ts`), seo (sitemap/robots/rss/atom/json feed +
+dependency graph), components (`components.json`, `component-trees.json`),
+tokens (colors/spacing/typography/icons/motion + `tokens.css`), content
+(`content-types.json`, `cms-schemas.json`, `workflows.json`), workspace
+(`workspace.json`), docs (8 generated Markdown files). Adding a subsystem
+means adding ONE plugin that consumes the same context.
 
 Each module exports `routes: RouteDefinition[]` and is pure data (type-only
 imports), so Node can execute the registry directly with type stripping.

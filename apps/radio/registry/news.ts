@@ -4,7 +4,7 @@
 // registry; statuses/evidence carried over verbatim (PHKD: evidence-backed).
 import type { RouteDefinition } from "./types.ts";
 
-export const routes: RouteDefinition[] = [
+export const routes: RouteDefinition[] =  [
   {
     "id": "news",
     "path": "/news",
@@ -70,7 +70,8 @@ export const routes: RouteDefinition[] = [
       "hub",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "article"
   },
   {
     "id": "news.science",
@@ -138,7 +139,8 @@ export const routes: RouteDefinition[] = [
       "science",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "article"
   },
   {
     "id": "news.space",
@@ -206,7 +208,8 @@ export const routes: RouteDefinition[] = [
       "space",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "article"
   },
   {
     "id": "news.technology",
@@ -274,7 +277,8 @@ export const routes: RouteDefinition[] = [
       "technology",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "article"
   },
   {
     "id": "news.agriculture",
@@ -342,7 +346,8 @@ export const routes: RouteDefinition[] = [
       "agriculture",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "article"
   },
   {
     "id": "news.india",
@@ -410,7 +415,8 @@ export const routes: RouteDefinition[] = [
       "india",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "article"
   },
   {
     "id": "news.world",
@@ -478,7 +484,8 @@ export const routes: RouteDefinition[] = [
       "world",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "article"
   },
   {
     "id": "news.videos",

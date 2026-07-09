@@ -1,0 +1,6140 @@
+{
+  "generatedAt": "2026-07-09T17:40:11.166Z",
+  "count": 195,
+  "trees": [
+    {
+      "route": "public.home",
+      "path": "/",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "public.about",
+      "path": "/about",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "public.mission",
+      "path": "/mission",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "public.vision",
+      "path": "/vision",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "public.science-for-bharat",
+      "path": "/science-for-bharat",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "public.contact",
+      "path": "/contact",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "public.partners",
+      "path": "/partners",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "public.sponsors",
+      "path": "/sponsors",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "public.careers",
+      "path": "/careers",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "public.press",
+      "path": "/press",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "public.privacy",
+      "path": "/privacy",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "public.terms",
+      "path": "/terms",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "public.accessibility",
+      "path": "/accessibility",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "public.donate",
+      "path": "/donate",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "radio",
+      "path": "/radio",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "radio.live",
+      "path": "/radio/live",
+      "layout": "player",
+      "contentType": "live-show",
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "sidebar",
+          "components": [
+            {
+              "id": "station-list",
+              "status": "built",
+              "rendersRouteContent": true
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "player",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "waveform",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "schedule-list",
+              "status": "built",
+              "rendersRouteContent": true
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "wallet",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "persona-select",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "weather-widget",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "overlay",
+          "components": [
+            {
+              "id": "story-modal",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "radio.now-playing",
+      "path": "/radio/now-playing",
+      "layout": "player",
+      "contentType": "radio-track",
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "sidebar",
+          "components": [
+            {
+              "id": "station-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "player",
+              "status": "built",
+              "rendersRouteContent": true
+            },
+            {
+              "id": "waveform",
+              "status": "planned",
+              "rendersRouteContent": true
+            },
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "schedule-list",
+              "status": "built",
+              "rendersRouteContent": true
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "wallet",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "persona-select",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "weather-widget",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "overlay",
+          "components": [
+            {
+              "id": "story-modal",
+              "status": "built",
+              "rendersRouteContent": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "radio.schedule",
+      "path": "/radio/schedule",
+      "layout": "article",
+      "contentType": "live-show",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "radio.frequencies",
+      "path": "/radio/frequencies",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "radio.shows",
+      "path": "/radio/shows",
+      "layout": "article",
+      "contentType": "live-show",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "radio.shows.detail",
+      "path": "/radio/shows/:slug",
+      "layout": "article",
+      "contentType": "live-show",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "radio.rj",
+      "path": "/radio/rj/:slug",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "radio.archive",
+      "path": "/radio/archive",
+      "layout": "article",
+      "contentType": "radio-track",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "radio.request",
+      "path": "/radio/request",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "radio.dedicate",
+      "path": "/radio/dedicate",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "radio.download",
+      "path": "/radio/download",
+      "layout": "article",
+      "contentType": "radio-track",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "podcasts",
+      "path": "/podcasts",
+      "layout": "landing",
+      "contentType": "podcast",
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "podcasts.trending",
+      "path": "/podcasts/trending",
+      "layout": "article",
+      "contentType": "podcast",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "podcasts.latest",
+      "path": "/podcasts/latest",
+      "layout": "article",
+      "contentType": "podcast",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "podcasts.categories",
+      "path": "/podcasts/categories",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "podcasts.detail",
+      "path": "/podcasts/:slug",
+      "layout": "player",
+      "contentType": "podcast",
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "sidebar",
+          "components": [
+            {
+              "id": "station-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "player",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "waveform",
+              "status": "planned",
+              "rendersRouteContent": true
+            },
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "schedule-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "wallet",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "persona-select",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "weather-widget",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "overlay",
+          "components": [
+            {
+              "id": "story-modal",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "podcasts.transcript",
+      "path": "/podcasts/:slug/transcript",
+      "layout": "player",
+      "contentType": "transcript",
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "sidebar",
+          "components": [
+            {
+              "id": "station-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "player",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "waveform",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": true
+            },
+            {
+              "id": "schedule-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "wallet",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "persona-select",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "weather-widget",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "overlay",
+          "components": [
+            {
+              "id": "story-modal",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "podcasts.chapters",
+      "path": "/podcasts/:slug/chapters",
+      "layout": "player",
+      "contentType": "podcast",
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "sidebar",
+          "components": [
+            {
+              "id": "station-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "player",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "waveform",
+              "status": "planned",
+              "rendersRouteContent": true
+            },
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "schedule-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "wallet",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "persona-select",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "weather-widget",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "overlay",
+          "components": [
+            {
+              "id": "story-modal",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "podcasts.discussion",
+      "path": "/podcasts/:slug/discussion",
+      "layout": "player",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "sidebar",
+          "components": [
+            {
+              "id": "station-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "player",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "waveform",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "schedule-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "wallet",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "persona-select",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "weather-widget",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "overlay",
+          "components": [
+            {
+              "id": "story-modal",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "podcasts.bookmark",
+      "path": "/podcasts/bookmark",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "research",
+      "path": "/research",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "research.publications",
+      "path": "/research/publications",
+      "layout": "article",
+      "contentType": "research-paper",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": true
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "research.papers",
+      "path": "/research/papers",
+      "layout": "article",
+      "contentType": "research-paper",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": true
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "research.datasets",
+      "path": "/research/datasets",
+      "layout": "article",
+      "contentType": "dataset",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "research.experiments",
+      "path": "/research/experiments",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "research.projects",
+      "path": "/research/projects",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "research.labs",
+      "path": "/research/labs",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "research.authors",
+      "path": "/research/authors",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "research.citations",
+      "path": "/research/citations",
+      "layout": "article",
+      "contentType": "research-paper",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": true
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "research.downloads",
+      "path": "/research/downloads",
+      "layout": "article",
+      "contentType": "dataset",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "discover",
+      "path": "/discover",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "discover.space",
+      "path": "/discover/space",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "discover.astronomy",
+      "path": "/discover/astronomy",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "discover.physics",
+      "path": "/discover/physics",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "discover.chemistry",
+      "path": "/discover/chemistry",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "discover.biology",
+      "path": "/discover/biology",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "discover.mathematics",
+      "path": "/discover/mathematics",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "discover.medicine",
+      "path": "/discover/medicine",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "discover.agriculture",
+      "path": "/discover/agriculture",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "discover.environment",
+      "path": "/discover/environment",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "discover.climate",
+      "path": "/discover/climate",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "discover.robotics",
+      "path": "/discover/robotics",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "discover.ai",
+      "path": "/discover/ai",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "discover.history-of-science",
+      "path": "/discover/history-of-science",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "discover.sanskrit-science",
+      "path": "/discover/sanskrit-science",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "discover.innovation",
+      "path": "/discover/innovation",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "discover.startups",
+      "path": "/discover/startups",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "discover.student",
+      "path": "/discover/student",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "academy",
+      "path": "/academy",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "academy.courses",
+      "path": "/academy/courses",
+      "layout": "article",
+      "contentType": "course",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "academy.course",
+      "path": "/academy/course/:slug",
+      "layout": "reader",
+      "contentType": "course",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "academy.lessons",
+      "path": "/academy/lessons",
+      "layout": "article",
+      "contentType": "course",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "academy.quizzes",
+      "path": "/academy/quizzes",
+      "layout": "article",
+      "contentType": "quiz",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "academy.tests",
+      "path": "/academy/tests",
+      "layout": "article",
+      "contentType": "quiz",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "academy.certificates",
+      "path": "/academy/certificates",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "academy.my-learning",
+      "path": "/academy/my-learning",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "academy.leaderboard",
+      "path": "/academy/leaderboard",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "community",
+      "path": "/community",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "community.discussions",
+      "path": "/community/discussions",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "community.questions",
+      "path": "/community/questions",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "community.polls",
+      "path": "/community/polls",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "community.events",
+      "path": "/community/events",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "community.clubs",
+      "path": "/community/clubs",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "community.challenges",
+      "path": "/community/challenges",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "community.leaderboard",
+      "path": "/community/leaderboard",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "community.profile",
+      "path": "/community/profile/:username",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "events",
+      "path": "/events",
+      "layout": "landing",
+      "contentType": "event",
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "events.live",
+      "path": "/events/live",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "events.upcoming",
+      "path": "/events/upcoming",
+      "layout": "article",
+      "contentType": "event",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "events.calendar",
+      "path": "/events/calendar",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "events.workshops",
+      "path": "/events/workshops",
+      "layout": "article",
+      "contentType": "event",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "events.webinars",
+      "path": "/events/webinars",
+      "layout": "article",
+      "contentType": "event",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "events.hackathons",
+      "path": "/events/hackathons",
+      "layout": "article",
+      "contentType": "event",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "events.science-fairs",
+      "path": "/events/science-fairs",
+      "layout": "article",
+      "contentType": "event",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "news",
+      "path": "/news",
+      "layout": "article",
+      "contentType": "article",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": true
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "news.science",
+      "path": "/news/science",
+      "layout": "article",
+      "contentType": "article",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": true
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "news.space",
+      "path": "/news/space",
+      "layout": "article",
+      "contentType": "article",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": true
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "news.technology",
+      "path": "/news/technology",
+      "layout": "article",
+      "contentType": "article",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": true
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "news.agriculture",
+      "path": "/news/agriculture",
+      "layout": "article",
+      "contentType": "article",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": true
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "news.india",
+      "path": "/news/india",
+      "layout": "article",
+      "contentType": "article",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": true
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "news.world",
+      "path": "/news/world",
+      "layout": "article",
+      "contentType": "article",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": true
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "news.videos",
+      "path": "/news/videos",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "media.videos",
+      "path": "/videos",
+      "layout": "player",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "sidebar",
+          "components": [
+            {
+              "id": "station-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "player",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "waveform",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "schedule-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "wallet",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "persona-select",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "weather-widget",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "overlay",
+          "components": [
+            {
+              "id": "story-modal",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "media.shorts",
+      "path": "/shorts",
+      "layout": "player",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "sidebar",
+          "components": [
+            {
+              "id": "station-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "player",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "waveform",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "schedule-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "wallet",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "persona-select",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "weather-widget",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "overlay",
+          "components": [
+            {
+              "id": "story-modal",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "media.gallery",
+      "path": "/gallery",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "media.infographics",
+      "path": "/infographics",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "media.animations",
+      "path": "/animations",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "media.livestreams",
+      "path": "/livestreams",
+      "layout": "player",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "sidebar",
+          "components": [
+            {
+              "id": "station-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "player",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "waveform",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "schedule-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "wallet",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "persona-select",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "weather-widget",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "overlay",
+          "components": [
+            {
+              "id": "story-modal",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "ai",
+      "path": "/ai",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "ai.rj",
+      "path": "/ai/rj",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "ai.chat",
+      "path": "/ai/chat",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "ai.translator",
+      "path": "/ai/translator",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "ai.summarizer",
+      "path": "/ai/summarizer",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "ai.transcript",
+      "path": "/ai/transcript",
+      "layout": "reader",
+      "contentType": "transcript",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": true
+            },
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "ai.recommendations",
+      "path": "/ai/recommendations",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "ai.search",
+      "path": "/ai/search",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "search",
+      "path": "/search",
+      "layout": "dashboard",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "chart",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "search.radio",
+      "path": "/search/radio",
+      "layout": "dashboard",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "chart",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "search.podcasts",
+      "path": "/search/podcasts",
+      "layout": "dashboard",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "chart",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "search.research",
+      "path": "/search/research",
+      "layout": "dashboard",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "chart",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "search.news",
+      "path": "/search/news",
+      "layout": "dashboard",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "chart",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "search.people",
+      "path": "/search/people",
+      "layout": "dashboard",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "chart",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "user.login",
+      "path": "/login",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "user.signup",
+      "path": "/signup",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "user.forgot-password",
+      "path": "/forgot-password",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "user.verify",
+      "path": "/verify",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "user.profile",
+      "path": "/profile",
+      "layout": "settings",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "persona-select",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "wallet",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "user.profile.edit",
+      "path": "/profile/edit",
+      "layout": "settings",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "persona-select",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "wallet",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "user.bookmarks",
+      "path": "/bookmarks",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "user.history",
+      "path": "/history",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "user.downloads",
+      "path": "/downloads",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "user.notifications",
+      "path": "/notifications",
+      "layout": "settings",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "persona-select",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "wallet",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "user.settings",
+      "path": "/settings",
+      "layout": "settings",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "persona-select",
+              "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "wallet",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "premium",
+      "path": "/premium",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "premium.plans",
+      "path": "/premium/plans",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "premium.payment",
+      "path": "/premium/payment",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "premium.history",
+      "path": "/premium/history",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "premium.library",
+      "path": "/premium/library",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "analytics",
+      "path": "/analytics",
+      "layout": "dashboard",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "chart",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "analytics.listeners",
+      "path": "/analytics/listeners",
+      "layout": "dashboard",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "chart",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "analytics.live",
+      "path": "/analytics/live",
+      "layout": "dashboard",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "chart",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "analytics.streams",
+      "path": "/analytics/streams",
+      "layout": "dashboard",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "chart",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "analytics.content",
+      "path": "/analytics/content",
+      "layout": "dashboard",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "chart",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "analytics.geography",
+      "path": "/analytics/geography",
+      "layout": "dashboard",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "chart",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "analytics.revenue",
+      "path": "/analytics/revenue",
+      "layout": "dashboard",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "chart",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "studio",
+      "path": "/studio",
+      "layout": "studio",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "sidebar",
+          "components": [
+            {
+              "id": "station-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "visualizer",
+              "status": "partial",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "waveform",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "schedule-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "studio.live",
+      "path": "/studio/live",
+      "layout": "studio",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "sidebar",
+          "components": [
+            {
+              "id": "station-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "visualizer",
+              "status": "partial",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "waveform",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "schedule-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "studio.record",
+      "path": "/studio/record",
+      "layout": "studio",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "sidebar",
+          "components": [
+            {
+              "id": "station-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "visualizer",
+              "status": "partial",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "waveform",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "schedule-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "studio.upload",
+      "path": "/studio/upload",
+      "layout": "studio",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "sidebar",
+          "components": [
+            {
+              "id": "station-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "visualizer",
+              "status": "partial",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "waveform",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "schedule-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "studio.editor",
+      "path": "/studio/editor",
+      "layout": "studio",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "sidebar",
+          "components": [
+            {
+              "id": "station-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "visualizer",
+              "status": "partial",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "waveform",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "schedule-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "studio.script",
+      "path": "/studio/script",
+      "layout": "studio",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "sidebar",
+          "components": [
+            {
+              "id": "station-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "visualizer",
+              "status": "partial",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "waveform",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "schedule-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "studio.caller",
+      "path": "/studio/caller",
+      "layout": "studio",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "sidebar",
+          "components": [
+            {
+              "id": "station-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "visualizer",
+              "status": "partial",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "waveform",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "schedule-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "studio.queue",
+      "path": "/studio/queue",
+      "layout": "studio",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "sidebar",
+          "components": [
+            {
+              "id": "station-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "visualizer",
+              "status": "partial",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "waveform",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "schedule-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "studio.automation",
+      "path": "/studio/automation",
+      "layout": "studio",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "sidebar",
+          "components": [
+            {
+              "id": "station-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "visualizer",
+              "status": "partial",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "waveform",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "schedule-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "studio.assets",
+      "path": "/studio/assets",
+      "layout": "studio",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "sidebar",
+          "components": [
+            {
+              "id": "station-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "visualizer",
+              "status": "partial",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "waveform",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "transcript",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "schedule-list",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "cms",
+      "path": "/cms",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "cms.dashboard",
+      "path": "/cms/dashboard",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "cms.articles",
+      "path": "/cms/articles",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "cms.shows",
+      "path": "/cms/shows",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "cms.podcasts",
+      "path": "/cms/podcasts",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "cms.research",
+      "path": "/cms/research",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "cms.media",
+      "path": "/cms/media",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "cms.users",
+      "path": "/cms/users",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "cms.comments",
+      "path": "/cms/comments",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "cms.moderation",
+      "path": "/cms/moderation",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "cms.workflows",
+      "path": "/cms/workflows",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "cms.scheduler",
+      "path": "/cms/scheduler",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "admin",
+      "path": "/admin",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "admin.users",
+      "path": "/admin/users",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "admin.roles",
+      "path": "/admin/roles",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "admin.permissions",
+      "path": "/admin/permissions",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "admin.api",
+      "path": "/admin/api",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "admin.settings",
+      "path": "/admin/settings",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "admin.logs",
+      "path": "/admin/logs",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "admin.audit",
+      "path": "/admin/audit",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "admin.security",
+      "path": "/admin/security",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "admin.storage",
+      "path": "/admin/storage",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "admin.backups",
+      "path": "/admin/backups",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "admin.integrations",
+      "path": "/admin/integrations",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "api.auth",
+      "path": "/api/v1/auth",
+      "layout": "fullscreen",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "api.radio",
+      "path": "/api/v1/radio",
+      "layout": "fullscreen",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "api.podcasts",
+      "path": "/api/v1/podcasts",
+      "layout": "fullscreen",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "api.research",
+      "path": "/api/v1/research",
+      "layout": "fullscreen",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "api.news",
+      "path": "/api/v1/news",
+      "layout": "fullscreen",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "api.events",
+      "path": "/api/v1/events",
+      "layout": "fullscreen",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "api.community",
+      "path": "/api/v1/community",
+      "layout": "fullscreen",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "api.search",
+      "path": "/api/v1/search",
+      "layout": "fullscreen",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "api.analytics",
+      "path": "/api/v1/analytics",
+      "layout": "fullscreen",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "api.upload",
+      "path": "/api/v1/upload",
+      "layout": "fullscreen",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "api.notifications",
+      "path": "/api/v1/notifications",
+      "layout": "fullscreen",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "api.payments",
+      "path": "/api/v1/payments",
+      "layout": "fullscreen",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "ecosystem",
+      "path": "/ecosystem",
+      "layout": "landing",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "catalog-grid",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "route": "ecosystem.nlm",
+      "path": "/ecosystem/nlm",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "ecosystem.cic",
+      "path": "/ecosystem/cic",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "ecosystem.shree-kautilya",
+      "path": "/ecosystem/shree-kautilya",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "ecosystem.lipi",
+      "path": "/ecosystem/lipi",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "ecosystem.maataa",
+      "path": "/ecosystem/maataa",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "ecosystem.corpus",
+      "path": "/ecosystem/corpus",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "ecosystem.apis",
+      "path": "/ecosystem/apis",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "ecosystem.developers",
+      "path": "/ecosystem/developers",
+      "layout": "article",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

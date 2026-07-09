@@ -1,0 +1,341 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Radio Vaigyaaniq API",
+    "version": "1.0.0",
+    "description": "Generated from the route registry. Only endpoints that exist are documented as paths; versioned /api/v1 aliases are planned (see x-planned)."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    },
+    {
+      "url": "http://localhost:4000",
+      "description": "radio-backend"
+    }
+  ],
+  "paths": {
+    "/api/stations": {
+      "get": {
+        "summary": "Station lineup (radio-backend)",
+        "tags": [
+          "radio"
+        ],
+        "x-used-by-routes": [
+          "radio",
+          "radio.live"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "4XX": {
+            "description": "Fail-closed (PHKD) or validation error"
+          }
+        }
+      }
+    },
+    "/api/evidence": {
+      "get": {
+        "summary": "Manifest evidence",
+        "tags": [
+          "radio"
+        ],
+        "x-used-by-routes": [
+          "radio"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "4XX": {
+            "description": "Fail-closed (PHKD) or validation error"
+          }
+        }
+      }
+    },
+    "/api/stream-candidates": {
+      "get": {
+        "summary": "Opt-in test streams (rights unverified)",
+        "tags": [
+          "radio"
+        ],
+        "x-used-by-routes": [
+          "radio.live"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "4XX": {
+            "description": "Fail-closed (PHKD) or validation error"
+          }
+        }
+      }
+    },
+    "/api/schedule/{stationSlug}": {
+      "get": {
+        "summary": "GET /api/schedule/:stationSlug",
+        "tags": [
+          "radio"
+        ],
+        "x-used-by-routes": [
+          "radio.schedule"
+        ],
+        "parameters": [
+          {
+            "name": "stationSlug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "4XX": {
+            "description": "Fail-closed (PHKD) or validation error"
+          }
+        }
+      }
+    },
+    "/api/offline-bundle": {
+      "get": {
+        "summary": "Rights-aware offline bundle",
+        "tags": [
+          "radio"
+        ],
+        "x-used-by-routes": [
+          "radio.download"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "4XX": {
+            "description": "Fail-closed (PHKD) or validation error"
+          }
+        }
+      }
+    },
+    "/api/search": {
+      "get": {
+        "summary": "GET /api/search",
+        "tags": [
+          "search"
+        ],
+        "x-used-by-routes": [
+          "search"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "4XX": {
+            "description": "Fail-closed (PHKD) or validation error"
+          }
+        }
+      }
+    },
+    "/api/payments/order": {
+      "post": {
+        "summary": "Server-priced Razorpay order",
+        "tags": [
+          "premium"
+        ],
+        "x-used-by-routes": [
+          "premium.payment"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "4XX": {
+            "description": "Fail-closed (PHKD) or validation error"
+          }
+        }
+      }
+    },
+    "/api/payments/webhook": {
+      "post": {
+        "summary": "HMAC-verified capture → entitlement",
+        "tags": [
+          "premium"
+        ],
+        "x-used-by-routes": [
+          "premium.payment"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "4XX": {
+            "description": "Fail-closed (PHKD) or validation error"
+          }
+        }
+      }
+    },
+    "/api/entitlements/{userId}": {
+      "get": {
+        "summary": "GET /api/entitlements/:userId",
+        "tags": [
+          "premium"
+        ],
+        "x-used-by-routes": [
+          "premium.library"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "4XX": {
+            "description": "Fail-closed (PHKD) or validation error"
+          }
+        }
+      }
+    },
+    "/api/analytics": {
+      "get": {
+        "summary": "GET /api/analytics",
+        "tags": [
+          "analytics"
+        ],
+        "x-used-by-routes": [
+          "analytics"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "4XX": {
+            "description": "Fail-closed (PHKD) or validation error"
+          }
+        }
+      }
+    },
+    "/admin/login": {
+      "post": {
+        "summary": "POST /admin/login",
+        "tags": [
+          "admin"
+        ],
+        "x-used-by-routes": [
+          "admin"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "4XX": {
+            "description": "Fail-closed (PHKD) or validation error"
+          }
+        }
+      }
+    },
+    "/admin/state": {
+      "get": {
+        "summary": "GET /admin/state",
+        "tags": [
+          "admin"
+        ],
+        "x-used-by-routes": [
+          "admin"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "4XX": {
+            "description": "Fail-closed (PHKD) or validation error"
+          }
+        }
+      }
+    },
+    "/admin/rights-proof": {
+      "post": {
+        "summary": "POST /admin/rights-proof",
+        "tags": [
+          "admin"
+        ],
+        "x-used-by-routes": [
+          "admin"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "4XX": {
+            "description": "Fail-closed (PHKD) or validation error"
+          }
+        }
+      }
+    },
+    "/admin/cache-status": {
+      "get": {
+        "summary": "GET /admin/cache-status",
+        "tags": [
+          "admin"
+        ],
+        "x-used-by-routes": [
+          "admin"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "4XX": {
+            "description": "Fail-closed (PHKD) or validation error"
+          }
+        }
+      }
+    }
+  },
+  "x-planned": [
+    {
+      "method": "GET",
+      "path": "/api/v1/radio",
+      "description": "Versioned alias of /api/stations"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/search",
+      "description": "Versioned alias of /api/search"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/analytics",
+      "description": "Versioned alias of /api/analytics"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/payments",
+      "description": "Versioned alias of /api/payments/*"
+    }
+  ],
+  "x-generated-at": "2026-07-09T17:40:11.166Z"
+}

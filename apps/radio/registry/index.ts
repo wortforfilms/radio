@@ -23,6 +23,12 @@ import type {
   RouteStatus,
   SectionMeta
 } from "./types.ts";
+import { components } from "./components.ts";
+import { layouts } from "./layouts.ts";
+import { tokens } from "./tokens.ts";
+import { contentTypes } from "./content-types.ts";
+import { workflows } from "./workflows.ts";
+import { workspaceApps } from "./apps.ts";
 import { routes as publicRoutes } from "./public.ts";
 import { routes as radio } from "./radio.ts";
 import { routes as podcasts } from "./podcasts.ts";
@@ -51,8 +57,22 @@ export type {
   RouteLayout,
   RoutePlatform,
   Permission,
-  FeatureFlag
+  FeatureFlag,
+  ComponentDefinition,
+  LayoutDefinition,
+  DesignTokens,
+  ContentTypeDefinition,
+  WorkflowDefinition,
+  WorkspaceApp
 } from "./types.ts";
+
+// Application-manifest collections (schemaVersion 3) — same source-of-truth rules.
+export { components } from "./components.ts";
+export { layouts } from "./layouts.ts";
+export { tokens } from "./tokens.ts";
+export { contentTypes } from "./content-types.ts";
+export { workflows } from "./workflows.ts";
+export { workspaceApps } from "./apps.ts";
 
 const MODULES: RouteDefinition[][] = [
   publicRoutes, radio, podcasts, research, discover, academy, community, events,
@@ -223,6 +243,66 @@ export function validateRegistry(routes: readonly CompiledRoute[] = allRoutes): 
     done.add(id);
   };
   for (const route of routes) visit(route.id, []);
+
+  // ---- application-manifest integrity (components/layouts/content/workflows) ----
+  const componentIds = new Set(components.map((component) => component.id));
+  const contentTypeIds = new Set(contentTypes.map((contentType) => contentType.id));
+  const workflowIds = new Set(workflows.map((workflow) => workflow.id));
+  const layoutIds = new Set(layouts.map((layout) => layout.id));
+
+  if (componentIds.size !== components.length) problems.push("duplicate component ids");
+  if (contentTypeIds.size !== contentTypes.length) problems.push("duplicate content-type ids");
+  for (const component of components) {
+    if (component.status !== "planned" && component.implementedBy.length === 0) {
+      problems.push(`component claims ${component.status} without evidence: ${component.id}`);
+    }
+    if (component.status === "planned" && component.implementedBy.length > 0) {
+      problems.push(`planned component claims implementation: ${component.id}`);
+    }
+    for (const rendered of component.renders) {
+      if (!contentTypeIds.has(rendered)) problems.push(`component ${component.id} renders unknown content type: ${rendered}`);
+    }
+  }
+  for (const layout of layouts) {
+    for (const region of layout.regions) {
+      for (const componentId of region.components) {
+        if (!componentIds.has(componentId)) problems.push(`layout ${layout.id} uses unknown component: ${componentId}`);
+      }
+    }
+  }
+  for (const routeLayout of VALID_LAYOUT) {
+    if (!layoutIds.has(routeLayout)) problems.push(`layout missing definition: ${routeLayout}`);
+  }
+  for (const contentType of contentTypes) {
+    if (!workflowIds.has(contentType.workflow)) problems.push(`content type ${contentType.id} uses unknown workflow: ${contentType.workflow}`);
+    if (contentType.status !== "planned" && contentType.implementedBy.length === 0) {
+      problems.push(`content type claims ${contentType.status} without evidence: ${contentType.id}`);
+    }
+    for (const field of contentType.fields) {
+      if (field.type === "reference" && (!field.references || !contentTypeIds.has(field.references))) {
+        problems.push(`content type ${contentType.id}.${field.name} has invalid reference`);
+      }
+    }
+  }
+  for (const workflow of workflows) {
+    const states = new Set(workflow.states);
+    if (!states.has(workflow.initial)) problems.push(`workflow ${workflow.id} initial state invalid`);
+    for (const transition of workflow.transitions) {
+      if (!states.has(transition.from) || !states.has(transition.to)) {
+        problems.push(`workflow ${workflow.id} transition ${transition.from}→${transition.to} uses unknown state`);
+      }
+    }
+  }
+  for (const route of routes) {
+    if (route.contentType && !contentTypeIds.has(route.contentType)) {
+      problems.push(`route ${route.id} references unknown content type: ${route.contentType}`);
+    }
+  }
+  for (const app of workspaceApps) {
+    if (app.status !== "planned" && app.implementedBy.length === 0) {
+      problems.push(`workspace app claims ${app.status} without evidence: ${app.id}`);
+    }
+  }
 
   return problems;
 }

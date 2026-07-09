@@ -1,6 +1,6 @@
 # Search Index
 
-Generated 2026-07-09T17:29:47.074Z. 104 searchable public routes → `registry/search.json`.
+Generated 2026-07-09T17:40:11.166Z. 104 searchable public routes → `registry/search.json`.
 
 | id | url | section | keywords |
 |---|---|---|---|

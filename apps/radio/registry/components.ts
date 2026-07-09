@@ -1,0 +1,231 @@
+// Component registry. Same PHKD rules as routes: built/partial cite real code
+// (the engine widgets in radio-html/assets/js/radio-engine.js and the admin
+// panel); planned components (podcast-card, chart, timeline, waveform, …)
+// carry no implementation claims.
+import type { ComponentDefinition } from "./types.ts";
+
+const ENGINE = "apps/web/public/radio-html/assets/js/radio-engine.js";
+const ADMIN = "apps/web/public/radio-html/admin-panel.html";
+
+export const components: ComponentDefinition[] = [
+  {
+    id: "player",
+    name: "Player",
+    description: "Rights-aware audio player: access badges, 45s preview clamp, buy prompt, offline fallback.",
+    category: "playback",
+    status: "built",
+    implementedBy: [`${ENGINE}#playProgram`],
+    platforms: ["web", "mobile", "desktop", "offline", "tv", "car", "watch"],
+    props: [
+      { name: "trackId", type: "string", required: true },
+      { name: "accessState", type: '"full" | "preview" | "locked"', required: true },
+      { name: "previewSeconds", type: "number", required: false }
+    ],
+    renders: ["radio-track"]
+  },
+  {
+    id: "station-list",
+    name: "Station List",
+    description: "Station lineup with program counts and stream status.",
+    category: "navigation",
+    status: "built",
+    implementedBy: [`${ENGINE}#renderStations`],
+    platforms: ["web", "mobile", "desktop", "tv"],
+    props: [{ name: "stations", type: "RadioStation[]", required: true }],
+    renders: ["live-show"]
+  },
+  {
+    id: "schedule-list",
+    name: "Schedule List",
+    description: "Sequence-only program schedule (startTime NULL until verified).",
+    category: "content",
+    status: "built",
+    implementedBy: [`${ENGINE}#renderSchedule`],
+    platforms: ["web", "mobile", "desktop"],
+    props: [{ name: "programs", type: "Program[]", required: true }],
+    renders: ["live-show", "radio-track"]
+  },
+  {
+    id: "catalog-grid",
+    name: "Catalogue Grid",
+    description: "Searchable cover-art grid with access badges and version tags.",
+    category: "content",
+    status: "built",
+    implementedBy: [`${ENGINE}#renderCatalog`],
+    platforms: ["web", "mobile", "desktop"],
+    props: [
+      { name: "songs", type: "RadioTrack[]", required: true },
+      { name: "query", type: "string", required: false }
+    ],
+    renders: ["radio-track"]
+  },
+  {
+    id: "transcript",
+    name: "Transcript / Lyrics Panel",
+    description: "Draft LRC cue scroller with sanitisation redactions (timing unverified).",
+    category: "content",
+    status: "built",
+    implementedBy: [`${ENGINE}#loadLyrics`],
+    platforms: ["web", "mobile", "desktop"],
+    props: [
+      { name: "cues", type: "Cue[]", required: true },
+      { name: "currentTime", type: "number", required: true }
+    ],
+    renders: ["transcript"]
+  },
+  {
+    id: "story-modal",
+    name: "Story Modal",
+    description: "Editorial storyline modal with provenance footer.",
+    category: "content",
+    status: "built",
+    implementedBy: [`${ENGINE}#openStory`],
+    platforms: ["web", "mobile", "desktop"],
+    props: [{ name: "trackId", type: "string", required: true }],
+    renders: ["radio-track"]
+  },
+  {
+    id: "wallet",
+    name: "Wallet Widget",
+    description: "Per-currency balances + entitlement count; fail-closed top-up.",
+    category: "commerce",
+    status: "built",
+    implementedBy: [`${ENGINE}#renderWallet`],
+    platforms: ["web", "mobile", "desktop"],
+    props: [{ name: "wallets", type: "WalletLike[]", required: true }],
+    renders: []
+  },
+  {
+    id: "persona-select",
+    name: "Persona Selector",
+    description: "TTS announcer persona picker (maataa/rishi/samaya/vigyaaniq).",
+    category: "input",
+    status: "built",
+    implementedBy: [`${ENGINE}#renderPersonas`],
+    platforms: ["web", "desktop"],
+    props: [{ name: "value", type: "TtsPersonaKey", required: true }],
+    renders: []
+  },
+  {
+    id: "weather-widget",
+    name: "Weather Widget",
+    description: "Weather gate display; blocked without WEATHER_API_KEY.",
+    category: "feedback",
+    status: "built",
+    implementedBy: [`${ENGINE}#renderWeather`],
+    platforms: ["web", "desktop", "car"],
+    props: [{ name: "apiBase", type: "string | null", required: true }],
+    renders: []
+  },
+  {
+    id: "net-status",
+    name: "Network Status",
+    description: "Online/offline indicator driving outbox flush.",
+    category: "feedback",
+    status: "built",
+    implementedBy: [`${ENGINE}#bindNetwork`],
+    platforms: ["web", "mobile", "desktop", "offline"],
+    props: [],
+    renders: []
+  },
+  {
+    id: "admin-table",
+    name: "Admin CRUD Table",
+    description: "Draft-overlay CRUD tabs with fail-closed publish gating.",
+    category: "data",
+    status: "built",
+    implementedBy: [ADMIN],
+    platforms: ["web", "desktop"],
+    props: [{ name: "entity", type: '"stations" | "programs" | "tracks" | "ads"', required: true }],
+    renders: []
+  },
+  {
+    id: "visualizer",
+    name: "3D Visualizer",
+    description: "Three.js audio scenes with WebM capture.",
+    category: "media",
+    status: "partial",
+    implementedBy: ["apps/web/public/radio-html/surfaces (radioVisualizer)"],
+    platforms: ["web", "desktop", "tv"],
+    props: [{ name: "source", type: '"mic" | "file" | "element"', required: true }],
+    renders: []
+  },
+  // ---- planned (no implementation claims) ----
+  {
+    id: "podcast-card",
+    name: "Podcast Card",
+    description: "Episode card with duration, chapter count, and play affordance.",
+    category: "content",
+    status: "planned",
+    implementedBy: [],
+    platforms: ["web", "mobile", "desktop", "car"],
+    props: [{ name: "podcast", type: "Podcast", required: true }],
+    renders: ["podcast"]
+  },
+  {
+    id: "article",
+    name: "Article",
+    description: "Long-form reader with citations and JSON-LD.",
+    category: "content",
+    status: "planned",
+    implementedBy: [],
+    platforms: ["web", "mobile", "desktop"],
+    props: [{ name: "article", type: "Article", required: true }],
+    renders: ["article", "research-paper"]
+  },
+  {
+    id: "chart",
+    name: "Chart",
+    description: "Analytics/dataset visualisation primitive.",
+    category: "data",
+    status: "planned",
+    implementedBy: [],
+    platforms: ["web", "desktop"],
+    props: [{ name: "series", type: "Series[]", required: true }],
+    renders: ["dataset"]
+  },
+  {
+    id: "timeline",
+    name: "Timeline",
+    description: "Chronological event strip for shows and history-of-science content.",
+    category: "content",
+    status: "planned",
+    implementedBy: [],
+    platforms: ["web", "mobile", "desktop", "tv"],
+    props: [{ name: "events", type: "TimelineEvent[]", required: true }],
+    renders: ["event", "live-show"]
+  },
+  {
+    id: "waveform",
+    name: "Waveform",
+    description: "Seekable amplitude waveform for tracks and episodes.",
+    category: "playback",
+    status: "planned",
+    implementedBy: [],
+    platforms: ["web", "mobile", "desktop"],
+    props: [{ name: "peaks", type: "number[]", required: true }],
+    renders: ["radio-track", "podcast"]
+  },
+  {
+    id: "quiz",
+    name: "Quiz",
+    description: "Academy quiz runner with scoring.",
+    category: "input",
+    status: "planned",
+    implementedBy: [],
+    platforms: ["web", "mobile", "desktop"],
+    props: [{ name: "quiz", type: "Quiz", required: true }],
+    renders: ["quiz"]
+  },
+  {
+    id: "course-card",
+    name: "Course Card",
+    description: "Academy course tile with progress.",
+    category: "content",
+    status: "planned",
+    implementedBy: [],
+    platforms: ["web", "mobile", "desktop"],
+    props: [{ name: "course", type: "Course", required: true }],
+    renders: ["course"]
+  }
+];

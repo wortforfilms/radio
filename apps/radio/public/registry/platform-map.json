@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T17:29:47.074Z",
+  "generatedAt": "2026-07-09T17:40:11.166Z",
   "platforms": {
     "web": [
       "public.home",
@@ -1504,24 +1504,6 @@
         "status": "planned"
       }
     ],
-    "watch": [],
-    "offline": [
-      {
-        "id": "radio",
-        "title": "Radio",
-        "path": "/radio",
-        "icon": "📻",
-        "section": "Radio",
-        "status": "built"
-      },
-      {
-        "id": "podcasts",
-        "title": "Podcasts",
-        "path": "/podcasts",
-        "icon": "🎙",
-        "section": "Podcast",
-        "status": "planned"
-      }
-    ]
+    "watch": []
   }
 }

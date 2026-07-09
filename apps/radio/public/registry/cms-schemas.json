@@ -1,0 +1,449 @@
+{
+  "generatedAt": "2026-07-09T17:40:11.166Z",
+  "note": "Generated from registry content types. The admin panel stays fail-closed: publish transitions require the workflow gates below.",
+  "schemas": [
+    {
+      "id": "radio-track",
+      "label": "Radio Track",
+      "status": "built",
+      "workflow": "rights-closure",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "widget": "text",
+          "required": true
+        },
+        {
+          "name": "stylizedTitle",
+          "label": "Stylized Title",
+          "widget": "text",
+          "required": false
+        },
+        {
+          "name": "slug",
+          "label": "Slug",
+          "widget": "text",
+          "required": true
+        },
+        {
+          "name": "version",
+          "label": "Version",
+          "widget": "text",
+          "required": true,
+          "hint": "original | take-N"
+        },
+        {
+          "name": "durationSeconds",
+          "label": "Duration Seconds",
+          "widget": "number",
+          "required": false
+        },
+        {
+          "name": "audio",
+          "label": "Audio",
+          "widget": "file",
+          "required": true
+        },
+        {
+          "name": "cover",
+          "label": "Cover",
+          "widget": "file",
+          "required": false
+        },
+        {
+          "name": "priceInr",
+          "label": "Price Inr",
+          "widget": "money",
+          "required": false
+        },
+        {
+          "name": "priceUsd",
+          "label": "Price Usd",
+          "widget": "money",
+          "required": false
+        },
+        {
+          "name": "previewSeconds",
+          "label": "Preview Seconds",
+          "widget": "number",
+          "required": false
+        },
+        {
+          "name": "published",
+          "label": "Published",
+          "widget": "checkbox",
+          "required": true,
+          "hint": "Rights-closure owned — never set manually"
+        },
+        {
+          "name": "storyline",
+          "label": "Storyline",
+          "widget": "textarea",
+          "required": false
+        },
+        {
+          "name": "transcript",
+          "label": "Transcript",
+          "widget": "relation",
+          "required": false,
+          "relation": "transcript"
+        }
+      ]
+    },
+    {
+      "id": "transcript",
+      "label": "Transcript",
+      "status": "partial",
+      "workflow": "editorial",
+      "fields": [
+        {
+          "name": "trackId",
+          "label": "Track Id",
+          "widget": "relation",
+          "required": true,
+          "relation": "radio-track"
+        },
+        {
+          "name": "cues",
+          "label": "Cues",
+          "widget": "cue-editor",
+          "required": true
+        },
+        {
+          "name": "language",
+          "label": "Language",
+          "widget": "text",
+          "required": false
+        },
+        {
+          "name": "timingVerified",
+          "label": "Timing Verified",
+          "widget": "checkbox",
+          "required": true
+        },
+        {
+          "name": "lyricsStatus",
+          "label": "Lyrics Status",
+          "widget": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "live-show",
+      "label": "Live Show",
+      "status": "partial",
+      "workflow": "editorial",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Name",
+          "widget": "text",
+          "required": true
+        },
+        {
+          "name": "slug",
+          "label": "Slug",
+          "widget": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "label": "Description",
+          "widget": "textarea",
+          "required": false
+        },
+        {
+          "name": "streamUrl",
+          "label": "Stream Url",
+          "widget": "url",
+          "required": false,
+          "hint": "NULL until rights-verified"
+        },
+        {
+          "name": "programs",
+          "label": "Programs",
+          "widget": "relation",
+          "required": false,
+          "relation": "radio-track"
+        }
+      ]
+    },
+    {
+      "id": "podcast",
+      "label": "Podcast",
+      "status": "planned",
+      "workflow": "editorial",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "widget": "text",
+          "required": true
+        },
+        {
+          "name": "slug",
+          "label": "Slug",
+          "widget": "text",
+          "required": true
+        },
+        {
+          "name": "audio",
+          "label": "Audio",
+          "widget": "file",
+          "required": true
+        },
+        {
+          "name": "durationSeconds",
+          "label": "Duration Seconds",
+          "widget": "number",
+          "required": true
+        },
+        {
+          "name": "showNotes",
+          "label": "Show Notes",
+          "widget": "richtext",
+          "required": false
+        },
+        {
+          "name": "chapters",
+          "label": "Chapters",
+          "widget": "cue-editor",
+          "required": false
+        },
+        {
+          "name": "transcript",
+          "label": "Transcript",
+          "widget": "relation",
+          "required": false,
+          "relation": "transcript"
+        },
+        {
+          "name": "publishedAt",
+          "label": "Published At",
+          "widget": "datetime",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "research-paper",
+      "label": "Research Paper",
+      "status": "planned",
+      "workflow": "editorial",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "widget": "text",
+          "required": true
+        },
+        {
+          "name": "abstract",
+          "label": "Abstract",
+          "widget": "textarea",
+          "required": true
+        },
+        {
+          "name": "authors",
+          "label": "Authors",
+          "widget": "text",
+          "required": true
+        },
+        {
+          "name": "doi",
+          "label": "Doi",
+          "widget": "url",
+          "required": false
+        },
+        {
+          "name": "pdf",
+          "label": "Pdf",
+          "widget": "file",
+          "required": false
+        },
+        {
+          "name": "dataset",
+          "label": "Dataset",
+          "widget": "relation",
+          "required": false,
+          "relation": "dataset"
+        }
+      ]
+    },
+    {
+      "id": "dataset",
+      "label": "Dataset",
+      "status": "planned",
+      "workflow": "editorial",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "widget": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "label": "Description",
+          "widget": "textarea",
+          "required": true
+        },
+        {
+          "name": "licence",
+          "label": "Licence",
+          "widget": "text",
+          "required": true
+        },
+        {
+          "name": "source",
+          "label": "Source",
+          "widget": "url",
+          "required": true
+        },
+        {
+          "name": "file",
+          "label": "File",
+          "widget": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "article",
+      "label": "Article",
+      "status": "planned",
+      "workflow": "editorial",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "widget": "text",
+          "required": true
+        },
+        {
+          "name": "slug",
+          "label": "Slug",
+          "widget": "text",
+          "required": true
+        },
+        {
+          "name": "body",
+          "label": "Body",
+          "widget": "richtext",
+          "required": true
+        },
+        {
+          "name": "hero",
+          "label": "Hero",
+          "widget": "file",
+          "required": false
+        },
+        {
+          "name": "publishedAt",
+          "label": "Published At",
+          "widget": "datetime",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "event",
+      "label": "Event",
+      "status": "planned",
+      "workflow": "editorial",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "widget": "text",
+          "required": true
+        },
+        {
+          "name": "startsAt",
+          "label": "Starts At",
+          "widget": "datetime",
+          "required": true
+        },
+        {
+          "name": "endsAt",
+          "label": "Ends At",
+          "widget": "datetime",
+          "required": false
+        },
+        {
+          "name": "location",
+          "label": "Location",
+          "widget": "text",
+          "required": false
+        },
+        {
+          "name": "registrationUrl",
+          "label": "Registration Url",
+          "widget": "url",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "course",
+      "label": "Course",
+      "status": "planned",
+      "workflow": "editorial",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "widget": "text",
+          "required": true
+        },
+        {
+          "name": "slug",
+          "label": "Slug",
+          "widget": "text",
+          "required": true
+        },
+        {
+          "name": "lessons",
+          "label": "Lessons",
+          "widget": "number",
+          "required": true
+        },
+        {
+          "name": "quiz",
+          "label": "Quiz",
+          "widget": "relation",
+          "required": false,
+          "relation": "quiz"
+        }
+      ]
+    },
+    {
+      "id": "quiz",
+      "label": "Quiz",
+      "status": "planned",
+      "workflow": "editorial",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "widget": "text",
+          "required": true
+        },
+        {
+          "name": "questions",
+          "label": "Questions",
+          "widget": "number",
+          "required": true
+        },
+        {
+          "name": "passScore",
+          "label": "Pass Score",
+          "widget": "number",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

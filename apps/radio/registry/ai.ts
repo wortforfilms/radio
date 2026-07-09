@@ -4,7 +4,7 @@
 // registry; statuses/evidence carried over verbatim (PHKD: evidence-backed).
 import type { RouteDefinition } from "./types.ts";
 
-export const routes: RouteDefinition[] = [
+export const routes: RouteDefinition[] =  [
   {
     "id": "ai",
     "path": "/ai",
@@ -437,7 +437,8 @@ export const routes: RouteDefinition[] = [
       "transcript",
       "partial"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "transcript"
   },
   {
     "id": "ai.recommendations",

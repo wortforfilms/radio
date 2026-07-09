@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-07-09T17:40:11.166Z",
+  "motion": {
+    "durations": {
+      "instant": "80ms",
+      "fast": "150ms",
+      "base": "240ms",
+      "slow": "400ms"
+    },
+    "easings": {
+      "standard": "cubic-bezier(.2,.0,.2,1)",
+      "enter": "cubic-bezier(0,0,.2,1)",
+      "exit": "cubic-bezier(.4,0,1,1)"
+    }
+  }
+}

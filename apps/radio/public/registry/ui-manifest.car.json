@@ -1,0 +1,225 @@
+{
+  "generatedAt": "2026-07-09T17:40:11.166Z",
+  "platform": "car",
+  "tokens": "/registry/tokens/",
+  "counts": {
+    "routes": 11,
+    "layouts": 3
+  },
+  "navigation": [
+    {
+      "id": "podcasts",
+      "title": "Podcasts",
+      "path": "/podcasts",
+      "icon": "🎙",
+      "section": "Podcast",
+      "status": "planned"
+    }
+  ],
+  "layouts": [
+    {
+      "id": "landing",
+      "description": "Section hub: hero, child-route grid, status chips.",
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            "net-status"
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            "catalog-grid"
+          ]
+        },
+        {
+          "region": "footer",
+          "components": []
+        }
+      ]
+    },
+    {
+      "id": "player",
+      "description": "Playback surface: player + schedule + transcript + story.",
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            "net-status"
+          ]
+        },
+        {
+          "region": "sidebar",
+          "components": [
+            "station-list"
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            "player",
+            "waveform",
+            "transcript",
+            "schedule-list"
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            "wallet",
+            "persona-select",
+            "weather-widget"
+          ]
+        },
+        {
+          "region": "overlay",
+          "components": [
+            "story-modal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "article",
+      "description": "Long-form content page.",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            "article"
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            "timeline"
+          ]
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "id": "radio.live",
+      "path": "/radio/live",
+      "title": "Live",
+      "layout": "player",
+      "status": "partial",
+      "permissions": [
+        "anonymous"
+      ],
+      "contentType": "live-show"
+    },
+    {
+      "id": "radio.now-playing",
+      "path": "/radio/now-playing",
+      "title": "Now Playing",
+      "layout": "player",
+      "status": "built",
+      "permissions": [
+        "anonymous"
+      ],
+      "contentType": "radio-track"
+    },
+    {
+      "id": "podcasts",
+      "path": "/podcasts",
+      "title": "Podcasts",
+      "layout": "landing",
+      "status": "planned",
+      "permissions": [
+        "anonymous"
+      ],
+      "contentType": "podcast"
+    },
+    {
+      "id": "podcasts.trending",
+      "path": "/podcasts/trending",
+      "title": "Trending",
+      "layout": "article",
+      "status": "planned",
+      "permissions": [
+        "anonymous"
+      ],
+      "contentType": "podcast"
+    },
+    {
+      "id": "podcasts.latest",
+      "path": "/podcasts/latest",
+      "title": "Latest",
+      "layout": "article",
+      "status": "planned",
+      "permissions": [
+        "anonymous"
+      ],
+      "contentType": "podcast"
+    },
+    {
+      "id": "podcasts.categories",
+      "path": "/podcasts/categories",
+      "title": "Categories",
+      "layout": "article",
+      "status": "planned",
+      "permissions": [
+        "anonymous"
+      ],
+      "contentType": null
+    },
+    {
+      "id": "podcasts.detail",
+      "path": "/podcasts/:slug",
+      "title": "Slug",
+      "layout": "player",
+      "status": "planned",
+      "permissions": [
+        "anonymous"
+      ],
+      "contentType": "podcast"
+    },
+    {
+      "id": "podcasts.transcript",
+      "path": "/podcasts/:slug/transcript",
+      "title": "Transcript",
+      "layout": "player",
+      "status": "partial",
+      "permissions": [
+        "anonymous"
+      ],
+      "contentType": "transcript"
+    },
+    {
+      "id": "podcasts.chapters",
+      "path": "/podcasts/:slug/chapters",
+      "title": "Chapters",
+      "layout": "player",
+      "status": "planned",
+      "permissions": [
+        "anonymous"
+      ],
+      "contentType": "podcast"
+    },
+    {
+      "id": "podcasts.discussion",
+      "path": "/podcasts/:slug/discussion",
+      "title": "Discussion",
+      "layout": "player",
+      "status": "planned",
+      "permissions": [
+        "anonymous"
+      ],
+      "contentType": null
+    },
+    {
+      "id": "podcasts.bookmark",
+      "path": "/podcasts/bookmark",
+      "title": "Bookmark",
+      "layout": "article",
+      "status": "planned",
+      "permissions": [
+        "listener"
+      ],
+      "contentType": null
+    }
+  ]
+}

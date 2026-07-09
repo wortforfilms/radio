@@ -4,7 +4,7 @@
 // registry; statuses/evidence carried over verbatim (PHKD: evidence-backed).
 import type { RouteDefinition } from "./types.ts";
 
-export const routes: RouteDefinition[] = [
+export const routes: RouteDefinition[] =  [
   {
     "id": "podcasts",
     "path": "/podcasts",
@@ -73,7 +73,8 @@ export const routes: RouteDefinition[] = [
       "hub",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "podcast"
   },
   {
     "id": "podcasts.trending",
@@ -144,7 +145,8 @@ export const routes: RouteDefinition[] = [
       "trending",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "podcast"
   },
   {
     "id": "podcasts.latest",
@@ -215,7 +217,8 @@ export const routes: RouteDefinition[] = [
       "latest",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "podcast"
   },
   {
     "id": "podcasts.categories",
@@ -357,7 +360,8 @@ export const routes: RouteDefinition[] = [
       "slug",
       "planned"
     ],
-    "dynamic": true
+    "dynamic": true,
+    "contentType": "podcast"
   },
   {
     "id": "podcasts.transcript",
@@ -441,7 +445,8 @@ export const routes: RouteDefinition[] = [
       "slug",
       "partial"
     ],
-    "dynamic": true
+    "dynamic": true,
+    "contentType": "transcript"
   },
   {
     "id": "podcasts.chapters",
@@ -513,7 +518,8 @@ export const routes: RouteDefinition[] = [
       "slug",
       "planned"
     ],
-    "dynamic": true
+    "dynamic": true,
+    "contentType": "podcast"
   },
   {
     "id": "podcasts.discussion",

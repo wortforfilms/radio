@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-07-09T17:40:11.166Z",
+  "icons": {
+    "public": "🌐",
+    "radio": "📻",
+    "podcasts": "🎙",
+    "research": "🔬",
+    "discover": "🛰",
+    "academy": "🎓",
+    "community": "👥",
+    "events": "📅",
+    "news": "📰",
+    "media": "🎥",
+    "ai": "🤖",
+    "search": "🔍",
+    "user": "👤",
+    "premium": "💎",
+    "analytics": "📊",
+    "studio": "🎛",
+    "cms": "🗂",
+    "admin": "⚙",
+    "api": "🔌",
+    "ecosystem": "🌐"
+  }
+}

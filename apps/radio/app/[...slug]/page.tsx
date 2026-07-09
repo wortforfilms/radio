@@ -15,10 +15,32 @@ export function generateStaticParams() {
     .map((route) => ({ slug: route.path.split("/").filter(Boolean) }));
 }
 
+interface RouteSeo {
+  title: string;
+  description: string;
+  keywords: string[];
+  robots: string;
+  openGraph: { title: string; description: string; type: string };
+  twitter: { card: string; title: string; description: string };
+}
+
+// Metadata generated from registry SEO metadata (schemaVersion ≥ 2) — the
+// registry is the single source of truth; nothing is authored per-page.
 export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }) {
   const { slug } = await params;
   const match = matchRoute(`/${slug.join("/")}`);
-  return { title: match ? `${match.route.title} · Radio Vaigyaaniq` : "Radio Vaigyaaniq" };
+  if (!match) return { title: "Radio Vaigyaaniq" };
+  const seo = (match.route as { seo?: RouteSeo }).seo;
+  if (!seo) return { title: `${match.route.title} · Radio Vaigyaaniq` };
+  const index = seo.robots === "index,follow";
+  return {
+    title: seo.title,
+    description: seo.description,
+    keywords: seo.keywords,
+    robots: { index, follow: index },
+    openGraph: { title: seo.openGraph.title, description: seo.openGraph.description },
+    twitter: { title: seo.twitter.title, description: seo.twitter.description }
+  };
 }
 
 const STATUS_LABEL: Record<RegistryRoute["status"], string> = {

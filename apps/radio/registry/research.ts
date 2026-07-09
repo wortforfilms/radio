@@ -4,7 +4,7 @@
 // registry; statuses/evidence carried over verbatim (PHKD: evidence-backed).
 import type { RouteDefinition } from "./types.ts";
 
-export const routes: RouteDefinition[] = [
+export const routes: RouteDefinition[] =  [
   {
     "id": "research",
     "path": "/research",
@@ -140,7 +140,8 @@ export const routes: RouteDefinition[] = [
       "publications",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "research-paper"
   },
   {
     "id": "research.papers",
@@ -209,7 +210,8 @@ export const routes: RouteDefinition[] = [
       "papers",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "research-paper"
   },
   {
     "id": "research.datasets",
@@ -285,7 +287,8 @@ export const routes: RouteDefinition[] = [
       "datasets",
       "partial"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "dataset"
   },
   {
     "id": "research.experiments",
@@ -630,7 +633,8 @@ export const routes: RouteDefinition[] = [
       "citations",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "research-paper"
   },
   {
     "id": "research.downloads",
@@ -699,6 +703,7 @@ export const routes: RouteDefinition[] = [
       "downloads",
       "planned"
     ],
-    "dynamic": false
+    "dynamic": false,
+    "contentType": "dataset"
   }
 ];

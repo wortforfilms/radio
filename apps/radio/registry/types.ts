@@ -155,6 +155,8 @@ export interface RouteDefinition {
   dependsOn: string[];
   tags: string[];
   dynamic: boolean;
+  /** Optional content-type id (content-types.ts) this route presents. */
+  contentType?: string;
 }
 
 /** Build-time computed shape: definition + computed children ids. */
@@ -165,4 +167,123 @@ export interface CompiledRoute extends RouteDefinition {
 export interface SectionMeta {
   name: RouteSection;
   emoji: string;
+}
+
+// ---------------------------------------------------------------------------
+// Application-manifest extensions (schemaVersion 3): components, layouts,
+// design tokens, content types, workflows, workspace apps. All additive.
+// ---------------------------------------------------------------------------
+
+export type ComponentCategory =
+  | "playback"
+  | "content"
+  | "commerce"
+  | "navigation"
+  | "data"
+  | "feedback"
+  | "input"
+  | "media";
+
+/** UI component definition. Statuses follow the same PHKD evidence rules as routes. */
+export interface ComponentDefinition {
+  /** Permanent id, e.g. "player", "waveform", "podcast-card". */
+  id: string;
+  name: string;
+  description: string;
+  category: ComponentCategory;
+  status: RouteStatus;
+  implementedBy: string[];
+  platforms: RoutePlatform[];
+  /** Prop contract (documentation-grade, generator-consumable). */
+  props: Array<{ name: string; type: string; required: boolean; description?: string }>;
+  /** Content types this component can render (ids from content-types.ts). */
+  renders: string[];
+}
+
+/** Named region of a layout with an ordered component tree. */
+export interface LayoutRegion {
+  region: "header" | "sidebar" | "main" | "aside" | "footer" | "overlay";
+  components: string[];
+}
+
+export interface LayoutDefinition {
+  id: RouteLayout;
+  description: string;
+  regions: LayoutRegion[];
+}
+
+/** Design tokens — one source for web/mobile/desktop/tv/watch themes. */
+export interface DesignTokens {
+  colors: Record<string, string>;
+  spacing: Record<string, string>;
+  typography: {
+    fonts: Record<string, string>;
+    sizes: Record<string, string>;
+    weights: Record<string, number>;
+    lineHeights: Record<string, number>;
+  };
+  icons: Record<string, string>;
+  motion: { durations: Record<string, string>; easings: Record<string, string> };
+}
+
+export type ContentFieldType =
+  | "string"
+  | "text"
+  | "richtext"
+  | "number"
+  | "boolean"
+  | "date"
+  | "duration"
+  | "url"
+  | "asset"
+  | "reference"
+  | "cue-list"
+  | "money";
+
+export interface ContentField {
+  name: string;
+  type: ContentFieldType;
+  required: boolean;
+  description?: string;
+  /** For type "reference": the referenced content-type id. */
+  references?: string;
+}
+
+/** Content type schema. Routes reference these instead of embedding assumptions. */
+export interface ContentTypeDefinition {
+  id: string;
+  name: string;
+  description: string;
+  status: RouteStatus;
+  implementedBy: string[];
+  workflow: string;
+  fields: ContentField[];
+}
+
+export interface WorkflowTransition {
+  from: string;
+  to: string;
+  /** Human-checked requirements (PHKD gates) that must hold before transition. */
+  requires: string[];
+  roles: Permission[];
+}
+
+export interface WorkflowDefinition {
+  id: string;
+  name: string;
+  description: string;
+  states: string[];
+  initial: string;
+  transitions: WorkflowTransition[];
+}
+
+/** A product in the multi-app workspace. Statuses stay evidence-backed. */
+export interface WorkspaceApp {
+  id: string;
+  name: string;
+  description: string;
+  status: RouteStatus;
+  implementedBy: string[];
+  /** Route-id prefix(es) this app owns in the shared registry. */
+  routePrefixes: string[];
 }

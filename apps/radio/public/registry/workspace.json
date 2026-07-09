@@ -1,0 +1,253 @@
+{
+  "generatedAt": "2026-07-09T17:40:11.166Z",
+  "note": "One root registry; app registries own route-id prefixes. Statuses evidence-backed — only artifacts that exist are cited.",
+  "counts": {
+    "apps": 9,
+    "built": 1,
+    "partial": 3,
+    "planned": 5
+  },
+  "apps": [
+    {
+      "id": "radio",
+      "name": "Radio Vaigyaaniq",
+      "description": "Online/offline science radio with rights-aware commerce.",
+      "status": "built",
+      "implementedBy": [
+        "apps/radio",
+        "apps/web/app/radio",
+        "apps/radio-backend"
+      ],
+      "routePrefixes": [
+        "public",
+        "radio",
+        "premium",
+        "user",
+        "search",
+        "admin",
+        "cms",
+        "studio",
+        "analytics",
+        "api"
+      ],
+      "ownedRoutes": [
+        "public.home",
+        "public.about",
+        "public.mission",
+        "public.vision",
+        "public.science-for-bharat",
+        "public.contact",
+        "public.partners",
+        "public.sponsors",
+        "public.careers",
+        "public.press",
+        "public.privacy",
+        "public.terms",
+        "public.accessibility",
+        "public.donate",
+        "radio",
+        "radio.live",
+        "radio.now-playing",
+        "radio.schedule",
+        "radio.frequencies",
+        "radio.shows",
+        "radio.shows.detail",
+        "radio.rj",
+        "radio.archive",
+        "radio.request",
+        "radio.dedicate",
+        "radio.download",
+        "search",
+        "search.radio",
+        "search.podcasts",
+        "search.research",
+        "search.news",
+        "search.people",
+        "user.login",
+        "user.signup",
+        "user.forgot-password",
+        "user.verify",
+        "user.profile",
+        "user.profile.edit",
+        "user.bookmarks",
+        "user.history",
+        "user.downloads",
+        "user.notifications",
+        "user.settings",
+        "premium",
+        "premium.plans",
+        "premium.payment",
+        "premium.history",
+        "premium.library",
+        "analytics",
+        "analytics.listeners",
+        "analytics.live",
+        "analytics.streams",
+        "analytics.content",
+        "analytics.geography",
+        "analytics.revenue",
+        "studio",
+        "studio.live",
+        "studio.record",
+        "studio.upload",
+        "studio.editor",
+        "studio.script",
+        "studio.caller",
+        "studio.queue",
+        "studio.automation",
+        "studio.assets",
+        "cms",
+        "cms.dashboard",
+        "cms.articles",
+        "cms.shows",
+        "cms.podcasts",
+        "cms.research",
+        "cms.media",
+        "cms.users",
+        "cms.comments",
+        "cms.moderation",
+        "cms.workflows",
+        "cms.scheduler",
+        "admin",
+        "admin.users",
+        "admin.roles",
+        "admin.permissions",
+        "admin.api",
+        "admin.settings",
+        "admin.logs",
+        "admin.audit",
+        "admin.security",
+        "admin.storage",
+        "admin.backups",
+        "admin.integrations",
+        "api.auth",
+        "api.radio",
+        "api.podcasts",
+        "api.research",
+        "api.news",
+        "api.events",
+        "api.community",
+        "api.search",
+        "api.analytics",
+        "api.upload",
+        "api.notifications",
+        "api.payments"
+      ]
+    },
+    {
+      "id": "nlm",
+      "name": "NLM",
+      "description": "National Library of Music integration.",
+      "status": "planned",
+      "implementedBy": [],
+      "routePrefixes": [
+        "ecosystem.nlm"
+      ],
+      "ownedRoutes": [
+        "ecosystem.nlm"
+      ]
+    },
+    {
+      "id": "cic",
+      "name": "CIC Communicator",
+      "description": "Communicator product lane.",
+      "status": "planned",
+      "implementedBy": [],
+      "routePrefixes": [
+        "ecosystem.cic"
+      ],
+      "ownedRoutes": [
+        "ecosystem.cic"
+      ]
+    },
+    {
+      "id": "lipi",
+      "name": "Lipi",
+      "description": "Script/civilisation explorer (exists as umbrella-app module).",
+      "status": "partial",
+      "implementedBy": [
+        "apps/web/app/lipi",
+        "lipi/civilizations"
+      ],
+      "routePrefixes": [
+        "ecosystem.lipi"
+      ],
+      "ownedRoutes": [
+        "ecosystem.lipi"
+      ]
+    },
+    {
+      "id": "corpus",
+      "name": "Corpus",
+      "description": "Reference corpus (exists as shared package).",
+      "status": "partial",
+      "implementedBy": [
+        "packages/shared/src/reference-corpus.ts"
+      ],
+      "routePrefixes": [
+        "ecosystem.corpus"
+      ],
+      "ownedRoutes": [
+        "ecosystem.corpus"
+      ]
+    },
+    {
+      "id": "shree-kautilya",
+      "name": "Shree Kautilya",
+      "description": "Kautilya product lane.",
+      "status": "planned",
+      "implementedBy": [],
+      "routePrefixes": [
+        "ecosystem.shree-kautilya"
+      ],
+      "ownedRoutes": [
+        "ecosystem.shree-kautilya"
+      ]
+    },
+    {
+      "id": "maataa",
+      "name": "Maataa UI",
+      "description": "Guru-Maataa surface (exists as umbrella API module).",
+      "status": "partial",
+      "implementedBy": [
+        "apps/web/app/api/guru-maataa"
+      ],
+      "routePrefixes": [
+        "ecosystem.maataa"
+      ],
+      "ownedRoutes": [
+        "ecosystem.maataa"
+      ]
+    },
+    {
+      "id": "academy",
+      "name": "Academy",
+      "description": "Courses, quizzes, certificates (flag-gated section).",
+      "status": "planned",
+      "implementedBy": [],
+      "routePrefixes": [
+        "academy"
+      ],
+      "ownedRoutes": [
+        "academy",
+        "academy.courses",
+        "academy.course",
+        "academy.lessons",
+        "academy.quizzes",
+        "academy.tests",
+        "academy.certificates",
+        "academy.my-learning",
+        "academy.leaderboard"
+      ]
+    },
+    {
+      "id": "investors-hub",
+      "name": "Investors Hub",
+      "description": "Future investor-facing product.",
+      "status": "planned",
+      "implementedBy": [],
+      "routePrefixes": [],
+      "ownedRoutes": []
+    }
+  ]
+}

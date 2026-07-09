@@ -1,0 +1,370 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://radio.vaigyaaniq/registry.schema.json",
+  "title": "Radio Vaigyaaniq Route Registry",
+  "type": "object",
+  "required": [
+    "id",
+    "generatedAt",
+    "schemaVersion",
+    "phkd",
+    "counts",
+    "sections",
+    "routes"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "schemaVersion": {
+      "type": "integer",
+      "minimum": 2
+    },
+    "$schema": {
+      "type": "string"
+    },
+    "siteOrigin": {
+      "type": "string"
+    },
+    "phkd": {
+      "type": "object",
+      "required": [
+        "failClosed"
+      ],
+      "properties": {
+        "failClosed": {
+          "const": true
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "counts": {
+      "type": "object"
+    },
+    "enabledFlags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "emoji"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "emoji": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "section",
+          "emoji",
+          "title",
+          "status",
+          "implementedBy",
+          "description",
+          "dynamic",
+          "id",
+          "category",
+          "layout",
+          "icon",
+          "searchable",
+          "navigation",
+          "platforms",
+          "permissions",
+          "featureFlags",
+          "api",
+          "seo",
+          "analytics",
+          "evidence",
+          "dependsOn",
+          "children",
+          "tags"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:[.\\-][a-z0-9]+)*$"
+          },
+          "path": {
+            "type": "string",
+            "pattern": "^/"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "section": {
+            "type": "string"
+          },
+          "emoji": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "built",
+              "partial",
+              "planned"
+            ]
+          },
+          "layout": {
+            "enum": [
+              "landing",
+              "dashboard",
+              "player",
+              "studio",
+              "article",
+              "reader",
+              "fullscreen",
+              "settings",
+              "admin",
+              "modal"
+            ]
+          },
+          "icon": {
+            "type": "string"
+          },
+          "searchable": {
+            "type": "boolean"
+          },
+          "dynamic": {
+            "type": "boolean"
+          },
+          "navigation": {
+            "type": "object",
+            "required": [
+              "sidebar",
+              "header",
+              "footer",
+              "breadcrumbs",
+              "commandPalette",
+              "quickAccess",
+              "contextMenu"
+            ],
+            "additionalProperties": {
+              "type": "boolean"
+            }
+          },
+          "platforms": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "web",
+                "mobile",
+                "desktop",
+                "tv",
+                "car",
+                "watch",
+                "api",
+                "offline"
+              ]
+            },
+            "minItems": 1
+          },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "anonymous",
+                "listener",
+                "student",
+                "researcher",
+                "creator",
+                "moderator",
+                "editor",
+                "admin",
+                "superadmin"
+              ]
+            },
+            "minItems": 1
+          },
+          "featureFlags": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "radio2",
+                "premium",
+                "labs",
+                "beta",
+                "events",
+                "academy",
+                "enterprise",
+                "experimental"
+              ]
+            }
+          },
+          "api": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "method",
+                "path",
+                "status"
+              ],
+              "properties": {
+                "method": {
+                  "enum": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "PATCH",
+                    "DELETE"
+                  ]
+                },
+                "path": {
+                  "type": "string"
+                },
+                "status": {
+                  "enum": [
+                    "built",
+                    "partial",
+                    "planned"
+                  ]
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "seo": {
+            "type": "object",
+            "required": [
+              "title",
+              "description",
+              "keywords",
+              "robots"
+            ]
+          },
+          "analytics": {
+            "type": "object",
+            "required": [
+              "screenName",
+              "event"
+            ]
+          },
+          "implementedBy": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "artifact",
+                "kind"
+              ],
+              "properties": {
+                "artifact": {
+                  "type": "string"
+                },
+                "kind": {
+                  "enum": [
+                    "code",
+                    "surface",
+                    "data",
+                    "api",
+                    "doc"
+                  ]
+                },
+                "note": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "dependsOn": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "contentType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "const": "planned"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "implementedBy": {
+                  "maxItems": 0
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "enum": [
+                    "built",
+                    "partial"
+                  ]
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "evidence": {
+                  "minItems": 1
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

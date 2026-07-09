@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-07-09T17:40:11.166Z",
+  "typography": {
+    "fonts": {
+      "body": "Inter, ui-sans-serif, system-ui, sans-serif",
+      "display": "Georgia, serif",
+      "mono": "ui-monospace, Menlo, monospace"
+    },
+    "sizes": {
+      "xs": "11px",
+      "sm": "12px",
+      "base": "14px",
+      "md": "15px",
+      "lg": "19px",
+      "xl": "24px",
+      "hero": "clamp(25px,4vw,48px)"
+    },
+    "weights": {
+      "regular": 400,
+      "semibold": 600,
+      "bold": 700,
+      "black": 800
+    },
+    "lineHeights": {
+      "tight": 1.16,
+      "base": 1.45,
+      "relaxed": 1.55
+    }
+  }
+}

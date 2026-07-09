@@ -1,0 +1,77 @@
+{
+  "generatedAt": "2026-07-09T17:40:11.166Z",
+  "platform": "watch",
+  "tokens": "/registry/tokens/",
+  "counts": {
+    "routes": 2,
+    "layouts": 1
+  },
+  "navigation": [],
+  "layouts": [
+    {
+      "id": "player",
+      "description": "Playback surface: player + schedule + transcript + story.",
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            "net-status"
+          ]
+        },
+        {
+          "region": "sidebar",
+          "components": [
+            "station-list"
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            "player",
+            "waveform",
+            "transcript",
+            "schedule-list"
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            "wallet",
+            "persona-select",
+            "weather-widget"
+          ]
+        },
+        {
+          "region": "overlay",
+          "components": [
+            "story-modal"
+          ]
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "id": "radio.live",
+      "path": "/radio/live",
+      "title": "Live",
+      "layout": "player",
+      "status": "partial",
+      "permissions": [
+        "anonymous"
+      ],
+      "contentType": "live-show"
+    },
+    {
+      "id": "radio.now-playing",
+      "path": "/radio/now-playing",
+      "title": "Now Playing",
+      "layout": "player",
+      "status": "built",
+      "permissions": [
+        "anonymous"
+      ],
+      "contentType": "radio-track"
+    }
+  ]
+}
