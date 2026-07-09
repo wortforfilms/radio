@@ -41,7 +41,7 @@ describe("agent registry layer", () => {
     expect(agentPolicy.disclosure).toContain("AI Radio Assistant");
     // ads and LLM answers are planned/blocked
     expect(agentCapabilities.find((capability) => capability.id === "insert-ad")?.status).toBe("planned");
-    expect(agentCapabilities.find((capability) => capability.id === "answer-question")?.status).toBe("planned");
+    expect(agentCapabilities.find((capability) => capability.id === "answer-question")?.status).toBe("partial");
   });
 });
 
