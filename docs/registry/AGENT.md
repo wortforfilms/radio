@@ -1,6 +1,6 @@
 # Radio as an Agent
 
-Generated 2026-07-09T20:12:19.717Z from `registry/agent.ts` — do not edit by hand.
+Generated 2026-07-09T20:15:52.177Z from `registry/agent.ts` — do not edit by hand.
 
 The agent is a fail-closed co-pilot: perception (listener context, manifest,
 weather gate) → rule-based cognition (LLM opt-in via `AGENT_LLM_PROVIDER`) →
@@ -36,7 +36,7 @@ rights, never hides monetisation, and always discloses itself.
 | `insert-ad` | ⬜ planned | BLOCKED: requires rights-verified ad inventory + ENABLE_ADS=1 (none exists) | — |
 | `answer-question` | 🟡 partial | AGENT_LLM_PROVIDER + key configured, else blocked-llm-provider-null; zero retrieved sources ⇒ exact honest fallback, LLM not called; model output must be valid structured JSON or nothing executes; play/recommend ids validated against manifest + commerce access; provider disclosure appended server-side to every spoken text | maataa, rishi, samaya, vigyaaniq |
 | `run-quiz` | ⬜ planned | BLOCKED: quiz content type has no real content yet | vigyaaniq |
-| `compose-content` | ⬜ planned | BLOCKED: requires generation provider + rights lane for generated output | — |
+| `compose-content` | 🟡 partial | CONTENTGEN_PROVIDER/AGENT_LLM_PROVIDER configured, else blocked-provider-null; admin-gated endpoint only; every output stored published:false with permanent aiGenerated provenance; publication ONLY via verified rights proof (publishGenerated refuses otherwise) | — |
 
 ## API
 

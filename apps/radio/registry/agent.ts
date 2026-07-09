@@ -99,10 +99,17 @@ export const agentCapabilities: AgentCapability[] = [
   {
     id: "compose-content",
     name: "Compose Content",
-    description: "Generate micro-podcasts / new lyrics / AI music.",
-    status: "planned",
-    implementedBy: [],
-    gates: ["BLOCKED: requires generation provider + rights lane for generated output"],
+    description: "Generate new music (Suno/Udio/local seam) and lyrics (LLM) — always stored unpublished pending rights closure.",
+    // partial, not built: the code lane exists but execution is gated on a real
+    // generation provider key (CONTENTGEN_PROVIDER) — same discipline as payments/LLM.
+    status: "partial",
+    implementedBy: ["apps/radio-backend/content-gen.js", "apps/radio-backend/cognition-llm.js#generateLyrics", "apps/radio-backend/server.js#/agent/compose"],
+    gates: [
+      "CONTENTGEN_PROVIDER/AGENT_LLM_PROVIDER configured, else blocked-provider-null",
+      "admin-gated endpoint only",
+      "every output stored published:false with permanent aiGenerated provenance",
+      "publication ONLY via verified rights proof (publishGenerated refuses otherwise)"
+    ],
     personas: []
   }
 ];

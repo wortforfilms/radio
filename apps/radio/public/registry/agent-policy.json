@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T20:12:19.717Z",
+  "generatedAt": "2026-07-09T20:15:52.177Z",
   "phkd": {
     "failClosed": true,
     "note": "The orchestrator refuses any action whose gates don't hold. Planned capabilities (ads, LLM answers, quizzes, composition) return blocked-* statuses until real providers/inventory exist."
@@ -7,7 +7,7 @@
   "counts": {
     "capabilities": 10,
     "built": 6,
-    "planned": 3
+    "planned": 2
   },
   "policy": {
     "disclosure": "— announcement by the AI Radio Assistant (rule-based).",
@@ -205,11 +205,18 @@
     {
       "id": "compose-content",
       "name": "Compose Content",
-      "description": "Generate micro-podcasts / new lyrics / AI music.",
-      "status": "planned",
-      "implementedBy": [],
+      "description": "Generate new music (Suno/Udio/local seam) and lyrics (LLM) — always stored unpublished pending rights closure.",
+      "status": "partial",
+      "implementedBy": [
+        "apps/radio-backend/content-gen.js",
+        "apps/radio-backend/cognition-llm.js#generateLyrics",
+        "apps/radio-backend/server.js#/agent/compose"
+      ],
       "gates": [
-        "BLOCKED: requires generation provider + rights lane for generated output"
+        "CONTENTGEN_PROVIDER/AGENT_LLM_PROVIDER configured, else blocked-provider-null",
+        "admin-gated endpoint only",
+        "every output stored published:false with permanent aiGenerated provenance",
+        "publication ONLY via verified rights proof (publishGenerated refuses otherwise)"
       ],
       "personas": []
     }

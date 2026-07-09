@@ -263,4 +263,37 @@ async function ask(query, context = {}, persona = "samaya", history = [], deps =
   return result;
 }
 
-module.exports = { ask, llmConfig, searchLocalLibrary, buildSystemPrompt, parseModelOutput, validateActions, NO_INFO_TEXT };
+/**
+ * Phase 4 — lyrics generation via the same provider seam. The result is a
+ * DRAFT: aiGenerated, unpublished; storage/rights handled by content-gen.js.
+ */
+async function generateLyrics(prompt, style = "", deps = {}) {
+  const cfg = deps.config || llmConfig();
+  if (!cfg.provider) return { blocked: "blocked-llm-provider-null: lyrics generation needs AGENT_LLM_PROVIDER" };
+  if (cfg.provider !== "local" && !cfg.apiKey) return { blocked: "blocked-llm-key-null" };
+  const system = [
+    "You write original song lyrics for Vaigyaaniq Radio.",
+    `Style: ${String(style || "devotional/science fusion").slice(0, 120)}`,
+    "Rules: original text only — never reproduce existing copyrighted lyrics; no artist names; no claims about real people.",
+    "Output plain lyric lines only."
+  ].join("\n");
+  let text;
+  try {
+    text = await (deps.callProvider || callProvider)(cfg, system, String(prompt || ""), []);
+  } catch (error) {
+    return { blocked: `llm-call-failed: ${error.message}` };
+  }
+  const lyrics = String(text || "").trim();
+  if (!lyrics) return { blocked: "llm-output-empty" };
+  return {
+    kind: "lyrics",
+    prompt: String(prompt || "").slice(0, 300),
+    style: String(style || "").slice(0, 120),
+    lyrics: lyrics.slice(0, 4000),
+    aiGenerated: true,
+    published: false,
+    provider: cfg.provider
+  };
+}
+
+module.exports = { ask, llmConfig, searchLocalLibrary, buildSystemPrompt, parseModelOutput, validateActions, generateLyrics, NO_INFO_TEXT };

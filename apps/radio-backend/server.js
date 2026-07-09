@@ -444,6 +444,8 @@ app.post("/admin/resync", (req, res) => {
 const { decide } = require("./agent.js");
 const { ask, llmConfig } = require("./cognition-llm.js");
 const { appendFeedback, loadWeights, runLearningJob } = require("./learning.js");
+const { generateMusic, listGenerated, publishGenerated, storeGenerated } = require("./content-gen.js");
+const { generateLyrics } = require("./cognition-llm.js");
 
 // Knowledge lane dependencies for Phase-2 cognition (real data only).
 let contentLibraryCache = null;
@@ -535,6 +537,47 @@ app.post("/agent/learn", (req, res) => {
   const policy = loadAgentPolicy();
   const result = runLearningJob(policy?.policy?.learning || { enabled: true, adjustmentRate: 0.1, minWeight: 0.2 });
   res.json({ status: "ok", ...result });
+});
+
+// Phase-4 content generation (admin-gated; everything lands UNPUBLISHED).
+app.post("/agent/compose", async (req, res) => {
+  if (!requireAdmin(req, res)) return;
+  const body = (await req.readJson()) || {};
+  if (body.kind === "lyrics") {
+    const draft = await generateLyrics(body.prompt, body.style);
+    if (draft.blocked) {
+      res.status(503).json(draft);
+      return;
+    }
+    res.json({ status: "ok", record: storeGenerated(draft), phkd: "Draft stored unpublished; rights closure required before any public use." });
+    return;
+  }
+  const result = await generateMusic(body.description, body.durationSeconds || 60);
+  if (result.blocked) {
+    res.status(503).json(result);
+    return;
+  }
+  res.json({ status: "ok", record: result, phkd: "Generated audio stored unpublished; rights closure required before any public use." });
+});
+
+app.get("/admin/generated", (req, res) => {
+  if (!requireAdmin(req, res)) return;
+  const records = listGenerated();
+  // present the LATEST state per id (ledger is append-only)
+  const latest = new Map();
+  for (const record of records) latest.set(record.id, record);
+  res.json({ count: latest.size, records: [...latest.values()] });
+});
+
+app.post("/admin/generated/publish", async (req, res) => {
+  if (!requireAdmin(req, res)) return;
+  const body = (await req.readJson()) || {};
+  const result = publishGenerated(body.generatedId, loadAdminData());
+  if (result.blocked || result.error) {
+    res.status(result.error ? 404 : 409).json(result);
+    return;
+  }
+  res.json({ status: "published", record: result });
 });
 
 // Phase-2 cognition: natural-language queries, sources-only, fail-closed.
