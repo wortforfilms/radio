@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T20:15:52.177Z",
+  "generatedAt": "2026-07-09T20:18:59.868Z",
   "note": "Generated from registry content types. The admin panel stays fail-closed: publish transitions require the workflow gates below.",
   "schemas": [
     {

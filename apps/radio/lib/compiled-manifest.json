@@ -1,6 +1,6 @@
 {
   "id": "radio-vaigyaaniq-compiled-manifest",
-  "compiledAt": "2026-07-09T20:17:10.311Z",
+  "compiledAt": "2026-07-09T20:18:59.957Z",
   "schemaVersion": 3,
   "sourceHash": "b4974feb66764f8902a28d27d2cca46a24c6b89430aaad81a486a37e52e11312",
   "counts": {
@@ -29552,5 +29552,76 @@
         "ecosystem"
       ]
     }
+  },
+  "pluginImpact": {
+    "<routes>": [
+      "core",
+      "navigation",
+      "search",
+      "permissions",
+      "platform",
+      "api",
+      "seo",
+      "components",
+      "content",
+      "workspace",
+      "docs"
+    ],
+    "types.ts": [
+      "core",
+      "navigation",
+      "search",
+      "permissions",
+      "platform",
+      "api",
+      "seo",
+      "components",
+      "content",
+      "workspace",
+      "docs"
+    ],
+    "index.ts": [
+      "core",
+      "navigation",
+      "search",
+      "permissions",
+      "platform",
+      "api",
+      "seo",
+      "components",
+      "content",
+      "workspace",
+      "docs"
+    ],
+    "components.ts": [
+      "core",
+      "components",
+      "docs"
+    ],
+    "content-types.ts": [
+      "core",
+      "content",
+      "docs"
+    ],
+    "workflows.ts": [
+      "core",
+      "content",
+      "docs"
+    ],
+    "apps.ts": [
+      "core",
+      "workspace"
+    ],
+    "layouts.ts": [
+      "platform",
+      "components"
+    ],
+    "tokens.ts": [
+      "platform",
+      "tokens"
+    ],
+    "agent.ts": [
+      "agent"
+    ]
   }
 }

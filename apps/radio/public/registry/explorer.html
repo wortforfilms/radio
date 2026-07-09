@@ -56,7 +56,7 @@
       "content-types": { list: () => M.contentTypes.map(c => ({ id: c.id, label: c.id, sub: c.workflow, status: c.status })), show: showContentType },
       workflows: { list: () => M.workflows.map(w => ({ id: w.id, label: w.id, sub: `${w.states.length} states`, status: "built" })), show: showWorkflow },
       apps: { list: () => M.workspaceApps.map(a => ({ id: a.id, label: a.id, sub: `${a.routePrefixes.length} prefixes`, status: a.status })), show: showApp },
-      graph: { list: () => [{ id: "orphans", label: "orphans", sub: "", status: "built" }, { id: "stats", label: "stats", sub: "", status: "built" }], show: showGraph }
+      graph: { list: () => [{ id: "visualise", label: "visualise", sub: "canvas graph", status: "built" }, { id: "orphans", label: "orphans", sub: "", status: "built" }, { id: "stats", label: "stats", sub: "", status: "built" }], show: showGraph }
     };
     let cat = "routes", sel = null, q = "";
 
@@ -67,9 +67,21 @@
       const catKey = kind === "content-type" ? "content-types" : kind === "app" ? "apps" : `${kind}s`;
       return `<a class="ref" data-cat="${esc(catKey)}" data-id="${esc(id)}">${esc(graphId)}</a>`;
     };
+    // Phase 6: impact preview — editing this node's source rebuilds these plugins.
+    const SOURCE_BY_KIND = { route: "<routes>", component: "components.ts", layout: "layouts.ts", tokens: "tokens.ts", "content-type": "content-types.ts", workflow: "workflows.ts", app: "apps.ts" };
+    const buildImpact = (nodeId) => {
+      const kind = nodeId.split(":")[0];
+      const source = SOURCE_BY_KIND[kind];
+      const plugins = (M.pluginImpact || {})[source] || [];
+      return plugins.length
+        ? `<p><b>Build impact:</b> editing <code>${esc(source)}</code> rebuilds plugins: ${plugins.map(esc).join(", ")}</p>`
+        : "";
+    };
     const graphCard = (nodeId) => `<div class="card"><h3>Graph</h3>
       <p><b>Outgoing:</b> ${edgesFrom(nodeId).map(e => `${esc(e.rel)} → ${refLink(e.to)}`).join(" · ") || "<span class=muted>none</span>"}</p>
-      <p><b>Impact (referenced by):</b> ${impactOf(nodeId).map(refLink).join(" · ") || "<span class=muted>none — orphan candidate</span>"}</p></div>`;
+      <p><b>Impact (referenced by):</b> ${impactOf(nodeId).map(refLink).join(" · ") || "<span class=muted>none — orphan candidate</span>"}</p>
+      ${buildImpact(nodeId)}
+      <p class="muted">Propose a change: <code>POST /registry/propose</code> (admin) · release diff: <code>npm run radio:registry:diff</code></p></div>`;
     const evid = (list) => list?.length ? `<div class="card"><h3>Evidence</h3>${list.map(e => `<div><code>${esc(e.artifact || e)}</code>${e.kind ? ` <small class=muted>(${esc(e.kind)})</small>` : ""}</div>`).join("")}</div>` : "";
 
     function showRoute(r) {
@@ -138,6 +150,62 @@
         ${graphCard(`app:${a.id}`)}`;
     }
     function showGraph(item) {
+      if (item.id === "visualise") {
+        // dependency-free canvas rendering: nodes clustered by kind on rings,
+        // edges as translucent lines; click a node to open its detail view.
+        setTimeout(() => {
+          const canvas = document.getElementById("graphCanvas");
+          if (!canvas) return;
+          const dpr = window.devicePixelRatio || 1;
+          const W = canvas.clientWidth, H = 560;
+          canvas.width = W * dpr; canvas.height = H * dpr;
+          const ctx = canvas.getContext("2d");
+          ctx.scale(dpr, dpr);
+          const kinds = [...new Set(M.graph.nodes.map(n => n.kind))];
+          const ringOf = Object.fromEntries(kinds.map((k, i) => [k, 90 + i * 34]));
+          const byKindIndex = {};
+          const pos = {};
+          for (const node of M.graph.nodes) {
+            const list = M.graph.nodes.filter(n => n.kind === node.kind);
+            byKindIndex[node.kind] = (byKindIndex[node.kind] || 0);
+            const index = byKindIndex[node.kind]++;
+            const angle = (index / list.length) * Math.PI * 2;
+            const radius = ringOf[node.kind];
+            pos[node.id] = { x: W / 2 + Math.cos(angle) * radius * (W / 560), y: H / 2 + Math.sin(angle) * radius * (H / 620) };
+          }
+          ctx.strokeStyle = "rgba(0,245,212,.12)";
+          for (const edge of M.graph.edges) {
+            const a = pos[edge.from], b = pos[edge.to];
+            if (!a || !b) continue;
+            ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+          }
+          const color = { route: "#dfb15b", component: "#00f5d4", layout: "#ff6b35", "content-type": "#aba6c8", workflow: "#8be29d", app: "#ff7272", tokens: "#f7f4ea" };
+          const hit = [];
+          for (const node of M.graph.nodes) {
+            const p = pos[node.id];
+            ctx.fillStyle = color[node.kind] || "#fff";
+            ctx.globalAlpha = node.status === "planned" ? 0.35 : 1;
+            ctx.beginPath(); ctx.arc(p.x, p.y, node.kind === "route" ? 2.4 : 5, 0, Math.PI * 2); ctx.fill();
+            ctx.globalAlpha = 1;
+            hit.push({ ...p, id: node.id });
+          }
+          canvas.onclick = (event) => {
+            const rect = canvas.getBoundingClientRect();
+            const x = event.clientX - rect.left, y = event.clientY - rect.top;
+            const found = hit.find(h => (h.x - x) ** 2 + (h.y - y) ** 2 < 64);
+            if (!found) return;
+            const [kind, id] = found.id.split(":");
+            cat = kind === "content-type" ? "content-types" : kind === "app" ? "apps" : kind === "tokens" ? "tokens" : `${kind}s`;
+            sel = kind === "tokens" ? "colors" : id;
+            render();
+          };
+        }, 0);
+        const legend = ["route", "component", "layout", "content-type", "workflow", "app", "tokens"]
+          .map(k => `<span class="chip">${esc(k)}</span>`).join(" ");
+        return `<h2>Dependency graph — ${M.graph.nodes.length} nodes / ${M.graph.edges.length} edges</h2>
+          <p class="muted">Rings by kind; planned nodes dimmed. Click a node to inspect it. ${legend}</p>
+          <canvas id="graphCanvas" style="width:100%;height:560px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02)"></canvas>`;
+      }
       if (item.id === "orphans") {
         return `<h2>Orphan detection</h2>${Object.entries(M.graph.orphans).map(([kind, list]) =>
           `<div class="card"><h3>${esc(kind)}</h3><p>${list.length ? list.map(esc).join(", ") : '<span class="muted">none — every node is referenced</span>'}</p></div>`).join("")}`;

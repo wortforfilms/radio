@@ -624,6 +624,43 @@ app.post("/agent/ask", async (req, res) => {
 });
 
 // ---------------------------------------------------------------------------
+// Phase 6 — registry change proposals (admin-gated).
+// DOCUMENTED ASSUMPTION: a web UI never mutates registry source files directly
+// (frozen ids + git review are the safety net). Proposals land in an append-only
+// ledger; a human applies them in a reviewed commit, then `radio:registry:diff`
+// shows the release diff including breaking changes.
+// ---------------------------------------------------------------------------
+const PROPOSALS_FILE = path.resolve(__dirname, "registry-proposals.jsonl");
+
+app.post("/registry/propose", async (req, res) => {
+  if (!requireAdmin(req, res)) return;
+  const body = (await req.readJson()) || {};
+  if (!body.target || !body.patch) {
+    res.status(400).json({ error: "target (route/component id) + patch (field changes) required" });
+    return;
+  }
+  const proposal = {
+    id: `prop-${Date.now().toString(36)}`,
+    proposedAt: new Date().toISOString(),
+    target: String(body.target),
+    patch: body.patch,
+    note: body.note || null,
+    status: "pending-review",
+    apply: "Edit the owning module in apps/radio/registry, run npm run radio:registry (validation + frozen ids enforce safety), review with npm run radio:registry:diff, commit."
+  };
+  fs.appendFileSync(PROPOSALS_FILE, `${JSON.stringify(proposal)}\n`);
+  res.json({ status: "ok", proposal });
+});
+
+app.get("/registry/proposals", (req, res) => {
+  if (!requireAdmin(req, res)) return;
+  const proposals = fs.existsSync(PROPOSALS_FILE)
+    ? fs.readFileSync(PROPOSALS_FILE, "utf8").split("\n").filter(Boolean).map((line) => JSON.parse(line))
+    : [];
+  res.json({ count: proposals.length, proposals });
+});
+
+// ---------------------------------------------------------------------------
 // Manifest API (read-only).
 // Serves the GENERATED registry artifacts — the runtime never queries the
 // registry sources (compile-time philosophy: registry → compile → artifacts

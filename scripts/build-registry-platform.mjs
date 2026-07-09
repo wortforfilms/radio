@@ -58,7 +58,7 @@ const PLUGIN_ORDER = ["core", "navigation", "search", "permissions", "platform",
 // ---------------------------------------------------------------------------
 let compiled;
 try {
-  ({ compiled } = await compileManifest(ROOT, { updateLock }));
+  ({ compiled } = await compileManifest(ROOT, { updateLock, pluginSources: PLUGIN_SOURCES }));
 } catch (error) {
   console.error(error.message);
   process.exit(1);

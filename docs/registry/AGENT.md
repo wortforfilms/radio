@@ -1,6 +1,6 @@
 # Radio as an Agent
 
-Generated 2026-07-09T20:15:52.177Z from `registry/agent.ts` — do not edit by hand.
+Generated 2026-07-09T20:18:59.868Z from `registry/agent.ts` — do not edit by hand.
 
 The agent is a fail-closed co-pilot: perception (listener context, manifest,
 weather gate) → rule-based cognition (LLM opt-in via `AGENT_LLM_PROVIDER`) →

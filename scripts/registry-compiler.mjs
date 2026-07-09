@@ -20,7 +20,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 
-export async function compileManifest(ROOT, { updateLock = false } = {}) {
+export async function compileManifest(ROOT, { updateLock = false, pluginSources = null } = {}) {
   const registry = await import(pathToFileURL(path.join(ROOT, "apps/radio/registry/index.ts")).href);
   const problems = registry.validateRegistry();
   if (problems.length) {
@@ -195,7 +195,19 @@ export async function compileManifest(ROOT, { updateLock = false } = {}) {
     agentPolicy,
     componentTrees,
     graph,
-    indexes
+    indexes,
+    // Phase 6: impact preview — which plugins (and hence artifacts) rebuild
+    // when each registry source changes. Injected by the runner's dependency model.
+    pluginImpact: pluginSources
+      ? Object.fromEntries(
+          [...new Set(Object.values(pluginSources).flat())].map((source) => [
+            source,
+            Object.entries(pluginSources)
+              .filter(([, sources]) => sources.includes(source))
+              .map(([plugin]) => plugin)
+          ])
+        )
+      : null
   };
 
   return { compiled, registry };
