@@ -1,0 +1,3477 @@
+{
+ "id": "radio-untitled-title-proposals",
+ "generatedAt": "2026-07-09T22:57:48.856Z",
+ "method": "refrain (most-repeated lyric line) → first lyric line → style words for instrumentals; one title per lyric family; deterministic",
+ "phkd": {
+  "note": "Titles are DERIVED from each track's own lyrics/styles — no invented themes. Original '(untitled)' preserved as sourceTitle. Applied by the content builder to untitled tracks only."
+ },
+ "counts": {
+  "untitledTracks": 432,
+  "families": 182,
+  "distinctTitles": 182,
+  "bySource": {
+   "first-line": 49,
+   "family": 250,
+   "refrain": 130,
+   "styles": 3
+  }
+ },
+ "proposals": [
+  {
+   "id": "834f3ae2-e513-4ffc-8431-1d842ab13e3e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ओ जी मेरे सरकार मेरे ज्ञान",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "ओ.......... जी......... मेरे........ सरक"
+  },
+  {
+   "id": "e1b56541-6cab-4cc3-af30-269fc2cc21d8",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ओ जी मेरे सरकार मेरे ज्ञान",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ओ.......... जी......... मेरे........ सरक"
+  },
+  {
+   "id": "458d70be-5ef2-4bbb-af05-f6c7536d0356",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ह-ह-ह-ह हुट हे-हे-हे झट",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "mera 'main' होने में किस-किस का हाथ है?\n"
+  },
+  {
+   "id": "79df050a-9ca2-4238-8c67-f3470d7b0b0f",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ह-ह-ह-ह हुट हे-हे-हे झट",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "mera 'main' होने में किस-किस का हाथ है?\n"
+  },
+  {
+   "id": "77a5f693-5564-40c9-8b50-75d5eabe64f6",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "बड़ी पुरानी बात",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "बड़ी पुरानी बात है...\nआज भी वही रात है.."
+  },
+  {
+   "id": "d9c620a9-bac1-48e7-ab58-17bf6968d47a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "बड़ी पुरानी बात",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "बड़ी पुरानी बात है...\nआज भी वही रात है.."
+  },
+  {
+   "id": "1c19af11-e727-40ce-ab1f-10a6cc04b68e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Main sabko khud mein samaye ek",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "bas ek pyala hoon... par bahut matwala h"
+  },
+  {
+   "id": "e24efd14-993f-446c-b6bc-af7aa99c96b1",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Main sabko khud mein samaye ek",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "bas ek pyala hoon... par bahut matwala h"
+  },
+  {
+   "id": "92aab6f9-e79d-4b27-af30-0a7ab03f0536",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "एक केवट के ले जाने",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "एक केवट के ले जाने से,\nक्या राम-नाम बन प"
+  },
+  {
+   "id": "028206e0-2473-4078-8ef9-eb731d376d7e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "एक केवट के ले जाने",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "एक केवट के ले जाने से,\nक्या राम-नाम बन प"
+  },
+  {
+   "id": "bec3e96c-fe0e-4577-a229-e39d1d8af390",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "S r G r S",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "soft tanpura drone, distant bell, silenc"
+  },
+  {
+   "id": "53d6b687-9225-46f0-a82d-448af2a35562",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "S r G r S",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "soft tanpura drone, distant bell, silenc"
+  },
+  {
+   "id": "bbc7b4ba-42c3-4395-bc2a-26134de64ab7",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "M+F ल लल ला लल ला",
+   "source": "refrain",
+   "evidence": "line repeats 3×",
+   "lyricFamily": "(whisper m) सुन ले तू छोरी,\n(whisper m) "
+  },
+  {
+   "id": "0d931d51-3575-4bd1-8740-0ed133c1eba9",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "M+F ल लल ला लल ला",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "(whisper m) सुन ले तू छोरी,\n(whisper m) "
+  },
+  {
+   "id": "e77952dc-af14-41a8-9ca5-44de89385d85",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "भीतर देख ले कदे टटोलकै ज्ञान",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "रंग रूप पै मान करै क्यूं, यो चाम का चोला"
+  },
+  {
+   "id": "6b2681d0-8b5e-41fe-857c-74b2d7fcd89a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "भीतर देख ले कदे टटोलकै ज्ञान",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "रंग रूप पै मान करै क्यूं, यो चाम का चोला"
+  },
+  {
+   "id": "83603ef3-3ea0-4277-a309-8bfaadcd9dbc",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "अंतरा:",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "१. हरियाणवी रागनी (तर्क और विद्रोह)\nजब स"
+  },
+  {
+   "id": "9b949712-cb52-489b-89a8-c9c2c9b52db2",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "अंतरा:",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "१. हरियाणवी रागनी (तर्क और विद्रोह)\nजब स"
+  },
+  {
+   "id": "b1dc4291-5dbc-4d58-8b74-4b5021142672",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "अंतरा:",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "१. हरियाणवी रागनी (तर्क और विद्रोह)\nजब स"
+  },
+  {
+   "id": "400320f5-5add-4c1b-ab1d-a32f4e351b71",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "अंतरा:",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "१. हरियाणवी रागनी (तर्क और विद्रोह)\nजब स"
+  },
+  {
+   "id": "3139ea17-9462-4aa7-998a-06ca08e7d1ac",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "॥ स्वर्भानु: शक्ति जाग री महा-संगीत",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "॥ स्वर्भानु: शक्ति जाग री (महा-संगीत) ॥\n"
+  },
+  {
+   "id": "0cf02bcf-c380-42a6-baba-564f159d1717",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "॥ स्वर्भानु: शक्ति जाग री महा-संगीत",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "॥ स्वर्भानु: शक्ति जाग री (महा-संगीत) ॥\n"
+  },
+  {
+   "id": "dac78322-f9d7-4d52-a059-a227443c746c",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "॥ स्वर्भानु: शक्ति जाग री महा-संगीत",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "॥ स्वर्भानु: शक्ति जाग री (महा-संगीत) ॥\n"
+  },
+  {
+   "id": "41cbd44d-470c-442b-9747-3da9f5052256",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "॥ स्वर्भानु: शक्ति जाग री महा-संगीत",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "॥ स्वर्भानु: शक्ति जाग री (महा-संगीत) ॥\n"
+  },
+  {
+   "id": "982a1594-b969-4c2d-9966-d617a47e4e2d",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "शक्ति जाग री",
+   "source": "refrain",
+   "evidence": "line repeats 3×",
+   "lyricFamily": "शक्ति जाग री…\nशक्ति जाग री…\nअंतर ज्योति "
+  },
+  {
+   "id": "81109d76-22c0-4e21-9bd6-a57682008382",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "शक्ति जाग री",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "शक्ति जाग री…\nशक्ति जाग री…\nअंतर ज्योति "
+  },
+  {
+   "id": "7f4291cd-2f2a-4714-bc31-69d28eec6c38",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Shakti jaag ri",
+   "source": "refrain",
+   "evidence": "line repeats 3×",
+   "lyricFamily": "shakti jaag ri…\nshakti jaag ri…\nantar jy"
+  },
+  {
+   "id": "6ae75b0d-c1cc-4641-b483-6b48a9747ac1",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Shakti jaag ri",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "shakti jaag ri…\nshakti jaag ri…\nantar jy"
+  },
+  {
+   "id": "c9e3d20d-1c8f-4301-8f48-b90bcad4dbbf",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "गिद्धों के शहर में लेके चला",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "गिद्धों के शहर में लेके चला हूँ,\nमासों क"
+  },
+  {
+   "id": "52951995-1c96-40b6-ab48-93b43e9bd488",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "गिद्धों के शहर में लेके चला",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "गिद्धों के शहर में लेके चला हूँ,\nमासों क"
+  },
+  {
+   "id": "dcc995be-7ebf-4fd1-8ad6-c5afa618439d",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "गिद्धों के शहर में लेके चला",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "गिद्धों के शहर में लेके चला हूँ,\nमासों क"
+  },
+  {
+   "id": "ac50152c-f82a-4333-bef4-0b7a404e8399",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "गिद्धों के शहर में लेके चला",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "गिद्धों के शहर में लेके चला हूँ,\nमासों क"
+  },
+  {
+   "id": "37323280-425b-4fde-b2c9-385619da2dce",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "S r G r S",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "soft tanpura drone, distant bell, silenc"
+  },
+  {
+   "id": "631a4c65-636f-4b24-aeea-1d3c99c8f664",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "S r G r S",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "soft tanpura drone, distant bell, silenc"
+  },
+  {
+   "id": "d040faac-7e44-42a5-b776-ba7a276966fc",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "0:00 Tanpura base + Siddham Om",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "0:00 tanpura (base) + siddham “om” (solo"
+  },
+  {
+   "id": "3733b4fd-e7f9-418c-a5cb-dcdc0b661384",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "0:00 Tanpura base + Siddham Om",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "0:00 tanpura (base) + siddham “om” (solo"
+  },
+  {
+   "id": "29ce4071-ec2f-4be4-9034-d4332fe76f86",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "अक्सर अक्सों की भीड़ में खो",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "अक्सर अक्सों की भीड़ में, खो जाती परछाइय"
+  },
+  {
+   "id": "acf72279-b350-4e2d-8241-7c4de927afb4",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "अक्सर अक्सों की भीड़ में खो",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "अक्सर अक्सों की भीड़ में, खो जाती परछाइय"
+  },
+  {
+   "id": "f3e77ca3-d3b1-4029-8814-3da77d041154",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "भ्रमित सा देखे उम्मीद सी लेके",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "भ्रमित सा देखे... उम्मीद सी लेके,\nकैसी ह"
+  },
+  {
+   "id": "fbbf00c4-df9a-4c12-8222-5a8f83d3d229",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "भ्रमित सा देखे उम्मीद सी लेके",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "भ्रमित सा देखे... उम्मीद सी लेके,\nकैसी ह"
+  },
+  {
+   "id": "31752ecb-d9f6-4d7f-8582-96ad901c2bff",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "This is for informational purposes only",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "this is for informational purposes only."
+  },
+  {
+   "id": "7d695546-b4a9-4369-8770-054ea7711700",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "This is for informational purposes only",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "this is for informational purposes only."
+  },
+  {
+   "id": "c6c9c569-2051-4d98-ba3c-85f7982b04b9",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "विदाई रो दुख लागे रे",
+   "source": "refrain",
+   "evidence": "line repeats 3×",
+   "lyricFamily": "🎵 गीत: गौरा री विदाई (राजस्थानी-अरबी-ची"
+  },
+  {
+   "id": "e0e9d663-7d49-4351-aa8e-639120657766",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "विदाई रो दुख लागे रे",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "🎵 गीत: गौरा री विदाई (राजस्थानी-अरबी-ची"
+  },
+  {
+   "id": "20aaab8c-af31-4a63-954e-b956c837119a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ढोल नगाड़े बाज़न दे तू",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "बाजन दे तू, बाज़न दे तू,\nढोल नगाड़े बाज़"
+  },
+  {
+   "id": "e7905dfe-6d9b-4d8c-9f04-d1645c522f2f",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ढोल नगाड़े बाज़न दे तू",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "बाजन दे तू, बाज़न दे तू,\nढोल नगाड़े बाज़"
+  },
+  {
+   "id": "e18525dd-f972-4860-9008-b147a0576764",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Haryanvi Female Voice :",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "गीत: बावल (the global trance)\n[haryanvi "
+  },
+  {
+   "id": "8caed3b8-e9a9-48fa-9a64-adeedcfb6231",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Haryanvi Female Voice :",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "गीत: बावल (the global trance)\n[haryanvi "
+  },
+  {
+   "id": "14a370bd-8e3e-4b27-9afc-31fede5f5c94",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ढोल नगाड़े बाज़न दे तू II",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "टूं टूं टूं टूं टूंटूंटूंटूंटूं,\nधम धम ध"
+  },
+  {
+   "id": "b6721538-96c3-408c-be12-613ca88da0d7",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ढोल नगाड़े बाज़न दे तू II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "टूं टूं टूं टूं टूंटूंटूंटूंटूं,\nधम धम ध"
+  },
+  {
+   "id": "42c55ab5-6656-4c72-bcae-0560c1afdacf",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दादा फौजी बनवा दे न तेरी",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "दादा फौजी बनवा दे न, तेरी रोज आरती तारु,"
+  },
+  {
+   "id": "a41086c8-d15a-40b1-a8c7-8a6d0a450688",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दादा फौजी बनवा दे न तेरी",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "दादा फौजी बनवा दे न, तेरी रोज आरती तारु,"
+  },
+  {
+   "id": "42eea408-81a9-4c2f-8ffb-8d5c5656d202",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "फौजी बनवा दे न मै तेरी",
+   "source": "refrain",
+   "evidence": "line repeats 3×",
+   "lyricFamily": "दादा फौजी बनवा दे न, तेरी रोज आरती तारु,"
+  },
+  {
+   "id": "ef8c9b76-6af4-46b3-9c34-f9f7408dba40",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "फौजी बनवा दे न मै तेरी",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "दादा फौजी बनवा दे न, तेरी रोज आरती तारु,"
+  },
+  {
+   "id": "e557151f-686a-4ba6-a428-40ef37236172",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दीमी दीमी हम्म्म्म्म",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "🎶 tanpura + river\nसुनो ओ धरती के लोगो…\n"
+  },
+  {
+   "id": "dac03dd8-470e-453c-ba40-7a6da1100b59",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दीमी दीमी हम्म्म्म्म",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "🎶 tanpura + river\nसुनो ओ धरती के लोगो…\n"
+  },
+  {
+   "id": "c01a92ed-1135-4bc5-b9f6-7ec8eaeef43c",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दीमी दीमी हम्म्म्म्म II",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "भाग ३: मच्छरी का उत्तर bhāg 3: machcharī"
+  },
+  {
+   "id": "c3895754-34ef-42e5-b30f-03de838fa995",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दीमी दीमी हम्म्म्म्म II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "भाग ३: मच्छरी का उत्तर bhāg 3: machcharī"
+  },
+  {
+   "id": "61ca183b-a733-45f2-a526-40124620f6a1",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दीमी दीमी हम्मmmmmm",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "भाग ३: मच्छरी का उत्तर bhāg 3: machcharī"
+  },
+  {
+   "id": "11d2c6aa-6e6e-4b33-a0f1-514fb4e2cf9b",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दीमी दीमी हम्मmmmmm",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "भाग ३: मच्छरी का उत्तर bhāg 3: machcharī"
+  },
+  {
+   "id": "2bf46bbc-1f00-42b1-ada9-5dd38b02ca3b",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Machchar:",
+   "source": "refrain",
+   "evidence": "line repeats 6×",
+   "lyricFamily": "मच्छर-पंडित संवाद\nmachchar-pandit sammwa"
+  },
+  {
+   "id": "2705713e-7211-41ce-8805-62d72c7038f2",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Machchar:",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "मच्छर-पंडित संवाद\nmachchar-pandit sammwa"
+  },
+  {
+   "id": "0907ea5b-01db-4afe-a2a1-958b706d1c5a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "धुम – ट् – त्स्स –",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "हाऽऽ… (deep inhale)\nहूऽऽ… (exhale)\nम्म्म"
+  },
+  {
+   "id": "71c2f8e7-6626-4dc8-b873-971485c0725f",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "धुम – ट् – त्स्स –",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "हाऽऽ… (deep inhale)\nहूऽऽ… (exhale)\nम्म्म"
+  },
+  {
+   "id": "57f63a2a-a5cc-4eca-b189-530e667d6c1d",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "🎤 QUANTUM SHAKTI ANTHEM",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "🎤 quantum shakti anthem\nअपनी ताकत पहचान"
+  },
+  {
+   "id": "c442e04f-271b-411b-ba4b-42d0ecff3a38",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "🎤 QUANTUM SHAKTI ANTHEM",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "🎤 quantum shakti anthem\nअपनी ताकत पहचान"
+  },
+  {
+   "id": "e96f8afe-e1fc-4cc8-9998-16627bca7b9c",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "🎤 LYRICS",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "🎤 lyrics\nवक़्त के घोड़ों को…\nकभी नहीं म"
+  },
+  {
+   "id": "d6015bf7-056c-43bb-b3a7-c42012ac30b6",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "🎤 LYRICS",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "🎤 lyrics\nवक़्त के घोड़ों को…\nकभी नहीं म"
+  },
+  {
+   "id": "acefb505-26f4-4b95-b378-e064eaccf86f",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "वक़्त के घोड़ों",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "वक़्त के घोड़ों को…\nकभी नहीं मिलेगी…\nफुर"
+  },
+  {
+   "id": "b632670a-92f5-44aa-862f-4a03120bd6e3",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "वक़्त के घोड़ों",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "वक़्त के घोड़ों को…\nकभी नहीं मिलेगी…\nफुर"
+  },
+  {
+   "id": "c8a46987-b4d4-41ee-aa0c-36c1f1115cf2",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Instruments:",
+   "source": "refrain",
+   "evidence": "line repeats 8×",
+   "lyricFamily": "instruments:\ntibetan bowl\ndesert wind\nlo"
+  },
+  {
+   "id": "8b68b69c-b07f-43f8-ac20-ed65fbc03fc7",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Instruments:",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "instruments:\ntibetan bowl\ndesert wind\nlo"
+  },
+  {
+   "id": "7e3ba569-59f8-4cf2-aebb-45d436b941ef",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Instruments: II",
+   "source": "refrain",
+   "evidence": "line repeats 8×",
+   "lyricFamily": "instruments:\ntibetan bowl\ndesert wind\nlo"
+  },
+  {
+   "id": "1ec4ae2f-b4ab-441b-8234-f5fcca48b606",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Instruments: II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "instruments:\ntibetan bowl\ndesert wind\nlo"
+  },
+  {
+   "id": "713998e8-14d5-4633-b01a-3fb4275561f9",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Sound:",
+   "source": "refrain",
+   "evidence": "line repeats 7×",
+   "lyricFamily": "sound design:\ndesert wind\nlow drone (tan"
+  },
+  {
+   "id": "22925574-1f8c-4bba-927a-63bf25e66c7c",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Sound:",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "sound design:\ndesert wind\nlow drone (tan"
+  },
+  {
+   "id": "9b85885b-774d-4b2d-babf-e39fea6294e0",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "🎤 वक़्त के घोड़े — जागरण",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "🎤 “वक़्त के घोड़े” — जागरण काव्य\nवक़्त "
+  },
+  {
+   "id": "1802409c-450b-4fa0-82bb-9ae1c98c6f58",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "🎤 वक़्त के घोड़े — जागरण",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "🎤 “वक़्त के घोड़े” — जागरण काव्य\nवक़्त "
+  },
+  {
+   "id": "8d7517ab-5f3a-4d8e-b2e4-92f170be6ed4",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "maa maa maa",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "🌑 [act 1 – शून्य & विरह | 0:00–1:30] (n"
+  },
+  {
+   "id": "1630fdc7-2ea0-4737-a448-84a9e3a68bc4",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "maa maa maa",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "🌑 [act 1 – शून्य & विरह | 0:00–1:30] (n"
+  },
+  {
+   "id": "bf134052-5fe4-4f02-aa15-5757082f17fe",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Hemant Jogi aakhda sun shaheed shera",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "hemant jogi aakhda, sun shaheed shera\nma"
+  },
+  {
+   "id": "31a89117-5333-4f09-96f9-da776986d02d",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Hemant Jogi aakhda sun shaheed shera",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "hemant jogi aakhda, sun shaheed shera\nma"
+  },
+  {
+   "id": "bed764bc-151e-4046-a0b6-773835719384",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ਗੁਰੂ ਨਾਨਕ ਆਏ ਭਗਤ ਸਿੰਘ ਦੇ",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "ਗੁਰੂ ਨਾਨਕ ਆਏ, ਭਗਤ ਸਿੰਘ ਦੇ ਦਰ\nਮਾਂ ਦੀ ਗੋਦ "
+  },
+  {
+   "id": "374bbc29-2826-4b31-ba70-48ad9999fa35",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ਗੁਰੂ ਨਾਨਕ ਆਏ ਭਗਤ ਸਿੰਘ ਦੇ",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ਗੁਰੂ ਨਾਨਕ ਆਏ, ਭਗਤ ਸਿੰਘ ਦੇ ਦਰ\nਮਾਂ ਦੀ ਗੋਦ "
+  },
+  {
+   "id": "1b2ec847-7d17-420f-9042-dbced94d6763",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "लूक लूक देखूँ तने छुप छुप",
+   "source": "refrain",
+   "evidence": "line repeats 6×",
+   "lyricFamily": "it’s gaam ka chora!\nलूक लूक देखूँ तने, छ"
+  },
+  {
+   "id": "6b3651e9-9f2d-4597-a0a5-de2414135203",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "लूक लूक देखूँ तने छुप छुप",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "it’s gaam ka chora!\nलूक लूक देखूँ तने, छ"
+  },
+  {
+   "id": "5813c3d7-64ae-4dcd-86cc-6c4cc319f0d7",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Ra a",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "ra... a... a... a...\nmere yaar...\ndekh m"
+  },
+  {
+   "id": "ae00fa9b-6761-4e45-89a4-c8bebb0ec9e2",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Ra a",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ra... a... a... a...\nmere yaar...\ndekh m"
+  },
+  {
+   "id": "abdadc18-6d3f-43c5-aacc-5df4eba20e4d",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "siddha",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "siddha\nमुखड़ा:\nहर-हर महादेव... हर-हर महा"
+  },
+  {
+   "id": "b7ab25e5-8f36-4dd2-a0ed-a64c5f9f0b63",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "siddha",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "siddha\nमुखड़ा:\nहर-हर महादेव... हर-हर महा"
+  },
+  {
+   "id": "322826de-5054-4df5-868c-4d8eefd1140f",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "eeee ee eeee eaeaeaaeen",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "eeee ee eeee eaeaeaaeen\nchamatkaar huye "
+  },
+  {
+   "id": "75db9ef6-ac44-4361-aa4f-64d05aab70a8",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "eeee ee eeee eaeaeaaeen",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "eeee ee eeee eaeaeaaeen\nchamatkaar huye "
+  },
+  {
+   "id": "9ea90a62-a2d7-462c-9f8c-fb078246a1ae",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "eeee ee eeee eaeaeaaeen II",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "eeee ee eeee eaeaeaaeen\nchamatkaar huye "
+  },
+  {
+   "id": "f5ee1b21-dfd0-497c-8f70-18a04305df49",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "eeee ee eeee eaeaeaaeen II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "eeee ee eeee eaeaeaaeen\nchamatkaar huye "
+  },
+  {
+   "id": "2fc25f01-e1af-419b-af18-4a94b1792d7b",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "🎶 STRUCTURE 31 TRACK FLOW :",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "🎶 structure (31 track flow):\ndeep serio"
+  },
+  {
+   "id": "57e3125d-6eff-4b5a-883a-4da698ee8f1d",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "🎶 STRUCTURE 31 TRACK FLOW :",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "🎶 structure (31 track flow):\ndeep serio"
+  },
+  {
+   "id": "17393950-853a-4aed-9e6f-229ac70f25e0",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "MOOD: Spiritual raw emotional awakening rural",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "mood: spiritual, raw, emotional, awakeni"
+  },
+  {
+   "id": "056a8cec-f924-4fbe-be2e-5a026a8477a1",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "MOOD: Spiritual raw emotional awakening rural",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "mood: spiritual, raw, emotional, awakeni"
+  },
+  {
+   "id": "dab64572-477f-4561-ae33-43b27a37fb2a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जोगी: आआआअअअ सपना भारी मुरकी: भा-री-ई-ई",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "जोगी: आआआअअअ... सपना भारी... (मुरकी: भा-"
+  },
+  {
+   "id": "2b4451e0-029c-4fb6-b9e5-78fd60f4046c",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जोगी: आआआअअअ सपना भारी मुरकी: भा-री-ई-ई",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "जोगी: आआआअअअ... सपना भारी... (मुरकी: भा-"
+  },
+  {
+   "id": "fdfe3689-13d3-4488-96a7-d2b0ad9210da",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ल्या दे र गौसे",
+   "source": "refrain",
+   "evidence": "line repeats 5×",
+   "lyricFamily": "u....... र......\nu... र..\nuuuurrrrrrrrrr"
+  },
+  {
+   "id": "47377bea-9774-4f7b-afe4-f4e941c19c0f",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ल्या दे र गौसे",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "u....... र......\nu... र..\nuuuurrrrrrrrrr"
+  },
+  {
+   "id": "83d40aab-8c12-48c7-8a5f-316e377ae254",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "गौसे ल्या दे गौसे ल्या दे",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "u....... र......\nu... र..\nuuuurrrrrrrrrr"
+  },
+  {
+   "id": "2ca29e2e-9207-45f0-9d88-9c0793d7393b",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "गौसे ल्या दे गौसे ल्या दे",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "u....... र......\nu... र..\nuuuurrrrrrrrrr"
+  },
+  {
+   "id": "f394c2ee-40d3-4222-96f3-594a597d4370",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Chhod ke mahal-chubare raja ban gaya",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "chhod ke mahal-chubare raja, ban gaya jo"
+  },
+  {
+   "id": "b4eb0ad2-7b9a-47a7-9dbb-243f6869fd07",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Chhod ke mahal-chubare raja ban gaya",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "chhod ke mahal-chubare raja, ban gaya jo"
+  },
+  {
+   "id": "38c841da-2008-4d6a-b85d-83833454d8ee",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "📜 Full Lyrics for Suno AI",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "📜 full lyrics for suno ai (the dattansh"
+  },
+  {
+   "id": "164acf5c-2f05-4aa5-a11e-e8726aa075c1",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "📜 Full Lyrics for Suno AI",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "📜 full lyrics for suno ai (the dattansh"
+  },
+  {
+   "id": "b25849ae-7771-4878-a6e9-6ea75ef49a13",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "इतिहासः सिद्धम् आनंदोऽस्तु",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "(whispered chants): ॐ... सिद्धम्... ॐ..."
+  },
+  {
+   "id": "f3a9813d-753a-4dc8-80c0-1761b6138f1b",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "इतिहासः सिद्धम् आनंदोऽस्तु",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "(whispered chants): ॐ... सिद्धम्... ॐ..."
+  },
+  {
+   "id": "e4415236-01a9-49bb-a68a-359e7f67f091",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "इतिहासः सिद्धम् आनंदोऽस्तु II",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "🎵 शीर्षक: \"सिद्धम्: आदि-प्रज्ञा\" (siddh"
+  },
+  {
+   "id": "7895a9b2-a1dc-4fee-8ac4-44a096b2c6a8",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "इतिहासः सिद्धम् आनंदोऽस्तु II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "🎵 शीर्षक: \"सिद्धम्: आदि-प्रज्ञा\" (siddh"
+  },
+  {
+   "id": "1795fde2-4568-429d-86af-bfc929504dc6",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "इतिहासः सिद्धम् आनंदोऽस्तु II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "🎵 शीर्षक: \"सिद्धम्: आदि-प्रज्ञा\" (siddh"
+  },
+  {
+   "id": "85859d74-b474-4661-aa75-df60336c7497",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "इतिहासः सिद्धम् आनंदोऽस्तु II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "🎵 शीर्षक: \"सिद्धम्: आदि-प्रज्ञा\" (siddh"
+  },
+  {
+   "id": "cef36d0f-7570-45ad-b4cd-9e9d1999be10",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "अघोर अघोर अघोर",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "अघोर... अघोर... अघोर...\nॐ रुद्राय नमः\nश्"
+  },
+  {
+   "id": "c2942834-cd11-4b45-8610-08a32d23be82",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "अघोर अघोर अघोर",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "अघोर... अघोर... अघोर...\nॐ रुद्राय नमः\nश्"
+  },
+  {
+   "id": "1bd52bf2-d26e-4822-8299-2ef883803518",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "अघोर अघोर अघोर",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "अघोर... अघोर... अघोर...\nॐ रुद्राय नमः\nश्"
+  },
+  {
+   "id": "bd2091ee-707a-465e-9dff-021eac34daed",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "अघोर अघोर अघोर",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "अघोर... अघोर... अघोर...\nॐ रुद्राय नमः\nश्"
+  },
+  {
+   "id": "1712384b-9b51-4094-b444-b464a3aa0e27",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हे माँ शैलपुत्री",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "🌄 माँ शैलपुत्री को समर्पित\nहे माँ शैलपु"
+  },
+  {
+   "id": "527b35cd-7313-4af7-82d2-007ce8ac75a1",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हे माँ शैलपुत्री",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "🌄 माँ शैलपुत्री को समर्पित\nहे माँ शैलपु"
+  },
+  {
+   "id": "cabac8a7-5365-4ff9-b762-86e8a6586cd1",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "पिया जी तेरी याद आती",
+   "source": "refrain",
+   "evidence": "line repeats 5×",
+   "lyricFamily": "पिया जी तेरी याद आती है,\nपिया जी बहुत सत"
+  },
+  {
+   "id": "80a39cda-0980-4c6e-bffb-50088c2967de",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "पिया जी तेरी याद आती",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "पिया जी तेरी याद आती है,\nपिया जी बहुत सत"
+  },
+  {
+   "id": "94f4c705-c5c7-4637-b67d-06a21a3e1771",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "पिया जी तेरी याद आती",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "पिया जी तेरी याद आती है,\nपिया जी बहुत सत"
+  },
+  {
+   "id": "edf821b2-166e-4650-a7ca-0b131dcc109b",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "पिया जी तेरी याद आती",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "पिया जी तेरी याद आती है,\nपिया जी बहुत सत"
+  },
+  {
+   "id": "14ce1222-9f05-4f2f-bcdd-c9b871cca5a1",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मेरा पिया महान",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "🥁 [ओपनिंग हुंकार – बिना म्यूजिक, सिर्फ "
+  },
+  {
+   "id": "3bd10216-5f47-4506-8828-9fc84e552bba",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मेरा पिया महान",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "🥁 [ओपनिंग हुंकार – बिना म्यूजिक, सिर्फ "
+  },
+  {
+   "id": "20b2eae2-e758-4646-b7ca-94502619813e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "इतनी ही दया",
+   "source": "refrain",
+   "evidence": "line repeats 8×",
+   "lyricFamily": "ओम्… ओम्…\nना… आ… आथ…\nप्रे… म…\nइतनी ही दय"
+  },
+  {
+   "id": "ac3d350b-35f3-42d9-b74c-c30e8c71d677",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "इतनी ही दया",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ओम्… ओम्…\nना… आ… आथ…\nप्रे… म…\nइतनी ही दय"
+  },
+  {
+   "id": "7c657b60-4bbc-4e9f-90d4-2d42575ca1c6",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मेरा पिया महान",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "🥁 [ओपनिंग हुंकार – बिना म्यूजिक, सिर्फ "
+  },
+  {
+   "id": "448602fe-eb24-4bcd-9a1a-2d3d00a4c21b",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मेरा पिया महान",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "🥁 [ओपनिंग हुंकार – बिना म्यूजिक, सिर्फ "
+  },
+  {
+   "id": "cfbb1757-8e35-4d6f-a25d-810bab2e0e8a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "पिया जी तेरी याद आती II",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "आआआ… हाय रे…\nमाटी के इस पुतले की…\nक्यों "
+  },
+  {
+   "id": "eea1f46e-7cbb-441d-abcb-52a46144583a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "पिया जी तेरी याद आती II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "आआआ… हाय रे…\nमाटी के इस पुतले की…\nक्यों "
+  },
+  {
+   "id": "6a41359d-7625-415a-bb50-9685b970ef3b",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय हाय हाय हाय लुगाई",
+   "source": "refrain",
+   "evidence": "line repeats 9×",
+   "lyricFamily": "male jogi voice (solo, open air feel):\nअ"
+  },
+  {
+   "id": "ddf3ca17-816c-47e8-b49c-a5834334e64b",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय हाय हाय हाय लुगाई",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "male jogi voice (solo, open air feel):\nअ"
+  },
+  {
+   "id": "c694a74a-44a2-4a34-aee4-ffc260690881",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय हाय हाय हाय लुगाई",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "male jogi voice (solo, open air feel):\nअ"
+  },
+  {
+   "id": "ada50c4b-3ce4-475c-b27e-f2536d77da49",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय हाय हाय हाय लुगाई",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "male jogi voice (solo, open air feel):\nअ"
+  },
+  {
+   "id": "fddbba2f-61ec-4d72-ad3f-69baba354abb",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय हाय हाय हाय लुगाई II",
+   "source": "refrain",
+   "evidence": "line repeats 9×",
+   "lyricFamily": "male jogi voice (solo, open air feel):\nअ"
+  },
+  {
+   "id": "5a3ed490-c3be-4e41-99f0-3abc89a1f13d",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय हाय हाय हाय लुगाई II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "male jogi voice (solo, open air feel):\nअ"
+  },
+  {
+   "id": "e80360e4-03de-401c-ae2a-6936ff596b3f",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय हाय हाय हाय लुगाई III",
+   "source": "refrain",
+   "evidence": "line repeats 3×",
+   "lyricFamily": "background:\nindian train station ambienc"
+  },
+  {
+   "id": "978c1c42-cd78-429d-952f-ff66978f4531",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय हाय हाय हाय लुगाई III",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "background:\nindian train station ambienc"
+  },
+  {
+   "id": "65fd8ecc-a24d-4af1-a21d-db7e5e5107e6",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय हाय हाय हाय लुगाई IV",
+   "source": "refrain",
+   "evidence": "line repeats 9×",
+   "lyricFamily": "male jogi voice (solo, open air feel):\nअ"
+  },
+  {
+   "id": "513a10d6-1b4e-43a3-b1ef-a1c0427e3b78",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय हाय हाय हाय लुगाई IV",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "male jogi voice (solo, open air feel):\nअ"
+  },
+  {
+   "id": "4dd54537-f0dc-4226-b83f-32edeb629a35",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय हाय हाय हाय लुगाई V",
+   "source": "refrain",
+   "evidence": "line repeats 9×",
+   "lyricFamily": "male jogi voice (solo, open air feel):\nअ"
+  },
+  {
+   "id": "ea666c4c-b61d-46ea-a289-627704a7f204",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय हाय हाय हाय लुगाई V",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "male jogi voice (solo, open air feel):\nअ"
+  },
+  {
+   "id": "e8c8a60e-4a6e-4924-b306-aeb182829a8b",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय हाय हाय हाय लुगाई VI",
+   "source": "refrain",
+   "evidence": "line repeats 9×",
+   "lyricFamily": "चला चला चला भाई राज लुगाइयां का\nखुला खुल"
+  },
+  {
+   "id": "4cd1088b-b87b-4b02-b781-ad7ecea54492",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय हाय हाय हाय लुगाई VI",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "चला चला चला भाई राज लुगाइयां का\nखुला खुल"
+  },
+  {
+   "id": "51869413-dafe-45f6-b76f-583c3b8e1991",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय हाय हाय हाय लुगाई VII",
+   "source": "refrain",
+   "evidence": "line repeats 3×",
+   "lyricFamily": "tempo: 78 bpm (heartbeat aligned)\nkey: d"
+  },
+  {
+   "id": "64a8bb69-c68d-48dc-88bf-9bcf53a35229",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय हाय हाय हाय लुगाई VII",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "tempo: 78 bpm (heartbeat aligned)\nkey: d"
+  },
+  {
+   "id": "4c162f53-2f79-4fed-b3c9-93841a1755f3",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ धम धूम पटक",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "जब न था आकाश न धरती\nन शब्द न कोई विचार\nत"
+  },
+  {
+   "id": "29a17f2c-a3b6-463d-9a08-8fede6cb142a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ धम धूम पटक",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "जब न था आकाश न धरती\nन शब्द न कोई विचार\nत"
+  },
+  {
+   "id": "ecfcf3e2-e6b5-4377-b4bf-52d3acda1360",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ धम धूम पटक II",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "जब न था आकाश न धरती\nन शब्द न कोई विचार\nत"
+  },
+  {
+   "id": "15044912-afce-435c-a55e-9158b065f46a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ धम धूम पटक II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "जब न था आकाश न धरती\nन शब्द न कोई विचार\nत"
+  },
+  {
+   "id": "954ceeb0-8f77-4fdc-9b97-439fd3559810",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "राम राम राम राम",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "जब न था आकाश न धरती\nन शब्द न कोई विचार\nत"
+  },
+  {
+   "id": "e97cc568-6578-4bba-a1c3-0580783e1d53",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "राम राम राम राम",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "जब न था आकाश न धरती\nन शब्द न कोई विचार\nत"
+  },
+  {
+   "id": "c8e9d4ca-0d7d-4624-8efb-0b23973de9a3",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ धम धूम पटक III",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "suno o duniya walon ustada aayaa hai\nsik"
+  },
+  {
+   "id": "24b25363-caab-410d-a1a7-a36f5df70481",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ धम धूम पटक III",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "suno o duniya walon ustada aayaa hai\nsik"
+  },
+  {
+   "id": "4e8ab515-7696-4a5d-ada8-911355a71d61",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ धम धूम पटक IV",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "जब न था आकाश न धरती\nन शब्द न कोई विचार\nत"
+  },
+  {
+   "id": "e9e95c40-884e-4b74-a1f6-5db9c6bdeb93",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ धम धूम पटक IV",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "जब न था आकाश न धरती\nन शब्द न कोई विचार\nत"
+  },
+  {
+   "id": "bc962e4c-9016-4ba8-bb3e-e257917e3dd4",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ धम धूम पटक V",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "जब न था आकाश न धरती\nन शब्द न कोई विचार\nत"
+  },
+  {
+   "id": "7b8aaf45-66a4-4e30-acdd-38c437907a8e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ धम धूम पटक V",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "जब न था आकाश न धरती\nन शब्द न कोई विचार\nत"
+  },
+  {
+   "id": "dfe02902-7e32-4106-a738-2f3c88aabf9c",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "धम धूम पटक",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "जब न था आकाश न धरती\nन शब्द न कोई विचार\nत"
+  },
+  {
+   "id": "7279327a-abd6-4b19-8bd9-41db02769c97",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "धम धूम पटक",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "जब न था आकाश न धरती\nन शब्द न कोई विचार\nत"
+  },
+  {
+   "id": "b8e5aa64-0398-4c26-9ef9-aa516d2421c3",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "धम धूम पटक II",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "हिन्दी\nजब न था आकाश न धरती\nन शब्द न कोई "
+  },
+  {
+   "id": "339cc960-6eba-46bf-aa4b-9cc390baab6d",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "धम धूम पटक II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "हिन्दी\nजब न था आकाश न धरती\nन शब्द न कोई "
+  },
+  {
+   "id": "05a9ac20-ffc7-4810-a9e2-21d2c683b06a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "धम धूम पटक III",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "हिन्दी\nजब न था आकाश न धरती\nन शब्द न कोई "
+  },
+  {
+   "id": "2badde9c-1f37-4504-9aaa-b067a58e99c3",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "धम धूम पटक III",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "हिन्दी\nजब न था आकाश न धरती\nन शब्द न कोई "
+  },
+  {
+   "id": "68e1e3bc-204b-4335-a599-eb3a0623ec41",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "धम धूम पटक IV",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "हिन्दी\nजब न था आकाश न धरती\nन शब्द न कोई "
+  },
+  {
+   "id": "72b69742-5e35-4af0-876c-03f7ff259f69",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "धम धूम पटक IV",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "हिन्दी\nजब न था आकाश न धरती\nन शब्द न कोई "
+  },
+  {
+   "id": "f932d3fb-72e6-41c0-8754-38bfa4f5417c",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "धम धूम पटक V",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "हिन्दी\nजब न था आकाश न धरती\nन शब्द न कोई "
+  },
+  {
+   "id": "b0ce3910-5638-41ea-baa5-e1711b806520",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "धम धूम पटक V",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "हिन्दी\nजब न था आकाश न धरती\nन शब्द न कोई "
+  },
+  {
+   "id": "7d29c576-36bc-4241-be33-bce5fd84775b",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "त के तट पर ट्",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "लोकल पे वोकल लिए\nमेरा ये क्रंदन है\nभारत "
+  },
+  {
+   "id": "aed9aa06-9e15-4413-b39f-b80a8913035e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "त के तट पर ट्",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "लोकल पे वोकल लिए\nमेरा ये क्रंदन है\nभारत "
+  },
+  {
+   "id": "f74b3b54-2435-4d24-ab58-9acb3d5c29f0",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "अङ्क अटक अटक आनंदा भटक भटक",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "अङ्क अटक अटक, आनंदा भटक भटक, मार शूल पटक"
+  },
+  {
+   "id": "7039ea86-720e-4eff-a9b3-f972963b5395",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "अङ्क अटक अटक आनंदा भटक भटक",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "अङ्क अटक अटक, आनंदा भटक भटक, मार शूल पटक"
+  },
+  {
+   "id": "9302edde-499a-40a3-b22e-3ccfadaf169c",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Aghori Chorus : अङ्क अटक अटक",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "[aghori chorus]: अङ्क अटक अटक, आनंदा भटक"
+  },
+  {
+   "id": "2aa2ef58-c4be-4799-8641-a73b48881047",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Aghori Chorus : अङ्क अटक अटक",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "[aghori chorus]: अङ्क अटक अटक, आनंदा भटक"
+  },
+  {
+   "id": "5fe2fc4c-7692-43dd-ab51-5478384c4dfc",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "नागिन है नागिन है नागिन",
+   "source": "refrain",
+   "evidence": "line repeats 5×",
+   "lyricFamily": "साँस मैंने देखीये, या रुक रुक आवे है,\nत्"
+  },
+  {
+   "id": "ee9c206f-9027-4024-8cfb-42506142c9a2",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "नागिन है नागिन है नागिन",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "साँस मैंने देखीये, या रुक रुक आवे है,\nत्"
+  },
+  {
+   "id": "3039cb6f-dd49-498f-826d-d7774013946e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "o re meeri jaat regiment jag",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "(sound: ग्लोबल लॉस्ट साउंड्स ऑफ़ सोल्स, "
+  },
+  {
+   "id": "69ad7184-23e8-475b-8193-a947d68dc738",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "o re meeri jaat regiment jag",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "(sound: ग्लोबल लॉस्ट साउंड्स ऑफ़ सोल्स, "
+  },
+  {
+   "id": "a8134b33-18e5-4f3f-a044-32a2f8db1161",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "o re meeri jaat regiment jag II",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "(sound: ग्लोबल लॉस्ट साउंड्स ऑफ़ सोल्स, "
+  },
+  {
+   "id": "769d1a0a-cfa4-40ca-95d0-0f7761260847",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "o re meeri jaat regiment jag II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "(sound: ग्लोबल लॉस्ट साउंड्स ऑफ़ सोल्स, "
+  },
+  {
+   "id": "8b14bc36-b9fc-409a-9efd-acd558db7d7f",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जीने दे तू मने",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "[aghori chorus]: अङ्क अटक अटक आनंदा भटक "
+  },
+  {
+   "id": "b3f171d7-567c-439e-9d6c-8aec3854e4a1",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जीने दे तू मने",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "[aghori chorus]: अङ्क अटक अटक आनंदा भटक "
+  },
+  {
+   "id": "a63d8cca-295c-4ca4-a467-dd2d8c222a7e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जीने दे तू मने II",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "[aghori chorus]: अङ्क अटक अटक आनंदा भटक "
+  },
+  {
+   "id": "07c7426b-552d-49a1-bc86-7613ded094bc",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जीने दे तू मने II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "[aghori chorus]: अङ्क अटक अटक आनंदा भटक "
+  },
+  {
+   "id": "b4b42938-0fdb-407a-9716-d99479b0e0b0",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ईब यूँ सताना छोड़ दे",
+   "source": "refrain",
+   "evidence": "line repeats 6×",
+   "lyricFamily": "दूर दूर दूर होनी अभी तक तक ताई पटक धूम ध"
+  },
+  {
+   "id": "faf8624e-52ff-41ac-a98c-562728ffac2d",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ईब यूँ सताना छोड़ दे",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "दूर दूर दूर होनी अभी तक तक ताई पटक धूम ध"
+  },
+  {
+   "id": "49a3ba5c-8404-4a55-be2f-8b74d04587be",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ईब यूँ सताना छोड़ दे II",
+   "source": "refrain",
+   "evidence": "line repeats 6×",
+   "lyricFamily": "दूर दूर दूर होनी अभी तक तक ताई पटक धूम ध"
+  },
+  {
+   "id": "359fe041-9682-478b-8b22-2025ce5af3c8",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ईब यूँ सताना छोड़ दे II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "दूर दूर दूर होनी अभी तक तक ताई पटक धूम ध"
+  },
+  {
+   "id": "85364529-043a-45e8-8ec2-6e2a4895644e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दूर दूर दूर होनी अभी तक",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "दूर दूर दूर होनी अभी तक तक ताई पटक धूम ध"
+  },
+  {
+   "id": "aaca4dcb-a21a-4e20-9585-e2827cb88d9a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दूर दूर दूर होनी अभी तक",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "दूर दूर दूर होनी अभी तक तक ताई पटक धूम ध"
+  },
+  {
+   "id": "4edf51d3-f4e1-4827-a506-85192bc47867",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दृश्य: महामात्य का विराट क्रोध",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "दृश्य: महामात्य का 'विराट' क्रोध (the di"
+  },
+  {
+   "id": "9b80022a-996a-488b-82c6-8377e3dda26a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दृश्य: महामात्य का विराट क्रोध",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "दृश्य: महामात्य का 'विराट' क्रोध (the di"
+  },
+  {
+   "id": "ca39964f-fe6f-417b-8869-8ff0a2749fab",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दृश्य: महामात्य का विराट क्रोध II",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "दृश्य: महामात्य का 'विराट' क्रोध (the di"
+  },
+  {
+   "id": "98fd044c-85e8-4661-bfd1-c295679b7801",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दृश्य: महामात्य का विराट क्रोध II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "दृश्य: महामात्य का 'विराट' क्रोध (the di"
+  },
+  {
+   "id": "e7732295-f853-4506-ac1f-9ba75d645982",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दृश्य: महामात्य का विराट क्रोध II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "दृश्य: महामात्य का 'विराट' क्रोध (the di"
+  },
+  {
+   "id": "2ae593af-d471-49fe-802c-a910664b5b29",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दृश्य: महामात्य का विराट क्रोध II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "दृश्य: महामात्य का 'विराट' क्रोध (the di"
+  },
+  {
+   "id": "4012494c-6d32-4fac-8a87-2e82ebfe57d0",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दृश्य: महामात्य का विराट क्रोध III",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "दृश्य: महामात्य का 'विराट' क्रोध (the di"
+  },
+  {
+   "id": "1b94e28b-5e0d-4d10-9519-57a4a340dea5",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दृश्य: महामात्य का विराट क्रोध III",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "दृश्य: महामात्य का 'विराट' क्रोध (the di"
+  },
+  {
+   "id": "5dae1dc4-0ca1-43fa-8d39-63cbce1d6cc4",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ईब यूँ सताना छोड़ दे III",
+   "source": "refrain",
+   "evidence": "line repeats 7×",
+   "lyricFamily": "ओ मेरी भारत माँ…\nमने मेरी माँ\nईब यूँ सता"
+  },
+  {
+   "id": "1392cfca-0b75-4795-bdb5-b82e430c9f7b",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ईब यूँ सताना छोड़ दे III",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ओ मेरी भारत माँ…\nमने मेरी माँ\nईब यूँ सता"
+  },
+  {
+   "id": "fe0a5f9a-addb-4bcf-8cec-503ccf732ea0",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ईब यूँ सताना छोड़ दे IV",
+   "source": "refrain",
+   "evidence": "line repeats 7×",
+   "lyricFamily": "ओ मेरी भारत माँ…\nमने मेरी माँ\nईब यूँ सता"
+  },
+  {
+   "id": "399e2400-18cc-4988-ac09-c3fbc115916f",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ईब यूँ सताना छोड़ दे IV",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ओ मेरी भारत माँ…\nमने मेरी माँ\nईब यूँ सता"
+  },
+  {
+   "id": "0902ef6d-8f19-458b-b932-855765d1dcd1",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ईब यूँ सताना छोड़ दे IV",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ओ मेरी भारत माँ…\nमने मेरी माँ\nईब यूँ सता"
+  },
+  {
+   "id": "ff00e623-ff9b-4092-8866-9a775e6de626",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ईब यूँ सताना छोड़ दे IV",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ओ मेरी भारत माँ…\nमने मेरी माँ\nईब यूँ सता"
+  },
+  {
+   "id": "9b025b3c-78a3-487c-8d1f-7af1bb72fa2b",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ईब यूँ सताना छोड़ दे V",
+   "source": "refrain",
+   "evidence": "line repeats 7×",
+   "lyricFamily": "ओ मेरी भारत माँ…\nमने मेरी माँ\nईब यूँ सता"
+  },
+  {
+   "id": "0b09e473-9d9a-48aa-bc7f-39c41ccc5b8d",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ईब यूँ सताना छोड़ दे V",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ओ मेरी भारत माँ…\nमने मेरी माँ\nईब यूँ सता"
+  },
+  {
+   "id": "ddf4af6e-aef4-4ac2-9b4a-59cd3d896e25",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ईब यूँ सताना छोड़ दे VI",
+   "source": "refrain",
+   "evidence": "line repeats 7×",
+   "lyricFamily": "ओ मेरी भारत माँ…\nमने मेरी माँ\nईब यूँ सता"
+  },
+  {
+   "id": "8372084d-8049-4db1-a68a-fd8ac5eb438c",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ईब यूँ सताना छोड़ दे VI",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ओ मेरी भारत माँ…\nमने मेरी माँ\nईब यूँ सता"
+  },
+  {
+   "id": "1300d386-6424-4a89-b7ca-77780a29db42",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ईब यूँ सताना छोड़ दे VI",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ओ मेरी भारत माँ…\nमने मेरी माँ\nईब यूँ सता"
+  },
+  {
+   "id": "4c78ef45-06b9-4c43-a575-3ffb6e0fa7b7",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ईब यूँ सताना छोड़ दे VI",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ओ मेरी भारत माँ…\nमने मेरी माँ\nईब यूँ सता"
+  },
+  {
+   "id": "7cd38250-4106-4fb8-8a4f-bbc7df32238e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "अरे ओ दुनिया के पुर्जों",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "अरे ओ दुनिया के पुर्जों,\nथाम लो जिगर ज़र"
+  },
+  {
+   "id": "a8b958f9-3065-46de-bc14-080bd949892e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "अरे ओ दुनिया के पुर्जों",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "अरे ओ दुनिया के पुर्जों,\nथाम लो जिगर ज़र"
+  },
+  {
+   "id": "a8738d5a-73c8-4c1b-8537-6f306f014715",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "उद्घोषक :",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "[उद्घोषक]:\nअरे ओ दुनिया के पुर्जों! थाम "
+  },
+  {
+   "id": "f850c20c-670d-4871-bd1a-6f0652c7700a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "उद्घोषक :",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "[उद्घोषक]:\nअरे ओ दुनिया के पुर्जों! थाम "
+  },
+  {
+   "id": "bfb4ac18-d356-4ab5-84b1-0691c5635560",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "बाऊ बाऊ बाऊ",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "[उद्घोषक]:\nअरे ओ दुनिया के पुर्जों! थाम "
+  },
+  {
+   "id": "347d4a25-0d54-445c-982e-c1c6c1c7e091",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "बाऊ बाऊ बाऊ",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "[उद्घोषक]:\nअरे ओ दुनिया के पुर्जों! थाम "
+  },
+  {
+   "id": "46a0e0b1-a456-4550-b57d-dd7271cf0096",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "बाऊ बाऊ बाऊ II",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "[उद्घोषक]:\nअरे ओ दुनिया के पुर्जों! थाम "
+  },
+  {
+   "id": "114a0d17-28b3-4a56-a251-50c1fbf4f659",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "बाऊ बाऊ बाऊ II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "[उद्घोषक]:\nअरे ओ दुनिया के पुर्जों! थाम "
+  },
+  {
+   "id": "3ba8da22-5a9f-43e1-b1c1-b80db6e17e04",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "बाऊ बाऊ बाऊ II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "[उद्घोषक]:\nअरे ओ दुनिया के पुर्जों! थाम "
+  },
+  {
+   "id": "80c9a826-108b-4377-9983-7d052c254217",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "बाऊ बाऊ बाऊ II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "[उद्घोषक]:\nअरे ओ दुनिया के पुर्जों! थाम "
+  },
+  {
+   "id": "d1df8eeb-036c-4d6b-b998-dc9ebc94f23e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "उद्घोषक : II",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "[उद्घोषक]:\nअरे ओ दुनिया के पुर्जों! थाम "
+  },
+  {
+   "id": "143f3ee1-541a-4c92-8ae8-84b53e7b66d9",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "उद्घोषक : II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "[उद्घोषक]:\nअरे ओ दुनिया के पुर्जों! थाम "
+  },
+  {
+   "id": "c126fb19-0b0a-4e01-b48c-2bc66f1bb766",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Haryanvi Folk (Instrumental)",
+   "source": "styles",
+   "evidence": "instrumental — no lyric cues",
+   "lyricFamily": null
+  },
+  {
+   "id": "0bf24918-dcf5-4396-9eff-75fff2af6946",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मने मेरे देश",
+   "source": "refrain",
+   "evidence": "line repeats 8×",
+   "lyricFamily": "ओ मेरे देश…\nमने मेरे देश\nईब यूँ सताना छो"
+  },
+  {
+   "id": "1210841d-cb58-4632-96de-39a6f862b69a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मने मेरे देश ईब यूं सताना",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "[aghori chants]: अद्वैत अद्वैत द्वैत द व"
+  },
+  {
+   "id": "41e8f0c6-6363-44dd-b118-bfc2dc2c8dd6",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मने मेरे देश ईब यूं सताना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "[aghori chants]: अद्वैत अद्वैत द्वैत द व"
+  },
+  {
+   "id": "558e63bc-7079-4a66-ac9e-a5dd188afd14",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मने मेरे देश ईब यूं सताना II",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "अद्वैत अद्वैत द्वैत द वैत त\nद्वैतत तत तत"
+  },
+  {
+   "id": "bdb93b4d-edf6-418f-bedf-5d1b5204ed1d",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मने मेरे देश ईब यूं सताना II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "अद्वैत अद्वैत द्वैत द वैत त\nद्वैतत तत तत"
+  },
+  {
+   "id": "b2771eb5-3689-4318-82e1-aebe591bb103",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मने मेरे देश ईब यूं सताना II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "अद्वैत अद्वैत द्वैत द वैत त\nद्वैतत तत तत"
+  },
+  {
+   "id": "edddf045-01a6-446c-bff3-49e2fc953d69",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मने मेरे देश ईब यूं सताना II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "अद्वैत अद्वैत द्वैत द वैत त\nद्वैतत तत तत"
+  },
+  {
+   "id": "6afe4ba5-a95a-437f-8ba4-09ea1e0d7589",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मने मेरे देश ईब यूं सताना III",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "अद्वैत अद्वैत द्वैत द वैत त\nद्वैतत तत तत"
+  },
+  {
+   "id": "02b55369-c2c7-4541-b858-99a73400ed7e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मने मेरे देश ईब यूं सताना III",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "अद्वैत अद्वैत द्वैत द वैत त\nद्वैतत तत तत"
+  },
+  {
+   "id": "16e6f905-49c1-42d2-ad44-46130e1b7dda",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मने मेरे देश ईब यूं सताना III",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "अद्वैत अद्वैत द्वैत द वैत त\nद्वैतत तत तत"
+  },
+  {
+   "id": "a9945093-a511-431f-a149-6978e172135c",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मने मेरे देश ईब यूं सताना III",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "अद्वैत अद्वैत द्वैत द वैत त\nद्वैतत तत तत"
+  },
+  {
+   "id": "8296abb7-b694-4517-b505-74a1482acc86",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मने मेरे देश ईब यूं सताना IV",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "अद्वैत अद्वैत द्वैत द वैत त द्वैतत तत तत"
+  },
+  {
+   "id": "74ebed02-df6f-4443-b566-63929be6a05d",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मने मेरे देश ईब यूं सताना IV",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "अद्वैत अद्वैत द्वैत द वैत त द्वैतत तत तत"
+  },
+  {
+   "id": "9a3c2b4d-d452-4c45-80d4-2d277e37d1eb",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "पिंकी हंस नंदिनी वा पानी लेवण",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "ओ पिंकी ओ पिंकी ,\nतेरे स्टाइल बड़े है फं"
+  },
+  {
+   "id": "afa3c84f-25e6-4dfe-88a0-9f638a8b1582",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "पिंकी हंस नंदिनी वा पानी लेवण",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ओ पिंकी ओ पिंकी ,\nतेरे स्टाइल बड़े है फं"
+  },
+  {
+   "id": "606fe1e9-61e4-4248-bd93-73fa98153abc",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "पिंकी हंस नंदिनी वा पानी लेवण II",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "पिंकी हंस नंदिनी, वा पानी लेवण जावह,\nपिं"
+  },
+  {
+   "id": "73f2af74-5054-49d8-896c-e82524eddc06",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "पिंकी हंस नंदिनी वा पानी लेवण II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "पिंकी हंस नंदिनी, वा पानी लेवण जावह,\nपिं"
+  },
+  {
+   "id": "083ed8dc-672d-423d-bda9-9714b4ae62f4",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "पिंकी हंस नंदिनी वा पानी लेवण III",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "पिंकी हंस नंदिनी, वा पानी लेवण जावह,\nपिं"
+  },
+  {
+   "id": "3ce196ce-9876-4bc9-8d96-a2d296db8b1c",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "पिंकी हंस नंदिनी वा पानी लेवण III",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "पिंकी हंस नंदिनी, वा पानी लेवण जावह,\nपिं"
+  },
+  {
+   "id": "370a4d03-deca-434e-9414-305c4a1a849f",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "पिंकी हंस नंदिनी वा पानी लेवण III",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "पिंकी हंस नंदिनी, वा पानी लेवण जावह,\nपिं"
+  },
+  {
+   "id": "043fd8db-51e3-4bcf-a025-7c0e9e70d65e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "पिंकी हंस नंदिनी वा पानी लेवण III",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "पिंकी हंस नंदिनी, वा पानी लेवण जावह,\nपिं"
+  },
+  {
+   "id": "da8bd16a-76ab-4e2f-a35e-fb138515ce39",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "उद्घोषक: अरे ओ दुनिया के पुर्जों",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "उद्घोषक: अरे ओ दुनिया के पुर्जों! थाम लो"
+  },
+  {
+   "id": "a118e163-e5f4-459d-a9f4-e82bbb5d48ec",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "उद्घोषक: अरे ओ दुनिया के पुर्जों",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "उद्घोषक: अरे ओ दुनिया के पुर्जों! थाम लो"
+  },
+  {
+   "id": "71819a1c-7df5-443a-bedf-56c547e4efe1",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "beb18e30-ad60-4f61-b962-bf72577a984c",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "5e09dadb-f03e-4b45-b8fa-7a825b7cdb46",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "9b58de99-1027-44cb-bcfb-cb9727dd1c42",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "96b01103-f99a-4fd7-87f8-53354681845d",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "7de27deb-3279-4b67-a31c-0a53042c556e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "eec95412-60c5-41d3-b2f8-59313a044060",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "e5a682c7-62e9-401e-94ce-af4dff412f71",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "eb079cd7-e435-40eb-bee2-b82846008f09",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "cf734c04-3a7d-47f5-8575-3545ca0152db",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "ee903ee8-bc90-4636-b704-94eaad28c4e6",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "c0ed3b71-8057-44e9-bbc9-7edbeb1cb247",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "2339fc5d-3d73-4745-b001-53d00b204c3d",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "6434e417-4488-4db2-856e-37c633ed4491",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "8a5abcc5-bf22-4a21-be55-0e7dee8d4eb0",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "2f1b59d6-e3e2-4a2e-b7da-8ef193729bb8",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "c2cfd34c-47f2-44fc-9c9d-dcb40dfd0ffc",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "f6b91a35-6661-45fa-af60-6af4f69f5adc",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "6a9729a2-bfde-48a5-bc3a-95d1de82ccbd",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "e4e6e3b0-e45c-4464-933f-ec6a37a9fc1a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "3a30e4a6-c5b1-4cf9-bdda-324b95054db1",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "e5e5c4ed-7013-4378-8baf-ec76665ed5ea",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "ceb76bb6-5502-4d7e-8c67-0273d1e4404c",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना II",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "1883b6f9-b6fb-44d5-98e4-a32b63d3fd5a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "709d0eb7-9410-4ef3-ab3f-b36462a15a6c",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "a55e5fb9-1715-4647-ba0a-9cc10d0cdead",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "काम की कामना पुण्य पाप वासना II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "काम की कामना पुण्य, पाप वासना का वास,\nदु"
+  },
+  {
+   "id": "73522d09-58c9-4824-b255-989b4bafebf0",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "महा-तंत्र: स्वतंत्र यंत्र",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "महा-तंत्र: स्वतंत्र यंत्र\nकाम की कामना प"
+  },
+  {
+   "id": "3266e243-6415-49ae-bae9-55af0a248874",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "महा-तंत्र: स्वतंत्र यंत्र",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "महा-तंत्र: स्वतंत्र यंत्र\nकाम की कामना प"
+  },
+  {
+   "id": "c5e03997-b771-4c5b-97fc-4f4a0f24b5de",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "महा-तंत्र: स्वतंत्र यंत्र",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "महा-तंत्र: स्वतंत्र यंत्र\nकाम की कामना प"
+  },
+  {
+   "id": "271aa98c-9ee3-4765-a2f6-cffd21ec6eb5",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "महा-तंत्र: स्वतंत्र यंत्र",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "महा-तंत्र: स्वतंत्र यंत्र\nकाम की कामना प"
+  },
+  {
+   "id": "2a0e9125-5a5d-4c09-a4e9-c2554b3dbd7e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जय हिन्द जय हिन्द के नारे",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "गाढ़ क झंडा, ओढ़ तिरंगा\nमेरा संसार आया है\n"
+  },
+  {
+   "id": "7e5a3f73-64be-400c-bb83-e8e555d1f02c",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जय हिन्द जय हिन्द के नारे",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "गाढ़ क झंडा, ओढ़ तिरंगा\nमेरा संसार आया है\n"
+  },
+  {
+   "id": "46605d07-d37f-48d9-bd6d-18f37e1a89ec",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जय हिन्द जय हिन्द के नारे",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "गाढ़ क झंडा, ओढ़ तिरंगा\nमेरा संसार आया है\n"
+  },
+  {
+   "id": "8ea9fe01-f585-4b67-a33d-2d2079ccada8",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जय हिन्द जय हिन्द के नारे",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "गाढ़ क झंडा, ओढ़ तिरंगा\nमेरा संसार आया है\n"
+  },
+  {
+   "id": "e2525d01-1af3-4f50-b3ff-5d0cc10ba18e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जय हिन्द जय हिन्द के नारे II",
+   "source": "refrain",
+   "evidence": "line repeats 3×",
+   "lyricFamily": "गाढ़ क झंडा , ओढ़ तरंगा,\nमेरा यार आया है\nज"
+  },
+  {
+   "id": "4bb71763-a381-4680-aace-94dddb13d3f5",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जय हिन्द जय हिन्द के नारे II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "गाढ़ क झंडा , ओढ़ तरंगा,\nमेरा यार आया है\nज"
+  },
+  {
+   "id": "81dde6a6-2dbd-41a8-b10a-bac06e8fad06",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय र मेरी शान फौजी",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "गाढ़ क झंडा ओढ़ तिरंगा\nमेरा यार आया है\nजय "
+  },
+  {
+   "id": "d4ffa363-4285-40ba-8e17-48ff83716c88",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय र मेरी शान फौजी",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "गाढ़ क झंडा ओढ़ तिरंगा\nमेरा यार आया है\nजय "
+  },
+  {
+   "id": "00dc1de7-95fa-48ae-98bc-cfa3a4e35ef3",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय र मेरी शान फौजी II",
+   "source": "refrain",
+   "evidence": "line repeats 5×",
+   "lyricFamily": "हाय र मेरी शान फौजी\nमेरी तो है जान फौजी\n"
+  },
+  {
+   "id": "96bb25a9-9e39-4fe7-bff4-b8f18787b31e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "हाय र मेरी शान फौजी II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "हाय र मेरी शान फौजी\nमेरी तो है जान फौजी\n"
+  },
+  {
+   "id": "5c4baafd-66b3-4cf6-9215-1f0f94ab8a58",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जय हिन्द – जय हिन्द",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "सावधान!\nगाढ़ क झंडा , ओढ़ तरंगा,\nमेरा यार "
+  },
+  {
+   "id": "ee50a4e3-c4b6-4f9b-9063-c75f82168ff5",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जय हिन्द – जय हिन्द",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "सावधान!\nगाढ़ क झंडा , ओढ़ तरंगा,\nमेरा यार "
+  },
+  {
+   "id": "73bf25b9-85ef-4617-b2e5-a0e356092784",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जय हिन्द – जय हिन्द II",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "गाढ़ क झंडा , ओढ़ तरंगा,\nमेरा यार आया है ."
+  },
+  {
+   "id": "e3fd30cb-9358-4914-9195-11c40c5b76b7",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जय हिन्द – जय हिन्द II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "गाढ़ क झंडा , ओढ़ तरंगा,\nमेरा यार आया है ."
+  },
+  {
+   "id": "7f7d8aa2-6b4b-4a0f-bf2e-395eb0fb9e71",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जय हिन्द जय हिन्द के नारे III",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "गाढ़ क झंडा ओढ़ तिरंगा\nमेरा यार आया है\nजय "
+  },
+  {
+   "id": "a1775f44-6629-41be-8e84-34c4d86063db",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "गाम गुंजाया",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "शीर्षक: शान फौजी (माँ का लाडला)\nगाढ़ क झं"
+  },
+  {
+   "id": "547974ac-4935-4d3a-bec3-2e19bd96ed49",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "गाम गुंजाया",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "शीर्षक: शान फौजी (माँ का लाडला)\nगाढ़ क झं"
+  },
+  {
+   "id": "ed23ef25-ed22-4f98-8326-7048a173f950",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जय हिन्द – जय हिन्द II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "गाढ़ क झंडा , ओढ़ तरंगा,\nमेरा यार आया है ."
+  },
+  {
+   "id": "1a7174d9-5a96-48f4-8450-a514eb467683",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जय हिन्द – जय हिन्द II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "गाढ़ क झंडा , ओढ़ तरंगा,\nमेरा यार आया है ."
+  },
+  {
+   "id": "984da1fd-8ce8-4e3a-953a-94ebfd0fae42",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "लौट के आ रे श्याम सलोना",
+   "source": "refrain",
+   "evidence": "line repeats 8×",
+   "lyricFamily": "ॐ भूर्भुवः स्वः\nमाता भूमिः पुत्रोऽहं पृथ"
+  },
+  {
+   "id": "f770f15f-5b74-4116-991f-95e607edeadf",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "लौट के आ रे श्याम सलोना",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ भूर्भुवः स्वः\nमाता भूमिः पुत्रोऽहं पृथ"
+  },
+  {
+   "id": "d179411b-b485-440d-ac8b-79a778b6b189",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "लौट के आ रे श्याम सलोना II",
+   "source": "refrain",
+   "evidence": "line repeats 8×",
+   "lyricFamily": "ओ मेरे लाल…\nओ मेरे श्याम सलोना…\nकिस माया"
+  },
+  {
+   "id": "5202d72f-acdb-4e56-81e2-0cc1456d59d7",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "लौट के आ रे श्याम सलोना II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ओ मेरे लाल…\nओ मेरे श्याम सलोना…\nकिस माया"
+  },
+  {
+   "id": "fd028fa8-b2c3-4b4c-9be6-18aa0f01f0a6",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ हिरण्यगर्भः समवर्तताग्रे",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "ॐ हिरण्यगर्भः समवर्तताग्रे\nभूतस्य जातः प"
+  },
+  {
+   "id": "996a9054-d146-4a5e-adc4-d15be4f5b9d1",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ हिरण्यगर्भः समवर्तताग्रे II",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "ॐ हिरण्यगर्भः समवर्तताग्रे\nभूतस्य जातः प"
+  },
+  {
+   "id": "234ea386-635d-4c47-901f-8c56d201db27",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ हिरण्यगर्भः समवर्तताग्रे II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ हिरण्यगर्भः समवर्तताग्रे\nभूतस्य जातः प"
+  },
+  {
+   "id": "aec7dc35-1ec0-44a4-bb7d-f79a1e7686ce",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "खरोष्ठी का तंत्र",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "ॐ अग्निमीळे पुरोहितम्\nज्ञानाग्नि जागे भी"
+  },
+  {
+   "id": "fcc40853-3fac-4ab3-a1a3-b2d506a7f016",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "खरोष्ठी का तंत्र",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ अग्निमीळे पुरोहितम्\nज्ञानाग्नि जागे भी"
+  },
+  {
+   "id": "ddac23b1-dc19-495b-9b9c-d830bec759ad",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "खरोष्ठी का तंत्र II",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "ॐ अग्निमीळे पुरोहितम्\nज्ञानाग्नि जागे भी"
+  },
+  {
+   "id": "0ef3ebdb-02ca-487a-9448-4fa7858cc0ce",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "खरोष्ठी का तंत्र II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ अग्निमीळे पुरोहितम्\nज्ञानाग्नि जागे भी"
+  },
+  {
+   "id": "ffdf9645-e582-468d-af7f-75613fbbb25b",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "खरोष्ठी का तंत्र II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ अग्निमीळे पुरोहितम्\nज्ञानाग्नि जागे भी"
+  },
+  {
+   "id": "6d654c1f-fbca-4c85-ad3c-5033c566c156",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "खरोष्ठी का तंत्र II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ अग्निमीळे पुरोहितम्\nज्ञानाग्नि जागे भी"
+  },
+  {
+   "id": "aba5bb64-54f6-4798-8ba8-8bba9a599c53",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ नमो भगवते वासुदेवाय",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "शून्य के उस शांत आकाश में\nएक बिंदु अटल च"
+  },
+  {
+   "id": "0ea61384-e105-4758-9481-a5ebd3204d19",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ नमो भगवते वासुदेवाय",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "शून्य के उस शांत आकाश में\nएक बिंदु अटल च"
+  },
+  {
+   "id": "93f61d64-57c6-4b30-afcf-5b0bab061bd8",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "फ़िक्सिट फ़िक्सिट फ़िक्सिट",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "ॐ अग्निमीळे पुरोहितं\nज्ञान ज्योति प्रज्व"
+  },
+  {
+   "id": "96ab99cb-c3fa-407f-92e0-a01aca8ea61a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "फ़िक्सिट फ़िक्सिट फ़िक्सिट",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ अग्निमीळे पुरोहितं\nज्ञान ज्योति प्रज्व"
+  },
+  {
+   "id": "ab212f3f-c109-44ae-9b52-d915ac62f436",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "फ़िक्सिट फ़िक्सिट फ़िक्सिट",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ अग्निमीळे पुरोहितं\nज्ञान ज्योति प्रज्व"
+  },
+  {
+   "id": "8b1a651b-bad0-4fab-99e7-00b34ab4d128",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "फ़िक्सिट फ़िक्सिट फ़िक्सिट",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ अग्निमीळे पुरोहितं\nज्ञान ज्योति प्रज्व"
+  },
+  {
+   "id": "5eb33a33-5e7a-423c-bb04-6dd4e31455ce",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "अटल है ध्रुव अमर है ध्रुव",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "ध्रुव तारा — upanishadic epic rap (perfo"
+  },
+  {
+   "id": "cd0bf69c-c712-497a-a324-4f5ca98fe911",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "अटल है ध्रुव अमर है ध्रुव",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ध्रुव तारा — upanishadic epic rap (perfo"
+  },
+  {
+   "id": "2c95a655-1853-4020-a611-bc4e844aaee0",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ नमो भगवते वासुदेवाय II",
+   "source": "refrain",
+   "evidence": "line repeats 3×",
+   "lyricFamily": "शून्य में एक प्रश्न उठा…\nक्या अपमान किसी"
+  },
+  {
+   "id": "3c9729ee-8720-460f-8d5a-b37b5b52d274",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ नमो भगवते वासुदेवाय II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "शून्य में एक प्रश्न उठा…\nक्या अपमान किसी"
+  },
+  {
+   "id": "44d6eaee-1e67-4eaf-af1a-1b53349e55f1",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "उत्तिष्ठत जाग्रत",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "ॐ सह नाववतु\nसह नौ भुनक्तु\nसह वीर्यं करवा"
+  },
+  {
+   "id": "b854fd41-d448-436a-9e15-3727d2099aa7",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "उत्तिष्ठत जाग्रत",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ सह नाववतु\nसह नौ भुनक्तु\nसह वीर्यं करवा"
+  },
+  {
+   "id": "bfa3c452-eab1-44c3-9c0a-869f6c15bc26",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "यही भारत की पहचान",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "ये मिट्टी नहीं…\nये इतिहास का सार है।\nयहा"
+  },
+  {
+   "id": "8782ebf1-5a4b-45ff-9243-bef558d424fc",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "यही भारत की पहचान",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ये मिट्टी नहीं…\nये इतिहास का सार है।\nयहा"
+  },
+  {
+   "id": "da000daa-342d-4df9-89ab-8523bb3b5320",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "खोल अकल के ढक्कन",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "अपनी ताकत पहचान...\nतू वो नहीं जो तू सोचत"
+  },
+  {
+   "id": "8860015e-eb23-42e2-aaee-c4f0344caf19",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "खोल अकल के ढक्कन",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "अपनी ताकत पहचान...\nतू वो नहीं जो तू सोचत"
+  },
+  {
+   "id": "0feb7548-012f-4367-8ed6-f47fba0f6ae2",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "खोल अकल के ढक्कन II",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "अपनी ताकत पहचान...\nतू वो नहीं जो तू सोचत"
+  },
+  {
+   "id": "d15ffb48-0e22-4344-96a5-13c18cb5a67f",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "खोल अकल के ढक्कन II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "अपनी ताकत पहचान...\nतू वो नहीं जो तू सोचत"
+  },
+  {
+   "id": "08672d19-c215-4ff6-ac7c-8273ca45eab0",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "र भाई र र र",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "आज का बोल्या याद राखिये विक्रम भाई.. का,"
+  },
+  {
+   "id": "7aa13792-c537-4535-878c-bd7c7925e869",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "र भाई र र र",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "आज का बोल्या याद राखिये विक्रम भाई.. का,"
+  },
+  {
+   "id": "e521f486-dc2d-450c-ad6b-6dc60c076e3b",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "आज की बात सुनो रे भाई",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "कोरस (भीड़):\nओ हो हो… दंगल चालै आज!\nसवाल"
+  },
+  {
+   "id": "94daf0e0-f8b0-4025-b269-39a4f5b63bdc",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "आज की बात सुनो रे भाई",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "कोरस (भीड़):\nओ हो हो… दंगल चालै आज!\nसवाल"
+  },
+  {
+   "id": "ec1e421e-953b-4a94-b3d8-1844bc19fcb6",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दुनिया में ते खो देगा तन्ने",
+   "source": "refrain",
+   "evidence": "line repeats 8×",
+   "lyricFamily": "ओ हो हो हो…\nअरे सुन ले भाई रे…\nआज का बोल"
+  },
+  {
+   "id": "a98dfdd6-8325-4c7e-85d1-a763d9a47e83",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दुनिया में ते खो देगा तन्ने",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ओ हो हो हो…\nअरे सुन ले भाई रे…\nआज का बोल"
+  },
+  {
+   "id": "0b19285e-3b76-42bf-80ae-41d8fde84fea",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दुनिया में ते खो देगा तन्ने",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ओ हो हो हो…\nअरे सुन ले भाई रे…\nआज का बोल"
+  },
+  {
+   "id": "e9ed9222-9fbc-46ee-8946-506aaa0fa006",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दुनिया में ते खो देगा तन्ने",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ओ हो हो हो…\nअरे सुन ले भाई रे…\nआज का बोल"
+  },
+  {
+   "id": "9ed3d7a1-f789-4aed-8f87-c21c9ae61bf6",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "खोल अकल के ढक्कन III",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "अपनी ताकत पहचान...\nतू वो नहीं जो तू सोचत"
+  },
+  {
+   "id": "d10508db-bd53-40ce-a03c-92f1791b1278",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "खोल अकल के ढक्कन III",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "अपनी ताकत पहचान...\nतू वो नहीं जो तू सोचत"
+  },
+  {
+   "id": "afb6c7b0-fbfc-4889-9c1c-361c8bba3ed4",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "॥ हेमंत अंतर्मन संवाद: आधिकारिक टीज़र",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "॥ हेमंत अंतर्मन संवाद: आधिकारिक टीज़र स्"
+  },
+  {
+   "id": "348fc72d-5a8b-4126-9498-c2f6cafc4a0e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "॥ हेमंत अंतर्मन संवाद: आधिकारिक टीज़र",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "॥ हेमंत अंतर्मन संवाद: आधिकारिक टीज़र स्"
+  },
+  {
+   "id": "22166f36-f1c8-4ca9-9452-f76ee29ff8c9",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "॥ हेमंत अंतर्मन संवाद: आधिकारिक टीज़र II",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "॥ हेमंत अंतर्मन संवाद: आधिकारिक टीज़र स्"
+  },
+  {
+   "id": "bfac316f-83ab-44b3-8c61-080c6de6c036",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "॥ हेमंत अंतर्मन संवाद: आधिकारिक टीज़र II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "॥ हेमंत अंतर्मन संवाद: आधिकारिक टीज़र स्"
+  },
+  {
+   "id": "92631fc4-6b9e-4dd2-9cd4-83870b8d3d71",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "॥ हेमंत अंतर्मन संवाद: आधिकारिक टीज़र II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "॥ हेमंत अंतर्मन संवाद: आधिकारिक टीज़र स्"
+  },
+  {
+   "id": "e2588540-4aee-4cff-a2d9-023f8e4c0e98",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "॥ हेमंत अंतर्मन संवाद: आधिकारिक टीज़र II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "॥ हेमंत अंतर्मन संवाद: आधिकारिक टीज़र स्"
+  },
+  {
+   "id": "ba695ae4-1b95-4193-b8db-5a873b79c6c4",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "चंडीगढ़ हरयाणे",
+   "source": "refrain",
+   "evidence": "line repeats 10×",
+   "lyricFamily": "कान खोल के सुण लो सारे,\nपवनपुत्रों का सं"
+  },
+  {
+   "id": "2f477298-ce1a-472e-b84b-8930b9c66478",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "चंडीगढ़ हरयाणे",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "कान खोल के सुण लो सारे,\nपवनपुत्रों का सं"
+  },
+  {
+   "id": "30bf75e7-10f6-4308-b4ee-87d52c599e1a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दूध दही के खाने का –",
+   "source": "refrain",
+   "evidence": "line repeats 3×",
+   "lyricFamily": "कान खोल कर सुण लो सारे, पवनपुत्रो का संद"
+  },
+  {
+   "id": "1f885a53-57ed-448b-b0b6-c3c53c8504d9",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दूध दही के खाने का –",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "कान खोल कर सुण लो सारे, पवनपुत्रो का संद"
+  },
+  {
+   "id": "b30f1dc1-1d59-41dd-af90-dedba164ed3f",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "अब मंच पर आते हैं:",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "【प्रस्तावना – ब्रह्मांड का मंच】\nतारों के"
+  },
+  {
+   "id": "c76edf13-95b3-42c3-b51e-44b0d31a10dc",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "अब मंच पर आते हैं:",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "【प्रस्तावना – ब्रह्मांड का मंच】\nतारों के"
+  },
+  {
+   "id": "33ebe00e-d888-4500-be76-653588dca063",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "【प्रस्तावना – ब्रह्मांड का मंच】",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "【प्रस्तावना – ब्रह्मांड का मंच】\nमंच सजा "
+  },
+  {
+   "id": "2c90ee6b-74e3-4d2e-9843-9b5fb835b297",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "【प्रस्तावना – ब्रह्मांड का मंच】",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "【प्रस्तावना – ब्रह्मांड का मंच】\nमंच सजा "
+  },
+  {
+   "id": "42598efd-76d4-4683-87c1-176aa832b4ba",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "【प्रस्तावना – ब्रह्मांड का मंच】 II",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "【प्रस्तावना – ब्रह्मांड का मंच】\nमंच सजा "
+  },
+  {
+   "id": "bb7e2b90-d7ca-49b6-9135-fe4251447df2",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "【प्रस्तावना – ब्रह्मांड का मंच】 II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "【प्रस्तावना – ब्रह्मांड का मंच】\nमंच सजा "
+  },
+  {
+   "id": "e569c9e8-b660-4a47-83ea-2a36219c3cbd",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ अग्निमीळे पुरोहितं",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "ॐ अग्निमीळे पुरोहितं\nयज्ञस्य देवम् ऋत्वि"
+  },
+  {
+   "id": "915943e4-087a-4961-9b3c-e24b00c223b8",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ अग्निमीळे पुरोहितं",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ अग्निमीळे पुरोहितं\nयज्ञस्य देवम् ऋत्वि"
+  },
+  {
+   "id": "ab674c75-8585-4fd0-89ae-715906b3f772",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "संस्कृत मंत्र Rigveda vibe",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "संस्कृत मंत्र (rigveda vibe)\nॐ अग्निमीळे"
+  },
+  {
+   "id": "2b8896a5-71c2-4521-b7e8-8a07648444d3",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "संस्कृत मंत्र Rigveda vibe",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "संस्कृत मंत्र (rigveda vibe)\nॐ अग्निमीळे"
+  },
+  {
+   "id": "a27569a5-0751-4d15-842c-63a1adffb59c",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "نَمّة نَمّة يا حبيبي",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "अग्निमीळे पुरोहितं यज्ञस्य देवमृत्विजम्।"
+  },
+  {
+   "id": "1f500bc8-f5ba-4d2c-8156-b182c9b0b46b",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "نَمّة نَمّة يا حبيبي",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "अग्निमीळे पुरोहितं यज्ञस्य देवमृत्विजम्।"
+  },
+  {
+   "id": "01105ba5-4a3d-4314-8720-0437796ffc45",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "नम्मा नम्मा ऐ मेरे प्यारे",
+   "source": "refrain",
+   "evidence": "line repeats 3×",
+   "lyricFamily": "nammaa, nammaa, ya habibi\nसो जाओ, सो जाओ"
+  },
+  {
+   "id": "7960d8d5-9742-4fb2-9329-3efae9f39d73",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "नम्मा नम्मा ऐ मेरे प्यारे",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "nammaa, nammaa, ya habibi\nसो जाओ, सो जाओ"
+  },
+  {
+   "id": "5b8abaaa-7c56-450e-acfc-00b012e50990",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Frère Jacques Frère Jacques",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "frère jacques, frère jacques\ndormez-vous"
+  },
+  {
+   "id": "92279913-e9a8-4341-a4cc-19bd11b142ec",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Frère Jacques Frère Jacques",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "frère jacques, frère jacques\ndormez-vous"
+  },
+  {
+   "id": "a93223c5-90c5-469e-aa1d-602c99611cf7",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Frère Jacques Frère Jacques II",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "frère jacques, frère jacques\ndormez-vous"
+  },
+  {
+   "id": "5d4e5f42-752b-4d9c-b766-2969cd7ad903",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Frère Jacques Frère Jacques II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "frère jacques, frère jacques\ndormez-vous"
+  },
+  {
+   "id": "f4ffd57d-7c3c-440f-814c-1f4307fefb61",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "सात-ति चोरे दूँड़ बाये",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "crowd chant (thousands):\nखोकन! खोकन! खोक"
+  },
+  {
+   "id": "298d61be-50b0-46d5-b063-082b1afd7c3a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "सात-ति चोरे दूँड़ बाये",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "crowd chant (thousands):\nखोकन! खोकन! खोक"
+  },
+  {
+   "id": "7153c43c-d1d0-4621-8af5-edb81572ef1b",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "सात-ति चोरे दूँड़ बाये",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "crowd chant (thousands):\nखोकन! खोकन! खोक"
+  },
+  {
+   "id": "108c7fe6-6dd1-4e66-92d8-25403bb67a40",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "सात-ति चोरे दूँड़ बाये",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "crowd chant (thousands):\nखोकन! खोकन! खोक"
+  },
+  {
+   "id": "0dfca798-d9bf-41eb-ad1b-fea2ddd3e6fb",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "खोकन रे तोर घोरे आये",
+   "source": "refrain",
+   "evidence": "line repeats 5×",
+   "lyricFamily": "ॐ अग्निमीळे पुरोहितं\nयज्ञस्य देवम् ऋत्वि"
+  },
+  {
+   "id": "222f41c8-19ab-42d9-b87c-ca9c4c818caa",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "खोकन रे तोर घोरे आये",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ अग्निमीळे पुरोहितं\nयज्ञस्य देवम् ऋत्वि"
+  },
+  {
+   "id": "431ccd3f-faa0-48e0-9e03-34be24b470aa",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "खोकन रे तोर घोरे आये II",
+   "source": "refrain",
+   "evidence": "line repeats 5×",
+   "lyricFamily": "ॐ अग्निमीळे पुरोहितं\nयज्ञस्य देवम् ऋत्वि"
+  },
+  {
+   "id": "94ff85f6-fcbf-4004-a7df-5a2b9b6d95eb",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "खोकन रे तोर घोरे आये II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ अग्निमीळे पुरोहितं\nयज्ञस्य देवम् ऋत्वि"
+  },
+  {
+   "id": "711f7e2e-f0b6-4c14-8e99-e10c4e480b9e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दौड़ में सब जीत लिया",
+   "source": "refrain",
+   "evidence": "line repeats 3×",
+   "lyricFamily": "हेमंत ऋतु की तलाश में चीन से चिड़िया आयी"
+  },
+  {
+   "id": "0eb2d750-cbc8-4f32-a693-53d8d313e086",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दौड़ में सब जीत लिया",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "हेमंत ऋतु की तलाश में चीन से चिड़िया आयी"
+  },
+  {
+   "id": "3c45f08c-6f36-47fd-a968-8b739875b98a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दौड़ में सब जीत लिया II",
+   "source": "refrain",
+   "evidence": "line repeats 3×",
+   "lyricFamily": "चीन से चिड़िया आयी\nसंग अपने पुरानी याद ल"
+  },
+  {
+   "id": "a83302ba-61f6-48d3-98d6-d5f17a0e49b8",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "दौड़ में सब जीत लिया II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "चीन से चिड़िया आयी\nसंग अपने पुरानी याद ल"
+  },
+  {
+   "id": "df23e9c7-8898-438c-92a6-49d15136beca",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "सत्य सनातन वैज्ञानिक का ज्ञान",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "सत्य सनातन वैज्ञानिक का ज्ञान\nमातपिता का"
+  },
+  {
+   "id": "a922b75d-8465-4cea-b908-b28e65969c56",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "सत्य सनातन वैज्ञानिक का ज्ञान",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "सत्य सनातन वैज्ञानिक का ज्ञान\nमातपिता का"
+  },
+  {
+   "id": "44ef161a-fd07-43af-bc23-c78ad8ea773f",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "सत्य सनातन वैज्ञानिक का ज्ञान II",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "सत्य सनातन वैज्ञानिक का ज्ञान\nमातपिता का"
+  },
+  {
+   "id": "b3268cd7-82f5-4cbe-97e3-68d735616d14",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "सत्य सनातन वैज्ञानिक का ज्ञान II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "सत्य सनातन वैज्ञानिक का ज्ञान\nमातपिता का"
+  },
+  {
+   "id": "b7d087b3-1e0d-4990-b8aa-4710ea0af909",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जिसने तुझको जन्म दिया",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "सत्य सनातन वैज्ञानिक का ज्ञान\nमातपिता का"
+  },
+  {
+   "id": "e11f34b8-6597-49cb-b8ab-c265596a828d",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जिसने तुझको जन्म दिया",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "सत्य सनातन वैज्ञानिक का ज्ञान\nमातपिता का"
+  },
+  {
+   "id": "31740e34-6f43-4223-91e9-739374878a3d",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जिसने तुझको जन्म दिया II",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "सत्य सनातन वैज्ञानिक का है ज्ञान\nमातपिता"
+  },
+  {
+   "id": "5da37790-97be-4139-ab9a-d1a6c5dd24c0",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जिसने तुझको जन्म दिया II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "सत्य सनातन वैज्ञानिक का है ज्ञान\nमातपिता"
+  },
+  {
+   "id": "dbe4cfd2-9ac6-4fc5-a67c-a5ac9669c690",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जिसने तुझको जन्म दिया III",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "सत्य सनातन का है ज्ञान\nमात-पिता का सबसे "
+  },
+  {
+   "id": "da37bf5f-f038-4cf4-a836-c5d2c6c74a9c",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जिसने तुझको जन्म दिया III",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "सत्य सनातन का है ज्ञान\nमात-पिता का सबसे "
+  },
+  {
+   "id": "297597bc-b729-4b1f-9b1b-9f422c20d617",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जिसने तुझको जन्म दिया IV",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "सत्य सनातन का है ज्ञान\nमात-पिता का सबसे "
+  },
+  {
+   "id": "471fdd7d-17b3-4d7b-a282-303be24251d5",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जिसने तुझको जन्म दिया IV",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "सत्य सनातन का है ज्ञान\nमात-पिता का सबसे "
+  },
+  {
+   "id": "35380dae-bb24-481e-a416-af515d22edc3",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जिसने तुझको जन्म दिया V",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "सत्य सनातन का है ज्ञान\nमात-पिता का सबसे "
+  },
+  {
+   "id": "7140414f-9a6d-4f4c-a9e6-ebaf4c61009e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जिसने तुझको जन्म दिया V",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "सत्य सनातन का है ज्ञान\nमात-पिता का सबसे "
+  },
+  {
+   "id": "668f75f1-428a-476d-9bed-614ad964053e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जिसने तुझको जन्म दिया VI",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "सत्य सनातन का है ज्ञान\nमात-पिता का सबसे "
+  },
+  {
+   "id": "a6a27e86-3c84-453d-8d74-eeedd44ba048",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "जिसने तुझको जन्म दिया VI",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "सत्य सनातन का है ज्ञान\nमात-पिता का सबसे "
+  },
+  {
+   "id": "811a9828-7ae3-4fc9-ba2c-9d1c523520c5",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Transliteration",
+   "source": "refrain",
+   "evidence": "line repeats 3×",
+   "lyricFamily": "सत्य सनातन का है ज्ञान\nमात-पिता का सबसे "
+  },
+  {
+   "id": "89ba03d5-ee75-473b-b331-4013c130a44a",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Transliteration",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "सत्य सनातन का है ज्ञान\nमात-पिता का सबसे "
+  },
+  {
+   "id": "67c23492-7a85-457e-a73a-8686f0dd0aec",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "नियमों का हऊआ और सत्य",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "नियमों का हऊआ और सत्य की जड़ें\nसत्य सनातन"
+  },
+  {
+   "id": "4683717a-d5df-4665-836e-b5252b9bb43f",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "नियमों का हऊआ और सत्य",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "नियमों का हऊआ और सत्य की जड़ें\nसत्य सनातन"
+  },
+  {
+   "id": "0137e680-bb96-4a04-9603-b48b321e35e1",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "सत्य सनातन का है ज्ञान",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "सत्य सनातन का है ज्ञान,\nमात-पिता का सबसे"
+  },
+  {
+   "id": "12c44280-e16c-405e-92e1-fb9989b71037",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "सत्य सनातन का है ज्ञान",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "सत्य सनातन का है ज्ञान,\nमात-पिता का सबसे"
+  },
+  {
+   "id": "90e901c9-4ec2-40b0-af7f-1e81570ae502",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "सत्य सनातन का है ज्ञान",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "सत्य सनातन का है ज्ञान,\nमात-पिता का सबसे"
+  },
+  {
+   "id": "a9f1f04b-bcc9-49ba-b1b1-d71abc204a0c",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "सत्य सनातन का है ज्ञान",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "सत्य सनातन का है ज्ञान,\nमात-पिता का सबसे"
+  },
+  {
+   "id": "6566cc36-9229-4c37-9ea5-5692ffbf2526",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "सत्य सनातन का है ज्ञान II",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "सत्य सनातन का है ज्ञान\nमात पिता का ईश्वर"
+  },
+  {
+   "id": "a986c2c7-138a-4786-8d1f-79fa9f4a8d8d",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "सत्य सनातन का है ज्ञान II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "सत्य सनातन का है ज्ञान\nमात पिता का ईश्वर"
+  },
+  {
+   "id": "99753716-34be-4a43-80b6-7c8bf416bb3e",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Force equals",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "आकाश का एक विराट मंच।\nसात दिशाओं से दीप "
+  },
+  {
+   "id": "ad5b8312-e863-4629-adf2-a05966aee8a3",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Force equals",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "आकाश का एक विराट मंच।\nसात दिशाओं से दीप "
+  },
+  {
+   "id": "643bbbac-2567-4efb-9f3a-50ac19ce3cd3",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Greek:",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "ॐ नादब्रह्माय नमः\nज्ञानं प्रकाशते\nनादः ज"
+  },
+  {
+   "id": "79c218fd-2902-4029-acdf-6a572e2d09a0",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Greek:",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ नादब्रह्माय नमः\nज्ञानं प्रकाशते\nनादः ज"
+  },
+  {
+   "id": "5e5636bf-1737-4f24-b7f7-cef44e0f22fe",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "𑖮𑖰𑖠𑖿𑖟𑖽",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "𑖮𑖰𑖠𑖿𑖟𑖽\nॐ नादब्रह्माय नमः\nगतिर्नियम"
+  },
+  {
+   "id": "c25688a0-b774-48e2-8998-c9783f0d195f",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "𑖮𑖰𑖠𑖿𑖟𑖽",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "𑖮𑖰𑖠𑖿𑖟𑖽\nॐ नादब्रह्माय नमः\nगतिर्नियम"
+  },
+  {
+   "id": "11b2b802-1595-456f-899e-cc1e79f05185",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ नादब्रह्माय नमः",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "ॐ नादब्रह्माय नमः\nगतिर्नियमः प्रकृतेः सू"
+  },
+  {
+   "id": "f19142fa-b005-4281-857e-bae5435451ca",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "ॐ नादब्रह्माय नमः",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ नादब्रह्माय नमः\nगतिर्नियमः प्रकृतेः सू"
+  },
+  {
+   "id": "7837396f-b847-4359-b544-5774ac2f5daa",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "𑖮𑖰𑖠𑖿𑖟𑖽 II",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "ॐ नादब्रह्माय नमः\nज्ञानं ज्योतिः प्रकटते"
+  },
+  {
+   "id": "e6510e78-0f69-43f6-9923-8163b91fc272",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "𑖮𑖰𑖠𑖿𑖟𑖽 II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ नादब्रह्माय नमः\nज्ञानं ज्योतिः प्रकटते"
+  },
+  {
+   "id": "f5bedf87-fc25-478b-94ad-3e18b12e6ba2",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "आयी आयी आयी",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "ॐ नाद ब्रह्माय नमः\nॐ ज्ञानाय नमः\nशब्द से"
+  },
+  {
+   "id": "0e0098d4-f9c4-4d28-b3f0-20f38ba73e36",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "आयी आयी आयी",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ नाद ब्रह्माय नमः\nॐ ज्ञानाय नमः\nशब्द से"
+  },
+  {
+   "id": "8637c70f-2e69-4d3c-8902-20a2dbdbf3a3",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "आई माई का अंधा प्यार",
+   "source": "first-line",
+   "evidence": "opening lyric line",
+   "lyricFamily": "आई माई का अंधा प्यार\nगांधारी का असर अपार"
+  },
+  {
+   "id": "ffa5cf10-0865-4bac-9d60-f37822b2f922",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "आई माई का अंधा प्यार",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "आई माई का अंधा प्यार\nगांधारी का असर अपार"
+  },
+  {
+   "id": "3dea2c46-9d5a-402e-9058-77e26312bb54",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "आयी आयी आयी II",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "ॐ नाद ब्रह्माय नमः\nॐ ज्ञान ज्योति नमः\nसत"
+  },
+  {
+   "id": "bc3038d3-816b-4879-aa78-6815db0853df",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "आयी आयी आयी II",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ नाद ब्रह्माय नमः\nॐ ज्ञान ज्योति नमः\nसत"
+  },
+  {
+   "id": "3741f8d9-ee63-459b-8ebe-01454f706d38",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Sanatan Vedic (Instrumental)",
+   "source": "styles",
+   "evidence": "instrumental — no lyric cues",
+   "lyricFamily": null
+  },
+  {
+   "id": "5d0161fa-6647-4a40-be7e-121a88d2b2a3",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "आयी आयी आयी III",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "ॐ नाद ब्रह्माय नमः\nॐ ज्ञान ज्योति नमः\nसत"
+  },
+  {
+   "id": "fabdd7cf-3445-4b3f-8bd3-d5df256ebc2b",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "आयी आयी आयी III",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ नाद ब्रह्माय नमः\nॐ ज्ञान ज्योति नमः\nसत"
+  },
+  {
+   "id": "474b5afb-1073-42d4-a1b5-16fbfdce636d",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "आयी आयी आयी III",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ नाद ब्रह्माय नमः\nॐ ज्ञान ज्योति नमः\nसत"
+  },
+  {
+   "id": "25982a1c-a0b7-4bdc-9d4c-c685bb4d58d2",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "भर्गो देवस्य धीमहि",
+   "source": "refrain",
+   "evidence": "line repeats 3×",
+   "lyricFamily": "ॐ भूर् भुवः स्वः\nतत्सवितुर्वरेण्यं\nभर्गो"
+  },
+  {
+   "id": "17d23524-7ba8-4e59-a60c-3536c34d0a1b",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "भर्गो देवस्य धीमहि",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "ॐ भूर् भुवः स्वः\nतत्सवितुर्वरेण्यं\nभर्गो"
+  },
+  {
+   "id": "b7c30d72-6ce4-4dcf-a098-a08b77b3c805",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Sanatan Vedic (Instrumental) II",
+   "source": "styles",
+   "evidence": "instrumental — no lyric cues",
+   "lyricFamily": null
+  },
+  {
+   "id": "a4e69def-6d0d-4f12-8718-029de266a4a2",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "Transliteration II",
+   "source": "refrain",
+   "evidence": "line repeats 4×",
+   "lyricFamily": "🕉️ वैदिक मंत्र (opening chant)\nॐ भूर् भ"
+  },
+  {
+   "id": "e547d7c0-12d6-41a8-bfb3-1a6b84a2f447",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मां मेरी",
+   "source": "refrain",
+   "evidence": "line repeats 2×",
+   "lyricFamily": "जोगी बंजारा\nभगमा बाना, माथे राख,\nसंग में"
+  },
+  {
+   "id": "d0be1546-ee3d-4e7d-a6ed-bd8e2502a139",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मां मेरी",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "जोगी बंजारा\nभगमा बाना, माथे राख,\nसंग में"
+  },
+  {
+   "id": "40e5bcc1-b2c0-467d-b3cd-7f4b8310f042",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मां मेरी",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "जोगी बंजारा\nभगमा बाना, माथे राख,\nसंग में"
+  },
+  {
+   "id": "f0f3206d-e731-4bb5-9182-1b17907541b8",
+   "sourceTitle": "(untitled)",
+   "proposedTitle": "मां मेरी",
+   "source": "family",
+   "evidence": "shared lyric family",
+   "lyricFamily": "जोगी बंजारा\nभगमा बाना, माथे राख,\nसंग में"
+  }
+ ]
+}

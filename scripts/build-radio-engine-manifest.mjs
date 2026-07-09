@@ -8,7 +8,16 @@ const SUNO_LATEST = path.join(WEB_HTML, "data/suno-latest-list.json");
 const generatedAt = new Date().toISOString();
 
 const latest = readJson(SUNO_LATEST);
-const tracks = latest.tracks.filter((track) => track.canPlay && track.audioRelativePath);
+// Apply lyric-derived title proposals for "(untitled)" tracks (provenance kept).
+const TITLE_PROPOSALS = path.join(WEB_HTML, "data/title-proposals.json");
+const proposedTitles = fs.existsSync(TITLE_PROPOSALS)
+  ? new Map(readJson(TITLE_PROPOSALS).proposals.map((p) => [p.id, p.proposedTitle]))
+  : new Map();
+const tracks = latest.tracks
+  .filter((track) => track.canPlay && track.audioRelativePath)
+  .map((track) =>
+    proposedTitles.has(track.id) ? { ...track, title: proposedTitles.get(track.id), sourceTitle: track.title } : track
+  );
 
 // Commerce defaults — mirrors packages/shared/src/commerce.ts (single source of truth
 // for the TypeScript side; these constants must stay in sync with it).

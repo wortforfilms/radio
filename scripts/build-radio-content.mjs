@@ -46,7 +46,21 @@ const stationByTrackId = new Map(
   (manifest.stations || []).flatMap((station) => (station.programs || []).map((program) => [program.trackId, station.slug]))
 );
 
-const tracks = latest.tracks.filter((track) => track.canPlay && track.audioRelativePath);
+// Title proposals for "(untitled)" tracks (scripts/propose-untitled-titles.mjs):
+// derived from each track's own lyrics — applied here so slugs/stylised titles/
+// version groups use the proposed names. Original title kept as sourceTitle.
+const proposalsFile = path.join(WEB_HTML, "data/title-proposals.json");
+const proposedTitleById = fs.existsSync(proposalsFile)
+  ? new Map(JSON.parse(fs.readFileSync(proposalsFile, "utf8")).proposals.map((p) => [p.id, p.proposedTitle]))
+  : new Map();
+
+const tracks = latest.tracks
+  .filter((track) => track.canPlay && track.audioRelativePath)
+  .map((track) =>
+    proposedTitleById.has(track.id)
+      ? { ...track, title: proposedTitleById.get(track.id), sourceTitle: track.title }
+      : track
+  );
 const versions = assignVersions(tracks);
 const nextSlug = createSlugger();
 
