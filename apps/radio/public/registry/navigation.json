@@ -1,0 +1,1686 @@
+{
+  "generatedAt": "2026-07-09T17:29:47.074Z",
+  "enabledFlags": [
+    "premium"
+  ],
+  "sidebar": [
+    {
+      "id": "public.about",
+      "title": "About",
+      "path": "/about",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.mission",
+      "title": "Mission",
+      "path": "/mission",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.vision",
+      "title": "Vision",
+      "path": "/vision",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.science-for-bharat",
+      "title": "Science For Bharat",
+      "path": "/science-for-bharat",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.contact",
+      "title": "Contact",
+      "path": "/contact",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.partners",
+      "title": "Partners",
+      "path": "/partners",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.sponsors",
+      "title": "Sponsors",
+      "path": "/sponsors",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.careers",
+      "title": "Careers",
+      "path": "/careers",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.press",
+      "title": "Press",
+      "path": "/press",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.privacy",
+      "title": "Privacy",
+      "path": "/privacy",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.terms",
+      "title": "Terms",
+      "path": "/terms",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.accessibility",
+      "title": "Accessibility",
+      "path": "/accessibility",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.donate",
+      "title": "Donate",
+      "path": "/donate",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "radio",
+      "title": "Radio",
+      "path": "/radio",
+      "icon": "📻",
+      "section": "Radio",
+      "status": "built"
+    },
+    {
+      "id": "podcasts",
+      "title": "Podcasts",
+      "path": "/podcasts",
+      "icon": "🎙",
+      "section": "Podcast",
+      "status": "planned"
+    },
+    {
+      "id": "research",
+      "title": "Research",
+      "path": "/research",
+      "icon": "🔬",
+      "section": "Research Hub",
+      "status": "planned"
+    },
+    {
+      "id": "discover",
+      "title": "Discover",
+      "path": "/discover",
+      "icon": "🛰",
+      "section": "Science Categories",
+      "status": "planned"
+    },
+    {
+      "id": "community",
+      "title": "Community",
+      "path": "/community",
+      "icon": "👥",
+      "section": "Community",
+      "status": "planned"
+    },
+    {
+      "id": "news",
+      "title": "News",
+      "path": "/news",
+      "icon": "📰",
+      "section": "News",
+      "status": "planned"
+    },
+    {
+      "id": "media.videos",
+      "title": "Videos",
+      "path": "/videos",
+      "icon": "🎥",
+      "section": "Media",
+      "status": "partial"
+    },
+    {
+      "id": "media.shorts",
+      "title": "Shorts",
+      "path": "/shorts",
+      "icon": "🎥",
+      "section": "Media",
+      "status": "planned"
+    },
+    {
+      "id": "media.gallery",
+      "title": "Gallery",
+      "path": "/gallery",
+      "icon": "🎥",
+      "section": "Media",
+      "status": "partial"
+    },
+    {
+      "id": "media.infographics",
+      "title": "Infographics",
+      "path": "/infographics",
+      "icon": "🎥",
+      "section": "Media",
+      "status": "planned"
+    },
+    {
+      "id": "media.animations",
+      "title": "Animations",
+      "path": "/animations",
+      "icon": "🎥",
+      "section": "Media",
+      "status": "planned"
+    },
+    {
+      "id": "media.livestreams",
+      "title": "Livestreams",
+      "path": "/livestreams",
+      "icon": "🎥",
+      "section": "Media",
+      "status": "planned"
+    },
+    {
+      "id": "search",
+      "title": "Search",
+      "path": "/search",
+      "icon": "🔍",
+      "section": "Search",
+      "status": "partial"
+    },
+    {
+      "id": "user.login",
+      "title": "Login",
+      "path": "/login",
+      "icon": "👤",
+      "section": "User",
+      "status": "planned"
+    },
+    {
+      "id": "user.signup",
+      "title": "Signup",
+      "path": "/signup",
+      "icon": "👤",
+      "section": "User",
+      "status": "planned"
+    },
+    {
+      "id": "user.forgot-password",
+      "title": "Forgot Password",
+      "path": "/forgot-password",
+      "icon": "👤",
+      "section": "User",
+      "status": "planned"
+    },
+    {
+      "id": "user.verify",
+      "title": "Verify",
+      "path": "/verify",
+      "icon": "👤",
+      "section": "User",
+      "status": "planned"
+    },
+    {
+      "id": "user.profile",
+      "title": "Profile",
+      "path": "/profile",
+      "icon": "👤",
+      "section": "User",
+      "status": "partial"
+    },
+    {
+      "id": "user.bookmarks",
+      "title": "Bookmarks",
+      "path": "/bookmarks",
+      "icon": "👤",
+      "section": "User",
+      "status": "planned"
+    },
+    {
+      "id": "user.history",
+      "title": "History",
+      "path": "/history",
+      "icon": "👤",
+      "section": "User",
+      "status": "partial"
+    },
+    {
+      "id": "user.downloads",
+      "title": "Downloads",
+      "path": "/downloads",
+      "icon": "👤",
+      "section": "User",
+      "status": "partial"
+    },
+    {
+      "id": "user.notifications",
+      "title": "Notifications",
+      "path": "/notifications",
+      "icon": "👤",
+      "section": "User",
+      "status": "planned"
+    },
+    {
+      "id": "user.settings",
+      "title": "Settings",
+      "path": "/settings",
+      "icon": "👤",
+      "section": "User",
+      "status": "partial"
+    },
+    {
+      "id": "premium",
+      "title": "Premium",
+      "path": "/premium",
+      "icon": "💎",
+      "section": "Premium",
+      "status": "partial"
+    },
+    {
+      "id": "ecosystem",
+      "title": "Ecosystem",
+      "path": "/ecosystem",
+      "icon": "🌐",
+      "section": "Ecosystem Integration",
+      "status": "planned"
+    }
+  ],
+  "header": [
+    {
+      "id": "public.about",
+      "title": "About",
+      "path": "/about",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.mission",
+      "title": "Mission",
+      "path": "/mission",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.vision",
+      "title": "Vision",
+      "path": "/vision",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.science-for-bharat",
+      "title": "Science For Bharat",
+      "path": "/science-for-bharat",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.contact",
+      "title": "Contact",
+      "path": "/contact",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.partners",
+      "title": "Partners",
+      "path": "/partners",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.sponsors",
+      "title": "Sponsors",
+      "path": "/sponsors",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.careers",
+      "title": "Careers",
+      "path": "/careers",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.press",
+      "title": "Press",
+      "path": "/press",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.donate",
+      "title": "Donate",
+      "path": "/donate",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "radio",
+      "title": "Radio",
+      "path": "/radio",
+      "icon": "📻",
+      "section": "Radio",
+      "status": "built"
+    },
+    {
+      "id": "podcasts",
+      "title": "Podcasts",
+      "path": "/podcasts",
+      "icon": "🎙",
+      "section": "Podcast",
+      "status": "planned"
+    },
+    {
+      "id": "research",
+      "title": "Research",
+      "path": "/research",
+      "icon": "🔬",
+      "section": "Research Hub",
+      "status": "planned"
+    },
+    {
+      "id": "discover",
+      "title": "Discover",
+      "path": "/discover",
+      "icon": "🛰",
+      "section": "Science Categories",
+      "status": "planned"
+    },
+    {
+      "id": "community",
+      "title": "Community",
+      "path": "/community",
+      "icon": "👥",
+      "section": "Community",
+      "status": "planned"
+    },
+    {
+      "id": "news",
+      "title": "News",
+      "path": "/news",
+      "icon": "📰",
+      "section": "News",
+      "status": "planned"
+    },
+    {
+      "id": "media.videos",
+      "title": "Videos",
+      "path": "/videos",
+      "icon": "🎥",
+      "section": "Media",
+      "status": "partial"
+    },
+    {
+      "id": "media.shorts",
+      "title": "Shorts",
+      "path": "/shorts",
+      "icon": "🎥",
+      "section": "Media",
+      "status": "planned"
+    },
+    {
+      "id": "media.gallery",
+      "title": "Gallery",
+      "path": "/gallery",
+      "icon": "🎥",
+      "section": "Media",
+      "status": "partial"
+    },
+    {
+      "id": "media.infographics",
+      "title": "Infographics",
+      "path": "/infographics",
+      "icon": "🎥",
+      "section": "Media",
+      "status": "planned"
+    },
+    {
+      "id": "media.animations",
+      "title": "Animations",
+      "path": "/animations",
+      "icon": "🎥",
+      "section": "Media",
+      "status": "planned"
+    },
+    {
+      "id": "media.livestreams",
+      "title": "Livestreams",
+      "path": "/livestreams",
+      "icon": "🎥",
+      "section": "Media",
+      "status": "planned"
+    },
+    {
+      "id": "search",
+      "title": "Search",
+      "path": "/search",
+      "icon": "🔍",
+      "section": "Search",
+      "status": "partial"
+    },
+    {
+      "id": "user.login",
+      "title": "Login",
+      "path": "/login",
+      "icon": "👤",
+      "section": "User",
+      "status": "planned"
+    },
+    {
+      "id": "user.signup",
+      "title": "Signup",
+      "path": "/signup",
+      "icon": "👤",
+      "section": "User",
+      "status": "planned"
+    },
+    {
+      "id": "user.forgot-password",
+      "title": "Forgot Password",
+      "path": "/forgot-password",
+      "icon": "👤",
+      "section": "User",
+      "status": "planned"
+    },
+    {
+      "id": "user.verify",
+      "title": "Verify",
+      "path": "/verify",
+      "icon": "👤",
+      "section": "User",
+      "status": "planned"
+    },
+    {
+      "id": "user.profile",
+      "title": "Profile",
+      "path": "/profile",
+      "icon": "👤",
+      "section": "User",
+      "status": "partial"
+    },
+    {
+      "id": "user.bookmarks",
+      "title": "Bookmarks",
+      "path": "/bookmarks",
+      "icon": "👤",
+      "section": "User",
+      "status": "planned"
+    },
+    {
+      "id": "user.history",
+      "title": "History",
+      "path": "/history",
+      "icon": "👤",
+      "section": "User",
+      "status": "partial"
+    },
+    {
+      "id": "user.downloads",
+      "title": "Downloads",
+      "path": "/downloads",
+      "icon": "👤",
+      "section": "User",
+      "status": "partial"
+    },
+    {
+      "id": "user.notifications",
+      "title": "Notifications",
+      "path": "/notifications",
+      "icon": "👤",
+      "section": "User",
+      "status": "planned"
+    },
+    {
+      "id": "user.settings",
+      "title": "Settings",
+      "path": "/settings",
+      "icon": "👤",
+      "section": "User",
+      "status": "partial"
+    },
+    {
+      "id": "premium",
+      "title": "Premium",
+      "path": "/premium",
+      "icon": "💎",
+      "section": "Premium",
+      "status": "partial"
+    },
+    {
+      "id": "ecosystem",
+      "title": "Ecosystem",
+      "path": "/ecosystem",
+      "icon": "🌐",
+      "section": "Ecosystem Integration",
+      "status": "planned"
+    }
+  ],
+  "footer": [
+    {
+      "id": "public.about",
+      "title": "About",
+      "path": "/about",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.contact",
+      "title": "Contact",
+      "path": "/contact",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.careers",
+      "title": "Careers",
+      "path": "/careers",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.press",
+      "title": "Press",
+      "path": "/press",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.privacy",
+      "title": "Privacy",
+      "path": "/privacy",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.terms",
+      "title": "Terms",
+      "path": "/terms",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.accessibility",
+      "title": "Accessibility",
+      "path": "/accessibility",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    },
+    {
+      "id": "public.donate",
+      "title": "Donate",
+      "path": "/donate",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "planned"
+    }
+  ],
+  "quickAccess": [
+    {
+      "id": "radio.live",
+      "title": "Live",
+      "path": "/radio/live",
+      "icon": "📻",
+      "section": "Radio",
+      "status": "partial"
+    },
+    {
+      "id": "radio.now-playing",
+      "title": "Now Playing",
+      "path": "/radio/now-playing",
+      "icon": "📻",
+      "section": "Radio",
+      "status": "built"
+    },
+    {
+      "id": "radio.archive",
+      "title": "Archive",
+      "path": "/radio/archive",
+      "icon": "📻",
+      "section": "Radio",
+      "status": "built"
+    },
+    {
+      "id": "search",
+      "title": "Search",
+      "path": "/search",
+      "icon": "🔍",
+      "section": "Search",
+      "status": "partial"
+    },
+    {
+      "id": "premium",
+      "title": "Premium",
+      "path": "/premium",
+      "icon": "💎",
+      "section": "Premium",
+      "status": "partial"
+    }
+  ],
+  "commandPalette": [
+    {
+      "id": "public.home",
+      "title": "Home",
+      "path": "/",
+      "icon": "🌐",
+      "section": "Public Website",
+      "status": "built"
+    },
+    {
+      "id": "radio",
+      "title": "Radio",
+      "path": "/radio",
+      "icon": "📻",
+      "section": "Radio",
+      "status": "built"
+    },
+    {
+      "id": "radio.live",
+      "title": "Live",
+      "path": "/radio/live",
+      "icon": "📻",
+      "section": "Radio",
+      "status": "partial"
+    },
+    {
+      "id": "radio.now-playing",
+      "title": "Now Playing",
+      "path": "/radio/now-playing",
+      "icon": "📻",
+      "section": "Radio",
+      "status": "built"
+    },
+    {
+      "id": "radio.schedule",
+      "title": "Schedule",
+      "path": "/radio/schedule",
+      "icon": "📻",
+      "section": "Radio",
+      "status": "partial"
+    },
+    {
+      "id": "radio.shows",
+      "title": "Shows",
+      "path": "/radio/shows",
+      "icon": "📻",
+      "section": "Radio",
+      "status": "partial"
+    },
+    {
+      "id": "radio.shows.detail",
+      "title": "Slug",
+      "path": "/radio/shows/:slug",
+      "icon": "📻",
+      "section": "Radio",
+      "status": "partial"
+    },
+    {
+      "id": "radio.rj",
+      "title": "Slug",
+      "path": "/radio/rj/:slug",
+      "icon": "📻",
+      "section": "Radio",
+      "status": "partial"
+    },
+    {
+      "id": "radio.archive",
+      "title": "Archive",
+      "path": "/radio/archive",
+      "icon": "📻",
+      "section": "Radio",
+      "status": "built"
+    },
+    {
+      "id": "radio.download",
+      "title": "Download",
+      "path": "/radio/download",
+      "icon": "📻",
+      "section": "Radio",
+      "status": "partial"
+    },
+    {
+      "id": "podcasts.transcript",
+      "title": "Transcript",
+      "path": "/podcasts/:slug/transcript",
+      "icon": "🎙",
+      "section": "Podcast",
+      "status": "partial"
+    },
+    {
+      "id": "research.datasets",
+      "title": "Datasets",
+      "path": "/research/datasets",
+      "icon": "🔬",
+      "section": "Research Hub",
+      "status": "partial"
+    },
+    {
+      "id": "discover.sanskrit-science",
+      "title": "Sanskrit Science",
+      "path": "/discover/sanskrit-science",
+      "icon": "🛰",
+      "section": "Science Categories",
+      "status": "partial"
+    },
+    {
+      "id": "media.videos",
+      "title": "Videos",
+      "path": "/videos",
+      "icon": "🎥",
+      "section": "Media",
+      "status": "partial"
+    },
+    {
+      "id": "media.gallery",
+      "title": "Gallery",
+      "path": "/gallery",
+      "icon": "🎥",
+      "section": "Media",
+      "status": "partial"
+    },
+    {
+      "id": "ai.rj",
+      "title": "Rj",
+      "path": "/ai/rj",
+      "icon": "🤖",
+      "section": "AI",
+      "status": "partial"
+    },
+    {
+      "id": "ai.chat",
+      "title": "Chat",
+      "path": "/ai/chat",
+      "icon": "🤖",
+      "section": "AI",
+      "status": "partial"
+    },
+    {
+      "id": "ai.transcript",
+      "title": "Transcript",
+      "path": "/ai/transcript",
+      "icon": "🤖",
+      "section": "AI",
+      "status": "partial"
+    },
+    {
+      "id": "ai.search",
+      "title": "Search",
+      "path": "/ai/search",
+      "icon": "🤖",
+      "section": "AI",
+      "status": "partial"
+    },
+    {
+      "id": "search",
+      "title": "Search",
+      "path": "/search",
+      "icon": "🔍",
+      "section": "Search",
+      "status": "partial"
+    },
+    {
+      "id": "search.radio",
+      "title": "Radio",
+      "path": "/search/radio",
+      "icon": "🔍",
+      "section": "Search",
+      "status": "partial"
+    },
+    {
+      "id": "user.profile",
+      "title": "Profile",
+      "path": "/profile",
+      "icon": "👤",
+      "section": "User",
+      "status": "partial"
+    },
+    {
+      "id": "user.history",
+      "title": "History",
+      "path": "/history",
+      "icon": "👤",
+      "section": "User",
+      "status": "partial"
+    },
+    {
+      "id": "user.downloads",
+      "title": "Downloads",
+      "path": "/downloads",
+      "icon": "👤",
+      "section": "User",
+      "status": "partial"
+    },
+    {
+      "id": "user.settings",
+      "title": "Settings",
+      "path": "/settings",
+      "icon": "👤",
+      "section": "User",
+      "status": "partial"
+    },
+    {
+      "id": "premium",
+      "title": "Premium",
+      "path": "/premium",
+      "icon": "💎",
+      "section": "Premium",
+      "status": "partial"
+    },
+    {
+      "id": "premium.plans",
+      "title": "Plans",
+      "path": "/premium/plans",
+      "icon": "💎",
+      "section": "Premium",
+      "status": "partial"
+    },
+    {
+      "id": "premium.payment",
+      "title": "Payment",
+      "path": "/premium/payment",
+      "icon": "💎",
+      "section": "Premium",
+      "status": "partial"
+    },
+    {
+      "id": "premium.history",
+      "title": "History",
+      "path": "/premium/history",
+      "icon": "💎",
+      "section": "Premium",
+      "status": "partial"
+    },
+    {
+      "id": "premium.library",
+      "title": "Library",
+      "path": "/premium/library",
+      "icon": "💎",
+      "section": "Premium",
+      "status": "partial"
+    },
+    {
+      "id": "analytics",
+      "title": "Analytics",
+      "path": "/analytics",
+      "icon": "📊",
+      "section": "Analytics",
+      "status": "partial"
+    },
+    {
+      "id": "studio.upload",
+      "title": "Upload",
+      "path": "/studio/upload",
+      "icon": "🎛",
+      "section": "Studio",
+      "status": "partial"
+    },
+    {
+      "id": "studio.script",
+      "title": "Script",
+      "path": "/studio/script",
+      "icon": "🎛",
+      "section": "Studio",
+      "status": "partial"
+    },
+    {
+      "id": "studio.assets",
+      "title": "Assets",
+      "path": "/studio/assets",
+      "icon": "🎛",
+      "section": "Studio",
+      "status": "partial"
+    },
+    {
+      "id": "cms",
+      "title": "Cms",
+      "path": "/cms",
+      "icon": "🗂",
+      "section": "Content Management",
+      "status": "partial"
+    },
+    {
+      "id": "cms.dashboard",
+      "title": "Dashboard",
+      "path": "/cms/dashboard",
+      "icon": "🗂",
+      "section": "Content Management",
+      "status": "partial"
+    },
+    {
+      "id": "cms.shows",
+      "title": "Shows",
+      "path": "/cms/shows",
+      "icon": "🗂",
+      "section": "Content Management",
+      "status": "partial"
+    },
+    {
+      "id": "cms.media",
+      "title": "Media",
+      "path": "/cms/media",
+      "icon": "🗂",
+      "section": "Content Management",
+      "status": "partial"
+    },
+    {
+      "id": "cms.moderation",
+      "title": "Moderation",
+      "path": "/cms/moderation",
+      "icon": "🗂",
+      "section": "Content Management",
+      "status": "partial"
+    },
+    {
+      "id": "cms.workflows",
+      "title": "Workflows",
+      "path": "/cms/workflows",
+      "icon": "🗂",
+      "section": "Content Management",
+      "status": "partial"
+    },
+    {
+      "id": "cms.scheduler",
+      "title": "Scheduler",
+      "path": "/cms/scheduler",
+      "icon": "🗂",
+      "section": "Content Management",
+      "status": "partial"
+    },
+    {
+      "id": "admin",
+      "title": "Admin",
+      "path": "/admin",
+      "icon": "⚙",
+      "section": "Administration",
+      "status": "built"
+    },
+    {
+      "id": "admin.audit",
+      "title": "Audit",
+      "path": "/admin/audit",
+      "icon": "⚙",
+      "section": "Administration",
+      "status": "partial"
+    },
+    {
+      "id": "admin.storage",
+      "title": "Storage",
+      "path": "/admin/storage",
+      "icon": "⚙",
+      "section": "Administration",
+      "status": "partial"
+    },
+    {
+      "id": "admin.integrations",
+      "title": "Integrations",
+      "path": "/admin/integrations",
+      "icon": "⚙",
+      "section": "Administration",
+      "status": "partial"
+    },
+    {
+      "id": "api.radio",
+      "title": "Radio",
+      "path": "/api/v1/radio",
+      "icon": "🔌",
+      "section": "API",
+      "status": "partial"
+    },
+    {
+      "id": "api.search",
+      "title": "Search",
+      "path": "/api/v1/search",
+      "icon": "🔌",
+      "section": "API",
+      "status": "partial"
+    },
+    {
+      "id": "api.analytics",
+      "title": "Analytics",
+      "path": "/api/v1/analytics",
+      "icon": "🔌",
+      "section": "API",
+      "status": "partial"
+    },
+    {
+      "id": "api.payments",
+      "title": "Payments",
+      "path": "/api/v1/payments",
+      "icon": "🔌",
+      "section": "API",
+      "status": "partial"
+    },
+    {
+      "id": "ecosystem.lipi",
+      "title": "Lipi",
+      "path": "/ecosystem/lipi",
+      "icon": "🌐",
+      "section": "Ecosystem Integration",
+      "status": "partial"
+    },
+    {
+      "id": "ecosystem.maataa",
+      "title": "Maataa",
+      "path": "/ecosystem/maataa",
+      "icon": "🌐",
+      "section": "Ecosystem Integration",
+      "status": "partial"
+    },
+    {
+      "id": "ecosystem.corpus",
+      "title": "Corpus",
+      "path": "/ecosystem/corpus",
+      "icon": "🌐",
+      "section": "Ecosystem Integration",
+      "status": "partial"
+    }
+  ],
+  "contextMenu": [
+    "radio.live",
+    "radio.now-playing",
+    "radio.schedule",
+    "radio.frequencies",
+    "radio.shows",
+    "radio.shows.detail",
+    "radio.rj",
+    "radio.archive",
+    "radio.request",
+    "radio.dedicate",
+    "radio.download",
+    "podcasts.trending",
+    "podcasts.latest",
+    "podcasts.categories",
+    "podcasts.detail",
+    "podcasts.transcript",
+    "podcasts.chapters",
+    "podcasts.discussion",
+    "podcasts.bookmark"
+  ],
+  "breadcrumbs": {
+    "public.about": [],
+    "public.mission": [],
+    "public.vision": [],
+    "public.science-for-bharat": [],
+    "public.contact": [],
+    "public.partners": [],
+    "public.sponsors": [],
+    "public.careers": [],
+    "public.press": [],
+    "public.privacy": [],
+    "public.terms": [],
+    "public.accessibility": [],
+    "public.donate": [],
+    "radio": [],
+    "radio.live": [
+      "radio"
+    ],
+    "radio.now-playing": [
+      "radio"
+    ],
+    "radio.schedule": [
+      "radio"
+    ],
+    "radio.frequencies": [
+      "radio"
+    ],
+    "radio.shows": [
+      "radio"
+    ],
+    "radio.shows.detail": [
+      "radio",
+      "radio.shows"
+    ],
+    "radio.rj": [
+      "radio"
+    ],
+    "radio.archive": [
+      "radio"
+    ],
+    "radio.request": [
+      "radio"
+    ],
+    "radio.dedicate": [
+      "radio"
+    ],
+    "radio.download": [
+      "radio"
+    ],
+    "podcasts": [],
+    "podcasts.trending": [
+      "podcasts"
+    ],
+    "podcasts.latest": [
+      "podcasts"
+    ],
+    "podcasts.categories": [
+      "podcasts"
+    ],
+    "podcasts.detail": [
+      "podcasts"
+    ],
+    "podcasts.transcript": [
+      "podcasts",
+      "podcasts.detail"
+    ],
+    "podcasts.chapters": [
+      "podcasts",
+      "podcasts.detail"
+    ],
+    "podcasts.discussion": [
+      "podcasts",
+      "podcasts.detail"
+    ],
+    "podcasts.bookmark": [
+      "podcasts"
+    ],
+    "research": [],
+    "research.publications": [
+      "research"
+    ],
+    "research.papers": [
+      "research"
+    ],
+    "research.datasets": [
+      "research"
+    ],
+    "research.experiments": [
+      "research"
+    ],
+    "research.projects": [
+      "research"
+    ],
+    "research.labs": [
+      "research"
+    ],
+    "research.authors": [
+      "research"
+    ],
+    "research.citations": [
+      "research"
+    ],
+    "research.downloads": [
+      "research"
+    ],
+    "discover": [],
+    "discover.space": [
+      "discover"
+    ],
+    "discover.astronomy": [
+      "discover"
+    ],
+    "discover.physics": [
+      "discover"
+    ],
+    "discover.chemistry": [
+      "discover"
+    ],
+    "discover.biology": [
+      "discover"
+    ],
+    "discover.mathematics": [
+      "discover"
+    ],
+    "discover.medicine": [
+      "discover"
+    ],
+    "discover.agriculture": [
+      "discover"
+    ],
+    "discover.environment": [
+      "discover"
+    ],
+    "discover.climate": [
+      "discover"
+    ],
+    "discover.robotics": [
+      "discover"
+    ],
+    "discover.ai": [
+      "discover"
+    ],
+    "discover.history-of-science": [
+      "discover"
+    ],
+    "discover.sanskrit-science": [
+      "discover"
+    ],
+    "discover.innovation": [
+      "discover"
+    ],
+    "discover.startups": [
+      "discover"
+    ],
+    "discover.student": [
+      "discover"
+    ],
+    "community": [],
+    "community.discussions": [
+      "community"
+    ],
+    "community.questions": [
+      "community"
+    ],
+    "community.polls": [
+      "community"
+    ],
+    "community.events": [
+      "community"
+    ],
+    "community.clubs": [
+      "community"
+    ],
+    "community.challenges": [
+      "community"
+    ],
+    "community.leaderboard": [
+      "community"
+    ],
+    "community.profile": [
+      "community"
+    ],
+    "news": [],
+    "news.science": [
+      "news"
+    ],
+    "news.space": [
+      "news"
+    ],
+    "news.technology": [
+      "news"
+    ],
+    "news.agriculture": [
+      "news"
+    ],
+    "news.india": [
+      "news"
+    ],
+    "news.world": [
+      "news"
+    ],
+    "news.videos": [
+      "news"
+    ],
+    "media.videos": [],
+    "media.shorts": [],
+    "media.gallery": [],
+    "media.infographics": [],
+    "media.animations": [],
+    "media.livestreams": [],
+    "ai.rj": [
+      "ai"
+    ],
+    "ai.chat": [
+      "ai"
+    ],
+    "ai.transcript": [
+      "ai"
+    ],
+    "ai.search": [
+      "ai"
+    ],
+    "search": [],
+    "search.radio": [
+      "search"
+    ],
+    "search.podcasts": [
+      "search"
+    ],
+    "search.research": [
+      "search"
+    ],
+    "search.news": [
+      "search"
+    ],
+    "search.people": [
+      "search"
+    ],
+    "user.login": [],
+    "user.signup": [],
+    "user.forgot-password": [],
+    "user.verify": [],
+    "user.profile": [],
+    "user.profile.edit": [
+      "user.profile"
+    ],
+    "user.bookmarks": [],
+    "user.history": [],
+    "user.downloads": [],
+    "user.notifications": [],
+    "user.settings": [],
+    "premium": [],
+    "premium.plans": [
+      "premium"
+    ],
+    "premium.payment": [
+      "premium"
+    ],
+    "premium.history": [
+      "premium"
+    ],
+    "premium.library": [
+      "premium"
+    ],
+    "analytics": [],
+    "analytics.listeners": [
+      "analytics"
+    ],
+    "analytics.live": [
+      "analytics"
+    ],
+    "analytics.streams": [
+      "analytics"
+    ],
+    "analytics.content": [
+      "analytics"
+    ],
+    "analytics.geography": [
+      "analytics"
+    ],
+    "analytics.revenue": [
+      "analytics"
+    ],
+    "studio": [],
+    "studio.live": [
+      "studio"
+    ],
+    "studio.record": [
+      "studio"
+    ],
+    "studio.upload": [
+      "studio"
+    ],
+    "studio.editor": [
+      "studio"
+    ],
+    "studio.script": [
+      "studio"
+    ],
+    "studio.caller": [
+      "studio"
+    ],
+    "studio.queue": [
+      "studio"
+    ],
+    "studio.automation": [
+      "studio"
+    ],
+    "studio.assets": [
+      "studio"
+    ],
+    "cms": [],
+    "cms.dashboard": [
+      "cms"
+    ],
+    "cms.articles": [
+      "cms"
+    ],
+    "cms.shows": [
+      "cms"
+    ],
+    "cms.podcasts": [
+      "cms"
+    ],
+    "cms.research": [
+      "cms"
+    ],
+    "cms.media": [
+      "cms"
+    ],
+    "cms.users": [
+      "cms"
+    ],
+    "cms.comments": [
+      "cms"
+    ],
+    "cms.moderation": [
+      "cms"
+    ],
+    "cms.workflows": [
+      "cms"
+    ],
+    "cms.scheduler": [
+      "cms"
+    ],
+    "admin": [],
+    "admin.users": [
+      "admin"
+    ],
+    "admin.roles": [
+      "admin"
+    ],
+    "admin.permissions": [
+      "admin"
+    ],
+    "admin.api": [
+      "admin"
+    ],
+    "admin.settings": [
+      "admin"
+    ],
+    "admin.logs": [
+      "admin"
+    ],
+    "admin.audit": [
+      "admin"
+    ],
+    "admin.security": [
+      "admin"
+    ],
+    "admin.storage": [
+      "admin"
+    ],
+    "admin.backups": [
+      "admin"
+    ],
+    "admin.integrations": [
+      "admin"
+    ],
+    "api.auth": [],
+    "api.radio": [],
+    "api.podcasts": [],
+    "api.research": [],
+    "api.news": [],
+    "api.events": [],
+    "api.community": [],
+    "api.search": [],
+    "api.analytics": [],
+    "api.upload": [],
+    "api.notifications": [],
+    "api.payments": [],
+    "ecosystem": [],
+    "ecosystem.nlm": [
+      "ecosystem"
+    ],
+    "ecosystem.cic": [
+      "ecosystem"
+    ],
+    "ecosystem.shree-kautilya": [
+      "ecosystem"
+    ],
+    "ecosystem.lipi": [
+      "ecosystem"
+    ],
+    "ecosystem.maataa": [
+      "ecosystem"
+    ],
+    "ecosystem.corpus": [
+      "ecosystem"
+    ],
+    "ecosystem.apis": [
+      "ecosystem"
+    ],
+    "ecosystem.developers": [
+      "ecosystem"
+    ]
+  },
+  "hiddenByFlags": [
+    {
+      "id": "academy",
+      "featureFlags": [
+        "academy"
+      ]
+    },
+    {
+      "id": "academy.courses",
+      "featureFlags": [
+        "academy"
+      ]
+    },
+    {
+      "id": "academy.course",
+      "featureFlags": [
+        "academy"
+      ]
+    },
+    {
+      "id": "academy.lessons",
+      "featureFlags": [
+        "academy"
+      ]
+    },
+    {
+      "id": "academy.quizzes",
+      "featureFlags": [
+        "academy"
+      ]
+    },
+    {
+      "id": "academy.tests",
+      "featureFlags": [
+        "academy"
+      ]
+    },
+    {
+      "id": "academy.certificates",
+      "featureFlags": [
+        "academy"
+      ]
+    },
+    {
+      "id": "academy.my-learning",
+      "featureFlags": [
+        "academy"
+      ]
+    },
+    {
+      "id": "academy.leaderboard",
+      "featureFlags": [
+        "academy"
+      ]
+    },
+    {
+      "id": "events",
+      "featureFlags": [
+        "events"
+      ]
+    },
+    {
+      "id": "events.live",
+      "featureFlags": [
+        "events"
+      ]
+    },
+    {
+      "id": "events.upcoming",
+      "featureFlags": [
+        "events"
+      ]
+    },
+    {
+      "id": "events.calendar",
+      "featureFlags": [
+        "events"
+      ]
+    },
+    {
+      "id": "events.workshops",
+      "featureFlags": [
+        "events"
+      ]
+    },
+    {
+      "id": "events.webinars",
+      "featureFlags": [
+        "events"
+      ]
+    },
+    {
+      "id": "events.hackathons",
+      "featureFlags": [
+        "events"
+      ]
+    },
+    {
+      "id": "events.science-fairs",
+      "featureFlags": [
+        "events"
+      ]
+    },
+    {
+      "id": "ai",
+      "featureFlags": [
+        "labs"
+      ]
+    },
+    {
+      "id": "ai.translator",
+      "featureFlags": [
+        "labs"
+      ]
+    },
+    {
+      "id": "ai.summarizer",
+      "featureFlags": [
+        "labs"
+      ]
+    },
+    {
+      "id": "ai.recommendations",
+      "featureFlags": [
+        "labs"
+      ]
+    }
+  ]
+}

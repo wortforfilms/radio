@@ -1,0 +1,16 @@
+# Generated from the route registry — do not edit by hand.
+User-agent: *
+Disallow: /admin
+Disallow: /cms
+Disallow: /studio
+Disallow: /analytics
+Disallow: /api/
+Disallow: /profile
+Disallow: /settings
+Disallow: /notifications
+Disallow: /bookmarks
+Disallow: /history
+Disallow: /downloads
+Allow: /
+
+Sitemap: http://localhost:3000/sitemap.xml

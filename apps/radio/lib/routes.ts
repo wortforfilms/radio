@@ -23,6 +23,20 @@ export interface RouteMatch {
 
 const routes = registry.routes as RegistryRoute[];
 
+// Precomputed O(1) lookups (schemaVersion 2 registries carry stable ids).
+// Additive: the original matchRoute/childrenOf/bySection API is unchanged.
+type EnrichedRoute = RegistryRoute & { id?: string; layout?: string };
+const byExactPath = new Map<string, RegistryRoute>(routes.map((route) => [route.path, route]));
+const byRouteId = new Map<string, RegistryRoute>(
+  (routes as EnrichedRoute[]).filter((route) => route.id).map((route) => [route.id as string, route])
+);
+const dynamicOnly = routes.filter((route) => route.dynamic);
+
+/** O(1) lookup by permanent route id (e.g. "radio.live"). Never use URL strings internally. */
+export function getRouteById(id: string): RegistryRoute | undefined {
+  return byRouteId.get(id);
+}
+
 export const routeRegistry = registry as {
   generatedAt: string;
   phkd: { failClosed: boolean; note: string };
@@ -31,15 +45,14 @@ export const routeRegistry = registry as {
   routes: RegistryRoute[];
 };
 
-/** Match a pathname against the registry (exact first, then :param patterns). */
+/** Match a pathname against the registry (exact O(1) first, then :param patterns). */
 export function matchRoute(pathname: string): RouteMatch | null {
   const clean = `/${pathname.split("/").filter(Boolean).join("/")}`;
-  const exact = routes.find((route) => route.path === clean);
+  const exact = byExactPath.get(clean);
   if (exact) return { route: exact, params: {} };
 
   const parts = clean.split("/").filter(Boolean);
-  for (const route of routes) {
-    if (!route.dynamic) continue;
+  for (const route of dynamicOnly) {
     const patternParts = route.path.split("/").filter(Boolean);
     if (patternParts.length !== parts.length) continue;
     const params: Record<string, string> = {};

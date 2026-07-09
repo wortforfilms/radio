@@ -40,6 +40,8 @@
     "radio:engine:manifest": "node scripts/build-radio-engine-manifest.mjs",
     "radio:content": "node scripts/build-radio-content.mjs && node scripts/build-radio-engine-manifest.mjs",
     "radio:routes": "node scripts/build-route-registry.mjs",
+    "radio:registry": "node --experimental-strip-types scripts/build-registry-platform.mjs",
+    "radio:registry:migrate": "node scripts/generate-registry-modules.mjs",
     "radio:seed": "node scripts/seed-catalog.mjs",
     "radio:seed:dry": "node scripts/seed-catalog.mjs --dry-run",
     "radio:offline:sync": "node scripts/download-offline-assets.mjs",

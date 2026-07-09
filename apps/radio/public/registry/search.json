@@ -1,0 +1,1813 @@
+{
+  "generatedAt": "2026-07-09T17:29:47.074Z",
+  "count": 104,
+  "entries": [
+    {
+      "id": "public.home",
+      "title": "Home",
+      "description": "Standalone landing — surfaces, tools, payment API.",
+      "keywords": [
+        "public website"
+      ],
+      "section": "Public Website",
+      "tags": [
+        "public-website",
+        "hub",
+        "built"
+      ],
+      "url": "/",
+      "status": "built"
+    },
+    {
+      "id": "public.about",
+      "title": "About",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "public website",
+        "about"
+      ],
+      "section": "Public Website",
+      "tags": [
+        "public-website",
+        "hub",
+        "planned"
+      ],
+      "url": "/about",
+      "status": "planned"
+    },
+    {
+      "id": "public.mission",
+      "title": "Mission",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "public website",
+        "mission"
+      ],
+      "section": "Public Website",
+      "tags": [
+        "public-website",
+        "hub",
+        "planned"
+      ],
+      "url": "/mission",
+      "status": "planned"
+    },
+    {
+      "id": "public.vision",
+      "title": "Vision",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "public website",
+        "vision"
+      ],
+      "section": "Public Website",
+      "tags": [
+        "public-website",
+        "hub",
+        "planned"
+      ],
+      "url": "/vision",
+      "status": "planned"
+    },
+    {
+      "id": "public.science-for-bharat",
+      "title": "Science For Bharat",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "public website",
+        "science",
+        "for",
+        "bharat"
+      ],
+      "section": "Public Website",
+      "tags": [
+        "public-website",
+        "hub",
+        "planned"
+      ],
+      "url": "/science-for-bharat",
+      "status": "planned"
+    },
+    {
+      "id": "public.contact",
+      "title": "Contact",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "public website",
+        "contact"
+      ],
+      "section": "Public Website",
+      "tags": [
+        "public-website",
+        "hub",
+        "planned"
+      ],
+      "url": "/contact",
+      "status": "planned"
+    },
+    {
+      "id": "public.partners",
+      "title": "Partners",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "public website",
+        "partners"
+      ],
+      "section": "Public Website",
+      "tags": [
+        "public-website",
+        "hub",
+        "planned"
+      ],
+      "url": "/partners",
+      "status": "planned"
+    },
+    {
+      "id": "public.sponsors",
+      "title": "Sponsors",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "public website",
+        "sponsors"
+      ],
+      "section": "Public Website",
+      "tags": [
+        "public-website",
+        "hub",
+        "planned"
+      ],
+      "url": "/sponsors",
+      "status": "planned"
+    },
+    {
+      "id": "public.careers",
+      "title": "Careers",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "public website",
+        "careers"
+      ],
+      "section": "Public Website",
+      "tags": [
+        "public-website",
+        "hub",
+        "planned"
+      ],
+      "url": "/careers",
+      "status": "planned"
+    },
+    {
+      "id": "public.press",
+      "title": "Press",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "public website",
+        "press"
+      ],
+      "section": "Public Website",
+      "tags": [
+        "public-website",
+        "hub",
+        "planned"
+      ],
+      "url": "/press",
+      "status": "planned"
+    },
+    {
+      "id": "public.privacy",
+      "title": "Privacy",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "public website",
+        "privacy"
+      ],
+      "section": "Public Website",
+      "tags": [
+        "public-website",
+        "legal",
+        "planned"
+      ],
+      "url": "/privacy",
+      "status": "planned"
+    },
+    {
+      "id": "public.terms",
+      "title": "Terms",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "public website",
+        "terms"
+      ],
+      "section": "Public Website",
+      "tags": [
+        "public-website",
+        "legal",
+        "planned"
+      ],
+      "url": "/terms",
+      "status": "planned"
+    },
+    {
+      "id": "public.accessibility",
+      "title": "Accessibility",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "public website",
+        "accessibility"
+      ],
+      "section": "Public Website",
+      "tags": [
+        "public-website",
+        "legal",
+        "planned"
+      ],
+      "url": "/accessibility",
+      "status": "planned"
+    },
+    {
+      "id": "public.donate",
+      "title": "Donate",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "public website",
+        "donate"
+      ],
+      "section": "Public Website",
+      "tags": [
+        "public-website",
+        "commerce",
+        "planned"
+      ],
+      "url": "/donate",
+      "status": "planned"
+    },
+    {
+      "id": "radio",
+      "title": "Radio",
+      "description": "Broadcast command surface + online/offline engine over the 1,186-track catalogue.",
+      "keywords": [
+        "radio"
+      ],
+      "section": "Radio",
+      "tags": [
+        "radio",
+        "engagement",
+        "built"
+      ],
+      "url": "/radio",
+      "status": "built"
+    },
+    {
+      "id": "radio.live",
+      "title": "Live",
+      "description": "Local-fallback playback works; live stream URLs stay NULL until rights-verified.",
+      "keywords": [
+        "radio",
+        "live"
+      ],
+      "section": "Radio",
+      "tags": [
+        "radio",
+        "playback",
+        "partial"
+      ],
+      "url": "/radio/live",
+      "status": "partial"
+    },
+    {
+      "id": "radio.now-playing",
+      "title": "Now Playing",
+      "description": "Now-playing panel: stylised titles, access badges, synced lyrics, story modal.",
+      "keywords": [
+        "radio",
+        "now",
+        "playing"
+      ],
+      "section": "Radio",
+      "tags": [
+        "radio",
+        "playback",
+        "built"
+      ],
+      "url": "/radio/now-playing",
+      "status": "built"
+    },
+    {
+      "id": "radio.schedule",
+      "title": "Schedule",
+      "description": "Sequence-only program schedule; wall-clock startTime stays NULL (unverified).",
+      "keywords": [
+        "radio",
+        "schedule"
+      ],
+      "section": "Radio",
+      "tags": [
+        "radio",
+        "programming",
+        "partial"
+      ],
+      "url": "/radio/schedule",
+      "status": "partial"
+    },
+    {
+      "id": "radio.frequencies",
+      "title": "Frequencies",
+      "description": "No licensed frequency exists; fabricating one would break PHKD.",
+      "keywords": [
+        "radio",
+        "frequencies"
+      ],
+      "section": "Radio",
+      "tags": [
+        "radio",
+        "engagement",
+        "planned"
+      ],
+      "url": "/radio/frequencies",
+      "status": "planned"
+    },
+    {
+      "id": "radio.shows",
+      "title": "Shows",
+      "description": "7 station lanes act as shows; dedicated show format not built.",
+      "keywords": [
+        "radio",
+        "shows"
+      ],
+      "section": "Radio",
+      "tags": [
+        "radio",
+        "programming",
+        "partial"
+      ],
+      "url": "/radio/shows",
+      "status": "partial"
+    },
+    {
+      "id": "radio.archive",
+      "title": "Archive",
+      "description": "Full indexed catalogue with covers, versions, storylines.",
+      "keywords": [
+        "radio",
+        "archive"
+      ],
+      "section": "Radio",
+      "tags": [
+        "radio",
+        "library",
+        "built"
+      ],
+      "url": "/radio/archive",
+      "status": "built"
+    },
+    {
+      "id": "radio.request",
+      "title": "Request",
+      "description": "Request intake not built; gift-intent outbox is the nearest primitive.",
+      "keywords": [
+        "radio",
+        "request"
+      ],
+      "section": "Radio",
+      "tags": [
+        "radio",
+        "engagement",
+        "planned"
+      ],
+      "url": "/radio/request",
+      "status": "planned"
+    },
+    {
+      "id": "radio.dedicate",
+      "title": "Dedicate",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "radio",
+        "dedicate"
+      ],
+      "section": "Radio",
+      "tags": [
+        "radio",
+        "engagement",
+        "planned"
+      ],
+      "url": "/radio/dedicate",
+      "status": "planned"
+    },
+    {
+      "id": "radio.download",
+      "title": "Download",
+      "description": "Rights-aware offline bundles exist; user-facing download manager not built.",
+      "keywords": [
+        "radio",
+        "download"
+      ],
+      "section": "Radio",
+      "tags": [
+        "radio",
+        "library",
+        "partial"
+      ],
+      "url": "/radio/download",
+      "status": "partial"
+    },
+    {
+      "id": "podcasts",
+      "title": "Podcasts",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "podcast",
+        "podcasts"
+      ],
+      "section": "Podcast",
+      "tags": [
+        "podcast",
+        "hub",
+        "planned"
+      ],
+      "url": "/podcasts",
+      "status": "planned"
+    },
+    {
+      "id": "podcasts.trending",
+      "title": "Trending",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "podcast",
+        "podcasts",
+        "trending"
+      ],
+      "section": "Podcast",
+      "tags": [
+        "podcast",
+        "trending",
+        "planned"
+      ],
+      "url": "/podcasts/trending",
+      "status": "planned"
+    },
+    {
+      "id": "podcasts.latest",
+      "title": "Latest",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "podcast",
+        "podcasts",
+        "latest"
+      ],
+      "section": "Podcast",
+      "tags": [
+        "podcast",
+        "latest",
+        "planned"
+      ],
+      "url": "/podcasts/latest",
+      "status": "planned"
+    },
+    {
+      "id": "podcasts.categories",
+      "title": "Categories",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "podcast",
+        "podcasts",
+        "categories"
+      ],
+      "section": "Podcast",
+      "tags": [
+        "podcast",
+        "categories",
+        "planned"
+      ],
+      "url": "/podcasts/categories",
+      "status": "planned"
+    },
+    {
+      "id": "research",
+      "title": "Research",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "research hub",
+        "research"
+      ],
+      "section": "Research Hub",
+      "tags": [
+        "research-hub",
+        "hub",
+        "planned"
+      ],
+      "url": "/research",
+      "status": "planned"
+    },
+    {
+      "id": "research.publications",
+      "title": "Publications",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "research hub",
+        "research",
+        "publications"
+      ],
+      "section": "Research Hub",
+      "tags": [
+        "research-hub",
+        "publications",
+        "planned"
+      ],
+      "url": "/research/publications",
+      "status": "planned"
+    },
+    {
+      "id": "research.papers",
+      "title": "Papers",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "research hub",
+        "research",
+        "papers"
+      ],
+      "section": "Research Hub",
+      "tags": [
+        "research-hub",
+        "papers",
+        "planned"
+      ],
+      "url": "/research/papers",
+      "status": "planned"
+    },
+    {
+      "id": "research.datasets",
+      "title": "Datasets",
+      "description": "HKD/CSV/GraphML exports of the knowledge graph exist; dataset portal not built.",
+      "keywords": [
+        "research hub",
+        "research",
+        "datasets"
+      ],
+      "section": "Research Hub",
+      "tags": [
+        "research-hub",
+        "datasets",
+        "partial"
+      ],
+      "url": "/research/datasets",
+      "status": "partial"
+    },
+    {
+      "id": "research.experiments",
+      "title": "Experiments",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "research hub",
+        "research",
+        "experiments"
+      ],
+      "section": "Research Hub",
+      "tags": [
+        "research-hub",
+        "experiments",
+        "planned"
+      ],
+      "url": "/research/experiments",
+      "status": "planned"
+    },
+    {
+      "id": "research.projects",
+      "title": "Projects",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "research hub",
+        "research",
+        "projects"
+      ],
+      "section": "Research Hub",
+      "tags": [
+        "research-hub",
+        "projects",
+        "planned"
+      ],
+      "url": "/research/projects",
+      "status": "planned"
+    },
+    {
+      "id": "research.labs",
+      "title": "Labs",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "research hub",
+        "research",
+        "labs"
+      ],
+      "section": "Research Hub",
+      "tags": [
+        "research-hub",
+        "labs",
+        "planned"
+      ],
+      "url": "/research/labs",
+      "status": "planned"
+    },
+    {
+      "id": "research.authors",
+      "title": "Authors",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "research hub",
+        "research",
+        "authors"
+      ],
+      "section": "Research Hub",
+      "tags": [
+        "research-hub",
+        "authors",
+        "planned"
+      ],
+      "url": "/research/authors",
+      "status": "planned"
+    },
+    {
+      "id": "research.citations",
+      "title": "Citations",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "research hub",
+        "research",
+        "citations"
+      ],
+      "section": "Research Hub",
+      "tags": [
+        "research-hub",
+        "citations",
+        "planned"
+      ],
+      "url": "/research/citations",
+      "status": "planned"
+    },
+    {
+      "id": "research.downloads",
+      "title": "Downloads",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "research hub",
+        "research",
+        "downloads"
+      ],
+      "section": "Research Hub",
+      "tags": [
+        "research-hub",
+        "downloads",
+        "planned"
+      ],
+      "url": "/research/downloads",
+      "status": "planned"
+    },
+    {
+      "id": "discover",
+      "title": "Discover",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "science categories",
+        "discover"
+      ],
+      "section": "Science Categories",
+      "tags": [
+        "science-categories",
+        "hub",
+        "planned"
+      ],
+      "url": "/discover",
+      "status": "planned"
+    },
+    {
+      "id": "discover.space",
+      "title": "Space",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "science categories",
+        "discover",
+        "space"
+      ],
+      "section": "Science Categories",
+      "tags": [
+        "science-categories",
+        "space",
+        "planned"
+      ],
+      "url": "/discover/space",
+      "status": "planned"
+    },
+    {
+      "id": "discover.astronomy",
+      "title": "Astronomy",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "science categories",
+        "discover",
+        "astronomy"
+      ],
+      "section": "Science Categories",
+      "tags": [
+        "science-categories",
+        "astronomy",
+        "planned"
+      ],
+      "url": "/discover/astronomy",
+      "status": "planned"
+    },
+    {
+      "id": "discover.physics",
+      "title": "Physics",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "science categories",
+        "discover",
+        "physics"
+      ],
+      "section": "Science Categories",
+      "tags": [
+        "science-categories",
+        "physics",
+        "planned"
+      ],
+      "url": "/discover/physics",
+      "status": "planned"
+    },
+    {
+      "id": "discover.chemistry",
+      "title": "Chemistry",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "science categories",
+        "discover",
+        "chemistry"
+      ],
+      "section": "Science Categories",
+      "tags": [
+        "science-categories",
+        "chemistry",
+        "planned"
+      ],
+      "url": "/discover/chemistry",
+      "status": "planned"
+    },
+    {
+      "id": "discover.biology",
+      "title": "Biology",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "science categories",
+        "discover",
+        "biology"
+      ],
+      "section": "Science Categories",
+      "tags": [
+        "science-categories",
+        "biology",
+        "planned"
+      ],
+      "url": "/discover/biology",
+      "status": "planned"
+    },
+    {
+      "id": "discover.mathematics",
+      "title": "Mathematics",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "science categories",
+        "discover",
+        "mathematics"
+      ],
+      "section": "Science Categories",
+      "tags": [
+        "science-categories",
+        "mathematics",
+        "planned"
+      ],
+      "url": "/discover/mathematics",
+      "status": "planned"
+    },
+    {
+      "id": "discover.medicine",
+      "title": "Medicine",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "science categories",
+        "discover",
+        "medicine"
+      ],
+      "section": "Science Categories",
+      "tags": [
+        "science-categories",
+        "medicine",
+        "planned"
+      ],
+      "url": "/discover/medicine",
+      "status": "planned"
+    },
+    {
+      "id": "discover.agriculture",
+      "title": "Agriculture",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "science categories",
+        "discover",
+        "agriculture"
+      ],
+      "section": "Science Categories",
+      "tags": [
+        "science-categories",
+        "agriculture",
+        "planned"
+      ],
+      "url": "/discover/agriculture",
+      "status": "planned"
+    },
+    {
+      "id": "discover.environment",
+      "title": "Environment",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "science categories",
+        "discover",
+        "environment"
+      ],
+      "section": "Science Categories",
+      "tags": [
+        "science-categories",
+        "environment",
+        "planned"
+      ],
+      "url": "/discover/environment",
+      "status": "planned"
+    },
+    {
+      "id": "discover.climate",
+      "title": "Climate",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "science categories",
+        "discover",
+        "climate"
+      ],
+      "section": "Science Categories",
+      "tags": [
+        "science-categories",
+        "climate",
+        "planned"
+      ],
+      "url": "/discover/climate",
+      "status": "planned"
+    },
+    {
+      "id": "discover.robotics",
+      "title": "Robotics",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "science categories",
+        "discover",
+        "robotics"
+      ],
+      "section": "Science Categories",
+      "tags": [
+        "science-categories",
+        "robotics",
+        "planned"
+      ],
+      "url": "/discover/robotics",
+      "status": "planned"
+    },
+    {
+      "id": "discover.ai",
+      "title": "Ai",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "science categories",
+        "discover",
+        "ai"
+      ],
+      "section": "Science Categories",
+      "tags": [
+        "science-categories",
+        "ai",
+        "planned"
+      ],
+      "url": "/discover/ai",
+      "status": "planned"
+    },
+    {
+      "id": "discover.history-of-science",
+      "title": "History Of Science",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "science categories",
+        "discover",
+        "history",
+        "of",
+        "science"
+      ],
+      "section": "Science Categories",
+      "tags": [
+        "science-categories",
+        "history-of-science",
+        "planned"
+      ],
+      "url": "/discover/history-of-science",
+      "status": "planned"
+    },
+    {
+      "id": "discover.sanskrit-science",
+      "title": "Sanskrit Science",
+      "description": "Sanskrit dictionary + reference corpus exist in the umbrella app.",
+      "keywords": [
+        "science categories",
+        "discover",
+        "sanskrit",
+        "science"
+      ],
+      "section": "Science Categories",
+      "tags": [
+        "science-categories",
+        "sanskrit-science",
+        "partial"
+      ],
+      "url": "/discover/sanskrit-science",
+      "status": "partial"
+    },
+    {
+      "id": "discover.innovation",
+      "title": "Innovation",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "science categories",
+        "discover",
+        "innovation"
+      ],
+      "section": "Science Categories",
+      "tags": [
+        "science-categories",
+        "innovation",
+        "planned"
+      ],
+      "url": "/discover/innovation",
+      "status": "planned"
+    },
+    {
+      "id": "discover.startups",
+      "title": "Startups",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "science categories",
+        "discover",
+        "startups"
+      ],
+      "section": "Science Categories",
+      "tags": [
+        "science-categories",
+        "startups",
+        "planned"
+      ],
+      "url": "/discover/startups",
+      "status": "planned"
+    },
+    {
+      "id": "discover.student",
+      "title": "Student",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "science categories",
+        "discover",
+        "student"
+      ],
+      "section": "Science Categories",
+      "tags": [
+        "science-categories",
+        "student",
+        "planned"
+      ],
+      "url": "/discover/student",
+      "status": "planned"
+    },
+    {
+      "id": "community",
+      "title": "Community",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "community"
+      ],
+      "section": "Community",
+      "tags": [
+        "community",
+        "hub",
+        "planned"
+      ],
+      "url": "/community",
+      "status": "planned"
+    },
+    {
+      "id": "community.discussions",
+      "title": "Discussions",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "community",
+        "discussions"
+      ],
+      "section": "Community",
+      "tags": [
+        "community",
+        "discussions",
+        "planned"
+      ],
+      "url": "/community/discussions",
+      "status": "planned"
+    },
+    {
+      "id": "community.questions",
+      "title": "Questions",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "community",
+        "questions"
+      ],
+      "section": "Community",
+      "tags": [
+        "community",
+        "questions",
+        "planned"
+      ],
+      "url": "/community/questions",
+      "status": "planned"
+    },
+    {
+      "id": "community.polls",
+      "title": "Polls",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "community",
+        "polls"
+      ],
+      "section": "Community",
+      "tags": [
+        "community",
+        "polls",
+        "planned"
+      ],
+      "url": "/community/polls",
+      "status": "planned"
+    },
+    {
+      "id": "community.events",
+      "title": "Events",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "community",
+        "events"
+      ],
+      "section": "Community",
+      "tags": [
+        "community",
+        "events",
+        "planned"
+      ],
+      "url": "/community/events",
+      "status": "planned"
+    },
+    {
+      "id": "community.clubs",
+      "title": "Clubs",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "community",
+        "clubs"
+      ],
+      "section": "Community",
+      "tags": [
+        "community",
+        "clubs",
+        "planned"
+      ],
+      "url": "/community/clubs",
+      "status": "planned"
+    },
+    {
+      "id": "community.challenges",
+      "title": "Challenges",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "community",
+        "challenges"
+      ],
+      "section": "Community",
+      "tags": [
+        "community",
+        "challenges",
+        "planned"
+      ],
+      "url": "/community/challenges",
+      "status": "planned"
+    },
+    {
+      "id": "community.leaderboard",
+      "title": "Leaderboard",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "community",
+        "leaderboard"
+      ],
+      "section": "Community",
+      "tags": [
+        "community",
+        "leaderboard",
+        "planned"
+      ],
+      "url": "/community/leaderboard",
+      "status": "planned"
+    },
+    {
+      "id": "news",
+      "title": "News",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "news"
+      ],
+      "section": "News",
+      "tags": [
+        "news",
+        "hub",
+        "planned"
+      ],
+      "url": "/news",
+      "status": "planned"
+    },
+    {
+      "id": "news.science",
+      "title": "Science",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "news",
+        "science"
+      ],
+      "section": "News",
+      "tags": [
+        "news",
+        "science",
+        "planned"
+      ],
+      "url": "/news/science",
+      "status": "planned"
+    },
+    {
+      "id": "news.space",
+      "title": "Space",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "news",
+        "space"
+      ],
+      "section": "News",
+      "tags": [
+        "news",
+        "space",
+        "planned"
+      ],
+      "url": "/news/space",
+      "status": "planned"
+    },
+    {
+      "id": "news.technology",
+      "title": "Technology",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "news",
+        "technology"
+      ],
+      "section": "News",
+      "tags": [
+        "news",
+        "technology",
+        "planned"
+      ],
+      "url": "/news/technology",
+      "status": "planned"
+    },
+    {
+      "id": "news.agriculture",
+      "title": "Agriculture",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "news",
+        "agriculture"
+      ],
+      "section": "News",
+      "tags": [
+        "news",
+        "agriculture",
+        "planned"
+      ],
+      "url": "/news/agriculture",
+      "status": "planned"
+    },
+    {
+      "id": "news.india",
+      "title": "India",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "news",
+        "india"
+      ],
+      "section": "News",
+      "tags": [
+        "news",
+        "india",
+        "planned"
+      ],
+      "url": "/news/india",
+      "status": "planned"
+    },
+    {
+      "id": "news.world",
+      "title": "World",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "news",
+        "world"
+      ],
+      "section": "News",
+      "tags": [
+        "news",
+        "world",
+        "planned"
+      ],
+      "url": "/news/world",
+      "status": "planned"
+    },
+    {
+      "id": "news.videos",
+      "title": "Videos",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "news",
+        "videos"
+      ],
+      "section": "News",
+      "tags": [
+        "news",
+        "videos",
+        "planned"
+      ],
+      "url": "/news/videos",
+      "status": "planned"
+    },
+    {
+      "id": "media.videos",
+      "title": "Videos",
+      "description": "Visualizer capture exists; video library not built.",
+      "keywords": [
+        "media",
+        "videos"
+      ],
+      "section": "Media",
+      "tags": [
+        "media",
+        "hub",
+        "partial"
+      ],
+      "url": "/videos",
+      "status": "partial"
+    },
+    {
+      "id": "media.shorts",
+      "title": "Shorts",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "media",
+        "shorts"
+      ],
+      "section": "Media",
+      "tags": [
+        "media",
+        "hub",
+        "planned"
+      ],
+      "url": "/shorts",
+      "status": "planned"
+    },
+    {
+      "id": "media.gallery",
+      "title": "Gallery",
+      "description": "Cover-art gallery exists for the catalogue.",
+      "keywords": [
+        "media",
+        "gallery"
+      ],
+      "section": "Media",
+      "tags": [
+        "media",
+        "hub",
+        "partial"
+      ],
+      "url": "/gallery",
+      "status": "partial"
+    },
+    {
+      "id": "media.infographics",
+      "title": "Infographics",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "media",
+        "infographics"
+      ],
+      "section": "Media",
+      "tags": [
+        "media",
+        "hub",
+        "planned"
+      ],
+      "url": "/infographics",
+      "status": "planned"
+    },
+    {
+      "id": "media.animations",
+      "title": "Animations",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "media",
+        "animations"
+      ],
+      "section": "Media",
+      "tags": [
+        "media",
+        "hub",
+        "planned"
+      ],
+      "url": "/animations",
+      "status": "planned"
+    },
+    {
+      "id": "media.livestreams",
+      "title": "Livestreams",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "media",
+        "livestreams"
+      ],
+      "section": "Media",
+      "tags": [
+        "media",
+        "hub",
+        "planned"
+      ],
+      "url": "/livestreams",
+      "status": "planned"
+    },
+    {
+      "id": "ai.rj",
+      "title": "Rj",
+      "description": "Persona TTS announcements (Web Speech API); generative RJ not built.",
+      "keywords": [
+        "ai",
+        "rj"
+      ],
+      "section": "AI",
+      "tags": [
+        "ai",
+        "rj",
+        "partial"
+      ],
+      "url": "/ai/rj",
+      "status": "partial"
+    },
+    {
+      "id": "ai.chat",
+      "title": "Chat",
+      "description": "Assistant API route exists in the umbrella app.",
+      "keywords": [
+        "ai",
+        "chat"
+      ],
+      "section": "AI",
+      "tags": [
+        "ai",
+        "chat",
+        "partial"
+      ],
+      "url": "/ai/chat",
+      "status": "partial"
+    },
+    {
+      "id": "ai.transcript",
+      "title": "Transcript",
+      "description": "Draft lyric/transcript cue data exists (timing unverified).",
+      "keywords": [
+        "ai",
+        "transcript"
+      ],
+      "section": "AI",
+      "tags": [
+        "ai",
+        "transcript",
+        "partial"
+      ],
+      "url": "/ai/transcript",
+      "status": "partial"
+    },
+    {
+      "id": "ai.search",
+      "title": "Search",
+      "description": "Knowledge search API exists; AI ranking not built.",
+      "keywords": [
+        "ai",
+        "search"
+      ],
+      "section": "AI",
+      "tags": [
+        "ai",
+        "search",
+        "partial"
+      ],
+      "url": "/ai/search",
+      "status": "partial"
+    },
+    {
+      "id": "search",
+      "title": "Search",
+      "description": "Catalogue + knowledge search exist; unified search page not built.",
+      "keywords": [
+        "search"
+      ],
+      "section": "Search",
+      "tags": [
+        "search",
+        "hub",
+        "partial"
+      ],
+      "url": "/search",
+      "status": "partial"
+    },
+    {
+      "id": "search.radio",
+      "title": "Radio",
+      "description": "Foundation exists — see implementedBy.",
+      "keywords": [
+        "search",
+        "radio"
+      ],
+      "section": "Search",
+      "tags": [
+        "search",
+        "radio",
+        "partial"
+      ],
+      "url": "/search/radio",
+      "status": "partial"
+    },
+    {
+      "id": "search.podcasts",
+      "title": "Podcasts",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "search",
+        "podcasts"
+      ],
+      "section": "Search",
+      "tags": [
+        "search",
+        "podcasts",
+        "planned"
+      ],
+      "url": "/search/podcasts",
+      "status": "planned"
+    },
+    {
+      "id": "search.research",
+      "title": "Research",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "search",
+        "research"
+      ],
+      "section": "Search",
+      "tags": [
+        "search",
+        "research",
+        "planned"
+      ],
+      "url": "/search/research",
+      "status": "planned"
+    },
+    {
+      "id": "search.news",
+      "title": "News",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "search",
+        "news"
+      ],
+      "section": "Search",
+      "tags": [
+        "search",
+        "news",
+        "planned"
+      ],
+      "url": "/search/news",
+      "status": "planned"
+    },
+    {
+      "id": "search.people",
+      "title": "People",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "search",
+        "people"
+      ],
+      "section": "Search",
+      "tags": [
+        "search",
+        "people",
+        "planned"
+      ],
+      "url": "/search/people",
+      "status": "planned"
+    },
+    {
+      "id": "user.login",
+      "title": "Login",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "user",
+        "login"
+      ],
+      "section": "User",
+      "tags": [
+        "user",
+        "hub",
+        "planned"
+      ],
+      "url": "/login",
+      "status": "planned"
+    },
+    {
+      "id": "user.signup",
+      "title": "Signup",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "user",
+        "signup"
+      ],
+      "section": "User",
+      "tags": [
+        "user",
+        "hub",
+        "planned"
+      ],
+      "url": "/signup",
+      "status": "planned"
+    },
+    {
+      "id": "user.forgot-password",
+      "title": "Forgot Password",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "user",
+        "forgot",
+        "password"
+      ],
+      "section": "User",
+      "tags": [
+        "user",
+        "hub",
+        "planned"
+      ],
+      "url": "/forgot-password",
+      "status": "planned"
+    },
+    {
+      "id": "user.verify",
+      "title": "Verify",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "user",
+        "verify"
+      ],
+      "section": "User",
+      "tags": [
+        "user",
+        "hub",
+        "planned"
+      ],
+      "url": "/verify",
+      "status": "planned"
+    },
+    {
+      "id": "premium",
+      "title": "Premium",
+      "description": "₹29 track / ₹299 all-access model + checkout surface; live payments await Razorpay keys.",
+      "keywords": [
+        "premium"
+      ],
+      "section": "Premium",
+      "tags": [
+        "premium",
+        "commerce",
+        "partial"
+      ],
+      "url": "/premium",
+      "status": "partial"
+    },
+    {
+      "id": "premium.plans",
+      "title": "Plans",
+      "description": "Foundation exists — see implementedBy.",
+      "keywords": [
+        "premium",
+        "plans"
+      ],
+      "section": "Premium",
+      "tags": [
+        "premium",
+        "commerce",
+        "partial"
+      ],
+      "url": "/premium/plans",
+      "status": "partial"
+    },
+    {
+      "id": "premium.payment",
+      "title": "Payment",
+      "description": "Server-priced Razorpay orders + HMAC-verified webhooks built; needs keys + one real txn.",
+      "keywords": [
+        "premium",
+        "payment"
+      ],
+      "section": "Premium",
+      "tags": [
+        "premium",
+        "commerce",
+        "partial"
+      ],
+      "url": "/premium/payment",
+      "status": "partial"
+    },
+    {
+      "id": "ecosystem",
+      "title": "Ecosystem",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "ecosystem integration",
+        "ecosystem"
+      ],
+      "section": "Ecosystem Integration",
+      "tags": [
+        "ecosystem-integration",
+        "hub",
+        "planned"
+      ],
+      "url": "/ecosystem",
+      "status": "planned"
+    },
+    {
+      "id": "ecosystem.nlm",
+      "title": "Nlm",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "ecosystem integration",
+        "ecosystem",
+        "nlm"
+      ],
+      "section": "Ecosystem Integration",
+      "tags": [
+        "ecosystem-integration",
+        "nlm",
+        "planned"
+      ],
+      "url": "/ecosystem/nlm",
+      "status": "planned"
+    },
+    {
+      "id": "ecosystem.cic",
+      "title": "Cic",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "ecosystem integration",
+        "ecosystem",
+        "cic"
+      ],
+      "section": "Ecosystem Integration",
+      "tags": [
+        "ecosystem-integration",
+        "cic",
+        "planned"
+      ],
+      "url": "/ecosystem/cic",
+      "status": "planned"
+    },
+    {
+      "id": "ecosystem.shree-kautilya",
+      "title": "Shree Kautilya",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "ecosystem integration",
+        "ecosystem",
+        "shree",
+        "kautilya"
+      ],
+      "section": "Ecosystem Integration",
+      "tags": [
+        "ecosystem-integration",
+        "shree-kautilya",
+        "planned"
+      ],
+      "url": "/ecosystem/shree-kautilya",
+      "status": "planned"
+    },
+    {
+      "id": "ecosystem.lipi",
+      "title": "Lipi",
+      "description": "Lipi civilizations module exists in the umbrella app.",
+      "keywords": [
+        "ecosystem integration",
+        "ecosystem",
+        "lipi"
+      ],
+      "section": "Ecosystem Integration",
+      "tags": [
+        "ecosystem-integration",
+        "lipi",
+        "partial"
+      ],
+      "url": "/ecosystem/lipi",
+      "status": "partial"
+    },
+    {
+      "id": "ecosystem.maataa",
+      "title": "Maataa",
+      "description": "Foundation exists — see implementedBy.",
+      "keywords": [
+        "ecosystem integration",
+        "ecosystem",
+        "maataa"
+      ],
+      "section": "Ecosystem Integration",
+      "tags": [
+        "ecosystem-integration",
+        "maataa",
+        "partial"
+      ],
+      "url": "/ecosystem/maataa",
+      "status": "partial"
+    },
+    {
+      "id": "ecosystem.corpus",
+      "title": "Corpus",
+      "description": "Foundation exists — see implementedBy.",
+      "keywords": [
+        "ecosystem integration",
+        "ecosystem",
+        "corpus"
+      ],
+      "section": "Ecosystem Integration",
+      "tags": [
+        "ecosystem-integration",
+        "corpus",
+        "partial"
+      ],
+      "url": "/ecosystem/corpus",
+      "status": "partial"
+    },
+    {
+      "id": "ecosystem.apis",
+      "title": "Apis",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "ecosystem integration",
+        "ecosystem",
+        "apis"
+      ],
+      "section": "Ecosystem Integration",
+      "tags": [
+        "ecosystem-integration",
+        "apis",
+        "planned"
+      ],
+      "url": "/ecosystem/apis",
+      "status": "planned"
+    },
+    {
+      "id": "ecosystem.developers",
+      "title": "Developers",
+      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "keywords": [
+        "ecosystem integration",
+        "ecosystem",
+        "developers"
+      ],
+      "section": "Ecosystem Integration",
+      "tags": [
+        "ecosystem-integration",
+        "developers",
+        "planned"
+      ],
+      "url": "/ecosystem/developers",
+      "status": "planned"
+    }
+  ]
+}

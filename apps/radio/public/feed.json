@@ -1,0 +1,273 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Radio Vaigyaaniq — Ecosystem",
+  "home_page_url": "http://localhost:3000",
+  "feed_url": "http://localhost:3000/feed.json",
+  "description": "Live sections of the Radio Vaigyaaniq platform (IA feed; statuses evidence-backed).",
+  "items": [
+    {
+      "id": "public.home",
+      "url": "http://localhost:3000/",
+      "title": "Home",
+      "content_text": "Standalone landing — surfaces, tools, payment API.",
+      "tags": [
+        "public-website",
+        "hub",
+        "built"
+      ]
+    },
+    {
+      "id": "radio",
+      "url": "http://localhost:3000/radio",
+      "title": "Radio",
+      "content_text": "Broadcast command surface + online/offline engine over the 1,186-track catalogue.",
+      "tags": [
+        "radio",
+        "engagement",
+        "built"
+      ]
+    },
+    {
+      "id": "radio.live",
+      "url": "http://localhost:3000/radio/live",
+      "title": "Live",
+      "content_text": "Local-fallback playback works; live stream URLs stay NULL until rights-verified.",
+      "tags": [
+        "radio",
+        "playback",
+        "partial"
+      ]
+    },
+    {
+      "id": "radio.now-playing",
+      "url": "http://localhost:3000/radio/now-playing",
+      "title": "Now Playing",
+      "content_text": "Now-playing panel: stylised titles, access badges, synced lyrics, story modal.",
+      "tags": [
+        "radio",
+        "playback",
+        "built"
+      ]
+    },
+    {
+      "id": "radio.schedule",
+      "url": "http://localhost:3000/radio/schedule",
+      "title": "Schedule",
+      "content_text": "Sequence-only program schedule; wall-clock startTime stays NULL (unverified).",
+      "tags": [
+        "radio",
+        "programming",
+        "partial"
+      ]
+    },
+    {
+      "id": "radio.shows",
+      "url": "http://localhost:3000/radio/shows",
+      "title": "Shows",
+      "content_text": "7 station lanes act as shows; dedicated show format not built.",
+      "tags": [
+        "radio",
+        "programming",
+        "partial"
+      ]
+    },
+    {
+      "id": "radio.archive",
+      "url": "http://localhost:3000/radio/archive",
+      "title": "Archive",
+      "content_text": "Full indexed catalogue with covers, versions, storylines.",
+      "tags": [
+        "radio",
+        "library",
+        "built"
+      ]
+    },
+    {
+      "id": "radio.download",
+      "url": "http://localhost:3000/radio/download",
+      "title": "Download",
+      "content_text": "Rights-aware offline bundles exist; user-facing download manager not built.",
+      "tags": [
+        "radio",
+        "library",
+        "partial"
+      ]
+    },
+    {
+      "id": "research.datasets",
+      "url": "http://localhost:3000/research/datasets",
+      "title": "Datasets",
+      "content_text": "HKD/CSV/GraphML exports of the knowledge graph exist; dataset portal not built.",
+      "tags": [
+        "research-hub",
+        "datasets",
+        "partial"
+      ]
+    },
+    {
+      "id": "discover.sanskrit-science",
+      "url": "http://localhost:3000/discover/sanskrit-science",
+      "title": "Sanskrit Science",
+      "content_text": "Sanskrit dictionary + reference corpus exist in the umbrella app.",
+      "tags": [
+        "science-categories",
+        "sanskrit-science",
+        "partial"
+      ]
+    },
+    {
+      "id": "media.videos",
+      "url": "http://localhost:3000/videos",
+      "title": "Videos",
+      "content_text": "Visualizer capture exists; video library not built.",
+      "tags": [
+        "media",
+        "hub",
+        "partial"
+      ]
+    },
+    {
+      "id": "media.gallery",
+      "url": "http://localhost:3000/gallery",
+      "title": "Gallery",
+      "content_text": "Cover-art gallery exists for the catalogue.",
+      "tags": [
+        "media",
+        "hub",
+        "partial"
+      ]
+    },
+    {
+      "id": "ai.rj",
+      "url": "http://localhost:3000/ai/rj",
+      "title": "Rj",
+      "content_text": "Persona TTS announcements (Web Speech API); generative RJ not built.",
+      "tags": [
+        "ai",
+        "rj",
+        "partial"
+      ]
+    },
+    {
+      "id": "ai.chat",
+      "url": "http://localhost:3000/ai/chat",
+      "title": "Chat",
+      "content_text": "Assistant API route exists in the umbrella app.",
+      "tags": [
+        "ai",
+        "chat",
+        "partial"
+      ]
+    },
+    {
+      "id": "ai.transcript",
+      "url": "http://localhost:3000/ai/transcript",
+      "title": "Transcript",
+      "content_text": "Draft lyric/transcript cue data exists (timing unverified).",
+      "tags": [
+        "ai",
+        "transcript",
+        "partial"
+      ]
+    },
+    {
+      "id": "ai.search",
+      "url": "http://localhost:3000/ai/search",
+      "title": "Search",
+      "content_text": "Knowledge search API exists; AI ranking not built.",
+      "tags": [
+        "ai",
+        "search",
+        "partial"
+      ]
+    },
+    {
+      "id": "search",
+      "url": "http://localhost:3000/search",
+      "title": "Search",
+      "content_text": "Catalogue + knowledge search exist; unified search page not built.",
+      "tags": [
+        "search",
+        "hub",
+        "partial"
+      ]
+    },
+    {
+      "id": "search.radio",
+      "url": "http://localhost:3000/search/radio",
+      "title": "Radio",
+      "content_text": "Foundation exists — see implementedBy.",
+      "tags": [
+        "search",
+        "radio",
+        "partial"
+      ]
+    },
+    {
+      "id": "premium",
+      "url": "http://localhost:3000/premium",
+      "title": "Premium",
+      "content_text": "₹29 track / ₹299 all-access model + checkout surface; live payments await Razorpay keys.",
+      "tags": [
+        "premium",
+        "commerce",
+        "partial"
+      ]
+    },
+    {
+      "id": "premium.plans",
+      "url": "http://localhost:3000/premium/plans",
+      "title": "Plans",
+      "content_text": "Foundation exists — see implementedBy.",
+      "tags": [
+        "premium",
+        "commerce",
+        "partial"
+      ]
+    },
+    {
+      "id": "premium.payment",
+      "url": "http://localhost:3000/premium/payment",
+      "title": "Payment",
+      "content_text": "Server-priced Razorpay orders + HMAC-verified webhooks built; needs keys + one real txn.",
+      "tags": [
+        "premium",
+        "commerce",
+        "partial"
+      ]
+    },
+    {
+      "id": "ecosystem.lipi",
+      "url": "http://localhost:3000/ecosystem/lipi",
+      "title": "Lipi",
+      "content_text": "Lipi civilizations module exists in the umbrella app.",
+      "tags": [
+        "ecosystem-integration",
+        "lipi",
+        "partial"
+      ]
+    },
+    {
+      "id": "ecosystem.maataa",
+      "url": "http://localhost:3000/ecosystem/maataa",
+      "title": "Maataa",
+      "content_text": "Foundation exists — see implementedBy.",
+      "tags": [
+        "ecosystem-integration",
+        "maataa",
+        "partial"
+      ]
+    },
+    {
+      "id": "ecosystem.corpus",
+      "url": "http://localhost:3000/ecosystem/corpus",
+      "title": "Corpus",
+      "content_text": "Foundation exists — see implementedBy.",
+      "tags": [
+        "ecosystem-integration",
+        "corpus",
+        "partial"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+# API Map
+
+Generated 2026-07-09T17:29:47.074Z. Statuses are honest — planned endpoints do not exist yet.
+
+| endpoint | status | used by |
+|---|---|---|
+| `GET /api/stations` | 🟡 partial | `radio`, `radio.live` |
+| `GET /api/evidence` | 🟡 partial | `radio` |
+| `GET /api/stream-candidates` | 🟡 partial | `radio.live` |
+| `GET /api/schedule/:stationSlug` | 🟡 partial | `radio.schedule` |
+| `GET /api/offline-bundle` | 🟡 partial | `radio.download` |
+| `GET /api/search` | 🟡 partial | `search` |
+| `POST /api/payments/order` | 🟡 partial | `premium.payment` |
+| `POST /api/payments/webhook` | 🟡 partial | `premium.payment` |
+| `GET /api/entitlements/:userId` | 🟡 partial | `premium.library` |
+| `GET /api/analytics` | 🟡 partial | `analytics` |
+| `POST /admin/login` | ✅ built | `admin` |
+| `GET /admin/state` | ✅ built | `admin` |
+| `POST /admin/rights-proof` | ✅ built | `admin` |
+| `GET /admin/cache-status` | ✅ built | `admin` |
+| `GET /api/v1/radio` | ⬜ planned | `api.radio` |
+| `GET /api/v1/search` | ⬜ planned | `api.search` |
+| `GET /api/v1/analytics` | ⬜ planned | `api.analytics` |
+| `POST /api/v1/payments` | ⬜ planned | `api.payments` |

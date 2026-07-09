@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+  <title>Radio Vaigyaaniq — Ecosystem</title>
+  <link>http://localhost:3000</link>
+  <description>Live sections of the Radio Vaigyaaniq platform (information-architecture feed; statuses evidence-backed).</description>
+  <lastBuildDate>Thu, 09 Jul 2026 17:29:47 GMT</lastBuildDate>
+  <item><title>Home</title><link>http://localhost:3000/</link><guid isPermaLink="false">public.home</guid><description>Standalone landing — surfaces, tools, payment API.</description></item>
+  <item><title>Radio</title><link>http://localhost:3000/radio</link><guid isPermaLink="false">radio</guid><description>Broadcast command surface + online/offline engine over the 1,186-track catalogue.</description></item>
+  <item><title>Live</title><link>http://localhost:3000/radio/live</link><guid isPermaLink="false">radio.live</guid><description>Local-fallback playback works; live stream URLs stay NULL until rights-verified.</description></item>
+  <item><title>Now Playing</title><link>http://localhost:3000/radio/now-playing</link><guid isPermaLink="false">radio.now-playing</guid><description>Now-playing panel: stylised titles, access badges, synced lyrics, story modal.</description></item>
+  <item><title>Schedule</title><link>http://localhost:3000/radio/schedule</link><guid isPermaLink="false">radio.schedule</guid><description>Sequence-only program schedule; wall-clock startTime stays NULL (unverified).</description></item>
+  <item><title>Shows</title><link>http://localhost:3000/radio/shows</link><guid isPermaLink="false">radio.shows</guid><description>7 station lanes act as shows; dedicated show format not built.</description></item>
+  <item><title>Archive</title><link>http://localhost:3000/radio/archive</link><guid isPermaLink="false">radio.archive</guid><description>Full indexed catalogue with covers, versions, storylines.</description></item>
+  <item><title>Download</title><link>http://localhost:3000/radio/download</link><guid isPermaLink="false">radio.download</guid><description>Rights-aware offline bundles exist; user-facing download manager not built.</description></item>
+  <item><title>Datasets</title><link>http://localhost:3000/research/datasets</link><guid isPermaLink="false">research.datasets</guid><description>HKD/CSV/GraphML exports of the knowledge graph exist; dataset portal not built.</description></item>
+  <item><title>Sanskrit Science</title><link>http://localhost:3000/discover/sanskrit-science</link><guid isPermaLink="false">discover.sanskrit-science</guid><description>Sanskrit dictionary + reference corpus exist in the umbrella app.</description></item>
+  <item><title>Videos</title><link>http://localhost:3000/videos</link><guid isPermaLink="false">media.videos</guid><description>Visualizer capture exists; video library not built.</description></item>
+  <item><title>Gallery</title><link>http://localhost:3000/gallery</link><guid isPermaLink="false">media.gallery</guid><description>Cover-art gallery exists for the catalogue.</description></item>
+  <item><title>Rj</title><link>http://localhost:3000/ai/rj</link><guid isPermaLink="false">ai.rj</guid><description>Persona TTS announcements (Web Speech API); generative RJ not built.</description></item>
+  <item><title>Chat</title><link>http://localhost:3000/ai/chat</link><guid isPermaLink="false">ai.chat</guid><description>Assistant API route exists in the umbrella app.</description></item>
+  <item><title>Transcript</title><link>http://localhost:3000/ai/transcript</link><guid isPermaLink="false">ai.transcript</guid><description>Draft lyric/transcript cue data exists (timing unverified).</description></item>
+  <item><title>Search</title><link>http://localhost:3000/ai/search</link><guid isPermaLink="false">ai.search</guid><description>Knowledge search API exists; AI ranking not built.</description></item>
+  <item><title>Search</title><link>http://localhost:3000/search</link><guid isPermaLink="false">search</guid><description>Catalogue + knowledge search exist; unified search page not built.</description></item>
+  <item><title>Radio</title><link>http://localhost:3000/search/radio</link><guid isPermaLink="false">search.radio</guid><description>Foundation exists — see implementedBy.</description></item>
+  <item><title>Premium</title><link>http://localhost:3000/premium</link><guid isPermaLink="false">premium</guid><description>₹29 track / ₹299 all-access model + checkout surface; live payments await Razorpay keys.</description></item>
+  <item><title>Plans</title><link>http://localhost:3000/premium/plans</link><guid isPermaLink="false">premium.plans</guid><description>Foundation exists — see implementedBy.</description></item>
+  <item><title>Payment</title><link>http://localhost:3000/premium/payment</link><guid isPermaLink="false">premium.payment</guid><description>Server-priced Razorpay orders + HMAC-verified webhooks built; needs keys + one real txn.</description></item>
+  <item><title>Lipi</title><link>http://localhost:3000/ecosystem/lipi</link><guid isPermaLink="false">ecosystem.lipi</guid><description>Lipi civilizations module exists in the umbrella app.</description></item>
+  <item><title>Maataa</title><link>http://localhost:3000/ecosystem/maataa</link><guid isPermaLink="false">ecosystem.maataa</guid><description>Foundation exists — see implementedBy.</description></item>
+  <item><title>Corpus</title><link>http://localhost:3000/ecosystem/corpus</link><guid isPermaLink="false">ecosystem.corpus</guid><description>Foundation exists — see implementedBy.</description></item>
+</channel></rss>

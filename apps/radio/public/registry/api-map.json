@@ -1,0 +1,265 @@
+{
+  "generatedAt": "2026-07-09T17:29:47.074Z",
+  "byRoute": {
+    "radio": [
+      {
+        "method": "GET",
+        "path": "/api/stations",
+        "status": "partial",
+        "description": "Station lineup (radio-backend)"
+      },
+      {
+        "method": "GET",
+        "path": "/api/evidence",
+        "status": "partial",
+        "description": "Manifest evidence"
+      }
+    ],
+    "radio.live": [
+      {
+        "method": "GET",
+        "path": "/api/stations",
+        "status": "partial"
+      },
+      {
+        "method": "GET",
+        "path": "/api/stream-candidates",
+        "status": "partial",
+        "description": "Opt-in test streams (rights unverified)"
+      }
+    ],
+    "radio.schedule": [
+      {
+        "method": "GET",
+        "path": "/api/schedule/:stationSlug",
+        "status": "partial"
+      }
+    ],
+    "radio.download": [
+      {
+        "method": "GET",
+        "path": "/api/offline-bundle",
+        "status": "partial",
+        "description": "Rights-aware offline bundle"
+      }
+    ],
+    "search": [
+      {
+        "method": "GET",
+        "path": "/api/search",
+        "status": "partial"
+      }
+    ],
+    "premium.payment": [
+      {
+        "method": "POST",
+        "path": "/api/payments/order",
+        "status": "partial",
+        "description": "Server-priced Razorpay order"
+      },
+      {
+        "method": "POST",
+        "path": "/api/payments/webhook",
+        "status": "partial",
+        "description": "HMAC-verified capture → entitlement"
+      }
+    ],
+    "premium.library": [
+      {
+        "method": "GET",
+        "path": "/api/entitlements/:userId",
+        "status": "partial"
+      }
+    ],
+    "analytics": [
+      {
+        "method": "GET",
+        "path": "/api/analytics",
+        "status": "partial"
+      }
+    ],
+    "admin": [
+      {
+        "method": "POST",
+        "path": "/admin/login",
+        "status": "built"
+      },
+      {
+        "method": "GET",
+        "path": "/admin/state",
+        "status": "built"
+      },
+      {
+        "method": "POST",
+        "path": "/admin/rights-proof",
+        "status": "built"
+      },
+      {
+        "method": "GET",
+        "path": "/admin/cache-status",
+        "status": "built"
+      }
+    ],
+    "api.radio": [
+      {
+        "method": "GET",
+        "path": "/api/v1/radio",
+        "status": "planned",
+        "description": "Versioned alias of /api/stations"
+      }
+    ],
+    "api.search": [
+      {
+        "method": "GET",
+        "path": "/api/v1/search",
+        "status": "planned",
+        "description": "Versioned alias of /api/search"
+      }
+    ],
+    "api.analytics": [
+      {
+        "method": "GET",
+        "path": "/api/v1/analytics",
+        "status": "planned",
+        "description": "Versioned alias of /api/analytics"
+      }
+    ],
+    "api.payments": [
+      {
+        "method": "POST",
+        "path": "/api/v1/payments",
+        "status": "planned",
+        "description": "Versioned alias of /api/payments/*"
+      }
+    ]
+  },
+  "byEndpoint": {
+    "GET /api/stations": {
+      "status": "partial",
+      "description": "Station lineup (radio-backend)",
+      "usedBy": [
+        "radio",
+        "radio.live"
+      ]
+    },
+    "GET /api/evidence": {
+      "status": "partial",
+      "description": "Manifest evidence",
+      "usedBy": [
+        "radio"
+      ]
+    },
+    "GET /api/stream-candidates": {
+      "status": "partial",
+      "description": "Opt-in test streams (rights unverified)",
+      "usedBy": [
+        "radio.live"
+      ]
+    },
+    "GET /api/schedule/:stationSlug": {
+      "status": "partial",
+      "description": null,
+      "usedBy": [
+        "radio.schedule"
+      ]
+    },
+    "GET /api/offline-bundle": {
+      "status": "partial",
+      "description": "Rights-aware offline bundle",
+      "usedBy": [
+        "radio.download"
+      ]
+    },
+    "GET /api/search": {
+      "status": "partial",
+      "description": null,
+      "usedBy": [
+        "search"
+      ]
+    },
+    "POST /api/payments/order": {
+      "status": "partial",
+      "description": "Server-priced Razorpay order",
+      "usedBy": [
+        "premium.payment"
+      ]
+    },
+    "POST /api/payments/webhook": {
+      "status": "partial",
+      "description": "HMAC-verified capture → entitlement",
+      "usedBy": [
+        "premium.payment"
+      ]
+    },
+    "GET /api/entitlements/:userId": {
+      "status": "partial",
+      "description": null,
+      "usedBy": [
+        "premium.library"
+      ]
+    },
+    "GET /api/analytics": {
+      "status": "partial",
+      "description": null,
+      "usedBy": [
+        "analytics"
+      ]
+    },
+    "POST /admin/login": {
+      "status": "built",
+      "description": null,
+      "usedBy": [
+        "admin"
+      ]
+    },
+    "GET /admin/state": {
+      "status": "built",
+      "description": null,
+      "usedBy": [
+        "admin"
+      ]
+    },
+    "POST /admin/rights-proof": {
+      "status": "built",
+      "description": null,
+      "usedBy": [
+        "admin"
+      ]
+    },
+    "GET /admin/cache-status": {
+      "status": "built",
+      "description": null,
+      "usedBy": [
+        "admin"
+      ]
+    },
+    "GET /api/v1/radio": {
+      "status": "planned",
+      "description": "Versioned alias of /api/stations",
+      "usedBy": [
+        "api.radio"
+      ]
+    },
+    "GET /api/v1/search": {
+      "status": "planned",
+      "description": "Versioned alias of /api/search",
+      "usedBy": [
+        "api.search"
+      ]
+    },
+    "GET /api/v1/analytics": {
+      "status": "planned",
+      "description": "Versioned alias of /api/analytics",
+      "usedBy": [
+        "api.analytics"
+      ]
+    },
+    "POST /api/v1/payments": {
+      "status": "planned",
+      "description": "Versioned alias of /api/payments/*",
+      "usedBy": [
+        "api.payments"
+      ]
+    }
+  }
+}

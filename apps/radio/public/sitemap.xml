@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>http://localhost:3000/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>http://localhost:3000/radio</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>http://localhost:3000/radio/live</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>http://localhost:3000/radio/now-playing</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>http://localhost:3000/radio/schedule</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>http://localhost:3000/radio/shows</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>http://localhost:3000/radio/archive</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>http://localhost:3000/radio/download</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>http://localhost:3000/research/datasets</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>http://localhost:3000/discover/sanskrit-science</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>http://localhost:3000/videos</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>http://localhost:3000/gallery</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>http://localhost:3000/ai/rj</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>http://localhost:3000/ai/chat</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>http://localhost:3000/ai/transcript</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>http://localhost:3000/ai/search</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>http://localhost:3000/search</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>http://localhost:3000/search/radio</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>http://localhost:3000/premium</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>http://localhost:3000/premium/plans</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>http://localhost:3000/premium/payment</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>http://localhost:3000/ecosystem/lipi</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>http://localhost:3000/ecosystem/maataa</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>http://localhost:3000/ecosystem/corpus</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+</urlset>

@@ -1,0 +1,154 @@
+{
+  "generatedAt": "2026-07-09T17:29:47.074Z",
+  "nodes": [
+    "radio.archive",
+    "radio.request",
+    "radio.dedicate",
+    "radio.download",
+    "academy.tests",
+    "academy.certificates",
+    "academy.my-learning",
+    "community.profile",
+    "user.login",
+    "user.profile",
+    "user.profile.edit",
+    "user.bookmarks",
+    "user.history",
+    "user.downloads",
+    "user.notifications",
+    "user.settings",
+    "premium.plans",
+    "premium.payment",
+    "premium.history",
+    "premium.library",
+    "studio.upload",
+    "studio.queue",
+    "cms.shows",
+    "cms.scheduler"
+  ],
+  "edges": [
+    {
+      "from": "radio.request",
+      "to": "user.login"
+    },
+    {
+      "from": "radio.dedicate",
+      "to": "user.login"
+    },
+    {
+      "from": "radio.download",
+      "to": "radio.archive"
+    },
+    {
+      "from": "academy.certificates",
+      "to": "user.login"
+    },
+    {
+      "from": "academy.certificates",
+      "to": "academy.tests"
+    },
+    {
+      "from": "academy.my-learning",
+      "to": "user.login"
+    },
+    {
+      "from": "community.profile",
+      "to": "user.login"
+    },
+    {
+      "from": "user.profile",
+      "to": "user.login"
+    },
+    {
+      "from": "user.profile.edit",
+      "to": "user.profile"
+    },
+    {
+      "from": "user.bookmarks",
+      "to": "user.login"
+    },
+    {
+      "from": "user.history",
+      "to": "user.login"
+    },
+    {
+      "from": "user.downloads",
+      "to": "user.login"
+    },
+    {
+      "from": "user.downloads",
+      "to": "radio.download"
+    },
+    {
+      "from": "user.notifications",
+      "to": "user.login"
+    },
+    {
+      "from": "user.settings",
+      "to": "user.login"
+    },
+    {
+      "from": "premium.payment",
+      "to": "user.login"
+    },
+    {
+      "from": "premium.payment",
+      "to": "user.profile"
+    },
+    {
+      "from": "premium.payment",
+      "to": "premium.plans"
+    },
+    {
+      "from": "premium.history",
+      "to": "user.login"
+    },
+    {
+      "from": "premium.history",
+      "to": "premium.payment"
+    },
+    {
+      "from": "premium.library",
+      "to": "user.login"
+    },
+    {
+      "from": "premium.library",
+      "to": "premium.payment"
+    },
+    {
+      "from": "studio.queue",
+      "to": "studio.upload"
+    },
+    {
+      "from": "cms.scheduler",
+      "to": "cms.shows"
+    }
+  ],
+  "topologicalOrder": [
+    "radio.archive",
+    "user.login",
+    "radio.request",
+    "radio.dedicate",
+    "radio.download",
+    "academy.tests",
+    "academy.certificates",
+    "academy.my-learning",
+    "community.profile",
+    "user.profile",
+    "user.profile.edit",
+    "user.bookmarks",
+    "user.history",
+    "user.downloads",
+    "user.notifications",
+    "user.settings",
+    "premium.plans",
+    "premium.payment",
+    "premium.history",
+    "premium.library",
+    "studio.upload",
+    "studio.queue",
+    "cms.shows",
+    "cms.scheduler"
+  ],
+  "cycles": []
+}

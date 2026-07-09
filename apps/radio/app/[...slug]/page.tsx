@@ -45,9 +45,11 @@ export default async function EcosystemRoute({ params }: { params: Promise<{ slu
   const children = childrenOf(route.path);
   const isEcosystemHub = route.path === "/ecosystem";
   const sections = isEcosystemHub ? bySection() : null;
+  // Layout selection via registry metadata (schemaVersion 2), never URL parsing.
+  const layout = (route as { layout?: string }).layout ?? "landing";
 
   return (
-    <main className="shell route-shell">
+    <main className="shell route-shell" data-layout={layout}>
       <nav className="crumbs">
         <a href="/">Radio Vaigyaaniq</a>
         <span>
@@ -58,6 +60,7 @@ export default async function EcosystemRoute({ params }: { params: Promise<{ slu
       <header className="route-head">
         <h1>{route.title}</h1>
         <StatusChip status={route.status} />
+        <span className="chip">{layout}</span>
       </header>
       <p className="route-path">
         <code>{route.path}</code>
