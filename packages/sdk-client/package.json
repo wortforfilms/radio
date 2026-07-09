@@ -1,0 +1,10 @@
+{
+  "name": "@vaigyaaniq/sdk-client",
+  "version": "0.1.0",
+  "description": "Type-safe client for the Radio Vaigyaaniq backend, generated from the registry's OpenAPI manifest (real endpoints only).",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "files": ["src", "openapi.json"],
+  "license": "UNLICENSED"
+}

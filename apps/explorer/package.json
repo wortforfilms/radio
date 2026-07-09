@@ -1,0 +1,8 @@
+{
+  "name": "@vaigyaaniq/explorer",
+  "version": "0.1.0",
+  "description": "Standalone Registry Explorer — serves the generated registry artifacts + explorer UI.",
+  "type": "module",
+  "scripts": { "start": "node server.mjs" },
+  "license": "UNLICENSED"
+}

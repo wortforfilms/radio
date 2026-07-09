@@ -1,0 +1,44 @@
+/* GENERATED from apps/radio/registry/tokens.ts — do not edit. */
+:root {
+  --color-bg: #070812;
+  --color-panel: #121624;
+  --color-panel-2: #191f32;
+  --color-line: rgba(255,255,255,.12);
+  --color-text: #f7f4ea;
+  --color-muted: #aba6c8;
+  --color-gold: #dfb15b;
+  --color-cyan: #00f5d4;
+  --color-orange: #ff6b35;
+  --color-danger: #ff7272;
+  --color-ok: #8be29d;
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-radius-sm: 8px;
+  --space-radius-md: 12px;
+  --space-radius-lg: 18px;
+  --space-radius-pill: 999px;
+  --font-body: Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-display: Georgia, serif;
+  --font-mono: ui-monospace, Menlo, monospace;
+  --text-xs: 11px;
+  --text-sm: 12px;
+  --text-base: 14px;
+  --text-md: 15px;
+  --text-lg: 19px;
+  --text-xl: 24px;
+  --text-hero: clamp(25px,4vw,48px);
+  --duration-instant: 80ms;
+  --duration-fast: 150ms;
+  --duration-base: 240ms;
+  --duration-slow: 400ms;
+  --ease-standard: cubic-bezier(.2,.0,.2,1);
+  --ease-enter: cubic-bezier(0,0,.2,1);
+  --ease-exit: cubic-bezier(.4,0,1,1);
+}

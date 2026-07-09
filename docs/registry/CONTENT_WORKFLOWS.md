@@ -1,6 +1,6 @@
 # Content Types & Workflows
 
-Generated 2026-07-09T20:15:52.177Z.
+Generated 2026-07-09T20:17:10.220Z.
 
 ## Content types
 

@@ -1,6 +1,6 @@
 # API Map
 
-Generated 2026-07-09T20:15:52.177Z. Statuses are honest — planned endpoints do not exist yet. OpenAPI: `registry/openapi.json` · SDK: `apps/radio/lib/sdk.ts`.
+Generated 2026-07-09T20:17:10.220Z. Statuses are honest — planned endpoints do not exist yet. OpenAPI: `registry/openapi.json` · SDK: `apps/radio/lib/sdk.ts`.
 
 | endpoint | status | used by |
 |---|---|---|

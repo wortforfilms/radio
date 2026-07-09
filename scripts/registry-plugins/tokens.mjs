@@ -22,6 +22,9 @@ ${Object.entries(tokens.motion.easings).map(([key, value]) => `  --ease-${key}: 
     ["apps/radio/public/registry/tokens/typography.json", wrap("typography", tokens.typography)],
     ["apps/radio/public/registry/tokens/icons.json", wrap("icons", tokens.icons)],
     ["apps/radio/public/registry/tokens/motion.json", wrap("motion", tokens.motion)],
-    ["apps/radio/public/registry/tokens/tokens.css", css]
+    ["apps/radio/public/registry/tokens/tokens.css", css],
+    // Phase 5: ship the same artifacts inside the workspace tokens package.
+    ["packages/ui-tokens/dist/tokens.css", css],
+    ["packages/ui-tokens/dist/tokens.json", `${JSON.stringify({ generatedAt, ...tokens }, null, 2)}\n`]
   ];
 }

@@ -1,0 +1,5 @@
+# Workspace scaffolding (Phase 5). Works with pnpm; npm workspaces mirror in
+# each package.json. Install verification requires network — run on a dev Mac.
+packages:
+  - "apps/*"
+  - "packages/*"

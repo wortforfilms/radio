@@ -118,6 +118,9 @@ export type RadioSdk = ReturnType<typeof createRadioSdk>;
   return [
     ["apps/radio/public/registry/api-map.json", `${JSON.stringify(apiMap, null, 2)}\n`],
     ["apps/radio/public/registry/openapi.json", `${JSON.stringify(openapi, null, 2)}\n`],
-    ["apps/radio/lib/sdk.ts", sdk]
+    ["apps/radio/lib/sdk.ts", sdk],
+    // Phase 5: the same generated client ships as the workspace SDK package.
+    ["packages/sdk-client/src/index.ts", sdk],
+    ["packages/sdk-client/openapi.json", `${JSON.stringify(openapi, null, 2)}\n`]
   ];
 }
