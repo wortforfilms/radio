@@ -2,6 +2,21 @@
 
 Status: blocked until `RADIO_MEDIA_ROOT` is configured outside this Git workspace and tracked runtime audio is migrated.
 
+## Local workspace layout (sanitised 2026-07-09)
+
+Loose media is consolidated under the gitignored `storage/media/` root:
+
+- `storage/media/root-exports/` — 133 named mp3 exports formerly loose at the
+  repo root (~730 MB). `INDEX.json` lists each file with probable catalogue
+  matches by title (24 identified) for future dedupe/promotion decisions.
+- `storage/media/external/` — the former `_non_suno/` folder (20 files, ~123 MB).
+  ⚠ Contains third-party/commercial audio — must NEVER enter the served
+  catalogue, any offline bundle, or a release. `INDEX.json` carries the warning.
+- `_radio_index/` — untouched: Suno source archive + evidence lanes (gitignored).
+- macOS `._*` sidecars and stale office locks are purged; they regenerate on
+  external drives — re-run `find . -name '._*' ! -path './.git/*' -delete`
+  when git or builders complain.
+
 ## Boundary
 
 Database storage:
