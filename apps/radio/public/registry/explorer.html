@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Registry Explorer · Radio Vaigyaaniq</title>
+  <style>
+    :root{color-scheme:dark;--bg:#070812;--panel:#121624;--line:rgba(255,255,255,.12);--text:#f7f4ea;--muted:#aba6c8;--gold:#dfb15b;--cyan:#00f5d4;--orange:#ff6b35;--bad:#ff7272}
+    *{box-sizing:border-box}body{margin:0;background:#070812;color:var(--text);font:13px/1.5 Inter,ui-sans-serif,system-ui}
+    header{position:sticky;top:0;z-index:5;background:rgba(7,8,18,.94);border-bottom:1px solid var(--line);padding:12px 16px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+    h1{font:700 17px Georgia,serif;margin:0}small{color:var(--muted)}
+    .layout{display:grid;grid-template-columns:190px 300px minmax(0,1fr);gap:0;height:calc(100vh - 58px)}
+    .col{border-right:1px solid var(--line);overflow:auto;padding:10px}
+    .cat{display:block;width:100%;text-align:left;background:none;border:1px solid transparent;border-radius:8px;color:var(--text);padding:8px 10px;cursor:pointer;font:inherit}
+    .cat.active{border-color:var(--cyan);color:var(--cyan)}
+    .item{display:block;width:100%;text-align:left;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:8px;color:var(--text);padding:7px 9px;margin-bottom:6px;cursor:pointer;font:inherit}
+    .item.active{border-color:var(--cyan)}
+    .item small{display:block}
+    input[type=search]{width:100%;background:#0b0f1c;border:1px solid var(--line);border-radius:8px;color:var(--text);padding:8px 10px;margin-bottom:8px;font:inherit}
+    .detail{padding:16px 20px;overflow:auto}
+    .chip{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 9px;font-size:10px;font-weight:800;letter-spacing:.05em;margin-right:6px}
+    .chip.built{color:var(--cyan);border-color:rgba(0,245,212,.4)}.chip.partial{color:var(--gold);border-color:rgba(223,177,91,.45)}.chip.planned{color:var(--muted)}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:10px 0}
+    .card h3{margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--gold)}
+    code{background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-size:11.5px}
+    table{width:100%;border-collapse:collapse;font-size:12px}td,th{text-align:left;padding:4px 6px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-weight:600}
+    a.ref{color:var(--cyan);cursor:pointer;text-decoration:underline dotted}
+    .muted{color:var(--muted)}
+    @media(max-width:900px){.layout{grid-template-columns:1fr;height:auto}.col{border-right:none;border-bottom:1px solid var(--line)}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Registry Explorer</h1>
+    <small id="meta">loading compiled manifest…</small>
+  </header>
+  <div class="layout">
+    <nav class="col" id="cats"></nav>
+    <div class="col"><input type="search" id="filter" placeholder="Filter…"><div id="list"></div></div>
+    <main class="detail" id="detail"><p class="muted">Select a node. Everything shown here derives from <code>compiled-manifest.json</code> — the canonical compiled registry.</p></main>
+  </div>
+  <script>
+  (async function () {
+    "use strict";
+    const M = await (await fetch("./compiled-manifest.json")).json();
+    const $ = (id) => document.getElementById(id);
+    const esc = (v) => String(v ?? "").replace(/[&<>"]/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"})[c]);
+    const chip = (s) => `<span class="chip ${esc(s)}">${esc(s)}</span>`;
+    $("meta").textContent = `compiled ${M.compiledAt} · schema v${M.schemaVersion} · ${M.counts.routes} routes · ${M.counts.graphNodes} nodes / ${M.counts.graphEdges} edges`;
+
+    const CATS = {
+      routes: { list: () => M.routes.map(r => ({ id: r.id, label: r.id, sub: r.path, status: r.status })), show: showRoute },
+      components: { list: () => M.components.map(c => ({ id: c.id, label: c.id, sub: c.category, status: c.status })), show: showComponent },
+      layouts: { list: () => M.layouts.map(l => ({ id: l.id, label: l.id, sub: `${l.regions.length} regions`, status: "built" })), show: showLayout },
+      tokens: { list: () => Object.keys(M.tokens).map(k => ({ id: k, label: k, sub: "", status: "built" })), show: showTokens },
+      "content-types": { list: () => M.contentTypes.map(c => ({ id: c.id, label: c.id, sub: c.workflow, status: c.status })), show: showContentType },
+      workflows: { list: () => M.workflows.map(w => ({ id: w.id, label: w.id, sub: `${w.states.length} states`, status: "built" })), show: showWorkflow },
+      apps: { list: () => M.workspaceApps.map(a => ({ id: a.id, label: a.id, sub: `${a.routePrefixes.length} prefixes`, status: a.status })), show: showApp },
+      graph: { list: () => [{ id: "orphans", label: "orphans", sub: "", status: "built" }, { id: "stats", label: "stats", sub: "", status: "built" }], show: showGraph }
+    };
+    let cat = "routes", sel = null, q = "";
+
+    const impactOf = (nodeId) => (M.graph.impact[nodeId] || []);
+    const edgesFrom = (nodeId) => M.graph.edges.filter(e => e.from === nodeId);
+    const refLink = (graphId) => {
+      const [kind, id] = graphId.split(":");
+      const catKey = kind === "content-type" ? "content-types" : kind === "app" ? "apps" : `${kind}s`;
+      return `<a class="ref" data-cat="${esc(catKey)}" data-id="${esc(id)}">${esc(graphId)}</a>`;
+    };
+    const graphCard = (nodeId) => `<div class="card"><h3>Graph</h3>
+      <p><b>Outgoing:</b> ${edgesFrom(nodeId).map(e => `${esc(e.rel)} → ${refLink(e.to)}`).join(" · ") || "<span class=muted>none</span>"}</p>
+      <p><b>Impact (referenced by):</b> ${impactOf(nodeId).map(refLink).join(" · ") || "<span class=muted>none — orphan candidate</span>"}</p></div>`;
+    const evid = (list) => list?.length ? `<div class="card"><h3>Evidence</h3>${list.map(e => `<div><code>${esc(e.artifact || e)}</code>${e.kind ? ` <small class=muted>(${esc(e.kind)})</small>` : ""}</div>`).join("")}</div>` : "";
+
+    function showRoute(r) {
+      const tree = M.componentTrees.find(t => t.route === r.id);
+      const outputs = [
+        r.searchable ? "search.json" : null,
+        r.seo.robots === "index,follow" && !r.dynamic ? "sitemap.xml" : null,
+        Object.entries(r.navigation).filter(([, v]) => v).map(([k]) => `navigation.json:${k}`).join(", ") || null,
+        r.api.length ? "api-map.json / openapi.json" : null,
+        ...r.platforms.filter(p => p !== "api" && p !== "offline").map(p => `ui-manifest.${p}.json`)
+      ].filter(Boolean);
+      return `
+        <h2>${esc(r.icon)} ${esc(r.title)} ${chip(r.status)} <span class="chip">${esc(r.layout)}</span></h2>
+        <p><code>${esc(r.path)}</code> · <code>${esc(r.id)}</code> · ${esc(r.section)}</p>
+        <p class="muted">${esc(r.description)}</p>
+        <div class="card"><h3>Permissions & Flags</h3><p>${r.permissions.map(esc).join(", ")} ${r.featureFlags.length ? `· flags: ${r.featureFlags.map(esc).join(", ")}` : ""}</p></div>
+        <div class="card"><h3>Component tree (${esc(r.layout)})</h3>${(tree?.regions || []).map(rg =>
+          `<p><b>${esc(rg.region)}:</b> ${rg.components.map(c => `<a class="ref" data-cat="components" data-id="${esc(c.id)}">${esc(c.id)}</a> ${chip(c.status)}`).join(" ") || "<span class=muted>—</span>"}</p>`).join("")}</div>
+        ${r.contentType ? `<div class="card"><h3>Content type</h3><p><a class="ref" data-cat="content-types" data-id="${esc(r.contentType)}">${esc(r.contentType)}</a></p></div>` : ""}
+        ${r.api.length ? `<div class="card"><h3>APIs</h3><table>${r.api.map(a => `<tr><td><code>${esc(a.method)} ${esc(a.path)}</code></td><td>${chip(a.status)}</td><td class="muted">${esc(a.description || "")}</td></tr>`).join("")}</table></div>` : ""}
+        <div class="card"><h3>SEO & Search</h3><p>robots: <code>${esc(r.seo.robots)}</code> · searchable: ${r.searchable} · keywords: ${r.seo.keywords.map(esc).join(", ")}</p><p class="muted">analytics: ${esc(r.analytics.event)} · screen ${esc(r.analytics.screenName)}</p></div>
+        <div class="card"><h3>Generated outputs containing this route</h3><p>${outputs.map(o => `<code>${esc(o)}</code>`).join(" ")}</p></div>
+        ${r.dependsOn.length ? `<div class="card"><h3>Depends on</h3><p>${r.dependsOn.map(d => `<a class="ref" data-cat="routes" data-id="${esc(d)}">${esc(d)}</a>`).join(" · ")}</p></div>` : ""}
+        ${evid(r.evidence)}
+        ${graphCard(`route:${r.id}`)}`;
+    }
+    function showComponent(c) {
+      const usage = M.indexes.componentUsage[c.id] || [];
+      return `<h2>${esc(c.name)} ${chip(c.status)}</h2><p><code>${esc(c.id)}</code> · ${esc(c.category)} · ${c.platforms.map(esc).join(", ")}</p>
+        <p class="muted">${esc(c.description)}</p>
+        <div class="card"><h3>Props</h3><table>${c.props.map(p => `<tr><td><code>${esc(p.name)}</code></td><td><code>${esc(p.type)}</code></td><td>${p.required ? "required" : "optional"}</td></tr>`).join("") || "<tr><td class=muted>none</td></tr>"}</table></div>
+        <div class="card"><h3>Used by ${usage.length} routes</h3><p>${usage.slice(0, 40).map(u => `<a class="ref" data-cat="routes" data-id="${esc(u)}">${esc(u)}</a>`).join(" · ")}${usage.length > 40 ? " …" : ""}</p></div>
+        ${evid(c.implementedBy)}
+        ${graphCard(`component:${c.id}`)}`;
+    }
+    function showLayout(l) {
+      return `<h2>${esc(l.id)}</h2><p class="muted">${esc(l.description)}</p>
+        ${l.regions.map(rg => `<div class="card"><h3>${esc(rg.region)}</h3><p>${rg.components.map(c => `<a class="ref" data-cat="components" data-id="${esc(c)}">${esc(c)}</a>`).join(" · ") || "<span class=muted>empty</span>"}</p></div>`).join("")}
+        <div class="card"><h3>Routes using this layout</h3><p>${(M.indexes.byLayout[l.id] || []).map(r => `<a class="ref" data-cat="routes" data-id="${esc(r)}">${esc(r)}</a>`).join(" · ")}</p></div>
+        ${graphCard(`layout:${l.id}`)}`;
+    }
+    function showTokens(group) {
+      const value = M.tokens[group.id];
+      const rows = (obj, prefix = "") => Object.entries(obj).map(([k, v]) =>
+        typeof v === "object" ? rows(v, `${prefix}${k}.`) : `<tr><td><code>${esc(prefix + k)}</code></td><td>${esc(v)}${group.id === "colors" ? ` <span style="display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;background:${esc(v)}"></span>` : ""}</td></tr>`).flat().join("");
+      return `<h2>tokens.${esc(group.id)}</h2><div class="card"><table>${rows(value)}</table></div>`;
+    }
+    function showContentType(c) {
+      return `<h2>${esc(c.name)} ${chip(c.status)}</h2><p><code>${esc(c.id)}</code> · workflow: <a class="ref" data-cat="workflows" data-id="${esc(c.workflow)}">${esc(c.workflow)}</a></p>
+        <p class="muted">${esc(c.description)}</p>
+        <div class="card"><h3>Fields</h3><table>${c.fields.map(f => `<tr><td><code>${esc(f.name)}</code></td><td>${esc(f.type)}${f.references ? ` → ${esc(f.references)}` : ""}</td><td>${f.required ? "required" : ""}</td><td class="muted">${esc(f.description || "")}</td></tr>`).join("")}</table></div>
+        <div class="card"><h3>Routes presenting this type</h3><p>${(M.indexes.byContentType[c.id] || []).map(r => `<a class="ref" data-cat="routes" data-id="${esc(r)}">${esc(r)}</a>`).join(" · ") || "<span class=muted>none</span>"}</p></div>
+        ${evid(c.implementedBy)}
+        ${graphCard(`content-type:${c.id}`)}`;
+    }
+    function showWorkflow(w) {
+      return `<h2>${esc(w.name)}</h2><p class="muted">${esc(w.description)}</p>
+        <div class="card"><h3>States</h3><p>${w.states.map(esc).join(" → ")}</p></div>
+        <div class="card"><h3>Transitions</h3><table><tr><th>from</th><th>to</th><th>requires</th><th>roles</th></tr>${w.transitions.map(t => `<tr><td>${esc(t.from)}</td><td>${esc(t.to)}</td><td>${t.requires.map(esc).join("; ") || "—"}</td><td>${t.roles.map(esc).join(", ")}</td></tr>`).join("")}</table></div>
+        ${graphCard(`workflow:${w.id}`)}`;
+    }
+    function showApp(a) {
+      return `<h2>${esc(a.name)} ${chip(a.status)}</h2><p class="muted">${esc(a.description)}</p>
+        <div class="card"><h3>Route prefixes</h3><p>${a.routePrefixes.map(esc).join(", ") || "—"}</p></div>
+        ${evid(a.implementedBy)}
+        ${graphCard(`app:${a.id}`)}`;
+    }
+    function showGraph(item) {
+      if (item.id === "orphans") {
+        return `<h2>Orphan detection</h2>${Object.entries(M.graph.orphans).map(([kind, list]) =>
+          `<div class="card"><h3>${esc(kind)}</h3><p>${list.length ? list.map(esc).join(", ") : '<span class="muted">none — every node is referenced</span>'}</p></div>`).join("")}`;
+      }
+      const byKind = {};
+      for (const n of M.graph.nodes) byKind[n.kind] = (byKind[n.kind] || 0) + 1;
+      return `<h2>Graph stats</h2><div class="card"><table>${Object.entries(byKind).map(([k, v]) => `<tr><td>${esc(k)}</td><td>${v}</td></tr>`).join("")}<tr><th>edges</th><th>${M.graph.edges.length}</th></tr></table></div>`;
+    }
+
+    function renderCats() {
+      $("cats").innerHTML = Object.keys(CATS).map(key => `<button class="cat ${key === cat ? "active" : ""}" data-cat="${key}">${key} <small>(${CATS[key].list().length})</small></button>`).join("");
+      $("cats").querySelectorAll("[data-cat]").forEach(b => b.addEventListener("click", () => { cat = b.dataset.cat; sel = null; q = ""; $("filter").value = ""; render(); }));
+    }
+    function renderList() {
+      const items = CATS[cat].list().filter(i => !q || `${i.label} ${i.sub}`.toLowerCase().includes(q));
+      $("list").innerHTML = items.slice(0, 300).map(i => `<button class="item ${i.id === sel ? "active" : ""}" data-id="${esc(i.id)}"><b>${esc(i.label)}</b> ${chip(i.status)}<small>${esc(i.sub)}</small></button>`).join("");
+      $("list").querySelectorAll("[data-id]").forEach(b => b.addEventListener("click", () => { sel = b.dataset.id; render(); }));
+    }
+    function renderDetail() {
+      if (!sel) { $("detail").innerHTML = '<p class="muted">Select a node.</p>'; return; }
+      const src = { routes: M.routes, components: M.components, layouts: M.layouts, "content-types": M.contentTypes, workflows: M.workflows, apps: M.workspaceApps }[cat];
+      const obj = cat === "tokens" || cat === "graph" ? { id: sel } : src.find(x => x.id === sel);
+      if (!obj) { $("detail").innerHTML = '<p class="muted">Not found.</p>'; return; }
+      $("detail").innerHTML = CATS[cat].show(obj);
+      $("detail").querySelectorAll("a.ref").forEach(a => a.addEventListener("click", () => { cat = a.dataset.cat; sel = a.dataset.id; render(); }));
+    }
+    function render() { renderCats(); renderList(); renderDetail(); }
+    $("filter").addEventListener("input", (e) => { q = e.target.value.toLowerCase(); renderList(); });
+    render();
+  })();
+  </script>
+</body>
+</html>

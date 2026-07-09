@@ -1,6 +1,6 @@
 # Site Structure
 
-Generated 2026-07-09T17:40:11.166Z.
+Generated 2026-07-09T17:53:00.157Z.
 
 - `/` (public.home, built)
 - `/about` (public.about, planned)
@@ -21,6 +21,7 @@ Generated 2026-07-09T17:40:11.166Z.
   - `/admin/integrations` (admin.integrations, partial)
   - `/admin/logs` (admin.logs, planned)
   - `/admin/permissions` (admin.permissions, planned)
+  - `/admin/registry-explorer` (admin.registry-explorer, built)
   - `/admin/roles` (admin.roles, planned)
   - `/admin/security` (admin.security, planned)
   - `/admin/settings` (admin.settings, planned)

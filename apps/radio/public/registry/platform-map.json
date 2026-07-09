@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T17:40:11.166Z",
+  "generatedAt": "2026-07-09T17:53:00.157Z",
   "platforms": {
     "web": [
       "public.home",
@@ -176,6 +176,7 @@
       "admin.storage",
       "admin.backups",
       "admin.integrations",
+      "admin.registry-explorer",
       "ecosystem",
       "ecosystem.nlm",
       "ecosystem.cic",
@@ -505,6 +506,7 @@
       "admin.storage",
       "admin.backups",
       "admin.integrations",
+      "admin.registry-explorer",
       "ecosystem",
       "ecosystem.nlm",
       "ecosystem.cic",

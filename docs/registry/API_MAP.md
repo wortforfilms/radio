@@ -1,6 +1,6 @@
 # API Map
 
-Generated 2026-07-09T17:40:11.166Z. Statuses are honest — planned endpoints do not exist yet. OpenAPI: `registry/openapi.json` · SDK: `apps/radio/lib/sdk.ts`.
+Generated 2026-07-09T17:53:00.157Z. Statuses are honest — planned endpoints do not exist yet. OpenAPI: `registry/openapi.json` · SDK: `apps/radio/lib/sdk.ts`.
 
 | endpoint | status | used by |
 |---|---|---|
@@ -18,6 +18,7 @@ Generated 2026-07-09T17:40:11.166Z. Statuses are honest — planned endpoints do
 | `GET /admin/state` | ✅ built | `admin` |
 | `POST /admin/rights-proof` | ✅ built | `admin` |
 | `GET /admin/cache-status` | ✅ built | `admin` |
+| `GET /manifest` | ✅ built | `admin.registry-explorer` |
 | `GET /api/v1/radio` | ⬜ planned | `api.radio` |
 | `GET /api/v1/search` | ⬜ planned | `api.search` |
 | `GET /api/v1/analytics` | ⬜ planned | `api.analytics` |

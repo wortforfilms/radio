@@ -3,7 +3,7 @@
   <title>Radio Vaigyaaniq — Ecosystem</title>
   <link>http://localhost:3000</link>
   <description>Live sections of the Radio Vaigyaaniq platform (information-architecture feed; statuses evidence-backed).</description>
-  <lastBuildDate>Thu, 09 Jul 2026 17:40:11 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 09 Jul 2026 17:53:00 GMT</lastBuildDate>
   <item><title>Home</title><link>http://localhost:3000/</link><guid isPermaLink="false">public.home</guid><description>Standalone landing — surfaces, tools, payment API.</description></item>
   <item><title>Radio</title><link>http://localhost:3000/radio</link><guid isPermaLink="false">radio</guid><description>Broadcast command surface + online/offline engine over the 1,186-track catalogue.</description></item>
   <item><title>Live</title><link>http://localhost:3000/radio/live</link><guid isPermaLink="false">radio.live</guid><description>Local-fallback playback works; live stream URLs stay NULL until rights-verified.</description></item>

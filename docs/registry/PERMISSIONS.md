@@ -1,6 +1,6 @@
 # Permissions
 
-Generated 2026-07-09T17:40:11.166Z.
+Generated 2026-07-09T17:53:00.157Z.
 
 Roles: anonymous · listener · student · researcher · creator · moderator · editor · admin · superadmin
 
@@ -13,8 +13,8 @@ Roles: anonymous · listener · student · researcher · creator · moderator ·
 | creator | 164 |
 | moderator | 154 |
 | editor | 176 |
-| admin | 195 |
-| superadmin | 195 |
+| admin | 196 |
+| superadmin | 196 |
 
 ## Non-public routes
 
@@ -73,3 +73,4 @@ Roles: anonymous · listener · student · researcher · creator · moderator ·
 | `admin.storage` | admin, superadmin |
 | `admin.backups` | admin, superadmin |
 | `admin.integrations` | admin, superadmin |
+| `admin.registry-explorer` | admin, superadmin |

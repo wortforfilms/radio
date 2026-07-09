@@ -6,10 +6,10 @@ import type { LayoutDefinition } from "./types.ts";
 export const layouts: LayoutDefinition[] = [
   {
     id: "landing",
-    description: "Section hub: hero, child-route grid, status chips.",
+    description: "Section hub: hero, child-route grid, status chips, content cards.",
     regions: [
       { region: "header", components: ["net-status"] },
-      { region: "main", components: ["catalog-grid"] },
+      { region: "main", components: ["catalog-grid", "podcast-card", "course-card"] },
       { region: "footer", components: [] }
     ]
   },
@@ -51,8 +51,8 @@ export const layouts: LayoutDefinition[] = [
   },
   {
     id: "reader",
-    description: "Focused reading (transcripts, courses).",
-    regions: [{ region: "main", components: ["transcript", "article"] }]
+    description: "Focused reading (transcripts, courses, quizzes).",
+    regions: [{ region: "main", components: ["transcript", "article", "quiz"] }]
   },
   {
     id: "fullscreen",

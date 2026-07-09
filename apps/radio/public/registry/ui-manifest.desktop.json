@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-09T17:40:11.166Z",
+  "generatedAt": "2026-07-09T17:53:00.157Z",
   "platform": "desktop",
   "tokens": "/registry/tokens/",
   "counts": {
-    "routes": 162,
+    "routes": 163,
     "layouts": 8
   },
   "navigation": [
@@ -315,7 +315,7 @@
   "layouts": [
     {
       "id": "landing",
-      "description": "Section hub: hero, child-route grid, status chips.",
+      "description": "Section hub: hero, child-route grid, status chips, content cards.",
       "regions": [
         {
           "region": "header",
@@ -326,7 +326,9 @@
         {
           "region": "main",
           "components": [
-            "catalog-grid"
+            "catalog-grid",
+            "podcast-card",
+            "course-card"
           ]
         },
         {
@@ -441,13 +443,14 @@
     },
     {
       "id": "reader",
-      "description": "Focused reading (transcripts, courses).",
+      "description": "Focused reading (transcripts, courses, quizzes).",
       "regions": [
         {
           "region": "main",
           "components": [
             "transcript",
-            "article"
+            "article",
+            "quiz"
           ]
         }
       ]
@@ -2225,6 +2228,18 @@
       "title": "Integrations",
       "layout": "admin",
       "status": "partial",
+      "permissions": [
+        "admin",
+        "superadmin"
+      ],
+      "contentType": null
+    },
+    {
+      "id": "admin.registry-explorer",
+      "path": "/admin/registry-explorer",
+      "title": "Registry Explorer",
+      "layout": "admin",
+      "status": "built",
       "permissions": [
         "admin",
         "superadmin"

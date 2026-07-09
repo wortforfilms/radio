@@ -1,6 +1,6 @@
 # Navigation
 
-Generated 2026-07-09T17:40:11.166Z. Flag-hidden routes excluded (enabled: premium).
+Generated 2026-07-09T17:53:00.157Z. Flag-hidden routes excluded (enabled: premium).
 
 ## sidebar
 
@@ -147,6 +147,7 @@ Generated 2026-07-09T17:40:11.166Z. Flag-hidden routes excluded (enabled: premiu
 - ⚙ [`admin.audit`](/admin/audit) — Audit (partial)
 - ⚙ [`admin.storage`](/admin/storage) — Storage (partial)
 - ⚙ [`admin.integrations`](/admin/integrations) — Integrations (partial)
+- ⚙ [`admin.registry-explorer`](/admin/registry-explorer) — Registry Explorer (built)
 - 🔌 [`api.radio`](/api/v1/radio) — Radio (partial)
 - 🔌 [`api.search`](/api/v1/search) — Search (partial)
 - 🔌 [`api.analytics`](/api/v1/analytics) — Analytics (partial)

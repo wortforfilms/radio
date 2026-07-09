@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-09T17:40:11.166Z",
-  "count": 195,
+  "generatedAt": "2026-07-09T17:53:00.157Z",
+  "count": 196,
   "trees": [
     {
       "route": "public.home",
@@ -24,6 +24,16 @@
             {
               "id": "catalog-grid",
               "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
               "rendersRouteContent": false
             }
           ]
@@ -57,6 +67,16 @@
               "id": "catalog-grid",
               "status": "built",
               "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
+              "rendersRouteContent": false
             }
           ]
         },
@@ -88,6 +108,16 @@
             {
               "id": "catalog-grid",
               "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
               "rendersRouteContent": false
             }
           ]
@@ -121,6 +151,16 @@
               "id": "catalog-grid",
               "status": "built",
               "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
+              "rendersRouteContent": false
             }
           ]
         },
@@ -152,6 +192,16 @@
             {
               "id": "catalog-grid",
               "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
               "rendersRouteContent": false
             }
           ]
@@ -185,6 +235,16 @@
               "id": "catalog-grid",
               "status": "built",
               "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
+              "rendersRouteContent": false
             }
           ]
         },
@@ -216,6 +276,16 @@
             {
               "id": "catalog-grid",
               "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
               "rendersRouteContent": false
             }
           ]
@@ -249,6 +319,16 @@
               "id": "catalog-grid",
               "status": "built",
               "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
+              "rendersRouteContent": false
             }
           ]
         },
@@ -280,6 +360,16 @@
             {
               "id": "catalog-grid",
               "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
               "rendersRouteContent": false
             }
           ]
@@ -313,6 +403,16 @@
               "id": "catalog-grid",
               "status": "built",
               "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
+              "rendersRouteContent": false
             }
           ]
         },
@@ -344,6 +444,16 @@
             {
               "id": "catalog-grid",
               "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
               "rendersRouteContent": false
             }
           ]
@@ -377,6 +487,16 @@
               "id": "catalog-grid",
               "status": "built",
               "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
+              "rendersRouteContent": false
             }
           ]
         },
@@ -408,6 +528,16 @@
             {
               "id": "catalog-grid",
               "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
               "rendersRouteContent": false
             }
           ]
@@ -441,6 +571,16 @@
               "id": "catalog-grid",
               "status": "built",
               "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
+              "rendersRouteContent": false
             }
           ]
         },
@@ -472,6 +612,16 @@
             {
               "id": "catalog-grid",
               "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
               "rendersRouteContent": false
             }
           ]
@@ -922,6 +1072,16 @@
             {
               "id": "catalog-grid",
               "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": true
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
               "rendersRouteContent": false
             }
           ]
@@ -1399,6 +1559,16 @@
               "id": "catalog-grid",
               "status": "built",
               "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
+              "rendersRouteContent": false
             }
           ]
         },
@@ -1682,6 +1852,16 @@
             {
               "id": "catalog-grid",
               "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
               "rendersRouteContent": false
             }
           ]
@@ -2191,6 +2371,16 @@
               "id": "catalog-grid",
               "status": "built",
               "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
+              "rendersRouteContent": false
             }
           ]
         },
@@ -2244,6 +2434,11 @@
             },
             {
               "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "quiz",
               "status": "planned",
               "rendersRouteContent": false
             }
@@ -2441,6 +2636,16 @@
             {
               "id": "catalog-grid",
               "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
               "rendersRouteContent": false
             }
           ]
@@ -2697,6 +2902,16 @@
             {
               "id": "catalog-grid",
               "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
               "rendersRouteContent": false
             }
           ]
@@ -3316,6 +3531,16 @@
               "id": "catalog-grid",
               "status": "built",
               "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
+              "rendersRouteContent": false
             }
           ]
         },
@@ -3348,6 +3573,16 @@
               "id": "catalog-grid",
               "status": "built",
               "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
+              "rendersRouteContent": false
             }
           ]
         },
@@ -3379,6 +3614,16 @@
             {
               "id": "catalog-grid",
               "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
               "rendersRouteContent": false
             }
           ]
@@ -3494,6 +3739,16 @@
             {
               "id": "catalog-grid",
               "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
               "rendersRouteContent": false
             }
           ]
@@ -3632,6 +3887,11 @@
             },
             {
               "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "quiz",
               "status": "planned",
               "rendersRouteContent": false
             }
@@ -3916,6 +4176,16 @@
               "id": "catalog-grid",
               "status": "built",
               "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
+              "rendersRouteContent": false
             }
           ]
         },
@@ -3947,6 +4217,16 @@
             {
               "id": "catalog-grid",
               "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
               "rendersRouteContent": false
             }
           ]
@@ -3980,6 +4260,16 @@
               "id": "catalog-grid",
               "status": "built",
               "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
+              "rendersRouteContent": false
             }
           ]
         },
@@ -4011,6 +4301,16 @@
             {
               "id": "catalog-grid",
               "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
               "rendersRouteContent": false
             }
           ]
@@ -4090,6 +4390,16 @@
               "id": "catalog-grid",
               "status": "built",
               "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
+              "rendersRouteContent": false
             }
           ]
         },
@@ -4122,6 +4432,16 @@
               "id": "catalog-grid",
               "status": "built",
               "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
+              "rendersRouteContent": false
             }
           ]
         },
@@ -4153,6 +4473,16 @@
             {
               "id": "catalog-grid",
               "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
               "rendersRouteContent": false
             }
           ]
@@ -4231,6 +4561,16 @@
             {
               "id": "catalog-grid",
               "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
               "rendersRouteContent": false
             }
           ]
@@ -5737,6 +6077,34 @@
       ]
     },
     {
+      "route": "admin.registry-explorer",
+      "path": "/admin/registry-explorer",
+      "layout": "admin",
+      "contentType": null,
+      "regions": [
+        {
+          "region": "header",
+          "components": [
+            {
+              "id": "net-status",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "admin-table",
+              "status": "built",
+              "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
       "route": "api.auth",
       "path": "/api/v1/auth",
       "layout": "fullscreen",
@@ -5902,6 +6270,16 @@
             {
               "id": "catalog-grid",
               "status": "built",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "podcast-card",
+              "status": "planned",
+              "rendersRouteContent": false
+            },
+            {
+              "id": "course-card",
+              "status": "planned",
               "rendersRouteContent": false
             }
           ]

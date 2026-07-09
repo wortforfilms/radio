@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T17:40:11.166Z",
+  "generatedAt": "2026-07-09T17:53:00.157Z",
   "note": "One root registry; app registries own route-id prefixes. Statuses evidence-backed — only artifacts that exist are cited.",
   "counts": {
     "apps": 9,
@@ -120,6 +120,7 @@
         "admin.storage",
         "admin.backups",
         "admin.integrations",
+        "admin.registry-explorer",
         "api.auth",
         "api.radio",
         "api.podcasts",

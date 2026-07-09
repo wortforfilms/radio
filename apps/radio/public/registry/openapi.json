@@ -313,6 +313,26 @@
           }
         }
       }
+    },
+    "/manifest": {
+      "get": {
+        "summary": "Read-only compiled manifest API (radio-backend)",
+        "tags": [
+          "admin"
+        ],
+        "x-used-by-routes": [
+          "admin.registry-explorer"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "4XX": {
+            "description": "Fail-closed (PHKD) or validation error"
+          }
+        }
+      }
     }
   },
   "x-planned": [
@@ -337,5 +357,5 @@
       "description": "Versioned alias of /api/payments/*"
     }
   ],
-  "x-generated-at": "2026-07-09T17:40:11.166Z"
+  "x-generated-at": "2026-07-09T17:53:00.157Z"
 }

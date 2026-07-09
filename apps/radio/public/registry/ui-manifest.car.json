@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T17:40:11.166Z",
+  "generatedAt": "2026-07-09T17:53:00.157Z",
   "platform": "car",
   "tokens": "/registry/tokens/",
   "counts": {
@@ -19,7 +19,7 @@
   "layouts": [
     {
       "id": "landing",
-      "description": "Section hub: hero, child-route grid, status chips.",
+      "description": "Section hub: hero, child-route grid, status chips, content cards.",
       "regions": [
         {
           "region": "header",
@@ -30,7 +30,9 @@
         {
           "region": "main",
           "components": [
-            "catalog-grid"
+            "catalog-grid",
+            "podcast-card",
+            "course-card"
           ]
         },
         {

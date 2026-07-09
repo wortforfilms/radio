@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T17:40:11.166Z",
+  "generatedAt": "2026-07-09T17:53:00.157Z",
   "byRoute": {
     "radio": [
       {
@@ -98,6 +98,14 @@
         "method": "GET",
         "path": "/admin/cache-status",
         "status": "built"
+      }
+    ],
+    "admin.registry-explorer": [
+      {
+        "method": "GET",
+        "path": "/manifest",
+        "status": "built",
+        "description": "Read-only compiled manifest API (radio-backend)"
       }
     ],
     "api.radio": [
@@ -231,6 +239,13 @@
       "description": null,
       "usedBy": [
         "admin"
+      ]
+    },
+    "GET /manifest": {
+      "status": "built",
+      "description": "Read-only compiled manifest API (radio-backend)",
+      "usedBy": [
+        "admin.registry-explorer"
       ]
     },
     "GET /api/v1/radio": {

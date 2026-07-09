@@ -1,0 +1,4263 @@
+{
+  "generatedAt": "2026-07-09T17:53:00.157Z",
+  "counts": {
+    "nodes": 247,
+    "edges": 449
+  },
+  "nodes": [
+    {
+      "id": "route:public.home",
+      "kind": "route",
+      "status": "built"
+    },
+    {
+      "id": "route:public.about",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:public.mission",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:public.vision",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:public.science-for-bharat",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:public.contact",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:public.partners",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:public.sponsors",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:public.careers",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:public.press",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:public.privacy",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:public.terms",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:public.accessibility",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:public.donate",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:radio",
+      "kind": "route",
+      "status": "built"
+    },
+    {
+      "id": "route:radio.live",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:radio.now-playing",
+      "kind": "route",
+      "status": "built"
+    },
+    {
+      "id": "route:radio.schedule",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:radio.frequencies",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:radio.shows",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:radio.shows.detail",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:radio.rj",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:radio.archive",
+      "kind": "route",
+      "status": "built"
+    },
+    {
+      "id": "route:radio.request",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:radio.dedicate",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:radio.download",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:podcasts",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:podcasts.trending",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:podcasts.latest",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:podcasts.categories",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:podcasts.detail",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:podcasts.transcript",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:podcasts.chapters",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:podcasts.discussion",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:podcasts.bookmark",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:research",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:research.publications",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:research.papers",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:research.datasets",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:research.experiments",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:research.projects",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:research.labs",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:research.authors",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:research.citations",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:research.downloads",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:discover",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:discover.space",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:discover.astronomy",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:discover.physics",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:discover.chemistry",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:discover.biology",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:discover.mathematics",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:discover.medicine",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:discover.agriculture",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:discover.environment",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:discover.climate",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:discover.robotics",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:discover.ai",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:discover.history-of-science",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:discover.sanskrit-science",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:discover.innovation",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:discover.startups",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:discover.student",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:academy",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:academy.courses",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:academy.course",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:academy.lessons",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:academy.quizzes",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:academy.tests",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:academy.certificates",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:academy.my-learning",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:academy.leaderboard",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:community",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:community.discussions",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:community.questions",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:community.polls",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:community.events",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:community.clubs",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:community.challenges",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:community.leaderboard",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:community.profile",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:events",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:events.live",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:events.upcoming",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:events.calendar",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:events.workshops",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:events.webinars",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:events.hackathons",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:events.science-fairs",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:news",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:news.science",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:news.space",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:news.technology",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:news.agriculture",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:news.india",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:news.world",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:news.videos",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:media.videos",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:media.shorts",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:media.gallery",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:media.infographics",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:media.animations",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:media.livestreams",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:ai",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:ai.rj",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:ai.chat",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:ai.translator",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:ai.summarizer",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:ai.transcript",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:ai.recommendations",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:ai.search",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:search",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:search.radio",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:search.podcasts",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:search.research",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:search.news",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:search.people",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:user.login",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:user.signup",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:user.forgot-password",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:user.verify",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:user.profile",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:user.profile.edit",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:user.bookmarks",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:user.history",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:user.downloads",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:user.notifications",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:user.settings",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:premium",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:premium.plans",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:premium.payment",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:premium.history",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:premium.library",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:analytics",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:analytics.listeners",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:analytics.live",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:analytics.streams",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:analytics.content",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:analytics.geography",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:analytics.revenue",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:studio",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:studio.live",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:studio.record",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:studio.upload",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:studio.editor",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:studio.script",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:studio.caller",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:studio.queue",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:studio.automation",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:studio.assets",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:cms",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:cms.dashboard",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:cms.articles",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:cms.shows",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:cms.podcasts",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:cms.research",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:cms.media",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:cms.users",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:cms.comments",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:cms.moderation",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:cms.workflows",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:cms.scheduler",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:admin",
+      "kind": "route",
+      "status": "built"
+    },
+    {
+      "id": "route:admin.users",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:admin.roles",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:admin.permissions",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:admin.api",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:admin.settings",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:admin.logs",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:admin.audit",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:admin.security",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:admin.storage",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:admin.backups",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:admin.integrations",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:admin.registry-explorer",
+      "kind": "route",
+      "status": "built"
+    },
+    {
+      "id": "route:api.auth",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:api.radio",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:api.podcasts",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:api.research",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:api.news",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:api.events",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:api.community",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:api.search",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:api.analytics",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:api.upload",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:api.notifications",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:api.payments",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:ecosystem",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:ecosystem.nlm",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:ecosystem.cic",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:ecosystem.shree-kautilya",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:ecosystem.lipi",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:ecosystem.maataa",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:ecosystem.corpus",
+      "kind": "route",
+      "status": "partial"
+    },
+    {
+      "id": "route:ecosystem.apis",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "route:ecosystem.developers",
+      "kind": "route",
+      "status": "planned"
+    },
+    {
+      "id": "component:player",
+      "kind": "component",
+      "status": "built"
+    },
+    {
+      "id": "component:station-list",
+      "kind": "component",
+      "status": "built"
+    },
+    {
+      "id": "component:schedule-list",
+      "kind": "component",
+      "status": "built"
+    },
+    {
+      "id": "component:catalog-grid",
+      "kind": "component",
+      "status": "built"
+    },
+    {
+      "id": "component:transcript",
+      "kind": "component",
+      "status": "built"
+    },
+    {
+      "id": "component:story-modal",
+      "kind": "component",
+      "status": "built"
+    },
+    {
+      "id": "component:wallet",
+      "kind": "component",
+      "status": "built"
+    },
+    {
+      "id": "component:persona-select",
+      "kind": "component",
+      "status": "built"
+    },
+    {
+      "id": "component:weather-widget",
+      "kind": "component",
+      "status": "built"
+    },
+    {
+      "id": "component:net-status",
+      "kind": "component",
+      "status": "built"
+    },
+    {
+      "id": "component:admin-table",
+      "kind": "component",
+      "status": "built"
+    },
+    {
+      "id": "component:visualizer",
+      "kind": "component",
+      "status": "partial"
+    },
+    {
+      "id": "component:podcast-card",
+      "kind": "component",
+      "status": "planned"
+    },
+    {
+      "id": "component:article",
+      "kind": "component",
+      "status": "planned"
+    },
+    {
+      "id": "component:chart",
+      "kind": "component",
+      "status": "planned"
+    },
+    {
+      "id": "component:timeline",
+      "kind": "component",
+      "status": "planned"
+    },
+    {
+      "id": "component:waveform",
+      "kind": "component",
+      "status": "planned"
+    },
+    {
+      "id": "component:quiz",
+      "kind": "component",
+      "status": "planned"
+    },
+    {
+      "id": "component:course-card",
+      "kind": "component",
+      "status": "planned"
+    },
+    {
+      "id": "layout:landing",
+      "kind": "layout",
+      "status": "built"
+    },
+    {
+      "id": "layout:player",
+      "kind": "layout",
+      "status": "built"
+    },
+    {
+      "id": "layout:dashboard",
+      "kind": "layout",
+      "status": "built"
+    },
+    {
+      "id": "layout:studio",
+      "kind": "layout",
+      "status": "built"
+    },
+    {
+      "id": "layout:article",
+      "kind": "layout",
+      "status": "built"
+    },
+    {
+      "id": "layout:reader",
+      "kind": "layout",
+      "status": "built"
+    },
+    {
+      "id": "layout:fullscreen",
+      "kind": "layout",
+      "status": "built"
+    },
+    {
+      "id": "layout:settings",
+      "kind": "layout",
+      "status": "built"
+    },
+    {
+      "id": "layout:admin",
+      "kind": "layout",
+      "status": "built"
+    },
+    {
+      "id": "layout:modal",
+      "kind": "layout",
+      "status": "built"
+    },
+    {
+      "id": "content-type:radio-track",
+      "kind": "content-type",
+      "status": "built"
+    },
+    {
+      "id": "content-type:transcript",
+      "kind": "content-type",
+      "status": "partial"
+    },
+    {
+      "id": "content-type:live-show",
+      "kind": "content-type",
+      "status": "partial"
+    },
+    {
+      "id": "content-type:podcast",
+      "kind": "content-type",
+      "status": "planned"
+    },
+    {
+      "id": "content-type:research-paper",
+      "kind": "content-type",
+      "status": "planned"
+    },
+    {
+      "id": "content-type:dataset",
+      "kind": "content-type",
+      "status": "planned"
+    },
+    {
+      "id": "content-type:article",
+      "kind": "content-type",
+      "status": "planned"
+    },
+    {
+      "id": "content-type:event",
+      "kind": "content-type",
+      "status": "planned"
+    },
+    {
+      "id": "content-type:course",
+      "kind": "content-type",
+      "status": "planned"
+    },
+    {
+      "id": "content-type:quiz",
+      "kind": "content-type",
+      "status": "planned"
+    },
+    {
+      "id": "workflow:editorial",
+      "kind": "workflow",
+      "status": "built"
+    },
+    {
+      "id": "workflow:rights-closure",
+      "kind": "workflow",
+      "status": "built"
+    },
+    {
+      "id": "app:radio",
+      "kind": "app",
+      "status": "built"
+    },
+    {
+      "id": "app:nlm",
+      "kind": "app",
+      "status": "planned"
+    },
+    {
+      "id": "app:cic",
+      "kind": "app",
+      "status": "planned"
+    },
+    {
+      "id": "app:lipi",
+      "kind": "app",
+      "status": "partial"
+    },
+    {
+      "id": "app:corpus",
+      "kind": "app",
+      "status": "partial"
+    },
+    {
+      "id": "app:shree-kautilya",
+      "kind": "app",
+      "status": "planned"
+    },
+    {
+      "id": "app:maataa",
+      "kind": "app",
+      "status": "partial"
+    },
+    {
+      "id": "app:academy",
+      "kind": "app",
+      "status": "planned"
+    },
+    {
+      "id": "app:investors-hub",
+      "kind": "app",
+      "status": "planned"
+    },
+    {
+      "id": "tokens:design",
+      "kind": "tokens",
+      "status": "built"
+    }
+  ],
+  "edges": [
+    {
+      "from": "route:public.home",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:public.about",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:public.mission",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:public.vision",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:public.science-for-bharat",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:public.contact",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:public.partners",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:public.sponsors",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:public.careers",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:public.press",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:public.privacy",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:public.terms",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:public.accessibility",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:public.donate",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:radio",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:radio.live",
+      "to": "layout:player",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:radio.live",
+      "to": "content-type:live-show",
+      "rel": "presents"
+    },
+    {
+      "from": "route:radio.now-playing",
+      "to": "layout:player",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:radio.now-playing",
+      "to": "content-type:radio-track",
+      "rel": "presents"
+    },
+    {
+      "from": "route:radio.schedule",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:radio.schedule",
+      "to": "content-type:live-show",
+      "rel": "presents"
+    },
+    {
+      "from": "route:radio.frequencies",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:radio.shows",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:radio.shows",
+      "to": "content-type:live-show",
+      "rel": "presents"
+    },
+    {
+      "from": "route:radio.shows.detail",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:radio.shows.detail",
+      "to": "content-type:live-show",
+      "rel": "presents"
+    },
+    {
+      "from": "route:radio.rj",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:radio.archive",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:radio.archive",
+      "to": "content-type:radio-track",
+      "rel": "presents"
+    },
+    {
+      "from": "route:radio.request",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:radio.request",
+      "to": "route:user.login",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:radio.dedicate",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:radio.dedicate",
+      "to": "route:user.login",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:radio.download",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:radio.download",
+      "to": "content-type:radio-track",
+      "rel": "presents"
+    },
+    {
+      "from": "route:radio.download",
+      "to": "route:radio.archive",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:podcasts",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:podcasts",
+      "to": "content-type:podcast",
+      "rel": "presents"
+    },
+    {
+      "from": "route:podcasts.trending",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:podcasts.trending",
+      "to": "content-type:podcast",
+      "rel": "presents"
+    },
+    {
+      "from": "route:podcasts.latest",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:podcasts.latest",
+      "to": "content-type:podcast",
+      "rel": "presents"
+    },
+    {
+      "from": "route:podcasts.categories",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:podcasts.detail",
+      "to": "layout:player",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:podcasts.detail",
+      "to": "content-type:podcast",
+      "rel": "presents"
+    },
+    {
+      "from": "route:podcasts.transcript",
+      "to": "layout:player",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:podcasts.transcript",
+      "to": "content-type:transcript",
+      "rel": "presents"
+    },
+    {
+      "from": "route:podcasts.chapters",
+      "to": "layout:player",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:podcasts.chapters",
+      "to": "content-type:podcast",
+      "rel": "presents"
+    },
+    {
+      "from": "route:podcasts.discussion",
+      "to": "layout:player",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:podcasts.bookmark",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:research",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:research.publications",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:research.publications",
+      "to": "content-type:research-paper",
+      "rel": "presents"
+    },
+    {
+      "from": "route:research.papers",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:research.papers",
+      "to": "content-type:research-paper",
+      "rel": "presents"
+    },
+    {
+      "from": "route:research.datasets",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:research.datasets",
+      "to": "content-type:dataset",
+      "rel": "presents"
+    },
+    {
+      "from": "route:research.experiments",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:research.projects",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:research.labs",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:research.authors",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:research.citations",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:research.citations",
+      "to": "content-type:research-paper",
+      "rel": "presents"
+    },
+    {
+      "from": "route:research.downloads",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:research.downloads",
+      "to": "content-type:dataset",
+      "rel": "presents"
+    },
+    {
+      "from": "route:discover",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:discover.space",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:discover.astronomy",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:discover.physics",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:discover.chemistry",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:discover.biology",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:discover.mathematics",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:discover.medicine",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:discover.agriculture",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:discover.environment",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:discover.climate",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:discover.robotics",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:discover.ai",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:discover.history-of-science",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:discover.sanskrit-science",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:discover.innovation",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:discover.startups",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:discover.student",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:academy",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:academy.courses",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:academy.courses",
+      "to": "content-type:course",
+      "rel": "presents"
+    },
+    {
+      "from": "route:academy.course",
+      "to": "layout:reader",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:academy.course",
+      "to": "content-type:course",
+      "rel": "presents"
+    },
+    {
+      "from": "route:academy.lessons",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:academy.lessons",
+      "to": "content-type:course",
+      "rel": "presents"
+    },
+    {
+      "from": "route:academy.quizzes",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:academy.quizzes",
+      "to": "content-type:quiz",
+      "rel": "presents"
+    },
+    {
+      "from": "route:academy.tests",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:academy.tests",
+      "to": "content-type:quiz",
+      "rel": "presents"
+    },
+    {
+      "from": "route:academy.certificates",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:academy.certificates",
+      "to": "route:user.login",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:academy.certificates",
+      "to": "route:academy.tests",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:academy.my-learning",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:academy.my-learning",
+      "to": "route:user.login",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:academy.leaderboard",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:community",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:community.discussions",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:community.questions",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:community.polls",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:community.events",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:community.clubs",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:community.challenges",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:community.leaderboard",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:community.profile",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:community.profile",
+      "to": "route:user.login",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:events",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:events",
+      "to": "content-type:event",
+      "rel": "presents"
+    },
+    {
+      "from": "route:events.live",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:events.upcoming",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:events.upcoming",
+      "to": "content-type:event",
+      "rel": "presents"
+    },
+    {
+      "from": "route:events.calendar",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:events.workshops",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:events.workshops",
+      "to": "content-type:event",
+      "rel": "presents"
+    },
+    {
+      "from": "route:events.webinars",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:events.webinars",
+      "to": "content-type:event",
+      "rel": "presents"
+    },
+    {
+      "from": "route:events.hackathons",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:events.hackathons",
+      "to": "content-type:event",
+      "rel": "presents"
+    },
+    {
+      "from": "route:events.science-fairs",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:events.science-fairs",
+      "to": "content-type:event",
+      "rel": "presents"
+    },
+    {
+      "from": "route:news",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:news",
+      "to": "content-type:article",
+      "rel": "presents"
+    },
+    {
+      "from": "route:news.science",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:news.science",
+      "to": "content-type:article",
+      "rel": "presents"
+    },
+    {
+      "from": "route:news.space",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:news.space",
+      "to": "content-type:article",
+      "rel": "presents"
+    },
+    {
+      "from": "route:news.technology",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:news.technology",
+      "to": "content-type:article",
+      "rel": "presents"
+    },
+    {
+      "from": "route:news.agriculture",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:news.agriculture",
+      "to": "content-type:article",
+      "rel": "presents"
+    },
+    {
+      "from": "route:news.india",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:news.india",
+      "to": "content-type:article",
+      "rel": "presents"
+    },
+    {
+      "from": "route:news.world",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:news.world",
+      "to": "content-type:article",
+      "rel": "presents"
+    },
+    {
+      "from": "route:news.videos",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:media.videos",
+      "to": "layout:player",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:media.shorts",
+      "to": "layout:player",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:media.gallery",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:media.infographics",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:media.animations",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:media.livestreams",
+      "to": "layout:player",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:ai",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:ai.rj",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:ai.chat",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:ai.translator",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:ai.summarizer",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:ai.transcript",
+      "to": "layout:reader",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:ai.transcript",
+      "to": "content-type:transcript",
+      "rel": "presents"
+    },
+    {
+      "from": "route:ai.recommendations",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:ai.search",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:search",
+      "to": "layout:dashboard",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:search.radio",
+      "to": "layout:dashboard",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:search.podcasts",
+      "to": "layout:dashboard",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:search.research",
+      "to": "layout:dashboard",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:search.news",
+      "to": "layout:dashboard",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:search.people",
+      "to": "layout:dashboard",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:user.login",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:user.signup",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:user.forgot-password",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:user.verify",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:user.profile",
+      "to": "layout:settings",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:user.profile",
+      "to": "route:user.login",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:user.profile.edit",
+      "to": "layout:settings",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:user.profile.edit",
+      "to": "route:user.profile",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:user.bookmarks",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:user.bookmarks",
+      "to": "route:user.login",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:user.history",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:user.history",
+      "to": "route:user.login",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:user.downloads",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:user.downloads",
+      "to": "route:user.login",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:user.downloads",
+      "to": "route:radio.download",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:user.notifications",
+      "to": "layout:settings",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:user.notifications",
+      "to": "route:user.login",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:user.settings",
+      "to": "layout:settings",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:user.settings",
+      "to": "route:user.login",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:premium",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:premium.plans",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:premium.payment",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:premium.payment",
+      "to": "route:user.login",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:premium.payment",
+      "to": "route:user.profile",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:premium.payment",
+      "to": "route:premium.plans",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:premium.history",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:premium.history",
+      "to": "route:user.login",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:premium.history",
+      "to": "route:premium.payment",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:premium.library",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:premium.library",
+      "to": "route:user.login",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:premium.library",
+      "to": "route:premium.payment",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:analytics",
+      "to": "layout:dashboard",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:analytics.listeners",
+      "to": "layout:dashboard",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:analytics.live",
+      "to": "layout:dashboard",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:analytics.streams",
+      "to": "layout:dashboard",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:analytics.content",
+      "to": "layout:dashboard",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:analytics.geography",
+      "to": "layout:dashboard",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:analytics.revenue",
+      "to": "layout:dashboard",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:studio",
+      "to": "layout:studio",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:studio.live",
+      "to": "layout:studio",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:studio.record",
+      "to": "layout:studio",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:studio.upload",
+      "to": "layout:studio",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:studio.editor",
+      "to": "layout:studio",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:studio.script",
+      "to": "layout:studio",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:studio.caller",
+      "to": "layout:studio",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:studio.queue",
+      "to": "layout:studio",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:studio.queue",
+      "to": "route:studio.upload",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:studio.automation",
+      "to": "layout:studio",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:studio.assets",
+      "to": "layout:studio",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:cms",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:cms.dashboard",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:cms.articles",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:cms.shows",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:cms.podcasts",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:cms.research",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:cms.media",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:cms.users",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:cms.comments",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:cms.moderation",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:cms.workflows",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:cms.scheduler",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:cms.scheduler",
+      "to": "route:cms.shows",
+      "rel": "depends-on"
+    },
+    {
+      "from": "route:admin",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:admin.users",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:admin.roles",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:admin.permissions",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:admin.api",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:admin.settings",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:admin.logs",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:admin.audit",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:admin.security",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:admin.storage",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:admin.backups",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:admin.integrations",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:admin.registry-explorer",
+      "to": "layout:admin",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:api.auth",
+      "to": "layout:fullscreen",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:api.radio",
+      "to": "layout:fullscreen",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:api.podcasts",
+      "to": "layout:fullscreen",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:api.research",
+      "to": "layout:fullscreen",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:api.news",
+      "to": "layout:fullscreen",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:api.events",
+      "to": "layout:fullscreen",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:api.community",
+      "to": "layout:fullscreen",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:api.search",
+      "to": "layout:fullscreen",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:api.analytics",
+      "to": "layout:fullscreen",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:api.upload",
+      "to": "layout:fullscreen",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:api.notifications",
+      "to": "layout:fullscreen",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:api.payments",
+      "to": "layout:fullscreen",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:ecosystem",
+      "to": "layout:landing",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:ecosystem.nlm",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:ecosystem.cic",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:ecosystem.shree-kautilya",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:ecosystem.lipi",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:ecosystem.maataa",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:ecosystem.corpus",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:ecosystem.apis",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "route:ecosystem.developers",
+      "to": "layout:article",
+      "rel": "uses-layout"
+    },
+    {
+      "from": "layout:landing",
+      "to": "component:net-status",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:landing",
+      "to": "component:catalog-grid",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:landing",
+      "to": "component:podcast-card",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:landing",
+      "to": "component:course-card",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:landing",
+      "to": "tokens:design",
+      "rel": "styled-by"
+    },
+    {
+      "from": "layout:player",
+      "to": "component:net-status",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:player",
+      "to": "component:station-list",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:player",
+      "to": "component:player",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:player",
+      "to": "component:waveform",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:player",
+      "to": "component:transcript",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:player",
+      "to": "component:schedule-list",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:player",
+      "to": "component:wallet",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:player",
+      "to": "component:persona-select",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:player",
+      "to": "component:weather-widget",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:player",
+      "to": "component:story-modal",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:player",
+      "to": "tokens:design",
+      "rel": "styled-by"
+    },
+    {
+      "from": "layout:dashboard",
+      "to": "component:net-status",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:dashboard",
+      "to": "component:chart",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:dashboard",
+      "to": "component:admin-table",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:dashboard",
+      "to": "tokens:design",
+      "rel": "styled-by"
+    },
+    {
+      "from": "layout:studio",
+      "to": "component:station-list",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:studio",
+      "to": "component:visualizer",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:studio",
+      "to": "component:waveform",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:studio",
+      "to": "component:transcript",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:studio",
+      "to": "component:schedule-list",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:studio",
+      "to": "tokens:design",
+      "rel": "styled-by"
+    },
+    {
+      "from": "layout:article",
+      "to": "component:article",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:article",
+      "to": "component:timeline",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:article",
+      "to": "tokens:design",
+      "rel": "styled-by"
+    },
+    {
+      "from": "layout:reader",
+      "to": "component:transcript",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:reader",
+      "to": "component:article",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:reader",
+      "to": "component:quiz",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:reader",
+      "to": "tokens:design",
+      "rel": "styled-by"
+    },
+    {
+      "from": "layout:fullscreen",
+      "to": "tokens:design",
+      "rel": "styled-by"
+    },
+    {
+      "from": "layout:settings",
+      "to": "component:persona-select",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:settings",
+      "to": "component:wallet",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:settings",
+      "to": "tokens:design",
+      "rel": "styled-by"
+    },
+    {
+      "from": "layout:admin",
+      "to": "component:net-status",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:admin",
+      "to": "component:admin-table",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:admin",
+      "to": "tokens:design",
+      "rel": "styled-by"
+    },
+    {
+      "from": "layout:modal",
+      "to": "component:story-modal",
+      "rel": "renders"
+    },
+    {
+      "from": "layout:modal",
+      "to": "tokens:design",
+      "rel": "styled-by"
+    },
+    {
+      "from": "component:player",
+      "to": "content-type:radio-track",
+      "rel": "renders"
+    },
+    {
+      "from": "component:station-list",
+      "to": "content-type:live-show",
+      "rel": "renders"
+    },
+    {
+      "from": "component:schedule-list",
+      "to": "content-type:live-show",
+      "rel": "renders"
+    },
+    {
+      "from": "component:schedule-list",
+      "to": "content-type:radio-track",
+      "rel": "renders"
+    },
+    {
+      "from": "component:catalog-grid",
+      "to": "content-type:radio-track",
+      "rel": "renders"
+    },
+    {
+      "from": "component:transcript",
+      "to": "content-type:transcript",
+      "rel": "renders"
+    },
+    {
+      "from": "component:story-modal",
+      "to": "content-type:radio-track",
+      "rel": "renders"
+    },
+    {
+      "from": "component:podcast-card",
+      "to": "content-type:podcast",
+      "rel": "renders"
+    },
+    {
+      "from": "component:article",
+      "to": "content-type:article",
+      "rel": "renders"
+    },
+    {
+      "from": "component:article",
+      "to": "content-type:research-paper",
+      "rel": "renders"
+    },
+    {
+      "from": "component:chart",
+      "to": "content-type:dataset",
+      "rel": "renders"
+    },
+    {
+      "from": "component:timeline",
+      "to": "content-type:event",
+      "rel": "renders"
+    },
+    {
+      "from": "component:timeline",
+      "to": "content-type:live-show",
+      "rel": "renders"
+    },
+    {
+      "from": "component:waveform",
+      "to": "content-type:radio-track",
+      "rel": "renders"
+    },
+    {
+      "from": "component:waveform",
+      "to": "content-type:podcast",
+      "rel": "renders"
+    },
+    {
+      "from": "component:quiz",
+      "to": "content-type:quiz",
+      "rel": "renders"
+    },
+    {
+      "from": "component:course-card",
+      "to": "content-type:course",
+      "rel": "renders"
+    },
+    {
+      "from": "content-type:radio-track",
+      "to": "workflow:rights-closure",
+      "rel": "governed-by"
+    },
+    {
+      "from": "content-type:radio-track",
+      "to": "content-type:transcript",
+      "rel": "references"
+    },
+    {
+      "from": "content-type:transcript",
+      "to": "workflow:editorial",
+      "rel": "governed-by"
+    },
+    {
+      "from": "content-type:transcript",
+      "to": "content-type:radio-track",
+      "rel": "references"
+    },
+    {
+      "from": "content-type:live-show",
+      "to": "workflow:editorial",
+      "rel": "governed-by"
+    },
+    {
+      "from": "content-type:live-show",
+      "to": "content-type:radio-track",
+      "rel": "references"
+    },
+    {
+      "from": "content-type:podcast",
+      "to": "workflow:editorial",
+      "rel": "governed-by"
+    },
+    {
+      "from": "content-type:podcast",
+      "to": "content-type:transcript",
+      "rel": "references"
+    },
+    {
+      "from": "content-type:research-paper",
+      "to": "workflow:editorial",
+      "rel": "governed-by"
+    },
+    {
+      "from": "content-type:research-paper",
+      "to": "content-type:dataset",
+      "rel": "references"
+    },
+    {
+      "from": "content-type:dataset",
+      "to": "workflow:editorial",
+      "rel": "governed-by"
+    },
+    {
+      "from": "content-type:article",
+      "to": "workflow:editorial",
+      "rel": "governed-by"
+    },
+    {
+      "from": "content-type:event",
+      "to": "workflow:editorial",
+      "rel": "governed-by"
+    },
+    {
+      "from": "content-type:course",
+      "to": "workflow:editorial",
+      "rel": "governed-by"
+    },
+    {
+      "from": "content-type:course",
+      "to": "content-type:quiz",
+      "rel": "references"
+    },
+    {
+      "from": "content-type:quiz",
+      "to": "workflow:editorial",
+      "rel": "governed-by"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:public.home",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:public.about",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:public.mission",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:public.vision",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:public.science-for-bharat",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:public.contact",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:public.partners",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:public.sponsors",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:public.careers",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:public.press",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:public.privacy",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:public.terms",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:public.accessibility",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:public.donate",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:radio",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:radio.live",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:radio.now-playing",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:radio.schedule",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:radio.frequencies",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:radio.shows",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:radio.shows.detail",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:radio.rj",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:radio.archive",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:radio.request",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:radio.dedicate",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:radio.download",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:search",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:search.radio",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:search.podcasts",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:search.research",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:search.news",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:search.people",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:user.login",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:user.signup",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:user.forgot-password",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:user.verify",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:user.profile",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:user.profile.edit",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:user.bookmarks",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:user.history",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:user.downloads",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:user.notifications",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:user.settings",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:premium",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:premium.plans",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:premium.payment",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:premium.history",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:premium.library",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:analytics",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:analytics.listeners",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:analytics.live",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:analytics.streams",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:analytics.content",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:analytics.geography",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:analytics.revenue",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:studio",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:studio.live",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:studio.record",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:studio.upload",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:studio.editor",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:studio.script",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:studio.caller",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:studio.queue",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:studio.automation",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:studio.assets",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:cms",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:cms.dashboard",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:cms.articles",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:cms.shows",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:cms.podcasts",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:cms.research",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:cms.media",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:cms.users",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:cms.comments",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:cms.moderation",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:cms.workflows",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:cms.scheduler",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:admin",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:admin.users",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:admin.roles",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:admin.permissions",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:admin.api",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:admin.settings",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:admin.logs",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:admin.audit",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:admin.security",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:admin.storage",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:admin.backups",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:admin.integrations",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:admin.registry-explorer",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:api.auth",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:api.radio",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:api.podcasts",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:api.research",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:api.news",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:api.events",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:api.community",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:api.search",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:api.analytics",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:api.upload",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:api.notifications",
+      "rel": "owns"
+    },
+    {
+      "from": "app:radio",
+      "to": "route:api.payments",
+      "rel": "owns"
+    },
+    {
+      "from": "app:nlm",
+      "to": "route:ecosystem.nlm",
+      "rel": "owns"
+    },
+    {
+      "from": "app:cic",
+      "to": "route:ecosystem.cic",
+      "rel": "owns"
+    },
+    {
+      "from": "app:lipi",
+      "to": "route:ecosystem.lipi",
+      "rel": "owns"
+    },
+    {
+      "from": "app:corpus",
+      "to": "route:ecosystem.corpus",
+      "rel": "owns"
+    },
+    {
+      "from": "app:shree-kautilya",
+      "to": "route:ecosystem.shree-kautilya",
+      "rel": "owns"
+    },
+    {
+      "from": "app:maataa",
+      "to": "route:ecosystem.maataa",
+      "rel": "owns"
+    },
+    {
+      "from": "app:academy",
+      "to": "route:academy",
+      "rel": "owns"
+    },
+    {
+      "from": "app:academy",
+      "to": "route:academy.courses",
+      "rel": "owns"
+    },
+    {
+      "from": "app:academy",
+      "to": "route:academy.course",
+      "rel": "owns"
+    },
+    {
+      "from": "app:academy",
+      "to": "route:academy.lessons",
+      "rel": "owns"
+    },
+    {
+      "from": "app:academy",
+      "to": "route:academy.quizzes",
+      "rel": "owns"
+    },
+    {
+      "from": "app:academy",
+      "to": "route:academy.tests",
+      "rel": "owns"
+    },
+    {
+      "from": "app:academy",
+      "to": "route:academy.certificates",
+      "rel": "owns"
+    },
+    {
+      "from": "app:academy",
+      "to": "route:academy.my-learning",
+      "rel": "owns"
+    },
+    {
+      "from": "app:academy",
+      "to": "route:academy.leaderboard",
+      "rel": "owns"
+    }
+  ],
+  "impact": {
+    "route:public.home": [
+      "app:radio"
+    ],
+    "route:public.about": [
+      "app:radio"
+    ],
+    "route:public.mission": [
+      "app:radio"
+    ],
+    "route:public.vision": [
+      "app:radio"
+    ],
+    "route:public.science-for-bharat": [
+      "app:radio"
+    ],
+    "route:public.contact": [
+      "app:radio"
+    ],
+    "route:public.partners": [
+      "app:radio"
+    ],
+    "route:public.sponsors": [
+      "app:radio"
+    ],
+    "route:public.careers": [
+      "app:radio"
+    ],
+    "route:public.press": [
+      "app:radio"
+    ],
+    "route:public.privacy": [
+      "app:radio"
+    ],
+    "route:public.terms": [
+      "app:radio"
+    ],
+    "route:public.accessibility": [
+      "app:radio"
+    ],
+    "route:public.donate": [
+      "app:radio"
+    ],
+    "route:radio": [
+      "app:radio"
+    ],
+    "route:radio.live": [
+      "app:radio"
+    ],
+    "route:radio.now-playing": [
+      "app:radio"
+    ],
+    "route:radio.schedule": [
+      "app:radio"
+    ],
+    "route:radio.frequencies": [
+      "app:radio"
+    ],
+    "route:radio.shows": [
+      "app:radio"
+    ],
+    "route:radio.shows.detail": [
+      "app:radio"
+    ],
+    "route:radio.rj": [
+      "app:radio"
+    ],
+    "route:radio.archive": [
+      "route:radio.download",
+      "app:radio"
+    ],
+    "route:radio.request": [
+      "app:radio"
+    ],
+    "route:radio.dedicate": [
+      "app:radio"
+    ],
+    "route:radio.download": [
+      "route:user.downloads",
+      "app:radio"
+    ],
+    "route:academy": [
+      "app:academy"
+    ],
+    "route:academy.courses": [
+      "app:academy"
+    ],
+    "route:academy.course": [
+      "app:academy"
+    ],
+    "route:academy.lessons": [
+      "app:academy"
+    ],
+    "route:academy.quizzes": [
+      "app:academy"
+    ],
+    "route:academy.tests": [
+      "route:academy.certificates",
+      "app:academy"
+    ],
+    "route:academy.certificates": [
+      "app:academy"
+    ],
+    "route:academy.my-learning": [
+      "app:academy"
+    ],
+    "route:academy.leaderboard": [
+      "app:academy"
+    ],
+    "route:search": [
+      "app:radio"
+    ],
+    "route:search.radio": [
+      "app:radio"
+    ],
+    "route:search.podcasts": [
+      "app:radio"
+    ],
+    "route:search.research": [
+      "app:radio"
+    ],
+    "route:search.news": [
+      "app:radio"
+    ],
+    "route:search.people": [
+      "app:radio"
+    ],
+    "route:user.login": [
+      "route:radio.request",
+      "route:radio.dedicate",
+      "route:academy.certificates",
+      "route:academy.my-learning",
+      "route:community.profile",
+      "route:user.profile",
+      "route:user.bookmarks",
+      "route:user.history",
+      "route:user.downloads",
+      "route:user.notifications",
+      "route:user.settings",
+      "route:premium.payment",
+      "route:premium.history",
+      "route:premium.library",
+      "app:radio"
+    ],
+    "route:user.signup": [
+      "app:radio"
+    ],
+    "route:user.forgot-password": [
+      "app:radio"
+    ],
+    "route:user.verify": [
+      "app:radio"
+    ],
+    "route:user.profile": [
+      "route:user.profile.edit",
+      "route:premium.payment",
+      "app:radio"
+    ],
+    "route:user.profile.edit": [
+      "app:radio"
+    ],
+    "route:user.bookmarks": [
+      "app:radio"
+    ],
+    "route:user.history": [
+      "app:radio"
+    ],
+    "route:user.downloads": [
+      "app:radio"
+    ],
+    "route:user.notifications": [
+      "app:radio"
+    ],
+    "route:user.settings": [
+      "app:radio"
+    ],
+    "route:premium": [
+      "app:radio"
+    ],
+    "route:premium.plans": [
+      "route:premium.payment",
+      "app:radio"
+    ],
+    "route:premium.payment": [
+      "route:premium.history",
+      "route:premium.library",
+      "app:radio"
+    ],
+    "route:premium.history": [
+      "app:radio"
+    ],
+    "route:premium.library": [
+      "app:radio"
+    ],
+    "route:analytics": [
+      "app:radio"
+    ],
+    "route:analytics.listeners": [
+      "app:radio"
+    ],
+    "route:analytics.live": [
+      "app:radio"
+    ],
+    "route:analytics.streams": [
+      "app:radio"
+    ],
+    "route:analytics.content": [
+      "app:radio"
+    ],
+    "route:analytics.geography": [
+      "app:radio"
+    ],
+    "route:analytics.revenue": [
+      "app:radio"
+    ],
+    "route:studio": [
+      "app:radio"
+    ],
+    "route:studio.live": [
+      "app:radio"
+    ],
+    "route:studio.record": [
+      "app:radio"
+    ],
+    "route:studio.upload": [
+      "route:studio.queue",
+      "app:radio"
+    ],
+    "route:studio.editor": [
+      "app:radio"
+    ],
+    "route:studio.script": [
+      "app:radio"
+    ],
+    "route:studio.caller": [
+      "app:radio"
+    ],
+    "route:studio.queue": [
+      "app:radio"
+    ],
+    "route:studio.automation": [
+      "app:radio"
+    ],
+    "route:studio.assets": [
+      "app:radio"
+    ],
+    "route:cms": [
+      "app:radio"
+    ],
+    "route:cms.dashboard": [
+      "app:radio"
+    ],
+    "route:cms.articles": [
+      "app:radio"
+    ],
+    "route:cms.shows": [
+      "route:cms.scheduler",
+      "app:radio"
+    ],
+    "route:cms.podcasts": [
+      "app:radio"
+    ],
+    "route:cms.research": [
+      "app:radio"
+    ],
+    "route:cms.media": [
+      "app:radio"
+    ],
+    "route:cms.users": [
+      "app:radio"
+    ],
+    "route:cms.comments": [
+      "app:radio"
+    ],
+    "route:cms.moderation": [
+      "app:radio"
+    ],
+    "route:cms.workflows": [
+      "app:radio"
+    ],
+    "route:cms.scheduler": [
+      "app:radio"
+    ],
+    "route:admin": [
+      "app:radio"
+    ],
+    "route:admin.users": [
+      "app:radio"
+    ],
+    "route:admin.roles": [
+      "app:radio"
+    ],
+    "route:admin.permissions": [
+      "app:radio"
+    ],
+    "route:admin.api": [
+      "app:radio"
+    ],
+    "route:admin.settings": [
+      "app:radio"
+    ],
+    "route:admin.logs": [
+      "app:radio"
+    ],
+    "route:admin.audit": [
+      "app:radio"
+    ],
+    "route:admin.security": [
+      "app:radio"
+    ],
+    "route:admin.storage": [
+      "app:radio"
+    ],
+    "route:admin.backups": [
+      "app:radio"
+    ],
+    "route:admin.integrations": [
+      "app:radio"
+    ],
+    "route:admin.registry-explorer": [
+      "app:radio"
+    ],
+    "route:api.auth": [
+      "app:radio"
+    ],
+    "route:api.radio": [
+      "app:radio"
+    ],
+    "route:api.podcasts": [
+      "app:radio"
+    ],
+    "route:api.research": [
+      "app:radio"
+    ],
+    "route:api.news": [
+      "app:radio"
+    ],
+    "route:api.events": [
+      "app:radio"
+    ],
+    "route:api.community": [
+      "app:radio"
+    ],
+    "route:api.search": [
+      "app:radio"
+    ],
+    "route:api.analytics": [
+      "app:radio"
+    ],
+    "route:api.upload": [
+      "app:radio"
+    ],
+    "route:api.notifications": [
+      "app:radio"
+    ],
+    "route:api.payments": [
+      "app:radio"
+    ],
+    "route:ecosystem.nlm": [
+      "app:nlm"
+    ],
+    "route:ecosystem.cic": [
+      "app:cic"
+    ],
+    "route:ecosystem.shree-kautilya": [
+      "app:shree-kautilya"
+    ],
+    "route:ecosystem.lipi": [
+      "app:lipi"
+    ],
+    "route:ecosystem.maataa": [
+      "app:maataa"
+    ],
+    "route:ecosystem.corpus": [
+      "app:corpus"
+    ],
+    "component:player": [
+      "layout:player"
+    ],
+    "component:station-list": [
+      "layout:player",
+      "layout:studio"
+    ],
+    "component:schedule-list": [
+      "layout:player",
+      "layout:studio"
+    ],
+    "component:catalog-grid": [
+      "layout:landing"
+    ],
+    "component:transcript": [
+      "layout:player",
+      "layout:studio",
+      "layout:reader"
+    ],
+    "component:story-modal": [
+      "layout:player",
+      "layout:modal"
+    ],
+    "component:wallet": [
+      "layout:player",
+      "layout:settings"
+    ],
+    "component:persona-select": [
+      "layout:player",
+      "layout:settings"
+    ],
+    "component:weather-widget": [
+      "layout:player"
+    ],
+    "component:net-status": [
+      "layout:landing",
+      "layout:player",
+      "layout:dashboard",
+      "layout:admin"
+    ],
+    "component:admin-table": [
+      "layout:dashboard",
+      "layout:admin"
+    ],
+    "component:visualizer": [
+      "layout:studio"
+    ],
+    "component:podcast-card": [
+      "layout:landing"
+    ],
+    "component:article": [
+      "layout:article",
+      "layout:reader"
+    ],
+    "component:chart": [
+      "layout:dashboard"
+    ],
+    "component:timeline": [
+      "layout:article"
+    ],
+    "component:waveform": [
+      "layout:player",
+      "layout:studio"
+    ],
+    "component:quiz": [
+      "layout:reader"
+    ],
+    "component:course-card": [
+      "layout:landing"
+    ],
+    "layout:landing": [
+      "route:public.home",
+      "route:public.about",
+      "route:public.mission",
+      "route:public.vision",
+      "route:public.science-for-bharat",
+      "route:public.contact",
+      "route:public.partners",
+      "route:public.sponsors",
+      "route:public.careers",
+      "route:public.press",
+      "route:public.privacy",
+      "route:public.terms",
+      "route:public.accessibility",
+      "route:public.donate",
+      "route:radio",
+      "route:podcasts",
+      "route:research",
+      "route:discover",
+      "route:academy",
+      "route:community",
+      "route:events",
+      "route:media.gallery",
+      "route:media.infographics",
+      "route:media.animations",
+      "route:ai",
+      "route:user.login",
+      "route:user.signup",
+      "route:user.forgot-password",
+      "route:user.verify",
+      "route:user.bookmarks",
+      "route:user.history",
+      "route:user.downloads",
+      "route:premium",
+      "route:ecosystem"
+    ],
+    "layout:player": [
+      "route:radio.live",
+      "route:radio.now-playing",
+      "route:podcasts.detail",
+      "route:podcasts.transcript",
+      "route:podcasts.chapters",
+      "route:podcasts.discussion",
+      "route:media.videos",
+      "route:media.shorts",
+      "route:media.livestreams"
+    ],
+    "layout:dashboard": [
+      "route:search",
+      "route:search.radio",
+      "route:search.podcasts",
+      "route:search.research",
+      "route:search.news",
+      "route:search.people",
+      "route:analytics",
+      "route:analytics.listeners",
+      "route:analytics.live",
+      "route:analytics.streams",
+      "route:analytics.content",
+      "route:analytics.geography",
+      "route:analytics.revenue"
+    ],
+    "layout:studio": [
+      "route:studio",
+      "route:studio.live",
+      "route:studio.record",
+      "route:studio.upload",
+      "route:studio.editor",
+      "route:studio.script",
+      "route:studio.caller",
+      "route:studio.queue",
+      "route:studio.automation",
+      "route:studio.assets"
+    ],
+    "layout:article": [
+      "route:radio.schedule",
+      "route:radio.frequencies",
+      "route:radio.shows",
+      "route:radio.shows.detail",
+      "route:radio.rj",
+      "route:radio.archive",
+      "route:radio.request",
+      "route:radio.dedicate",
+      "route:radio.download",
+      "route:podcasts.trending",
+      "route:podcasts.latest",
+      "route:podcasts.categories",
+      "route:podcasts.bookmark",
+      "route:research.publications",
+      "route:research.papers",
+      "route:research.datasets",
+      "route:research.experiments",
+      "route:research.projects",
+      "route:research.labs",
+      "route:research.authors",
+      "route:research.citations",
+      "route:research.downloads",
+      "route:discover.space",
+      "route:discover.astronomy",
+      "route:discover.physics",
+      "route:discover.chemistry",
+      "route:discover.biology",
+      "route:discover.mathematics",
+      "route:discover.medicine",
+      "route:discover.agriculture",
+      "route:discover.environment",
+      "route:discover.climate",
+      "route:discover.robotics",
+      "route:discover.ai",
+      "route:discover.history-of-science",
+      "route:discover.sanskrit-science",
+      "route:discover.innovation",
+      "route:discover.startups",
+      "route:discover.student",
+      "route:academy.courses",
+      "route:academy.lessons",
+      "route:academy.quizzes",
+      "route:academy.tests",
+      "route:academy.certificates",
+      "route:academy.my-learning",
+      "route:academy.leaderboard",
+      "route:community.discussions",
+      "route:community.questions",
+      "route:community.polls",
+      "route:community.events",
+      "route:community.clubs",
+      "route:community.challenges",
+      "route:community.leaderboard",
+      "route:community.profile",
+      "route:events.live",
+      "route:events.upcoming",
+      "route:events.calendar",
+      "route:events.workshops",
+      "route:events.webinars",
+      "route:events.hackathons",
+      "route:events.science-fairs",
+      "route:news",
+      "route:news.science",
+      "route:news.space",
+      "route:news.technology",
+      "route:news.agriculture",
+      "route:news.india",
+      "route:news.world",
+      "route:news.videos",
+      "route:ai.rj",
+      "route:ai.chat",
+      "route:ai.translator",
+      "route:ai.summarizer",
+      "route:ai.recommendations",
+      "route:ai.search",
+      "route:premium.plans",
+      "route:premium.payment",
+      "route:premium.history",
+      "route:premium.library",
+      "route:ecosystem.nlm",
+      "route:ecosystem.cic",
+      "route:ecosystem.shree-kautilya",
+      "route:ecosystem.lipi",
+      "route:ecosystem.maataa",
+      "route:ecosystem.corpus",
+      "route:ecosystem.apis",
+      "route:ecosystem.developers"
+    ],
+    "layout:reader": [
+      "route:academy.course",
+      "route:ai.transcript"
+    ],
+    "layout:fullscreen": [
+      "route:api.auth",
+      "route:api.radio",
+      "route:api.podcasts",
+      "route:api.research",
+      "route:api.news",
+      "route:api.events",
+      "route:api.community",
+      "route:api.search",
+      "route:api.analytics",
+      "route:api.upload",
+      "route:api.notifications",
+      "route:api.payments"
+    ],
+    "layout:settings": [
+      "route:user.profile",
+      "route:user.profile.edit",
+      "route:user.notifications",
+      "route:user.settings"
+    ],
+    "layout:admin": [
+      "route:cms",
+      "route:cms.dashboard",
+      "route:cms.articles",
+      "route:cms.shows",
+      "route:cms.podcasts",
+      "route:cms.research",
+      "route:cms.media",
+      "route:cms.users",
+      "route:cms.comments",
+      "route:cms.moderation",
+      "route:cms.workflows",
+      "route:cms.scheduler",
+      "route:admin",
+      "route:admin.users",
+      "route:admin.roles",
+      "route:admin.permissions",
+      "route:admin.api",
+      "route:admin.settings",
+      "route:admin.logs",
+      "route:admin.audit",
+      "route:admin.security",
+      "route:admin.storage",
+      "route:admin.backups",
+      "route:admin.integrations",
+      "route:admin.registry-explorer"
+    ],
+    "content-type:radio-track": [
+      "route:radio.now-playing",
+      "route:radio.archive",
+      "route:radio.download",
+      "component:player",
+      "component:schedule-list",
+      "component:catalog-grid",
+      "component:story-modal",
+      "component:waveform",
+      "content-type:transcript",
+      "content-type:live-show"
+    ],
+    "content-type:transcript": [
+      "route:podcasts.transcript",
+      "route:ai.transcript",
+      "component:transcript",
+      "content-type:radio-track",
+      "content-type:podcast"
+    ],
+    "content-type:live-show": [
+      "route:radio.live",
+      "route:radio.schedule",
+      "route:radio.shows",
+      "route:radio.shows.detail",
+      "component:station-list",
+      "component:schedule-list",
+      "component:timeline"
+    ],
+    "content-type:podcast": [
+      "route:podcasts",
+      "route:podcasts.trending",
+      "route:podcasts.latest",
+      "route:podcasts.detail",
+      "route:podcasts.chapters",
+      "component:podcast-card",
+      "component:waveform"
+    ],
+    "content-type:research-paper": [
+      "route:research.publications",
+      "route:research.papers",
+      "route:research.citations",
+      "component:article"
+    ],
+    "content-type:dataset": [
+      "route:research.datasets",
+      "route:research.downloads",
+      "component:chart",
+      "content-type:research-paper"
+    ],
+    "content-type:article": [
+      "route:news",
+      "route:news.science",
+      "route:news.space",
+      "route:news.technology",
+      "route:news.agriculture",
+      "route:news.india",
+      "route:news.world",
+      "component:article"
+    ],
+    "content-type:event": [
+      "route:events",
+      "route:events.upcoming",
+      "route:events.workshops",
+      "route:events.webinars",
+      "route:events.hackathons",
+      "route:events.science-fairs",
+      "component:timeline"
+    ],
+    "content-type:course": [
+      "route:academy.courses",
+      "route:academy.course",
+      "route:academy.lessons",
+      "component:course-card"
+    ],
+    "content-type:quiz": [
+      "route:academy.quizzes",
+      "route:academy.tests",
+      "component:quiz",
+      "content-type:course"
+    ],
+    "workflow:editorial": [
+      "content-type:transcript",
+      "content-type:live-show",
+      "content-type:podcast",
+      "content-type:research-paper",
+      "content-type:dataset",
+      "content-type:article",
+      "content-type:event",
+      "content-type:course",
+      "content-type:quiz"
+    ],
+    "workflow:rights-closure": [
+      "content-type:radio-track"
+    ],
+    "tokens:design": [
+      "layout:landing",
+      "layout:player",
+      "layout:dashboard",
+      "layout:studio",
+      "layout:article",
+      "layout:reader",
+      "layout:fullscreen",
+      "layout:settings",
+      "layout:admin",
+      "layout:modal"
+    ]
+  },
+  "orphans": {
+    "components": [],
+    "contentTypes": [],
+    "workflows": []
+  }
+}

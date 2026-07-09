@@ -52,13 +52,38 @@ imports), so Node can execute the registry directly with type stripping.
    `lib/routes.ts`.
 4. **Never author `children` or navigation lists by hand** — both are computed.
 
+## Compiler & infrastructure
+
+```
+registry → COMPILER → compiled-manifest.json → plugins → artifacts → runtime
+```
+
+`scripts/registry-compiler.mjs` produces the canonical compiled object: resolved
+references, flattened per-route component trees, the manifest GRAPH (247 nodes /
+449 edges, impact + orphan analysis), O(1) lookup indexes, and **frozen ids**
+(`ids.lock.json` — the build fails if any identifier disappears). Plugins
+consume the compiled object, never raw modules. Builds are **incremental**:
+per-source hashing (`.registry-buildcache.json`, gitignored) runs only affected
+plugins — `tokens.ts` change → tokens (+ dependents), nothing else.
+
+Tooling: **Registry Explorer** (`public/registry/explorer.html`, route
+`admin.registry-explorer`) inspects any node — layout, permissions, component
+tree, workflows, APIs, SEO, evidence, graph impact. **Read-only Manifest API**
+(radio-backend `/manifest`, `/manifest/routes/:id`, …) serves the generated
+artifacts to external tools; the runtime never queries registry sources.
+
 ## Workflows
 
 ```bash
-npm run radio:registry          # validate + regenerate every derived artifact
-npm run radio:registry:migrate  # ⚠ recovery only: regenerates modules from JSON,
-                                #   OVERWRITING hand edits
-npx vitest run tests/registry-platform.test.ts tests/route-registry.test.ts
+npm run radio:registry           # compile + incremental plugin build
+npm run radio:registry:force     # rebuild everything
+npm run radio:registry -- --update-lock   # accept intentional id additions/removals
+npm run radio:registry:diff      # diff vs git HEAD (exit 2 on breaking changes)
+npm run radio:registry:upgrade <file>     # migrate old manifests v1→v2→v3
+npm run radio:registry:migrate   # ⚠ recovery only: regenerates modules from JSON,
+                                 #   OVERWRITING hand edits
+npx vitest run tests/registry-compiler.test.ts tests/registry-manifest.test.ts \
+  tests/registry-platform.test.ts tests/route-registry.test.ts
 ```
 
 Environment: `SITE_ORIGIN` (absolute URLs in sitemap/feeds; defaults to

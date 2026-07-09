@@ -1,6 +1,6 @@
 {
   "id": "radio-vaigyaaniq-route-registry",
-  "generatedAt": "2026-07-09T17:40:11.166Z",
+  "generatedAt": "2026-07-09T17:53:00.157Z",
   "schemaVersion": 3,
   "$schema": "/registry/registry.schema.json",
   "siteOrigin": "http://localhost:3000",
@@ -10,13 +10,13 @@
   },
   "counts": {
     "sections": 20,
-    "routes": 195,
-    "built": 5,
+    "routes": 196,
+    "built": 6,
     "partial": 47,
     "planned": 143,
     "dynamic": 8,
     "searchable": 123,
-    "apiReferences": 19,
+    "apiReferences": 20,
     "components": 19,
     "contentTypes": 10,
     "workflows": 2,
@@ -12519,7 +12519,8 @@
         "admin.security",
         "admin.storage",
         "admin.backups",
-        "admin.integrations"
+        "admin.integrations",
+        "admin.registry-explorer"
       ],
       "tags": [
         "administration",
@@ -13348,6 +13349,97 @@
         "administration",
         "operations",
         "partial"
+      ],
+      "contentType": null
+    },
+    {
+      "path": "/admin/registry-explorer",
+      "section": "Administration",
+      "emoji": "⚙",
+      "title": "Registry Explorer",
+      "status": "built",
+      "implementedBy": [
+        "apps/radio/public/registry/explorer.html",
+        "apps/radio/lib/compiled-manifest.json"
+      ],
+      "description": "Developer UI over the compiled manifest: routes, components, tokens, workflows, permissions, graph impact and orphan analysis.",
+      "dynamic": false,
+      "id": "admin.registry-explorer",
+      "category": "operations",
+      "layout": "admin",
+      "icon": "⚙",
+      "searchable": false,
+      "navigation": {
+        "sidebar": false,
+        "header": false,
+        "footer": false,
+        "breadcrumbs": true,
+        "commandPalette": true,
+        "quickAccess": false,
+        "contextMenu": false
+      },
+      "platforms": [
+        "web",
+        "desktop"
+      ],
+      "permissions": [
+        "admin",
+        "superadmin"
+      ],
+      "featureFlags": [],
+      "api": [
+        {
+          "method": "GET",
+          "path": "/manifest",
+          "status": "built",
+          "description": "Read-only compiled manifest API (radio-backend)"
+        }
+      ],
+      "seo": {
+        "title": "Registry Explorer · Radio Vaigyaaniq",
+        "description": "Developer UI over the compiled manifest.",
+        "keywords": [
+          "administration",
+          "registry",
+          "explorer"
+        ],
+        "canonical": null,
+        "robots": "noindex,nofollow",
+        "openGraph": {
+          "title": "Registry Explorer",
+          "description": "Developer UI over the compiled manifest.",
+          "type": "website",
+          "image": null
+        },
+        "twitter": {
+          "card": "summary",
+          "title": "Registry Explorer",
+          "description": "Developer UI over the compiled manifest."
+        },
+        "jsonLd": null
+      },
+      "analytics": {
+        "screenName": "admin.registry-explorer",
+        "event": "view_admin_registry_explorer",
+        "trackingId": null,
+        "conversionGoal": null
+      },
+      "evidence": [
+        {
+          "artifact": "apps/radio/public/registry/explorer.html",
+          "kind": "surface"
+        },
+        {
+          "artifact": "apps/radio/lib/compiled-manifest.json",
+          "kind": "data"
+        }
+      ],
+      "dependsOn": [],
+      "children": [],
+      "tags": [
+        "administration",
+        "operations",
+        "built"
       ],
       "contentType": null
     },

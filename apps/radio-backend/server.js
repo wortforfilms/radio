@@ -436,6 +436,101 @@ app.post("/admin/resync", (req, res) => {
   });
 });
 
+// ---------------------------------------------------------------------------
+// Manifest API (read-only).
+// Serves the GENERATED registry artifacts — the runtime never queries the
+// registry sources (compile-time philosophy: registry → compile → artifacts
+// → runtime). External tools, dashboards, and IDE extensions consume these.
+// ---------------------------------------------------------------------------
+const MANIFEST_DIR = path.resolve(__dirname, process.env.MANIFEST_DIR || "../../apps/radio/public/registry");
+const manifestCache = new Map(); // file -> { mtimeMs, data }
+
+function readManifestFile(name) {
+  const file = path.join(MANIFEST_DIR, name);
+  if (!fs.existsSync(file)) return null;
+  const { mtimeMs } = fs.statSync(file);
+  const cached = manifestCache.get(name);
+  if (cached && cached.mtimeMs === mtimeMs) return cached.data;
+  const data = JSON.parse(fs.readFileSync(file, "utf8"));
+  manifestCache.set(name, { mtimeMs, data });
+  return data;
+}
+
+const manifestUnavailable = (res) =>
+  res.status(503).json({
+    error: "manifest-not-built",
+    message: "Run `npm run radio:registry` to generate the compiled manifest artifacts."
+  });
+
+app.get("/manifest", (_req, res) => {
+  const compiled = readManifestFile("compiled-manifest.json");
+  if (!compiled) return manifestUnavailable(res);
+  res.json({
+    id: compiled.id,
+    compiledAt: compiled.compiledAt,
+    schemaVersion: compiled.schemaVersion,
+    sourceHash: compiled.sourceHash,
+    counts: compiled.counts,
+    endpoints: [
+      "/manifest/routes", "/manifest/routes/:id", "/manifest/components", "/manifest/layouts",
+      "/manifest/tokens", "/manifest/content-types", "/manifest/workflows", "/manifest/platforms",
+      "/manifest/graph", "/manifest/navigation", "/manifest/search", "/manifest/permissions",
+      "/manifest/openapi", "/manifest/workspace"
+    ]
+  });
+});
+
+app.get("/manifest/routes", (_req, res) => {
+  const compiled = readManifestFile("compiled-manifest.json");
+  if (!compiled) return manifestUnavailable(res);
+  res.json({ count: compiled.routes.length, routes: compiled.routes });
+});
+
+app.get("/manifest/routes/:id", (req, res) => {
+  const compiled = readManifestFile("compiled-manifest.json");
+  if (!compiled) return manifestUnavailable(res);
+  const route = compiled.routes.find((candidate) => candidate.id === req.params.id);
+  if (!route) {
+    res.status(404).json({ error: "unknown route id", id: req.params.id });
+    return;
+  }
+  res.json({
+    route,
+    componentTree: compiled.componentTrees.find((tree) => tree.route === route.id) || null,
+    impact: compiled.graph.impact[`route:${route.id}`] || []
+  });
+});
+
+for (const [routePath, key] of [
+  ["/manifest/components", "components"],
+  ["/manifest/layouts", "layouts"],
+  ["/manifest/tokens", "tokens"],
+  ["/manifest/content-types", "contentTypes"],
+  ["/manifest/workflows", "workflows"],
+  ["/manifest/workspace", "workspaceApps"]
+]) {
+  app.get(routePath, (_req, res) => {
+    const compiled = readManifestFile("compiled-manifest.json");
+    if (!compiled) return manifestUnavailable(res);
+    res.json(compiled[key]);
+  });
+}
+
+for (const [routePath, file] of [
+  ["/manifest/platforms", "platform-map.json"],
+  ["/manifest/graph", "manifest-graph.json"],
+  ["/manifest/navigation", "navigation.json"],
+  ["/manifest/search", "search.json"],
+  ["/manifest/permissions", "permissions.json"],
+  ["/manifest/openapi", "openapi.json"]
+]) {
+  app.get(routePath, (_req, res) => {
+    const data = readManifestFile(file);
+    if (!data) return manifestUnavailable(res);
+    res.json(data);
+  });
+}
+
 app.listen(PORT, () => {
   console.log(`Radio engine backend listening on http://localhost:${PORT}`);
   console.log(`Manifest: ${MANIFEST_PATH}`);

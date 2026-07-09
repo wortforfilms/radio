@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T17:40:11.166Z",
+  "generatedAt": "2026-07-09T17:53:00.157Z",
   "roles": [
     "anonymous",
     "listener",
@@ -636,6 +636,10 @@
       "superadmin"
     ],
     "admin.integrations": [
+      "admin",
+      "superadmin"
+    ],
+    "admin.registry-explorer": [
       "admin",
       "superadmin"
     ],
@@ -1991,6 +1995,7 @@
       "admin.storage",
       "admin.backups",
       "admin.integrations",
+      "admin.registry-explorer",
       "api.auth",
       "api.radio",
       "api.podcasts",
@@ -2188,6 +2193,7 @@
       "admin.storage",
       "admin.backups",
       "admin.integrations",
+      "admin.registry-explorer",
       "api.auth",
       "api.radio",
       "api.podcasts",

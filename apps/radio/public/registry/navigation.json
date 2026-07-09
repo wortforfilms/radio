@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T17:40:11.166Z",
+  "generatedAt": "2026-07-09T17:53:00.157Z",
   "enabledFlags": [
     "premium"
   ],
@@ -1061,6 +1061,14 @@
       "status": "partial"
     },
     {
+      "id": "admin.registry-explorer",
+      "title": "Registry Explorer",
+      "path": "/admin/registry-explorer",
+      "icon": "⚙",
+      "section": "Administration",
+      "status": "built"
+    },
+    {
       "id": "api.radio",
       "title": "Radio",
       "path": "/api/v1/radio",
@@ -1515,6 +1523,9 @@
       "admin"
     ],
     "admin.integrations": [
+      "admin"
+    ],
+    "admin.registry-explorer": [
       "admin"
     ],
     "api.auth": [],

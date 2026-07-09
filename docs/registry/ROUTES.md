@@ -1,8 +1,8 @@
 # Routes
 
-Generated 2026-07-09T17:40:11.166Z from `apps/radio/registry` — do not edit by hand.
+Generated 2026-07-09T17:53:00.157Z from `apps/radio/registry` — do not edit by hand.
 
-Total **195** routes · 5 built · 47 partial · 143 planned.
+Total **196** routes · 6 built · 47 partial · 143 planned.
 
 ## 🌐 Public Website
 
@@ -267,6 +267,7 @@ Total **195** routes · 5 built · 47 partial · 143 planned.
 | `admin.storage` | `/admin/storage` | 🟡 partial | admin | — | admin, superadmin | — |
 | `admin.backups` | `/admin/backups` | ⬜ planned | admin | — | admin, superadmin | — |
 | `admin.integrations` | `/admin/integrations` | 🟡 partial | admin | — | admin, superadmin | — |
+| `admin.registry-explorer` | `/admin/registry-explorer` | ✅ built | admin | — | admin, superadmin | — |
 
 ## 🔌 API
 

@@ -4,7 +4,7 @@
 // registry; statuses/evidence carried over verbatim (PHKD: evidence-backed).
 import type { RouteDefinition } from "./types.ts";
 
-export const routes: RouteDefinition[] = [
+export const routes: RouteDefinition[] =  [
   {
     "id": "admin",
     "path": "/admin",
@@ -893,6 +893,94 @@ export const routes: RouteDefinition[] = [
       "administration",
       "operations",
       "partial"
+    ],
+    "dynamic": false
+  },
+  {
+    "id": "admin.registry-explorer",
+    "path": "/admin/registry-explorer",
+    "title": "Registry Explorer",
+    "description": "Developer UI over the compiled manifest: routes, components, tokens, workflows, permissions, graph impact and orphan analysis.",
+    "section": "Administration",
+    "category": "operations",
+    "status": "built",
+    "layout": "admin",
+    "icon": "⚙",
+    "searchable": false,
+    "navigation": {
+      "sidebar": false,
+      "header": false,
+      "footer": false,
+      "breadcrumbs": true,
+      "commandPalette": true,
+      "quickAccess": false,
+      "contextMenu": false
+    },
+    "platforms": [
+      "web",
+      "desktop"
+    ],
+    "permissions": [
+      "admin",
+      "superadmin"
+    ],
+    "featureFlags": [],
+    "api": [
+      {
+        "method": "GET",
+        "path": "/manifest",
+        "status": "built",
+        "description": "Read-only compiled manifest API (radio-backend)"
+      }
+    ],
+    "seo": {
+      "title": "Registry Explorer · Radio Vaigyaaniq",
+      "description": "Developer UI over the compiled manifest.",
+      "keywords": [
+        "administration",
+        "registry",
+        "explorer"
+      ],
+      "canonical": null,
+      "robots": "noindex,nofollow",
+      "openGraph": {
+        "title": "Registry Explorer",
+        "description": "Developer UI over the compiled manifest.",
+        "type": "website",
+        "image": null
+      },
+      "twitter": {
+        "card": "summary",
+        "title": "Registry Explorer",
+        "description": "Developer UI over the compiled manifest."
+      },
+      "jsonLd": null
+    },
+    "analytics": {
+      "screenName": "admin.registry-explorer",
+      "event": "view_admin_registry_explorer",
+      "trackingId": null,
+      "conversionGoal": null
+    },
+    "implementedBy": [
+      "apps/radio/public/registry/explorer.html",
+      "apps/radio/lib/compiled-manifest.json"
+    ],
+    "evidence": [
+      {
+        "artifact": "apps/radio/public/registry/explorer.html",
+        "kind": "surface"
+      },
+      {
+        "artifact": "apps/radio/lib/compiled-manifest.json",
+        "kind": "data"
+      }
+    ],
+    "dependsOn": [],
+    "tags": [
+      "administration",
+      "operations",
+      "built"
     ],
     "dynamic": false
   }
