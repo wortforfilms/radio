@@ -46,12 +46,13 @@ const PLUGIN_SOURCES = {
   content: [...BASE, "content-types.ts", "workflows.ts"],
   workspace: [...BASE, "apps.ts"],
   agent: ["agent.ts"],
+  deployment: [...BASE, "apps.ts"],
   docs: [...BASE, "components.ts", "content-types.ts", "workflows.ts"]
 };
 const PLUGIN_USES = {
   docs: ["core", "navigation", "search", "permissions", "api"]
 };
-const PLUGIN_ORDER = ["core", "navigation", "search", "permissions", "platform", "api", "seo", "components", "tokens", "content", "workspace", "agent", "docs"];
+const PLUGIN_ORDER = ["core", "navigation", "search", "permissions", "platform", "api", "seo", "components", "tokens", "content", "workspace", "agent", "deployment", "docs"];
 
 // ---------------------------------------------------------------------------
 // 1. Compile

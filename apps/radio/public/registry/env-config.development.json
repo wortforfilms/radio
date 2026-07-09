@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-07-09T20:22:28.676Z",
+  "environment": "development",
+  "enabledFlags": [
+    "premium",
+    "labs",
+    "beta",
+    "events",
+    "academy",
+    "experimental"
+  ],
+  "counts": {
+    "visibleRoutes": 197,
+    "hiddenRoutes": 0
+  },
+  "hiddenRoutes": [],
+  "requiredSecrets": [
+    "RAZORPAY_KEY_ID",
+    "RAZORPAY_KEY_SECRET",
+    "RAZORPAY_WEBHOOK_SECRET",
+    "ADMIN_PASSWORD",
+    "WEATHER_API_KEY",
+    "AGENT_LLM_PROVIDER",
+    "AGENT_LLM_API_KEY",
+    "CONTENTGEN_PROVIDER",
+    "CONTENTGEN_API_KEY"
+  ]
+}

@@ -1,0 +1,33 @@
+# Registry CI — the registry is the deployment gate.
+# Fails on: registry validation errors, frozen-id removals, breaking registry
+# changes (diff exit code 2), or any test failure.
+# Secrets (LLM/weather/Razorpay/content-gen) come ONLY from repository secrets →
+# env; the registry never stores them.
+name: registry-ci
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history for registry diff against the base
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Compile + validate registry (frozen ids, evidence gates, graph)
+        run: npm run radio:registry -- --force
+      - name: Breaking-change gate (exit 2 on breaking registry changes)
+        if: github.event_name == 'pull_request'
+        run: node scripts/registry-diff.mjs --git origin/${{ github.base_ref }}
+      - name: Tests
+        run: npx vitest run
+      - name: Working tree must match generated artifacts
+        run: git diff --exit-code --stat -- apps/radio/lib apps/radio/public docs/registry || (echo "::error::Generated artifacts out of date — run npm run radio:registry and commit" && exit 1)

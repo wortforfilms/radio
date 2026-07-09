@@ -1,6 +1,6 @@
 {
   "id": "radio-vaigyaaniq-compiled-manifest",
-  "compiledAt": "2026-07-09T20:20:30.045Z",
+  "compiledAt": "2026-07-09T20:22:28.767Z",
   "schemaVersion": 3,
   "sourceHash": "eb40dd50b2eacd94960eeec559079bb1af7f5dba4fbf3f4bfc24b6311fe90cde",
   "counts": {
@@ -29712,6 +29712,7 @@
       "components",
       "content",
       "workspace",
+      "deployment",
       "docs"
     ],
     "types.ts": [
@@ -29725,6 +29726,7 @@
       "components",
       "content",
       "workspace",
+      "deployment",
       "docs"
     ],
     "index.ts": [
@@ -29738,6 +29740,7 @@
       "components",
       "content",
       "workspace",
+      "deployment",
       "docs"
     ],
     "components.ts": [
@@ -29757,7 +29760,8 @@
     ],
     "apps.ts": [
       "core",
-      "workspace"
+      "workspace",
+      "deployment"
     ],
     "layouts.ts": [
       "platform",

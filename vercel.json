@@ -1,0 +1,8 @@
+{
+  "//": "Preview deployments for registry PRs. REGISTRY_FLAGS drives flag-gated visibility per environment (see env-config.*.json).",
+  "buildCommand": "npm run radio:registry -- --force",
+  "outputDirectory": "apps/radio/public",
+  "env": {
+    "REGISTRY_FLAGS": "premium,beta,events,academy"
+  }
+}

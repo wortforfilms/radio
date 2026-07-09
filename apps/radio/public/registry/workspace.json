@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T20:20:29.955Z",
+  "generatedAt": "2026-07-09T20:22:28.676Z",
   "note": "One root registry; app registries own route-id prefixes. Statuses evidence-backed — only artifacts that exist are cited.",
   "counts": {
     "apps": 9,

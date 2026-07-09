@@ -1,6 +1,6 @@
 # Routes
 
-Generated 2026-07-09T20:20:29.955Z from `apps/radio/registry` — do not edit by hand.
+Generated 2026-07-09T20:22:28.676Z from `apps/radio/registry` — do not edit by hand.
 
 Total **197** routes · 6 built · 48 partial · 143 planned.
 

@@ -1,0 +1,68 @@
+{
+  "//": "Generated 2026-07-09T20:22:28.676Z from registry workspace/platform metadata — do not edit. Apply with terraform; values via variables, secrets via your secret manager.",
+  "variable": {
+    "region": {
+      "type": "string"
+    },
+    "instance_size": {
+      "type": "string",
+      "default": "small"
+    }
+  },
+  "resource": {
+    "generic_service": {
+      "radio": {
+        "//": "Radio Vaigyaaniq (built) — owns route prefixes: public, radio, premium, user, search, admin, cms, studio, analytics, api",
+        "name": "vaigyaaniq-radio",
+        "size": "${var.instance_size}",
+        "region": "${var.region}",
+        "env_from_secrets": [
+          "ADMIN_PASSWORD",
+          "AGENT_LLM_API_KEY",
+          "RAZORPAY_KEY_SECRET"
+        ]
+      },
+      "lipi": {
+        "//": "Lipi (partial) — owns route prefixes: ecosystem.lipi",
+        "name": "vaigyaaniq-lipi",
+        "size": "${var.instance_size}",
+        "region": "${var.region}",
+        "env_from_secrets": [
+          "ADMIN_PASSWORD",
+          "AGENT_LLM_API_KEY",
+          "RAZORPAY_KEY_SECRET"
+        ]
+      },
+      "corpus": {
+        "//": "Corpus (partial) — owns route prefixes: ecosystem.corpus",
+        "name": "vaigyaaniq-corpus",
+        "size": "${var.instance_size}",
+        "region": "${var.region}",
+        "env_from_secrets": [
+          "ADMIN_PASSWORD",
+          "AGENT_LLM_API_KEY",
+          "RAZORPAY_KEY_SECRET"
+        ]
+      },
+      "maataa": {
+        "//": "Maataa UI (partial) — owns route prefixes: ecosystem.maataa",
+        "name": "vaigyaaniq-maataa",
+        "size": "${var.instance_size}",
+        "region": "${var.region}",
+        "env_from_secrets": [
+          "ADMIN_PASSWORD",
+          "AGENT_LLM_API_KEY",
+          "RAZORPAY_KEY_SECRET"
+        ]
+      }
+    },
+    "static_site": {
+      "radio_surfaces": {
+        "//": "radio-html surfaces + generated registry artifacts (sitemap, feeds, explorer)",
+        "name": "vaigyaaniq-radio-static",
+        "build_command": "npm run radio:registry -- --force",
+        "publish_dir": "apps/radio/public"
+      }
+    }
+  }
+}

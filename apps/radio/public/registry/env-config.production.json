@@ -1,0 +1,45 @@
+{
+  "generatedAt": "2026-07-09T20:22:28.676Z",
+  "environment": "production",
+  "enabledFlags": [
+    "premium"
+  ],
+  "counts": {
+    "visibleRoutes": 176,
+    "hiddenRoutes": 21
+  },
+  "hiddenRoutes": [
+    "academy",
+    "academy.courses",
+    "academy.course",
+    "academy.lessons",
+    "academy.quizzes",
+    "academy.tests",
+    "academy.certificates",
+    "academy.my-learning",
+    "academy.leaderboard",
+    "events",
+    "events.live",
+    "events.upcoming",
+    "events.calendar",
+    "events.workshops",
+    "events.webinars",
+    "events.hackathons",
+    "events.science-fairs",
+    "ai",
+    "ai.translator",
+    "ai.summarizer",
+    "ai.recommendations"
+  ],
+  "requiredSecrets": [
+    "RAZORPAY_KEY_ID",
+    "RAZORPAY_KEY_SECRET",
+    "RAZORPAY_WEBHOOK_SECRET",
+    "ADMIN_PASSWORD",
+    "WEATHER_API_KEY",
+    "AGENT_LLM_PROVIDER",
+    "AGENT_LLM_API_KEY",
+    "CONTENTGEN_PROVIDER",
+    "CONTENTGEN_API_KEY"
+  ]
+}

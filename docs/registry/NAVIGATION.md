@@ -1,6 +1,6 @@
 # Navigation
 
-Generated 2026-07-09T20:20:29.955Z. Flag-hidden routes excluded (enabled: premium).
+Generated 2026-07-09T20:22:28.676Z. Flag-hidden routes excluded (enabled: premium).
 
 ## sidebar
 
