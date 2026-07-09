@@ -1,62 +1,61 @@
-import React, { useEffect, useState } from "react";
-import { bundleMetadata, catalogEntrypoints, inTauri, RADIO_ENTRYPOINTS, type CatalogGroup } from "./radio-bridge";
-
-const C = {
-  bg: "#05060f", panel: "#101124", line: "rgba(255,255,255,.12)",
-  violet: "#7b2cff", cyan: "#00d4ff", muted: "#a8a2d1", text: "#fff",
-};
+// Radio Vaigyaaniq SPA shell — Sovereign Industrial / Dark Obsidian.
+// 3-pane grid (Broadcast · Digital Gurukul · Telemetry) + persistent audio
+// footer. All content derives from the real engine manifest and surfaces;
+// telemetry readouts are real or NULL (never simulated).
+import React, { useCallback, useEffect, useState } from "react";
+import "./theme.css";
+import { bundleMetadata, inTauri, RADIO_ENTRYPOINTS } from "./radio-bridge";
+import { loadManifest, stationTracks, type EngineManifest } from "./lib/manifest";
+import { setPlayerState } from "./store/player-store";
+import { useAudio } from "./hooks/use-audio";
+import { PaneBroadcast } from "./components/PaneBroadcast";
+import { PaneWorkspace } from "./components/PaneWorkspace";
+import { PaneTelemetry } from "./components/PaneTelemetry";
+import { AudioFooter } from "./components/AudioFooter";
 
 export function AppShell() {
+  const [manifest, setManifest] = useState<EngineManifest | null>(null);
+  const [surfaceUrl, setSurfaceUrl] = useState<string>(RADIO_ENTRYPOINTS["App Prototype"] ?? "./radio-html/index.html");
   const [meta, setMeta] = useState<Record<string, unknown> | null>(null);
-  const [entry, setEntry] = useState<string>(RADIO_ENTRYPOINTS["App Prototype"]);
-  const [catalogGroups, setCatalogGroups] = useState<CatalogGroup[]>([]);
-  const catalogCount = catalogGroups.reduce((total, group) => total + group.entries.length, 0);
+  const { load } = useAudio();
 
   useEffect(() => {
+    loadManifest().then(setManifest).catch(() => setManifest(null));
     bundleMetadata().then(setMeta).catch(() => setMeta(null));
-    catalogEntrypoints().then((groups) => {
-      setCatalogGroups(groups);
-      if (groups.every((group) => group.entries.every((catalogEntry) => catalogEntry.url !== entry))) {
-        setEntry(groups[0]?.entries[0]?.url ?? RADIO_ENTRYPOINTS["App Prototype"]);
-      }
-    });
   }, []);
 
+  const selectStation = useCallback(
+    (slug: string, autoplay = true) => {
+      const station = manifest?.stations.find((candidate) => candidate.slug === slug);
+      if (!station) return;
+      const queue = stationTracks(station);
+      setPlayerState({ stationSlug: slug, queue });
+      if (autoplay && queue[0]) load(queue[0], queue);
+    },
+    [manifest, load]
+  );
+
   return (
-    <div style={{ height: "100%", display: "flex", flexDirection: "column", background: C.bg, color: C.text, fontFamily: "Inter, system-ui, sans-serif" }}>
-      <header style={{ display: "flex", alignItems: "center", gap: 12, padding: "10px 14px", borderBottom: `1px solid ${C.line}`, background: C.panel }}>
-        <strong style={{ background: `linear-gradient(90deg,${C.violet},${C.cyan})`, WebkitBackgroundClip: "text", color: "transparent", fontWeight: 800 }}>
-          RADIO VAIGYAANIQ
-        </strong>
-        <select value={entry} onChange={(e) => setEntry(e.target.value)}
-          style={{ marginLeft: "auto", background: "#0c0d1e", color: C.text, border: `1px solid ${C.line}`, borderRadius: 8, padding: "6px 10px" }}>
-          {(catalogGroups.length ? catalogGroups : [{
-            label: "Primary Archive",
-            entries: Object.entries(RADIO_ENTRYPOINTS).map(([label, url]) => ({ label, url, group: "Primary Archive" }))
-          }]).map((group) => (
-            <optgroup key={group.label} label={group.label}>
-              {group.entries.map((catalogEntry) => (
-                <option key={catalogEntry.url} value={catalogEntry.url}>{catalogEntry.label}</option>
-              ))}
-            </optgroup>
-          ))}
-        </select>
+    <div className="shell">
+      <header className="topbar">
+        <div className="brand">
+          RADIO <em>VAIGYAANIQ</em>
+          <small>ज्ञानम् · विज्ञानम् · भारतम् — sovereign offline media engine</small>
+        </div>
+        <span className="chip gold" style={{ marginLeft: "auto" }}>
+          {manifest ? `${manifest.counts.playableTracks ?? 0} tracks · ${manifest.stations.length} lanes` : "manifest…"}
+        </span>
+        <span className="chip cyan">{inTauri() ? "TAURI" : "BROWSER"}</span>
+        <span className="chip">{meta ? "bundle evidence ✓" : "bundle evidence NULL"}</span>
       </header>
 
-      <iframe title="Radio Vaigyaaniq" src={entry}
-        style={{ flex: 1, border: 0, width: "100%", background: C.bg }} />
+      <main className="panes">
+        <PaneBroadcast manifest={manifest} onSelectStation={selectStation} onOpenSurface={setSurfaceUrl} />
+        <PaneWorkspace surfaceUrl={surfaceUrl} onOpenSurface={setSurfaceUrl} />
+        <PaneTelemetry manifest={manifest} onTuneStation={(slug) => selectStation(slug, false)} />
+      </main>
 
-      <footer style={{ fontSize: 11, color: C.muted, padding: "6px 14px", borderTop: `1px solid ${C.line}`, background: C.panel, display: "flex", gap: 14, flexWrap: "wrap" }}>
-        <span>runtime: {inTauri() ? "tauri" : "browser (native bridge inactive)"}</span>
-        <span>app: {(meta?.productName as string) ?? "NULL"}</span>
-        <span>version: {(meta?.version as string) ?? "NULL"}</span>
-        <span>platform: {(meta?.platform as string) ?? "NULL"}</span>
-        <span>build_hash: {(meta?.build_hash as string) ?? "NULL"}</span>
-        <span>catalog: {catalogCount || Object.keys(RADIO_ENTRYPOINTS).length} entries</span>
-        <span style={{ marginLeft: "auto", color: C.violet }}>
-          media library: NULL — large audio/cover assets are not bundled; configure a local library path before claiming playback.
-        </span>
-      </footer>
+      <AudioFooter />
     </div>
   );
 }

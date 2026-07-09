@@ -1,0 +1,99 @@
+/* Radio Vaigyaaniq SPA — Sovereign Industrial / Dark Obsidian theme.
+   Design tokens per the SPA spec (Tailwind-ready: mirror into tailwind.config
+   when the toolchain is installed; plain CSS custom properties until then).
+   NOTE: candidate additions for registry tokens.ts as an "obsidian" theme. */
+:root {
+  --bg-main: #090b10;        /* Obsidian Black */
+  --surface: #121620;        /* Dark Slate Blue */
+  --surface-2: #171c2a;
+  --accent: #00f0ff;         /* Glowing Cyan */
+  --gold: #e5a93c;           /* Amber Gold */
+  --gold-deep: #d4af37;
+  --text: #ffffff;
+  --muted: #8a94a6;          /* Steel Gray */
+  --status-green: #00ff66;   /* Radar Green */
+  --danger: #ff5964;
+  --line: rgba(255, 255, 255, 0.09);
+  --font-display: Georgia, "Palatino Linotype", serif;
+  --font-body: "Inter", "Noto Sans Devanagari", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "JetBrains Mono", Menlo, monospace;
+  --radius: 12px;
+  --footer-h: 84px;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body { background: var(--bg-main); color: var(--text); font: 13px/1.5 var(--font-body); }
+
+/* ---- utilities (Tailwind-esque) ---- */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; }
+.card h2 { margin: 0 0 10px; font: 700 11px var(--font-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+.muted { color: var(--muted); }
+.mono { font-family: var(--font-mono); }
+.chip { display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; font-size: 10px; font-weight: 800; letter-spacing: 0.05em; }
+.chip.cyan { color: var(--accent); border-color: rgba(0, 240, 255, 0.4); }
+.chip.gold { color: var(--gold); border-color: rgba(229, 169, 60, 0.45); }
+.chip.green { color: var(--status-green); border-color: rgba(0, 255, 102, 0.4); }
+.chip.red { color: var(--danger); border-color: rgba(255, 89, 100, 0.45); }
+.btn { border: 1px solid var(--line); background: rgba(255, 255, 255, 0.05); color: var(--text); border-radius: 999px; padding: 7px 12px; font: inherit; cursor: pointer; }
+.btn:hover { border-color: var(--gold); }
+.btn.icon { width: 34px; height: 34px; padding: 0; display: grid; place-items: center; }
+
+/* ---- app shell: 3-pane grid + persistent footer ---- */
+.shell { height: 100%; display: grid; grid-template-rows: auto 1fr var(--footer-h); }
+.topbar { display: flex; align-items: center; gap: 14px; padding: 10px 16px; border-bottom: 1px solid var(--line); background: var(--surface); }
+.brand { font: 800 18px var(--font-display); letter-spacing: 0.02em; }
+.brand em { font-style: normal; color: var(--gold); }
+.brand small { display: block; font: 400 10px var(--font-body); color: var(--muted); letter-spacing: 0.2em; }
+.panes { display: grid; grid-template-columns: 280px minmax(0, 1fr) 300px; gap: 12px; padding: 12px 16px; overflow: hidden; }
+.pane { display: flex; flex-direction: column; gap: 12px; overflow-y: auto; min-height: 0; }
+.pane-b iframe { flex: 1; width: 100%; min-height: 320px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-main); }
+@media (max-width: 1080px) { .panes { grid-template-columns: 1fr; overflow-y: auto; } .pane { overflow: visible; } }
+
+/* sacred-geometry accent */
+.yantra { position: relative; }
+.yantra::after { content: "◈"; position: absolute; top: 10px; right: 12px; color: var(--gold); opacity: 0.35; }
+
+/* ---- lists ---- */
+.row { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 9px; background: rgba(255, 255, 255, 0.02); margin-bottom: 7px; cursor: pointer; }
+.row:hover { border-color: rgba(0, 240, 255, 0.4); }
+.row.active { border-color: var(--accent); background: rgba(0, 240, 255, 0.06); }
+.row b { font-size: 12.5px; }
+.row small { color: var(--muted); display: block; font-size: 11px; }
+
+/* ---- telemetry ---- */
+.tuner { display: grid; place-items: center; gap: 8px; }
+.tuner-dial { width: 150px; height: 150px; border-radius: 50%; border: 2px solid var(--line); position: relative; background: radial-gradient(circle, rgba(0, 240, 255, 0.06), transparent 60%); cursor: pointer; }
+.tuner-needle { position: absolute; left: 50%; top: 50%; width: 2px; height: 62px; background: var(--gold); transform-origin: top center; box-shadow: 0 0 8px rgba(229, 169, 60, 0.7); }
+.tuner-freq { font: 700 22px var(--font-mono); color: var(--accent); }
+.meter { height: 7px; border-radius: 4px; background: rgba(255, 255, 255, 0.07); overflow: hidden; }
+.meter i { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), var(--status-green)); }
+
+/* ---- persistent audio footer ---- */
+.audio-footer { display: grid; grid-template-columns: minmax(180px, 300px) minmax(0, 1fr) auto; align-items: center; gap: 16px; padding: 0 16px; border-top: 1px solid var(--line); background: var(--surface); }
+.af-meta { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.af-thumb { width: 48px; height: 48px; border-radius: 8px; object-fit: cover; background: var(--bg-main); border: 1px solid var(--line); position: relative; flex: none; }
+.af-badge { position: absolute; bottom: -4px; left: -4px; font-size: 8.5px; font-weight: 900; padding: 1px 5px; border-radius: 6px; background: var(--bg-main); border: 1px solid var(--line); }
+.af-badge.live { color: #fff; background: #d21; border-color: #d21; }
+.af-badge.local { color: var(--gold); }
+.af-title { min-width: 0; }
+.af-title b { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 13px; }
+.af-title small { color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+.af-center { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.af-controls { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.af-play { width: 40px; height: 40px; border-radius: 50%; background: var(--gold); color: #1a1405; border: 0; font-size: 15px; cursor: pointer; display: grid; place-items: center; }
+.af-play:hover { background: var(--gold-deep); }
+.af-ctl { background: none; border: 0; color: var(--muted); font-size: 15px; cursor: pointer; }
+.af-ctl:hover, .af-ctl.on { color: var(--accent); }
+.scrub { display: flex; align-items: center; gap: 8px; }
+.scrub time { font: 11px var(--font-mono); color: var(--muted); flex: none; }
+.scrub-bar { flex: 1; height: 5px; border-radius: 3px; background: rgba(255, 255, 255, 0.08); position: relative; cursor: pointer; }
+.scrub-fill { position: absolute; inset: 0 auto 0 0; border-radius: 3px; background: var(--accent); box-shadow: 0 0 6px rgba(0, 240, 255, 0.6); }
+.scrub-thumb { position: absolute; top: 50%; width: 11px; height: 11px; border-radius: 50%; background: var(--gold); transform: translate(-50%, -50%); box-shadow: 0 0 6px rgba(229, 169, 60, 0.8); }
+.af-actions { display: flex; align-items: center; gap: 6px; }
+.af-action { position: relative; background: none; border: 0; color: var(--muted); font-size: 15px; cursor: pointer; padding: 4px; }
+.af-action:hover { color: var(--gold); }
+.af-action .count { font: 10px var(--font-mono); color: var(--muted); margin-left: 2px; }
+.af-action .tip { display: none; position: absolute; bottom: 130%; right: 0; white-space: nowrap; background: var(--bg-main); border: 1px solid var(--gold); color: var(--gold); font-size: 10px; padding: 5px 8px; border-radius: 7px; }
+.af-action:hover .tip { display: block; }
+@media (max-width: 860px) { .audio-footer { grid-template-columns: 1fr auto; } .af-center { order: 3; grid-column: 1 / -1; padding-bottom: 6px; } }
