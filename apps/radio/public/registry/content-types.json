@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T20:22:28.676Z",
+  "generatedAt": "2026-07-09T20:24:17.211Z",
   "count": 10,
   "contentTypes": [
     {
@@ -69,6 +69,18 @@
           "type": "boolean",
           "required": true,
           "description": "Rights-closure owned — never set manually"
+        },
+        {
+          "name": "rightsExpiryDate",
+          "type": "date",
+          "required": false,
+          "description": "Phase 9: daily job auto-reverts published when passed"
+        },
+        {
+          "name": "rightsLedgerId",
+          "type": "string",
+          "required": false,
+          "description": "Immutable RightsLedger entry for the latest rights event"
         },
         {
           "name": "storyline",

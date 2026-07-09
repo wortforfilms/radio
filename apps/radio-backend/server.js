@@ -390,22 +390,49 @@ app.post("/admin/rights-proof", async (req, res) => {
   }
   const data = loadAdminData();
   data.rightsProofs = data.rightsProofs || [];
-  data.rightsProofs.push({
+  const proof = {
     id: `proof-${Date.now()}`,
     trackId: body.trackId,
     note: body.note || null,
     mimeType: body.mimeType || null,
+    // Phase 9: optional expiry drives the daily auto-revert job
+    rightsExpiryDate: body.rightsExpiryDate || null,
     ...stored,
     uploadedAt: new Date().toISOString(),
     verified: false,
     verifiedBy: null
-  });
+  };
+  data.rightsProofs.push(proof);
+  if (body.rightsExpiryDate) {
+    data.tracks = data.tracks || {};
+    data.tracks[body.trackId] = { ...(data.tracks[body.trackId] || {}), rightsExpiryDate: body.rightsExpiryDate };
+  }
+  // immutable rights ledger entry (Phase 9)
+  const ledgerEntry = appendRightsLedger({ kind: "proof-uploaded", trackId: body.trackId, proofId: proof.id, actor: "admin", detail: body.note || null });
+  proof.rightsLedgerId = ledgerEntry.id;
   saveAdminData(data);
   res.json({
     status: "ok",
     proofs: data.rightsProofs.length,
     phkd: "Proof stored unverified. Run the rights-closure lane (npm run radio:rights:closure) to verify; only then can the track publish."
   });
+});
+
+// Phase 9 — rights lifecycle: immutable ledger, daily expiry job, IPRS/PPL seam.
+app.get("/admin/rights-ledger", (req, res) => {
+  if (!requireAdmin(req, res)) return;
+  const entries = readRightsLedger();
+  res.json({ count: entries.length, entries });
+});
+
+app.post("/admin/rights-expiry-check", (req, res) => {
+  if (!requireAdmin(req, res)) return;
+  res.json({ status: "ok", ...runExpiryJob(), cron: "daily (0 2 * * *): node apps/radio-backend/rights-ledger.js" });
+});
+
+app.get("/admin/rights-registry/:trackId", async (req, res) => {
+  if (!requireAdmin(req, res)) return;
+  res.json(await verifyWithExternalRegistry(req.params.trackId));
 });
 
 app.get("/admin/cache-status", (req, res) => {
@@ -445,6 +472,7 @@ const { decide } = require("./agent.js");
 const { ask, llmConfig } = require("./cognition-llm.js");
 const { appendFeedback, loadWeights, runLearningJob } = require("./learning.js");
 const { generateMusic, listGenerated, publishGenerated, storeGenerated } = require("./content-gen.js");
+const { appendLedger: appendRightsLedger, readLedger: readRightsLedger, runExpiryJob, verifyWithExternalRegistry } = require("./rights-ledger.js");
 const { generateLyrics } = require("./cognition-llm.js");
 
 // Knowledge lane dependencies for Phase-2 cognition (real data only).

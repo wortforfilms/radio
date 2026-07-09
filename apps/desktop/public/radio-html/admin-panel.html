@@ -130,6 +130,7 @@
           <div class="grid g2">
             <label>track id<input id="proofTrack"></label>
             <label>note<input id="proofNote"></label>
+            <label>rights expiry (ISO date, optional — auto-reverts publish when passed)<input id="proofExpiry" type="date"></label>
             <label>document (PDF/image)<input id="proofFile" type="file" accept="application/pdf,image/*"></label>
           </div>
           <p><button class="btn" id="proofUpload">Upload proof</button> <span class="warn">verification happens only via npm run radio:rights:closure</span></p>
@@ -145,7 +146,7 @@
             reader.readAsDataURL(file);
           });
           try {
-            const out = await api("/admin/rights-proof", { trackId: $("proofTrack").value, filename: file.name, mimeType: file.type, dataBase64, note: $("proofNote").value });
+            const out = await api("/admin/rights-proof", { trackId: $("proofTrack").value, filename: file.name, mimeType: file.type, dataBase64, note: $("proofNote").value, rightsExpiryDate: $("proofExpiry").value || null });
             log(out.phkd); await refresh();
           } catch (error) { log(error.message); }
         });

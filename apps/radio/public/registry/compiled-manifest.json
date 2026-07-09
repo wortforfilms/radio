@@ -1,8 +1,8 @@
 {
   "id": "radio-vaigyaaniq-compiled-manifest",
-  "compiledAt": "2026-07-09T20:22:28.767Z",
+  "compiledAt": "2026-07-09T20:24:17.340Z",
   "schemaVersion": 3,
-  "sourceHash": "eb40dd50b2eacd94960eeec559079bb1af7f5dba4fbf3f4bfc24b6311fe90cde",
+  "sourceHash": "4c28473995fe956182e75d3d3788eb03a71a3a4ba306c4d641d0dd43d3dc5141",
   "counts": {
     "routes": 197,
     "components": 19,
@@ -15717,6 +15717,18 @@
           "type": "boolean",
           "required": true,
           "description": "Rights-closure owned — never set manually"
+        },
+        {
+          "name": "rightsExpiryDate",
+          "type": "date",
+          "required": false,
+          "description": "Phase 9: daily job auto-reverts published when passed"
+        },
+        {
+          "name": "rightsLedgerId",
+          "type": "string",
+          "required": false,
+          "description": "Immutable RightsLedger entry for the latest rights event"
         },
         {
           "name": "storyline",

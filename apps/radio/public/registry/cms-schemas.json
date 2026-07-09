@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T20:22:28.676Z",
+  "generatedAt": "2026-07-09T20:24:17.211Z",
   "note": "Generated from registry content types. The admin panel stays fail-closed: publish transitions require the workflow gates below.",
   "schemas": [
     {
@@ -75,6 +75,20 @@
           "widget": "checkbox",
           "required": true,
           "hint": "Rights-closure owned — never set manually"
+        },
+        {
+          "name": "rightsExpiryDate",
+          "label": "Rights Expiry Date",
+          "widget": "datetime",
+          "required": false,
+          "hint": "Phase 9: daily job auto-reverts published when passed"
+        },
+        {
+          "name": "rightsLedgerId",
+          "label": "Rights Ledger Id",
+          "widget": "text",
+          "required": false,
+          "hint": "Immutable RightsLedger entry for the latest rights event"
         },
         {
           "name": "storyline",

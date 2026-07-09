@@ -25,6 +25,8 @@ export const contentTypes: ContentTypeDefinition[] = [
       { name: "priceUsd", type: "money", required: false },
       { name: "previewSeconds", type: "number", required: false },
       { name: "published", type: "boolean", required: true, description: "Rights-closure owned — never set manually" },
+      { name: "rightsExpiryDate", type: "date", required: false, description: "Phase 9: daily job auto-reverts published when passed" },
+      { name: "rightsLedgerId", type: "string", required: false, description: "Immutable RightsLedger entry for the latest rights event" },
       { name: "storyline", type: "text", required: false },
       { name: "transcript", type: "reference", required: false, references: "transcript" }
     ]

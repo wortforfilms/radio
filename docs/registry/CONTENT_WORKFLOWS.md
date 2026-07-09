@@ -1,12 +1,12 @@
 # Content Types & Workflows
 
-Generated 2026-07-09T20:22:28.676Z.
+Generated 2026-07-09T20:24:17.211Z.
 
 ## Content types
 
 | id | status | workflow | fields |
 |---|---|---|---|
-| `radio-track` | ✅ built | rights-closure | 13 |
+| `radio-track` | ✅ built | rights-closure | 15 |
 | `transcript` | 🟡 partial | editorial | 5 |
 | `live-show` | 🟡 partial | editorial | 5 |
 | `podcast` | ⬜ planned | editorial | 8 |
