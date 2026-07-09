@@ -315,6 +315,8 @@ export interface AgentPolicy {
   daypartStations: Record<"morning" | "day" | "evening" | "night", string[]>;
   upsellAfterPreviews: number;
   maxAnnouncementsPerHour: number;
+  /** Phase-3 continuous learning: bounded feedback-driven weight adjustment. */
+  learning: { enabled: boolean; adjustmentRate: number; minWeight: number };
   rules: string[];
 }
 

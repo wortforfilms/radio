@@ -443,6 +443,7 @@ app.post("/admin/resync", (req, res) => {
 // ---------------------------------------------------------------------------
 const { decide } = require("./agent.js");
 const { ask, llmConfig } = require("./cognition-llm.js");
+const { appendFeedback, loadWeights, runLearningJob } = require("./learning.js");
 
 // Knowledge lane dependencies for Phase-2 cognition (real data only).
 let contentLibraryCache = null;
@@ -514,8 +515,26 @@ app.post("/agent/decide", async (req, res) => {
     perception.entitlements = result.entitlements;
   }
   const manifest = loadManifest();
-  const decision = decide(perception, { stations: manifest.stations || [], policy });
+  const decision = decide(perception, { stations: manifest.stations || [], policy, weights: loadWeights() });
   res.json(decision);
+});
+
+// Phase-3 learning: feedback ledger + weekly (cron) weight adjustment.
+app.post("/api/agent/feedback", async (req, res) => {
+  const body = (await req.readJson()) || {};
+  if (!body.decisionId || body.rating === undefined) {
+    res.status(400).json({ error: "decisionId + rating (up|down|1-5) required" });
+    return;
+  }
+  const record = appendFeedback(body);
+  res.json({ status: "ok", stored: { decisionId: record.decisionId, rating: record.rating }, note: "Feedback appended immutably; weights adjust via the weekly learning job (node apps/radio-backend/learning.js)." });
+});
+
+app.post("/agent/learn", (req, res) => {
+  if (!requireAdmin(req, res)) return;
+  const policy = loadAgentPolicy();
+  const result = runLearningJob(policy?.policy?.learning || { enabled: true, adjustmentRate: 0.1, minWeight: 0.2 });
+  res.json({ status: "ok", ...result });
 });
 
 // Phase-2 cognition: natural-language queries, sources-only, fail-closed.

@@ -1,8 +1,8 @@
 {
   "id": "radio-vaigyaaniq-compiled-manifest",
-  "compiledAt": "2026-07-09T19:47:38.823Z",
+  "compiledAt": "2026-07-09T20:12:19.827Z",
   "schemaVersion": 3,
-  "sourceHash": "fac571b7b92449bf9a991cbf2ddacd83b2d51ac071e771e8c91a89c7b3364f4d",
+  "sourceHash": "d4581761bc0ec88c040367c30dd299ee1de1c6a097215404e6aa2223e256fc9f",
   "counts": {
     "routes": 196,
     "components": 19,
@@ -16432,6 +16432,11 @@
     },
     "upsellAfterPreviews": 3,
     "maxAnnouncementsPerHour": 6,
+    "learning": {
+      "enabled": true,
+      "adjustmentRate": 0.1,
+      "minWeight": 0.2
+    },
     "rules": [
       "Never claim anything not present in the manifest/content library (PHKD).",
       "Never play a track outside its commerce access state.",

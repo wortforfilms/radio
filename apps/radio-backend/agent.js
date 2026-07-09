@@ -50,15 +50,33 @@ function decide(perception, world) {
   const capabilities = new Map(world.policy.capabilities.map((capability) => [capability.id, capability]));
   const hour = Number.isInteger(perception.hour) ? perception.hour : new Date().getHours();
   const daypart = daypartOf(hour);
-  const persona = policy.daypartPersona[daypart];
   const currency = perception.currency === "USD" ? "USD" : "INR";
   const entitlements = perception.entitlements || [];
   const actions = [];
   const evidence = [];
   const blocked = [];
 
-  // ---- select station (daypart preference, falls back to first real station) ----
-  const preferred = policy.daypartStations[daypart] || [];
+  // ---- Phase-3 learning: rule weights + per-listener personalisation ----
+  const weights = (world.weights && world.weights.ruleWeights) || {};
+  const learner = world.weights && perception.userId ? (world.weights.listeners || {})[perception.userId] : null;
+  const w = (rule) => weights[rule] ?? 1;
+  let persona = policy.daypartPersona[daypart];
+  if (learner?.preferredPersona) {
+    persona = learner.preferredPersona;
+    evidence.push(`rule:personalised-persona ${persona} (listener feedback)`);
+  }
+
+  // ---- select station (personalised > daypart preference > first real station) ----
+  const preferred = [...(policy.daypartStations[daypart] || [])];
+  if (learner?.favoredStation) {
+    preferred.unshift(learner.favoredStation);
+    evidence.push(`rule:personalised-station ${learner.favoredStation} (listener feedback)`);
+  }
+  // low-weight daypart rule (learned from negative feedback) falls back to catalogue order
+  if (w("daypart-station") < 0.5) {
+    evidence.push(`rule:daypart-station demoted (weight ${w("daypart-station")})`);
+    preferred.length = learner?.favoredStation ? 1 : 0;
+  }
   const station =
     preferred.map((slug) => world.stations.find((candidate) => candidate.slug === slug)).find(Boolean) ||
     world.stations[0];
@@ -140,6 +158,7 @@ function decide(perception, world) {
 
   return {
     decidedAt: new Date().toISOString(),
+    decisionId: `d-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`,
     engine: "rules-v1",
     llmProvider: process.env.AGENT_LLM_PROVIDER || null,
     daypart,

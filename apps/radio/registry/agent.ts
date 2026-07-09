@@ -119,6 +119,7 @@ export const agentPolicy: AgentPolicy = {
   },
   upsellAfterPreviews: 3,
   maxAnnouncementsPerHour: 6,
+  learning: { enabled: true, adjustmentRate: 0.1, minWeight: 0.2 },
   rules: [
     "Never claim anything not present in the manifest/content library (PHKD).",
     "Never play a track outside its commerce access state.",

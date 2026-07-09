@@ -40,3 +40,5 @@ apps/radio-backend/admin-data.json
 apps/radio-backend/sync-events.jsonl
 apps/radio-backend/uploads/
 apps/radio/.registry-buildcache.json
+apps/radio-backend/agent-feedback.jsonl
+apps/radio-backend/agent-weights.json

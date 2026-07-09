@@ -502,6 +502,7 @@ function buildHtml(data) {
             <div class="controls">
               <button class="btn" id="playFirst">Play First</button>
               <button class="btn" id="agentDj">Agent DJ</button>
+              <span id="agentFeedback" style="display:none"><button class="btn" id="agentUp" title="Good agent decision">👍</button><button class="btn" id="agentDown" title="Poor agent decision">👎</button></span>
               <button class="btn" id="playLive">Live Stream</button>
               <button class="btn" id="nextProgram">Next</button>
               <button class="btn" id="buyCurrent" style="display:none">Buy Track</button>

@@ -66,3 +66,21 @@ model WeatherCache {
   data      Json?
   updatedAt DateTime @default(now())
 }
+
+// Phase-3 learning: immutable listener feedback on agent decisions.
+// (JSONL ledger apps/radio-backend/agent-feedback.jsonl is the MVP store;
+// this model is the durable target — run prisma migrate on a real machine.)
+model AgentFeedback {
+  id         String   @id @default(cuid())
+  decisionId String
+  userId     String?
+  rating     Float    // normalised [-1, 1] from up/down or 1-5
+  comment    String?
+  evidence   String?  // JSON array of rule evidence strings
+  persona    String?
+  stationSlug String?
+  createdAt  DateTime @default(now())
+
+  @@index([decisionId])
+  @@index([userId])
+}

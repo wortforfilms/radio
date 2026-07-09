@@ -99,6 +99,9 @@
         agentDj: "agentDj",
         agentQuery: "agentQuery",
         agentAsk: "agentAsk",
+        agentFeedback: "agentFeedback",
+        agentUp: "agentUp",
+        agentDown: "agentDown",
         catalogSearch: "catalogSearch",
         catalogGrid: "catalogGrid",
         walletBox: "walletBox",
@@ -293,6 +296,8 @@
       this.el("buyCurrent")?.addEventListener("click", () => this.buyCurrent());
       this.el("giftCurrent")?.addEventListener("click", () => this.giftCurrent());
       this.el("agentDj")?.addEventListener("click", () => this.agentAutoDj());
+      this.el("agentUp")?.addEventListener("click", () => this.rateAgent("up"));
+      this.el("agentDown")?.addEventListener("click", () => this.rateAgent("down"));
       this.el("agentAsk")?.addEventListener("click", () => this.askAgent());
       this.el("agentQuery")?.addEventListener("keydown", (event) => {
         if (event.key === "Enter") this.askAgent();
@@ -699,7 +704,40 @@
         }
       }
       for (const reason of decision.blocked || []) this.log(`Agent gate: ${reason}`);
-      this.queueAction("agent-decision", { daypart: decision.daypart, actions: (decision.actions || []).map((a) => a.type), at: decision.decidedAt });
+      this.lastDecision = decision; // rated via the 👍/👎 feedback buttons
+      const fb = this.el("agentFeedback");
+      if (fb) fb.style.display = "";
+      this.queueAction("agent-decision", { decisionId: decision.decisionId, daypart: decision.daypart, actions: (decision.actions || []).map((a) => a.type), at: decision.decidedAt });
+    }
+
+    // Phase-3: listener feedback on the last agent decision (stored offline-first).
+    async rateAgent(rating) {
+      const decision = this.lastDecision;
+      if (!decision) {
+        this.log("Feedback: no agent decision to rate yet.");
+        return;
+      }
+      const payload = {
+        decisionId: decision.decisionId,
+        rating,
+        userId: this.userId,
+        evidence: decision.evidence || [],
+        persona: decision.persona,
+        stationSlug: (decision.actions || []).find((a) => a.type === "select-station")?.stationSlug || null
+      };
+      this.queueAction("agent-feedback", payload); // offline-first: outbox syncs it
+      try {
+        if (navigator.onLine && this.options.apiBase) {
+          await fetch(this.apiUrl("/api/agent/feedback"), {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(payload)
+          });
+        }
+      } catch {
+        // stays queued in the outbox
+      }
+      this.log(`Feedback recorded (${rating}) — thanks. It adjusts rule weights via the weekly learning job.`);
     }
 
     // Phase-2 cognition: ask the agent a question (sources-only, disclosed).

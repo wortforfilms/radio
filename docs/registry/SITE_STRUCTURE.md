@@ -1,6 +1,6 @@
 # Site Structure
 
-Generated 2026-07-09T19:47:38.693Z.
+Generated 2026-07-09T20:12:19.717Z.
 
 - `/` (public.home, built)
 - `/about` (public.about, planned)
