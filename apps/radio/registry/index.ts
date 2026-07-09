@@ -29,6 +29,7 @@ import { tokens } from "./tokens.ts";
 import { contentTypes } from "./content-types.ts";
 import { workflows } from "./workflows.ts";
 import { workspaceApps } from "./apps.ts";
+import { agentCapabilities, agentPolicy } from "./agent.ts";
 import { routes as publicRoutes } from "./public.ts";
 import { routes as radio } from "./radio.ts";
 import { routes as podcasts } from "./podcasts.ts";
@@ -73,6 +74,8 @@ export { tokens } from "./tokens.ts";
 export { contentTypes } from "./content-types.ts";
 export { workflows } from "./workflows.ts";
 export { workspaceApps } from "./apps.ts";
+export { agentCapabilities, agentPolicy } from "./agent.ts";
+export type { AgentCapability, AgentPolicy, AgentActionType } from "./types.ts";
 
 const MODULES: RouteDefinition[][] = [
   publicRoutes, radio, podcasts, research, discover, academy, community, events,
@@ -303,6 +306,27 @@ export function validateRegistry(routes: readonly CompiledRoute[] = allRoutes): 
       problems.push(`workspace app claims ${app.status} without evidence: ${app.id}`);
     }
   }
+
+  // ---- agent layer integrity ----
+  const capabilityIds = new Set(agentCapabilities.map((capability) => capability.id));
+  if (capabilityIds.size !== agentCapabilities.length) problems.push("duplicate agent capability ids");
+  const personaKeys = new Set(["maataa", "rishi", "samaya", "vigyaaniq"]);
+  for (const capability of agentCapabilities) {
+    if (capability.status !== "planned" && capability.implementedBy.length === 0) {
+      problems.push(`agent capability claims ${capability.status} without evidence: ${capability.id}`);
+    }
+    if (capability.status === "planned" && capability.implementedBy.length > 0) {
+      problems.push(`planned agent capability claims implementation: ${capability.id}`);
+    }
+    if (capability.gates.length === 0) problems.push(`agent capability has no gates: ${capability.id}`);
+    for (const persona of capability.personas) {
+      if (!personaKeys.has(persona)) problems.push(`agent capability ${capability.id} uses unknown persona: ${persona}`);
+    }
+  }
+  for (const persona of Object.values(agentPolicy.daypartPersona)) {
+    if (!personaKeys.has(persona)) problems.push(`agent policy uses unknown persona: ${persona}`);
+  }
+  if (!agentPolicy.disclosure) problems.push("agent policy missing AI disclosure");
 
   return problems;
 }

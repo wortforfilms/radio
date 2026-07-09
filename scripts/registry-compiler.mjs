@@ -27,7 +27,7 @@ export async function compileManifest(ROOT, { updateLock = false } = {}) {
     throw new Error(`registry INVALID (${problems.length}):\n${problems.join("\n")}`);
   }
 
-  const { allRoutes, SECTIONS, components, layouts, tokens, contentTypes, workflows, workspaceApps } = registry;
+  const { allRoutes, SECTIONS, components, layouts, tokens, contentTypes, workflows, workspaceApps, agentCapabilities, agentPolicy } = registry;
 
   // ---- 2. normalize ----
   const routes = allRoutes.map((route) => ({ ...route, contentType: route.contentType ?? null }));
@@ -125,7 +125,7 @@ export async function compileManifest(ROOT, { updateLock = false } = {}) {
     workflows: workflows.map((workflow) => workflow.id).sort(),
     apps: workspaceApps.map((app) => app.id).sort()
   };
-  if (fs.existsSync(lockPath)) {
+  if (fs.existsSync(lockPath) && !updateLock) {
     const lock = JSON.parse(fs.readFileSync(lockPath, "utf8"));
     const broken = [];
     for (const [kind, lockedIds] of Object.entries(lock.ids || {})) {
@@ -179,6 +179,7 @@ export async function compileManifest(ROOT, { updateLock = false } = {}) {
       contentTypes: contentTypes.length,
       workflows: workflows.length,
       apps: workspaceApps.length,
+      agentCapabilities: agentCapabilities.length,
       graphNodes: graph.counts.nodes,
       graphEdges: graph.counts.edges
     },
@@ -190,6 +191,8 @@ export async function compileManifest(ROOT, { updateLock = false } = {}) {
     contentTypes,
     workflows,
     workspaceApps,
+    agentCapabilities,
+    agentPolicy,
     componentTrees,
     graph,
     indexes

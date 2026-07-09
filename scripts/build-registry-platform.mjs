@@ -45,12 +45,13 @@ const PLUGIN_SOURCES = {
   tokens: ["tokens.ts"],
   content: [...BASE, "content-types.ts", "workflows.ts"],
   workspace: [...BASE, "apps.ts"],
+  agent: ["agent.ts"],
   docs: [...BASE, "components.ts", "content-types.ts", "workflows.ts"]
 };
 const PLUGIN_USES = {
   docs: ["core", "navigation", "search", "permissions", "api"]
 };
-const PLUGIN_ORDER = ["core", "navigation", "search", "permissions", "platform", "api", "seo", "components", "tokens", "content", "workspace", "docs"];
+const PLUGIN_ORDER = ["core", "navigation", "search", "permissions", "platform", "api", "seo", "components", "tokens", "content", "workspace", "agent", "docs"];
 
 // ---------------------------------------------------------------------------
 // 1. Compile
@@ -131,6 +132,8 @@ const ctx = {
     contentTypes: compiled.contentTypes,
     workflows: compiled.workflows,
     workspaceApps: compiled.workspaceApps,
+    agentCapabilities: compiled.agentCapabilities,
+    agentPolicy: compiled.agentPolicy,
     byId: new Map(compiled.routes.map((route) => [route.id, route])),
     byPath: new Map(compiled.routes.map((route) => [route.path, route]))
   },

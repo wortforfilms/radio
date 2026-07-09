@@ -96,6 +96,7 @@
         playAd: "playAd",
         buyCurrent: "buyCurrent",
         giftCurrent: "giftCurrent",
+        agentDj: "agentDj",
         catalogSearch: "catalogSearch",
         catalogGrid: "catalogGrid",
         walletBox: "walletBox",
@@ -289,6 +290,7 @@
       this.el("playAd")?.addEventListener("click", () => this.playAdGate());
       this.el("buyCurrent")?.addEventListener("click", () => this.buyCurrent());
       this.el("giftCurrent")?.addEventListener("click", () => this.giftCurrent());
+      this.el("agentDj")?.addEventListener("click", () => this.agentAutoDj());
       this.el("walletTopUp")?.addEventListener("click", () => this.topUpWallet());
       this.el("catalogSearch")?.addEventListener("input", (event) => this.renderCatalog(event.target.value));
       this.el("personaSelect")?.addEventListener("change", (event) => {
@@ -558,6 +560,10 @@
       this.activeProgram = program;
       this.renderNow(program);
       if (access === "preview") {
+        // Track preview repetitions — feeds the agent's transparent upsell rule.
+        const counts = this.loadLocal("rv.previewCounts", {});
+        counts[program.trackId] = (counts[program.trackId] || 0) + 1;
+        this.saveLocal("rv.previewCounts", counts);
         // Dedicated preview clip when available; otherwise clamp the full asset.
         const clip = program.previewUrl || null;
         this.previewLimitSeconds = clip ? null : previewSecondsFor(program);
@@ -631,6 +637,63 @@
           `Status: ${this.activeStation.streamStatus || "candidate-unverified"}`
         ].join("\n")
       );
+    }
+
+    // -----------------------------------------------------------------------
+    // Agent co-pilot: perception → /agent/decide → execute via existing actions.
+    // The agent never bypasses gates — it uses the same rights-aware methods.
+    // -----------------------------------------------------------------------
+    async agentAutoDj() {
+      if (!this.options.apiBase) {
+        this.log("Agent blocked: backend not connected (append ?api=http://localhost:4000).");
+        return;
+      }
+      const hourKey = new Date().toISOString().slice(0, 13);
+      const rate = this.loadLocal("rv.agentAnnounce", { hour: hourKey, count: 0 });
+      const perception = {
+        hour: new Date().getHours(),
+        userId: this.userId,
+        currency: this.settings.preferredCurrency || "INR",
+        currentTrackId: this.activeProgram?.trackId || null,
+        previewCounts: this.loadLocal("rv.previewCounts", {}),
+        announcementsThisHour: rate.hour === hourKey ? rate.count : 0,
+        weather: this.weatherText ? { status: "ok", announcementText: this.weatherText } : null
+      };
+      let decision;
+      try {
+        const response = await fetch(this.apiUrl("/agent/decide"), {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(perception)
+        });
+        decision = await response.json();
+        if (!response.ok) throw new Error(decision.message || decision.error || response.status);
+      } catch (error) {
+        this.log(`Agent unavailable: ${error.message}`);
+        return;
+      }
+      this.log(`Agent (${decision.engine}) · ${decision.daypart} · goal: ${decision.goal} · persona: ${decision.persona}`);
+      for (const action of decision.actions || []) {
+        if (action.type === "select-station") {
+          this.selectStation(action.stationSlug);
+        } else if (action.type === "play-track") {
+          this.playTrackById(action.trackId);
+        } else if (action.type === "announce") {
+          const previousPersona = this.settings.ttsPersona;
+          this.settings.ttsPersona = action.persona || previousPersona;
+          if (this.speak(action.text)) this.log(`Agent announce (${action.persona}): ${action.text}`);
+          this.settings.ttsPersona = previousPersona;
+          this.saveLocal("rv.agentAnnounce", { hour: hourKey, count: perception.announcementsThisHour + 1 });
+        } else if (action.type === "recommend") {
+          this.log(`Agent recommends: ${(action.titles || []).join(" · ")}`);
+        } else if (action.type === "suggest-purchase") {
+          this.log(
+            `Agent suggestion (transparent): unlock "${action.title}" for ${action.priceLabel} — ${action.reason}. Use Buy Track; checkout runs through ${action.checkout}.`
+          );
+        }
+      }
+      for (const reason of decision.blocked || []) this.log(`Agent gate: ${reason}`);
+      this.queueAction("agent-decision", { daypart: decision.daypart, actions: (decision.actions || []).map((a) => a.type), at: decision.decidedAt });
     }
 
     // -----------------------------------------------------------------------

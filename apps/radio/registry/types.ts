@@ -277,6 +277,45 @@ export interface WorkflowDefinition {
   transitions: WorkflowTransition[];
 }
 
+// ---------------------------------------------------------------------------
+// Agent layer: the radio as an autonomous, fail-closed co-pilot.
+// ---------------------------------------------------------------------------
+
+export type AgentActionType =
+  | "select-station"
+  | "play-track"
+  | "announce"
+  | "recommend"
+  | "suggest-purchase"
+  | "weather-brief"
+  | "insert-ad"
+  | "answer-question"
+  | "run-quiz"
+  | "compose-content";
+
+/** One thing the agent can do. Same PHKD rules: planned capabilities claim nothing. */
+export interface AgentCapability {
+  id: AgentActionType;
+  name: string;
+  description: string;
+  status: RouteStatus;
+  implementedBy: string[];
+  /** Gates that must hold before the action may execute (validated server-side). */
+  gates: string[];
+  /** TTS personas allowed to voice this action (empty = silent action). */
+  personas: string[];
+}
+
+/** Global behaviour policy — the agent's constitution. Enforced, not hoped for. */
+export interface AgentPolicy {
+  disclosure: string;
+  daypartPersona: Record<"morning" | "day" | "evening" | "night", string>;
+  daypartStations: Record<"morning" | "day" | "evening" | "night", string[]>;
+  upsellAfterPreviews: number;
+  maxAnnouncementsPerHour: number;
+  rules: string[];
+}
+
 /** A product in the multi-app workspace. Statuses stay evidence-backed. */
 export interface WorkspaceApp {
   id: string;

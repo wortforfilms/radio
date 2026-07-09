@@ -1,6 +1,6 @@
 {
-  "note": "Permanent identifier ledger \u2014 compiler fails if any id disappears.",
-  "updatedAt": "2026-07-09T17:53:00.251Z",
+  "note": "Permanent identifier ledger — compiler fails if any id disappears.",
+  "updatedAt": "2026-07-09T19:27:25.449Z",
   "ids": {
     "routes": [
       "academy",
@@ -198,8 +198,7 @@
       "user.profile.edit",
       "user.settings",
       "user.signup",
-      "user.verify",
-      "radio.ghost-route"
+      "user.verify"
     ],
     "components": [
       "admin-table",

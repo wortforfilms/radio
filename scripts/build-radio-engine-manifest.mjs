@@ -501,6 +501,7 @@ function buildHtml(data) {
             <audio id="radioAudio" controls preload="metadata"></audio>
             <div class="controls">
               <button class="btn" id="playFirst">Play First</button>
+              <button class="btn" id="agentDj">Agent DJ</button>
               <button class="btn" id="playLive">Live Stream</button>
               <button class="btn" id="nextProgram">Next</button>
               <button class="btn" id="buyCurrent" style="display:none">Buy Track</button>

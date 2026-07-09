@@ -437,6 +437,45 @@ app.post("/admin/resync", (req, res) => {
 });
 
 // ---------------------------------------------------------------------------
+// Agent orchestrator (Phase 1 — rule engine; LLM opt-in via AGENT_LLM_PROVIDER).
+// POST /agent/decide: perception in → validated, fail-closed actions out.
+// The agent never executes anything itself — the engine is the action layer.
+// ---------------------------------------------------------------------------
+const { decide } = require("./agent.js");
+
+function loadAgentPolicy() {
+  const file = path.join(REPO_ROOT, "apps/radio/public/registry/agent-policy.json");
+  if (!fs.existsSync(file)) return null;
+  return JSON.parse(fs.readFileSync(file, "utf8"));
+}
+
+app.get("/agent/capabilities", (_req, res) => {
+  const policy = loadAgentPolicy();
+  if (!policy) {
+    res.status(503).json({ error: "agent-policy-not-built", message: "Run `npm run radio:registry` first." });
+    return;
+  }
+  res.json(policy);
+});
+
+app.post("/agent/decide", async (req, res) => {
+  const policy = loadAgentPolicy();
+  if (!policy) {
+    res.status(503).json({ error: "agent-policy-not-built", message: "Run `npm run radio:registry` first." });
+    return;
+  }
+  const perception = (await req.readJson()) || {};
+  // server-side perception enrichment: entitlements from the shared db (fail-closed)
+  if (perception.userId && !perception.entitlements) {
+    const result = await loadEntitlements(perception.userId);
+    perception.entitlements = result.entitlements;
+  }
+  const manifest = loadManifest();
+  const decision = decide(perception, { stations: manifest.stations || [], policy });
+  res.json(decision);
+});
+
+// ---------------------------------------------------------------------------
 // Manifest API (read-only).
 // Serves the GENERATED registry artifacts — the runtime never queries the
 // registry sources (compile-time philosophy: registry → compile → artifacts

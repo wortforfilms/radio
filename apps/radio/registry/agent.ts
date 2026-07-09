@@ -1,0 +1,123 @@
+// Agent registry: what the radio-as-agent may do, and under which gates.
+// The orchestrator (apps/radio-backend/agent.js) loads the compiled policy and
+// refuses any action whose gates don't hold. Statuses are evidence-backed:
+// built capabilities run today via the rule engine; planned ones (LLM answers,
+// composition) stay fail-closed until real providers/knowledge lanes exist.
+import type { AgentCapability, AgentPolicy } from "./types.ts";
+
+const ORCH = "apps/radio-backend/agent.js";
+const ENGINE = "apps/web/public/radio-html/assets/js/radio-engine.js";
+
+export const agentCapabilities: AgentCapability[] = [
+  {
+    id: "select-station",
+    name: "Select Station",
+    description: "Pick a station lane matching daypart/context from the real manifest.",
+    status: "built",
+    implementedBy: [ORCH, ENGINE],
+    gates: ["station exists in manifest"],
+    personas: []
+  },
+  {
+    id: "play-track",
+    name: "Play Track",
+    description: "Queue a track rights-aware: full only for free-tier/entitled; otherwise 45s preview.",
+    status: "built",
+    implementedBy: [ORCH, ENGINE],
+    gates: ["accessState(full|preview) via commerce rules", "never plays locked/unpublished-claimed content"],
+    personas: []
+  },
+  {
+    id: "announce",
+    name: "Announce",
+    description: "Spoken introduction via TTS persona, built ONLY from manifest facts (station, title, version).",
+    status: "built",
+    implementedBy: [ORCH, `${ENGINE}#speak`],
+    gates: ["text derived from manifest fields only — no fabricated claims", "AI disclosure appended", "rate-limited (maxAnnouncementsPerHour)"],
+    personas: ["maataa", "rishi", "samaya", "vigyaaniq"]
+  },
+  {
+    id: "recommend",
+    name: "Recommend",
+    description: "Suggest catalogue tracks from the same station/version group.",
+    status: "built",
+    implementedBy: [ORCH],
+    gates: ["recommendations limited to real catalogue entries"],
+    personas: ["samaya"]
+  },
+  {
+    id: "suggest-purchase",
+    name: "Suggest Purchase",
+    description: "Transparent upsell after repeated previews, at real server prices via the existing commerce flow.",
+    status: "built",
+    implementedBy: [ORCH, "packages/shared/src/commerce.ts"],
+    gates: ["only after upsellAfterPreviews previews of the same track", "price shown from commerce defaults", "checkout via existing /api/payments/order only", "disclosed as a suggestion, never auto-purchased"],
+    personas: ["samaya", "vigyaaniq"]
+  },
+  {
+    id: "weather-brief",
+    name: "Weather Brief",
+    description: "Speak the real weather gate output; silent when the provider is NULL.",
+    status: "built",
+    implementedBy: [ORCH, "apps/radio-backend/server.js#/api/weather"],
+    gates: ["only when /api/weather returns status ok — never fabricated"],
+    personas: ["samaya"]
+  },
+  {
+    id: "insert-ad",
+    name: "Insert Ad",
+    description: "Ad insertion into the stream.",
+    status: "planned",
+    implementedBy: [],
+    gates: ["BLOCKED: requires rights-verified ad inventory + ENABLE_ADS=1 (none exists)"],
+    personas: []
+  },
+  {
+    id: "answer-question",
+    name: "Answer Question",
+    description: "Answer listener questions about tracks/science with cited sources.",
+    status: "planned",
+    implementedBy: [],
+    gates: ["BLOCKED: requires a wired knowledge lane (search/corpus) + LLM provider (AGENT_LLM_PROVIDER) — answers must cite verified sources only"],
+    personas: ["rishi", "vigyaaniq"]
+  },
+  {
+    id: "run-quiz",
+    name: "Run Quiz",
+    description: "Interactive trivia/polls during programming.",
+    status: "planned",
+    implementedBy: [],
+    gates: ["BLOCKED: quiz content type has no real content yet"],
+    personas: ["vigyaaniq"]
+  },
+  {
+    id: "compose-content",
+    name: "Compose Content",
+    description: "Generate micro-podcasts / new lyrics / AI music.",
+    status: "planned",
+    implementedBy: [],
+    gates: ["BLOCKED: requires generation provider + rights lane for generated output"],
+    personas: []
+  }
+];
+
+export const agentPolicy: AgentPolicy = {
+  disclosure: "— announcement by the AI Radio Assistant (rule-based).",
+  daypartPersona: { morning: "maataa", day: "samaya", evening: "rishi", night: "vigyaaniq" },
+  daypartStations: {
+    morning: ["sanatan-devotional", "classical-raga"],
+    day: ["folk-regional", "hip-hop-rap", "electronic-fusion"],
+    evening: ["classical-raga", "sufi-qawwali"],
+    night: ["electronic-fusion", "cinematic-other"]
+  },
+  upsellAfterPreviews: 3,
+  maxAnnouncementsPerHour: 6,
+  rules: [
+    "Never claim anything not present in the manifest/content library (PHKD).",
+    "Never play a track outside its commerce access state.",
+    "Every spoken output ends with the AI disclosure.",
+    "Ads stay blocked without verified inventory.",
+    "Purchases are suggestions routed through the existing checkout — never executed by the agent.",
+    "LLM cognition is opt-in via AGENT_LLM_PROVIDER; absent provider ⇒ rule engine only."
+  ]
+};
