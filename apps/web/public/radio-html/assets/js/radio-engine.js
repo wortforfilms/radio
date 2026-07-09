@@ -51,6 +51,12 @@
   }
 
   // TTS personas for announcements (maps TtsPersonaKey from radioTypes.ts).
+  // Phase 10: each persona supports language variants (persona-<lang>, e.g.
+  // samaya-ta). Actual voice availability depends on the OS speech voices —
+  // speak() falls back to the closest available voice and logs the substitution.
+  const TTS_LANGUAGES = {
+    hi: "hi-IN", en: "en-IN", ta: "ta-IN", te: "te-IN", kn: "kn-IN", bn: "bn-IN", mr: "mr-IN", gu: "gu-IN"
+  };
   const TTS_PERSONAS = {
     maataa: { label: "Maataa", lang: "hi-IN", rate: 0.85, pitch: 0.8 },
     rishi: { label: "Rishi", lang: "hi-IN", rate: 0.78, pitch: 0.6 },
@@ -107,6 +113,8 @@
         walletBox: "walletBox",
         walletTopUp: "walletTopUp",
         personaSelect: "personaSelect",
+        languageSelect: "languageSelect",
+        lowBandwidth: "lowBandwidth",
         netStatus: "netStatus",
         weatherBox: "weatherBox",
         lyricsPanel: "lyricsPanel",
@@ -310,6 +318,18 @@
         this.saveLocal("rv.settings", this.settings);
         this.log(`TTS persona set: ${event.target.value}`);
       });
+      this.el("languageSelect")?.addEventListener("change", (event) => {
+        this.settings.ttsLanguage = event.target.value;
+        this.saveLocal("rv.settings", this.settings);
+        this.log(`Announcement language set: ${event.target.value} (voice availability depends on your OS).`);
+      });
+      this.el("lowBandwidth")?.addEventListener("change", (event) => {
+        this.settings.lowBandwidth = event.target.checked;
+        this.saveLocal("rv.settings", this.settings);
+        if (this.audio) this.audio.preload = event.target.checked ? "none" : "metadata";
+        this.renderCatalog(this.el("catalogSearch")?.value);
+        this.log(`Low-bandwidth mode ${event.target.checked ? "ON — covers skipped, preload off, AI asks disabled" : "off"}.`);
+      });
       this.el("storyToggle")?.addEventListener("click", () => this.openStory());
       this.el("storyClose")?.addEventListener("click", () => this.closeStory());
       this.el("storyModal")?.addEventListener("click", (event) => {
@@ -380,8 +400,11 @@
         .map((song) => {
           const badge = this.accessBadge(song);
           const versionTag = song.version && song.version !== "original" ? ` <small>(${esc(song.version)})</small>` : "";
+          const cover = this.settings.lowBandwidth
+            ? '<span class="cat-title" style="opacity:.4">♪</span>'
+            : `<img loading="lazy" src="${esc(toRelative(song.coverUrl || ""))}" alt="">`;
           return `<button class="cat-item" data-track="${esc(song.id)}" title="${esc(this.displayTitle(song))}">
-            <img loading="lazy" src="${esc(toRelative(song.coverUrl || ""))}" alt="">
+            ${cover}
             <span class="cat-title">${esc(song.title)}${versionTag}</span>
             <span class="badge ${badge.cls}">${esc(badge.label)}</span>
           </button>`;
@@ -766,6 +789,10 @@
       const input = this.el("agentQuery");
       const query = input?.value?.trim();
       if (!query) return;
+      if (this.settings.lowBandwidth) {
+        this.log("Ask blocked: low-bandwidth mode limits LLM usage (network-heavy). Disable it to ask.");
+        return;
+      }
       if (!this.options.apiBase) {
         this.log("Ask blocked: backend not connected.");
         return;
@@ -1075,14 +1102,18 @@
         return false;
       }
       const persona = TTS_PERSONAS[this.settings.ttsPersona] || TTS_PERSONAS.samaya;
+      // Phase 10: persona language variant (persona-<lang>) via ttsLanguage setting.
+      const lang = TTS_LANGUAGES[this.settings.ttsLanguage] || persona.lang;
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.rate = persona.rate;
       utterance.pitch = persona.pitch;
-      utterance.lang = persona.lang;
-      const voice = window.speechSynthesis
-        .getVoices()
-        .find((candidate) => candidate.lang === persona.lang || candidate.lang.startsWith(persona.lang.slice(0, 2)));
+      utterance.lang = lang;
+      const voices = window.speechSynthesis.getVoices();
+      const voice =
+        voices.find((candidate) => candidate.lang === lang) ||
+        voices.find((candidate) => candidate.lang.startsWith(lang.slice(0, 2)));
       if (voice) utterance.voice = voice;
+      else if (lang !== persona.lang) this.log(`TTS: no ${lang} voice installed — using system default (persona ${this.settings.ttsPersona}-${this.settings.ttsLanguage || "hi"}).`);
       window.speechSynthesis.speak(utterance);
       return true;
     }

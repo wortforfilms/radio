@@ -296,4 +296,25 @@ async function generateLyrics(prompt, style = "", deps = {}) {
   };
 }
 
-module.exports = { ask, llmConfig, searchLocalLibrary, buildSystemPrompt, parseModelOutput, validateActions, generateLyrics, NO_INFO_TEXT };
+/**
+ * Phase 10 — translation via the LLM seam. Translates ONLY the given text
+ * (knowledge-lane outputs, storylines, descriptions) — never invents content.
+ * Fail-closed without a provider.
+ */
+const SUPPORTED_LANGS = { hi: "Hindi", en: "English", ta: "Tamil", te: "Telugu", kn: "Kannada", bn: "Bengali", mr: "Marathi", gu: "Gujarati" };
+async function translate(text, targetLang, deps = {}) {
+  const cfg = deps.config || llmConfig();
+  if (!SUPPORTED_LANGS[targetLang]) return { blocked: `unsupported language "${targetLang}" (${Object.keys(SUPPORTED_LANGS).join(", ")})` };
+  if (!cfg.provider) return { blocked: "blocked-llm-provider-null: translation needs AGENT_LLM_PROVIDER" };
+  if (cfg.provider !== "local" && !cfg.apiKey) return { blocked: "blocked-llm-key-null" };
+  const system = `Translate the user's text into ${SUPPORTED_LANGS[targetLang]}. Output ONLY the translation — no additions, no commentary, no invented facts.`;
+  let output;
+  try {
+    output = await (deps.callProvider || callProvider)(cfg, system, String(text || "").slice(0, 2000), []);
+  } catch (error) {
+    return { blocked: `llm-call-failed: ${error.message}` };
+  }
+  return { translation: String(output || "").trim(), targetLang, provider: cfg.provider, aiGenerated: true };
+}
+
+module.exports = { ask, llmConfig, searchLocalLibrary, buildSystemPrompt, parseModelOutput, validateActions, generateLyrics, translate, SUPPORTED_LANGS, NO_INFO_TEXT };

@@ -358,6 +358,9 @@ function buildStation(station, stationTracks) {
     slug: station.slug,
     name: stationOverride.name || station.name,
     description: stationOverride.description || station.description,
+    // Phase 10: honest region metadata — current catalogue serves pan-india;
+    // regional lanes (Tamil Bhakti, …) stay planned until verified content exists.
+    region: stationOverride.region || "pan-india",
     streamUrl: null,
     streamStatus: "NULL_UNVERIFIED",
     fallbackUrl: first?.audioUrl || null,
@@ -530,6 +533,10 @@ function buildHtml(data) {
         <div class="widget">
           <h3>Announcer Persona</h3>
           <select class="btn" id="personaSelect"></select>
+          <select class="btn" id="languageSelect" style="margin-top:6px" aria-label="Announcement language">
+            <option value="hi">हिन्दी</option><option value="en">English</option><option value="ta">தமிழ்</option><option value="te">తెలుగు</option><option value="kn">ಕನ್ನಡ</option><option value="bn">বাংলা</option><option value="mr">मराठी</option><option value="gu">ગુજરાતી</option>
+          </select>
+          <label style="display:block;margin-top:8px;font-size:11px;color:var(--muted)"><input type="checkbox" id="lowBandwidth"> Low-bandwidth mode (2G/3G)</label>
         </div>
         <div class="widget">
           <h3>Weather</h3>

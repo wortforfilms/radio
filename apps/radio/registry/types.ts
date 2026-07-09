@@ -157,6 +157,10 @@ export interface RouteDefinition {
   dynamic: boolean;
   /** Optional content-type id (content-types.ts) this route presents. */
   contentType?: string;
+  /** Phase 10: optional region scope (e.g. "pan-india", "tamil-nadu"). */
+  region?: string;
+  /** Phase 10: optional primary content language (ISO 639-1). */
+  language?: string;
 }
 
 /** Build-time computed shape: definition + computed children ids. */

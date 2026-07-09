@@ -473,7 +473,7 @@ const { ask, llmConfig } = require("./cognition-llm.js");
 const { appendFeedback, loadWeights, runLearningJob } = require("./learning.js");
 const { generateMusic, listGenerated, publishGenerated, storeGenerated } = require("./content-gen.js");
 const { appendLedger: appendRightsLedger, readLedger: readRightsLedger, runExpiryJob, verifyWithExternalRegistry } = require("./rights-ledger.js");
-const { generateLyrics } = require("./cognition-llm.js");
+const { generateLyrics, translate } = require("./cognition-llm.js");
 
 // Knowledge lane dependencies for Phase-2 cognition (real data only).
 let contentLibraryCache = null;
@@ -649,6 +649,37 @@ app.post("/agent/ask", async (req, res) => {
     policy: policy.policy
   });
   res.json({ decidedAt: new Date().toISOString(), engine: "cognition-llm", persona, provider: llmConfig().provider, ...result });
+});
+
+// ---------------------------------------------------------------------------
+// Phase 10 — multilingual + region lanes.
+// Translation: LLM seam, translates given text only (fail-closed, AI-marked).
+// Region detection: GEO_PROVIDER seam — without it, blocked with a manual-
+// selection hint (never guesses location). Regional stations (Tamil Bhakti,
+// Kannada Classical, …) remain PLANNED: the verified catalogue is Hindi/
+// Sanskrit-dominant; language lanes ship, fabricated regional content does not.
+// ---------------------------------------------------------------------------
+app.post("/api/translate", async (req, res) => {
+  const body = (await req.readJson()) || {};
+  if (!body.text || !body.targetLang) {
+    res.status(400).json({ error: "text + targetLang required" });
+    return;
+  }
+  const result = await translate(body.text, body.targetLang);
+  res.status(result.blocked ? 503 : 200).json(result);
+});
+
+app.get("/api/region", async (_req, res) => {
+  if (!process.env.GEO_PROVIDER) {
+    res.json({
+      status: "blocked-geo-provider-null",
+      region: null,
+      note: "No geolocation provider configured — select a region manually. Regional stations are planned; current stations serve pan-india.",
+      stationsByRegion: { "pan-india": (loadManifest().stations || []).map((station) => station.slug) }
+    });
+    return;
+  }
+  res.json({ status: "geo-provider-configured", note: "wire the provider adapter for the configured GEO_PROVIDER", region: null });
 });
 
 // ---------------------------------------------------------------------------
