@@ -512,6 +512,10 @@ function buildHtml(data) {
             </div>
           </div>
         </div>
+        <div class="controls" style="margin-top:10px">
+          <input id="agentQuery" type="search" placeholder="Ask the AI Radio Assistant… (cited sources only)" style="flex:1;min-width:200px;background:var(--panel2);border:1px solid var(--line);border-radius:999px;color:var(--text);padding:9px 14px;font-size:12px">
+          <button class="btn" id="agentAsk">Ask</button>
+        </div>
         <div id="lyricsPanel" class="lyrics"></div>
         <h3 style="margin-top:18px">Program Sequence</h3>
         <div id="scheduleList" class="list"></div>

@@ -97,6 +97,8 @@
         buyCurrent: "buyCurrent",
         giftCurrent: "giftCurrent",
         agentDj: "agentDj",
+        agentQuery: "agentQuery",
+        agentAsk: "agentAsk",
         catalogSearch: "catalogSearch",
         catalogGrid: "catalogGrid",
         walletBox: "walletBox",
@@ -291,6 +293,10 @@
       this.el("buyCurrent")?.addEventListener("click", () => this.buyCurrent());
       this.el("giftCurrent")?.addEventListener("click", () => this.giftCurrent());
       this.el("agentDj")?.addEventListener("click", () => this.agentAutoDj());
+      this.el("agentAsk")?.addEventListener("click", () => this.askAgent());
+      this.el("agentQuery")?.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") this.askAgent();
+      });
       this.el("walletTopUp")?.addEventListener("click", () => this.topUpWallet());
       this.el("catalogSearch")?.addEventListener("input", (event) => this.renderCatalog(event.target.value));
       this.el("personaSelect")?.addEventListener("change", (event) => {
@@ -694,6 +700,54 @@
       }
       for (const reason of decision.blocked || []) this.log(`Agent gate: ${reason}`);
       this.queueAction("agent-decision", { daypart: decision.daypart, actions: (decision.actions || []).map((a) => a.type), at: decision.decidedAt });
+    }
+
+    // Phase-2 cognition: ask the agent a question (sources-only, disclosed).
+    async askAgent() {
+      const input = this.el("agentQuery");
+      const query = input?.value?.trim();
+      if (!query) return;
+      if (!this.options.apiBase) {
+        this.log("Ask blocked: backend not connected.");
+        return;
+      }
+      this.log(`Asking agent: ${query}`);
+      let result;
+      try {
+        const response = await fetch(this.apiUrl("/agent/ask"), {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({
+            query,
+            userId: this.userId,
+            stationName: this.activeStation?.name || null,
+            currentTrackTitle: this.activeProgram ? this.displayTitle(this.activeProgram) : null,
+            weather: this.weatherText ? { status: "ok", announcementText: this.weatherText } : null,
+            persona: this.settings.ttsPersona
+          })
+        });
+        result = await response.json();
+        if (!response.ok) throw new Error(result.message || result.error || response.status);
+      } catch (error) {
+        this.log(`Agent ask failed: ${error.message}`);
+        return;
+      }
+      for (const action of result.actions || []) {
+        if (action.type === "speak") {
+          if (this.speak(action.text)) this.log(`Agent (${result.provider || "?"} · ${action.persona}): ${action.text}`);
+          else this.log(`Agent answer: ${action.text}`);
+        } else if (action.type === "play") {
+          this.playTrackById(action.trackId);
+        } else if (action.type === "recommend") {
+          this.log(`Agent recommends: ${action.title || action.trackId}`);
+        }
+      }
+      if ((result.sources || []).length) {
+        this.log(`Sources: ${result.sources.map((source) => source.title).join(" · ")}`);
+      }
+      for (const reason of result.blocked || []) this.log(`Agent gate: ${reason}`);
+      if (input) input.value = "";
+      this.queueAction("agent-ask", { query, actions: (result.actions || []).map((a) => a.type), at: new Date().toISOString() });
     }
 
     // -----------------------------------------------------------------------

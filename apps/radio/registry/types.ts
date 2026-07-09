@@ -309,6 +309,8 @@ export interface AgentCapability {
 /** Global behaviour policy — the agent's constitution. Enforced, not hoped for. */
 export interface AgentPolicy {
   disclosure: string;
+  /** Template for LLM outputs; {provider} substituted server-side. */
+  llmDisclosure: string;
   daypartPersona: Record<"morning" | "day" | "evening" | "night", string>;
   daypartStations: Record<"morning" | "day" | "evening" | "night", string[]>;
   upsellAfterPreviews: number;

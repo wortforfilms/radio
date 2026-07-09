@@ -442,6 +442,49 @@ app.post("/admin/resync", (req, res) => {
 // The agent never executes anything itself — the engine is the action layer.
 // ---------------------------------------------------------------------------
 const { decide } = require("./agent.js");
+const { ask, llmConfig } = require("./cognition-llm.js");
+
+// Knowledge lane dependencies for Phase-2 cognition (real data only).
+let contentLibraryCache = null;
+function loadContentLibrary() {
+  if (contentLibraryCache) return contentLibraryCache;
+  const file = path.join(REPO_ROOT, "apps/web/public/radio-html/data/radio-content.json");
+  contentLibraryCache = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf8")).tracks || [] : [];
+  return contentLibraryCache;
+}
+
+async function remoteKnowledgeSearch(query) {
+  // Existing knowledge-graph search in the Next.js app (proxied lane).
+  const response = await fetch(`${NEXT_API_BASE}/api/search?q=${encodeURIComponent(query)}`, { signal: AbortSignal.timeout(4000) });
+  if (!response.ok) return [];
+  const data = await response.json();
+  const rows = Array.isArray(data) ? data : data.results || data.nodes || [];
+  return rows.slice(0, 3).map((row) => ({
+    title: row.title || row.name || "knowledge entry",
+    url: `/search?q=${encodeURIComponent(query)}`,
+    ref: `knowledge-graph:${row.id || row.title || "entry"}`,
+    excerpt: String(row.summary || row.description || row.content || row.title || "").slice(0, 420)
+  }));
+}
+
+function trackValidator(entitlements) {
+  const manifest = loadManifest();
+  const byTrack = new Map(
+    (manifest.offlineBundle?.songs || []).map((song) => [song.id, song])
+  );
+  return (trackId) => {
+    const song = byTrack.get(String(trackId || "").replace(/^content-library:/, ""));
+    if (!song) return { exists: false };
+    const entitled = (entitlements || []).some(
+      (e) => e.active !== false && (e.scope === "all_access" || (e.scope === "track" && e.trackId === song.id))
+    );
+    return {
+      exists: true,
+      title: song.stylizedTitle || song.title,
+      access: song.freeTier || entitled ? "full" : "preview"
+    };
+  };
+}
 
 function loadAgentPolicy() {
   const file = path.join(REPO_ROOT, "apps/radio/public/registry/agent-policy.json");
@@ -473,6 +516,49 @@ app.post("/agent/decide", async (req, res) => {
   const manifest = loadManifest();
   const decision = decide(perception, { stations: manifest.stations || [], policy });
   res.json(decision);
+});
+
+// Phase-2 cognition: natural-language queries, sources-only, fail-closed.
+app.post("/agent/ask", async (req, res) => {
+  const policy = loadAgentPolicy();
+  if (!policy) {
+    res.status(503).json({ error: "agent-policy-not-built", message: "Run `npm run radio:registry` first." });
+    return;
+  }
+  const body = (await req.readJson()) || {};
+  if (!body.query || !String(body.query).trim()) {
+    res.status(400).json({ error: "query required" });
+    return;
+  }
+  let entitlements = body.entitlements || [];
+  if (body.userId && !body.entitlements) {
+    entitlements = (await loadEntitlements(body.userId)).entitlements;
+  }
+  const persona = ["maataa", "rishi", "samaya", "vigyaaniq"].includes(body.persona)
+    ? body.persona
+    : policy.policy.daypartPersona[
+        (body.hour ?? new Date().getHours()) < 10 && (body.hour ?? new Date().getHours()) >= 5
+          ? "morning"
+          : (body.hour ?? new Date().getHours()) < 17
+            ? "day"
+            : (body.hour ?? new Date().getHours()) < 22
+              ? "evening"
+              : "night"
+      ];
+  const context = {
+    stationName: body.stationName || null,
+    currentTrackTitle: body.currentTrackTitle || null,
+    daypart: body.daypart || null,
+    weather: body.weather || null,
+    entitlements
+  };
+  const result = await ask(String(body.query), context, persona, body.history || [], {
+    contentLibrary: loadContentLibrary(),
+    remoteSearch: remoteKnowledgeSearch,
+    validateTrack: trackValidator(entitlements),
+    policy: policy.policy
+  });
+  res.json({ decidedAt: new Date().toISOString(), engine: "cognition-llm", persona, provider: llmConfig().provider, ...result });
 });
 
 // ---------------------------------------------------------------------------

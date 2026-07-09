@@ -1,6 +1,6 @@
 # Radio as an Agent
 
-Generated 2026-07-09T19:27:25.262Z from `registry/agent.ts` — do not edit by hand.
+Generated 2026-07-09T19:47:38.693Z from `registry/agent.ts` — do not edit by hand.
 
 The agent is a fail-closed co-pilot: perception (listener context, manifest,
 weather gate) → rule-based cognition (LLM opt-in via `AGENT_LLM_PROVIDER`) →
@@ -34,7 +34,7 @@ rights, never hides monetisation, and always discloses itself.
 | `suggest-purchase` | ✅ built | only after upsellAfterPreviews previews of the same track; price shown from commerce defaults; checkout via existing /api/payments/order only; disclosed as a suggestion, never auto-purchased | samaya, vigyaaniq |
 | `weather-brief` | ✅ built | only when /api/weather returns status ok — never fabricated | samaya |
 | `insert-ad` | ⬜ planned | BLOCKED: requires rights-verified ad inventory + ENABLE_ADS=1 (none exists) | — |
-| `answer-question` | ⬜ planned | BLOCKED: requires a wired knowledge lane (search/corpus) + LLM provider (AGENT_LLM_PROVIDER) — answers must cite verified sources only | rishi, vigyaaniq |
+| `answer-question` | 🟡 partial | AGENT_LLM_PROVIDER + key configured, else blocked-llm-provider-null; zero retrieved sources ⇒ exact honest fallback, LLM not called; model output must be valid structured JSON or nothing executes; play/recommend ids validated against manifest + commerce access; provider disclosure appended server-side to every spoken text | maataa, rishi, samaya, vigyaaniq |
 | `run-quiz` | ⬜ planned | BLOCKED: quiz content type has no real content yet | vigyaaniq |
 | `compose-content` | ⬜ planned | BLOCKED: requires generation provider + rights lane for generated output | — |
 

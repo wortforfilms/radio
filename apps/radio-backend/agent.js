@@ -133,8 +133,8 @@ function decide(perception, world) {
     const provider = process.env.AGENT_LLM_PROVIDER || null;
     blocked.push(
       provider
-        ? `answer-question: blocked — provider "${provider}" configured but knowledge lane (cited sources) not wired yet`
-        : "answer-question: blocked-llm-provider-null — set AGENT_LLM_PROVIDER and wire the knowledge lane; answers must cite verified sources"
+        ? `answer-question: use POST /agent/ask (Phase-2 cognition, provider "${provider}")`
+        : "answer-question: blocked-llm-provider-null — set AGENT_LLM_PROVIDER, then use POST /agent/ask (answers cite verified sources only)"
     );
   }
 
