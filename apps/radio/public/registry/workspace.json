@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T20:18:59.868Z",
+  "generatedAt": "2026-07-09T20:20:29.955Z",
   "note": "One root registry; app registries own route-id prefixes. Statuses evidence-backed — only artifacts that exist are cited.",
   "counts": {
     "apps": 9,
@@ -57,6 +57,7 @@
         "radio.request",
         "radio.dedicate",
         "radio.download",
+        "radio.programs",
         "search",
         "search.radio",
         "search.podcasts",

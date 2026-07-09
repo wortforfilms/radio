@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T20:18:59.868Z",
+  "generatedAt": "2026-07-09T20:20:29.955Z",
   "enabledFlags": [
     "premium"
   ],
@@ -1137,6 +1137,7 @@
     "radio.request",
     "radio.dedicate",
     "radio.download",
+    "radio.programs",
     "podcasts.trending",
     "podcasts.latest",
     "podcasts.categories",
@@ -1193,6 +1194,9 @@
       "radio"
     ],
     "radio.download": [
+      "radio"
+    ],
+    "radio.programs": [
       "radio"
     ],
     "podcasts": [],

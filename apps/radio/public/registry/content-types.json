@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T20:18:59.868Z",
+  "generatedAt": "2026-07-09T20:20:29.955Z",
   "count": 10,
   "contentTypes": [
     {
@@ -429,7 +429,8 @@
       "radio.live",
       "radio.schedule",
       "radio.shows",
-      "radio.shows.detail"
+      "radio.shows.detail",
+      "radio.programs"
     ],
     "podcast": [
       "podcasts",

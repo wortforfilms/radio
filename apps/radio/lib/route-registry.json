@@ -1,6 +1,6 @@
 {
   "id": "radio-vaigyaaniq-route-registry",
-  "generatedAt": "2026-07-09T20:18:59.868Z",
+  "generatedAt": "2026-07-09T20:20:29.955Z",
   "schemaVersion": 3,
   "$schema": "/registry/registry.schema.json",
   "siteOrigin": "http://localhost:3000",
@@ -10,13 +10,13 @@
   },
   "counts": {
     "sections": 20,
-    "routes": 196,
+    "routes": 197,
     "built": 6,
-    "partial": 47,
+    "partial": 48,
     "planned": 143,
-    "dynamic": 8,
+    "dynamic": 9,
     "searchable": 123,
-    "apiReferences": 20,
+    "apiReferences": 21,
     "components": 19,
     "contentTypes": 10,
     "workflows": 2,
@@ -2161,6 +2161,91 @@
         "partial"
       ],
       "contentType": "radio-track"
+    },
+    {
+      "path": "/radio/programs/:date/:slug",
+      "section": "Radio",
+      "emoji": "📻",
+      "title": "Program Day",
+      "status": "partial",
+      "implementedBy": [
+        "apps/radio-backend/server.js#/api/live-status"
+      ],
+      "description": "Dynamic per-day station program instances, emitted from real manifest entries via /api/live-status (sequence-only until wall-clock schedules are verified).",
+      "dynamic": true,
+      "id": "radio.programs",
+      "category": "programming",
+      "layout": "article",
+      "icon": "📻",
+      "searchable": false,
+      "navigation": {
+        "sidebar": false,
+        "header": false,
+        "footer": false,
+        "breadcrumbs": true,
+        "commandPalette": false,
+        "quickAccess": false,
+        "contextMenu": true
+      },
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "permissions": [
+        "anonymous"
+      ],
+      "featureFlags": [],
+      "api": [
+        {
+          "method": "GET",
+          "path": "/api/live-status",
+          "status": "built",
+          "description": "TTL-cached live flags + dynamic route instances"
+        }
+      ],
+      "seo": {
+        "title": "Program Day · Radio Vaigyaaniq",
+        "description": "Per-day station programs.",
+        "keywords": [
+          "radio",
+          "programs"
+        ],
+        "canonical": null,
+        "robots": "noindex,nofollow",
+        "openGraph": {
+          "title": "Program Day",
+          "description": "Per-day station programs.",
+          "type": "website",
+          "image": null
+        },
+        "twitter": {
+          "card": "summary",
+          "title": "Program Day",
+          "description": "Per-day station programs."
+        },
+        "jsonLd": null
+      },
+      "analytics": {
+        "screenName": "radio.programs",
+        "event": "view_radio_programs",
+        "trackingId": null,
+        "conversionGoal": null
+      },
+      "evidence": [
+        {
+          "artifact": "apps/radio-backend/server.js#/api/live-status",
+          "kind": "api"
+        }
+      ],
+      "dependsOn": [],
+      "children": [],
+      "tags": [
+        "radio",
+        "programming",
+        "partial"
+      ],
+      "contentType": "live-show"
     },
     {
       "path": "/podcasts",

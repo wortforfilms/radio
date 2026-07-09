@@ -168,6 +168,7 @@
       this.bindNetwork();
       this.refreshEntitlements().catch(() => undefined);
       this.renderWeather().catch(() => undefined);
+      this.refreshLiveStatus().catch(() => undefined);
       this.log(
         [
           `Manifest: ${this.manifest.id}`,
@@ -325,16 +326,36 @@
       this.audio?.addEventListener("timeupdate", () => this.onTimeUpdate());
     }
 
+    // Phase 7: TTL-cached live flags from the backend (verified streams only).
+    async refreshLiveStatus() {
+      if (!this.options.apiBase) return;
+      try {
+        const response = await fetch(this.apiUrl("/api/live-status"));
+        if (!response.ok) return;
+        const data = await response.json();
+        this.liveStatus = new Map((data.stations || []).map((entry) => [entry.slug, entry]));
+        this.renderStations();
+      } catch {
+        // offline — badges fall back to manifest streamStatus
+      }
+    }
+
     renderStations() {
       const root = this.el("stationList");
       if (!root) return;
       root.innerHTML = this.stations
-        .map(
-          (station) => `<button class="station" data-station="${esc(station.slug)}">
-            <b>${esc(station.name)}</b>
-            <small>${esc(station.totalPrograms)} programs · stream ${esc(station.streamStatus || "NULL")}</small>
-          </button>`
-        )
+        .map((station) => {
+          const live = this.liveStatus?.get(station.slug);
+          const badge = live
+            ? live.live
+              ? '<span class="badge badge-free">LIVE</span>'
+              : '<span class="badge badge-locked">OFFLINE</span>'
+            : "";
+          return `<button class="station" data-station="${esc(station.slug)}">
+            <b>${esc(station.name)} ${badge}</b>
+            <small>${esc(station.totalPrograms)} programs · stream ${esc(live?.reason || station.streamStatus || "NULL")}</small>
+          </button>`;
+        })
         .join("");
       root.querySelectorAll("[data-station]").forEach((button) => {
         button.addEventListener("click", () => this.selectStation(button.dataset.station, { autoplay: false }));

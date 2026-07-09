@@ -1,20 +1,20 @@
 # Permissions
 
-Generated 2026-07-09T20:18:59.868Z.
+Generated 2026-07-09T20:20:29.955Z.
 
 Roles: anonymous · listener · student · researcher · creator · moderator · editor · admin · superadmin
 
 | role | accessible routes |
 |---|---|
-| anonymous | 142 |
-| listener | 154 |
-| student | 154 |
-| researcher | 154 |
-| creator | 164 |
-| moderator | 154 |
-| editor | 176 |
-| admin | 196 |
-| superadmin | 196 |
+| anonymous | 143 |
+| listener | 155 |
+| student | 155 |
+| researcher | 155 |
+| creator | 165 |
+| moderator | 155 |
+| editor | 177 |
+| admin | 197 |
+| superadmin | 197 |
 
 ## Non-public routes
 

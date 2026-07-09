@@ -125,6 +125,26 @@
         }
       }
     },
+    "/api/live-status": {
+      "get": {
+        "summary": "TTL-cached live flags + dynamic route instances",
+        "tags": [
+          "radio"
+        ],
+        "x-used-by-routes": [
+          "radio.programs"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "4XX": {
+            "description": "Fail-closed (PHKD) or validation error"
+          }
+        }
+      }
+    },
     "/api/search": {
       "get": {
         "summary": "GET /api/search",
@@ -357,5 +377,5 @@
       "description": "Versioned alias of /api/payments/*"
     }
   ],
-  "x-generated-at": "2026-07-09T20:18:59.868Z"
+  "x-generated-at": "2026-07-09T20:20:29.955Z"
 }

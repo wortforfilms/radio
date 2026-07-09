@@ -1,6 +1,6 @@
 {
   "note": "Permanent identifier ledger — compiler fails if any id disappears.",
-  "updatedAt": "2026-07-09T19:27:25.449Z",
+  "updatedAt": "2026-07-09T20:20:30.030Z",
   "ids": {
     "routes": [
       "academy",
@@ -157,6 +157,7 @@
       "radio.frequencies",
       "radio.live",
       "radio.now-playing",
+      "radio.programs",
       "radio.request",
       "radio.rj",
       "radio.schedule",

@@ -1,8 +1,8 @@
 # Routes
 
-Generated 2026-07-09T20:18:59.868Z from `apps/radio/registry` — do not edit by hand.
+Generated 2026-07-09T20:20:29.955Z from `apps/radio/registry` — do not edit by hand.
 
-Total **196** routes · 6 built · 47 partial · 143 planned.
+Total **197** routes · 6 built · 48 partial · 143 planned.
 
 ## 🌐 Public Website
 
@@ -39,6 +39,7 @@ Total **196** routes · 6 built · 47 partial · 143 planned.
 | `radio.request` | `/radio/request` | ⬜ planned | article | — | anonymous | — |
 | `radio.dedicate` | `/radio/dedicate` | ⬜ planned | article | — | anonymous | — |
 | `radio.download` | `/radio/download` | 🟡 partial | article | radio-track | anonymous | — |
+| `radio.programs` | `/radio/programs/:date/:slug` | 🟡 partial | article | live-show | anonymous | — |
 
 ## 🎙 Podcast
 

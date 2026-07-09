@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T20:18:59.868Z",
+  "generatedAt": "2026-07-09T20:20:29.955Z",
   "byRoute": {
     "radio": [
       {
@@ -41,6 +41,14 @@
         "path": "/api/offline-bundle",
         "status": "partial",
         "description": "Rights-aware offline bundle"
+      }
+    ],
+    "radio.programs": [
+      {
+        "method": "GET",
+        "path": "/api/live-status",
+        "status": "built",
+        "description": "TTL-cached live flags + dynamic route instances"
       }
     ],
     "search": [
@@ -176,6 +184,13 @@
       "description": "Rights-aware offline bundle",
       "usedBy": [
         "radio.download"
+      ]
+    },
+    "GET /api/live-status": {
+      "status": "built",
+      "description": "TTL-cached live flags + dynamic route instances",
+      "usedBy": [
+        "radio.programs"
       ]
     },
     "GET /api/search": {

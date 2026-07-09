@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T20:18:59.868Z",
+  "generatedAt": "2026-07-09T20:20:29.955Z",
   "roles": [
     "anonymous",
     "listener",
@@ -130,6 +130,9 @@
       "anonymous"
     ],
     "radio.download": [
+      "anonymous"
+    ],
+    "radio.programs": [
       "anonymous"
     ],
     "podcasts": [
@@ -735,6 +738,7 @@
       "radio.request",
       "radio.dedicate",
       "radio.download",
+      "radio.programs",
       "podcasts",
       "podcasts.trending",
       "podcasts.latest",
@@ -879,6 +883,7 @@
       "radio.request",
       "radio.dedicate",
       "radio.download",
+      "radio.programs",
       "podcasts",
       "podcasts.trending",
       "podcasts.latest",
@@ -1035,6 +1040,7 @@
       "radio.request",
       "radio.dedicate",
       "radio.download",
+      "radio.programs",
       "podcasts",
       "podcasts.trending",
       "podcasts.latest",
@@ -1191,6 +1197,7 @@
       "radio.request",
       "radio.dedicate",
       "radio.download",
+      "radio.programs",
       "podcasts",
       "podcasts.trending",
       "podcasts.latest",
@@ -1347,6 +1354,7 @@
       "radio.request",
       "radio.dedicate",
       "radio.download",
+      "radio.programs",
       "podcasts",
       "podcasts.trending",
       "podcasts.latest",
@@ -1513,6 +1521,7 @@
       "radio.request",
       "radio.dedicate",
       "radio.download",
+      "radio.programs",
       "podcasts",
       "podcasts.trending",
       "podcasts.latest",
@@ -1669,6 +1678,7 @@
       "radio.request",
       "radio.dedicate",
       "radio.download",
+      "radio.programs",
       "podcasts",
       "podcasts.trending",
       "podcasts.latest",
@@ -1847,6 +1857,7 @@
       "radio.request",
       "radio.dedicate",
       "radio.download",
+      "radio.programs",
       "podcasts",
       "podcasts.trending",
       "podcasts.latest",
@@ -2045,6 +2056,7 @@
       "radio.request",
       "radio.dedicate",
       "radio.download",
+      "radio.programs",
       "podcasts",
       "podcasts.trending",
       "podcasts.latest",

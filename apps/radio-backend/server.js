@@ -624,6 +624,63 @@ app.post("/agent/ask", async (req, res) => {
 });
 
 // ---------------------------------------------------------------------------
+// Phase 7 — live data lane: registry (static IA) ↔ runtime state.
+// TTL-cached (LIVE_STATUS_TTL_MS, default 5 min) so the manifest/DB isn't
+// hammered. Honest semantics: a station is LIVE only when its streamUrl exists
+// AND liveStreamVerified — with no verified streams today, everything reports
+// live:false with the reason. Program "ongoing" stays null while schedules are
+// sequence-only (wall-clock startTime NULL — never fabricated). Dynamic route
+// instances (/radio/programs/<date>/<station>) are emitted from real manifest
+// entries; the registry keeps the static :date/:slug pattern.
+// ---------------------------------------------------------------------------
+const LIVE_TTL = Number(process.env.LIVE_STATUS_TTL_MS || 5 * 60 * 1000);
+let liveCache = { at: 0, data: null };
+
+app.get("/api/live-status", async (_req, res) => {
+  if (liveCache.data && Date.now() - liveCache.at < LIVE_TTL) {
+    res.json({ ...liveCache.data, cached: true });
+    return;
+  }
+  const manifest = loadManifest();
+  const today = new Date().toISOString().slice(0, 10);
+  // Optional DB enrichment (fail-closed): station.active from the shared db.
+  let activeBySlug = new Map();
+  const prisma = await getPrisma();
+  if (prisma) {
+    try {
+      const rows = await prisma.station.findMany({ select: { slug: true, active: true } });
+      activeBySlug = new Map(rows.map((row) => [row.slug, row.active]));
+    } catch {
+      // schema mismatch or db absent — manifest-only lane
+    }
+  }
+  const stations = (manifest.stations || []).map((station) => {
+    const verified = Boolean(station.evidence?.liveStreamVerified);
+    const live = Boolean(station.streamUrl) && verified;
+    return {
+      slug: station.slug,
+      name: station.name,
+      live,
+      reason: live ? "stream verified" : !station.streamUrl ? "streamUrl NULL" : "stream not rights-verified",
+      dbActive: activeBySlug.has(station.slug) ? activeBySlug.get(station.slug) : null,
+      programOngoing: null, // sequence-only schedule: wall-clock unknown, never guessed
+      dynamicRoute: `/radio/programs/${today}/${station.slug}`
+    };
+  });
+  liveCache = {
+    at: Date.now(),
+    data: {
+      generatedAt: new Date().toISOString(),
+      ttlMs: LIVE_TTL,
+      phkd: { note: "live:true requires verified stream evidence; ongoing stays null under sequence-only schedules." },
+      counts: { stations: stations.length, live: stations.filter((s) => s.live).length },
+      stations
+    }
+  };
+  res.json({ ...liveCache.data, cached: false });
+});
+
+// ---------------------------------------------------------------------------
 // Phase 6 — registry change proposals (admin-gated).
 // DOCUMENTED ASSUMPTION: a web UI never mutates registry source files directly
 // (frozen ids + git review are the safety net). Proposals land in an append-only

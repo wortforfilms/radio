@@ -1,6 +1,6 @@
 # Site Structure
 
-Generated 2026-07-09T20:18:59.868Z.
+Generated 2026-07-09T20:20:29.955Z.
 
 - `/` (public.home, built)
 - `/about` (public.about, planned)
@@ -158,6 +158,7 @@ Generated 2026-07-09T20:18:59.868Z.
   - `/radio/frequencies` (radio.frequencies, planned)
   - `/radio/live` (radio.live, partial)
   - `/radio/now-playing` (radio.now-playing, built)
+      - `/radio/programs/:date/:slug` (radio.programs, partial)
   - `/radio/request` (radio.request, planned)
     - `/radio/rj/:slug` (radio.rj, partial)
   - `/radio/schedule` (radio.schedule, partial)

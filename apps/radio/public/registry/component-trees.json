@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-09T20:18:59.868Z",
-  "count": 196,
+  "generatedAt": "2026-07-09T20:20:29.955Z",
+  "count": 197,
   "trees": [
     {
       "route": "public.home",
@@ -1045,6 +1045,34 @@
               "id": "timeline",
               "status": "planned",
               "rendersRouteContent": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "radio.programs",
+      "path": "/radio/programs/:date/:slug",
+      "layout": "article",
+      "contentType": "live-show",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": true
             }
           ]
         }

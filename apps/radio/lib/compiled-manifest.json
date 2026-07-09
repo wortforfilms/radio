@@ -1,18 +1,18 @@
 {
   "id": "radio-vaigyaaniq-compiled-manifest",
-  "compiledAt": "2026-07-09T20:18:59.957Z",
+  "compiledAt": "2026-07-09T20:20:30.045Z",
   "schemaVersion": 3,
-  "sourceHash": "b4974feb66764f8902a28d27d2cca46a24c6b89430aaad81a486a37e52e11312",
+  "sourceHash": "eb40dd50b2eacd94960eeec559079bb1af7f5dba4fbf3f4bfc24b6311fe90cde",
   "counts": {
-    "routes": 196,
+    "routes": 197,
     "components": 19,
     "layouts": 10,
     "contentTypes": 10,
     "workflows": 2,
     "apps": 9,
     "agentCapabilities": 10,
-    "graphNodes": 247,
-    "graphEdges": 449
+    "graphNodes": 248,
+    "graphEdges": 452
   },
   "sections": [
     {
@@ -2123,6 +2123,90 @@
       ],
       "dynamic": false,
       "contentType": "radio-track",
+      "children": []
+    },
+    {
+      "id": "radio.programs",
+      "path": "/radio/programs/:date/:slug",
+      "title": "Program Day",
+      "description": "Dynamic per-day station program instances, emitted from real manifest entries via /api/live-status (sequence-only until wall-clock schedules are verified).",
+      "section": "Radio",
+      "category": "programming",
+      "status": "partial",
+      "layout": "article",
+      "icon": "📻",
+      "searchable": false,
+      "navigation": {
+        "sidebar": false,
+        "header": false,
+        "footer": false,
+        "breadcrumbs": true,
+        "commandPalette": false,
+        "quickAccess": false,
+        "contextMenu": true
+      },
+      "platforms": [
+        "web",
+        "mobile",
+        "desktop"
+      ],
+      "permissions": [
+        "anonymous"
+      ],
+      "featureFlags": [],
+      "api": [
+        {
+          "method": "GET",
+          "path": "/api/live-status",
+          "status": "built",
+          "description": "TTL-cached live flags + dynamic route instances"
+        }
+      ],
+      "seo": {
+        "title": "Program Day · Radio Vaigyaaniq",
+        "description": "Per-day station programs.",
+        "keywords": [
+          "radio",
+          "programs"
+        ],
+        "canonical": null,
+        "robots": "noindex,nofollow",
+        "openGraph": {
+          "title": "Program Day",
+          "description": "Per-day station programs.",
+          "type": "website",
+          "image": null
+        },
+        "twitter": {
+          "card": "summary",
+          "title": "Program Day",
+          "description": "Per-day station programs."
+        },
+        "jsonLd": null
+      },
+      "analytics": {
+        "screenName": "radio.programs",
+        "event": "view_radio_programs",
+        "trackingId": null,
+        "conversionGoal": null
+      },
+      "implementedBy": [
+        "apps/radio-backend/server.js#/api/live-status"
+      ],
+      "evidence": [
+        {
+          "artifact": "apps/radio-backend/server.js#/api/live-status",
+          "kind": "api"
+        }
+      ],
+      "dependsOn": [],
+      "tags": [
+        "radio",
+        "programming",
+        "partial"
+      ],
+      "dynamic": true,
+      "contentType": "live-show",
       "children": []
     },
     {
@@ -17503,6 +17587,34 @@
       ]
     },
     {
+      "route": "radio.programs",
+      "path": "/radio/programs/:date/:slug",
+      "layout": "article",
+      "contentType": "live-show",
+      "regions": [
+        {
+          "region": "main",
+          "components": [
+            {
+              "id": "article",
+              "status": "planned",
+              "rendersRouteContent": false
+            }
+          ]
+        },
+        {
+          "region": "aside",
+          "components": [
+            {
+              "id": "timeline",
+              "status": "planned",
+              "rendersRouteContent": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "route": "podcasts",
       "path": "/podcasts",
       "layout": "landing",
@@ -22969,8 +23081,8 @@
   ],
   "graph": {
     "counts": {
-      "nodes": 247,
-      "edges": 449
+      "nodes": 248,
+      "edges": 452
     },
     "nodes": [
       {
@@ -23100,6 +23212,11 @@
       },
       {
         "id": "route:radio.download",
+        "kind": "route",
+        "status": "partial"
+      },
+      {
+        "id": "route:radio.programs",
         "kind": "route",
         "status": "partial"
       },
@@ -24389,6 +24506,16 @@
         "from": "route:radio.download",
         "to": "route:radio.archive",
         "rel": "depends-on"
+      },
+      {
+        "from": "route:radio.programs",
+        "to": "layout:article",
+        "rel": "uses-layout"
+      },
+      {
+        "from": "route:radio.programs",
+        "to": "content-type:live-show",
+        "rel": "presents"
       },
       {
         "from": "route:podcasts",
@@ -26002,6 +26129,11 @@
       },
       {
         "from": "app:radio",
+        "to": "route:radio.programs",
+        "rel": "owns"
+      },
+      {
+        "from": "app:radio",
         "to": "route:search",
         "rel": "owns"
       },
@@ -26537,6 +26669,9 @@
         "route:user.downloads",
         "app:radio"
       ],
+      "route:radio.programs": [
+        "app:radio"
+      ],
       "route:academy": [
         "app:academy"
       ],
@@ -26986,6 +27121,7 @@
         "route:radio.request",
         "route:radio.dedicate",
         "route:radio.download",
+        "route:radio.programs",
         "route:podcasts.trending",
         "route:podcasts.latest",
         "route:podcasts.categories",
@@ -27140,6 +27276,7 @@
         "route:radio.schedule",
         "route:radio.shows",
         "route:radio.shows.detail",
+        "route:radio.programs",
         "component:station-list",
         "component:schedule-list",
         "component:timeline"
@@ -27257,6 +27394,7 @@
       "/radio/request": "radio.request",
       "/radio/dedicate": "radio.dedicate",
       "/radio/download": "radio.download",
+      "/radio/programs/:date/:slug": "radio.programs",
       "/podcasts": "podcasts",
       "/podcasts/trending": "podcasts.trending",
       "/podcasts/latest": "podcasts.latest",
@@ -27457,7 +27595,8 @@
         "radio.archive",
         "radio.request",
         "radio.dedicate",
-        "radio.download"
+        "radio.download",
+        "radio.programs"
       ],
       "Podcast": [
         "podcasts",
@@ -27827,6 +27966,7 @@
         "radio.shows.detail",
         "radio.rj",
         "radio.download",
+        "radio.programs",
         "podcasts.transcript",
         "research.datasets",
         "discover.sanskrit-science",
@@ -27928,6 +28068,7 @@
         "radio.request",
         "radio.dedicate",
         "radio.download",
+        "radio.programs",
         "podcasts.trending",
         "podcasts.latest",
         "podcasts.categories",
@@ -28091,7 +28232,8 @@
         "radio.live",
         "radio.schedule",
         "radio.shows",
-        "radio.shows.detail"
+        "radio.shows.detail",
+        "radio.programs"
       ],
       "radio-track": [
         "radio.now-playing",
@@ -28381,6 +28523,7 @@
         "radio.request",
         "radio.dedicate",
         "radio.download",
+        "radio.programs",
         "search.radio"
       ],
       "engagement": [
@@ -28400,6 +28543,7 @@
         "radio.shows.detail",
         "radio.rj",
         "radio.download",
+        "radio.programs",
         "podcasts.transcript",
         "research.datasets",
         "discover.sanskrit-science",
@@ -28446,7 +28590,8 @@
         "radio.schedule",
         "radio.shows",
         "radio.shows.detail",
-        "radio.rj"
+        "radio.rj",
+        "radio.programs"
       ],
       "library": [
         "radio.archive",
@@ -29305,6 +29450,7 @@
         "radio.request",
         "radio.dedicate",
         "radio.download",
+        "radio.programs",
         "podcasts.trending",
         "podcasts.latest",
         "podcasts.categories",
@@ -29411,6 +29557,7 @@
         "radio.request",
         "radio.dedicate",
         "radio.download",
+        "radio.programs",
         "podcasts.trending",
         "podcasts.latest",
         "podcasts.categories",

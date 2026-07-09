@@ -969,5 +969,88 @@ export const routes: RouteDefinition[] =  [
     ],
     "dynamic": false,
     "contentType": "radio-track"
+  },
+  {
+    "id": "radio.programs",
+    "path": "/radio/programs/:date/:slug",
+    "title": "Program Day",
+    "description": "Dynamic per-day station program instances, emitted from real manifest entries via /api/live-status (sequence-only until wall-clock schedules are verified).",
+    "section": "Radio",
+    "category": "programming",
+    "status": "partial",
+    "layout": "article",
+    "icon": "📻",
+    "searchable": false,
+    "navigation": {
+      "sidebar": false,
+      "header": false,
+      "footer": false,
+      "breadcrumbs": true,
+      "commandPalette": false,
+      "quickAccess": false,
+      "contextMenu": true
+    },
+    "platforms": [
+      "web",
+      "mobile",
+      "desktop"
+    ],
+    "permissions": [
+      "anonymous"
+    ],
+    "featureFlags": [],
+    "api": [
+      {
+        "method": "GET",
+        "path": "/api/live-status",
+        "status": "built",
+        "description": "TTL-cached live flags + dynamic route instances"
+      }
+    ],
+    "seo": {
+      "title": "Program Day · Radio Vaigyaaniq",
+      "description": "Per-day station programs.",
+      "keywords": [
+        "radio",
+        "programs"
+      ],
+      "canonical": null,
+      "robots": "noindex,nofollow",
+      "openGraph": {
+        "title": "Program Day",
+        "description": "Per-day station programs.",
+        "type": "website",
+        "image": null
+      },
+      "twitter": {
+        "card": "summary",
+        "title": "Program Day",
+        "description": "Per-day station programs."
+      },
+      "jsonLd": null
+    },
+    "analytics": {
+      "screenName": "radio.programs",
+      "event": "view_radio_programs",
+      "trackingId": null,
+      "conversionGoal": null
+    },
+    "implementedBy": [
+      "apps/radio-backend/server.js#/api/live-status"
+    ],
+    "evidence": [
+      {
+        "artifact": "apps/radio-backend/server.js#/api/live-status",
+        "kind": "api"
+      }
+    ],
+    "dependsOn": [],
+    "tags": [
+      "radio",
+      "programming",
+      "partial"
+    ],
+    "dynamic": true,
+    "contentType": "live-show"
   }
 ];

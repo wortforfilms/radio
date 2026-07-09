@@ -1,6 +1,6 @@
 # API Map
 
-Generated 2026-07-09T20:18:59.868Z. Statuses are honest — planned endpoints do not exist yet. OpenAPI: `registry/openapi.json` · SDK: `apps/radio/lib/sdk.ts`.
+Generated 2026-07-09T20:20:29.955Z. Statuses are honest — planned endpoints do not exist yet. OpenAPI: `registry/openapi.json` · SDK: `apps/radio/lib/sdk.ts`.
 
 | endpoint | status | used by |
 |---|---|---|
@@ -9,6 +9,7 @@ Generated 2026-07-09T20:18:59.868Z. Statuses are honest — planned endpoints do
 | `GET /api/stream-candidates` | 🟡 partial | `radio.live` |
 | `GET /api/schedule/:stationSlug` | 🟡 partial | `radio.schedule` |
 | `GET /api/offline-bundle` | 🟡 partial | `radio.download` |
+| `GET /api/live-status` | ✅ built | `radio.programs` |
 | `GET /api/search` | 🟡 partial | `search` |
 | `POST /api/payments/order` | 🟡 partial | `premium.payment` |
 | `POST /api/payments/webhook` | 🟡 partial | `premium.payment` |

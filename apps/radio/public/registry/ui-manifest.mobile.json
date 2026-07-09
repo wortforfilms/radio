@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-09T20:18:59.868Z",
+  "generatedAt": "2026-07-09T20:20:29.955Z",
   "platform": "mobile",
   "tokens": "/registry/tokens/",
   "counts": {
-    "routes": 121,
+    "routes": 122,
     "layouts": 6
   },
   "navigation": [
@@ -729,6 +729,17 @@
         "anonymous"
       ],
       "contentType": "radio-track"
+    },
+    {
+      "id": "radio.programs",
+      "path": "/radio/programs/:date/:slug",
+      "title": "Program Day",
+      "layout": "article",
+      "status": "partial",
+      "permissions": [
+        "anonymous"
+      ],
+      "contentType": "live-show"
     },
     {
       "id": "podcasts",
