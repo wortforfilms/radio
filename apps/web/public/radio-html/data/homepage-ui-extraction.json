@@ -1,0 +1,272 @@
+{
+  "id": "radio-vaigyaaniq-homepage-ui-extraction",
+  "source": "design mockup (user-supplied image, 2026-07)",
+  "phkd": {
+    "failClosed": true,
+    "note": "This is a DESIGN EXTRACTION. Every figure, claim, name, and headline below is mockup copy — NOT verified data. '1M+ listeners', '90.8 MHz', RJ names, news items, partner logos and ministry endorsement are design placeholders and must never ship without real evidence (licences, real metrics, signed partnerships)."
+  },
+  "page": {
+    "route": "public.home",
+    "layout": "landing",
+    "theme": {
+      "mode": "dark",
+      "background": "#070812-range deep navy with starfield/earth imagery",
+      "accents": { "primary": "#ff8a00-range orange", "secondary": "cyan waveform", "highlight": "pink (Entertainment)" },
+      "fonts": { "display": "bold geometric sans", "body": "sans", "devanagari": "used in logo tagline + footer shloka" }
+    }
+  },
+  "regions": [
+    {
+      "region": "header",
+      "elements": [
+        { "element": "logo", "component": "brand-mark", "props": { "icon": "radio-tower", "title": "RADIO VAIGYAANIQ", "tagline": "ज्ञानम् • विज्ञानम् • भारतम्" } },
+        {
+          "element": "primary-nav",
+          "component": "header-nav (generated: navigation.json:header)",
+          "items": [
+            { "label": "Home", "state": "active", "icon": "home" },
+            { "label": "Radio", "icon": "radio" },
+            { "label": "Podcasts", "icon": "mic" },
+            { "label": "Discover", "icon": "compass" },
+            { "label": "Research", "icon": "atom" },
+            { "label": "Academy", "icon": "graduation" },
+            { "label": "Community", "icon": "people" },
+            { "label": "Entertainment", "icon": "masks", "state": "highlighted-pink" },
+            { "label": "Events", "icon": "heart/calendar" },
+            { "label": "About", "icon": "info" }
+          ]
+        },
+        { "element": "search-input", "component": "search-box", "props": { "placeholder": "Search..." } },
+        { "element": "language-select", "component": "locale-picker", "props": { "value": "EN", "chevron": true } },
+        { "element": "cta-button", "component": "button-primary", "props": { "label": "LIVE RADIO", "icon": "broadcast", "style": "orange-pill" } }
+      ]
+    },
+    {
+      "region": "hero",
+      "elements": [
+        { "element": "headline", "component": "hero-title", "props": { "text": "The Science Radio for Bharat & the World", "emphasis": { "word": "Bharat", "color": "orange" } } },
+        { "element": "subheadline", "props": { "text": "Igniting minds with knowledge, empowering a better tomorrow." } },
+        {
+          "element": "stats-row",
+          "component": "stat-chips",
+          "note": "MOCKUP FIGURES — unverified",
+          "items": [
+            { "icon": "broadcast", "value": "24/7", "label": "Live Radio" },
+            { "icon": "mic", "value": "1000+", "label": "Shows & Podcasts" },
+            { "icon": "people", "value": "1M+", "label": "Listeners" },
+            { "icon": "globe", "value": "75+", "label": "Languages" }
+          ]
+        },
+        {
+          "element": "cta-group",
+          "items": [
+            { "component": "button-primary", "label": "LISTEN LIVE NOW", "icon": "play" },
+            { "component": "button-outline", "label": "EXPLORE MORE" }
+          ]
+        },
+        {
+          "element": "platform-badges",
+          "component": "platform-availability (maps to registry platforms)",
+          "label": "Available on",
+          "items": ["Web", "Android", "iOS", "Smart TV", "Car Play", "Wear OS"]
+        },
+        { "element": "hero-art", "props": { "imagery": "satellite dish, earth-from-space, orange/cyan waveform, constellation lines" } }
+      ]
+    },
+    {
+      "region": "live-player-card",
+      "component": "player (registry: components/player + net-status)",
+      "elements": [
+        { "element": "status-chips", "items": ["ON AIR", "LIVE"] },
+        { "element": "rj-avatar", "component": "rj-card", "props": { "badge": "RJ Ananya AI", "image": "female presenter with headphones", "note": "AI persona — maps to TTS persona concept" } },
+        { "element": "now-playing", "props": { "title": "Science Beyond Boundaries", "tagline": "Exploring the unknown, for a better tomorrow." } },
+        { "element": "waveform", "component": "waveform (registry: planned)", "props": { "style": "orange+cyan bars" } },
+        { "element": "elapsed-time", "props": { "value": "02:45:36" } },
+        { "element": "frequency-select", "component": "station-select", "props": { "value": "90.8 MHz", "sublabel": "New Delhi", "chevron": true, "note": "no licensed frequency exists — placeholder" } },
+        { "element": "transport-controls", "items": ["previous", "pause (primary circular)", "next", "volume"] },
+        {
+          "element": "news-ticker",
+          "component": "breaking-news-bar",
+          "props": { "kicker": "BREAKING SCIENCE NEWS", "headline": "ISRO Successfully Docks Spacecraft in Bharatiya Space Station Mission", "timestamp": "2m ago", "note": "mockup headline — not a real news feed" }
+        }
+      ]
+    },
+    {
+      "region": "explore-by-interest",
+      "component": "category-carousel (tile grid + right arrow)",
+      "elements": [
+        { "element": "section-title", "props": { "text": "EXPLORE BY INTEREST" } },
+        { "element": "sub-section", "props": { "text": "ENTERTAINMENT ZONE", "badge": "New", "style": "pink" } },
+        { "element": "carousel-arrow", "props": { "direction": "right" } }
+      ]
+    },
+    {
+      "region": "content-panels-row",
+      "elements": [
+        { "element": "todays-schedule", "component": "schedule-list (registry: built)", "header": { "title": "TODAY'S SCHEDULE", "link": "View Full Schedule" }, "footer": "Full Schedule →" },
+        { "element": "featured-podcasts", "component": "podcast-card list (registry: planned)", "header": { "title": "FEATURED PODCASTS", "link": "View All" } },
+        { "element": "research-highlight", "component": "article teaser (registry: planned)", "header": { "title": "RESEARCH HIGHLIGHT", "badge": "New" }, "footer": "Read More → · 4 carousel dots" },
+        { "element": "community", "component": "feature-list + cta", "header": { "title": "COMMUNITY" }, "cta": "JOIN COMMUNITY" },
+        { "element": "top-listeners", "component": "leaderboard", "header": { "title": "TOP LISTENERS", "link": "View Leaderboard" } }
+      ]
+    },
+    {
+      "region": "events-strip",
+      "component": "event-card row (registry contentType: event)",
+      "header": { "title": "UPCOMING EVENTS & LIVE SESSIONS", "link": "View Calendar" }
+    },
+    {
+      "region": "premium-banner",
+      "component": "premium-upsell (registry: premium routes, flag: premium)",
+      "props": { "title": "RADIO VAIGYAANIQ PREMIUM", "icon": "crown", "benefits": ["Ad-free", "Exclusive Shows", "Early Access", "Downloads"], "cta": "UPGRADE NOW" }
+    },
+    {
+      "region": "app-download",
+      "component": "app-promo",
+      "props": { "title": "DOWNLOAD OUR APP", "sub": "Scan QR to download", "qr": true, "badges": ["Google Play", "App Store"], "art": "phone mockup running live player at 90.8 MHz" }
+    },
+    {
+      "region": "footer",
+      "elements": [
+        { "element": "shloka", "props": { "sanskrit": "ॐ असतो मा सद्गमय | तमसो मा ज्योतिर्गमय | मृत्योर्मा अमृतं गमय |", "translation": "Lead us from the unreal to the real, from darkness to light, from death to immortality." } },
+        { "element": "social-links", "label": "STAY CONNECTED", "items": ["YouTube", "X", "Facebook", "Instagram", "Telegram", "WhatsApp", "Apple Podcasts"] },
+        { "element": "partners", "label": "PARTNERS", "items": ["ISRO (logo)", "Prasar Bharati", "NISER", "IISc", "DRDO", "…more"], "note": "mockup logos — NO real partnerships exist; requires signed agreements before use" },
+        { "element": "supported-by", "items": ["Ministry of Information & Broadcasting, Government of India (emblem)"], "note": "mockup endorsement — must never ship without formal approval" }
+      ]
+    }
+  ],
+  "dataFrames": {
+    "heroStats": {
+      "schema": ["icon", "value", "label"],
+      "verified": false,
+      "rows": [
+        ["broadcast", "24/7", "Live Radio"],
+        ["mic", "1000+", "Shows & Podcasts"],
+        ["people", "1M+", "Listeners"],
+        ["globe", "75+", "Languages"]
+      ]
+    },
+    "liveNow": {
+      "schema": ["show", "rj", "elapsed", "frequency", "city", "status"],
+      "verified": false,
+      "rows": [["Science Beyond Boundaries", "RJ Ananya AI", "02:45:36", "90.8 MHz", "New Delhi", "ON AIR · LIVE"]]
+    },
+    "breakingNews": {
+      "schema": ["kicker", "headline", "age"],
+      "verified": false,
+      "rows": [["BREAKING SCIENCE NEWS", "ISRO Successfully Docks Spacecraft in Bharatiya Space Station Mission", "2m ago"]]
+    },
+    "interestCategories": {
+      "schema": ["label", "zone", "artStyle"],
+      "rows": [
+        ["Science", "core", "molecule network"],
+        ["Space", "core", "rocket/planets"],
+        ["AI & Tech", "core", "android head"],
+        ["Agriculture", "core", "seedling"],
+        ["Sanskrit", "core", "manuscript"],
+        ["History", "core", "elder portrait"],
+        ["Innovation", "core", "glowing bulb"],
+        ["Startups", "core", "cyber head"],
+        ["Students", "core", "hologram tree"],
+        ["Podcast", "core", "neon mic"],
+        ["Music & Beats", "entertainment", "notes"],
+        ["Movies & Reviews", "entertainment", "clapperboard"],
+        ["Stories & Drama", "entertainment", "theatre masks"],
+        ["Comedy & Fun", "entertainment", "laughing emoji"],
+        ["Lifestyle & Culture", "entertainment", "dancer"]
+      ]
+    },
+    "todaysSchedule": {
+      "schema": ["time", "show", "rj", "duration", "status"],
+      "verified": false,
+      "rows": [
+        ["now", "Science Beyond Boundaries", "RJ Ananya AI", "02:45:36 elapsed", "ON AIR"],
+        ["10:00 AM", "Space Insight", "RJ Kabir", "60 min", "scheduled"],
+        ["11:00 AM", "AI for Humanity", "RJ Meera", "60 min", "scheduled"],
+        ["12:00 PM", "Krishi Varta", "RJ Devendra", "60 min", "scheduled"]
+      ]
+    },
+    "featuredPodcasts": {
+      "schema": ["title", "episode", "duration"],
+      "verified": false,
+      "rows": [
+        ["The Quantum Leap", "Episode 34", "28 min"],
+        ["India's Space Odyssey", "Episode 17", "32 min"],
+        ["The Secrets of Atoms", "Episode 21", "26 min"],
+        ["Ayurveda for Life", "Episode 08", "24 min"]
+      ]
+    },
+    "researchHighlight": {
+      "schema": ["title", "summary", "badge"],
+      "verified": false,
+      "rows": [["Gravitational Waves Detected by Indian Scientists", "A new breakthrough in gravitational wave detection using indigenous technology.", "New"]]
+    },
+    "communityFeatures": {
+      "schema": ["feature", "sub"],
+      "rows": [
+        ["Live Discussions", "with experts"],
+        ["Polls & Quizzes", "test your knowledge"],
+        ["Achievements", "earn badges"]
+      ]
+    },
+    "topListeners": {
+      "schema": ["rank", "username", "points"],
+      "verified": false,
+      "rows": [
+        [1, "Vigyan Premi", 12456],
+        [2, "Science Seeker", 10124],
+        [3, "Bharat Innovator", 8910],
+        [4, "Curious Mind", 7245],
+        [5, "Sushant_27", 6789]
+      ]
+    },
+    "upcomingEvents": {
+      "schema": ["title", "date", "time", "live"],
+      "verified": false,
+      "rows": [
+        ["National Science Day Live", "Feb 28, 2025", "10:00 AM", true],
+        ["ISRO Mission Update", "2025", "6:00 PM", true],
+        ["Global Space Conclave", "Mar 02, 2025", "11:00 AM", false],
+        ["AI & Future of India", "Mar 05, 2025", "7:00 PM", false]
+      ]
+    },
+    "premiumBenefits": { "schema": ["benefit"], "rows": [["Ad-free"], ["Exclusive Shows"], ["Early Access"], ["Downloads"]] },
+    "platforms": { "schema": ["platform"], "rows": [["Web"], ["Android"], ["iOS"], ["Smart TV"], ["Car Play"], ["Wear OS"]] },
+    "socialChannels": { "schema": ["channel"], "rows": [["YouTube"], ["X"], ["Facebook"], ["Instagram"], ["Telegram"], ["WhatsApp"], ["Apple Podcasts"]] },
+    "partners": {
+      "schema": ["name"],
+      "verified": false,
+      "note": "logos in mockup only — no agreements exist",
+      "rows": [["ISRO"], ["Prasar Bharati"], ["NISER"], ["IISc"], ["DRDO"]]
+    }
+  },
+  "registryMapping": {
+    "existingComponents": {
+      "player": "live-player-card (transport, access states)",
+      "station-list": "frequency/station select",
+      "schedule-list": "todays-schedule panel",
+      "net-status": "ON AIR / LIVE chips",
+      "catalog-grid": "explore-by-interest tiles (variant)"
+    },
+    "plannedComponentsConfirmedByDesign": {
+      "podcast-card": "featured-podcasts rows",
+      "article": "research-highlight teaser",
+      "waveform": "player + hero waveforms",
+      "timeline": "upcoming events strip",
+      "course-card": "academy nav target"
+    },
+    "newComponentCandidates": [
+      { "id": "hero-banner", "category": "content", "seen": "hero region" },
+      { "id": "stat-chips", "category": "data", "seen": "hero stats row" },
+      { "id": "rj-card", "category": "content", "seen": "live player avatar + badge" },
+      { "id": "breaking-news-bar", "category": "feedback", "seen": "player footer ticker" },
+      { "id": "category-tile", "category": "navigation", "seen": "explore-by-interest carousel" },
+      { "id": "leaderboard", "category": "data", "seen": "top listeners panel" },
+      { "id": "event-card", "category": "content", "seen": "events strip" },
+      { "id": "premium-upsell", "category": "commerce", "seen": "premium banner" },
+      { "id": "app-promo", "category": "content", "seen": "download-app block" },
+      { "id": "locale-picker", "category": "input", "seen": "header EN selector" }
+    ],
+    "routesTouched": ["public.home", "radio.live", "podcasts", "discover", "research", "academy", "community", "events", "premium", "search", "news"]
+  }
+}
