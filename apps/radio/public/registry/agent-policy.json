@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-10T01:31:28.660Z",
+  "generatedAt": "2026-08-30T17:53:13.400Z",
   "phkd": {
     "failClosed": true,
     "note": "The orchestrator refuses any action whose gates don't hold. Planned capabilities (ads, LLM answers, quizzes, composition) return blocked-* statuses until real providers/inventory exist."
