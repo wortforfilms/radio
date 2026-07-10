@@ -78,4 +78,37 @@ describe("radio proof milestone completion", () => {
     expect(orchestration.steps.map((step) => step.key)).toContain("release-review");
     expect(orchestration.steps.map((step) => step.key)).toContain("hdfc-parser-tests");
   });
+
+  it("keeps the release run dashboard honest about command and evidence gates", () => {
+    const run = readJson<{
+      verificationState: string;
+      shipDecision: string;
+      productionReady: boolean;
+      releaseAllowed: boolean;
+      counts: { steps: number; pass: number; fail: number; gates: number; gatesBlocked: number };
+      evidenceDashboard: {
+        gateCounts: { total: number; blocked: number };
+        gates: { key: string; status: string; productionReady: boolean; releaseAllowed: boolean }[];
+        realWorldBlockers: { key: string; requiredEvidence: string[] }[];
+      };
+    }>("release-orchestration-run.json");
+
+    expect(run.counts.steps).toBeGreaterThan(0);
+    expect(run.counts.gates).toBe(6);
+    expect(run.evidenceDashboard.gateCounts.total).toBe(6);
+    expect(run.evidenceDashboard.gates.map((gate) => gate.key)).toEqual([
+      "rights",
+      "payment",
+      "signing",
+      "gui-smoke",
+      "release-review",
+      "customer-release"
+    ]);
+    expect(run.evidenceDashboard.gates.some((gate) => gate.status === "blocked")).toBe(true);
+    expect(run.evidenceDashboard.realWorldBlockers.map((blocker) => blocker.key)).toContain("rights");
+    expect(run.productionReady).toBe(false);
+    expect(run.releaseAllowed).toBe(false);
+    expect(run.shipDecision).toBe("NO_SHIP");
+    expect(run.verificationState).toBe("blocked");
+  });
 });
