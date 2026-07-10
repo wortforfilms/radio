@@ -473,6 +473,22 @@ const { ask, llmConfig } = require("./cognition-llm.js");
 const { appendFeedback, loadWeights, runLearningJob } = require("./learning.js");
 const { generateMusic, listGenerated, publishGenerated, storeGenerated } = require("./content-gen.js");
 const { appendLedger: appendRightsLedger, readLedger: readRightsLedger, runExpiryJob, verifyWithExternalRegistry } = require("./rights-ledger.js");
+const authService = require("./auth.js");
+
+// ---------------------------------------------------------------------------
+// Auth + user area (Phase: accounts).
+// Sessions are opaque bearer tokens ("Authorization: Bearer <token>").
+// ---------------------------------------------------------------------------
+function sessionUser(req) {
+  const header = String(req.headers.authorization || "");
+  if (!header.startsWith("Bearer ")) return null;
+  return authService.me(header.slice(7));
+}
+
+const readJsonl = (file) =>
+  fs.existsSync(file)
+    ? fs.readFileSync(file, "utf8").split("\n").filter(Boolean).map((line) => { try { return JSON.parse(line); } catch { return null; } }).filter(Boolean)
+    : [];
 const { generateLyrics, translate } = require("./cognition-llm.js");
 
 // Knowledge lane dependencies for Phase-2 cognition (real data only).
@@ -649,6 +665,112 @@ app.post("/agent/ask", async (req, res) => {
     policy: policy.policy
   });
   res.json({ decidedAt: new Date().toISOString(), engine: "cognition-llm", persona, provider: llmConfig().provider, ...result });
+});
+
+// ---- auth endpoints ----
+app.post("/auth/register", async (req, res) => {
+  const result = authService.register((await req.readJson()) || {});
+  res.status(result.error ? 400 : 200).json(result);
+});
+app.post("/auth/login", async (req, res) => {
+  const result = authService.login((await req.readJson()) || {});
+  res.status(result.error ? 401 : 200).json(result);
+});
+app.post("/auth/logout", async (req, res) => {
+  const header = String(req.headers.authorization || "");
+  res.json(authService.logout(header.startsWith("Bearer ") ? header.slice(7) : ""));
+});
+app.post("/auth/forgot", async (req, res) => {
+  res.json(authService.forgot((await req.readJson()) || {}));
+});
+app.post("/auth/reset", async (req, res) => {
+  const result = authService.reset((await req.readJson()) || {});
+  res.status(result.error ? 400 : 200).json(result);
+});
+app.get("/auth/me", (req, res) => {
+  const user = sessionUser(req);
+  if (!user) {
+    res.status(401).json({ error: "unauthorized" });
+    return;
+  }
+  res.json({ user });
+});
+
+// ---- user area: every lane reads REAL data or returns honest empties ----
+app.get("/user/profile", (req, res) => {
+  const user = sessionUser(req);
+  if (!user) return res.status(401).json({ error: "unauthorized" });
+  res.json({ profile: user });
+});
+
+app.post("/user/settings", async (req, res) => {
+  const header = String(req.headers.authorization || "");
+  const result = authService.updateSettings(header.startsWith("Bearer ") ? header.slice(7) : "", (await req.readJson()) || {});
+  res.status(result.error ? 401 : 200).json(result);
+});
+
+app.get("/user/account", async (req, res) => {
+  const user = sessionUser(req);
+  if (!user) return res.status(401).json({ error: "unauthorized" });
+  const entitlementResult = await loadEntitlements(user.id);
+  res.json({
+    account: {
+      user,
+      entitlements: entitlementResult.entitlements,
+      wallets: entitlementResult.wallets,
+      entitlementSource: entitlementResult.status
+    }
+  });
+});
+
+app.get("/user/payments", (req, res) => {
+  const user = sessionUser(req);
+  if (!user) return res.status(401).json({ error: "unauthorized" });
+  // outgoing: checkout evidence for this user (payment evidence lane);
+  // incoming: gifts received — none exist until gift checkout ships (honest empty)
+  const evidenceFile = path.join(REPO_ROOT, "apps/web/public/radio-html/data/payment-proof-import.json");
+  let outgoing = [];
+  try {
+    if (fs.existsSync(evidenceFile)) {
+      const evidence = JSON.parse(fs.readFileSync(evidenceFile, "utf8"));
+      outgoing = (Array.isArray(evidence) ? evidence : evidence.records || []).filter((record) => record.payerId === user.id);
+    }
+  } catch {
+    outgoing = [];
+  }
+  res.json({
+    payments: {
+      outgoing,
+      incoming: [],
+      note: "outgoing = your checkout evidence records; incoming stays empty until gift payouts exist (never fabricated)"
+    }
+  });
+});
+
+app.get("/user/history", (req, res) => {
+  const user = sessionUser(req);
+  if (!user) return res.status(401).json({ error: "unauthorized" });
+  const events = readJsonl(SYNC_EVENTS_PATH).filter((event) => event.userId === user.id);
+  res.json({ history: { count: events.length, events: events.slice(-200) } });
+});
+
+app.get("/user/submissions", (req, res) => {
+  const user = sessionUser(req);
+  if (!user) return res.status(401).json({ error: "unauthorized" });
+  const feedback = readJsonl(path.join(__dirname, "agent-feedback.jsonl")).filter((record) => record.userId === user.id);
+  const proposals = readJsonl(PROPOSALS_FILE).filter((proposal) => proposal.userId === user.id);
+  res.json({ submissions: { feedback: feedback.slice(-100), registryProposals: proposals.slice(-50) } });
+});
+
+app.get("/user/creations", (req, res) => {
+  const user = sessionUser(req);
+  if (!user) return res.status(401).json({ error: "unauthorized" });
+  const latest = new Map();
+  for (const record of listGenerated()) latest.set(record.id, record);
+  const mine = [...latest.values()].filter((record) => record.requestedBy === user.id);
+  res.json({
+    creations: { count: mine.length, records: mine, note: "AI-generated drafts you requested — unpublished until rights closure" }
+  });
 });
 
 // ---------------------------------------------------------------------------

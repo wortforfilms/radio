@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T20:26:27.336Z",
+  "generatedAt": "2026-07-10T00:01:20.109Z",
   "count": 104,
   "entries": [
     {
@@ -1531,7 +1531,7 @@
     {
       "id": "user.login",
       "title": "Login",
-      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "description": "Session login (scrypt-verified, bearer sessions) wired into the engine account widget.",
       "keywords": [
         "user",
         "login"
@@ -1540,15 +1540,15 @@
       "tags": [
         "user",
         "hub",
-        "planned"
+        "partial"
       ],
       "url": "/login",
-      "status": "planned"
+      "status": "partial"
     },
     {
       "id": "user.signup",
       "title": "Signup",
-      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "description": "Account registration with salted scrypt hashes.",
       "keywords": [
         "user",
         "signup"
@@ -1557,15 +1557,15 @@
       "tags": [
         "user",
         "hub",
-        "planned"
+        "partial"
       ],
       "url": "/signup",
-      "status": "planned"
+      "status": "partial"
     },
     {
       "id": "user.forgot-password",
       "title": "Forgot Password",
-      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "description": "Reset flow: token issued (operator relay until EMAIL_PROVIDER configured), reset revokes all sessions.",
       "keywords": [
         "user",
         "forgot",
@@ -1575,10 +1575,10 @@
       "tags": [
         "user",
         "hub",
-        "planned"
+        "partial"
       ],
       "url": "/forgot-password",
-      "status": "planned"
+      "status": "partial"
     },
     {
       "id": "user.verify",

@@ -1,6 +1,6 @@
 # Navigation
 
-Generated 2026-07-09T20:26:27.336Z. Flag-hidden routes excluded (enabled: premium).
+Generated 2026-07-10T00:01:20.109Z. Flag-hidden routes excluded (enabled: premium).
 
 ## sidebar
 
@@ -30,9 +30,9 @@ Generated 2026-07-09T20:26:27.336Z. Flag-hidden routes excluded (enabled: premiu
 - 🎥 [`media.animations`](/animations) — Animations (planned)
 - 🎥 [`media.livestreams`](/livestreams) — Livestreams (planned)
 - 🔍 [`search`](/search) — Search (partial)
-- 👤 [`user.login`](/login) — Login (planned)
-- 👤 [`user.signup`](/signup) — Signup (planned)
-- 👤 [`user.forgot-password`](/forgot-password) — Forgot Password (planned)
+- 👤 [`user.login`](/login) — Login (partial)
+- 👤 [`user.signup`](/signup) — Signup (partial)
+- 👤 [`user.forgot-password`](/forgot-password) — Forgot Password (partial)
 - 👤 [`user.verify`](/verify) — Verify (planned)
 - 👤 [`user.profile`](/profile) — Profile (partial)
 - 👤 [`user.bookmarks`](/bookmarks) — Bookmarks (planned)
@@ -68,9 +68,9 @@ Generated 2026-07-09T20:26:27.336Z. Flag-hidden routes excluded (enabled: premiu
 - 🎥 [`media.animations`](/animations) — Animations (planned)
 - 🎥 [`media.livestreams`](/livestreams) — Livestreams (planned)
 - 🔍 [`search`](/search) — Search (partial)
-- 👤 [`user.login`](/login) — Login (planned)
-- 👤 [`user.signup`](/signup) — Signup (planned)
-- 👤 [`user.forgot-password`](/forgot-password) — Forgot Password (planned)
+- 👤 [`user.login`](/login) — Login (partial)
+- 👤 [`user.signup`](/signup) — Signup (partial)
+- 👤 [`user.forgot-password`](/forgot-password) — Forgot Password (partial)
 - 👤 [`user.verify`](/verify) — Verify (planned)
 - 👤 [`user.profile`](/profile) — Profile (partial)
 - 👤 [`user.bookmarks`](/bookmarks) — Bookmarks (planned)

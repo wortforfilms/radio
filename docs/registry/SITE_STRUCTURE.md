@@ -1,6 +1,6 @@
 # Site Structure
 
-Generated 2026-07-09T20:26:27.336Z.
+Generated 2026-07-10T00:01:20.109Z.
 
 - `/` (public.home, built)
 - `/about` (public.about, planned)
@@ -116,12 +116,12 @@ Generated 2026-07-09T20:26:27.336Z.
   - `/events/upcoming` (events.upcoming, planned)
   - `/events/webinars` (events.webinars, planned)
   - `/events/workshops` (events.workshops, planned)
-- `/forgot-password` (user.forgot-password, planned)
+- `/forgot-password` (user.forgot-password, partial)
 - `/gallery` (media.gallery, partial)
 - `/history` (user.history, partial)
 - `/infographics` (media.infographics, planned)
 - `/livestreams` (media.livestreams, planned)
-- `/login` (user.login, planned)
+- `/login` (user.login, partial)
 - `/mission` (public.mission, planned)
 - `/news` (news, planned)
   - `/news/agriculture` (news.agriculture, planned)
@@ -183,7 +183,7 @@ Generated 2026-07-09T20:26:27.336Z.
   - `/search/research` (search.research, planned)
 - `/settings` (user.settings, partial)
 - `/shorts` (media.shorts, planned)
-- `/signup` (user.signup, planned)
+- `/signup` (user.signup, partial)
 - `/sponsors` (public.sponsors, planned)
 - `/studio` (studio, planned)
   - `/studio/assets` (studio.assets, partial)

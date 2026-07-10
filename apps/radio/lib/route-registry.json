@@ -1,6 +1,6 @@
 {
   "id": "radio-vaigyaaniq-route-registry",
-  "generatedAt": "2026-07-09T20:26:27.336Z",
+  "generatedAt": "2026-07-10T00:01:20.109Z",
   "schemaVersion": 3,
   "$schema": "/registry/registry.schema.json",
   "siteOrigin": "http://localhost:3000",
@@ -12,8 +12,8 @@
     "sections": 20,
     "routes": 197,
     "built": 6,
-    "partial": 48,
-    "planned": 143,
+    "partial": 51,
+    "planned": 140,
     "dynamic": 9,
     "searchable": 123,
     "apiReferences": 21,
@@ -9000,9 +9000,13 @@
       "section": "User",
       "emoji": "👤",
       "title": "Login",
-      "status": "planned",
-      "implementedBy": [],
-      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "status": "partial",
+      "implementedBy": [
+        "apps/radio-backend/auth.js",
+        "apps/radio-backend/server.js#/auth/login",
+        "apps/web/public/radio-html/assets/js/radio-engine.js#renderAccount"
+      ],
+      "description": "Session login (scrypt-verified, bearer sessions) wired into the engine account widget.",
       "dynamic": false,
       "id": "user.login",
       "category": "hub",
@@ -9056,13 +9060,26 @@
         "trackingId": null,
         "conversionGoal": null
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "artifact": "apps/radio-backend/auth.js",
+          "kind": "code"
+        },
+        {
+          "artifact": "apps/radio-backend/server.js#/auth/login",
+          "kind": "api"
+        },
+        {
+          "artifact": "apps/web/public/radio-html/assets/js/radio-engine.js#renderAccount",
+          "kind": "code"
+        }
+      ],
       "dependsOn": [],
       "children": [],
       "tags": [
         "user",
         "hub",
-        "planned"
+        "partial"
       ],
       "contentType": null
     },
@@ -9071,9 +9088,13 @@
       "section": "User",
       "emoji": "👤",
       "title": "Signup",
-      "status": "planned",
-      "implementedBy": [],
-      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "status": "partial",
+      "implementedBy": [
+        "apps/radio-backend/auth.js",
+        "apps/radio-backend/server.js#/auth/register",
+        "apps/web/public/radio-html/assets/js/radio-engine.js#renderAccount"
+      ],
+      "description": "Account registration with salted scrypt hashes.",
       "dynamic": false,
       "id": "user.signup",
       "category": "hub",
@@ -9127,13 +9148,26 @@
         "trackingId": null,
         "conversionGoal": null
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "artifact": "apps/radio-backend/auth.js",
+          "kind": "code"
+        },
+        {
+          "artifact": "apps/radio-backend/server.js#/auth/register",
+          "kind": "api"
+        },
+        {
+          "artifact": "apps/web/public/radio-html/assets/js/radio-engine.js#renderAccount",
+          "kind": "code"
+        }
+      ],
       "dependsOn": [],
       "children": [],
       "tags": [
         "user",
         "hub",
-        "planned"
+        "partial"
       ],
       "contentType": null
     },
@@ -9142,9 +9176,12 @@
       "section": "User",
       "emoji": "👤",
       "title": "Forgot Password",
-      "status": "planned",
-      "implementedBy": [],
-      "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+      "status": "partial",
+      "implementedBy": [
+        "apps/radio-backend/auth.js",
+        "apps/radio-backend/server.js#/auth/forgot + /auth/reset"
+      ],
+      "description": "Reset flow: token issued (operator relay until EMAIL_PROVIDER configured), reset revokes all sessions.",
       "dynamic": false,
       "id": "user.forgot-password",
       "category": "hub",
@@ -9199,13 +9236,22 @@
         "trackingId": null,
         "conversionGoal": null
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "artifact": "apps/radio-backend/auth.js",
+          "kind": "code"
+        },
+        {
+          "artifact": "apps/radio-backend/server.js#/auth/forgot + /auth/reset",
+          "kind": "api"
+        }
+      ],
       "dependsOn": [],
       "children": [],
       "tags": [
         "user",
         "hub",
-        "planned"
+        "partial"
       ],
       "contentType": null
     },
@@ -9287,9 +9333,10 @@
       "title": "Profile",
       "status": "partial",
       "implementedBy": [
-        "prisma/schema.prisma#User"
+        "apps/radio-backend/server.js#/user/profile",
+        "apps/web/public/radio-html/assets/js/radio-engine.js#renderAccount"
       ],
-      "description": "User/UserSettings models exist; profile UI not built.",
+      "description": "Authenticated profile from the session store.",
       "dynamic": false,
       "id": "user.profile",
       "category": "hub",
@@ -9345,7 +9392,11 @@
       },
       "evidence": [
         {
-          "artifact": "prisma/schema.prisma#User",
+          "artifact": "apps/radio-backend/server.js#/user/profile",
+          "kind": "api"
+        },
+        {
+          "artifact": "apps/web/public/radio-html/assets/js/radio-engine.js#renderAccount",
           "kind": "code"
         }
       ],
@@ -9516,9 +9567,9 @@
       "title": "History",
       "status": "partial",
       "implementedBy": [
-        "radio-engine outbox (play events)"
+        "apps/radio-backend/server.js#/user/history"
       ],
-      "description": "Play events queue offline and sync as evidence; history UI not built.",
+      "description": "Real listening/action history from the synced evidence outbox.",
       "dynamic": false,
       "id": "user.history",
       "category": "hub",
@@ -9574,8 +9625,8 @@
       },
       "evidence": [
         {
-          "artifact": "radio-engine outbox (play events)",
-          "kind": "code"
+          "artifact": "apps/radio-backend/server.js#/user/history",
+          "kind": "api"
         }
       ],
       "dependsOn": [
@@ -9750,10 +9801,11 @@
       "title": "Settings",
       "status": "partial",
       "implementedBy": [
-        "packages/shared/src/commerce.ts#UserSettingsLike",
-        "radio-html/Radio_Account.html"
+        "apps/radio-backend/auth.js#updateSettings",
+        "apps/radio-backend/server.js#/user/settings",
+        "apps/web/public/radio-html/assets/js/radio-engine.js#renderAccount"
       ],
-      "description": "Settings model + account surface mock exist.",
+      "description": "Persisted per-account settings (language, currency, persona, low-bandwidth).",
       "dynamic": false,
       "id": "user.settings",
       "category": "hub",
@@ -9809,12 +9861,16 @@
       },
       "evidence": [
         {
-          "artifact": "packages/shared/src/commerce.ts#UserSettingsLike",
+          "artifact": "apps/radio-backend/auth.js#updateSettings",
           "kind": "code"
         },
         {
-          "artifact": "radio-html/Radio_Account.html",
-          "kind": "surface"
+          "artifact": "apps/radio-backend/server.js#/user/settings",
+          "kind": "api"
+        },
+        {
+          "artifact": "apps/web/public/radio-html/assets/js/radio-engine.js#renderAccount",
+          "kind": "code"
         }
       ],
       "dependsOn": [

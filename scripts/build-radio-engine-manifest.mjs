@@ -535,6 +535,10 @@ function buildHtml(data) {
       </section>
       <aside class="panel">
         <div class="widget">
+          <h3>Account</h3>
+          <div id="accountBox"><p class="muted" style="margin:0;font-size:11px">Connect the backend to sign in.</p></div>
+        </div>
+        <div class="widget">
           <h3>Wallet</h3>
           <div id="walletBox"><b>₹0.00</b> · <b>$0.00</b><small>entitlements: 0</small></div>
           <div class="controls"><button class="btn" id="walletTopUp">Top up</button></div>

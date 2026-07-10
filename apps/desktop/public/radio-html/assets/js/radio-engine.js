@@ -115,6 +115,9 @@
         personaSelect: "personaSelect",
         languageSelect: "languageSelect",
         lowBandwidth: "lowBandwidth",
+        accountBox: "accountBox",
+        authEmail: "authEmail",
+        authPassword: "authPassword",
         netStatus: "netStatus",
         weatherBox: "weatherBox",
         lyricsPanel: "lyricsPanel",
@@ -177,6 +180,7 @@
       this.refreshEntitlements().catch(() => undefined);
       this.renderWeather().catch(() => undefined);
       this.refreshLiveStatus().catch(() => undefined);
+      this.initAuth().catch(() => undefined);
       this.log(
         [
           `Manifest: ${this.manifest.id}`,
@@ -834,6 +838,113 @@
       for (const reason of result.blocked || []) this.log(`Agent gate: ${reason}`);
       if (input) input.value = "";
       this.queueAction("agent-ask", { query, actions: (result.actions || []).map((a) => a.type), at: new Date().toISOString() });
+    }
+
+    // -----------------------------------------------------------------------
+    // Accounts: register/login/logout + user area (real backend sessions).
+    // A logged-in session switches this.userId to the account id, so
+    // entitlements, feedback, asks and purchases attach to the real account.
+    // -----------------------------------------------------------------------
+    async authRequest(pathName, body) {
+      const response = await fetch(this.apiUrl(pathName), {
+        method: body === undefined ? "GET" : "POST",
+        headers: {
+          "content-type": "application/json",
+          ...(this.authToken ? { authorization: `Bearer ${this.authToken}` } : {})
+        },
+        body: body === undefined ? undefined : JSON.stringify(body)
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(data.error || response.status);
+      return data;
+    }
+
+    async initAuth() {
+      this.authToken = this.loadLocal("rv.authToken", null);
+      if (!this.authToken || !this.options.apiBase) return this.renderAccount();
+      try {
+        const { user } = await this.authRequest("/auth/me");
+        this.account = user;
+        this.userId = user.id;
+        if (user.settings) this.settings = { ...this.settings, ...user.settings };
+        this.refreshEntitlements().catch(() => undefined);
+      } catch {
+        this.authToken = null;
+        this.saveLocal("rv.authToken", null);
+      }
+      this.renderAccount();
+    }
+
+    async authAction(kind) {
+      if (!this.options.apiBase) {
+        this.log("Accounts blocked: backend not connected.");
+        return;
+      }
+      const email = this.el("authEmail")?.value?.trim();
+      const password = this.el("authPassword")?.value;
+      try {
+        if (kind === "logout") {
+          await this.authRequest("/auth/logout", {});
+          this.authToken = null;
+          this.account = null;
+          this.userId = this.ensureUserId(); // back to the anonymous local id
+          this.saveLocal("rv.authToken", null);
+          this.log("Logged out.");
+        } else if (kind === "forgot") {
+          const result = await this.authRequest("/auth/forgot", { email });
+          this.log(result.message);
+        } else {
+          const result = await this.authRequest(`/auth/${kind}`, { email, password, name: email?.split("@")[0] });
+          this.authToken = result.token;
+          this.account = result.user;
+          this.userId = result.user.id;
+          this.saveLocal("rv.authToken", this.authToken);
+          this.log(`${kind === "register" ? "Registered" : "Logged in"} as ${result.user.name}. Entitlements and history now follow this account.`);
+          this.refreshEntitlements().catch(() => undefined);
+        }
+      } catch (error) {
+        this.log(`Auth ${kind} failed: ${error.message}`);
+      }
+      this.renderAccount();
+    }
+
+    renderAccount() {
+      const box = this.el("accountBox");
+      if (!box) return;
+      if (this.account) {
+        box.innerHTML = `<b>${esc(this.account.name)}</b><small>${esc(this.account.email)}</small>
+          <div class="controls" style="margin-top:6px">
+            ${["profile", "account", "payments", "history", "submissions", "creations"]
+              .map((section) => `<button class="btn" data-user-section="${section}">${section}</button>`)
+              .join("")}
+            <button class="btn" id="authLogout">Logout</button>
+          </div>`;
+        box.querySelectorAll("[data-user-section]").forEach((button) =>
+          button.addEventListener("click", () => this.showUserSection(button.dataset.userSection))
+        );
+        box.querySelector("#authLogout")?.addEventListener("click", () => this.authAction("logout"));
+      } else {
+        box.innerHTML = `<input id="authEmail" type="email" placeholder="email" class="btn" style="width:100%;margin-bottom:5px;text-align:left">
+          <input id="authPassword" type="password" placeholder="password (min 8)" class="btn" style="width:100%;margin-bottom:6px;text-align:left">
+          <div class="controls">
+            <button class="btn" id="authLogin">Login</button>
+            <button class="btn" id="authRegister">Register</button>
+            <button class="btn" id="authForgot">Forgot?</button>
+          </div>`;
+        box.querySelector("#authLogin")?.addEventListener("click", () => this.authAction("login"));
+        box.querySelector("#authRegister")?.addEventListener("click", () => this.authAction("register"));
+        box.querySelector("#authForgot")?.addEventListener("click", () => this.authAction("forgot"));
+      }
+    }
+
+    async showUserSection(section) {
+      try {
+        const data = await this.authRequest(`/user/${section}`);
+        const payload = data[section] || data;
+        this.log(`— ${section.toUpperCase()} —\n${JSON.stringify(payload, null, 1).slice(0, 1200)}`);
+      } catch (error) {
+        this.log(`${section} failed: ${error.message}`);
+      }
     }
 
     // -----------------------------------------------------------------------

@@ -9,10 +9,10 @@ export const routes: RouteDefinition[] = [
     "id": "user.login",
     "path": "/login",
     "title": "Login",
-    "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+    "description": "Session login (scrypt-verified, bearer sessions) wired into the engine account widget.",
     "section": "User",
     "category": "hub",
-    "status": "planned",
+    "status": "partial",
     "layout": "landing",
     "icon": "👤",
     "searchable": true,
@@ -63,13 +63,30 @@ export const routes: RouteDefinition[] = [
       "trackingId": null,
       "conversionGoal": null
     },
-    "implementedBy": [],
-    "evidence": [],
+    "implementedBy": [
+      "apps/radio-backend/auth.js",
+      "apps/radio-backend/server.js#/auth/login",
+      "apps/web/public/radio-html/assets/js/radio-engine.js#renderAccount"
+    ],
+    "evidence": [
+      {
+        "artifact": "apps/radio-backend/auth.js",
+        "kind": "code"
+      },
+      {
+        "artifact": "apps/radio-backend/server.js#/auth/login",
+        "kind": "api"
+      },
+      {
+        "artifact": "apps/web/public/radio-html/assets/js/radio-engine.js#renderAccount",
+        "kind": "code"
+      }
+    ],
     "dependsOn": [],
     "tags": [
       "user",
       "hub",
-      "planned"
+      "partial"
     ],
     "dynamic": false
   },
@@ -77,10 +94,10 @@ export const routes: RouteDefinition[] = [
     "id": "user.signup",
     "path": "/signup",
     "title": "Signup",
-    "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+    "description": "Account registration with salted scrypt hashes.",
     "section": "User",
     "category": "hub",
-    "status": "planned",
+    "status": "partial",
     "layout": "landing",
     "icon": "👤",
     "searchable": true,
@@ -131,13 +148,30 @@ export const routes: RouteDefinition[] = [
       "trackingId": null,
       "conversionGoal": null
     },
-    "implementedBy": [],
-    "evidence": [],
+    "implementedBy": [
+      "apps/radio-backend/auth.js",
+      "apps/radio-backend/server.js#/auth/register",
+      "apps/web/public/radio-html/assets/js/radio-engine.js#renderAccount"
+    ],
+    "evidence": [
+      {
+        "artifact": "apps/radio-backend/auth.js",
+        "kind": "code"
+      },
+      {
+        "artifact": "apps/radio-backend/server.js#/auth/register",
+        "kind": "api"
+      },
+      {
+        "artifact": "apps/web/public/radio-html/assets/js/radio-engine.js#renderAccount",
+        "kind": "code"
+      }
+    ],
     "dependsOn": [],
     "tags": [
       "user",
       "hub",
-      "planned"
+      "partial"
     ],
     "dynamic": false
   },
@@ -145,10 +179,10 @@ export const routes: RouteDefinition[] = [
     "id": "user.forgot-password",
     "path": "/forgot-password",
     "title": "Forgot Password",
-    "description": "Not built yet. Renders a fail-closed placeholder; no fabricated content.",
+    "description": "Reset flow: token issued (operator relay until EMAIL_PROVIDER configured), reset revokes all sessions.",
     "section": "User",
     "category": "hub",
-    "status": "planned",
+    "status": "partial",
     "layout": "landing",
     "icon": "👤",
     "searchable": true,
@@ -200,13 +234,25 @@ export const routes: RouteDefinition[] = [
       "trackingId": null,
       "conversionGoal": null
     },
-    "implementedBy": [],
-    "evidence": [],
+    "implementedBy": [
+      "apps/radio-backend/auth.js",
+      "apps/radio-backend/server.js#/auth/forgot + /auth/reset"
+    ],
+    "evidence": [
+      {
+        "artifact": "apps/radio-backend/auth.js",
+        "kind": "code"
+      },
+      {
+        "artifact": "apps/radio-backend/server.js#/auth/forgot + /auth/reset",
+        "kind": "api"
+      }
+    ],
     "dependsOn": [],
     "tags": [
       "user",
       "hub",
-      "planned"
+      "partial"
     ],
     "dynamic": false
   },
@@ -282,7 +328,7 @@ export const routes: RouteDefinition[] = [
     "id": "user.profile",
     "path": "/profile",
     "title": "Profile",
-    "description": "User/UserSettings models exist; profile UI not built.",
+    "description": "Authenticated profile from the session store.",
     "section": "User",
     "category": "hub",
     "status": "partial",
@@ -337,11 +383,16 @@ export const routes: RouteDefinition[] = [
       "conversionGoal": null
     },
     "implementedBy": [
-      "prisma/schema.prisma#User"
+      "apps/radio-backend/server.js#/user/profile",
+      "apps/web/public/radio-html/assets/js/radio-engine.js#renderAccount"
     ],
     "evidence": [
       {
-        "artifact": "prisma/schema.prisma#User",
+        "artifact": "apps/radio-backend/server.js#/user/profile",
+        "kind": "api"
+      },
+      {
+        "artifact": "apps/web/public/radio-html/assets/js/radio-engine.js#renderAccount",
         "kind": "code"
       }
     ],
@@ -500,7 +551,7 @@ export const routes: RouteDefinition[] = [
     "id": "user.history",
     "path": "/history",
     "title": "History",
-    "description": "Play events queue offline and sync as evidence; history UI not built.",
+    "description": "Real listening/action history from the synced evidence outbox.",
     "section": "User",
     "category": "hub",
     "status": "partial",
@@ -555,12 +606,12 @@ export const routes: RouteDefinition[] = [
       "conversionGoal": null
     },
     "implementedBy": [
-      "radio-engine outbox (play events)"
+      "apps/radio-backend/server.js#/user/history"
     ],
     "evidence": [
       {
-        "artifact": "radio-engine outbox (play events)",
-        "kind": "code"
+        "artifact": "apps/radio-backend/server.js#/user/history",
+        "kind": "api"
       }
     ],
     "dependsOn": [
@@ -725,7 +776,7 @@ export const routes: RouteDefinition[] = [
     "id": "user.settings",
     "path": "/settings",
     "title": "Settings",
-    "description": "Settings model + account surface mock exist.",
+    "description": "Persisted per-account settings (language, currency, persona, low-bandwidth).",
     "section": "User",
     "category": "hub",
     "status": "partial",
@@ -780,17 +831,22 @@ export const routes: RouteDefinition[] = [
       "conversionGoal": null
     },
     "implementedBy": [
-      "packages/shared/src/commerce.ts#UserSettingsLike",
-      "radio-html/Radio_Account.html"
+      "apps/radio-backend/auth.js#updateSettings",
+      "apps/radio-backend/server.js#/user/settings",
+      "apps/web/public/radio-html/assets/js/radio-engine.js#renderAccount"
     ],
     "evidence": [
       {
-        "artifact": "packages/shared/src/commerce.ts#UserSettingsLike",
+        "artifact": "apps/radio-backend/auth.js#updateSettings",
         "kind": "code"
       },
       {
-        "artifact": "radio-html/Radio_Account.html",
-        "kind": "surface"
+        "artifact": "apps/radio-backend/server.js#/user/settings",
+        "kind": "api"
+      },
+      {
+        "artifact": "apps/web/public/radio-html/assets/js/radio-engine.js#renderAccount",
+        "kind": "code"
       }
     ],
     "dependsOn": [

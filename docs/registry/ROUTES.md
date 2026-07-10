@@ -1,8 +1,8 @@
 # Routes
 
-Generated 2026-07-09T20:26:27.336Z from `apps/radio/registry` — do not edit by hand.
+Generated 2026-07-10T00:01:20.109Z from `apps/radio/registry` — do not edit by hand.
 
-Total **197** routes · 6 built · 48 partial · 143 planned.
+Total **197** routes · 6 built · 51 partial · 140 planned.
 
 ## 🌐 Public Website
 
@@ -186,9 +186,9 @@ Total **197** routes · 6 built · 48 partial · 143 planned.
 
 | id | path | status | layout | content type | permissions | flags |
 |---|---|---|---|---|---|---|
-| `user.login` | `/login` | ⬜ planned | landing | — | anonymous | — |
-| `user.signup` | `/signup` | ⬜ planned | landing | — | anonymous | — |
-| `user.forgot-password` | `/forgot-password` | ⬜ planned | landing | — | anonymous | — |
+| `user.login` | `/login` | 🟡 partial | landing | — | anonymous | — |
+| `user.signup` | `/signup` | 🟡 partial | landing | — | anonymous | — |
+| `user.forgot-password` | `/forgot-password` | 🟡 partial | landing | — | anonymous | — |
 | `user.verify` | `/verify` | ⬜ planned | landing | — | anonymous | — |
 | `user.profile` | `/profile` | 🟡 partial | settings | — | listener | — |
 | `user.profile.edit` | `/profile/edit` | ⬜ planned | settings | — | listener | — |

@@ -47,3 +47,7 @@ apps/radio-backend/registry-proposals.jsonl
 apps/radio-backend/rights-ledger.jsonl
 apps/radio-backend/rights-notifications.jsonl
 build/
+apps/web/public/radio-html/assets/previews/*.mp3
+apps/desktop/public/radio-html/assets/previews/*.mp3
+apps/radio-backend/users.json
+apps/radio-backend/reset-requests.jsonl

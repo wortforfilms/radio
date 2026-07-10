@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T23:44:12.591Z",
+  "generatedAt": "2026-07-10T00:01:20.109Z",
   "counts": {
     "nodes": 248,
     "edges": 452
@@ -598,17 +598,17 @@
     {
       "id": "route:user.login",
       "kind": "route",
-      "status": "planned"
+      "status": "partial"
     },
     {
       "id": "route:user.signup",
       "kind": "route",
-      "status": "planned"
+      "status": "partial"
     },
     {
       "id": "route:user.forgot-password",
       "kind": "route",
-      "status": "planned"
+      "status": "partial"
     },
     {
       "id": "route:user.verify",

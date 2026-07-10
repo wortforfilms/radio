@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T20:26:27.336Z",
+  "generatedAt": "2026-07-10T00:01:20.109Z",
   "platforms": {
     "web": [
       "public.home",
@@ -795,7 +795,7 @@
         "path": "/login",
         "icon": "👤",
         "section": "User",
-        "status": "planned"
+        "status": "partial"
       },
       {
         "id": "user.signup",
@@ -803,7 +803,7 @@
         "path": "/signup",
         "icon": "👤",
         "section": "User",
-        "status": "planned"
+        "status": "partial"
       },
       {
         "id": "user.forgot-password",
@@ -811,7 +811,7 @@
         "path": "/forgot-password",
         "icon": "👤",
         "section": "User",
-        "status": "planned"
+        "status": "partial"
       },
       {
         "id": "user.verify",
@@ -1101,7 +1101,7 @@
         "path": "/login",
         "icon": "👤",
         "section": "User",
-        "status": "planned"
+        "status": "partial"
       },
       {
         "id": "user.signup",
@@ -1109,7 +1109,7 @@
         "path": "/signup",
         "icon": "👤",
         "section": "User",
-        "status": "planned"
+        "status": "partial"
       },
       {
         "id": "user.forgot-password",
@@ -1117,7 +1117,7 @@
         "path": "/forgot-password",
         "icon": "👤",
         "section": "User",
-        "status": "planned"
+        "status": "partial"
       },
       {
         "id": "user.verify",
@@ -1407,7 +1407,7 @@
         "path": "/login",
         "icon": "👤",
         "section": "User",
-        "status": "planned"
+        "status": "partial"
       },
       {
         "id": "user.signup",
@@ -1415,7 +1415,7 @@
         "path": "/signup",
         "icon": "👤",
         "section": "User",
-        "status": "planned"
+        "status": "partial"
       },
       {
         "id": "user.forgot-password",
@@ -1423,7 +1423,7 @@
         "path": "/forgot-password",
         "icon": "👤",
         "section": "User",
-        "status": "planned"
+        "status": "partial"
       },
       {
         "id": "user.verify",

@@ -1,6 +1,6 @@
 # Permissions
 
-Generated 2026-07-09T20:26:27.336Z.
+Generated 2026-07-10T00:01:20.109Z.
 
 Roles: anonymous · listener · student · researcher · creator · moderator · editor · admin · superadmin
 
