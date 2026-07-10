@@ -67,7 +67,7 @@ export function PaneTelemetry(props: { manifest: EngineManifest | null; onTuneSt
           )}
         </p>
         <p className="muted" style={{ fontSize: 10.5, marginBottom: 0 }}>
-          MSAR runtime label applies when the storage-separation policy audit passes (see RADIO_MEDIA_STORAGE.md) — status here reflects the real offline manifest, not an asserted banner.
+          MSAR runtime label applies when the storage-separation policy audit passes (see docs/runbooks/RADIO_MEDIA_STORAGE.md) — status here reflects the real offline manifest, not an asserted banner.
         </p>
       </section>
 

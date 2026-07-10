@@ -731,7 +731,7 @@ export const routes: RouteDefinition[] =  [
     },
     "implementedBy": [
       "packages/runtime/src/storage.ts",
-      "RADIO_MEDIA_STORAGE.md"
+      "docs/runbooks/RADIO_MEDIA_STORAGE.md"
     ],
     "evidence": [
       {
@@ -739,7 +739,7 @@ export const routes: RouteDefinition[] =  [
         "kind": "code"
       },
       {
-        "artifact": "RADIO_MEDIA_STORAGE.md",
+        "artifact": "docs/runbooks/RADIO_MEDIA_STORAGE.md",
         "kind": "doc"
       }
     ],

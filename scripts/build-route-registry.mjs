@@ -43,7 +43,7 @@ const SECTIONS = [
   ["Podcast", "🎙", [
     "/podcasts", "/podcasts/trending", "/podcasts/latest", "/podcasts/categories",
     "/podcasts/:slug",
-    ["/podcasts/:slug/transcript", { status: "partial", implementedBy: ["RADIO_JOCKEY_TRANSCRIPTS.md", "radio-html/data/lyrics-prompter-data.json"], description: "Transcript tooling exists for tracks; podcast catalogue itself is NULL." }],
+    ["/podcasts/:slug/transcript", { status: "partial", implementedBy: ["docs/reports/RADIO_JOCKEY_TRANSCRIPTS.md", "radio-html/data/lyrics-prompter-data.json"], description: "Transcript tooling exists for tracks; podcast catalogue itself is NULL." }],
     "/podcasts/:slug/chapters", "/podcasts/:slug/discussion", "/podcasts/bookmark"
   ]],
   ["Research Hub", "🔬", [
@@ -122,7 +122,7 @@ const SECTIONS = [
   ]],
   ["Studio", "🎛", [
     "/studio", "/studio/live", "/studio/record",
-    ["/studio/upload", { status: "partial", implementedBy: ["RADIO_TRACK_ONBOARDING_SOP.md", "radio-html/Track_Onboarding.html"], description: "Track onboarding SOP + surface exist (fail-closed canPlay)." }],
+    ["/studio/upload", { status: "partial", implementedBy: ["docs/runbooks/RADIO_TRACK_ONBOARDING_SOP.md", "radio-html/Track_Onboarding.html"], description: "Track onboarding SOP + surface exist (fail-closed canPlay)." }],
     "/studio/editor",
     ["/studio/script", { status: "partial", implementedBy: ["radio-html/lyrics-prompter.html"], description: "Lyrics prompter surface exists." }],
     "/studio/caller", "/studio/queue", "/studio/automation",
@@ -134,10 +134,10 @@ const SECTIONS = [
     "/cms/articles",
     ["/cms/shows", { status: "partial", implementedBy: ["apps/radio-backend/server.js#/admin/stations"] }],
     "/cms/podcasts", "/cms/research",
-    ["/cms/media", { status: "partial", implementedBy: ["scripts/media-storage-audit.mjs", "RADIO_MEDIA_STORAGE.md"] }],
+    ["/cms/media", { status: "partial", implementedBy: ["scripts/media-storage-audit.mjs", "docs/runbooks/RADIO_MEDIA_STORAGE.md"] }],
     "/cms/users", "/cms/comments",
     ["/cms/moderation", { status: "partial", implementedBy: ["scripts/lib/radio-content-lib.mjs#sanitize"], description: "Lyric sanitisation pipeline exists; general moderation not built." }],
-    ["/cms/workflows", { status: "partial", implementedBy: ["RIGHTS_CLOSURE_RUNBOOK.md", "PHASE_4_5_RUNBOOK.md"] }],
+    ["/cms/workflows", { status: "partial", implementedBy: ["docs/runbooks/RIGHTS_CLOSURE_RUNBOOK.md", "docs/runbooks/PHASE_4_5_RUNBOOK.md"] }],
     ["/cms/scheduler", { status: "partial", implementedBy: ["apps/radio-backend/server.js#/admin/programs"], description: "Program overlays (draft startTime) exist; scheduler UI not built." }]
   ]],
   ["Administration", "⚙", [
@@ -146,7 +146,7 @@ const SECTIONS = [
     "/admin/logs",
     ["/admin/audit", { status: "partial", implementedBy: ["packages/runtime/src/audit.ts", "apps/web/app/api/audit"], description: "AuditLog model + API exist." }],
     "/admin/security",
-    ["/admin/storage", { status: "partial", implementedBy: ["packages/runtime/src/storage.ts", "RADIO_MEDIA_STORAGE.md"] }],
+    ["/admin/storage", { status: "partial", implementedBy: ["packages/runtime/src/storage.ts", "docs/runbooks/RADIO_MEDIA_STORAGE.md"] }],
     "/admin/backups",
     ["/admin/integrations", { status: "partial", implementedBy: ["integrations/hdfc-upi-parser"] }]
   ]],
