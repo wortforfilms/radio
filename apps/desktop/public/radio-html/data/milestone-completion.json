@@ -1,7 +1,7 @@
 {
   "id": "radio-vaigyaaniq-next-milestone-completion",
   "title": "Radio Vaigyaaniq Next Milestone Completion",
-  "generatedAt": "2026-07-08",
+  "generatedAt": "2026-07-10",
   "verificationState": "draft",
   "phkd": {
     "rule": "fail_closed",
@@ -23,7 +23,7 @@
     "releaseReviewVerified": 0,
     "releaseReviewBlocked": 23,
     "customerReleaseReady": 0,
-    "customerReleaseBlocked": 8
+    "customerReleaseBlocked": 9
   },
   "milestones": [
     {
@@ -87,7 +87,7 @@
       "label": "Customer Release Milestone",
       "status": "implemented-draft",
       "evidence": "/radio-html/data/customer-release-milestone.json",
-      "blocker": "Customer release blocked: 8 gate(s) lack complete proof."
+      "blocker": "Customer release blocked: 9 gate(s) lack complete proof."
     }
   ]
 }

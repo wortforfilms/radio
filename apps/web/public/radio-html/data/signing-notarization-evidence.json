@@ -1,7 +1,7 @@
 {
   "id": "radio-vaigyaaniq-signing-notarization-evidence",
   "title": "Radio Vaigyaaniq Signing + Notarization Evidence",
-  "generatedAt": "2026-07-08",
+  "generatedAt": "2026-07-10",
   "verificationState": "blocked-signing-notarization-proof-null",
   "shipDecision": "NO_SHIP",
   "phkd": {
@@ -13,8 +13,8 @@
   },
   "counts": {
     "checks": 8,
-    "passedChecks": 0,
-    "blockedChecks": 8,
+    "passedChecks": 1,
+    "blockedChecks": 7,
     "signedArtifacts": 0,
     "notarizedArtifacts": 0,
     "developerIdIdentities": 0,
@@ -23,14 +23,14 @@
   "gate": {
     "name": "installer signing evidence",
     "status": "blocked",
-    "detail": "Signing/notarization proof incomplete: artifact, codesign-tool, codesign-verify, developer-id, not-adhoc, gatekeeper, notarization, reviewer."
+    "detail": "Signing/notarization proof incomplete: artifact, codesign-verify, developer-id, not-adhoc, gatekeeper, notarization, reviewer."
   },
   "artifact": {
     "path": "/var/folders/rr/_nzzhqvd47z7d6klsxtvv7p40000gn/T/radio-vaigyaaniq-desktop-target/release/bundle/macos/Radio Vaigyaaniq.app",
     "exists": false,
     "bundle_hash": "9cc0f713f050418e18163fbdaf46aaa19b3c44e6bd3b23c55bb675f7b828c00d",
-    "platform": "linux",
-    "isMacApp": false
+    "platform": "darwin",
+    "isMacApp": true
   },
   "signature": {
     "identifier": null,
@@ -56,9 +56,9 @@
     {
       "key": "codesign-tool",
       "label": "codesign tool available",
-      "status": "blocked",
-      "evidence": null,
-      "blocker": "codesign unavailable"
+      "status": "pass",
+      "evidence": "/usr/bin/codesign",
+      "blocker": null
     },
     {
       "key": "codesign-verify",

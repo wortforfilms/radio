@@ -1,7 +1,7 @@
 {
   "id": "radio-vaigyaaniq-gift-payment-evidence",
   "title": "Radio Vaigyaaniq Gift Payment Evidence Lane",
-  "generatedAt": "2026-07-08",
+  "generatedAt": "2026-07-10",
   "verificationState": "draft-payment-proof-blocked",
   "phkd": {
     "rule": "fail_closed",

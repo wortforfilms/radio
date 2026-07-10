@@ -41,8 +41,8 @@
       </section>
       <section class="surface-grid four">
         <article class="surface-card"><span class="surface-label">Gates</span><b>10</b><p>Customer release checks.</p></article>
-        <article class="surface-card"><span class="surface-label">Blocked</span><b>8</b><p>Must close before customer release.</p></article>
-        <article class="surface-card"><span class="surface-label">Draft Pass</span><b>2</b><p>Local-only evidence passes.</p></article>
+        <article class="surface-card"><span class="surface-label">Blocked</span><b>9</b><p>Must close before customer release.</p></article>
+        <article class="surface-card"><span class="surface-label">Draft Pass</span><b>1</b><p>Local-only evidence passes.</p></article>
         <article class="surface-card"><span class="surface-label">Release Allowed</span><b>0</b><p>Fail-closed external allowance.</p></article>
       </section>
       <section class="surface-card">
@@ -68,10 +68,10 @@
           <a href="/radio-html/data/visual-qa.json">Evidence</a>
         </article>
         <article class="runtime-row">
-          <span>draft-pass</span>
+          <span>blocked</span>
           <div>
             <b>Local Release Orchestration</b>
-            <p>Gate has local draft evidence. It does not override PHKD release blockers.</p>
+            <p>Local release check has not completed all configured commands.</p>
             <small>steps · pass · fail</small>
           </div>
           <a href="/radio-html/data/release-orchestration-run.json">Evidence</a>
@@ -147,6 +147,12 @@
           <h2>Visual QA Board</h2>
           <p>Visual QA screenshots or target pass counts are incomplete.</p>
           <a href="/radio-html/data/visual-qa.json">Open proof frame</a>
+        </article>
+        <article class="surface-card blocked">
+          <span class="surface-label">release-orchestration</span>
+          <h2>Local Release Orchestration</h2>
+          <p>Local release check has not completed all configured commands.</p>
+          <a href="/radio-html/data/release-orchestration-run.json">Open proof frame</a>
         </article>
         <article class="surface-card blocked">
           <span class="surface-label">gui-smoke</span>

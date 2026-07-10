@@ -1,7 +1,7 @@
 {
   "id": "radio-vaigyaaniq-installer-evidence",
   "title": "Radio Vaigyaaniq Installer Evidence Lane",
-  "generatedAt": "2026-07-08",
+  "generatedAt": "2026-07-10",
   "verificationState": "draft-local-app-built-signing-proof-blocked",
   "phkd": {
     "rule": "fail_closed",
@@ -19,7 +19,7 @@
     "nullArtifacts": 5,
     "blocked": 6,
     "signingChecks": 8,
-    "signingBlockedChecks": 8,
+    "signingBlockedChecks": 7,
     "notarizedArtifacts": 0
   },
   "platformMatrix": [
@@ -143,9 +143,9 @@
     {
       "key": "codesign-tool",
       "label": "codesign tool available",
-      "status": "blocked",
-      "evidence": null,
-      "blocker": "codesign unavailable"
+      "status": "pass",
+      "evidence": "/usr/bin/codesign",
+      "blocker": null
     },
     {
       "key": "codesign-verify",
@@ -193,6 +193,6 @@
   "signingGate": {
     "name": "installer signing evidence",
     "status": "blocked",
-    "detail": "Signing/notarization proof incomplete: artifact, codesign-tool, codesign-verify, developer-id, not-adhoc, gatekeeper, notarization, reviewer."
+    "detail": "Signing/notarization proof incomplete: artifact, codesign-verify, developer-id, not-adhoc, gatekeeper, notarization, reviewer."
   }
 }

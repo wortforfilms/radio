@@ -1,7 +1,7 @@
 {
   "id": "radio-vaigyaaniq-device-runtime-evidence",
   "title": "Radio Vaigyaaniq Device Runtime Evidence",
-  "generatedAt": "2026-07-08",
+  "generatedAt": "2026-07-10",
   "verificationState": "blocked-device-proof-null",
   "phkd": {
     "rule": "fail_closed",

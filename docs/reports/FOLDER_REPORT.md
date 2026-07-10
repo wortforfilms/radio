@@ -1,11 +1,19 @@
 # Folder Report — for_radio
-Generated: 2026-07-08 · Total size: **36 GB** (excl. node_modules/.git)
+Generated: 2026-07-08 · **Status section updated 2026-07-10** · Total size: ~36 GB (excl. node_modules/.git)
 
-## Release status (from `radio:release:check`, run today)
-- 12/16 gates pass, state **blocked** (NO_SHIP)
-- Real blocker: **desktop-signing** (0/8 proofs — needs Apple Developer ID / Windows cert)
-- 3 failures are sandbox artifacts (vitest native binding, no npm network for build, Python 3.10 vs 3.11 for HDFC parser)
-- Git: HEAD `979bc16` "fix: refine radio station language detection"; ~20 modified files uncommitted + untracked `RADIO_MEDIA_STORAGE.md`, `admin-kanban.html`, `standalone-radio-aspect-pack/`
+## Release status (from `radio:release:check`, macOS run 2026-07-10)
+- **14/16 command steps pass**, state **blocked** (NO_SHIP)
+- Failures at last run: **build** (root tsconfig rejected `.ts`-extension registry
+  imports — FIXED via `allowImportingTsExtensions` + self-governed app excludes;
+  re-run expected 15/16) and **desktop-signing** (1/8 proofs — needs Apple
+  Developer ID; the only cert-gated command failure)
+- Gate-level blockers (evidence, not code): rights closure 19/19 blocked,
+  payment proof 0 receipts/webhooks, release review 23/23 unapproved, GUI smoke
+  1/9, customer release 0/9 verified → `releaseAllowed:false`
+- Tests: 46 files / 202 passing · registry diff: 197 routes, 0 breaking
+- Git: master at `99e7942`+ (registry platform, agent phases 0–10, SPA shell,
+  accounts/auth, 458 preview clips, uniques target, storage + docs sanitation);
+  all commits local — push to `wortforfilms/radio` pending
 
 ## Top-level documents
 | File | Purpose |

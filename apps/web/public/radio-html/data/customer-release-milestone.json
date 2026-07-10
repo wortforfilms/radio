@@ -1,7 +1,7 @@
 {
   "id": "radio-customer-release-milestone",
   "title": "Radio Vaigyaaniq Customer Release Milestone",
-  "generatedAt": "2026-07-08",
+  "generatedAt": "2026-07-10",
   "verificationState": "blocked-customer-release-proof-null",
   "shipDecision": "NO_SHIP",
   "phkd": {
@@ -13,9 +13,9 @@
   },
   "counts": {
     "gates": 10,
-    "draftPass": 2,
+    "draftPass": 1,
     "verified": 0,
-    "blocked": 8,
+    "blocked": 9,
     "customerReleaseReady": 0,
     "productionReady": 0,
     "releaseAllowed": 0,
@@ -85,14 +85,14 @@
       "key": "release-orchestration",
       "label": "Local Release Orchestration",
       "category": "local-command",
-      "status": "draft-pass",
+      "status": "blocked",
       "evidence": "/radio-html/data/release-orchestration-run.json",
       "apiView": "release-orchestration",
-      "blocker": null,
+      "blocker": "Local release check has not completed all configured commands.",
       "observed": {
         "steps": 16,
-        "pass": 16,
-        "fail": 0,
+        "pass": 12,
+        "fail": 4,
         "browserChecks": 0
       },
       "requiredEvidence": [
@@ -236,8 +236,8 @@
       "blocker": "Signed artifact, notarization, Developer ID, Gatekeeper, and reviewer evidence are incomplete.",
       "observed": {
         "checks": 8,
-        "passedChecks": 0,
-        "blockedChecks": 8,
+        "passedChecks": 1,
+        "blockedChecks": 7,
         "signedArtifacts": 0,
         "notarizedArtifacts": 0,
         "developerIdIdentities": 0,
@@ -318,6 +318,17 @@
         "capturedScreenshots",
         "passEqualsTargets",
         "blockedEqualsZero"
+      ]
+    },
+    {
+      "key": "release-orchestration",
+      "label": "Local Release Orchestration",
+      "evidence": "/radio-html/data/release-orchestration-run.json",
+      "blocker": "Local release check has not completed all configured commands.",
+      "requiredEvidence": [
+        "steps",
+        "pass",
+        "fail"
       ]
     },
     {
@@ -479,7 +490,7 @@
     {
       "key": "release-orchestration-run",
       "path": "/radio-html/data/release-orchestration-run.json",
-      "verificationState": "draft-verified-local"
+      "verificationState": "blocked"
     }
   ]
 }
