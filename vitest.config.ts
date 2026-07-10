@@ -1,4 +1,8 @@
 import { defineConfig } from "vitest/config";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const root = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   test: {
@@ -6,10 +10,10 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@runtime": "/Volumes/LaCie/pprm/for_radio/packages/runtime/src",
-      "@graph": "/Volumes/LaCie/pprm/for_radio/packages/graph/src",
-      "@search": "/Volumes/LaCie/pprm/for_radio/packages/search/src",
-      "@shared": "/Volumes/LaCie/pprm/for_radio/packages/shared/src"
+      "@runtime": path.join(root, "packages/runtime/src"),
+      "@graph": path.join(root, "packages/graph/src"),
+      "@search": path.join(root, "packages/search/src"),
+      "@shared": path.join(root, "packages/shared/src")
     }
   }
 });
