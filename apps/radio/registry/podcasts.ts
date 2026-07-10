@@ -426,12 +426,12 @@ export const routes: RouteDefinition[] =  [
       "conversionGoal": null
     },
     "implementedBy": [
-      "RADIO_JOCKEY_TRANSCRIPTS.md",
+      "docs/reports/RADIO_JOCKEY_TRANSCRIPTS.md",
       "radio-html/data/lyrics-prompter-data.json"
     ],
     "evidence": [
       {
-        "artifact": "RADIO_JOCKEY_TRANSCRIPTS.md",
+        "artifact": "docs/reports/RADIO_JOCKEY_TRANSCRIPTS.md",
         "kind": "doc"
       },
       {

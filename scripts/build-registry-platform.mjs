@@ -23,9 +23,14 @@ const SITE_ORIGIN = (process.env.SITE_ORIGIN || "http://localhost:3000").replace
 const ENABLED_FLAGS = new Set((process.env.REGISTRY_FLAGS || "premium").split(",").filter(Boolean));
 const force = process.argv.includes("--force");
 const updateLock = process.argv.includes("--update-lock");
-const generatedAt = new Date().toISOString();
 const CACHE_PATH = path.join(ROOT, "apps/radio/.registry-buildcache.json");
 const REGISTRY_DIR = path.join(ROOT, "apps/radio/registry");
+
+function stableTimestampFromHash(hash) {
+  const spanMs = 366n * 24n * 60n * 60n * 1000n;
+  const offsetMs = BigInt(`0x${hash.slice(0, 12)}`) % spanMs;
+  return new Date(Date.UTC(2026, 0, 1) + Number(offsetMs)).toISOString();
+}
 
 // ---------------------------------------------------------------------------
 // Plugin dependency model
@@ -64,6 +69,7 @@ try {
   console.error(error.message);
   process.exit(1);
 }
+const generatedAt = stableTimestampFromHash(compiled.sourceHash);
 
 // ---------------------------------------------------------------------------
 // 2. Determine affected plugins (per-file hashing + env + plugin code)

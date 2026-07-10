@@ -77,6 +77,13 @@ export async function GET(request: NextRequest) {
     counts: { configuredCommands: 0, optionalBrowserChecks: 0, lastRunFailures: 0, productionReady: 0, blockedEvidenceLanes: 0 },
     steps: []
   });
+  const releaseOrchestrationRun = readJson("radio-html/data/release-orchestration-run.json", {
+    counts: { steps: 0, pass: 0, fail: 0, gates: 0, gatesBlocked: 0, productionReady: 0, releaseAllowed: 0 },
+    evidenceDashboard: { gateCounts: { total: 0, pass: 0, blocked: 0 }, gates: [], realWorldBlockers: [] },
+    shipDecision: "NO_SHIP",
+    productionReady: false,
+    releaseAllowed: false
+  });
   const desktopAlphaBundle = readJson("radio-html/data/desktop-alpha-bundle.json", {
     counts: { includedSurfaces: 0, includedDataFrames: 0, signedInstallers: 0, productionReady: 0, blockers: 0 },
     records: []
@@ -135,6 +142,8 @@ export async function GET(request: NextRequest) {
       playbackBlocked: playbackGate.counts.blocked,
       paymentReceipts: paymentProofLane.counts.paymentReceipts,
       installerPipelineBlocked: installerPipeline.counts.blocked,
+      releaseCommandFailures: releaseOrchestrationRun.counts.fail,
+      releaseEvidenceGatesBlocked: releaseOrchestrationRun.counts.gatesBlocked,
       customerFrontFailedLinks: customerFrontQa.counts.failedLinks,
       visualQaPass: visualQa.counts.pass,
       visualQaBlocked: visualQa.counts.blocked,
@@ -153,6 +162,7 @@ export async function GET(request: NextRequest) {
       paymentProofLane,
       installerPipeline,
       releaseOrchestration,
+      releaseOrchestrationRun,
       desktopAlphaBundle
     },
     noShipDashboard: tauriReadiness.noShipDashboard ?? {
@@ -181,6 +191,7 @@ export async function GET(request: NextRequest) {
       paymentProofLane: "/radio-html/data/payment-proof-lane.json",
       installerPipeline: "/radio-html/data/installer-pipeline.json",
       releaseOrchestration: "/radio-html/data/release-orchestration.json",
+      releaseOrchestrationRun: "/radio-html/data/release-orchestration-run.json",
       desktopAlphaBundle: "/radio-html/data/desktop-alpha-bundle.json"
     }
   };
@@ -191,6 +202,7 @@ export async function GET(request: NextRequest) {
   if (view === "payment-proof") return Response.json({ phkd: governancePhkd, paymentProofLane });
   if (view === "installer-pipeline") return Response.json({ phkd: governancePhkd, installerPipeline });
   if (view === "release-orchestration") return Response.json({ phkd: governancePhkd, releaseOrchestration });
+  if (view === "release-orchestration-run") return Response.json({ phkd: governancePhkd, releaseOrchestrationRun });
   if (view === "desktop-alpha") return Response.json({ phkd: governancePhkd, desktopAlphaBundle });
   if (view === "rights-evidence") return Response.json({ phkd: governancePhkd, rightsEvidence });
   if (view === "gift-payment") return Response.json({ phkd: governancePhkd, giftPaymentEvidence });

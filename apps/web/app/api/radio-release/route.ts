@@ -9,6 +9,7 @@ const DATASETS = {
   "payment-proof": "radio-html/data/payment-proof-lane.json",
   "installer-pipeline": "radio-html/data/installer-pipeline.json",
   "release-orchestration": "radio-html/data/release-orchestration.json",
+  "release-orchestration-run": "radio-html/data/release-orchestration-run.json",
   "desktop-alpha": "radio-html/data/desktop-alpha-bundle.json",
   "tauri-readiness": "radio-html/data/tauri-readiness.json",
   "release-review": "radio-html/data/release-review.json",

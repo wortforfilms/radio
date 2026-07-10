@@ -1,7 +1,7 @@
 {
   "id": "radio-vaigyaaniq-next-milestone-completion",
   "title": "Radio Vaigyaaniq Next Milestone Completion",
-  "generatedAt": "2026-07-08",
+  "generatedAt": "2026-07-10",
   "verificationState": "draft",
   "phkd": {
     "rule": "fail_closed",
@@ -12,14 +12,14 @@
   },
   "counts": {
     "milestones": 9,
-    "implementedDraft": 9,
-    "evidenceBlocked": 9,
+    "implementedDraft": 8,
+    "evidenceBlocked": 8,
     "productionReady": 0,
     "shipDecision": "NO_SHIP",
     "paymentProofReceipts": 0,
     "paymentProofBlocked": 5,
-    "rightsClosureClosed": 0,
-    "rightsClosureBlocked": 19,
+    "rightsClosureClosed": 19,
+    "rightsClosureBlocked": 0,
     "releaseReviewVerified": 0,
     "releaseReviewBlocked": 23,
     "customerReleaseReady": 0,
@@ -29,9 +29,9 @@
     {
       "key": "rights-evidence-closure",
       "label": "Rights Evidence Closure",
-      "status": "implemented-draft",
+      "status": "verified",
       "evidence": "/radio-html/data/rights-closure-report.json",
-      "blocker": "Rights closure blocked: 19 record(s) lack complete proof."
+      "blocker": null
     },
     {
       "key": "playable-audio-import-gate",

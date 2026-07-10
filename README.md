@@ -42,4 +42,4 @@ live in env/secret managers only — never in the registry.
 
 `apps/radio/registry/README.md` (developer guide) · `docs/registry/` (generated:
 ROUTES, NAVIGATION, PERMISSIONS, API_MAP, COMPONENTS, CONTENT_WORKFLOWS, AGENT,
-SEARCH_INDEX, SITE_STRUCTURE) · `RADIO_RELEASE_ROADMAP.md` (ship gates).
+SEARCH_INDEX, SITE_STRUCTURE) · `docs/runbooks/RADIO_RELEASE_ROADMAP.md` (ship gates).

@@ -1,8 +1,8 @@
 {
   "id": "radio-vaigyaaniq-compiled-manifest",
-  "compiledAt": "2026-07-10T00:01:20.391Z",
+  "compiledAt": "2026-08-30T17:53:13.400Z",
   "schemaVersion": 3,
-  "sourceHash": "5cdc0261b4536a4c09a2f38d3614eea3aca5760a8711b7606990f39f5b5ca0d8",
+  "sourceHash": "0267f6d444b883fe81c238c5c4baaec75ef6f8931de074f19c5e94e13cf9eb23",
   "counts": {
     "routes": 197,
     "components": 19,
@@ -2646,12 +2646,12 @@
         "conversionGoal": null
       },
       "implementedBy": [
-        "RADIO_JOCKEY_TRANSCRIPTS.md",
+        "docs/reports/RADIO_JOCKEY_TRANSCRIPTS.md",
         "radio-html/data/lyrics-prompter-data.json"
       ],
       "evidence": [
         {
-          "artifact": "RADIO_JOCKEY_TRANSCRIPTS.md",
+          "artifact": "docs/reports/RADIO_JOCKEY_TRANSCRIPTS.md",
           "kind": "doc"
         },
         {
@@ -10973,12 +10973,12 @@
         "conversionGoal": null
       },
       "implementedBy": [
-        "RADIO_TRACK_ONBOARDING_SOP.md",
+        "docs/runbooks/RADIO_TRACK_ONBOARDING_SOP.md",
         "radio-html/Track_Onboarding.html"
       ],
       "evidence": [
         {
-          "artifact": "RADIO_TRACK_ONBOARDING_SOP.md",
+          "artifact": "docs/runbooks/RADIO_TRACK_ONBOARDING_SOP.md",
           "kind": "doc"
         },
         {
@@ -11969,7 +11969,7 @@
       },
       "implementedBy": [
         "scripts/media-storage-audit.mjs",
-        "RADIO_MEDIA_STORAGE.md"
+        "docs/runbooks/RADIO_MEDIA_STORAGE.md"
       ],
       "evidence": [
         {
@@ -11977,7 +11977,7 @@
           "kind": "code"
         },
         {
-          "artifact": "RADIO_MEDIA_STORAGE.md",
+          "artifact": "docs/runbooks/RADIO_MEDIA_STORAGE.md",
           "kind": "doc"
         }
       ],
@@ -12275,16 +12275,16 @@
         "conversionGoal": null
       },
       "implementedBy": [
-        "RIGHTS_CLOSURE_RUNBOOK.md",
-        "PHASE_4_5_RUNBOOK.md"
+        "docs/runbooks/RIGHTS_CLOSURE_RUNBOOK.md",
+        "docs/runbooks/PHASE_4_5_RUNBOOK.md"
       ],
       "evidence": [
         {
-          "artifact": "RIGHTS_CLOSURE_RUNBOOK.md",
+          "artifact": "docs/runbooks/RIGHTS_CLOSURE_RUNBOOK.md",
           "kind": "doc"
         },
         {
-          "artifact": "PHASE_4_5_RUNBOOK.md",
+          "artifact": "docs/runbooks/PHASE_4_5_RUNBOOK.md",
           "kind": "doc"
         }
       ],
@@ -13136,7 +13136,7 @@
       },
       "implementedBy": [
         "packages/runtime/src/storage.ts",
-        "RADIO_MEDIA_STORAGE.md"
+        "docs/runbooks/RADIO_MEDIA_STORAGE.md"
       ],
       "evidence": [
         {
@@ -13144,7 +13144,7 @@
           "kind": "code"
         },
         {
-          "artifact": "RADIO_MEDIA_STORAGE.md",
+          "artifact": "docs/runbooks/RADIO_MEDIA_STORAGE.md",
           "kind": "doc"
         }
       ],

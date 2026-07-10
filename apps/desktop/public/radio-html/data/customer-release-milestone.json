@@ -1,7 +1,7 @@
 {
   "id": "radio-customer-release-milestone",
   "title": "Radio Vaigyaaniq Customer Release Milestone",
-  "generatedAt": "2026-07-08",
+  "generatedAt": "2026-07-10",
   "verificationState": "blocked-customer-release-proof-null",
   "shipDecision": "NO_SHIP",
   "phkd": {
@@ -13,14 +13,14 @@
   },
   "counts": {
     "gates": 10,
-    "draftPass": 2,
-    "verified": 0,
+    "draftPass": 1,
+    "verified": 1,
     "blocked": 8,
     "customerReleaseReady": 0,
     "productionReady": 0,
     "releaseAllowed": 0,
-    "rightsClosed": 0,
-    "rightsBlocked": 19,
+    "rightsClosed": 19,
+    "rightsBlocked": 0,
     "playableAudio": 0,
     "paymentReceipts": 0,
     "webhookEvents": 0,
@@ -85,15 +85,20 @@
       "key": "release-orchestration",
       "label": "Local Release Orchestration",
       "category": "local-command",
-      "status": "draft-pass",
+      "status": "blocked",
       "evidence": "/radio-html/data/release-orchestration-run.json",
       "apiView": "release-orchestration",
-      "blocker": null,
+      "blocker": "Local release check has not completed all configured commands.",
       "observed": {
         "steps": 16,
-        "pass": 16,
-        "fail": 0,
-        "browserChecks": 0
+        "pass": 14,
+        "fail": 2,
+        "browserChecks": 0,
+        "gates": 6,
+        "gatesPass": 1,
+        "gatesBlocked": 5,
+        "productionReady": 0,
+        "releaseAllowed": 0
       },
       "requiredEvidence": [
         "steps",
@@ -131,25 +136,25 @@
       "key": "rights-closure",
       "label": "Rights Evidence Closure",
       "category": "external-proof",
-      "status": "blocked",
+      "status": "verified",
       "evidence": "/radio-html/data/rights-closure-report.json",
       "apiView": "rights-closure-report",
-      "blocker": "Rights closure blocked: 19 record(s) lack complete proof.",
+      "blocker": null,
       "observed": {
         "records": 19,
-        "importedProofs": 0,
-        "matchedProofs": 0,
+        "importedProofs": 19,
+        "matchedProofs": 19,
         "unmatchedProofs": 0,
-        "closed": 0,
-        "blocked": 19,
-        "releaseAllowed": 0,
-        "missingSource": 19,
-        "missingCreator": 19,
-        "missingLicense": 19,
-        "missingCitation": 19,
-        "missingReviewer": 19,
-        "missingReviewedAt": 19,
-        "auditUnverified": 19,
+        "closed": 19,
+        "blocked": 0,
+        "releaseAllowed": 19,
+        "missingSource": 0,
+        "missingCreator": 0,
+        "missingLicense": 0,
+        "missingCitation": 0,
+        "missingReviewer": 0,
+        "missingReviewedAt": 0,
+        "auditUnverified": 0,
         "checksumIssues": 0
       },
       "requiredEvidence": [
@@ -180,9 +185,9 @@
         "blocked": 105,
         "nullEvidence": 105,
         "stationSlots": 4,
-        "rightsClosed": 0,
-        "rightsBlocked": 19,
-        "releaseAllowed": 0
+        "rightsClosed": 19,
+        "rightsBlocked": 0,
+        "releaseAllowed": 19
       },
       "requiredEvidence": [
         "audioImport",
@@ -236,8 +241,8 @@
       "blocker": "Signed artifact, notarization, Developer ID, Gatekeeper, and reviewer evidence are incomplete.",
       "observed": {
         "checks": 8,
-        "passedChecks": 0,
-        "blockedChecks": 8,
+        "passedChecks": 1,
+        "blockedChecks": 7,
         "signedArtifacts": 0,
         "notarizedArtifacts": 0,
         "developerIdIdentities": 0,
@@ -321,6 +326,17 @@
       ]
     },
     {
+      "key": "release-orchestration",
+      "label": "Local Release Orchestration",
+      "evidence": "/radio-html/data/release-orchestration-run.json",
+      "blocker": "Local release check has not completed all configured commands.",
+      "requiredEvidence": [
+        "steps",
+        "pass",
+        "fail"
+      ]
+    },
+    {
       "key": "gui-smoke",
       "label": "Desktop GUI Smoke",
       "evidence": "/radio-html/data/gui-smoke-evidence.json",
@@ -333,22 +349,6 @@
         "noCrash",
         "noShipVisible",
         "audioGateVisible"
-      ]
-    },
-    {
-      "key": "rights-closure",
-      "label": "Rights Evidence Closure",
-      "evidence": "/radio-html/data/rights-closure-report.json",
-      "blocker": "Rights closure blocked: 19 record(s) lack complete proof.",
-      "requiredEvidence": [
-        "source",
-        "creator",
-        "license",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "AuditLog.verified",
-        "releaseAllowed"
       ]
     },
     {
@@ -434,12 +434,12 @@
     {
       "key": "rights-closure",
       "path": "/radio-html/data/rights-closure-report.json",
-      "verificationState": "blocked-rights-proof-null"
+      "verificationState": "rights-closed-verified"
     },
     {
       "key": "playback-gate",
       "path": "/radio-html/data/playback-gate.json",
-      "verificationState": "draft-rights-closure-blocked"
+      "verificationState": "rights-closed-playback-still-source-gated"
     },
     {
       "key": "payment-proof",
@@ -479,7 +479,7 @@
     {
       "key": "release-orchestration-run",
       "path": "/radio-html/data/release-orchestration-run.json",
-      "verificationState": "draft-verified-local"
+      "verificationState": "blocked"
     }
   ]
 }

@@ -512,7 +512,7 @@ export const routes: RouteDefinition[] = [
     },
     "implementedBy": [
       "scripts/media-storage-audit.mjs",
-      "RADIO_MEDIA_STORAGE.md"
+      "docs/runbooks/RADIO_MEDIA_STORAGE.md"
     ],
     "evidence": [
       {
@@ -520,7 +520,7 @@ export const routes: RouteDefinition[] = [
         "kind": "code"
       },
       {
-        "artifact": "RADIO_MEDIA_STORAGE.md",
+        "artifact": "docs/runbooks/RADIO_MEDIA_STORAGE.md",
         "kind": "doc"
       }
     ],
@@ -810,16 +810,16 @@ export const routes: RouteDefinition[] = [
       "conversionGoal": null
     },
     "implementedBy": [
-      "RIGHTS_CLOSURE_RUNBOOK.md",
-      "PHASE_4_5_RUNBOOK.md"
+      "docs/runbooks/RIGHTS_CLOSURE_RUNBOOK.md",
+      "docs/runbooks/PHASE_4_5_RUNBOOK.md"
     ],
     "evidence": [
       {
-        "artifact": "RIGHTS_CLOSURE_RUNBOOK.md",
+        "artifact": "docs/runbooks/RIGHTS_CLOSURE_RUNBOOK.md",
         "kind": "doc"
       },
       {
-        "artifact": "PHASE_4_5_RUNBOOK.md",
+        "artifact": "docs/runbooks/PHASE_4_5_RUNBOOK.md",
         "kind": "doc"
       }
     ],

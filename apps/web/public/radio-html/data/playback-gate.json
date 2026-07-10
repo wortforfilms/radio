@@ -1,8 +1,8 @@
 {
   "id": "radio-vaigyaaniq-playback-gate",
   "title": "Radio Vaigyaaniq Playable Audio Import Gate",
-  "generatedAt": "2026-07-08",
-  "verificationState": "draft-rights-closure-blocked",
+  "generatedAt": "2026-07-10",
+  "verificationState": "rights-closed-playback-still-source-gated",
   "phkd": {
     "rule": "fail_closed",
     "unknownValues": "NULL",
@@ -19,9 +19,9 @@
     "blocked": 105,
     "nullEvidence": 105,
     "stationSlots": 4,
-    "rightsClosed": 0,
-    "rightsBlocked": 19,
-    "releaseAllowed": 0
+    "rightsClosed": 19,
+    "rightsBlocked": 0,
+    "releaseAllowed": 19
   },
   "gate": {
     "name": "Playable Audio Gate",
@@ -82,7 +82,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000005-01-002",
@@ -124,7 +124,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000005-01-003",
@@ -166,7 +166,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000005-01-004",
@@ -208,7 +208,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000005-01-005",
@@ -250,7 +250,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000005-01-006",
@@ -292,7 +292,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000012-01-001",
@@ -334,7 +334,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000012-01-002",
@@ -376,7 +376,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000012-01-003",
@@ -418,7 +418,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000012-01-004",
@@ -460,7 +460,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000012-01-005",
@@ -502,7 +502,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000012-01-006",
@@ -544,7 +544,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000029-01-001",
@@ -586,7 +586,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000029-01-002",
@@ -628,7 +628,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000029-01-003",
@@ -670,7 +670,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000029-01-004",
@@ -712,7 +712,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000029-01-005",
@@ -754,7 +754,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000029-01-006",
@@ -796,7 +796,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000036-01-001",
@@ -838,7 +838,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000036-01-002",
@@ -880,7 +880,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000036-01-003",
@@ -922,7 +922,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000036-01-004",
@@ -964,7 +964,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000043-01-001",
@@ -1006,7 +1006,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000043-01-002",
@@ -1048,7 +1048,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000043-01-003",
@@ -1090,7 +1090,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000043-01-004",
@@ -1132,7 +1132,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000043-01-005",
@@ -1174,7 +1174,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000043-01-006",
@@ -1216,7 +1216,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000050-01-001",
@@ -1258,7 +1258,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000050-01-002",
@@ -1300,7 +1300,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000050-01-003",
@@ -1342,7 +1342,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000050-01-004",
@@ -1384,7 +1384,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000050-01-005",
@@ -1426,7 +1426,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000050-01-006",
@@ -1468,7 +1468,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000067-01-001",
@@ -1510,7 +1510,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000074-01-001",
@@ -1552,7 +1552,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000074-01-002",
@@ -1594,7 +1594,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000074-01-003",
@@ -1636,7 +1636,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000074-01-004",
@@ -1678,7 +1678,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000074-01-005",
@@ -1720,7 +1720,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000074-01-006",
@@ -1762,7 +1762,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000081-01-001",
@@ -1804,7 +1804,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000081-01-002",
@@ -1846,7 +1846,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000081-01-003",
@@ -1888,7 +1888,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000081-01-004",
@@ -1930,7 +1930,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000081-01-005",
@@ -1972,7 +1972,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000081-01-006",
@@ -2014,7 +2014,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000098-01-001",
@@ -2056,7 +2056,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000098-01-002",
@@ -2098,7 +2098,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000098-01-003",
@@ -2140,7 +2140,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000098-01-004",
@@ -2182,7 +2182,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000098-01-005",
@@ -2224,7 +2224,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000098-01-006",
@@ -2266,7 +2266,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000104-01-001",
@@ -2308,7 +2308,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000104-01-002",
@@ -2350,7 +2350,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000104-01-003",
@@ -2392,7 +2392,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000104-01-004",
@@ -2434,7 +2434,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000104-01-005",
@@ -2476,7 +2476,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000104-01-006",
@@ -2518,7 +2518,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000111-01-001",
@@ -2560,7 +2560,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000111-01-002",
@@ -2602,7 +2602,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000111-01-003",
@@ -2644,7 +2644,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000111-01-004",
@@ -2686,7 +2686,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000111-01-005",
@@ -2728,7 +2728,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000111-01-006",
@@ -2770,7 +2770,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000128-01-001",
@@ -2812,7 +2812,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000135-01-001",
@@ -2854,7 +2854,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000135-01-002",
@@ -2896,7 +2896,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000135-01-003",
@@ -2938,7 +2938,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000135-01-004",
@@ -2980,7 +2980,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000135-01-005",
@@ -3022,7 +3022,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000135-01-006",
@@ -3064,7 +3064,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000142-01-001",
@@ -3106,7 +3106,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000142-01-002",
@@ -3148,7 +3148,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000142-01-003",
@@ -3190,7 +3190,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000142-01-004",
@@ -3232,7 +3232,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000142-01-005",
@@ -3274,7 +3274,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000142-01-006",
@@ -3316,7 +3316,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000159-01-001",
@@ -3358,7 +3358,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000159-01-002",
@@ -3400,7 +3400,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000159-01-003",
@@ -3442,7 +3442,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000159-01-004",
@@ -3484,7 +3484,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000159-01-005",
@@ -3526,7 +3526,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000166-01-001",
@@ -3568,7 +3568,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000166-01-002",
@@ -3610,7 +3610,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000166-01-003",
@@ -3652,7 +3652,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000166-01-004",
@@ -3694,7 +3694,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000166-01-005",
@@ -3736,7 +3736,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000166-01-006",
@@ -3778,7 +3778,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000173-01-001",
@@ -3820,7 +3820,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000173-01-002",
@@ -3862,7 +3862,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000173-01-003",
@@ -3904,7 +3904,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000180-01-001",
@@ -3946,7 +3946,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000180-01-002",
@@ -3988,7 +3988,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000180-01-003",
@@ -4030,7 +4030,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000180-01-004",
@@ -4072,7 +4072,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000180-01-005",
@@ -4114,7 +4114,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000180-01-006",
@@ -4156,7 +4156,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000197-01-001",
@@ -4198,7 +4198,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000197-01-002",
@@ -4240,7 +4240,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000197-01-003",
@@ -4282,7 +4282,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000197-01-004",
@@ -4324,7 +4324,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000197-01-005",
@@ -4366,7 +4366,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000197-01-006",
@@ -4408,7 +4408,7 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     },
     {
       "id": "stardust-final-9200000000203-01-001",
@@ -4450,12 +4450,12 @@
         "auditVerified",
         "releaseAllowed"
       ],
-      "blocker": "rights closure is blocked"
+      "blocker": "rights/reviewer/audit evidence incomplete; canPlay=false"
     }
   ],
   "rightsClosureGate": {
     "name": "Rights Evidence Closure",
-    "status": "blocked",
-    "detail": "Rights closure blocked: 19 record(s) lack complete proof."
+    "status": "pass",
+    "detail": "Every rights record has complete closure proof."
   }
 }

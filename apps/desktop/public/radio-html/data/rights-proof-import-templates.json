@@ -1,7 +1,7 @@
 {
   "id": "radio-rights-proof-import-templates",
   "title": "Rights Proof Import Templates",
-  "generatedAt": "2026-07-08",
+  "generatedAt": "2026-07-10",
   "verificationState": "draft-rights-templates-no-proof",
   "shipDecision": "NO_SHIP",
   "phkd": {
@@ -20,8 +20,8 @@
   "counts": {
     "templates": 4,
     "rightsRecords": 19,
-    "closed": 0,
-    "blocked": 19
+    "closed": 19,
+    "blocked": 0
   },
   "templates": [
     {

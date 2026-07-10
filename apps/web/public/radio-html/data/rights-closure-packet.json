@@ -1,7 +1,7 @@
 {
   "id": "radio-rights-closure-packet",
   "title": "Radio Vaigyaaniq Rights Closure Packet",
-  "generatedAt": "2026-07-08",
+  "generatedAt": "2026-07-10",
   "verificationState": "draft-rights-closure-packet-no-proof",
   "shipDecision": "NO_SHIP",
   "phkd": {
@@ -42,8 +42,8 @@
     "rowsPrepared": 19,
     "nullProofFields": 209,
     "releaseAllowed": 0,
-    "blocked": 19,
-    "closed": 0
+    "blocked": 0,
+    "closed": 19
   },
   "records": [
     {

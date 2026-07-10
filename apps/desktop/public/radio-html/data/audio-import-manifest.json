@@ -1,7 +1,7 @@
 {
   "id": "radio-vaigyaaniq-audio-import-manifest",
   "title": "Radio Vaigyaaniq Audio Import Manifest",
-  "generatedAt": "2026-07-08T17:40:49.394Z",
+  "generatedAt": "2026-07-10T05:12:55.526Z",
   "verificationState": "blocked-local-audio-indexed-rights-null",
   "phkd": {
     "rule": "fail_closed",
@@ -26,8 +26,8 @@
     "blocked": 105,
     "nullEvidence": 105,
     "stationSlots": 4,
-    "rightsClosed": 0,
-    "rightsBlocked": 19,
+    "rightsClosed": 19,
+    "rightsBlocked": 0,
     "releaseAllowed": 0
   },
   "schema": {

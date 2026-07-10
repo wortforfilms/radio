@@ -271,12 +271,12 @@ export const routes: RouteDefinition[] = [
       "conversionGoal": null
     },
     "implementedBy": [
-      "RADIO_TRACK_ONBOARDING_SOP.md",
+      "docs/runbooks/RADIO_TRACK_ONBOARDING_SOP.md",
       "radio-html/Track_Onboarding.html"
     ],
     "evidence": [
       {
-        "artifact": "RADIO_TRACK_ONBOARDING_SOP.md",
+        "artifact": "docs/runbooks/RADIO_TRACK_ONBOARDING_SOP.md",
         "kind": "doc"
       },
       {

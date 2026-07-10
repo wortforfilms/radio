@@ -1,6 +1,6 @@
 {
   "id": "radio-vaigyaaniq-route-registry",
-  "generatedAt": "2026-07-10T00:01:20.109Z",
+  "generatedAt": "2026-08-30T17:53:13.400Z",
   "schemaVersion": 3,
   "$schema": "/registry/registry.schema.json",
   "siteOrigin": "http://localhost:3000",
@@ -2633,7 +2633,7 @@
       "title": "Transcript",
       "status": "partial",
       "implementedBy": [
-        "RADIO_JOCKEY_TRANSCRIPTS.md",
+        "docs/reports/RADIO_JOCKEY_TRANSCRIPTS.md",
         "radio-html/data/lyrics-prompter-data.json"
       ],
       "description": "Transcript tooling exists for tracks; podcast catalogue itself is NULL.",
@@ -2696,7 +2696,7 @@
       },
       "evidence": [
         {
-          "artifact": "RADIO_JOCKEY_TRANSCRIPTS.md",
+          "artifact": "docs/reports/RADIO_JOCKEY_TRANSCRIPTS.md",
           "kind": "doc"
         },
         {
@@ -11075,7 +11075,7 @@
       "title": "Upload",
       "status": "partial",
       "implementedBy": [
-        "RADIO_TRACK_ONBOARDING_SOP.md",
+        "docs/runbooks/RADIO_TRACK_ONBOARDING_SOP.md",
         "radio-html/Track_Onboarding.html"
       ],
       "description": "Track onboarding SOP + surface exist (fail-closed canPlay).",
@@ -11135,7 +11135,7 @@
       },
       "evidence": [
         {
-          "artifact": "RADIO_TRACK_ONBOARDING_SOP.md",
+          "artifact": "docs/runbooks/RADIO_TRACK_ONBOARDING_SOP.md",
           "kind": "doc"
         },
         {
@@ -12083,7 +12083,7 @@
       "status": "partial",
       "implementedBy": [
         "scripts/media-storage-audit.mjs",
-        "RADIO_MEDIA_STORAGE.md"
+        "docs/runbooks/RADIO_MEDIA_STORAGE.md"
       ],
       "description": "Foundation exists — see implementedBy.",
       "dynamic": false,
@@ -12147,7 +12147,7 @@
           "kind": "code"
         },
         {
-          "artifact": "RADIO_MEDIA_STORAGE.md",
+          "artifact": "docs/runbooks/RADIO_MEDIA_STORAGE.md",
           "kind": "doc"
         }
       ],
@@ -12393,8 +12393,8 @@
       "title": "Workflows",
       "status": "partial",
       "implementedBy": [
-        "RIGHTS_CLOSURE_RUNBOOK.md",
-        "PHASE_4_5_RUNBOOK.md"
+        "docs/runbooks/RIGHTS_CLOSURE_RUNBOOK.md",
+        "docs/runbooks/PHASE_4_5_RUNBOOK.md"
       ],
       "description": "Foundation exists — see implementedBy.",
       "dynamic": false,
@@ -12454,11 +12454,11 @@
       },
       "evidence": [
         {
-          "artifact": "RIGHTS_CLOSURE_RUNBOOK.md",
+          "artifact": "docs/runbooks/RIGHTS_CLOSURE_RUNBOOK.md",
           "kind": "doc"
         },
         {
-          "artifact": "PHASE_4_5_RUNBOOK.md",
+          "artifact": "docs/runbooks/PHASE_4_5_RUNBOOK.md",
           "kind": "doc"
         }
       ],
@@ -13266,7 +13266,7 @@
       "status": "partial",
       "implementedBy": [
         "packages/runtime/src/storage.ts",
-        "RADIO_MEDIA_STORAGE.md"
+        "docs/runbooks/RADIO_MEDIA_STORAGE.md"
       ],
       "description": "Foundation exists — see implementedBy.",
       "dynamic": false,
@@ -13329,7 +13329,7 @@
           "kind": "code"
         },
         {
-          "artifact": "RADIO_MEDIA_STORAGE.md",
+          "artifact": "docs/runbooks/RADIO_MEDIA_STORAGE.md",
           "kind": "doc"
         }
       ],

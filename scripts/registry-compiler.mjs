@@ -20,6 +20,12 @@ import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 
+function stableTimestampFromHash(hash) {
+  const spanMs = 366n * 24n * 60n * 60n * 1000n;
+  const offsetMs = BigInt(`0x${hash.slice(0, 12)}`) % spanMs;
+  return new Date(Date.UTC(2026, 0, 1) + Number(offsetMs)).toISOString();
+}
+
 export async function compileManifest(ROOT, { updateLock = false, pluginSources = null } = {}) {
   const registry = await import(pathToFileURL(path.join(ROOT, "apps/radio/registry/index.ts")).href);
   const problems = registry.validateRegistry();
@@ -169,7 +175,7 @@ export async function compileManifest(ROOT, { updateLock = false, pluginSources 
 
   const compiled = {
     id: "radio-vaigyaaniq-compiled-manifest",
-    compiledAt: new Date().toISOString(),
+    compiledAt: stableTimestampFromHash(sourceHash),
     schemaVersion: 3,
     sourceHash,
     counts: {

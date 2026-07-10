@@ -10,6 +10,27 @@ function readJson<T>(file: string): T {
 }
 
 describe("radio proof milestone completion", () => {
+  it("wires CI release gates to generated evidence without label/env shortcuts", () => {
+    const packageJson = JSON.parse(fs.readFileSync(path.resolve("package.json"), "utf8")) as {
+      scripts: Record<string, string>;
+    };
+    const wrapper = fs.readFileSync(path.resolve("scripts/radio-release-check.mjs"), "utf8");
+    const workflow = fs.readFileSync(path.resolve(".github/workflows/release-gates.yml"), "utf8");
+    const registryConfig = fs.readFileSync(path.resolve("apps/radio/registry/config.ts"), "utf8");
+
+    expect(packageJson.scripts["radio:release:check"]).toBe("node scripts/radio-release-check.mjs");
+    expect(packageJson.scripts["radio:release:orchestrate"]).toContain("radio-release-evidence-orchestrator.mjs");
+    expect(wrapper).toContain("release-orchestration-run.json");
+    expect(wrapper).toContain("realWorldBlockers");
+    expect(wrapper).not.toContain("SHIP_DECISION");
+    expect(workflow).toContain("Release Gate Status");
+    expect(workflow).toContain("CONTROLLED_PREVIEW / NO_SHIP");
+    expect(workflow).not.toContain("contains(github.event.pull_request.labels.*.name, 'SHIP')");
+    expect(registryConfig).toContain("productionReady: false");
+    expect(registryConfig).toContain("releaseAllowed: false");
+    expect(registryConfig).toContain("fabricatedEvidenceAccepted: false");
+  });
+
   it("adds proof templates and keeps payment proof fail-closed", () => {
     const templates = readJson<{
       verificationState: string;
@@ -61,8 +82,8 @@ describe("radio proof milestone completion", () => {
     const orchestration = readJson<{ counts: { configuredCommands: number; externalProofCreated: number }; steps: { key: string }[] }>("evidence-refresh-command.json");
     const reviewReport = readJson<{ summary: { releaseAllowed: boolean; blocked: number; verified: number }; shipDecision: string }>("release-review-report.json");
 
-    expect(rights.counts.closed).toBe(0);
-    expect(rights.counts.blocked).toBeGreaterThan(0);
+    expect(rights.counts.closed).toBe(19);
+    expect(rights.counts.blocked).toBe(0);
     expect(rightsPacket.counts).toMatchObject({ records: 19, releaseAllowed: 0 });
     expect(rightsPacket.records[0]).toMatchObject({ source: null, creator: null, releaseAllowed: false });
     expect(review.counts).toMatchObject({ reviewerAssignments: 0, verified: 0 });
@@ -77,5 +98,52 @@ describe("radio proof milestone completion", () => {
     expect(orchestration.steps.map((step) => step.key)).toContain("customer-release");
     expect(orchestration.steps.map((step) => step.key)).toContain("release-review");
     expect(orchestration.steps.map((step) => step.key)).toContain("hdfc-parser-tests");
+  });
+
+  it("keeps the release run dashboard honest about command and evidence gates", () => {
+    const run = readJson<{
+      verificationState: string;
+      shipDecision: string;
+      productionReady: boolean;
+      releaseAllowed: boolean;
+      counts: { steps: number; pass: number; fail: number; gates: number; gatesPass: number; gatesBlocked: number };
+      evidenceDashboard: {
+        gateCounts: { total: number; pass: number; blocked: number };
+        gates: { key: string; status: string; productionReady: boolean; releaseAllowed: boolean }[];
+        realWorldBlockers: { key: string; requiredEvidence: string[] }[];
+      };
+    }>("release-orchestration-run.json");
+
+    expect(run.counts.steps).toBeGreaterThan(0);
+    expect(run.counts.gates).toBe(6);
+    expect(run.evidenceDashboard.gateCounts.total).toBe(6);
+    expect(run.evidenceDashboard.gates.map((gate) => gate.key)).toEqual([
+      "rights",
+      "payment",
+      "signing",
+      "gui-smoke",
+      "release-review",
+      "customer-release"
+    ]);
+    expect(run.evidenceDashboard.gates.some((gate) => gate.status === "blocked")).toBe(true);
+    expect(run.counts.gatesPass).toBe(1);
+    expect(run.evidenceDashboard.gateCounts.pass).toBe(1);
+    expect(run.evidenceDashboard.gates.find((gate) => gate.key === "rights")).toMatchObject({
+      status: "pass",
+      productionReady: false,
+      releaseAllowed: false
+    });
+    expect(run.evidenceDashboard.realWorldBlockers.map((blocker) => blocker.key)).not.toContain("rights");
+    expect(run.evidenceDashboard.realWorldBlockers.map((blocker) => blocker.key)).toEqual([
+      "payment",
+      "signing",
+      "gui-smoke",
+      "release-review",
+      "customer-release"
+    ]);
+    expect(run.productionReady).toBe(false);
+    expect(run.releaseAllowed).toBe(false);
+    expect(run.shipDecision).toBe("NO_SHIP");
+    expect(run.verificationState).toBe("blocked");
   });
 });

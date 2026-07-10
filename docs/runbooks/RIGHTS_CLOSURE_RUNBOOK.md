@@ -13,9 +13,12 @@ cover SVGs, icons, shaders, the audio placeholder, and the two Three.js vendor f
 Owner assets → VESAHE proprietary; the two `three.js` files → MIT attribution (accurate,
 not owner-claimed).
 
-**Reviewer onboarded:** Hemant (Producer, VESAHE) — see `_radio_index/reviewers.json`. The
-signed proof `_radio_index/rights-proof-assets.json` is already committed (all 19 records,
-`rightsStatus=verified`, reviewer Hemant). A verifier simulation passes 0 blocked.
+**Reviewer onboarded locally:** Hemant (Producer, VESAHE) — see
+`_radio_index/reviewers.json`. `_radio_index/` is gitignored, so the reviewer
+file and `_radio_index/rights-proof-assets.json` are operator-supplied local
+evidence, not public repo evidence. When present, the local proof contains all 19
+asset records with `rightsStatus=verified` and reviewer Hemant; the public repo
+still remains fail-closed until that proof is imported in the current workspace.
 
 1. **Close the gate** (the proof is pre-signed — just import + verify):
    ```bash
@@ -26,6 +29,11 @@ signed proof `_radio_index/rights-proof-assets.json` is already committed (all 1
 
    To regenerate the proof under a different reviewer:
    `npm run radio:rights:proof -- --reviewer "Name"` (omit `--reviewer` for a blocked draft).
+
+   Required import fields per row:
+   `source`, `creator`, `license`, `rightsStatus=verified`, `checksum`,
+   `citation`, `reviewer`, `reviewedAt`, `auditVerified=true`, and
+   `releaseAllowed=true`.
 
 ---
 
@@ -72,5 +80,7 @@ npm run radio:playback:gate && npm run radio:release:check
 ## What's automated vs yours
 - **Automated (done):** proof generation, accurate per-asset licence/creator/source/citation,
   checksum matching, CSV/JSON in the verifier's schema, promotion + gate wiring.
-- **Yours (the only human input):** the reviewer name on each lane. That single act is what
-  the fail-closed design requires — it is deliberately not fabricated.
+- **Yours (the only human input):** reviewer identity, review timestamp,
+  citation/contract reference, audit verification, and explicit release approval
+  for each lane. Those acts are what the fail-closed design requires — they are
+  deliberately not fabricated.

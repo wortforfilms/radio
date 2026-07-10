@@ -12,18 +12,31 @@ function readJson<T>(file: string): T {
 describe("radio release milestone frames", () => {
   it("keeps milestone completion fail-closed", () => {
     const milestones = readJson<{
-      counts: { milestones: number; implementedDraft: number; evidenceBlocked: number; productionReady: number; shipDecision: string };
+      counts: {
+        milestones: number;
+        implementedDraft: number;
+        evidenceBlocked: number;
+        productionReady: number;
+        shipDecision: string;
+        rightsClosureClosed: number;
+        rightsClosureBlocked: number;
+      };
       milestones: { key: string; status: string; blocker: string | null }[];
     }>("milestone-completion.json");
 
     expect(milestones.counts).toMatchObject({
       milestones: 9,
-      implementedDraft: 9,
+      implementedDraft: 8,
+      rightsClosureClosed: 19,
+      rightsClosureBlocked: 0,
       productionReady: 0,
       shipDecision: "NO_SHIP"
     });
     expect(milestones.counts.evidenceBlocked).toBeGreaterThan(0);
-    expect(milestones.milestones.every((milestone) => milestone.status === "implemented-draft")).toBe(true);
+    expect(milestones.milestones.find((milestone) => milestone.key === "rights-evidence-closure")).toMatchObject({
+      status: "verified",
+      blocker: null
+    });
     expect(milestones.milestones.some((milestone) => milestone.blocker)).toBe(true);
     expect(milestones.milestones.map((milestone) => milestone.key)).toContain("customer-release-milestone");
     expect(milestones.milestones.map((milestone) => milestone.key)).toContain("device-runtime");
