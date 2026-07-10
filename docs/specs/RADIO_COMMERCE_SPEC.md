@@ -83,6 +83,30 @@ item. All-access refund removes catalogue-wide access but leaves any separately-
   `EVIDENCE_PAYMENT_IMPORT="$(pwd)/_radio_index/payment-proof-import.json" npm run radio:payment:proof`.
 - Env: `RAZORPAY_KEY_ID`, `RAZORPAY_KEY_SECRET`, `RAZORPAY_WEBHOOK_SECRET` (you supply).
 
+### Real ₹10 proof import contract
+For a low-risk settlement test, create one real Razorpay test/live charge for
+₹10.00 and export the provider evidence to JSON or CSV outside generated assets.
+The verifier accepts only actual proof rows; HDFC/UPI parser rows are
+candidate-only reconciliation hints.
+
+Required rows:
+- `gift-intent`: `payerId`, `recipientId`, `amount=1000`, `currency=INR`, `intentCreatedAt`
+- `checkout-session`: `checkoutProvider`, `checkoutSessionId`, `payerId`, `amount=1000`, `currency=INR`, `checkoutStatus`
+- `payment-receipt`: `paymentReceiptId`, `checkoutProvider`, `amount=1000`, `currency=INR`, `paidAt`, `settlementStatus`
+- `webhook-event`: `providerEventId`, `signatureHeader`, `webhookVerified=true`, `receivedAt`
+- `delivery-proof`: `recipientId`, `paymentReceiptId`, `deliveredAt`, `fulfillmentId`, `auditCreated=true`
+
+Run:
+
+```bash
+npm run radio:remaining:packets
+EVIDENCE_PAYMENT_IMPORT="/absolute/path/to/completed-payment-proof.json" npm run radio:payment:proof
+```
+
+The payment gate remains blocked when any checkout, receipt, webhook signature,
+delivery, or audit row is absent or incomplete. No dummy transaction should ever
+be added to `_radio_index/payment-proof-import.json`.
+
 ## Files
 - `prisma/schema.prisma` — Album, RadioTrack, Purchase, Entitlement (+ User relations).
 - `packages/shared/src/commerce.ts` — pricing, album discount, entitlement & canPlayFull logic (unit-checked).

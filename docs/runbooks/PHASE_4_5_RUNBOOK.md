@@ -33,6 +33,18 @@ export APPLE_TEAM_ID="TEAMID"
 export WINDOWS_CERTIFICATE_THUMBPRINT="...."
 ```
 
+The evidence verifier reads only proof, not secrets. For a manual signing
+review, attach these non-secret values before `npm run evidence:signing`:
+
+```bash
+export EVIDENCE_SIGNING_IDENTITY="Developer ID Application: Your Name (TEAMID)"
+export EVIDENCE_NOTARIZATION_TICKET="notarytool-submission-or-stapler-citation"
+export EVIDENCE_SIGNING_REVIEWER="Hemant"
+```
+
+These variables do not sign the app and do not replace `codesign`, Gatekeeper,
+or stapler validation. They only attach reviewer/citation context to the report.
+
 ### 3. Build + evidence
 ```bash
 cd apps/desktop
@@ -43,9 +55,10 @@ npm run evidence:signing   # signing-notarization report (pass only on real code
 **Exit:** a signed, notarized artifact under `src-tauri/target/release/bundle/` + signing report `pass`.
 
 ## Phase 5 — Release review
-Hemant is the registered reviewer/rollback owner (`_radio_index/reviewers.json`). His approvals
-for the 20 genuinely-reviewable items are pre-recorded in
-`_radio_index/release-review-approvals.json`.
+Hemant is the registered reviewer/rollback owner (`_radio_index/reviewers.json`).
+That file and `_radio_index/release-review-approvals.json` are local,
+gitignored operator evidence. Import them when present; do not claim public repo
+approval until the import has been run in the current workspace.
 
 ```bash
 EVIDENCE_RELEASE_REVIEW_IMPORT="$(pwd)/_radio_index/release-review-approvals.json" npm run radio:release:review
@@ -59,5 +72,6 @@ blocked until their real evidence exists:
 To close them, append three approval records (same shape) with those keys once each is real,
 then re-run. This is the fail-closed design working — the gate won't go green on an installer
 or payment that doesn't exist yet.
-```
-```
+
+Each approval row must include `reviewer`, `reviewedAt`, `citation`, `reason`,
+`decision=approved`, and `auditVerified=true`.

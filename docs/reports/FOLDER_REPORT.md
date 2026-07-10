@@ -2,32 +2,34 @@
 Generated: 2026-07-08 · **Status section updated 2026-07-10** · Total size: ~36 GB (excl. node_modules/.git)
 
 ## Release status (from `radio:release:check`, macOS run 2026-07-10)
-- **14/16 command steps pass**, state **blocked** (NO_SHIP)
-- Failures at last run: **build** (root tsconfig rejected `.ts`-extension registry
-  imports — FIXED via `allowImportingTsExtensions` + self-governed app excludes;
-  re-run expected 15/16) and **desktop-signing** (1/8 proofs — needs Apple
-  Developer ID; the only cert-gated command failure)
+- **15/16 command steps pass**, state **blocked** (NO_SHIP)
+- Only command failure at last run: **desktop-signing** (1/8 proofs — needs
+  signed artifact, codesign verification, Apple Developer ID, non-ad-hoc
+  signature, Gatekeeper assessment, notarization, and reviewer proof)
+- Build blocker fixed: root config now allows `.ts` extension imports and keeps
+  self-governed desktop/radio app tsconfigs out of the root sweep.
 - Gate-level blockers (evidence, not code): rights closure 19/19 blocked,
   payment proof 0 receipts/webhooks, release review 23/23 unapproved, GUI smoke
   1/9, customer release 0/9 verified → `releaseAllowed:false`
 - Tests: 46 files / 202 passing · registry diff: 197 routes, 0 breaking
-- Git: master at `99e7942`+ (registry platform, agent phases 0–10, SPA shell,
-  accounts/auth, 458 preview clips, uniques target, storage + docs sanitation);
+- Git: master/hardening branch at `5800584`+ (registry platform, agent phases
+  0–10, SPA shell, accounts/auth, 458 preview clips, uniques target, storage +
+  docs sanitation, build fix);
   all commits local — push to `wortforfilms/radio` pending
 
 ## Top-level documents
 | File | Purpose |
 |---|---|
-| RADIO_RELEASE_ROADMAP.md | Master plan, Phases 0–7 (0/1/6 done; 2/3/4/5 await user evidence) |
-| RIGHTS_CLOSURE_RUNBOOK.md | Rights lane commands (asset + audio) |
-| PHASE_4_5_RUNBOOK.md | Packaging/signing + QA review steps |
-| RADIO_COMMERCE_SPEC.md | Razorpay payments spec |
-| RADIO_TRACK_ONBOARDING_SOP.md | Track ingestion SOP |
-| RADIO_MEDIA_STORAGE.md | Media storage layout (untracked) |
-| RADIO_JOCKEY_TRANSCRIPTS.md | RJ transcript notes |
-| RADIO_RECOLLECTED_STRUCTURE.md | Recovered app structure |
-| RADIO_VAIGYAANIQ_BLUEPRINT.md | Product blueprint |
-| IMPLEMENTATION_STRUCTURE.md / AGENTS.md | Repo layout + agent notes |
+| docs/runbooks/RADIO_RELEASE_ROADMAP.md | Master plan, Phases 0–7 (0/1/6 done; 2/3/4/5 await user evidence) |
+| docs/runbooks/RIGHTS_CLOSURE_RUNBOOK.md | Rights lane commands (asset + audio) |
+| docs/runbooks/PHASE_4_5_RUNBOOK.md | Packaging/signing + QA review steps |
+| docs/specs/RADIO_COMMERCE_SPEC.md | Razorpay payments spec |
+| docs/runbooks/RADIO_TRACK_ONBOARDING_SOP.md | Track ingestion SOP |
+| docs/runbooks/RADIO_MEDIA_STORAGE.md | Media storage layout |
+| docs/reports/RADIO_JOCKEY_TRANSCRIPTS.md | RJ transcript notes |
+| docs/specs/RADIO_RECOLLECTED_STRUCTURE.md | Recovered app structure |
+| docs/specs/RADIO_VAIGYAANIQ_BLUEPRINT.md | Product blueprint |
+| docs/specs/IMPLEMENTATION_STRUCTURE.md / AGENTS.md | Repo layout + agent notes |
 | package.json / tsconfig / vitest.config.ts / .env(.example) | Build config |
 
 ## Directories

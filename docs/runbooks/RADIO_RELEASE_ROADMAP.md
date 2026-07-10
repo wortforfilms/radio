@@ -27,7 +27,7 @@ Every shipping record needs: `source, creator, license, citation, reviewer, revi
 - [x] [me] Asset-evidence proof generator `npm run radio:rights:proof` — pre-fills accurate source/creator/licence/citation/checksum for all 19 interface assets (owner→VESAHE proprietary; three.js→MIT), schema-matched to the `radio:rights:closure` verifier.
 - [x] [me] Audio approved-list generator `npm run radio:verified:list` — emits `verified_v1.csv` for the promotion gate.
 - [x] [me] Verifier wiring confirmed end-to-end (`radio:rights:closure` → `rights-closure-report.json`).
-- [x] [you→done] Named reviewer **onboarded: Hemant (Producer, rollback owner)** → `_radio_index/reviewers.json`. The signed asset proof `_radio_index/rights-proof-assets.json` is committed (19/19 verified; verifier simulation 0 blocked).
+- [x] [you→done] Named reviewer **onboarded locally: Hemant (Producer, rollback owner)** → `_radio_index/reviewers.json`. `_radio_index/` is gitignored operator evidence; when present locally, `_radio_index/rights-proof-assets.json` carries 19/19 verified asset records and can be imported to close the asset lane.
 - [ ] [you] Run `radio:rights:closure` with the signed proof (closes asset lane), then `radio:verified:list -- --reviewer "Hemant"` + `radio:promote` for the audio lane.
 
 **Exit:** ⏳ run the import command in the runbook → asset rights close (`rights-closed-verified`); approve an audio wave → **canPlay flips to true**.
@@ -52,7 +52,7 @@ See **`PHASE_4_5_RUNBOOK.md`**.
 **Exit:** ⏳ add cert + build → a signed, notarized artifact.
 
 ## Phase 5 — QA + release review  — ✅ [me] reviewer approvals recorded · ⏳ 3 items await Phase 3/4
-- [x] [me] Reviewer **Hemant** (Producer, rollback owner) registered; approvals for **20 of 23** board items pre-recorded in `_radio_index/release-review-approvals.json` (verifier simulation: 20 verified).
+- [x] [me] Reviewer **Hemant** (Producer, rollback owner) registered locally; approvals for **20 of 23** board items may be supplied via gitignored `_radio_index/release-review-approvals.json` (verifier simulation: 20 verified when imported).
 - [ ] [you] Run `EVIDENCE_RELEASE_REVIEW_IMPORT=… npm run radio:release:review` (→ 20 verified, 3 blocked).
 - [ ] [you] Approve the 3 honestly-pending items once real: `payment-gift` (real txn), `installer` (signed build), `release-review` (final go-live sign-off).
 
