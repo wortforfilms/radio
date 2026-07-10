@@ -43,17 +43,24 @@ export async function loadManifest(): Promise<EngineManifest> {
 export function stationTracks(station: ManifestStation): SpaTrack[] {
   return (station.programs || [])
     .filter((program) => program.audioUrl)
-    .map((program) => ({
-      id: program.trackId,
-      title: program.title,
-      subtitle: `${station.name}${program.version && program.version !== "original" ? ` · ${program.version}` : ""}`,
-      audioUrl: rel(program.audioUrl),
-      coverUrl: program.coverUrl ? rel(program.coverUrl) : null,
-      freeTier: program.freeTier === true,
-      previewSeconds: program.previewSeconds ?? 45,
-      access: program.freeTier === true ? "full" : "preview",
-      live: Boolean(station.streamUrl && station.evidence?.liveStreamVerified) // none today — honest
-    }));
+    .map((program) => {
+      const access: SpaTrack["access"] = program.freeTier === true ? "full" : "preview";
+      // Preview-access tracks stream the DEDICATED 45s clip when it exists —
+      // the full file is never exposed to unentitled listeners (clamp is the
+      // fallback only for tracks whose clip hasn't been generated yet).
+      const previewUrl = (program as { previewUrl?: string | null }).previewUrl;
+      return {
+        id: program.trackId,
+        title: program.title,
+        subtitle: `${station.name}${program.version && program.version !== "original" ? ` · ${program.version}` : ""}`,
+        audioUrl: rel(access === "preview" && previewUrl ? previewUrl : program.audioUrl),
+        coverUrl: program.coverUrl ? rel(program.coverUrl) : null,
+        freeTier: program.freeTier === true,
+        previewSeconds: program.previewSeconds ?? 45,
+        access,
+        live: Boolean(station.streamUrl && station.evidence?.liveStreamVerified) // none today — honest
+      };
+    });
 }
 
 /** Real offline cache status via the Cache Storage API + the offline manifest. */
