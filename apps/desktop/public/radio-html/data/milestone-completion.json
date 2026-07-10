@@ -12,26 +12,26 @@
   },
   "counts": {
     "milestones": 9,
-    "implementedDraft": 9,
-    "evidenceBlocked": 9,
+    "implementedDraft": 8,
+    "evidenceBlocked": 8,
     "productionReady": 0,
     "shipDecision": "NO_SHIP",
     "paymentProofReceipts": 0,
     "paymentProofBlocked": 5,
-    "rightsClosureClosed": 0,
-    "rightsClosureBlocked": 19,
+    "rightsClosureClosed": 19,
+    "rightsClosureBlocked": 0,
     "releaseReviewVerified": 0,
     "releaseReviewBlocked": 23,
     "customerReleaseReady": 0,
-    "customerReleaseBlocked": 9
+    "customerReleaseBlocked": 8
   },
   "milestones": [
     {
       "key": "rights-evidence-closure",
       "label": "Rights Evidence Closure",
-      "status": "implemented-draft",
+      "status": "verified",
       "evidence": "/radio-html/data/rights-closure-report.json",
-      "blocker": "Rights closure blocked: 19 record(s) lack complete proof."
+      "blocker": null
     },
     {
       "key": "playable-audio-import-gate",
@@ -87,7 +87,7 @@
       "label": "Customer Release Milestone",
       "status": "implemented-draft",
       "evidence": "/radio-html/data/customer-release-milestone.json",
-      "blocker": "Customer release blocked: 9 gate(s) lack complete proof."
+      "blocker": "Customer release blocked: 8 gate(s) lack complete proof."
     }
   ]
 }

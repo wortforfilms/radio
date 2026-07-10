@@ -20,8 +20,8 @@
   "counts": {
     "templates": 4,
     "rightsRecords": 19,
-    "closed": 0,
-    "blocked": 19
+    "closed": 19,
+    "blocked": 0
   },
   "templates": [
     {

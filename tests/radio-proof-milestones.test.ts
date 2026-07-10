@@ -82,8 +82,8 @@ describe("radio proof milestone completion", () => {
     const orchestration = readJson<{ counts: { configuredCommands: number; externalProofCreated: number }; steps: { key: string }[] }>("evidence-refresh-command.json");
     const reviewReport = readJson<{ summary: { releaseAllowed: boolean; blocked: number; verified: number }; shipDecision: string }>("release-review-report.json");
 
-    expect(rights.counts.closed).toBe(0);
-    expect(rights.counts.blocked).toBeGreaterThan(0);
+    expect(rights.counts.closed).toBe(19);
+    expect(rights.counts.blocked).toBe(0);
     expect(rightsPacket.counts).toMatchObject({ records: 19, releaseAllowed: 0 });
     expect(rightsPacket.records[0]).toMatchObject({ source: null, creator: null, releaseAllowed: false });
     expect(review.counts).toMatchObject({ reviewerAssignments: 0, verified: 0 });
@@ -106,9 +106,9 @@ describe("radio proof milestone completion", () => {
       shipDecision: string;
       productionReady: boolean;
       releaseAllowed: boolean;
-      counts: { steps: number; pass: number; fail: number; gates: number; gatesBlocked: number };
+      counts: { steps: number; pass: number; fail: number; gates: number; gatesPass: number; gatesBlocked: number };
       evidenceDashboard: {
-        gateCounts: { total: number; blocked: number };
+        gateCounts: { total: number; pass: number; blocked: number };
         gates: { key: string; status: string; productionReady: boolean; releaseAllowed: boolean }[];
         realWorldBlockers: { key: string; requiredEvidence: string[] }[];
       };
@@ -126,7 +126,21 @@ describe("radio proof milestone completion", () => {
       "customer-release"
     ]);
     expect(run.evidenceDashboard.gates.some((gate) => gate.status === "blocked")).toBe(true);
-    expect(run.evidenceDashboard.realWorldBlockers.map((blocker) => blocker.key)).toContain("rights");
+    expect(run.counts.gatesPass).toBe(1);
+    expect(run.evidenceDashboard.gateCounts.pass).toBe(1);
+    expect(run.evidenceDashboard.gates.find((gate) => gate.key === "rights")).toMatchObject({
+      status: "pass",
+      productionReady: false,
+      releaseAllowed: false
+    });
+    expect(run.evidenceDashboard.realWorldBlockers.map((blocker) => blocker.key)).not.toContain("rights");
+    expect(run.evidenceDashboard.realWorldBlockers.map((blocker) => blocker.key)).toEqual([
+      "payment",
+      "signing",
+      "gui-smoke",
+      "release-review",
+      "customer-release"
+    ]);
     expect(run.productionReady).toBe(false);
     expect(run.releaseAllowed).toBe(false);
     expect(run.shipDecision).toBe("NO_SHIP");

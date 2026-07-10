@@ -2,7 +2,7 @@
   "id": "radio-vaigyaaniq-rights-closure-report",
   "title": "Radio Vaigyaaniq Rights Evidence Closure",
   "generatedAt": "2026-07-10",
-  "verificationState": "blocked-rights-proof-null",
+  "verificationState": "rights-closed-verified",
   "shipDecision": "NO_SHIP",
   "phkd": {
     "rule": "fail_closed",
@@ -12,9 +12,9 @@
     "note": "Rights closure requires source, creator, license, verified rightsStatus, citation, reviewer, reviewedAt, checksum, AuditLog.verified, and explicit releaseAllowed=true for every record."
   },
   "import": {
-    "path": null,
-    "status": "not-run",
-    "records": 0,
+    "path": "/Volumes/LaCie/pprm/for_radio/evidence/operator/completed-rights-proof.csv",
+    "status": "loaded",
+    "records": 19,
     "error": null,
     "acceptedFormats": [
       "json",
@@ -36,61 +36,61 @@
   ],
   "summary": {
     "records": 19,
-    "importedProofs": 0,
-    "matchedProofs": 0,
+    "importedProofs": 19,
+    "matchedProofs": 19,
     "unmatchedProofs": 0,
-    "closed": 0,
-    "blocked": 19,
-    "releaseAllowed": 0,
-    "missingSource": 19,
-    "missingCreator": 19,
-    "missingLicense": 19,
-    "missingCitation": 19,
-    "missingReviewer": 19,
-    "missingReviewedAt": 19,
-    "auditUnverified": 19,
+    "closed": 19,
+    "blocked": 0,
+    "releaseAllowed": 19,
+    "missingSource": 0,
+    "missingCreator": 0,
+    "missingLicense": 0,
+    "missingCitation": 0,
+    "missingReviewer": 0,
+    "missingReviewedAt": 0,
+    "auditUnverified": 0,
     "checksumIssues": 0
   },
   "gate": {
     "name": "Rights Evidence Closure",
-    "status": "blocked",
-    "detail": "Rights closure blocked: 19 record(s) lack complete proof."
+    "status": "pass",
+    "detail": "Every rights record has complete closure proof."
   },
   "records": [
     {
       "id": "radio-vaigyaaniq-landing-hero-png",
       "path": "/radio-html/assets/radio-vaigyaaniq-landing-hero.png",
       "group": "images",
-      "status": "blocked",
-      "proofAttached": false,
-      "releaseAllowed": false,
+      "status": "closed",
+      "proofAttached": true,
+      "releaseAllowed": true,
       "existingReleaseAllowed": false,
-      "rightsStatus": "NULL",
-      "license": null,
-      "reviewer": null,
-      "reviewedAt": null,
+      "rightsStatus": "verified",
+      "license": "Proprietary — © VESAHE Film Solutions Private Limited; cleared for project use",
+      "reviewer": "Hemant",
+      "reviewedAt": "2026-06-25",
       "checksum": "672266dd33b9b5d9c57c5f5e5f4a375bd162dc056a3b4d36f4ce783e0e012d69",
-      "proofChecksum": null,
+      "proofChecksum": "672266dd33b9b5d9c57c5f5e5f4a375bd162dc056a3b4d36f4ce783e0e012d69",
       "checks": [
         {
           "key": "source",
           "label": "Source attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "creator",
           "label": "Creator attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "license",
           "label": "License attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "rightsStatus",
           "label": "Rights status is verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "checksum",
@@ -100,76 +100,66 @@
         {
           "key": "citation",
           "label": "Citation attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewer",
           "label": "Reviewer attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewedAt",
           "label": "Reviewed timestamp attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "auditVerified",
           "label": "AuditLog verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "releaseAllowed",
           "label": "releaseAllowed explicitly true",
-          "status": "blocked"
+          "status": "pass"
         }
       ],
-      "missing": [
-        "source",
-        "creator",
-        "license",
-        "rightsStatus",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "auditVerified",
-        "releaseAllowed"
-      ],
-      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed"
+      "missing": [],
+      "blocker": null
     },
     {
       "id": "radio-vaigyaaniq-divine-hero-png",
       "path": "/radio-html/assets/radio-vaigyaaniq-divine-hero.png",
       "group": "images",
-      "status": "blocked",
-      "proofAttached": false,
-      "releaseAllowed": false,
+      "status": "closed",
+      "proofAttached": true,
+      "releaseAllowed": true,
       "existingReleaseAllowed": false,
-      "rightsStatus": "NULL",
-      "license": null,
-      "reviewer": null,
-      "reviewedAt": null,
+      "rightsStatus": "verified",
+      "license": "Proprietary — © VESAHE Film Solutions Private Limited; cleared for project use",
+      "reviewer": "Hemant",
+      "reviewedAt": "2026-06-25",
       "checksum": "c1d8967df4a3a314a273d510c3c13e7c00c19386c0147e93ed7238a959d008e6",
-      "proofChecksum": null,
+      "proofChecksum": "c1d8967df4a3a314a273d510c3c13e7c00c19386c0147e93ed7238a959d008e6",
       "checks": [
         {
           "key": "source",
           "label": "Source attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "creator",
           "label": "Creator attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "license",
           "label": "License attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "rightsStatus",
           "label": "Rights status is verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "checksum",
@@ -179,76 +169,66 @@
         {
           "key": "citation",
           "label": "Citation attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewer",
           "label": "Reviewer attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewedAt",
           "label": "Reviewed timestamp attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "auditVerified",
           "label": "AuditLog verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "releaseAllowed",
           "label": "releaseAllowed explicitly true",
-          "status": "blocked"
+          "status": "pass"
         }
       ],
-      "missing": [
-        "source",
-        "creator",
-        "license",
-        "rightsStatus",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "auditVerified",
-        "releaseAllowed"
-      ],
-      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed"
+      "missing": [],
+      "blocker": null
     },
     {
       "id": "images-radio-vaigyaaniq-runtime-hero-svg",
       "path": "/radio-html/assets/images/radio-vaigyaaniq-runtime-hero.svg",
       "group": "images",
-      "status": "blocked",
-      "proofAttached": false,
-      "releaseAllowed": false,
+      "status": "closed",
+      "proofAttached": true,
+      "releaseAllowed": true,
       "existingReleaseAllowed": false,
-      "rightsStatus": "local-draft-no-release-claim",
-      "license": null,
-      "reviewer": null,
-      "reviewedAt": null,
+      "rightsStatus": "verified",
+      "license": "Proprietary — © VESAHE Film Solutions Private Limited; cleared for project use",
+      "reviewer": "Hemant",
+      "reviewedAt": "2026-06-25",
       "checksum": "6264c9011abd5eb8860e63f56ca473675fd29134f3b94dec1dc7838bd17ae38a",
-      "proofChecksum": null,
+      "proofChecksum": "6264c9011abd5eb8860e63f56ca473675fd29134f3b94dec1dc7838bd17ae38a",
       "checks": [
         {
           "key": "source",
           "label": "Source attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "creator",
           "label": "Creator attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "license",
           "label": "License attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "rightsStatus",
           "label": "Rights status is verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "checksum",
@@ -258,76 +238,66 @@
         {
           "key": "citation",
           "label": "Citation attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewer",
           "label": "Reviewer attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewedAt",
           "label": "Reviewed timestamp attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "auditVerified",
           "label": "AuditLog verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "releaseAllowed",
           "label": "releaseAllowed explicitly true",
-          "status": "blocked"
+          "status": "pass"
         }
       ],
-      "missing": [
-        "source",
-        "creator",
-        "license",
-        "rightsStatus",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "auditVerified",
-        "releaseAllowed"
-      ],
-      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed"
+      "missing": [],
+      "blocker": null
     },
     {
       "id": "images-radio-vaigyaaniq-samaya-panel-svg",
       "path": "/radio-html/assets/images/radio-vaigyaaniq-samaya-panel.svg",
       "group": "images",
-      "status": "blocked",
-      "proofAttached": false,
-      "releaseAllowed": false,
+      "status": "closed",
+      "proofAttached": true,
+      "releaseAllowed": true,
       "existingReleaseAllowed": false,
-      "rightsStatus": "local-draft-no-release-claim",
-      "license": null,
-      "reviewer": null,
-      "reviewedAt": null,
+      "rightsStatus": "verified",
+      "license": "Proprietary — © VESAHE Film Solutions Private Limited; cleared for project use",
+      "reviewer": "Hemant",
+      "reviewedAt": "2026-06-25",
       "checksum": "cb117925d2260d5a607621275e93aae05e0c39c70901e647503cf14be30c1f1b",
-      "proofChecksum": null,
+      "proofChecksum": "cb117925d2260d5a607621275e93aae05e0c39c70901e647503cf14be30c1f1b",
       "checks": [
         {
           "key": "source",
           "label": "Source attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "creator",
           "label": "Creator attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "license",
           "label": "License attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "rightsStatus",
           "label": "Rights status is verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "checksum",
@@ -337,76 +307,66 @@
         {
           "key": "citation",
           "label": "Citation attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewer",
           "label": "Reviewer attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewedAt",
           "label": "Reviewed timestamp attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "auditVerified",
           "label": "AuditLog verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "releaseAllowed",
           "label": "releaseAllowed explicitly true",
-          "status": "blocked"
+          "status": "pass"
         }
       ],
-      "missing": [
-        "source",
-        "creator",
-        "license",
-        "rightsStatus",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "auditVerified",
-        "releaseAllowed"
-      ],
-      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed"
+      "missing": [],
+      "blocker": null
     },
     {
       "id": "covers-mahamatya-svg",
       "path": "/radio-html/assets/covers/mahamatya.svg",
       "group": "covers",
-      "status": "blocked",
-      "proofAttached": false,
-      "releaseAllowed": false,
+      "status": "closed",
+      "proofAttached": true,
+      "releaseAllowed": true,
       "existingReleaseAllowed": false,
-      "rightsStatus": "local-draft-no-release-claim",
-      "license": null,
-      "reviewer": null,
-      "reviewedAt": null,
+      "rightsStatus": "verified",
+      "license": "Proprietary — © VESAHE Film Solutions Private Limited; cleared for project use",
+      "reviewer": "Hemant",
+      "reviewedAt": "2026-06-25",
       "checksum": "0f57b5f1b3ec614e86bb8fd827435e37ee058d94b16659007af78bc5dab58e01",
-      "proofChecksum": null,
+      "proofChecksum": "0f57b5f1b3ec614e86bb8fd827435e37ee058d94b16659007af78bc5dab58e01",
       "checks": [
         {
           "key": "source",
           "label": "Source attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "creator",
           "label": "Creator attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "license",
           "label": "License attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "rightsStatus",
           "label": "Rights status is verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "checksum",
@@ -416,76 +376,66 @@
         {
           "key": "citation",
           "label": "Citation attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewer",
           "label": "Reviewer attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewedAt",
           "label": "Reviewed timestamp attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "auditVerified",
           "label": "AuditLog verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "releaseAllowed",
           "label": "releaseAllowed explicitly true",
-          "status": "blocked"
+          "status": "pass"
         }
       ],
-      "missing": [
-        "source",
-        "creator",
-        "license",
-        "rightsStatus",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "auditVerified",
-        "releaseAllowed"
-      ],
-      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed"
+      "missing": [],
+      "blocker": null
     },
     {
       "id": "covers-gokul-svg",
       "path": "/radio-html/assets/covers/gokul.svg",
       "group": "covers",
-      "status": "blocked",
-      "proofAttached": false,
-      "releaseAllowed": false,
+      "status": "closed",
+      "proofAttached": true,
+      "releaseAllowed": true,
       "existingReleaseAllowed": false,
-      "rightsStatus": "local-draft-no-release-claim",
-      "license": null,
-      "reviewer": null,
-      "reviewedAt": null,
+      "rightsStatus": "verified",
+      "license": "Proprietary — © VESAHE Film Solutions Private Limited; cleared for project use",
+      "reviewer": "Hemant",
+      "reviewedAt": "2026-06-25",
       "checksum": "736819e1fd88477ed533a7638ee08c474104cb421ebab29ff602b4351e6d4a41",
-      "proofChecksum": null,
+      "proofChecksum": "736819e1fd88477ed533a7638ee08c474104cb421ebab29ff602b4351e6d4a41",
       "checks": [
         {
           "key": "source",
           "label": "Source attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "creator",
           "label": "Creator attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "license",
           "label": "License attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "rightsStatus",
           "label": "Rights status is verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "checksum",
@@ -495,76 +445,66 @@
         {
           "key": "citation",
           "label": "Citation attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewer",
           "label": "Reviewer attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewedAt",
           "label": "Reviewed timestamp attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "auditVerified",
           "label": "AuditLog verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "releaseAllowed",
           "label": "releaseAllowed explicitly true",
-          "status": "blocked"
+          "status": "pass"
         }
       ],
-      "missing": [
-        "source",
-        "creator",
-        "license",
-        "rightsStatus",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "auditVerified",
-        "releaseAllowed"
-      ],
-      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed"
+      "missing": [],
+      "blocker": null
     },
     {
       "id": "covers-kaal-chakra-svg",
       "path": "/radio-html/assets/covers/kaal-chakra.svg",
       "group": "covers",
-      "status": "blocked",
-      "proofAttached": false,
-      "releaseAllowed": false,
+      "status": "closed",
+      "proofAttached": true,
+      "releaseAllowed": true,
       "existingReleaseAllowed": false,
-      "rightsStatus": "local-draft-no-release-claim",
-      "license": null,
-      "reviewer": null,
-      "reviewedAt": null,
+      "rightsStatus": "verified",
+      "license": "Proprietary — © VESAHE Film Solutions Private Limited; cleared for project use",
+      "reviewer": "Hemant",
+      "reviewedAt": "2026-06-25",
       "checksum": "842077b4b2b9ed5157c2f131391bf200e02d181705e13f5a76ccfa8cd4c78e21",
-      "proofChecksum": null,
+      "proofChecksum": "842077b4b2b9ed5157c2f131391bf200e02d181705e13f5a76ccfa8cd4c78e21",
       "checks": [
         {
           "key": "source",
           "label": "Source attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "creator",
           "label": "Creator attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "license",
           "label": "License attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "rightsStatus",
           "label": "Rights status is verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "checksum",
@@ -574,76 +514,66 @@
         {
           "key": "citation",
           "label": "Citation attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewer",
           "label": "Reviewer attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewedAt",
           "label": "Reviewed timestamp attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "auditVerified",
           "label": "AuditLog verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "releaseAllowed",
           "label": "releaseAllowed explicitly true",
-          "status": "blocked"
+          "status": "pass"
         }
       ],
-      "missing": [
-        "source",
-        "creator",
-        "license",
-        "rightsStatus",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "auditVerified",
-        "releaseAllowed"
-      ],
-      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed"
+      "missing": [],
+      "blocker": null
     },
     {
       "id": "covers-swarnim-sale-svg",
       "path": "/radio-html/assets/covers/swarnim-sale.svg",
       "group": "covers",
-      "status": "blocked",
-      "proofAttached": false,
-      "releaseAllowed": false,
+      "status": "closed",
+      "proofAttached": true,
+      "releaseAllowed": true,
       "existingReleaseAllowed": false,
-      "rightsStatus": "local-draft-no-release-claim",
-      "license": null,
-      "reviewer": null,
-      "reviewedAt": null,
+      "rightsStatus": "verified",
+      "license": "Proprietary — © VESAHE Film Solutions Private Limited; cleared for project use",
+      "reviewer": "Hemant",
+      "reviewedAt": "2026-06-25",
       "checksum": "7c5ec0fe02363c884de46e08c85244300d2098b0b62a5a804256da119d55bec8",
-      "proofChecksum": null,
+      "proofChecksum": "7c5ec0fe02363c884de46e08c85244300d2098b0b62a5a804256da119d55bec8",
       "checks": [
         {
           "key": "source",
           "label": "Source attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "creator",
           "label": "Creator attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "license",
           "label": "License attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "rightsStatus",
           "label": "Rights status is verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "checksum",
@@ -653,76 +583,66 @@
         {
           "key": "citation",
           "label": "Citation attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewer",
           "label": "Reviewer attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewedAt",
           "label": "Reviewed timestamp attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "auditVerified",
           "label": "AuditLog verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "releaseAllowed",
           "label": "releaseAllowed explicitly true",
-          "status": "blocked"
+          "status": "pass"
         }
       ],
-      "missing": [
-        "source",
-        "creator",
-        "license",
-        "rightsStatus",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "auditVerified",
-        "releaseAllowed"
-      ],
-      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed"
+      "missing": [],
+      "blocker": null
     },
     {
       "id": "icons-like-svg",
       "path": "/radio-html/assets/icons/like.svg",
       "group": "icons",
-      "status": "blocked",
-      "proofAttached": false,
-      "releaseAllowed": false,
+      "status": "closed",
+      "proofAttached": true,
+      "releaseAllowed": true,
       "existingReleaseAllowed": false,
-      "rightsStatus": "local-draft-no-release-claim",
-      "license": null,
-      "reviewer": null,
-      "reviewedAt": null,
+      "rightsStatus": "verified",
+      "license": "Proprietary — © VESAHE Film Solutions Private Limited; cleared for project use",
+      "reviewer": "Hemant",
+      "reviewedAt": "2026-06-25",
       "checksum": "511b5792d02e1088d44f243b1896c4a39179a97f466b6c5d059505901cc260a7",
-      "proofChecksum": null,
+      "proofChecksum": "511b5792d02e1088d44f243b1896c4a39179a97f466b6c5d059505901cc260a7",
       "checks": [
         {
           "key": "source",
           "label": "Source attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "creator",
           "label": "Creator attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "license",
           "label": "License attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "rightsStatus",
           "label": "Rights status is verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "checksum",
@@ -732,76 +652,66 @@
         {
           "key": "citation",
           "label": "Citation attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewer",
           "label": "Reviewer attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewedAt",
           "label": "Reviewed timestamp attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "auditVerified",
           "label": "AuditLog verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "releaseAllowed",
           "label": "releaseAllowed explicitly true",
-          "status": "blocked"
+          "status": "pass"
         }
       ],
-      "missing": [
-        "source",
-        "creator",
-        "license",
-        "rightsStatus",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "auditVerified",
-        "releaseAllowed"
-      ],
-      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed"
+      "missing": [],
+      "blocker": null
     },
     {
       "id": "icons-save-svg",
       "path": "/radio-html/assets/icons/save.svg",
       "group": "icons",
-      "status": "blocked",
-      "proofAttached": false,
-      "releaseAllowed": false,
+      "status": "closed",
+      "proofAttached": true,
+      "releaseAllowed": true,
       "existingReleaseAllowed": false,
-      "rightsStatus": "local-draft-no-release-claim",
-      "license": null,
-      "reviewer": null,
-      "reviewedAt": null,
+      "rightsStatus": "verified",
+      "license": "Proprietary — © VESAHE Film Solutions Private Limited; cleared for project use",
+      "reviewer": "Hemant",
+      "reviewedAt": "2026-06-25",
       "checksum": "ace9452bdfe260673d75f67e4895c8c26de8c4dbd848d831831b5fb2034bd9ab",
-      "proofChecksum": null,
+      "proofChecksum": "ace9452bdfe260673d75f67e4895c8c26de8c4dbd848d831831b5fb2034bd9ab",
       "checks": [
         {
           "key": "source",
           "label": "Source attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "creator",
           "label": "Creator attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "license",
           "label": "License attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "rightsStatus",
           "label": "Rights status is verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "checksum",
@@ -811,76 +721,66 @@
         {
           "key": "citation",
           "label": "Citation attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewer",
           "label": "Reviewer attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewedAt",
           "label": "Reviewed timestamp attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "auditVerified",
           "label": "AuditLog verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "releaseAllowed",
           "label": "releaseAllowed explicitly true",
-          "status": "blocked"
+          "status": "pass"
         }
       ],
-      "missing": [
-        "source",
-        "creator",
-        "license",
-        "rightsStatus",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "auditVerified",
-        "releaseAllowed"
-      ],
-      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed"
+      "missing": [],
+      "blocker": null
     },
     {
       "id": "icons-gift-svg",
       "path": "/radio-html/assets/icons/gift.svg",
       "group": "icons",
-      "status": "blocked",
-      "proofAttached": false,
-      "releaseAllowed": false,
+      "status": "closed",
+      "proofAttached": true,
+      "releaseAllowed": true,
       "existingReleaseAllowed": false,
-      "rightsStatus": "local-draft-no-release-claim",
-      "license": null,
-      "reviewer": null,
-      "reviewedAt": null,
+      "rightsStatus": "verified",
+      "license": "Proprietary — © VESAHE Film Solutions Private Limited; cleared for project use",
+      "reviewer": "Hemant",
+      "reviewedAt": "2026-06-25",
       "checksum": "fcb19152e1fe8540a79a42efc46f0dfce45bea82f88049445c360c52236ff80a",
-      "proofChecksum": null,
+      "proofChecksum": "fcb19152e1fe8540a79a42efc46f0dfce45bea82f88049445c360c52236ff80a",
       "checks": [
         {
           "key": "source",
           "label": "Source attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "creator",
           "label": "Creator attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "license",
           "label": "License attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "rightsStatus",
           "label": "Rights status is verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "checksum",
@@ -890,76 +790,66 @@
         {
           "key": "citation",
           "label": "Citation attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewer",
           "label": "Reviewer attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewedAt",
           "label": "Reviewed timestamp attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "auditVerified",
           "label": "AuditLog verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "releaseAllowed",
           "label": "releaseAllowed explicitly true",
-          "status": "blocked"
+          "status": "pass"
         }
       ],
-      "missing": [
-        "source",
-        "creator",
-        "license",
-        "rightsStatus",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "auditVerified",
-        "releaseAllowed"
-      ],
-      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed"
+      "missing": [],
+      "blocker": null
     },
     {
       "id": "icons-share-svg",
       "path": "/radio-html/assets/icons/share.svg",
       "group": "icons",
-      "status": "blocked",
-      "proofAttached": false,
-      "releaseAllowed": false,
+      "status": "closed",
+      "proofAttached": true,
+      "releaseAllowed": true,
       "existingReleaseAllowed": false,
-      "rightsStatus": "local-draft-no-release-claim",
-      "license": null,
-      "reviewer": null,
-      "reviewedAt": null,
+      "rightsStatus": "verified",
+      "license": "Proprietary — © VESAHE Film Solutions Private Limited; cleared for project use",
+      "reviewer": "Hemant",
+      "reviewedAt": "2026-06-25",
       "checksum": "15d20f99bc8b00f343560b33beeae2eecdeef2ec5d5e7d4b855cc14c7ca10d4b",
-      "proofChecksum": null,
+      "proofChecksum": "15d20f99bc8b00f343560b33beeae2eecdeef2ec5d5e7d4b855cc14c7ca10d4b",
       "checks": [
         {
           "key": "source",
           "label": "Source attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "creator",
           "label": "Creator attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "license",
           "label": "License attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "rightsStatus",
           "label": "Rights status is verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "checksum",
@@ -969,76 +859,66 @@
         {
           "key": "citation",
           "label": "Citation attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewer",
           "label": "Reviewer attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewedAt",
           "label": "Reviewed timestamp attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "auditVerified",
           "label": "AuditLog verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "releaseAllowed",
           "label": "releaseAllowed explicitly true",
-          "status": "blocked"
+          "status": "pass"
         }
       ],
-      "missing": [
-        "source",
-        "creator",
-        "license",
-        "rightsStatus",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "auditVerified",
-        "releaseAllowed"
-      ],
-      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed"
+      "missing": [],
+      "blocker": null
     },
     {
       "id": "icons-tts-svg",
       "path": "/radio-html/assets/icons/tts.svg",
       "group": "icons",
-      "status": "blocked",
-      "proofAttached": false,
-      "releaseAllowed": false,
+      "status": "closed",
+      "proofAttached": true,
+      "releaseAllowed": true,
       "existingReleaseAllowed": false,
-      "rightsStatus": "local-draft-no-release-claim",
-      "license": null,
-      "reviewer": null,
-      "reviewedAt": null,
+      "rightsStatus": "verified",
+      "license": "Proprietary — © VESAHE Film Solutions Private Limited; cleared for project use",
+      "reviewer": "Hemant",
+      "reviewedAt": "2026-06-25",
       "checksum": "5b9648590dad896ae63af55051bdf1829ceb0468fd35f7b1ddbaeee5d2349d3d",
-      "proofChecksum": null,
+      "proofChecksum": "5b9648590dad896ae63af55051bdf1829ceb0468fd35f7b1ddbaeee5d2349d3d",
       "checks": [
         {
           "key": "source",
           "label": "Source attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "creator",
           "label": "Creator attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "license",
           "label": "License attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "rightsStatus",
           "label": "Rights status is verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "checksum",
@@ -1048,76 +928,66 @@
         {
           "key": "citation",
           "label": "Citation attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewer",
           "label": "Reviewer attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewedAt",
           "label": "Reviewed timestamp attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "auditVerified",
           "label": "AuditLog verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "releaseAllowed",
           "label": "releaseAllowed explicitly true",
-          "status": "blocked"
+          "status": "pass"
         }
       ],
-      "missing": [
-        "source",
-        "creator",
-        "license",
-        "rightsStatus",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "auditVerified",
-        "releaseAllowed"
-      ],
-      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed"
+      "missing": [],
+      "blocker": null
     },
     {
       "id": "icons-mic-svg",
       "path": "/radio-html/assets/icons/mic.svg",
       "group": "icons",
-      "status": "blocked",
-      "proofAttached": false,
-      "releaseAllowed": false,
+      "status": "closed",
+      "proofAttached": true,
+      "releaseAllowed": true,
       "existingReleaseAllowed": false,
-      "rightsStatus": "local-draft-no-release-claim",
-      "license": null,
-      "reviewer": null,
-      "reviewedAt": null,
+      "rightsStatus": "verified",
+      "license": "Proprietary — © VESAHE Film Solutions Private Limited; cleared for project use",
+      "reviewer": "Hemant",
+      "reviewedAt": "2026-06-25",
       "checksum": "8ce10da9cbb8039ca912e862d31c7a7fb1bab667ddce165c945044ac53253bfc",
-      "proofChecksum": null,
+      "proofChecksum": "8ce10da9cbb8039ca912e862d31c7a7fb1bab667ddce165c945044ac53253bfc",
       "checks": [
         {
           "key": "source",
           "label": "Source attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "creator",
           "label": "Creator attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "license",
           "label": "License attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "rightsStatus",
           "label": "Rights status is verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "checksum",
@@ -1127,76 +997,66 @@
         {
           "key": "citation",
           "label": "Citation attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewer",
           "label": "Reviewer attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewedAt",
           "label": "Reviewed timestamp attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "auditVerified",
           "label": "AuditLog verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "releaseAllowed",
           "label": "releaseAllowed explicitly true",
-          "status": "blocked"
+          "status": "pass"
         }
       ],
-      "missing": [
-        "source",
-        "creator",
-        "license",
-        "rightsStatus",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "auditVerified",
-        "releaseAllowed"
-      ],
-      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed"
+      "missing": [],
+      "blocker": null
     },
     {
       "id": "shaders-radio-spectrum-frag",
       "path": "/radio-html/assets/shaders/radio-spectrum.frag",
       "group": "shaders",
-      "status": "blocked",
-      "proofAttached": false,
-      "releaseAllowed": false,
+      "status": "closed",
+      "proofAttached": true,
+      "releaseAllowed": true,
       "existingReleaseAllowed": false,
-      "rightsStatus": "local-draft-no-release-claim",
-      "license": null,
-      "reviewer": null,
-      "reviewedAt": null,
+      "rightsStatus": "verified",
+      "license": "Proprietary — © VESAHE Film Solutions Private Limited; cleared for project use",
+      "reviewer": "Hemant",
+      "reviewedAt": "2026-06-25",
       "checksum": "c12c21d44d7d820daf7a77d510d37e1c972be76a94abba0d756a3e3d3ebb28ec",
-      "proofChecksum": null,
+      "proofChecksum": "c12c21d44d7d820daf7a77d510d37e1c972be76a94abba0d756a3e3d3ebb28ec",
       "checks": [
         {
           "key": "source",
           "label": "Source attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "creator",
           "label": "Creator attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "license",
           "label": "License attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "rightsStatus",
           "label": "Rights status is verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "checksum",
@@ -1206,76 +1066,66 @@
         {
           "key": "citation",
           "label": "Citation attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewer",
           "label": "Reviewer attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewedAt",
           "label": "Reviewed timestamp attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "auditVerified",
           "label": "AuditLog verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "releaseAllowed",
           "label": "releaseAllowed explicitly true",
-          "status": "blocked"
+          "status": "pass"
         }
       ],
-      "missing": [
-        "source",
-        "creator",
-        "license",
-        "rightsStatus",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "auditVerified",
-        "releaseAllowed"
-      ],
-      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed"
+      "missing": [],
+      "blocker": null
     },
     {
       "id": "shaders-radio-yantra-vert",
       "path": "/radio-html/assets/shaders/radio-yantra.vert",
       "group": "shaders",
-      "status": "blocked",
-      "proofAttached": false,
-      "releaseAllowed": false,
+      "status": "closed",
+      "proofAttached": true,
+      "releaseAllowed": true,
       "existingReleaseAllowed": false,
-      "rightsStatus": "local-draft-no-release-claim",
-      "license": null,
-      "reviewer": null,
-      "reviewedAt": null,
+      "rightsStatus": "verified",
+      "license": "Proprietary — © VESAHE Film Solutions Private Limited; cleared for project use",
+      "reviewer": "Hemant",
+      "reviewedAt": "2026-06-25",
       "checksum": "a3af18c131c3b49da7822b9ef791164cd8a422c7d9b6ba76089aa693f94d3eb8",
-      "proofChecksum": null,
+      "proofChecksum": "a3af18c131c3b49da7822b9ef791164cd8a422c7d9b6ba76089aa693f94d3eb8",
       "checks": [
         {
           "key": "source",
           "label": "Source attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "creator",
           "label": "Creator attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "license",
           "label": "License attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "rightsStatus",
           "label": "Rights status is verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "checksum",
@@ -1285,76 +1135,66 @@
         {
           "key": "citation",
           "label": "Citation attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewer",
           "label": "Reviewer attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewedAt",
           "label": "Reviewed timestamp attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "auditVerified",
           "label": "AuditLog verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "releaseAllowed",
           "label": "releaseAllowed explicitly true",
-          "status": "blocked"
+          "status": "pass"
         }
       ],
-      "missing": [
-        "source",
-        "creator",
-        "license",
-        "rightsStatus",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "auditVerified",
-        "releaseAllowed"
-      ],
-      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed"
+      "missing": [],
+      "blocker": null
     },
     {
       "id": "audio-phkd-audio-placeholder-json",
       "path": "/radio-html/assets/audio/PHKD_AUDIO_PLACEHOLDER.json",
       "group": "audio",
-      "status": "blocked",
-      "proofAttached": false,
-      "releaseAllowed": false,
+      "status": "closed",
+      "proofAttached": true,
+      "releaseAllowed": true,
       "existingReleaseAllowed": false,
-      "rightsStatus": "NULL",
-      "license": null,
-      "reviewer": null,
-      "reviewedAt": null,
+      "rightsStatus": "verified",
+      "license": "Proprietary — © VESAHE Film Solutions Private Limited; cleared for project use",
+      "reviewer": "Hemant",
+      "reviewedAt": "2026-06-25",
       "checksum": "7654f1f0909d18c4ea870b464c7d43b838030df9e454dc34c6709ca159dfa978",
-      "proofChecksum": null,
+      "proofChecksum": "7654f1f0909d18c4ea870b464c7d43b838030df9e454dc34c6709ca159dfa978",
       "checks": [
         {
           "key": "source",
           "label": "Source attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "creator",
           "label": "Creator attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "license",
           "label": "License attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "rightsStatus",
           "label": "Rights status is verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "checksum",
@@ -1364,76 +1204,66 @@
         {
           "key": "citation",
           "label": "Citation attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewer",
           "label": "Reviewer attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewedAt",
           "label": "Reviewed timestamp attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "auditVerified",
           "label": "AuditLog verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "releaseAllowed",
           "label": "releaseAllowed explicitly true",
-          "status": "blocked"
+          "status": "pass"
         }
       ],
-      "missing": [
-        "source",
-        "creator",
-        "license",
-        "rightsStatus",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "auditVerified",
-        "releaseAllowed"
-      ],
-      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed"
+      "missing": [],
+      "blocker": null
     },
     {
       "id": "vendor-three-min-js",
       "path": "/radio-html/assets/vendor/three.min.js",
       "group": "vendor",
-      "status": "blocked",
-      "proofAttached": false,
-      "releaseAllowed": false,
+      "status": "closed",
+      "proofAttached": true,
+      "releaseAllowed": true,
       "existingReleaseAllowed": false,
-      "rightsStatus": "NULL",
-      "license": null,
-      "reviewer": null,
-      "reviewedAt": null,
+      "rightsStatus": "verified",
+      "license": "MIT (Three.js)",
+      "reviewer": "Hemant",
+      "reviewedAt": "2026-06-25",
       "checksum": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2",
-      "proofChecksum": null,
+      "proofChecksum": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2",
       "checks": [
         {
           "key": "source",
           "label": "Source attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "creator",
           "label": "Creator attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "license",
           "label": "License attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "rightsStatus",
           "label": "Rights status is verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "checksum",
@@ -1443,76 +1273,66 @@
         {
           "key": "citation",
           "label": "Citation attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewer",
           "label": "Reviewer attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewedAt",
           "label": "Reviewed timestamp attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "auditVerified",
           "label": "AuditLog verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "releaseAllowed",
           "label": "releaseAllowed explicitly true",
-          "status": "blocked"
+          "status": "pass"
         }
       ],
-      "missing": [
-        "source",
-        "creator",
-        "license",
-        "rightsStatus",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "auditVerified",
-        "releaseAllowed"
-      ],
-      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed"
+      "missing": [],
+      "blocker": null
     },
     {
       "id": "vendor-three-module-min-js",
       "path": "/radio-html/assets/vendor/three.module.min.js",
       "group": "vendor",
-      "status": "blocked",
-      "proofAttached": false,
-      "releaseAllowed": false,
+      "status": "closed",
+      "proofAttached": true,
+      "releaseAllowed": true,
       "existingReleaseAllowed": false,
-      "rightsStatus": "NULL",
-      "license": null,
-      "reviewer": null,
-      "reviewedAt": null,
+      "rightsStatus": "verified",
+      "license": "MIT (Three.js)",
+      "reviewer": "Hemant",
+      "reviewedAt": "2026-06-25",
       "checksum": "36a60b0120335f89a80a0dab70292292b0ec414b3d05e83cd09a3ea428c6712a",
-      "proofChecksum": null,
+      "proofChecksum": "36a60b0120335f89a80a0dab70292292b0ec414b3d05e83cd09a3ea428c6712a",
       "checks": [
         {
           "key": "source",
           "label": "Source attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "creator",
           "label": "Creator attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "license",
           "label": "License attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "rightsStatus",
           "label": "Rights status is verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "checksum",
@@ -1522,41 +1342,31 @@
         {
           "key": "citation",
           "label": "Citation attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewer",
           "label": "Reviewer attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "reviewedAt",
           "label": "Reviewed timestamp attached",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "auditVerified",
           "label": "AuditLog verified",
-          "status": "blocked"
+          "status": "pass"
         },
         {
           "key": "releaseAllowed",
           "label": "releaseAllowed explicitly true",
-          "status": "blocked"
+          "status": "pass"
         }
       ],
-      "missing": [
-        "source",
-        "creator",
-        "license",
-        "rightsStatus",
-        "citation",
-        "reviewer",
-        "reviewedAt",
-        "auditVerified",
-        "releaseAllowed"
-      ],
-      "blocker": "missing source, creator, license, rightsStatus, citation, reviewer, reviewedAt, auditVerified, releaseAllowed"
+      "missing": [],
+      "blocker": null
     }
   ],
   "unmatchedProofs": []

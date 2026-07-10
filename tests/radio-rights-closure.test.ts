@@ -10,7 +10,7 @@ function readJson<T>(file: string): T {
 }
 
 describe("radio rights closure packet", () => {
-  it("prepares fillable proof rows without closing rights", () => {
+  it("prepares fillable proof rows while reflecting imported closure counts", () => {
     const packet = readJson<{
       verificationState: string;
       shipDecision: string;
@@ -36,9 +36,9 @@ describe("radio rights closure packet", () => {
       records: 19,
       rowsPrepared: 19,
       releaseAllowed: 0,
-      closed: 0
+      closed: 19,
+      blocked: 0
     });
-    expect(packet.counts.blocked).toBeGreaterThan(0);
     expect(packet.records).toHaveLength(19);
     expect(packet.records.every((record) => record.path.startsWith("/radio-html/"))).toBe(true);
     expect(packet.records.every((record) => record.source === null && record.creator === null)).toBe(true);
