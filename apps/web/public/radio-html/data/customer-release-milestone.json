@@ -90,10 +90,15 @@
       "apiView": "release-orchestration",
       "blocker": "Local release check has not completed all configured commands.",
       "observed": {
-        "steps": 16,
-        "pass": 12,
-        "fail": 4,
-        "browserChecks": 0
+        "steps": 14,
+        "pass": 13,
+        "fail": 1,
+        "browserChecks": 0,
+        "gates": 6,
+        "gatesPass": 0,
+        "gatesBlocked": 6,
+        "productionReady": 0,
+        "releaseAllowed": 0
       },
       "requiredEvidence": [
         "steps",

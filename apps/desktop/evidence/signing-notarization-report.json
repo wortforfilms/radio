@@ -1,8 +1,8 @@
 {
   "report": "signing-notarization-report",
-  "generated_at": "2026-07-10T02:29:52.340Z",
-  "source_commit": "99e7942f02c10f189ac4b3911adefb20509d5fd0",
-  "source_commit_short": "99e7942",
+  "generated_at": "2026-07-10T03:12:45.736Z",
+  "source_commit": "580058439a2bc9d2d913fe53f88408c8ac8fd970",
+  "source_commit_short": "5800584",
   "verification_state": "blocked-signing-notarization-proof-null",
   "phkd": {
     "rule": "fail_closed",
