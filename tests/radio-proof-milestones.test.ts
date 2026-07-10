@@ -10,6 +10,27 @@ function readJson<T>(file: string): T {
 }
 
 describe("radio proof milestone completion", () => {
+  it("wires CI release gates to generated evidence without label/env shortcuts", () => {
+    const packageJson = JSON.parse(fs.readFileSync(path.resolve("package.json"), "utf8")) as {
+      scripts: Record<string, string>;
+    };
+    const wrapper = fs.readFileSync(path.resolve("scripts/radio-release-check.mjs"), "utf8");
+    const workflow = fs.readFileSync(path.resolve(".github/workflows/release-gates.yml"), "utf8");
+    const registryConfig = fs.readFileSync(path.resolve("apps/radio/registry/config.ts"), "utf8");
+
+    expect(packageJson.scripts["radio:release:check"]).toBe("node scripts/radio-release-check.mjs");
+    expect(packageJson.scripts["radio:release:orchestrate"]).toContain("radio-release-evidence-orchestrator.mjs");
+    expect(wrapper).toContain("release-orchestration-run.json");
+    expect(wrapper).toContain("realWorldBlockers");
+    expect(wrapper).not.toContain("SHIP_DECISION");
+    expect(workflow).toContain("Release Gate Status");
+    expect(workflow).toContain("CONTROLLED_PREVIEW / NO_SHIP");
+    expect(workflow).not.toContain("contains(github.event.pull_request.labels.*.name, 'SHIP')");
+    expect(registryConfig).toContain("productionReady: false");
+    expect(registryConfig).toContain("releaseAllowed: false");
+    expect(registryConfig).toContain("fabricatedEvidenceAccepted: false");
+  });
+
   it("adds proof templates and keeps payment proof fail-closed", () => {
     const templates = readJson<{
       verificationState: string;

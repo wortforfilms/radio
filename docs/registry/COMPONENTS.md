@@ -1,6 +1,6 @@
 # Components
 
-Generated 2026-07-10T01:31:28.660Z from `registry/components.ts` — statuses evidence-backed.
+Generated 2026-07-10T04:13:03.194Z from `registry/components.ts` — statuses evidence-backed.
 
 | id | category | status | platforms | renders | implemented by |
 |---|---|---|---|---|---|

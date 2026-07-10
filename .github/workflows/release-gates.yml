@@ -1,0 +1,159 @@
+name: Release Gates
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled, ready_for_review]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  gate-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Run release evidence gates
+        id: release
+        continue-on-error: true
+        run: npm run radio:release:check
+        env:
+          RADIO_RELEASE_STATUS_PATH: _radio_index/release-gate-status.json
+      - name: Read release gate status
+        id: status
+        if: always()
+        env:
+          RADIO_RELEASE_STATUS_PATH: _radio_index/release-gate-status.json
+        run: |
+          node <<'NODE'
+          const fs = require("node:fs");
+          const statusPath = process.env.RADIO_RELEASE_STATUS_PATH;
+          const fallbackPath = "apps/web/public/radio-html/data/release-orchestration-run.json";
+          const readJson = (file) => {
+            try { return JSON.parse(fs.readFileSync(file, "utf8")); } catch { return null; }
+          };
+          const report = readJson(statusPath) || readJson(fallbackPath) || {
+            overall: "FAIL",
+            shipDecision: "NO_SHIP",
+            productionReady: false,
+            releaseAllowed: false,
+            verificationState: "blocked-missing-release-status",
+            commandSteps: { passed: 0, failed: 1, total: 1, failedKeys: ["release-status"] },
+            evidenceGates: { passed: 0, blocked: 0, total: 0, details: {} },
+            realWorldBlockers: []
+          };
+          const output = process.env.GITHUB_OUTPUT;
+          fs.appendFileSync(output, `overall=${report.overall || "FAIL"}\n`);
+          fs.appendFileSync(output, `shipDecision=${report.shipDecision || "NO_SHIP"}\n`);
+          fs.appendFileSync(output, `productionReady=${String(report.productionReady === true)}\n`);
+          fs.appendFileSync(output, `releaseAllowed=${String(report.releaseAllowed === true)}\n`);
+          fs.appendFileSync(output, `status<<JSON\n${JSON.stringify(report)}\nJSON\n`);
+          console.log(JSON.stringify(report, null, 2));
+          NODE
+      - name: Post release gate status comment
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        env:
+          RELEASE_STATUS: ${{ steps.status.outputs.status }}
+        with:
+          script: |
+            const status = JSON.parse(process.env.RELEASE_STATUS || "{}");
+            const commandSteps = status.commandSteps || {};
+            const evidenceGates = status.evidenceGates || {};
+            const details = evidenceGates.details || {};
+            const gateRows = Object.entries(details).map(([key, gate]) => {
+              const result = gate.status === "pass" ? "PASS" : "BLOCKED";
+              return `| ${key} | ${result} | ${gate.verificationState || "NULL"} |`;
+            }).join("\n") || "| no-gates | BLOCKED | missing |";
+            const failedKeys = (commandSteps.failedKeys || []).length
+              ? commandSteps.failedKeys.join(", ")
+              : "none";
+            const blockerRows = (status.realWorldBlockers || []).map((blocker) => {
+              return `- ${blocker.key}: ${blocker.detail || "proof missing"}`;
+            }).join("\n") || "- none";
+            const comment = [
+              "## Release Gate Status",
+              "",
+              "| Gate | Status |",
+              "|------|--------|",
+              `| Overall | ${status.overall === "PASS" ? "PASS" : "BLOCKED"} |`,
+              `| Verification state | ${status.verificationState || "NULL"} |`,
+              `| Ship decision | ${status.shipDecision || "NO_SHIP"} |`,
+              `| productionReady | ${status.productionReady === true ? "true" : "false"} |`,
+              `| releaseAllowed | ${status.releaseAllowed === true ? "true" : "false"} |`,
+              `| Command steps | ${commandSteps.passed || 0}/${commandSteps.total || 0} passed; failed: ${failedKeys} |`,
+              `| Evidence gates | ${evidenceGates.passed || 0}/${evidenceGates.total || 0} passed; blocked: ${evidenceGates.blocked || 0} |`,
+              "",
+              "| Evidence gate | Status | Verification |",
+              "|---------------|--------|--------------|",
+              gateRows,
+              "",
+              "Real-world blockers:",
+              blockerRows,
+              "",
+              "PHKD: no fake rights, payment, signing, live-stream, reviewer, GUI, or production proof is accepted."
+            ].join("\n");
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number
+            });
+            const existing = comments.find((entry) => entry.user.type === "Bot" && entry.body.includes("Release Gate Status"));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body: comment
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: comment
+              });
+            }
+      - name: Mark PR ready only after all release gates pass
+        if: github.event_name == 'pull_request' && steps.status.outputs.overall == 'PASS'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            if (context.payload.pull_request.draft) {
+              await github.graphql(
+                `mutation($id: ID!) {
+                  markPullRequestReadyForReview(input: { pullRequestId: $id }) {
+                    pullRequest { id }
+                  }
+                }`,
+                { id: context.payload.pull_request.node_id }
+              );
+            }
+            await github.rest.issues.removeLabel({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              name: "CONTROLLED_PREVIEW / NO_SHIP"
+            }).catch((error) => {
+              if (error.status !== 404) throw error;
+            });
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ["ready-to-merge"]
+            });
+      - name: Fail if release remains blocked
+        if: steps.status.outputs.overall != 'PASS'
+        run: |
+          echo "::error::Release gates remain blocked. See the Release Gate Status comment and generated evidence report."
+          exit 1
